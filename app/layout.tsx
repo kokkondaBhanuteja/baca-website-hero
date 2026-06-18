@@ -10,7 +10,8 @@ const inter = Inter({
 const fraunces = Fraunces({
   variable: '--font-fraunces',
   subsets: ['latin'],
-  axes: ['opsz'],
+  style: ['normal', 'italic'],
+  axes: ['SOFT', 'opsz'],
 })
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
@@ -19,9 +20,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'BACA — India, in every shipment',
+  title: 'BACA — Indian Spice, Nut & Fruit Exporter | Bharat Cargo',
   description:
-    'BACA is an India-origin export house sourcing spices, nuts, and fruits from regional growers and shipping worldwide.',
+    'BACA (Bharat Cargo) is a modern Indian export house — traceable sourcing of spices, nuts, and fruits, rigorous quality, and reliable global shipments. ISO 22000, HACCP & FSSAI certified.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#FBF6EC',
+  themeColor: '#FDFBF6',
 }
 
 export default function RootLayout({
