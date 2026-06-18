@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Fraunces, Inter } from 'next/font/google'
+import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -10,7 +10,12 @@ const inter = Inter({
 const fraunces = Fraunces({
   variable: '--font-fraunces',
   subsets: ['latin'],
-  weight: ['500', '600'],
+  axes: ['opsz'],
+})
+const jetbrainsMono = JetBrains_Mono({
+  variable: '--font-jetbrains-mono',
+  subsets: ['latin'],
+  weight: ['400', '500'],
 })
 
 export const metadata: Metadata = {
@@ -50,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} bg-background`}
+      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         {children}

@@ -8,12 +8,14 @@
   --font-heading: var(--font-fraunces), 'Georgia', serif;
   --font-display: var(--font-fraunces), 'Georgia', serif;
   --font-sans: var(--font-inter), 'Inter Fallback', sans-serif;
-  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono Fallback', monospace;
 
   --color-bg-base: var(--bg-base);
   --color-bg-raised: var(--bg-raised);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
+  --color-ivory: var(--ivory);
+  --color-espresso: var(--espresso);
   --color-saffron: var(--accent-saffron);
   --color-terracotta: var(--accent-terracotta);
   --color-line: var(--line);
@@ -65,6 +67,8 @@
   --bg-raised: #fffdf8;
   --ink: #2e1f14;
   --ink-soft: #6b5645;
+  --ivory: #fbf6ec;
+  --espresso: #241712;
   --accent-saffron: #e2a434;
   --accent-terracotta: #b5532a;
   --line: #e7dcc6;
@@ -184,5 +188,29 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@keyframes baca-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.baca-rise {
+  opacity: 0;
+  animation: baca-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .baca-rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
