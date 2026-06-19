@@ -32,7 +32,7 @@ export function Manifesto() {
         <div className="lg:col-span-5">
           <RevealImage
             src="/images/who-we-are.jpg"
-            alt="A vibrant Indian spice market at origin — bowls of turmeric, chilli and whole spices BACA sources from"
+            alt="Weathered hands slicing fresh turmeric at source in India — grading raw spice the way BACA's farming families have for generations"
             className="aspect-[4/5] w-full rounded-2xl border border-line"
           />
         </div>
