@@ -1,4 +1,5 @@
 import { Reveal } from '@/components/reveal'
+import { ApproachThread } from '@/components/approach-thread'
 
 const PILLARS = [
   {
@@ -38,13 +39,18 @@ export function Approach() {
             </h2>
           </Reveal>
 
-          <ol className="lg:col-span-8">
-            {PILLARS.map((p, i) => (
-              <Reveal key={p.n} as="li" delay={i * 70}>
-                <div className="grid grid-cols-[auto_1fr] items-start gap-6 border-t border-line py-8 sm:grid-cols-[7rem_1fr] sm:gap-10">
-                  <span className="font-heading text-3xl font-light italic text-saffron sm:text-4xl">
-                    {p.n}
-                  </span>
+          <div className="relative lg:col-span-8">
+            <ApproachThread />
+            <ol>
+              {PILLARS.map((p, i) => (
+                <Reveal key={p.n} as="li" delay={i * 70}>
+                  <div
+                    data-pillar-node
+                    className="relative z-10 grid grid-cols-[auto_1fr] items-start gap-6 border-t border-line py-8 sm:grid-cols-[7rem_1fr] sm:gap-10"
+                  >
+                    <span className="font-heading text-3xl font-light italic text-saffron sm:text-4xl">
+                      {p.n}
+                    </span>
                   <div className="max-w-[56ch]">
                     <h3 className="font-heading text-2xl font-light text-ink">
                       {p.title}
@@ -56,7 +62,8 @@ export function Approach() {
                 </div>
               </Reveal>
             ))}
-          </ol>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
