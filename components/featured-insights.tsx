@@ -6,7 +6,7 @@ const POSTS = [
     category: 'Industry Insights',
     title: 'Global cardamom demand is reshaping the 2026 harvest',
     date: 'Mar 2026',
-    image: '/images/insight-3.png',
+    image: '/images/insight-3.jpg',
     alt: 'Indian turmeric and spice field at harvest with farmers working',
     href: '/blogs/industry-insights/global-cardamom-demand-2026',
   },
@@ -14,7 +14,7 @@ const POSTS = [
     category: 'Impact Stories',
     title: 'Inside a modern spice processing facility in Kerala',
     date: 'Feb 2026',
-    image: '/images/insight-2.png',
+    image: '/images/insight-2.jpg',
     alt: 'Workers inspecting quality inside a clean modern spice processing facility',
     href: '/blogs/impact-stories/modern-processing-kerala',
   },
@@ -22,7 +22,7 @@ const POSTS = [
     category: 'Industry Insights',
     title: 'Reading the sea: ocean freight trends for ingredient buyers',
     date: 'Jan 2026',
-    image: '/images/insight-1.png',
+    image: '/images/insight-1.jpg',
     alt: 'Cargo container ship at sea during golden hour sunset',
     href: '/blogs/industry-insights/ocean-freight-trends-2026',
   },
@@ -36,7 +36,7 @@ export function FeaturedInsights() {
           <div>
             <p className="mb-4 flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-ink-60">
               <span className="h-px w-6 bg-saffron" aria-hidden />
-              Featured insights
+              Insights
             </p>
             <h2 className="max-w-[18ch] text-balance font-heading text-[clamp(2rem,4.5vw,3.5rem)] font-light leading-[1.05] tracking-[-0.02em] text-ink">
               Notes from the spice and commodities trade.
@@ -44,6 +44,7 @@ export function FeaturedInsights() {
           </div>
           <a
             href="/blogs"
+            data-cursor="fill"
             className="group inline-flex items-center gap-2 self-end font-mono text-[0.72rem] uppercase tracking-[0.18em] text-ink transition-colors hover:text-clay"
           >
             All articles

@@ -21,6 +21,7 @@ export function CtaBand() {
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <a
               href="/contact"
+              data-cursor="fill"
               className="group inline-flex items-center gap-2 rounded-full bg-saffron px-7 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-paper"
             >
               Enquire now
@@ -28,6 +29,7 @@ export function CtaBand() {
             </a>
             <a
               href="/products"
+              data-cursor="fill"
               className="inline-flex items-center gap-2 rounded-full border border-paper/35 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-paper/10"
             >
               Download catalogue

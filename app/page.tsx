@@ -1,6 +1,8 @@
 import { SiteHeader } from "@/components/site-header"
+import { ScrollFX } from "@/components/scroll-fx"
+import { Cursor } from "@/components/cursor"
 import { Hero } from "@/components/hero"
-import { MarqueeStrip } from "@/components/marquee-strip"
+import { Certifications } from "@/components/certifications"
 import { Manifesto } from "@/components/manifesto"
 import { StatsRow } from "@/components/stats-row"
 import { Approach } from "@/components/approach"
@@ -15,13 +17,15 @@ import { WhatsAppFab } from "@/components/whatsapp-fab"
 export default function Page() {
   return (
     <main className="min-h-screen bg-paper">
+      <ScrollFX />
+      <Cursor />
       <SiteHeader />
       <Hero />
-      <MarqueeStrip />
       <Manifesto />
       <StatsRow />
-      <Approach />
       <ProductPreview />
+      <Approach />
+      <Certifications />
       <GlobalPresence />
       <PullQuote />
       <FeaturedInsights />

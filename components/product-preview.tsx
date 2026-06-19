@@ -5,21 +5,21 @@ const CATEGORIES = [
   {
     title: 'Spices',
     href: '/products/spices',
-    image: '/images/cat-spices.png',
+    image: '/images/cat-spices.jpg',
     alt: 'Mounds of vivid Indian spices — turmeric, dried chillies, pepper and cardamom',
     note: 'Cardamom · Pepper · Turmeric · Cumin · Chilli',
   },
   {
     title: 'Nuts',
     href: '/products/nuts',
-    image: '/images/cat-nuts.png',
+    image: '/images/cat-nuts.jpg',
     alt: 'Premium whole white cashew kernels with peanuts and almonds in a rustic bowl',
     note: 'Cashew W180–W450 · Peanuts · Almonds',
   },
   {
     title: 'Fruits',
     href: '/products/fruits',
-    image: '/images/cat-fruits.png',
+    image: '/images/cat-fruits.jpg',
     alt: 'Ripe Alphonso mangoes sliced to show golden flesh, with pomegranate and grapes',
     note: 'Alphonso · Kesar · Pomegranate · Grapes',
   },
@@ -41,6 +41,7 @@ export function ProductPreview() {
           </div>
           <a
             href="/products"
+            data-cursor="fill"
             className="group inline-flex items-center gap-2 self-end font-mono text-[0.72rem] uppercase tracking-[0.18em] text-ink transition-colors hover:text-clay"
           >
             View all categories
@@ -59,9 +60,13 @@ export function ProductPreview() {
                   <img
                     src={cat.image || '/placeholder.svg'}
                     alt={cat.alt}
+                    data-reveal
                     className="h-full w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                   />
-                  <span className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-paper/90 text-ink transition-colors group-hover:bg-saffron">
+                  <span
+                    data-cursor="fill"
+                    className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-paper/90 text-ink transition-colors group-hover:bg-saffron"
+                  >
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </div>

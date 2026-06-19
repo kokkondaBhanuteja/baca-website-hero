@@ -11,16 +11,21 @@ export function GlobalPresence() {
   return (
     <section className="relative overflow-hidden bg-ink text-paper">
       <img
-        src="/images/world-dots.png"
+        src="/images/global-port.jpg"
         alt=""
         aria-hidden
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
+        data-parallax
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/35"
+        aria-hidden
       />
       <div className="relative mx-auto max-w-[1340px] px-5 py-[clamp(4rem,8vw,8rem)] sm:px-8">
         <Reveal className="max-w-[40ch]">
           <p className="mb-5 flex items-center gap-3 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-paper/60">
             <span className="h-px w-6 bg-saffron" aria-hidden />
-            Global presence
+            Global reach
           </p>
           <h2 className="text-balance font-heading text-[clamp(2rem,4.5vw,3.5rem)] font-light leading-[1.05] tracking-[-0.02em] text-paper">
             From Indian ports to{' '}

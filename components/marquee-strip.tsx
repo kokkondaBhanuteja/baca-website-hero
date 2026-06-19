@@ -1,40 +1,71 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+
 const ITEMS = [
-  'Netherlands',
-  'Cardamom',
-  'United States',
-  'ISO 22000',
-  'United Arab Emirates',
-  'Cashew W320',
-  'Germany',
-  'HACCP',
-  'Saudi Arabia',
-  'Turmeric',
-  'United Kingdom',
-  'FSSAI',
-  'Singapore',
-  'Alphonso Mango',
-  'Vietnam',
-  'APEDA',
-  'Kenya',
-  'Black Pepper',
-  'Canada',
-  'Spices Board India',
+  'Netherlands', 'Cardamom', 'United States', 'ISO 22000', 'United Arab Emirates',
+  'Cashew W320', 'Germany', 'HACCP', 'Saudi Arabia', 'Turmeric', 'United Kingdom',
+  'FSSAI', 'Singapore', 'Alphonso Mango', 'Vietnam', 'APEDA', 'Kenya', 'Black Pepper',
+  'Canada', 'Spices Board India',
 ]
 
+/**
+ * GSAP banner marquee: a seamless horizontal loop whose speed and skew react to
+ * scroll velocity (faster + leaning while you scroll, easing back to a calm drift
+ * when idle). Reduced motion → static.
+ */
 export function MarqueeStrip() {
+  const trackRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const loop = gsap.to(track, { xPercent: -50, repeat: -1, duration: 24, ease: 'none' })
+    const skewTo = gsap.quickTo(track, 'skewX', { duration: 0.5, ease: 'power3' })
+
+    let lastY = window.scrollY
+    let lastT = performance.now()
+    let idle: ReturnType<typeof setTimeout>
+
+    const onScroll = () => {
+      const y = window.scrollY
+      const t = performance.now()
+      const v = (y - lastY) / Math.max(1, t - lastT) // px per ms
+      lastY = y
+      lastT = t
+      gsap.to(loop, {
+        timeScale: 1 + gsap.utils.clamp(0, 5, Math.abs(v) * 4),
+        duration: 0.3,
+        overwrite: true,
+      })
+      skewTo(gsap.utils.clamp(-8, 8, v * -7))
+      clearTimeout(idle)
+      idle = setTimeout(() => {
+        gsap.to(loop, { timeScale: 1, duration: 0.8 })
+        skewTo(0)
+      }, 140)
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      clearTimeout(idle)
+      loop.kill()
+    }
+  }, [])
+
   return (
     <section
       aria-label="Countries served, commodities, and certifications"
       className="overflow-hidden border-y border-line bg-cream py-4"
     >
-      <div className="flex w-max baca-marquee">
+      <div ref={trackRef} className="flex w-max will-change-transform">
         {[0, 1].map((dup) => (
-          <ul
-            key={dup}
-            className="flex shrink-0 items-center"
-            aria-hidden={dup === 1}
-          >
-            {ITEMS.map((item, i) => (
+          <ul key={dup} className="flex shrink-0 items-center" aria-hidden={dup === 1}>
+            {ITEMS.map((item) => (
               <li
                 key={`${dup}-${item}`}
                 className="flex items-center gap-6 px-6 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-ink/65"

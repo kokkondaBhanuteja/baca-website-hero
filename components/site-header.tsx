@@ -33,10 +33,10 @@ const NAV: NavItem[] = [
     ],
   },
   {
-    label: 'Blogs',
+    label: 'Insights',
     href: '/blogs',
     children: [
-      { label: 'Industry Insights', href: '/blogs/industry-insights' },
+      { label: 'Market Insights', href: '/blogs/industry-insights' },
       { label: 'Impact Stories', href: '/blogs/impact-stories' },
       { label: 'Community Engagement', href: '/blogs/community-engagement' },
     ],
@@ -146,6 +146,7 @@ export function SiteHeader() {
           </span>
           <a
             href="/contact"
+            data-cursor="fill"
             className={`hidden rounded-full px-5 py-2.5 text-sm font-medium transition-colors sm:inline-flex ${
               scrolled
                 ? 'bg-ink text-paper hover:bg-forest'

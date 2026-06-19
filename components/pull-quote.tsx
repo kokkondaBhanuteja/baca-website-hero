@@ -15,9 +15,9 @@ export function PullQuote() {
             </blockquote>
             <figcaption className="mt-10 flex items-center gap-4">
               <img
-                src="/images/portrait-md.png"
+                src="/images/portrait-md.jpg"
                 alt="Portrait of the Managing Director of BACA"
-                className="h-14 w-14 rounded-full object-cover grayscale"
+                className="h-14 w-14 rounded-full object-cover object-[50%_15%] grayscale"
               />
               <div>
                 <p className="font-heading text-lg font-light text-ink">
