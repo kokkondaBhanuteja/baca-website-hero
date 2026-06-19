@@ -1,0 +1,330 @@
+{
+  "productsPage": {
+    "eyebrow": "Onze catalogus",
+    "heading": "Alles wat we exporteren, ingekocht aan de bron.",
+    "intro": "Specerijen, noten en fruit — gesorteerd, gedocumenteerd en verscheept naar afnemers in 37 landen.",
+    "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug."
+  },
+  "aboutPage": {
+    "eyebrow": "Over BACA",
+    "heading": "Een exportpartner, geen handelaar.",
+    "lead": "BACA (Bharat Cargo) is een modern Indiaas exporthuis. Wij kopen aan de bron, seizoen na seizoen, bij dezelfde boerenfamilies, sorteren ter plaatse en verschepen gedocumenteerde volledige containers naar afnemers in 37 landen.",
+    "commitmentsTitle": "Waar wij ons toe verbinden.",
+    "commitments": {
+      "traceability": "Volledige traceerbaarheid, van het veld van de teler tot de kade van de expediteur.",
+      "quality": "Elke partij gesorteerd en in het laboratorium getest volgens ISO 22000 en HACCP.",
+      "documentation": "Incoterms, HS codes en certificaten worden afgegeven voordat de schepen vertrekken.",
+      "relationships": "Vaste contracten en gereserveerde oogsten voor terugkerende afnemers.",
+      "fairness": "Directe, eerlijke betaling aan de boerenfamilies waarbij wij inkopen.",
+      "responsiveness": "Internationale aanvragen binnen 12 uur beantwoord."
+    },
+    "ctaHeading": "Op zoek naar een eerste container? Neem contact met ons op.",
+    "ctaButton": "Start een aanvraag"
+  },
+  "contactPage": {
+    "eyebrow": "Start een aanvraag",
+    "heading": "Wat wilt u importeren?",
+    "intro": "Vertel ons wat u inkoopt en waarheen het wordt verscheept. Wij reageren binnen 12 uur op internationale aanvragen.",
+    "detailsTitle": "Of bereik ons rechtstreeks",
+    "form": {
+      "name": "Volledige naam",
+      "email": "E-mail",
+      "company": "Bedrijf",
+      "phone": "Telefoon",
+      "message": "Bericht",
+      "optional": "optioneel",
+      "messagePlaceholder": "Vertel ons kort uw behoefte — producten, volumes, bestemming.",
+      "submit": "Aanvraag verzenden",
+      "submitting": "Bezig met verzenden…",
+      "success": "Dank u — uw aanvraag is ontvangen. Wij nemen binnen 12 uur contact met u op.",
+      "error": "Er is iets misgegaan. Probeer het opnieuw of stuur ons rechtstreeks een e-mail."
+    }
+  },
+  "blogsPage": {
+    "eyebrow": "Inzichten",
+    "heading": "Aantekeningen uit de handel in specerijen en grondstoffen.",
+    "intro": "Marktanalyses, verhalen over de herkomst en de visie achter onze inkoop en verscheping.",
+    "empty": "Nieuwe artikelen zijn onderweg. Kom binnenkort weer langs.",
+    "minRead": "min lezen",
+    "featured": "Uitgelicht",
+    "allArticles": "Alle artikelen",
+    "related": "Verder lezen",
+    "categories": {
+      "industryInsights": "Sectorinzichten",
+      "impactStories": "Impactverhalen",
+      "communityEngagement": "Betrokkenheid bij de gemeenschap"
+    }
+  },
+  "galleryPage": {
+    "eyebrow": "Galerij",
+    "heading": "Het werk, de mensen, de grond.",
+    "intro": "Een kijkje in onze inkoop, sortering en verscheping — vanaf de herkomst in India tot aan de rest van de wereld.",
+    "empty": "Foto's worden toegevoegd. Kom binnenkort weer langs."
+  },
+  "metadata": {
+    "title": "BACA — Indiase exporteur van specerijen, noten & fruit | Bharat Cargo",
+    "description": "BACA (Bharat Cargo) is een modern Indiaas exporthuis — traceerbare inkoop van specerijen, noten en fruit, strenge kwaliteitscontrole en betrouwbare wereldwijde leveringen. Gecertificeerd volgens ISO 22000, HACCP & FSSAI."
+  },
+  "common": {
+    "enquire": "Aanvraag indienen",
+    "viewAllCategories": "Alle categorieën bekijken"
+  },
+  "languageSwitcher": {
+    "label": "Taal wijzigen"
+  },
+  "nav": {
+    "items": {
+      "about": {
+        "label": "Over ons",
+        "children": {
+          "whoWeAre": "Wie we zijn",
+          "vision": "Visie & missie",
+          "approach": "Onze aanpak",
+          "team": "Managementteam",
+          "why": "Waarom BACA",
+          "brands": "Onze merken"
+        }
+      },
+      "products": {
+        "label": "Producten",
+        "children": {
+          "spices": "Specerijen",
+          "nuts": "Noten",
+          "fruits": "Fruit",
+          "all": "Alle categorieën bekijken"
+        }
+      },
+      "insights": {
+        "label": "Inzichten",
+        "children": {
+          "market": "Marktinzichten",
+          "impact": "Impactverhalen",
+          "community": "Maatschappelijke betrokkenheid"
+        }
+      },
+      "gallery": {
+        "label": "Galerij",
+        "children": {
+          "photos": "Foto's",
+          "videos": "Video's"
+        }
+      },
+      "contact": {
+        "label": "Contact"
+      }
+    }
+  },
+  "header": {
+    "aria": {
+      "home": "Startpagina",
+      "openMenu": "Menu openen",
+      "closeMenu": "Menu sluiten"
+    }
+  },
+  "hero": {
+    "eyebrow": "Est. 2009 · Bharat Cargo",
+    "headline": "Geworteld in Indiase grond. Vertrouwd over de hele <em>wereld.</em>",
+    "standardLabel": "De BACA-standaard",
+    "body": "Een nieuwe generatie Indiase export — gebouwd op traceerbare inkoop, strenge kwaliteit en partnerschappen die goederen betrouwbaar verplaatsen, container na container.",
+    "ctaProducts": "Ontdek producten",
+    "ctaContact": "Praat met ons team",
+    "scroll": "Scrollen",
+    "countries": "37 landen bediend",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "imageAlt": "Een raster van uiteenlopende Indiase specerijen in schalen — kurkuma, chili, komijn, kaneel en meer"
+  },
+  "manifesto": {
+    "eyebrow": "Ons verhaal",
+    "headline": "Wij verbinden Indiase telers met de meest veeleisende keukens ter wereld — inkopen <em>met intentie</em>, en verschepen met precisie.",
+    "body": "Twee decennia aan de bron in Kerala, Gujarat en Andhra — inkopen bij dezelfde boerenfamilies, seizoen na seizoen, sorteren bij de bron en volle containers verschepen naar afnemers in 37 landen.",
+    "imageAlt": "Doorleefde handen snijden verse kurkuma aan de bron in India — het sorteren van ruwe specerijen zoals de boerenfamilies van BACA dat al generaties doen"
+  },
+  "stats": {
+    "items": {
+      "years": "Jaar in bedrijf",
+      "countries": "Landen bediend",
+      "containers": "Containers verscheept",
+      "tonnes": "Ton verwerkt / jaar"
+    }
+  },
+  "productPreview": {
+    "eyebrow": "Wat we exporteren",
+    "heading": "Ingekocht aan de bron, gesorteerd voor export.",
+    "items": {
+      "spices": {
+        "title": "Specerijen",
+        "alt": "Bergen levendige Indiase specerijen — kurkuma, gedroogde chilipepers, peper en kardemom",
+        "note": "Kardemom · Peper · Kurkuma · Komijn · Chili"
+      },
+      "nuts": {
+        "title": "Noten",
+        "alt": "Een assortiment premium noten — cashewnoten, amandelen, hazelnoten en pinda's in een schaal",
+        "note": "Cashew W180–W450 · Amandelen · Pinda's · Walnoten"
+      },
+      "fruits": {
+        "title": "Fruit",
+        "alt": "Verse granaatappel en druiven — tot de belangrijkste versfruitexporten van India",
+        "note": "Granaatappel · Druiven · Alphonso · Banaan"
+      }
+    }
+  },
+  "approach": {
+    "eyebrow": "Onze aanpak",
+    "heading": "De BACA-standaard, in vier stappen.",
+    "intro": "Hoe elke container zijn plaats verdient — van het veld van de teler tot het laadperron van de expediteur.",
+    "pillars": {
+      "sourcing": {
+        "title": "Inkoop",
+        "body": "We kopen rechtstreeks bij telers in de herkomstregio's — kardemom uit Kerala, chili uit Guntur, peper uit Malabar — voor volledige traceerbaarheid van boer tot expediteur."
+      },
+      "quality": {
+        "title": "Kwaliteit",
+        "body": "Elke partij wordt gesorteerd, in het lab getest op vocht, pesticideresiduen en aflatoxines, en gedocumenteerd volgens de ISO 22000- en HACCP-protocollen."
+      },
+      "logistics": {
+        "title": "Logistiek",
+        "body": "Verpakt aan de bron en verscheept in gedocumenteerde volle containers, met Incoterms, HS-codes en certificaten die worden afgegeven voordat de schepen vertrekken."
+      },
+      "partnership": {
+        "title": "Partnerschap",
+        "body": "We werken met vaste contracten en reserveren oogsten voor terugkerende afnemers — een relatie die wordt gemeten in jaren, niet in losse zendingen."
+      }
+    }
+  },
+  "certifications": {
+    "eyebrow": "Certificeringen",
+    "heading": "Gecertificeerd voor wereldwijde handel.",
+    "intro": "Elke container vertrekt met de papieren voor voedselveiligheid en export volledig op orde — geregistreerd, geauditeerd en gedocumenteerd volgens de standaard die elke markt vereist.",
+    "items": {
+      "fssai": { "sub": "Centrale licentie" },
+      "spicesBoard": { "sub": "RCMC · India" },
+      "apeda": { "sub": "Exportregistratie" },
+      "iso22000": { "sub": "Voedselveiligheidsbeheer" },
+      "haccp": { "sub": "Risicobeheersing" },
+      "indiaOrganic": { "sub": "NPOP-gecertificeerd" },
+      "halal": { "sub": "Markttoegang" },
+      "kosher": { "sub": "Markttoegang" }
+    }
+  },
+  "globalPresence": {
+    "eyebrow": "Wereldwijd bereik",
+    "heading": "Van Indiase havens naar <em>vijf continenten.</em>",
+    "body": "BACA levert aan importeurs, distributeurs en voedingsfabrikanten in Noord-Amerika, Europa, het Midden-Oosten, Zuidoost-Azië en Afrika — met gedocumenteerde, stipte contracten.",
+    "items": {
+      "countries": "Landen bediend",
+      "continents": "Continenten beleverd",
+      "repeatRate": "Percentage terugkerende afnemers",
+      "responseTime": "Reactietijd op aanvragen"
+    }
+  },
+  "pullQuote": {
+    "quote": "Wij verhandelen geen zendingen — wij houden ons aan contracten. Dezelfde afnemers komen seizoen na seizoen terug, omdat de kwaliteit in de container telkens overeenkomt met de kwaliteit op het certificaat, elke keer weer.",
+    "name": "Arvind Menon",
+    "title": "Managing Director, BACA",
+    "imageAlt": "Portret van de Managing Director van BACA"
+  },
+  "featuredInsights": {
+    "eyebrow": "Inzichten",
+    "heading": "Notities uit de specerijen- en grondstoffenhandel.",
+    "allArticles": "Alle artikelen",
+    "categories": {
+      "market": "Sectorinzichten",
+      "impact": "Impactverhalen"
+    },
+    "items": {
+      "cardamom": {
+        "title": "De wereldwijde vraag naar kardemom hervormt de oogst van 2026",
+        "alt": "Indiaas kurkuma- en specerijenveld tijdens de oogst met werkende boeren"
+      },
+      "processing": {
+        "title": "Binnenkijken bij een moderne specerijenverwerkingsfaciliteit in Kerala",
+        "alt": "Medewerkers controleren de kwaliteit in een schone, moderne specerijenverwerkingsfaciliteit"
+      },
+      "freight": {
+        "title": "De zee lezen: trends in zeevracht voor inkopers van ingrediënten",
+        "alt": "Vrachtcontainerschip op zee tijdens het gouden uur bij zonsondergang"
+      }
+    }
+  },
+  "marqueeStrip": {
+    "ariaLabel": "Bediende landen, goederen en certificeringen",
+    "items": [
+      "Nederland",
+      "Kardemom",
+      "Verenigde Staten",
+      "ISO 22000",
+      "Verenigde Arabische Emiraten",
+      "Cashew W320",
+      "Duitsland",
+      "HACCP",
+      "Saoedi-Arabië",
+      "Kurkuma",
+      "Verenigd Koninkrijk",
+      "FSSAI",
+      "Singapore",
+      "Alphonso-mango",
+      "Vietnam",
+      "APEDA",
+      "Kenia",
+      "Zwarte peper",
+      "Canada",
+      "Spices Board India"
+    ]
+  },
+  "ctaBand": {
+    "eyebrow": "Laten we praten",
+    "heading": "Laten we <em>samen</em> een betrouwbare toeleveringsketen bouwen.",
+    "body": "Vertel ons wat u inkoopt en waarheen het wordt verscheept. Wij reageren binnen 12 uur op internationale aanvragen.",
+    "ctaEnquire": "Aanvraag indienen",
+    "ctaCatalogue": "Catalogus downloaden"
+  },
+  "footer": {
+    "talkLabel": "Laten we praten",
+    "startEnquiry": "Een aanvraag starten",
+    "description": "Geworteld in Indiase grond. Vertrouwd over de hele wereld. Een modern Indiaas exporthuis voor specerijen, noten en fruit.",
+    "certifiedTitle": "Gecertificeerd",
+    "backToTop": "Terug naar boven",
+    "columns": {
+      "products": {
+        "title": "Producten",
+        "links": {
+          "spices": "Specerijen",
+          "nuts": "Noten",
+          "fruits": "Fruit",
+          "all": "Alle categorieën"
+        }
+      },
+      "company": {
+        "title": "Bedrijf",
+        "links": {
+          "about": "Over ons",
+          "approach": "Onze aanpak",
+          "team": "Managementteam",
+          "gallery": "Galerij"
+        }
+      },
+      "resources": {
+        "title": "Bronnen",
+        "links": {
+          "insights": "Inzichten",
+          "certifications": "Certificeringen",
+          "contact": "Contact",
+          "catalogue": "Catalogus aanvragen"
+        }
+      }
+    },
+    "marqueeItems": [
+      "India, in elke zending",
+      "Specerijen",
+      "Noten",
+      "Fruit",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat met BACA op WhatsApp"
+  }
+}

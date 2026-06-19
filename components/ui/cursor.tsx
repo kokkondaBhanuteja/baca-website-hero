@@ -70,8 +70,8 @@ export function Cursor() {
         target = null
         ring.classList.remove('is-filled')
       }
-      const tp = reduce ? 1 : 0.24 // position trail
-      const ts = reduce ? 1 : 0.42 // size/radius — faster expansion
+      const tp = reduce ? 1 : 0.25 // position trail
+      const ts = reduce ? 1 : 0.50 // size/radius — faster expansion
       r.x = lerp(r.x, tx, tp)
       r.y = lerp(r.y, ty, tp)
       r.w = lerp(r.w, tw, ts)

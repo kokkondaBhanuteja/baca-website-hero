@@ -1,24 +1,31 @@
-import { SiteHeader } from "@/components/site-header"
-import { ScrollFX } from "@/components/scroll-fx"
-import { Cursor } from "@/components/cursor"
-import { Hero } from "@/components/hero"
-import { Certifications } from "@/components/certifications"
-import { Manifesto } from "@/components/manifesto"
-import { StatsRow } from "@/components/stats-row"
-import { Approach } from "@/components/approach"
-import { ProductPreview } from "@/components/product-preview"
-import { GlobalPresence } from "@/components/global-presence"
-import { PullQuote } from "@/components/pull-quote"
-import { FeaturedInsights } from "@/components/featured-insights"
-import { CtaBand } from "@/components/cta-band"
-import { SiteFooter } from "@/components/site-footer"
-import { WhatsAppFab } from "@/components/whatsapp-fab"
+import { setRequestLocale } from 'next-intl/server'
 
-export default function Page() {
+import type { Locale } from '@/constants/i18n'
+import { ScrollFX } from '@/components/ui/scroll-fx'
+import { SiteHeader } from '@/components/layout/site-header'
+import { SiteFooter } from '@/components/layout/site-footer'
+import { Hero } from '@/components/sections/hero'
+import { Manifesto } from '@/components/sections/manifesto'
+import { StatsRow } from '@/components/sections/stats-row'
+import { ProductPreview } from '@/components/sections/product-preview'
+import { Approach } from '@/components/sections/approach'
+import { Certifications } from '@/components/sections/certifications'
+import { GlobalPresence } from '@/components/sections/global-presence'
+import { PullQuote } from '@/components/sections/pull-quote'
+import { FeaturedInsights } from '@/components/sections/featured-insights'
+import { CtaBand } from '@/components/sections/cta-band'
+import { WhatsAppFab } from '@/components/sections/whatsapp-fab'
+
+type PageParams = { params: Promise<{ locale: string }> }
+
+export default async function Page({ params }: PageParams) {
+  const { locale } = await params
+  // Enable static rendering for this route.
+  setRequestLocale(locale as Locale)
+
   return (
     <main className="min-h-screen bg-paper">
       <ScrollFX />
-      <Cursor />
       <SiteHeader />
       <Hero />
       <Manifesto />

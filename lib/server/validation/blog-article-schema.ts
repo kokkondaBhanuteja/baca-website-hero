@@ -1,0 +1,22 @@
+import { z } from 'zod'
+
+import { requiredLocalizedText, slugField } from './localized-text-schema'
+
+export const blogArticleInputSchema = z.object({
+  slug: slugField,
+  category: z.enum([
+    'INDUSTRY_INSIGHTS',
+    'IMPACT_STORIES',
+    'COMMUNITY_ENGAGEMENT',
+  ]),
+  title: requiredLocalizedText,
+  excerpt: requiredLocalizedText,
+  body: requiredLocalizedText,
+  coverImageUrl: z.string().nullish(),
+  coverImagePublicId: z.string().nullish(),
+  readMinutes: z.number().int().min(1).max(120).default(3),
+  status: z.enum(['DRAFT', 'PUBLISHED']).default('DRAFT'),
+  featured: z.boolean().default(false),
+})
+
+export type BlogArticleInput = z.infer<typeof blogArticleInputSchema>

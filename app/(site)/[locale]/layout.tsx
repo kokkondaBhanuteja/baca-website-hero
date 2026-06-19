@@ -1,7 +1,15 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google'
-import './globals.css'
+import { Fraunces, Inter, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { notFound } from 'next/navigation'
+
+import { LOCALE_META, type Locale } from '@/constants/i18n'
+import { routing } from '@/i18n/routing'
+import { Cursor } from '@/components/ui/cursor'
+
+import '../../globals.css'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -18,29 +26,36 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],
 })
+const notoArabic = Noto_Sans_Arabic({
+  variable: '--font-arabic',
+  subsets: ['arabic'],
+  weight: ['400', '500', '600'],
+})
 
-export const metadata: Metadata = {
-  title: 'BACA — Indian Spice, Nut & Fruit Exporter | Bharat Cargo',
-  description:
-    'BACA (Bharat Cargo) is a modern Indian export house — traceable sourcing of spices, nuts, and fruits, rigorous quality, and reliable global shipments. ISO 22000, HACCP & FSSAI certified.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+type LayoutParams = { params: Promise<{ locale: string }> }
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
+export async function generateMetadata({
+  params,
+}: LayoutParams): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale: locale as Locale, namespace: 'metadata' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    icons: {
+      icon: [
+        { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
+        { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
+      ],
+      apple: '/apple-icon.png',
+    },
+  }
 }
 
 export const viewport: Viewport = {
@@ -48,18 +63,30 @@ export const viewport: Viewport = {
   themeColor: '#FDFBF6',
 }
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+  params,
+}: Readonly<{ children: React.ReactNode } & LayoutParams>) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
+  // Enable static rendering for this locale.
+  setRequestLocale(locale)
+
+  const { dir } = LOCALE_META[locale as Locale]
+
   return (
     <html
-      lang="en"
-      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} bg-background`}
+      lang={locale}
+      dir={dir}
+      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} ${notoArabic.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        {children}
+        {/* Global magnetic cursor — same behaviour on every page. */}
+        <Cursor />
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

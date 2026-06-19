@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { createElement, useEffect, useRef, useState, type ReactNode } from 'react'
 
 interface RevealProps {
   children: ReactNode
@@ -37,16 +37,13 @@ export function Reveal({
     return () => observer.disconnect()
   }, [])
 
-  const Tag = as as keyof JSX.IntrinsicElements
-
-  return (
-    <Tag
-      // @ts-expect-error ref typing across polymorphic tag
-      ref={ref}
-      className={`baca-reveal ${visible ? 'is-visible' : ''} ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      {children}
-    </Tag>
+  return createElement(
+    as,
+    {
+      ref,
+      className: `baca-reveal ${visible ? 'is-visible' : ''} ${className}`,
+      style: { animationDelay: `${delay}ms` },
+    },
+    children,
   )
 }

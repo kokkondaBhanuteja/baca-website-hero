@@ -109,6 +109,14 @@
     @apply font-sans;
     font-variation-settings: 'SOFT' 30;
   }
+  /* Arabic: route the whole type system through Noto Sans Arabic — the Latin
+     display (Fraunces) and mono (JetBrains Mono) faces carry no Arabic glyphs. */
+  [lang='ar'] {
+    --font-heading: var(--font-arabic), 'Geeza Pro', serif;
+    --font-display: var(--font-arabic), 'Geeza Pro', serif;
+    --font-sans: var(--font-arabic), 'Geeza Pro', sans-serif;
+    --font-mono: var(--font-arabic), 'Geeza Pro', monospace;
+  }
   ::selection {
     background: var(--saffron);
     color: var(--paper);

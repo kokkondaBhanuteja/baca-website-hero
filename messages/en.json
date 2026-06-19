@@ -1,0 +1,330 @@
+{
+  "productsPage": {
+    "eyebrow": "Our catalogue",
+    "heading": "Everything we export, sourced at origin.",
+    "intro": "Spices, nuts and fruits — graded, documented, and shipped to buyers across 37 countries.",
+    "empty": "Our catalogue is being updated. Please check back soon."
+  },
+  "aboutPage": {
+    "eyebrow": "About BACA",
+    "heading": "An export partner, not a trader.",
+    "lead": "BACA (Bharat Cargo) is a modern Indian export house. We buy at origin from the same farming families season after season, grade at source, and move documented full containers to buyers across 37 countries.",
+    "commitmentsTitle": "What we commit to.",
+    "commitments": {
+      "traceability": "Full traceability from the grower's field to the forwarder's dock.",
+      "quality": "Every lot graded and lab-tested against ISO 22000 and HACCP.",
+      "documentation": "Incoterms, HS codes and certificates issued before vessels depart.",
+      "relationships": "Fixed contracts and reserved harvests for repeat buyers.",
+      "fairness": "Direct, fair payment to the farming families we source from.",
+      "responsiveness": "International enquiries answered within 12 hours."
+    },
+    "ctaHeading": "Looking for a first container? Write to us.",
+    "ctaButton": "Start an enquiry"
+  },
+  "contactPage": {
+    "eyebrow": "Start an enquiry",
+    "heading": "What do you need to import?",
+    "intro": "Tell us what you source and where it ships. We respond to international enquiries within 12 hours.",
+    "detailsTitle": "Or reach us directly",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "message": "Message",
+      "optional": "optional",
+      "messagePlaceholder": "Briefly tell us your requirement — products, volumes, destination.",
+      "submit": "Send enquiry",
+      "submitting": "Sending…",
+      "success": "Thank you — your enquiry has been received. We'll be in touch within 12 hours.",
+      "error": "Something went wrong. Please try again or email us directly."
+    }
+  },
+  "blogsPage": {
+    "eyebrow": "Insights",
+    "heading": "Notes from the spice and commodities trade.",
+    "intro": "Market reads, origin stories and the thinking behind how we source and ship.",
+    "empty": "New articles are on the way. Please check back soon.",
+    "minRead": "min read",
+    "featured": "Featured",
+    "allArticles": "All articles",
+    "related": "Keep reading",
+    "categories": {
+      "industryInsights": "Industry Insights",
+      "impactStories": "Impact Stories",
+      "communityEngagement": "Community Engagement"
+    }
+  },
+  "galleryPage": {
+    "eyebrow": "Gallery",
+    "heading": "The work, the people, the soil.",
+    "intro": "Inside our sourcing, grading and shipping — at origin in India and on to the world.",
+    "empty": "Photos are being added. Please check back soon."
+  },
+  "metadata": {
+    "title": "BACA — Indian Spice, Nut & Fruit Exporter | Bharat Cargo",
+    "description": "BACA (Bharat Cargo) is a modern Indian export house — traceable sourcing of spices, nuts, and fruits, rigorous quality, and reliable global shipments. ISO 22000, HACCP & FSSAI certified."
+  },
+  "common": {
+    "enquire": "Enquire",
+    "viewAllCategories": "View all categories"
+  },
+  "languageSwitcher": {
+    "label": "Change language"
+  },
+  "nav": {
+    "items": {
+      "about": {
+        "label": "About",
+        "children": {
+          "whoWeAre": "Who We Are",
+          "vision": "Vision & Mission",
+          "approach": "Our Approach",
+          "team": "Management Team",
+          "why": "Why Choose BACA",
+          "brands": "Our Brands"
+        }
+      },
+      "products": {
+        "label": "Products",
+        "children": {
+          "spices": "Spices",
+          "nuts": "Nuts",
+          "fruits": "Fruits",
+          "all": "View all categories"
+        }
+      },
+      "insights": {
+        "label": "Insights",
+        "children": {
+          "market": "Market Insights",
+          "impact": "Impact Stories",
+          "community": "Community Engagement"
+        }
+      },
+      "gallery": {
+        "label": "Gallery",
+        "children": {
+          "photos": "Photos",
+          "videos": "Videos"
+        }
+      },
+      "contact": {
+        "label": "Contact"
+      }
+    }
+  },
+  "header": {
+    "aria": {
+      "home": "Homepage",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    }
+  },
+  "hero": {
+    "eyebrow": "Est. 2009 · Bharat Cargo",
+    "headline": "Sourced from Indian soil. Trusted across the <em>world.</em>",
+    "standardLabel": "The BACA Standard",
+    "body": "A new generation of Indian export — built on traceable sourcing, rigorous quality, and partnerships that move commodities reliably, container after container.",
+    "ctaProducts": "Explore products",
+    "ctaContact": "Talk to our team",
+    "scroll": "Scroll",
+    "countries": "37 Countries Served",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "imageAlt": "A grid of assorted Indian spices in trays — turmeric, chilli, cumin, cinnamon and more"
+  },
+  "manifesto": {
+    "eyebrow": "Why we're here",
+    "headline": "We connect Indian growers with the world's most demanding kitchens — sourcing <em>with intention</em>, and shipping with precision.",
+    "body": "Two decades at origin in Kerala, Gujarat and Andhra — buying from the same farming families season after season, grading at source, and moving full containers to buyers across 37 countries.",
+    "imageAlt": "Weathered hands slicing fresh turmeric at source in India — grading raw spice the way BACA's farming families have for generations"
+  },
+  "stats": {
+    "items": {
+      "years": "Years in business",
+      "countries": "Countries served",
+      "containers": "Containers shipped",
+      "tonnes": "Tonnes handled / year"
+    }
+  },
+  "productPreview": {
+    "eyebrow": "What we export",
+    "heading": "Sourced at origin, graded for export.",
+    "items": {
+      "spices": {
+        "title": "Spices",
+        "alt": "Mounds of vivid Indian spices — turmeric, dried chillies, pepper and cardamom",
+        "note": "Cardamom · Pepper · Turmeric · Cumin · Chilli"
+      },
+      "nuts": {
+        "title": "Nuts",
+        "alt": "An assortment of premium nuts — cashews, almonds, hazelnuts and peanuts in a bowl",
+        "note": "Cashew W180–W450 · Almonds · Peanuts · Walnuts"
+      },
+      "fruits": {
+        "title": "Fruits",
+        "alt": "Fresh pomegranate and grapes — among India's top fresh-fruit exports",
+        "note": "Pomegranate · Grapes · Alphonso · Banana"
+      }
+    }
+  },
+  "approach": {
+    "eyebrow": "Our approach",
+    "heading": "The BACA Standard, in four moves.",
+    "intro": "How every container earns its place — from the grower's field to the forwarder's dock.",
+    "pillars": {
+      "sourcing": {
+        "title": "Sourcing",
+        "body": "We buy directly from growers in origin regions — Kerala cardamom, Guntur chilli, Malabar pepper — for full traceability from farm to forwarder."
+      },
+      "quality": {
+        "title": "Quality",
+        "body": "Every lot is graded, lab-tested for moisture, pesticide residue and aflatoxins, and documented against ISO 22000 and HACCP protocols."
+      },
+      "logistics": {
+        "title": "Logistics",
+        "body": "Packed at origin and shipped in documented full containers, with Incoterms, HS codes and certificates issued before vessels depart."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "body": "We hold fixed contracts and reserve harvests for repeat buyers — a relationship measured in years, not single shipments."
+      }
+    }
+  },
+  "certifications": {
+    "eyebrow": "Certifications",
+    "heading": "Certified for global trade.",
+    "intro": "Every container ships with its food-safety and export paperwork in order — registered, audited, and documented to the standard each market requires.",
+    "items": {
+      "fssai": { "sub": "Central License" },
+      "spicesBoard": { "sub": "RCMC · India" },
+      "apeda": { "sub": "Export registration" },
+      "iso22000": { "sub": "Food safety mgmt" },
+      "haccp": { "sub": "Hazard control" },
+      "indiaOrganic": { "sub": "NPOP certified" },
+      "halal": { "sub": "Market access" },
+      "kosher": { "sub": "Market access" }
+    }
+  },
+  "globalPresence": {
+    "eyebrow": "Global reach",
+    "heading": "From Indian ports to <em>five continents.</em>",
+    "body": "BACA ships to importers, distributors and food manufacturers across North America, Europe, the Middle East, Southeast Asia and Africa — on documented, on-time contracts.",
+    "items": {
+      "countries": "Countries served",
+      "continents": "Continents shipped to",
+      "repeatRate": "Repeat-buyer rate",
+      "responseTime": "Enquiry response time"
+    }
+  },
+  "pullQuote": {
+    "quote": "We don't trade shipments — we hold contracts. The same buyers come back season after season because the grade in the container matches the grade on the certificate, every single time.",
+    "name": "Arvind Menon",
+    "title": "Managing Director, BACA",
+    "imageAlt": "Portrait of the Managing Director of BACA"
+  },
+  "featuredInsights": {
+    "eyebrow": "Insights",
+    "heading": "Notes from the spice and commodities trade.",
+    "allArticles": "All articles",
+    "categories": {
+      "market": "Industry Insights",
+      "impact": "Impact Stories"
+    },
+    "items": {
+      "cardamom": {
+        "title": "Global cardamom demand is reshaping the 2026 harvest",
+        "alt": "Indian turmeric and spice field at harvest with farmers working"
+      },
+      "processing": {
+        "title": "Inside a modern spice processing facility in Kerala",
+        "alt": "Workers inspecting quality inside a clean modern spice processing facility"
+      },
+      "freight": {
+        "title": "Reading the sea: ocean freight trends for ingredient buyers",
+        "alt": "Cargo container ship at sea during golden hour sunset"
+      }
+    }
+  },
+  "marqueeStrip": {
+    "ariaLabel": "Countries served, commodities, and certifications",
+    "items": [
+      "Netherlands",
+      "Cardamom",
+      "United States",
+      "ISO 22000",
+      "United Arab Emirates",
+      "Cashew W320",
+      "Germany",
+      "HACCP",
+      "Saudi Arabia",
+      "Turmeric",
+      "United Kingdom",
+      "FSSAI",
+      "Singapore",
+      "Alphonso Mango",
+      "Vietnam",
+      "APEDA",
+      "Kenya",
+      "Black Pepper",
+      "Canada",
+      "Spices Board India"
+    ]
+  },
+  "ctaBand": {
+    "eyebrow": "Let's talk",
+    "heading": "Let's build a reliable supply chain <em>together.</em>",
+    "body": "Tell us what you source and where it ships. We respond to international enquiries within 12 hours.",
+    "ctaEnquire": "Enquire now",
+    "ctaCatalogue": "Download catalogue"
+  },
+  "footer": {
+    "talkLabel": "Let's talk",
+    "startEnquiry": "Start an enquiry",
+    "description": "Sourced from Indian soil. Trusted across the world. A modern Indian export house for spices, nuts, and fruits.",
+    "certifiedTitle": "Certified",
+    "backToTop": "Back to top",
+    "columns": {
+      "products": {
+        "title": "Products",
+        "links": {
+          "spices": "Spices",
+          "nuts": "Nuts",
+          "fruits": "Fruits",
+          "all": "All categories"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About",
+          "approach": "Our Approach",
+          "team": "Management Team",
+          "gallery": "Gallery"
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "links": {
+          "insights": "Insights",
+          "certifications": "Certifications",
+          "contact": "Contact",
+          "catalogue": "Request a catalogue"
+        }
+      }
+    },
+    "marqueeItems": [
+      "India, in every shipment",
+      "Spices",
+      "Nuts",
+      "Fruits",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat with BACA on WhatsApp"
+  }
+}

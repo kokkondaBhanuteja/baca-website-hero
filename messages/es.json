@@ -1,0 +1,330 @@
+{
+  "productsPage": {
+    "eyebrow": "Nuestro catálogo",
+    "heading": "Todo lo que exportamos, abastecido en origen.",
+    "intro": "Especias, frutos secos y frutas: clasificados, documentados y enviados a compradores de 37 países.",
+    "empty": "Nuestro catálogo se está actualizando. Vuelve pronto."
+  },
+  "aboutPage": {
+    "eyebrow": "Acerca de BACA",
+    "heading": "Un socio exportador, no un intermediario.",
+    "lead": "BACA (Bharat Cargo) es una casa exportadora india de vanguardia. Compramos en origen a las mismas familias agricultoras temporada tras temporada, clasificamos en el lugar de cosecha y trasladamos contenedores completos y documentados a compradores de 37 países.",
+    "commitmentsTitle": "Nuestros compromisos.",
+    "commitments": {
+      "traceability": "Trazabilidad completa, desde el campo del agricultor hasta el muelle del transitario.",
+      "quality": "Cada lote clasificado y analizado en laboratorio conforme a ISO 22000 y HACCP.",
+      "documentation": "Incoterms, códigos HS y certificados emitidos antes de que zarpen los buques.",
+      "relationships": "Contratos fijos y cosechas reservadas para compradores recurrentes.",
+      "fairness": "Pago directo y justo a las familias agricultoras de las que nos abastecemos.",
+      "responsiveness": "Consultas internacionales respondidas en menos de 12 horas."
+    },
+    "ctaHeading": "¿Busca su primer contenedor? Escríbanos.",
+    "ctaButton": "Iniciar una consulta"
+  },
+  "contactPage": {
+    "eyebrow": "Iniciar una consulta",
+    "heading": "¿Qué necesita importar?",
+    "intro": "Cuéntenos qué productos compra y a dónde se envían. Respondemos a las consultas internacionales en menos de 12 horas.",
+    "detailsTitle": "O contáctenos directamente",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "company": "Empresa",
+      "phone": "Teléfono",
+      "message": "Mensaje",
+      "optional": "opcional",
+      "messagePlaceholder": "Cuéntenos brevemente su requerimiento: productos, volúmenes y destino.",
+      "submit": "Enviar consulta",
+      "submitting": "Enviando…",
+      "success": "Gracias: hemos recibido su consulta. Nos pondremos en contacto en un plazo de 12 horas.",
+      "error": "Algo salió mal. Vuelva a intentarlo o escríbanos directamente."
+    }
+  },
+  "blogsPage": {
+    "eyebrow": "Perspectivas",
+    "heading": "Apuntes del comercio de especias y materias primas.",
+    "intro": "Análisis del mercado, historias de origen y la visión detrás de cómo abastecemos y enviamos.",
+    "empty": "Pronto llegarán nuevos artículos. Vuelve a visitarnos en breve.",
+    "minRead": "min de lectura",
+    "featured": "Destacado",
+    "allArticles": "Todos los artículos",
+    "related": "Sigue leyendo",
+    "categories": {
+      "industryInsights": "Perspectivas del sector",
+      "impactStories": "Historias de impacto",
+      "communityEngagement": "Compromiso con la comunidad"
+    }
+  },
+  "galleryPage": {
+    "eyebrow": "Galería",
+    "heading": "El trabajo, las personas, la tierra.",
+    "intro": "Por dentro de nuestro abastecimiento, clasificación y envío: desde el origen en la India hasta el resto del mundo.",
+    "empty": "Se están añadiendo fotos. Vuelve a visitarnos en breve."
+  },
+  "metadata": {
+    "title": "BACA — Exportador indio de especias, frutos secos y frutas | Bharat Cargo",
+    "description": "BACA (Bharat Cargo) es una casa exportadora india moderna: abastecimiento trazable de especias, frutos secos y frutas, calidad rigurosa y envíos internacionales fiables. Certificación ISO 22000, HACCP y FSSAI."
+  },
+  "common": {
+    "enquire": "Solicitar información",
+    "viewAllCategories": "Ver todas las categorías"
+  },
+  "languageSwitcher": {
+    "label": "Cambiar idioma"
+  },
+  "nav": {
+    "items": {
+      "about": {
+        "label": "Nosotros",
+        "children": {
+          "whoWeAre": "Quiénes somos",
+          "vision": "Visión y misión",
+          "approach": "Nuestro enfoque",
+          "team": "Equipo directivo",
+          "why": "Por qué elegir BACA",
+          "brands": "Nuestras marcas"
+        }
+      },
+      "products": {
+        "label": "Productos",
+        "children": {
+          "spices": "Especias",
+          "nuts": "Frutos secos",
+          "fruits": "Frutas",
+          "all": "Ver todas las categorías"
+        }
+      },
+      "insights": {
+        "label": "Análisis",
+        "children": {
+          "market": "Análisis de mercado",
+          "impact": "Historias de impacto",
+          "community": "Compromiso con la comunidad"
+        }
+      },
+      "gallery": {
+        "label": "Galería",
+        "children": {
+          "photos": "Fotos",
+          "videos": "Vídeos"
+        }
+      },
+      "contact": {
+        "label": "Contacto"
+      }
+    }
+  },
+  "header": {
+    "aria": {
+      "home": "Página de inicio",
+      "openMenu": "Abrir menú",
+      "closeMenu": "Cerrar menú"
+    }
+  },
+  "hero": {
+    "eyebrow": "Est. 2009 · Bharat Cargo",
+    "headline": "Cultivado en tierra india. La confianza de <em>todo el mundo.</em>",
+    "standardLabel": "El estándar BACA",
+    "body": "Una nueva generación de exportación india, fundada en un abastecimiento trazable, una calidad rigurosa y alianzas que mueven materias primas de forma fiable, contenedor tras contenedor.",
+    "ctaProducts": "Explorar productos",
+    "ctaContact": "Hablar con nuestro equipo",
+    "scroll": "Desplázate",
+    "countries": "37 países atendidos",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "imageAlt": "Una cuadrícula de especias indias variadas en bandejas: cúrcuma, chile, comino, canela y más"
+  },
+  "manifesto": {
+    "eyebrow": "Nuestra historia",
+    "headline": "Conectamos a los productores indios con las cocinas más exigentes del mundo: abastecemos <em>con intención</em> y enviamos con precisión.",
+    "body": "Dos décadas en origen en Kerala, Guyarat y Andhra, comprando a las mismas familias agricultoras temporada tras temporada, clasificando en origen y moviendo contenedores completos a compradores de 37 países.",
+    "imageAlt": "Manos curtidas cortando cúrcuma fresca en origen en la India, clasificando la especia cruda como lo han hecho durante generaciones las familias agricultoras de BACA"
+  },
+  "stats": {
+    "items": {
+      "years": "Años de trayectoria",
+      "countries": "Países atendidos",
+      "containers": "Contenedores enviados",
+      "tonnes": "Toneladas gestionadas / año"
+    }
+  },
+  "productPreview": {
+    "eyebrow": "Lo que exportamos",
+    "heading": "Abastecido en origen, clasificado para la exportación.",
+    "items": {
+      "spices": {
+        "title": "Especias",
+        "alt": "Montones de vívidas especias indias: cúrcuma, chiles secos, pimienta y cardamomo",
+        "note": "Cardamomo · Pimienta · Cúrcuma · Comino · Chile"
+      },
+      "nuts": {
+        "title": "Frutos secos",
+        "alt": "Un surtido de frutos secos premium: anacardos, almendras, avellanas y cacahuetes en un cuenco",
+        "note": "Cashew W180–W450 · Almendras · Cacahuetes · Nueces"
+      },
+      "fruits": {
+        "title": "Frutas",
+        "alt": "Granada y uvas frescas, entre las principales exportaciones de fruta fresca de la India",
+        "note": "Granada · Uvas · Alphonso · Plátano"
+      }
+    }
+  },
+  "approach": {
+    "eyebrow": "Nuestro enfoque",
+    "heading": "El estándar BACA, en cuatro pasos.",
+    "intro": "Cómo cada contenedor se gana su lugar: desde el campo del productor hasta el muelle del transitario.",
+    "pillars": {
+      "sourcing": {
+        "title": "Abastecimiento",
+        "body": "Compramos directamente a los productores de las regiones de origen —cardamomo de Kerala, chile de Guntur, pimienta de Malabar— para una trazabilidad completa desde la granja hasta el transitario."
+      },
+      "quality": {
+        "title": "Calidad",
+        "body": "Cada lote se clasifica, se analiza en laboratorio para detectar humedad, residuos de plaguicidas y aflatoxinas, y se documenta conforme a los protocolos ISO 22000 y HACCP."
+      },
+      "logistics": {
+        "title": "Logística",
+        "body": "Envasado en origen y enviado en contenedores completos documentados, con Incoterms, códigos HS y certificados emitidos antes de que zarpen los buques."
+      },
+      "partnership": {
+        "title": "Alianzas",
+        "body": "Mantenemos contratos fijos y reservamos cosechas para compradores recurrentes: una relación que se mide en años, no en envíos puntuales."
+      }
+    }
+  },
+  "certifications": {
+    "eyebrow": "Certificaciones",
+    "heading": "Certificados para el comercio internacional.",
+    "intro": "Cada contenedor se envía con su documentación de seguridad alimentaria y exportación en regla: registrada, auditada y documentada según el estándar que exige cada mercado.",
+    "items": {
+      "fssai": { "sub": "Licencia central" },
+      "spicesBoard": { "sub": "RCMC · India" },
+      "apeda": { "sub": "Registro de exportación" },
+      "iso22000": { "sub": "Gestión de seguridad alimentaria" },
+      "haccp": { "sub": "Control de peligros" },
+      "indiaOrganic": { "sub": "Certificado NPOP" },
+      "halal": { "sub": "Acceso a mercados" },
+      "kosher": { "sub": "Acceso a mercados" }
+    }
+  },
+  "globalPresence": {
+    "eyebrow": "Alcance global",
+    "heading": "De los puertos de la India a <em>cinco continentes.</em>",
+    "body": "BACA envía a importadores, distribuidores y fabricantes de alimentos en Norteamérica, Europa, Oriente Medio, el Sudeste Asiático y África, con contratos documentados y puntuales.",
+    "items": {
+      "countries": "Países atendidos",
+      "continents": "Continentes a los que enviamos",
+      "repeatRate": "Tasa de compradores recurrentes",
+      "responseTime": "Tiempo de respuesta a consultas"
+    }
+  },
+  "pullQuote": {
+    "quote": "No comerciamos con envíos: mantenemos contratos. Los mismos compradores vuelven temporada tras temporada porque la calidad del contenedor coincide con la calidad del certificado, siempre.",
+    "name": "Arvind Menon",
+    "title": "Director general, BACA",
+    "imageAlt": "Retrato del director general de BACA"
+  },
+  "featuredInsights": {
+    "eyebrow": "Análisis",
+    "heading": "Apuntes del comercio de especias y materias primas.",
+    "allArticles": "Todos los artículos",
+    "categories": {
+      "market": "Análisis del sector",
+      "impact": "Historias de impacto"
+    },
+    "items": {
+      "cardamom": {
+        "title": "La demanda mundial de cardamomo está transformando la cosecha de 2026",
+        "alt": "Campo indio de cúrcuma y especias en plena cosecha con agricultores trabajando"
+      },
+      "processing": {
+        "title": "Dentro de una planta moderna de procesamiento de especias en Kerala",
+        "alt": "Operarios inspeccionando la calidad dentro de una planta moderna y limpia de procesamiento de especias"
+      },
+      "freight": {
+        "title": "Leer el mar: tendencias del flete marítimo para compradores de ingredientes",
+        "alt": "Buque portacontenedores en alta mar durante la puesta de sol de la hora dorada"
+      }
+    }
+  },
+  "marqueeStrip": {
+    "ariaLabel": "Países atendidos, materias primas y certificaciones",
+    "items": [
+      "Países Bajos",
+      "Cardamomo",
+      "Estados Unidos",
+      "ISO 22000",
+      "Emiratos Árabes Unidos",
+      "Cashew W320",
+      "Alemania",
+      "HACCP",
+      "Arabia Saudí",
+      "Cúrcuma",
+      "Reino Unido",
+      "FSSAI",
+      "Singapur",
+      "Mango Alphonso",
+      "Vietnam",
+      "APEDA",
+      "Kenia",
+      "Pimienta negra",
+      "Canadá",
+      "Spices Board India"
+    ]
+  },
+  "ctaBand": {
+    "eyebrow": "Hablemos",
+    "heading": "Construyamos <em>juntos</em> una cadena de suministro fiable.",
+    "body": "Cuéntanos qué abasteces y a dónde lo envías. Respondemos a las consultas internacionales en un plazo de 12 horas.",
+    "ctaEnquire": "Solicitar información",
+    "ctaCatalogue": "Descargar catálogo"
+  },
+  "footer": {
+    "talkLabel": "Hablemos",
+    "startEnquiry": "Iniciar una consulta",
+    "description": "Cultivado en tierra india. La confianza de todo el mundo. Una casa exportadora india moderna de especias, frutos secos y frutas.",
+    "certifiedTitle": "Certificados",
+    "backToTop": "Volver arriba",
+    "columns": {
+      "products": {
+        "title": "Productos",
+        "links": {
+          "spices": "Especias",
+          "nuts": "Frutos secos",
+          "fruits": "Frutas",
+          "all": "Todas las categorías"
+        }
+      },
+      "company": {
+        "title": "Empresa",
+        "links": {
+          "about": "Nosotros",
+          "approach": "Nuestro enfoque",
+          "team": "Equipo directivo",
+          "gallery": "Galería"
+        }
+      },
+      "resources": {
+        "title": "Recursos",
+        "links": {
+          "insights": "Análisis",
+          "certifications": "Certificaciones",
+          "contact": "Contacto",
+          "catalogue": "Solicitar un catálogo"
+        }
+      }
+    },
+    "marqueeItems": [
+      "India, en cada envío",
+      "Especias",
+      "Frutos secos",
+      "Frutas",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "whatsapp": {
+    "ariaLabel": "Chatea con BACA por WhatsApp"
+  }
+}
