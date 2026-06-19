@@ -72,10 +72,11 @@ export function SiteHeader() {
   }, [mobileOpen])
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
         scrolled
-          ? 'border-b border-line bg-paper/85 backdrop-blur-md'
+          ? 'border-b border-line bg-paper/95'
           : 'border-b border-transparent bg-transparent'
       }`}
     >
@@ -169,10 +170,12 @@ export function SiteHeader() {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* Mobile full-screen overlay */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-ink text-paper lg:hidden">
+    {/* Mobile full-screen overlay — rendered OUTSIDE the header so the scrolled
+        header's backdrop-filter can't trap this fixed overlay */}
+    {mobileOpen && (
+        <div className="fixed inset-0 z-[60] flex flex-col bg-ink text-paper lg:hidden">
           <div className="flex h-[72px] items-center justify-between px-5 sm:px-8">
             <span className="font-heading text-2xl font-medium">BACA</span>
             <button
@@ -247,6 +250,6 @@ export function SiteHeader() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   )
 }

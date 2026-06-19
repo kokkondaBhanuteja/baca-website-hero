@@ -44,23 +44,32 @@ export function ScrollFX() {
       )
     })
 
-    // Parallax (kept scaled so the drift never reveals an edge)
-    parallax.forEach((el) => {
-      const trigger = el.closest('section') ?? el
-      gsap.fromTo(
-        el,
-        { yPercent: -4, scale: 1.1 },
-        {
-          yPercent: 4,
-          scale: 1.1,
-          ease: 'none',
-          scrollTrigger: { trigger, start: 'top bottom', end: 'bottom top', scrub: true },
-        },
-      )
-    })
+    // Parallax — desktop only (skip the per-frame repaint cost on mobile),
+    // kept scaled so the drift never reveals an edge.
+    if (window.innerWidth >= 1024) {
+      parallax.forEach((el) => {
+        const trigger = el.closest('section') ?? el
+        gsap.fromTo(
+          el,
+          { yPercent: -4, scale: 1.1 },
+          {
+            yPercent: 4,
+            scale: 1.1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          },
+        )
+      })
+    }
 
-    // Lenis smooth scroll, driven by the GSAP ticker
-    const lenis = new Lenis({ duration: 1.1, smoothWheel: true })
+    // Lenis smooth scroll, driven by the GSAP ticker — light lerp (snappy, not floaty)
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true })
     lenis.on('scroll', ScrollTrigger.update)
     const raf = (time: number) => lenis.raf(time * 1000)
     gsap.ticker.add(raf)

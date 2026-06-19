@@ -5,8 +5,8 @@ export function Hero() {
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-ink">
       {/* Full-bleed photograph */}
       <img
-        src="/images/hero-india-market.jpg"
-        alt="A vendor at an Indian market with bowls of pulses, grains and spices — sourced at origin"
+        src="/images/hero-spice.jpg"
+        alt="A grid of assorted Indian spices in trays — turmeric, chilli, cumin, cinnamon and more"
         data-parallax
         className="absolute inset-0 h-full w-full object-cover"
       />

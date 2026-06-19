@@ -13,15 +13,15 @@ const CATEGORIES = [
     title: 'Nuts',
     href: '/products/nuts',
     image: '/images/cat-nuts.jpg',
-    alt: 'Premium whole white cashew kernels with peanuts and almonds in a rustic bowl',
-    note: 'Cashew W180–W450 · Peanuts · Almonds',
+    alt: 'An assortment of premium nuts — cashews, almonds, hazelnuts and peanuts in a bowl',
+    note: 'Cashew W180–W450 · Almonds · Peanuts · Walnuts',
   },
   {
     title: 'Fruits',
     href: '/products/fruits',
     image: '/images/cat-fruits.jpg',
-    alt: 'Ripe Alphonso mangoes sliced to show golden flesh, with pomegranate and grapes',
-    note: 'Alphonso · Kesar · Pomegranate · Grapes',
+    alt: 'Fresh pomegranate and grapes — among India’s top fresh-fruit exports',
+    note: 'Pomegranate · Grapes · Alphonso · Banana',
   },
 ]
 
