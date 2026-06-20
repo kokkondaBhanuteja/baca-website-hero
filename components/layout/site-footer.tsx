@@ -60,10 +60,11 @@ export function SiteFooter() {
     const reveals = gsap.utils.toArray<HTMLElement>(
       root.querySelectorAll('[data-footer-reveal]'),
     )
-    const wordmark = root.querySelector<HTMLElement>('[data-footer-wordmark]')
 
     if (reduce) return
 
+    // The wordmark itself is intentionally NOT revealed/animated — it shows
+    // immediately (the ocean stills cross-fade inside it via WordmarkSlideshow).
     const context = gsap.context(() => {
       reveals.forEach((element) => {
         gsap.from(element, {
@@ -75,24 +76,6 @@ export function SiteFooter() {
           scrollTrigger: { trigger: element, start: 'top 90%' },
         })
       })
-
-      if (wordmark) {
-        // One-shot reveal that fires as soon as the wordmark enters the viewport,
-        // so it is fully shown well before the page bottom (a scroll-scrub here
-        // can't complete — there is no content below the footer to scroll through).
-        gsap.fromTo(
-          wordmark,
-          { yPercent: 12, autoAlpha: 0, clipPath: 'inset(0% 0% 100% 0%)' },
-          {
-            yPercent: 0,
-            autoAlpha: 1,
-            clipPath: 'inset(0% 0% 0% 0%)',
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: { trigger: wordmark, start: 'top 95%' },
-          },
-        )
-      }
     }, root)
 
     return () => context.revert()
@@ -201,16 +184,14 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Oversized ocean wordmark — rises + reveals on scroll, cross-fading stills */}
+        {/* Oversized ocean wordmark — always visible; cross-fading stills inside */}
         <div className="border-t border-paper/12 pt-10">
-          <div data-footer-wordmark>
-            <WordmarkSlideshow
-              text={SITE.brand}
-              images={FOOTER_WORDMARK_IMAGES}
-              align="left"
-              className="w-full"
-            />
-          </div>
+          <WordmarkSlideshow
+            text={SITE.brand}
+            images={FOOTER_WORDMARK_IMAGES}
+            align="left"
+            className="w-full"
+          />
           <p className="mt-4 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-paper/45">
             {SITE.sub} · Est. {SITE.founded}
           </p>
