@@ -21,9 +21,3 @@ export const enquiryInputSchema = z
   .strict()
 
 export type EnquiryInput = z.infer<typeof enquiryInputSchema>
-
-export const enquiryStatusSchema = z
-  .object({
-    status: z.enum(['NEW', 'READ', 'ARCHIVED']),
-  })
-  .strict()

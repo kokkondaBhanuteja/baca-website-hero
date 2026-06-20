@@ -18,9 +18,8 @@ Custom replacement for native `<select>`. Full keyboard support (Arrow/Home/End/
 Used In:
 
 - LanguageSwitcher (locale picker)
-- BlogArticleForm (category select)
+- BlogArticleForm (category + status select)
 - ProductForm (category select)
-- EnquiryStatusControl (status select)
 - Admin forms (any dropdown select)
 
 Props:

@@ -41,9 +41,10 @@ Business Logic:
 - useEffect cleanup: document.body.style.overflow = isMobileOpen ? 'hidden' : '' (body scroll lock)
 - Builds navItems array from NAV constant + conditional dropdown children for 'products' and 'insights'
 - header: fixed inset-x-0 top-0 z-50, transition-colors, className changes based on scrolled state (solid bg-paper/95 border-b, or transparent bg-transparent)
-- Left: Logo Link with text-paper (transparent) or text-ink (solid)
-- Center: SiteHeaderDesktopNav (hidden below lg)
-- Right: LanguageSwitcher (hidden below md) + Contact CTA (hidden below sm) + mobile hamburger button (hidden above lg)
+- Inner container is **flex `justify-between`** below `lg` (guarantees the wordmark on the far left + hamburger on the far right on mobile) and switches to a **3-column grid `[1fr_auto_1fr]`** on `lg+` so the desktop nav sits at true page centre regardless of the wordmark's vs the right-actions' widths. Logo gets `lg:justify-self-start`, right actions get `lg:justify-self-end` (no-ops on mobile flex).
+- Wordmark: BACA in font-heading, `text-3xl` on mobile for presence, `sm:text-2xl` from sm+. Colour swaps text-paper (transparent) ↔ text-ink (solid). The previous "Bharat Cargo" sub-line was removed when `SITE.sub` was dropped.
+- Middle slot: SiteHeaderDesktopNav (hidden below lg — `display:none` on mobile so the flex skips it).
+- Right slot: LanguageSwitcher (hidden below md) + Contact CTA (hidden below sm) + mobile hamburger button (hidden above lg).
 - Mobile menu rendered as sibling of header (outside header) as SiteHeaderMobileMenu
 
 Dependencies:

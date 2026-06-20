@@ -13,10 +13,16 @@
     "empty": "Notre catalogue est en cours de mise à jour. Revenez bientôt."
   },
   "contactPage": {
-    "eyebrow": "Démarrer une demande",
+    "eyebrow": "Contactez-nous",
     "heading": "Que souhaitez-vous importer ?",
     "intro": "Dites-nous ce que vous achetez et vers quelle destination cela sera expédié. Nous répondons aux demandes internationales sous 12 heures.",
-    "detailsTitle": "Ou contactez-nous directement",
+    "officeTitle": "Bureau",
+    "channels": {
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Écrivez-nous"
+    },
     "form": {
       "name": "Nom complet",
       "email": "E-mail",
@@ -46,6 +52,13 @@
       "communityEngagement": "Engagement communautaire"
     }
   },
+  "notFound": {
+    "eyebrow": "404 · Page introuvable",
+    "heading": "Ce conteneur n'a jamais été expédié.",
+    "body": "Nous ne trouvons pas la page que vous cherchez. Elle a peut-être été déplacée ou le lien est incorrect. Retournez à l'accueil ou parcourez le catalogue.",
+    "ctaHome": "Retour à l'accueil",
+    "ctaProducts": "Voir les produits"
+  },
   "galleryPage": {
     "eyebrow": "Galerie",
     "heading": "Le travail, les femmes et les hommes, la terre.",
@@ -53,8 +66,8 @@
     "empty": "Des photos sont en cours d'ajout. Revenez bientôt."
   },
   "metadata": {
-    "title": "BACA — Exportateur indien d'épices, de fruits à coque et de fruits | Bharat Cargo",
-    "description": "BACA (Bharat Cargo) est une maison d'export indienne moderne — approvisionnement traçable en épices, fruits à coque et fruits, qualité rigoureuse et expéditions internationales fiables. Certifié ISO 22000, HACCP et FSSAI."
+    "title": "BACA — Exportateur indien d'épices, de fruits à coque et de fruits",
+    "description": "BACA est une maison d'export indienne moderne — approvisionnement traçable en épices, fruits à coque et fruits, qualité rigoureuse et expéditions internationales fiables. Certifié ISO 22000, HACCP et FSSAI."
   },
   "common": {
     "enquire": "Faire une demande",
@@ -65,8 +78,8 @@
   },
   "nav": {
     "items": {
-      "about": {
-        "label": "À propos"
+      "home": {
+        "label": "Accueil"
       },
       "products": {
         "label": "Produits"
@@ -89,7 +102,6 @@
     }
   },
   "hero": {
-    "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Issu de la terre indienne. La confiance à travers le <em>monde.</em>",
     "body": "Une nouvelle génération de l'export indien — bâtie sur un approvisionnement traçable, une qualité rigoureuse et des partenariats qui acheminent les marchandises de manière fiable, conteneur après conteneur.",
     "ctaProducts": "Découvrir les produits",
@@ -199,8 +211,6 @@
     "ctaCatalogue": "Télécharger le catalogue"
   },
   "footer": {
-    "talkLabel": "Discutons",
-    "startEnquiry": "Lancer une demande",
     "description": "Issu de la terre indienne. La confiance à travers le monde. Une maison d'export indienne moderne pour les épices, les fruits à coque et les fruits.",
     "certifiedTitle": "Certifié",
     "backToTop": "Retour en haut",

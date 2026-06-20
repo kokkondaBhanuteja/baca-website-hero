@@ -14,7 +14,6 @@ import { GlobalPresence } from '@/components/sections/global-presence'
 import { PullQuote } from '@/components/sections/pull-quote'
 import { FeaturedInsights } from '@/components/sections/featured-insights'
 import { CtaBand } from '@/components/sections/cta-band'
-import { WhatsAppFab } from '@/components/sections/whatsapp-fab'
 
 type PageParams = { params: Promise<{ locale: string }> }
 
@@ -40,7 +39,6 @@ export default async function Page({ params }: PageParams) {
         <CtaBand />
       </main>
       <SiteFooter />
-      <WhatsAppFab />
     </>
   )
 }

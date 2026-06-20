@@ -1,10 +1,10 @@
-import { listCategoriesForAdmin } from '@/lib/server/services/category-service'
+import { listAllCategoriesForAdmin } from '@/lib/server/services/category-service'
 import { ProductForm } from '../../../components/product-form'
 
 export const dynamic = 'force-dynamic'
 
 export default async function NewProductPage() {
-  const categories = await listCategoriesForAdmin()
+  const categories = await listAllCategoriesForAdmin()
   const options = categories.map((category) => ({
     id: category.id,
     label: category.name.en,
@@ -12,7 +12,7 @@ export default async function NewProductPage() {
 
   return (
     <div>
-      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+      <h1 className="mb-6 font-heading text-2xl font-light text-ink sm:mb-8 sm:text-3xl">
         New product
       </h1>
       <ProductForm categories={options} />

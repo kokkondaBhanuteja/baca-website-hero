@@ -11,6 +11,12 @@ admin-shell/                  Sidebar nav + sign-out — the dashboard frame.
 admin-list-skeleton/          ONE shared placeholder used by (dashboard)/loading.tsx
                               for every admin route transition (was 5 near-identical
                               per-page loading.tsx files; consolidated 2026-06-20).
+admin-list-table/             Generic search + pagination + sticky-thead client table.
+                              Used via thin per-page wrappers (products-table,
+                              categories-table, blog-articles-table).
+products-table/               Client wrapper for the /admin/products list.
+categories-table/             Client wrapper for the /admin/categories list.
+blog-articles-table/          Client wrapper for the /admin/blog-articles list.
 localized-text-input/         Tabbed input with one tab per locale; EN required.
 image-uploader/               Cloudinary signed upload (sign → direct upload).
 product-form/                 Product create/edit form.
@@ -18,7 +24,6 @@ category-form/                Product-category create/edit form.
 blog-article-form/            Blog-article create/edit form. NOTE: local state is
                               `isFeatured` but the API payload key stays `featured`.
 gallery-uploader-form/        Single-image gallery upload form.
-enquiry-status-control/       Inline status dropdown on the enquiries list.
 delete-entity-button/         Confirm-then-DELETE button for any list-row entity.
 ```
 

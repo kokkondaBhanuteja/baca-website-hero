@@ -30,9 +30,9 @@ interface WordmarkMediaProps {
  * <foreignObject> clipped by an SVG <text> path.
  *
  * Fallbacks: the <video> shows its poster before/without playback. Under
- * prefers-reduced-motion or on small screens we do not autoplay, so the poster
- * still shows — never a blank box. Decorative → aria-hidden, with a visually
- * hidden real-text label for assistive tech. Off-screen → paused.
+ * prefers-reduced-motion we do not autoplay, so the poster still shows — never
+ * a blank box. Decorative → aria-hidden, with a visually hidden real-text label
+ * for assistive tech. Off-screen → paused.
  */
 export function WordmarkMedia({
   text = 'BACA',
@@ -46,7 +46,8 @@ export function WordmarkMedia({
   const videoRef = useRef<HTMLVideoElement | null>(null)
 
   // Playback is driven imperatively (no autoplay attribute) so the poster shows
-  // first and we never start video under reduced-motion / on small screens.
+  // first and we don't fight the browser's autoplay heuristics. The <video> has
+  // `muted` + `playsInline` + `loop` in the markup so iOS Safari allows it.
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
@@ -54,8 +55,7 @@ export function WordmarkMedia({
     const reduceMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches
-    const smallScreen = window.matchMedia('(max-width: 640px)').matches
-    if (reduceMotion || smallScreen) {
+    if (reduceMotion) {
       video.pause()
       return
     }

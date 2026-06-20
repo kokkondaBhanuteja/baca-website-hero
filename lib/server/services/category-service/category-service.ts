@@ -15,6 +15,11 @@ import type {
   ProductCategoryPublicDto,
 } from '@/lib/shared/types/catalogue-dto'
 import type { LocalizedText } from '@/lib/shared/types/localized-text'
+import {
+  ADMIN_LIST_DEFAULT_PAGE_SIZE,
+  type AdminListQuery,
+  type PaginatedList,
+} from '@/lib/shared/types/paginated-list'
 import type { CategoryInput } from '@/lib/server/validation/category-schema'
 
 export const CATEGORIES_TAG = 'categories'
@@ -51,7 +56,14 @@ function toData(input: CategoryInput) {
   }
 }
 
-export async function listCategoriesForAdmin(): Promise<
+/**
+ * Non-paginated read of every category, ordered by sortOrder. Used by the
+ * product form's "Category" dropdown — that dropdown needs every category, not
+ * a paginated slice. Admins realistically have a handful of categories so an
+ * unbounded read is fine; if this ever grows past ~hundreds we can paginate
+ * the dropdown with an async-load pattern.
+ */
+export async function listAllCategoriesForAdmin(): Promise<
   ProductCategoryAdminDto[]
 > {
   const rows = await prisma.productCategory.findMany({
@@ -59,6 +71,35 @@ export async function listCategoriesForAdmin(): Promise<
     include: { _count: { select: { products: true } } },
   })
   return rows.map(mapAdmin)
+}
+
+export async function listCategoriesForAdmin({
+  page = 1,
+  pageSize = ADMIN_LIST_DEFAULT_PAGE_SIZE,
+  search = '',
+}: AdminListQuery = {}): Promise<PaginatedList<ProductCategoryAdminDto>> {
+  const trimmed = search.trim()
+  const where: Prisma.ProductCategoryWhereInput | undefined = trimmed
+    ? {
+        OR: [
+          { slug: { contains: trimmed, mode: 'insensitive' } },
+          { name: { path: ['en'], string_contains: trimmed } },
+        ],
+      }
+    : undefined
+
+  const [rows, total] = await Promise.all([
+    prisma.productCategory.findMany({
+      where,
+      orderBy: { sortOrder: 'asc' },
+      include: { _count: { select: { products: true } } },
+      skip: (page - 1) * pageSize,
+      take: pageSize,
+    }),
+    prisma.productCategory.count({ where }),
+  ])
+
+  return { items: rows.map(mapAdmin), total, page, pageSize }
 }
 
 export async function getCategoryForAdmin(

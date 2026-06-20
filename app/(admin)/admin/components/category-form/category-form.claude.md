@@ -37,13 +37,20 @@ Business Logic:
 - Sort order: number input
 - Published checkbox
 
+Layout:
+
+- Two-column CMS layout on `lg+` via `grid grid-cols-1 lg:grid-cols-12 lg:gap-8`.
+  - MAIN (`lg:col-span-8`): localized Name / Description in a single bordered card.
+  - SIDEBAR (`lg:col-span-4`): three stacked cards — Save+Cancel + Published checkbox; Slug + Sort order; Category image.
+  - Sidebar is `lg:sticky lg:top-6` so actions stay visible while scrolling.
+- Mobile: single-column stack.
+
 Dependencies:
 
 - React hooks: useState
 - next/navigation: useRouter
 - @/lib/api-client/endpoints/categories-api
 - @/lib/shared/types/catalogue-dto
-- @/components/ui/dropdown
 - @/app/(admin)/admin/components/\* (ImageUploader, LocalizedTextInput with hasAnyLocaleValue)
 
 i18n:

@@ -16,6 +16,11 @@ import type {
   BlogArticleSummaryDto,
 } from '@/lib/shared/types/blog-dto'
 import type { LocalizedText } from '@/lib/shared/types/localized-text'
+import {
+  ADMIN_LIST_DEFAULT_PAGE_SIZE,
+  type AdminListQuery,
+  type PaginatedList,
+} from '@/lib/shared/types/paginated-list'
 import type { BlogArticleInput } from '@/lib/server/validation/blog-article-schema'
 
 export const BLOG_ARTICLES_TAG = 'blog-articles'
@@ -81,11 +86,32 @@ function resolvePublishedAt(
   return existing ?? new Date()
 }
 
-export async function listArticlesForAdmin(): Promise<BlogArticleAdminDto[]> {
-  const rows = await prisma.blogArticle.findMany({
-    orderBy: [{ createdAt: 'desc' }],
-  })
-  return rows.map(mapAdmin)
+export async function listArticlesForAdmin({
+  page = 1,
+  pageSize = ADMIN_LIST_DEFAULT_PAGE_SIZE,
+  search = '',
+}: AdminListQuery = {}): Promise<PaginatedList<BlogArticleAdminDto>> {
+  const trimmed = search.trim()
+  const where: Prisma.BlogArticleWhereInput | undefined = trimmed
+    ? {
+        OR: [
+          { slug: { contains: trimmed, mode: 'insensitive' } },
+          { title: { path: ['en'], string_contains: trimmed } },
+        ],
+      }
+    : undefined
+
+  const [rows, total] = await Promise.all([
+    prisma.blogArticle.findMany({
+      where,
+      orderBy: [{ createdAt: 'desc' }],
+      skip: (page - 1) * pageSize,
+      take: pageSize,
+    }),
+    prisma.blogArticle.count({ where }),
+  ])
+
+  return { items: rows.map(mapAdmin), total, page, pageSize }
 }
 
 export async function getArticleForAdmin(
@@ -174,18 +200,6 @@ export const listPublishedArticles = unstable_cache(
     return rows.map((row) => mapSummary(row, locale))
   },
   ['listPublishedArticles'],
-  { tags: [BLOG_ARTICLES_TAG] },
-)
-
-export const listPublishedSlugs = unstable_cache(
-  async (): Promise<string[]> => {
-    const rows = await prisma.blogArticle.findMany({
-      where: { status: 'PUBLISHED' },
-      select: { slug: true },
-    })
-    return rows.map((row) => row.slug)
-  },
-  ['listPublishedSlugs'],
   { tags: [BLOG_ARTICLES_TAG] },
 )
 

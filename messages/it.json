@@ -13,10 +13,16 @@
     "empty": "Il nostro catalogo è in fase di aggiornamento. Torna presto."
   },
   "contactPage": {
-    "eyebrow": "Avvia una richiesta",
+    "eyebrow": "Contattaci",
     "heading": "Che cosa desidera importare?",
     "intro": "Ci dica che cosa acquista e dove va spedito. Rispondiamo alle richieste internazionali entro 12 ore.",
-    "detailsTitle": "Oppure ci contatti direttamente",
+    "officeTitle": "Ufficio",
+    "channels": {
+      "email": "Email",
+      "phone": "Telefono",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Scrivici"
+    },
     "form": {
       "name": "Nome completo",
       "email": "Email",
@@ -46,6 +52,13 @@
       "communityEngagement": "Coinvolgimento della comunità"
     }
   },
+  "notFound": {
+    "eyebrow": "404 · Pagina non trovata",
+    "heading": "Questa spedizione non è mai partita.",
+    "body": "Non riusciamo a trovare ciò che cerchi. La pagina potrebbe essere stata spostata o il link non è corretto. Torna alla home o esplora il catalogo.",
+    "ctaHome": "Torna alla home",
+    "ctaProducts": "Esplora i prodotti"
+  },
   "galleryPage": {
     "eyebrow": "Galleria",
     "heading": "Il lavoro, le persone, la terra.",
@@ -53,8 +66,8 @@
     "empty": "Le foto sono in fase di caricamento. Torna presto a trovarci."
   },
   "metadata": {
-    "title": "BACA — Esportatore indiano di spezie, frutta secca e frutta | Bharat Cargo",
-    "description": "BACA (Bharat Cargo) è una moderna casa di esportazione indiana — approvvigionamento tracciabile di spezie, frutta secca e frutta, qualità rigorosa e spedizioni internazionali affidabili. Certificata ISO 22000, HACCP e FSSAI."
+    "title": "BACA — Esportatore indiano di spezie, frutta secca e frutta",
+    "description": "BACA è una moderna casa di esportazione indiana — approvvigionamento tracciabile di spezie, frutta secca e frutta, qualità rigorosa e spedizioni internazionali affidabili. Certificata ISO 22000, HACCP e FSSAI."
   },
   "common": {
     "enquire": "Richiedi informazioni",
@@ -65,8 +78,8 @@
   },
   "nav": {
     "items": {
-      "about": {
-        "label": "Chi siamo"
+      "home": {
+        "label": "Home"
       },
       "products": {
         "label": "Prodotti"
@@ -89,7 +102,6 @@
     }
   },
   "hero": {
-    "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Coltivato nella terra indiana. Apprezzato in tutto il <em>mondo.</em>",
     "body": "Una nuova generazione dell'esportazione indiana — costruita su approvvigionamento tracciabile, qualità rigorosa e partnership che movimentano le merci in modo affidabile, container dopo container.",
     "ctaProducts": "Esplora i prodotti",
@@ -199,8 +211,6 @@
     "ctaCatalogue": "Scarica il catalogo"
   },
   "footer": {
-    "talkLabel": "Parliamone",
-    "startEnquiry": "Avvia una richiesta",
     "description": "Coltivato nella terra indiana. Apprezzato in tutto il mondo. Una moderna casa di esportazione indiana per spezie, frutta secca e frutta.",
     "certifiedTitle": "Certificati",
     "backToTop": "Torna all'inizio",

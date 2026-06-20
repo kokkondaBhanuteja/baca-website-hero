@@ -9,7 +9,7 @@ export default async function GalleryAdminPage() {
 
   return (
     <div>
-      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+      <h1 className="mb-6 font-heading text-2xl font-light text-ink sm:mb-8 sm:text-3xl">
         Gallery
       </h1>
 

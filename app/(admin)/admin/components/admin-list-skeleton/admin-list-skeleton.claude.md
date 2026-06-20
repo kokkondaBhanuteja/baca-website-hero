@@ -12,7 +12,7 @@ imports_from:
 
 Purpose:
 The single generic loading skeleton for every admin dashboard page. Replaces what
-used to be five near-identical `loading.tsx` files (products, categories,
+used to be near-identical `loading.tsx` files (products, categories,
 blog-articles, enquiries, gallery) — now one file at `(dashboard)/loading.tsx`
 renders this for _any_ dashboard route transition.
 

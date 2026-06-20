@@ -7,16 +7,16 @@ Excluded from the next-intl proxy. Client components talk to `app/api/*` through
 ```
 layout.tsx              Bare English <html> root (loads Inter + globals.css; robots noindex).
 login/page.tsx          The only unguarded admin route (client form → authApi.login).
-(dashboard)/
+(dashboard)/            Route group (name doesn't appear in URL) — wraps every authenticated admin screen.
   layout.tsx            Server guard: getCurrentAdmin() → redirect('/admin/login'); renders <AdminShell>.
-  page.tsx              Dashboard with live counts.
-  products/ categories/ blog-articles/ gallery/ enquiries/   list + new + [id] edit screens.
+  products/ categories/ blog-articles/ gallery/   list + new + [id] edit screens.
+                        (No root page.tsx for `/admin` — login redirects straight to /admin/categories.)
 components/             Admin-only client components:
   admin-shell           Sidebar nav + sign-out.
   localized-text-input  Tabbed input (a tab per locale, EN required, dot marks filled locales) → LocalizedDraft.
   image-uploader        Cloudinary signed upload (sign → direct POST to Cloudinary → returns {imageUrl, publicId}).
   category-form / product-form / blog-article-form    Entity editors.
-  gallery-uploader-form / enquiry-status-control / delete-entity-button
+  gallery-uploader-form / delete-entity-button
 ```
 
 ## Patterns

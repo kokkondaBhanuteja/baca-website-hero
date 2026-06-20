@@ -4,7 +4,6 @@ import { getTranslations } from 'next-intl/server'
 import { Route } from '@/constants/routes'
 import { SITE } from '@/constants/site'
 import { Link } from '@/i18n/navigation'
-import { Eyebrow } from '@/components/ui/eyebrow'
 import { WordmarkMedia } from '@/components/ui/wordmark-media'
 import { HeroEntry } from '@/components/sections/hero-entry'
 
@@ -18,13 +17,6 @@ export async function Hero() {
     <section className="relative flex min-h-[100svh] w-full flex-col justify-end overflow-hidden bg-paper">
       <HeroEntry>
         <div className="relative flex w-full flex-col justify-end pb-12 pt-28 sm:pb-16">
-          <div
-            data-hero-reveal
-            className="mx-auto mb-6 w-full max-w-[1340px] px-5 sm:px-8"
-          >
-            <Eyebrow className="text-ink/70">{t('eyebrow')}</Eyebrow>
-          </div>
-
           {/* Showpiece: the illustrated India film through the BACA letters */}
           <div data-hero-reveal className="mb-8 w-full px-3 sm:px-6">
             <WordmarkMedia

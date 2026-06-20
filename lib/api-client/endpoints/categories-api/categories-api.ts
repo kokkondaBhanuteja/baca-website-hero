@@ -1,12 +1,22 @@
 import type { ProductCategoryAdminDto } from '@/lib/shared/types/catalogue-dto'
+import type {
+  AdminListQuery,
+  PaginatedList,
+} from '@/lib/shared/types/paginated-list'
 import type { CategoryInput } from '@/lib/server/validation/category-schema'
 
 import { apiClient } from '@/lib/api-client/axios-instance'
 
 export const categoriesApi = {
-  list: () =>
+  list: (query: AdminListQuery = {}) =>
     apiClient
-      .get<ProductCategoryAdminDto[]>('/categories')
+      .get<PaginatedList<ProductCategoryAdminDto>>('/categories', {
+        params: {
+          page: query.page,
+          pageSize: query.pageSize,
+          q: query.search,
+        },
+      })
       .then((response) => response.data),
   get: (id: string) =>
     apiClient

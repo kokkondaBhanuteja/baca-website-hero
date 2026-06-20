@@ -12,7 +12,7 @@ imports_from:
 # FooterWordmark
 
 Purpose:
-Oversized ocean wordmark montage at the bottom of footer: wraps WordmarkSlideshow with 4 ocean images cycling.
+Oversized ocean wordmark montage at the bottom of footer: wraps WordmarkSlideshow with 4 ocean images cycling. No tagline beneath — the previous `Est. {SITE.founded}` line was removed when `SITE.founded` was dropped from the brand constants.
 
 Used In:
 
@@ -24,18 +24,18 @@ Props:
 
 Business Logic:
 
-- Renders border-t border-paper/12 pt-10 wrapper
-- WordmarkSlideshow: text={SITE.brand}, images=FOOTER_WORDMARK_IMAGES (4 ocean photos), align='left', className='w-full'
-- Tagline: p font-mono text-[0.62rem] uppercase tracking-[0.22em] text-paper/45: '{SITE.sub} · Est. {SITE.founded}'
-- The wordmark itself is NOT animated in the parent footer reveal (intentionally shows immediately); WordmarkSlideshow's own intersection observer manages its timeline
+- Renders `border-t border-paper/12 pt-6` wrapper.
+- `WordmarkSlideshow`: `text={SITE.brand}`, `images={FOOTER_WORDMARK_IMAGES}` (4 ocean photos), `align="left"`, `className="w-full"`.
+- No text beneath — the wordmark stands alone as the visual attraction.
+- The wordmark itself is NOT animated in the parent footer reveal (intentionally shows immediately); WordmarkSlideshow's own intersection observer manages its timeline.
 
 Dependencies:
 
-- @/constants/site — SITE.brand, SITE.sub, SITE.founded
+- @/constants/site — SITE.brand
 - @/components/ui/wordmark-slideshow
 
 i18n:
-None — brand name, tagline, and founding year from site constants
+None — brand name comes from site constants.
 
 Accessibility:
 WordmarkSlideshow handles a11y (sr-only text, aria-hidden SVG)

@@ -11,6 +11,11 @@ import { localizedValue } from '@/lib/server/localization/localized-value'
 import { prisma } from '@/lib/server/prisma'
 import type { ProductAdminDto } from '@/lib/shared/types/catalogue-dto'
 import type { LocalizedText } from '@/lib/shared/types/localized-text'
+import {
+  ADMIN_LIST_DEFAULT_PAGE_SIZE,
+  type AdminListQuery,
+  type PaginatedList,
+} from '@/lib/shared/types/paginated-list'
 import type { ProductInput } from '@/lib/server/validation/product-schema'
 
 export const PRODUCTS_TAG = 'products'
@@ -51,12 +56,36 @@ function toData(input: ProductInput) {
   }
 }
 
-export async function listProductsForAdmin(): Promise<ProductAdminDto[]> {
-  const rows = await prisma.product.findMany({
-    orderBy: [{ categoryId: 'asc' }, { sortOrder: 'asc' }],
-    include: { category: true },
-  })
-  return rows.map(mapAdmin)
+export async function listProductsForAdmin({
+  page = 1,
+  pageSize = ADMIN_LIST_DEFAULT_PAGE_SIZE,
+  search = '',
+}: AdminListQuery = {}): Promise<PaginatedList<ProductAdminDto>> {
+  const trimmed = search.trim()
+  const where: Prisma.ProductWhereInput | undefined = trimmed
+    ? {
+        OR: [
+          { slug: { contains: trimmed, mode: 'insensitive' } },
+          { name: { path: ['en'], string_contains: trimmed } },
+          {
+            category: { name: { path: ['en'], string_contains: trimmed } },
+          },
+        ],
+      }
+    : undefined
+
+  const [rows, total] = await Promise.all([
+    prisma.product.findMany({
+      where,
+      orderBy: [{ categoryId: 'asc' }, { sortOrder: 'asc' }],
+      include: { category: true },
+      skip: (page - 1) * pageSize,
+      take: pageSize,
+    }),
+    prisma.product.count({ where }),
+  ])
+
+  return { items: rows.map(mapAdmin), total, page, pageSize }
 }
 
 export async function getProductForAdmin(id: string): Promise<ProductAdminDto> {

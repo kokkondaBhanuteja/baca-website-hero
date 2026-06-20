@@ -13,6 +13,7 @@ import { notFound } from 'next/navigation'
 import { LOCALE_META, type Locale } from '@/constants/i18n'
 import { routing } from '@/i18n/routing'
 import { Cursor } from '@/components/ui/cursor'
+import { WhatsAppFab } from '@/components/sections/whatsapp-fab'
 
 import '../../globals.css'
 
@@ -104,7 +105,11 @@ export default async function LocaleLayout({
         </a>
         {/* Global magnetic cursor — same behaviour on every page. */}
         <Cursor />
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          {/* Floating WhatsApp action — site-wide on every public page. */}
+          <WhatsAppFab />
+        </NextIntlClientProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

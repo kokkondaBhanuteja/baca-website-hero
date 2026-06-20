@@ -4,45 +4,38 @@ name: 'EnquiryApi'
 file: 'app/api/enquiry/route.ts'
 exports:
   - 'POST'
-  - 'GET'
 imports_from:
-  - '@/lib/server/auth/require-admin'
+  - '@/lib/server/auth/client-ip'
+  - '@/lib/server/auth/rate-limit'
+  - '@/lib/server/http/http-error'
   - '@/lib/server/http/handle-route'
   - '@/lib/server/http/respond'
   - '@/lib/server/services/enquiry-service'
   - '@/lib/server/validation/enquiry-schema'
 route: '/api/enquiry'
 methods:
-  - 'GET'
   - 'POST'
 ---
 
 # EnquiryApi
 
 Route: `/api/enquiry`  
-Methods: GET, POST  
+Methods: POST  
 Envelope: via handleRoute
 
 Purpose:
-Contact form enquiries. POST is public (anyone can submit from contact page). GET is admin-only (fetch inbox).
+Public contact-form submission endpoint. There is no admin GET / PATCH here — enquiries are delivered to the team by SMTP email (see `lib/server/email`). The DB row is kept as an audit trail.
 
 ## Per-method
 
 ### POST
 
-- **Auth:** Public
-- **Validation:** enquiryInputSchema — name (string), email (string), phone (string, optional), company (string, optional), message (string), localeSent (Locale)
-- **Service:** createEnquiry(input) — creates enquiry record
-- **Response:** created(enquiry) — 201
-- **Errors:** 400 (validation)
-
-### GET
-
-- **Auth:** requireAdmin
-- **Validation:** None
-- **Service:** listEnquiries() — all enquiries with all fields + status
-- **Response:** ok(enquiries)
-- **Errors:** 401
+- **Auth:** Public (no guard).
+- **Rate limit:** 5 requests per IP per 10 minutes via `rateLimit('enquiry:${ip}', …)`. IP resolved via `getClientIp()` (resists XFF spoofing).
+- **Validation:** `enquiryInputSchema` — name, email, optional company, optional phone, message, localeSent.
+- **Service:** `createEnquiry(input)` — writes the DB row, then best-effort sends an SMTP notification to `ENQUIRY_NOTIFY_TO`. Email failures are caught and logged; the request still succeeds.
+- **Response:** `created({ id })` — 201 with the new row's cuid.
+- **Errors:** 422 (zod validation), 429 (rate-limited).
 
 Notes:
-POST endpoint is the only public data submission (besides login). localeSent stored to track which locale visitor submitted from.
+This is the only public POST endpoint on the API. The admin GET / PATCH that used to live here were removed when enquiries moved to email-only delivery; the `enquiry-status-control` component and admin inbox page were deleted at the same time.

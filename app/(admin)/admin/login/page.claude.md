@@ -7,6 +7,7 @@ exports:
 imports_from:
   - '@/lib/api-client/axios-instance'
   - '@/lib/api-client/endpoints/auth-api'
+  - '@/components/ui/password-input'
 route: '/admin/login'
 auth: 'Public (unguarded)'
 ---
@@ -19,7 +20,7 @@ Rendering: Client
 Auth: Public (unguarded)
 
 Purpose:
-Admin login form. Client component with email/password fields. Submits to authApi.login() which POSTs to /api/auth/login. On success, redirects to /admin and refreshes.
+Admin login form. Client component with email/password fields. Submits to authApi.login() which POSTs to /api/auth/login. On success, redirects to `/admin/categories` (the first useful screen — there is no `/admin` root page).
 
 Data:
 
@@ -29,13 +30,15 @@ Business Logic:
 
 - 'use client' — client component
 - Local state: email, password, error, submitting
-- handleSubmit: calls authApi.login({email, password}), sets httpOnly cookie, replaces router to /admin
+- handleSubmit: calls authApi.login({email, password}), sets httpOnly cookie, replaces router to `/admin/categories`
 - On error, displays NormalizedApiError.message
 - Submit button disabled while submitting
 
 Renders:
 
-- Form with email input, password input
+- Centered card form on a bone background, responsive paddings (`p-6 sm:p-8`, viewport `px-4 sm:px-6`)
+- Email input
+- PasswordInput (`@/components/ui/password-input`) — includes an Eye/EyeOff toggle for password visibility
 - Error alert if error state
 - Submit button
 

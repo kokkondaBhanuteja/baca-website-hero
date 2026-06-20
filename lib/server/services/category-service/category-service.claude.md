@@ -5,6 +5,7 @@ file: 'lib/server/services/category-service/category-service.ts'
 exports:
   - 'CATEGORIES_TAG'
   - 'listCategoriesForAdmin'
+  - 'listAllCategoriesForAdmin'
   - 'getCategoryForAdmin'
   - 'createCategory'
   - 'updateCategory'
@@ -19,6 +20,7 @@ imports_from:
   - '@/lib/shared/cloudinary-url'
   - '@/lib/shared/types/catalogue-dto'
   - '@/lib/shared/types/localized-text'
+  - '@/lib/shared/types/paginated-list'
   - '@/lib/server/validation/category-schema'
   - 'next/cache'
 called_by:
@@ -42,7 +44,8 @@ CRUD for product categories with localized names/descriptions, images, and sort 
 Exports:
 
 - CATEGORIES_TAG: 'categories' — revalidateTag identifier
-- listCategoriesForAdmin(): Promise<ProductCategoryAdminDto[]> — All categories with product count, admin view (raw LocalizedText)
+- listCategoriesForAdmin({ page?, pageSize?, search? }): Promise<PaginatedList<ProductCategoryAdminDto>> — Paginated, searchable admin list. Defaults: page=1, pageSize=10, search=''.
+- listAllCategoriesForAdmin(): Promise<ProductCategoryAdminDto[]> — Non-paginated read of every category, ordered by sortOrder. Used by the product form's "Category" dropdown (which needs every option).
 - getCategoryForAdmin(id: string): Promise<ProductCategoryAdminDto> — Single category for editing
 - createCategory(input: CategoryInput): Promise<ProductCategoryAdminDto> — Create; wraps mapPrismaError + revalidateTag
 - updateCategory(id: string, input: CategoryInput): Promise<ProductCategoryAdminDto> — Update; replaces image if publicId changed, revalidates
@@ -70,7 +73,8 @@ Called by:
 
 Business Logic:
 
-- Admin read: returns all categories with product count (via \_count include), ordered by sortOrder ASC
+- Admin paginated read (`listCategoriesForAdmin`): server-paginated + server-search. Search is `OR` across `slug` (insensitive) and JSON `name.en` (`string_contains`). Includes `_count.products`. Returns `{ items, total, page, pageSize }`. Ordered by `sortOrder ASC`.
+- Admin all-list read (`listAllCategoriesForAdmin`): no pagination, no search. Returns every row with `_count.products`. Used for the product form dropdown — admins realistically have few enough categories that an unbounded read is fine.
 - Public read: filters isPublished=true, includes nested products filtered by isPublished=true, resolves all LocalizedText to locale string via localizedValue()
 - Create: validates via zod, casts LocalizedText to Prisma.InputJsonValue, handles nullable description (Prisma.DbNull), wraps in try/catch→mapPrismaError, revalidates
 - Update: checks exists, destroys old image if publicId differs, re-queries for \_count.products, revalidates

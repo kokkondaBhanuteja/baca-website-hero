@@ -27,6 +27,11 @@ const CATEGORY_OPTIONS: { value: BlogCategoryValue; label: string }[] = [
   { value: 'COMMUNITY_ENGAGEMENT', label: 'Community Engagement' },
 ]
 
+const STATUS_OPTIONS: { value: ContentStatusValue; label: string }[] = [
+  { value: 'DRAFT', label: 'Draft' },
+  { value: 'PUBLISHED', label: 'Published' },
+]
+
 function imageFrom(entity?: BlogArticleAdminDto): UploadedImage | null {
   return entity?.coverImageUrl && entity.coverImagePublicId
     ? {
@@ -97,7 +102,7 @@ export function BlogArticleForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl">
+    <form onSubmit={handleSubmit} className="w-full">
       {error && (
         <p
           role="alert"
@@ -107,136 +112,159 @@ export function BlogArticleForm({
         </p>
       )}
 
-      <div className="mb-5 grid grid-cols-2 gap-4">
-        <div>
-          <label
-            className="mb-1.5 block text-sm font-medium text-ink/80"
-            htmlFor="slug"
-          >
-            Slug <span className="text-clay">*</span>
-          </label>
-          <input
-            id="slug"
-            value={slug}
-            onChange={(event) => setSlug(event.target.value)}
-            placeholder="global-cardamom-demand-2026"
-            aria-invalid={fieldErrors.slug ? true : undefined}
-            aria-describedby={fieldErrors.slug ? 'slug-error' : undefined}
-            className="w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink outline-none focus:border-ink"
-          />
-          {fieldErrors.slug && (
-            <p id="slug-error" className="mt-1 text-xs text-clay">
-              {fieldErrors.slug.join(', ')}
-            </p>
-          )}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
+        {/* MAIN — long content */}
+        <div className="lg:col-span-8">
+          <div className="rounded-2xl border border-line bg-paper p-5 sm:p-6">
+            <LocalizedTextInput
+              label="Title"
+              required
+              value={title}
+              onChange={setTitle}
+              error={fieldErrors['title.en']}
+            />
+            <LocalizedTextInput
+              label="Excerpt"
+              multiline
+              required
+              value={excerpt}
+              onChange={setExcerpt}
+              error={fieldErrors['excerpt.en']}
+            />
+            <div className="-mb-5">
+              <LocalizedTextInput
+                label="Body"
+                multiline
+                required
+                value={body}
+                onChange={setBody}
+                error={fieldErrors['body.en']}
+              />
+            </div>
+          </div>
         </div>
-        <div>
-          <label
-            className="mb-1.5 block text-sm font-medium text-ink/80"
-            htmlFor="category"
-          >
-            Category
-          </label>
-          <Dropdown
-            id="category"
-            value={category}
-            options={CATEGORY_OPTIONS}
-            onChange={(next) => setCategory(next as BlogCategoryValue)}
-            buttonClassName="w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink"
-          />
-        </div>
-      </div>
 
-      <LocalizedTextInput
-        label="Title"
-        required
-        value={title}
-        onChange={setTitle}
-        error={fieldErrors['title.en']}
-      />
-      <LocalizedTextInput
-        label="Excerpt"
-        multiline
-        required
-        value={excerpt}
-        onChange={setExcerpt}
-        error={fieldErrors['excerpt.en']}
-      />
-      <LocalizedTextInput
-        label="Body"
-        multiline
-        required
-        value={body}
-        onChange={setBody}
-        error={fieldErrors['body.en']}
-      />
-      <ImageUploader
-        label="Cover image"
-        folder="baca/blog"
-        value={cover}
-        onChange={setCover}
-      />
+        {/* META SIDEBAR — short fields + actions */}
+        <aside className="lg:col-span-4">
+          <div className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto">
+            <div className="flex flex-col gap-4">
+              <div className="rounded-2xl border border-line bg-paper p-5 sm:p-6">
+                <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:gap-3">
+                  <button
+                    type="submit"
+                    disabled={isSaving}
+                    className="flex-1 rounded-full bg-ink px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-forest disabled:opacity-60"
+                  >
+                    {isSaving ? 'Saving…' : 'Save article'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => router.push('/admin/blog-articles')}
+                    className="rounded-full border border-line px-6 py-2.5 text-sm text-ink/70 hover:text-ink"
+                  >
+                    Cancel
+                  </button>
+                </div>
 
-      <div className="mb-5 flex flex-wrap items-center gap-6">
-        <div>
-          <label
-            className="mb-1.5 block text-sm font-medium text-ink/80"
-            htmlFor="readMinutes"
-          >
-            Read minutes
-          </label>
-          <input
-            id="readMinutes"
-            type="number"
-            min={1}
-            value={readMinutes}
-            onChange={(event) => setReadMinutes(Number(event.target.value))}
-            className="w-24 rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink outline-none focus:border-ink"
-          />
-        </div>
-        <div>
-          <label
-            className="mb-1.5 block text-sm font-medium text-ink/80"
-            htmlFor="status"
-          >
-            Status
-          </label>
-          <Dropdown
-            id="status"
-            value={status}
-            options={[
-              { value: 'DRAFT', label: 'Draft' },
-              { value: 'PUBLISHED', label: 'Published' },
-            ]}
-            onChange={(next) => setStatus(next as ContentStatusValue)}
-            buttonClassName="min-w-[10rem] rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink"
-          />
-        </div>
-        <label className="mt-6 flex items-center gap-2 text-sm text-ink/80">
-          <input
-            type="checkbox"
-            checked={isFeatured}
-            onChange={(event) => setIsFeatured(event.target.checked)}
-          />
-          Featured
-        </label>
-      </div>
+                <div className="mb-4">
+                  <label
+                    className="mb-1.5 block text-sm font-medium text-ink/80"
+                    htmlFor="status"
+                  >
+                    Status
+                  </label>
+                  <Dropdown
+                    id="status"
+                    value={status}
+                    options={STATUS_OPTIONS}
+                    onChange={(next) => setStatus(next as ContentStatusValue)}
+                    buttonClassName="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink"
+                  />
+                </div>
 
-      <div className="flex gap-3">
-        <button
-          type="submit"
-          disabled={isSaving}
-          className="rounded-full bg-ink px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-forest disabled:opacity-60"
-        >
-          {isSaving ? 'Saving…' : 'Save article'}
-        </button>
-        <button
-          type="button"
-          onClick={() => router.push('/admin/blog-articles')}
-          className="rounded-full border border-line px-6 py-2.5 text-sm text-ink/70 hover:text-ink"
-        >
-          Cancel
-        </button>
+                <label className="flex items-center gap-2 text-sm text-ink/80">
+                  <input
+                    type="checkbox"
+                    checked={isFeatured}
+                    onChange={(event) => setIsFeatured(event.target.checked)}
+                  />
+                  Featured
+                </label>
+              </div>
+
+              <div className="rounded-2xl border border-line bg-paper p-5 sm:p-6">
+                <div className="mb-4">
+                  <label
+                    className="mb-1.5 block text-sm font-medium text-ink/80"
+                    htmlFor="slug"
+                  >
+                    Slug <span className="text-clay">*</span>
+                  </label>
+                  <input
+                    id="slug"
+                    value={slug}
+                    onChange={(event) => setSlug(event.target.value)}
+                    placeholder="global-cardamom-demand-2026"
+                    aria-invalid={fieldErrors.slug ? true : undefined}
+                    aria-describedby={
+                      fieldErrors.slug ? 'slug-error' : undefined
+                    }
+                    className="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink"
+                  />
+                  {fieldErrors.slug && (
+                    <p id="slug-error" className="mt-1 text-xs text-clay">
+                      {fieldErrors.slug.join(', ')}
+                    </p>
+                  )}
+                </div>
+
+                <div className="mb-4">
+                  <label
+                    className="mb-1.5 block text-sm font-medium text-ink/80"
+                    htmlFor="category"
+                  >
+                    Category
+                  </label>
+                  <Dropdown
+                    id="category"
+                    value={category}
+                    options={CATEGORY_OPTIONS}
+                    onChange={(next) => setCategory(next as BlogCategoryValue)}
+                    buttonClassName="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    className="mb-1.5 block text-sm font-medium text-ink/80"
+                    htmlFor="readMinutes"
+                  >
+                    Read minutes
+                  </label>
+                  <input
+                    id="readMinutes"
+                    type="number"
+                    min={1}
+                    value={readMinutes}
+                    onChange={(event) =>
+                      setReadMinutes(Number(event.target.value))
+                    }
+                    className="w-24 rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink"
+                  />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-line bg-paper p-5 sm:p-6">
+                <ImageUploader
+                  label="Cover image"
+                  folder="baca/blog"
+                  value={cover}
+                  onChange={setCover}
+                />
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </form>
   )

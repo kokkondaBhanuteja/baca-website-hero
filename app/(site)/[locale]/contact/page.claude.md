@@ -7,6 +7,7 @@ exports:
   - 'ContactPage'
   - 'default'
 imports_from:
+  - 'lucide-react'
   - 'next-intl/server'
   - '@/constants/i18n'
   - '@/constants/contact'
@@ -27,28 +28,27 @@ Rendering: Server (SSG)
 Auth: Public
 
 Purpose:
-Contact page with company details and enquiry form. Left side displays address, email, phone; right side has EnquiryForm (client component posting to POST /api/enquiry).
+Two-column contact page: left column holds the PageIntro + three contact-channel cards (Email / Phone / WhatsApp) + office address; right column holds the `EnquiryForm` (client component posting to `POST /api/enquiry`).
 
 Data:
 
-- next-intl: getTranslations('contactPage') — heading, eyebrow, intro, detailsTitle
-- CONTACT constant — email, emailHref, phone, phoneDisplay, phoneHref
+- next-intl: getTranslations('contactPage') — heading, eyebrow, intro, channels.{email,phone,whatsapp,whatsappAction}, officeTitle, form.\*
+- CONTACT constant — email, emailHref, phoneDisplay, phoneHref, whatsappUrl
 - SITE constant — address (array of lines)
 
 Business Logic:
 
-- setRequestLocale(locale as Locale)
-- generateMetadata() fetches 'contactPage' namespace
-- Renders two-column layout: left col (5 cols on lg), right col EnquiryForm (7 cols on lg)
-- Contact links: mailto: and tel: hrefs
+- `setRequestLocale(locale as Locale)`.
+- `generateMetadata()` fetches the `contactPage` namespace.
+- Channels array (key/icon/label/value/href) drives the card list. WhatsApp opens in a new tab (target=\_blank, rel=noopener noreferrer); email/phone use mailto:/tel: hrefs.
+- Layout: `lg:grid-cols-12 lg:gap-16`. Left (`lg:col-span-5`) — PageIntro, channel cards (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-1`), office block; Right (`lg:col-span-7`) — EnquiryForm.
 
 Renders:
 
-- SiteHeader (forceSolid)
-- PageIntro
-- Contact details (email, phone, address)
-- EnquiryForm (client component)
-- SiteFooter
+- SiteHeader (forceSolid).
+- PageIntro + channel cards + office address (left).
+- EnquiryForm — client component, public POST to /api/enquiry (right).
+- SiteFooter.
 
 Notes:
-EnquiryForm is a client component that submits to POST /api/enquiry (public endpoint). No locale parameter needed for constants (hardcoded).
+The page is SSG except for the EnquiryForm sub-tree, which is a client island that handles its own state and POST. CONTACT/SITE values are constants (not translated). Channel-card layout collapses to single column on mobile and stacks vertically on `lg+` to match the narrow left column.

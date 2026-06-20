@@ -10,7 +10,8 @@ types/
   catalogue-dto.ts    ProductCategoryAdminDto / ProductAdminDto (raw LocalizedText) + …PublicDto (resolved strings)
   blog-dto.ts         BlogArticleAdminDto / SummaryDto / DetailDto, BlogCategoryValue, BLOG_CATEGORY_KEY (enum→msg key)
   gallery-dto.ts      GalleryImageAdminDto / GalleryImagePublicDto
-  enquiry-dto.ts      EnquiryDto, EnquiryStatusValue
+  paginated-list.ts   PaginatedList<T> = { items, total, page, pageSize } + AdminListQuery shape +
+                      ADMIN_LIST_DEFAULT_PAGE_SIZE constant. Used by every admin paginated list endpoint.
   upload-dto.ts       UploadSignature, UploadFolder, UploadedImage
 cloudinary-url.ts     optimizedImageUrl(url): inserts Cloudinary `f_auto,q_auto`; leaves local/non-Cloudinary URLs as-is.
 ```

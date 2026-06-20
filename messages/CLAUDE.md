@@ -30,7 +30,7 @@ global.d.ts (repo root)  AppConfig augmentation: types Locale + Messages from en
 ## Adding / changing a string
 
 1. Add/edit the key in **all 7** `messages/<locale>.json` (same path in each). 2. Reference it via the namespace.
-2. Keep parity. Proper nouns (BACA, Bharat Cargo, ISO 22000, HACCP, FSSAI, APEDA, grade codes, GST/IEC, email) stay
+2. Keep parity. Proper nouns (BACA, ISO 22000, HACCP, FSSAI, APEDA, grade codes, GST/IEC, email) stay
    untranslated in every locale. Long-form bodies may be English-now with other locales falling back.
 
 ## Adding a locale

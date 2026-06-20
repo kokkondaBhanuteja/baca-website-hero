@@ -1,6 +1,6 @@
 # Project Map for AI Agents (Cursor, Claude, Copilot, etc.)
 
-BACA (Bharat Cargo) — Next.js 16 marketing site + admin CMS for an India-based spice/commodity export house.
+BACA — Next.js 16 marketing site + admin CMS for an India-based spice/commodity export house.
 
 ## You are here
 

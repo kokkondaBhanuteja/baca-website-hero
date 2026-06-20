@@ -1,6 +1,6 @@
 # BACA — Project Guide (root)
 
-BACA (Bharat Cargo) is a **full-stack marketing site + admin CMS** for an India-based
+BACA is a **full-stack marketing site + admin CMS** for an India-based
 spice/commodity export house. A multilingual public site shows DB-driven catalogue and
 insights; an admin dashboard manages that content; a small backend (Next.js route
 handlers) serves it.

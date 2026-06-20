@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 
 import { HttpError } from '@/lib/server/http/http-error'
-import { listCategoriesForAdmin } from '@/lib/server/services/category-service'
+import { listAllCategoriesForAdmin } from '@/lib/server/services/category-service'
 import { getProductForAdmin } from '@/lib/server/services/product-service'
 import { ProductForm } from '../../../components/product-form'
 
@@ -18,7 +18,7 @@ export default async function EditProductPage({
       if (error instanceof HttpError && error.status === 404) notFound()
       throw error
     }),
-    listCategoriesForAdmin(),
+    listAllCategoriesForAdmin(),
   ])
   const options = categories.map((category) => ({
     id: category.id,
@@ -27,7 +27,7 @@ export default async function EditProductPage({
 
   return (
     <div>
-      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+      <h1 className="mb-6 font-heading text-2xl font-light text-ink sm:mb-8 sm:text-3xl">
         Edit product
       </h1>
       <ProductForm initial={product} categories={options} />

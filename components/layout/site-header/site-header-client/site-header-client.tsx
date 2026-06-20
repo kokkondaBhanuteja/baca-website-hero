@@ -106,33 +106,26 @@ export function SiteHeaderClient({
             : 'border-b border-transparent bg-transparent'
         }`}
       >
-        <div className="mx-auto flex h-header-base max-w-content items-center justify-between gap-6 px-5 sm:px-8">
+        <div className="mx-auto flex h-header-base max-w-content items-center justify-between gap-6 px-5 sm:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
           {/* Wordmark */}
           <Link
             href={Route.Home}
-            className="group flex items-baseline gap-2"
+            className="group inline-flex items-baseline lg:justify-self-start"
             aria-label={tHeader('aria.home')}
           >
             <span
-              className={`font-heading text-2xl font-medium tracking-tight transition-colors ${
+              className={`font-heading text-3xl font-medium tracking-tight transition-colors sm:text-2xl ${
                 scrolled ? 'text-ink' : 'text-paper'
               }`}
             >
               {SITE.brand}
-            </span>
-            <span
-              className={`hidden font-mono text-[0.6rem] uppercase tracking-[0.22em] transition-colors sm:inline ${
-                scrolled ? 'text-ink-60' : 'text-paper/70'
-              }`}
-            >
-              {SITE.sub}
             </span>
           </Link>
 
           <SiteHeaderDesktopNav navItems={navItems} scrolled={scrolled} />
 
           {/* Right actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 lg:justify-self-end">
             <LanguageSwitcher
               tone={scrolled ? 'ink' : 'paper'}
               className="hidden md:inline-flex"

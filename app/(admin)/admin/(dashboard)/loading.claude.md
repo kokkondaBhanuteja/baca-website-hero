@@ -19,8 +19,8 @@ Auth: n/a (inside the (dashboard) auth-gated group)
 
 Purpose:
 Single shared loading boundary for every admin dashboard route — products,
-categories, blog-articles, enquiries, gallery, and the dashboard root. Replaces
-what used to be 5 near-identical loading.tsx files.
+categories, blog-articles, enquiries, gallery. Replaces what used to be
+5 near-identical loading.tsx files.
 
 Data:
 

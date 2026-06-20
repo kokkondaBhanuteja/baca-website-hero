@@ -18,7 +18,6 @@ Used In:
 
 - `components/ui/wordmark-media/wordmark-media.tsx`
 - `components/ui/wordmark-slideshow/wordmark-slideshow.tsx`
-- (Also `wordmark-letters/wordmark-letters.tsx` if it needs the same placement)
 
 Exports:
 
@@ -42,4 +41,4 @@ None — pure constants used by the wordmark SVGs (which are themselves `aria-hi
 
 Notes:
 
-- The reason the file lives at `components/ui/wordmark-clip.ts` (not in its own folder) is that it's a tiny shared types/constants file used by THREE component folders (wordmark-letters, wordmark-media, wordmark-slideshow). Promoting it to its own folder would mean every consumer changes import paths for marginal gain; per the project's selective per-folder convention, pure constants files stay flat.
+- The reason the file lives at `components/ui/wordmark-clip.ts` (not in its own folder) is that it's a tiny shared types/constants file used by TWO component folders (wordmark-media, wordmark-slideshow). Promoting it to its own folder would mean every consumer changes import paths for marginal gain; per the project's selective per-folder convention, pure constants files stay flat.

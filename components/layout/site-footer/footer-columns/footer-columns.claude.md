@@ -27,17 +27,17 @@ Props:
 
 Business Logic:
 
-- Grid layout: gap-x-8 gap-y-12 py-16 lg:grid-cols-12
-- Left col (lg:col-span-5): description text + address (not-italic, <br> line breaks)
-- Nav columns via FOOTER_COLUMNS constant: each col lg:col-span-2, ul flex flex-col gap-3
-- Each col: h3 (title), ul of FooterLink children
-- Right col (lg:col-span-1): certifications strip (h3 + list of cert marks)
-- All sections have data-footer-reveal attribute (to participate in parent's GSAP animation)
+- Grid layout: `gap-x-8 gap-y-10 py-10 lg:grid-cols-12 lg:py-12` (tightened from the previous `py-16 gap-y-12` to halve the block height).
+- Left col (`lg:col-span-5`): description text + compact `<address>` block. Address now puts the two street lines on one row separated by `·`, then the email + phone on a single line below — replaces the previous 3-row stacked address. Inline mailto + tel links use a hover transition to `text-paper`.
+- Nav columns via `FOOTER_COLUMNS` constant: each `lg:col-span-2`, `ul` is `flex flex-col gap-3`.
+- Each col: `h3` (title) + `ul` of FooterLink children.
+- Right col (`lg:col-span-1`): certifications strip (`h3` + list of cert marks).
+- Every section has `data-footer-reveal` so the parent's GSAP stagger picks it up.
 
 Dependencies:
 
 - next-intl: useTranslations
-- @/constants/contact, @/constants/site — SITE.address, CONTACT.phoneHref, CONTACT.phoneDisplay
+- @/constants/contact, @/constants/site — SITE.address, CONTACT.email/emailHref/phoneHref/phoneDisplay
 - @/constants/sections/footer — FOOTER_COLUMNS array
 - @/components/layout/site-footer/footer-link
 

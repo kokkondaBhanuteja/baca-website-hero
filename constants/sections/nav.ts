@@ -14,13 +14,13 @@ export interface NavItemConfig {
 }
 
 /**
- * Primary navigation. Early-stage: every item points at a real destination —
- * About scrolls to the "Why we're here" section on the home page (same page), the
- * rest route to live pages. (Gallery and sub-menus return once we have the
- * content to back them.)
+ * Primary navigation. Every item points at a real destination. The top nav
+ * uses "Home" as a quick return to the root since there is no separate
+ * /about page today (the footer still carries an "About" link that anchors
+ * to the manifesto section `#why-we-re-here`).
  */
 export const NAV: NavItemConfig[] = [
-  { key: 'about', href: `${Route.Home}#why-we-re-here` },
+  { key: 'home', href: Route.Home },
   { key: 'products', href: Route.Products },
   { key: 'insights', href: Route.Blogs },
   { key: 'contact', href: Route.Contact },

@@ -8,7 +8,6 @@ them and look up labels by key.
 ```
 approach.ts         PILLARS[]            — keys + display numbers for the four approach pillars.
 certifications.ts   CERTS[]              — { key, name, icon: LucideIcon, ... } for the cert grid.
-commitments.ts      ABOUT_COMMITMENTS[]  — keys for the about-page commitment cards.
 footer.ts           FOOTER_COLUMNS[]     — column + link structure for the site footer.
 nav.ts              NAV[]                — primary nav item keys + hrefs (children populated at runtime).
 regions.ts          REGIONS[]            — { key, value } for the GlobalPresence stat tiles.

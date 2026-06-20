@@ -16,7 +16,6 @@ called_by:
   - 'app/api/blog-articles/route.ts'
   - 'app/api/categories/[id]/route.ts'
   - 'app/api/categories/route.ts'
-  - 'app/api/enquiry/[id]/route.ts'
   - 'app/api/enquiry/route.ts'
   - 'app/api/gallery/[id]/route.ts'
   - 'app/api/gallery/route.ts'

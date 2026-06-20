@@ -13,10 +13,16 @@
     "empty": "Unser Katalog wird gerade aktualisiert. Bitte schauen Sie bald wieder vorbei."
   },
   "contactPage": {
-    "eyebrow": "Anfrage starten",
+    "eyebrow": "Kontakt aufnehmen",
     "heading": "Was möchten Sie importieren?",
     "intro": "Sagen Sie uns, was Sie beziehen und wohin es verschifft wird. Internationale Anfragen beantworten wir innerhalb von 12 Stunden.",
-    "detailsTitle": "Oder erreichen Sie uns direkt",
+    "officeTitle": "Büro",
+    "channels": {
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Nachricht senden"
+    },
     "form": {
       "name": "Vollständiger Name",
       "email": "E-Mail",
@@ -46,6 +52,13 @@
       "communityEngagement": "Gesellschaftliches Engagement"
     }
   },
+  "notFound": {
+    "eyebrow": "404 · Seite nicht gefunden",
+    "heading": "Diese Sendung wurde nie verschifft.",
+    "body": "Wir können die gesuchte Seite nicht finden. Möglicherweise wurde sie verschoben oder der Link ist falsch. Kehren Sie zur Startseite zurück oder durchsuchen Sie den Katalog.",
+    "ctaHome": "Zur Startseite",
+    "ctaProducts": "Produkte ansehen"
+  },
   "galleryPage": {
     "eyebrow": "Galerie",
     "heading": "Die Arbeit, die Menschen, der Boden.",
@@ -53,8 +66,8 @@
     "empty": "Fotos werden gerade hinzugefügt. Schauen Sie bald wieder vorbei."
   },
   "metadata": {
-    "title": "BACA — Indischer Exporteur für Gewürze, Nüsse & Früchte | Bharat Cargo",
-    "description": "BACA (Bharat Cargo) ist ein modernes indisches Exporthaus — rückverfolgbare Beschaffung von Gewürzen, Nüssen und Früchten, kompromisslose Qualität und zuverlässige weltweite Lieferungen. Zertifiziert nach ISO 22000, HACCP & FSSAI."
+    "title": "BACA — Indischer Exporteur für Gewürze, Nüsse & Früchte",
+    "description": "BACA ist ein modernes indisches Exporthaus — rückverfolgbare Beschaffung von Gewürzen, Nüssen und Früchten, kompromisslose Qualität und zuverlässige weltweite Lieferungen. Zertifiziert nach ISO 22000, HACCP & FSSAI."
   },
   "common": {
     "enquire": "Anfragen",
@@ -65,8 +78,8 @@
   },
   "nav": {
     "items": {
-      "about": {
-        "label": "Über uns"
+      "home": {
+        "label": "Startseite"
       },
       "products": {
         "label": "Produkte"
@@ -89,7 +102,6 @@
     }
   },
   "hero": {
-    "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Aus indischem Boden gewonnen. Weltweit <em>vertraut.</em>",
     "body": "Eine neue Generation des indischen Exports — aufgebaut auf rückverfolgbarer Beschaffung, kompromissloser Qualität und Partnerschaften, die Waren zuverlässig bewegen, Container für Container.",
     "ctaProducts": "Produkte entdecken",
@@ -199,8 +211,6 @@
     "ctaCatalogue": "Katalog herunterladen"
   },
   "footer": {
-    "talkLabel": "Sprechen wir",
-    "startEnquiry": "Anfrage starten",
     "description": "Aus indischem Boden gewonnen. Weltweit vertraut. Ein modernes indisches Exporthaus für Gewürze, Nüsse und Früchte.",
     "certifiedTitle": "Zertifiziert",
     "backToTop": "Nach oben",

@@ -1,17 +1,34 @@
 import Link from 'next/link'
 
 import { listArticlesForAdmin } from '@/lib/server/services/blog-article-service'
-import { DeleteEntityButton } from '../../components/delete-entity-button'
+import { ADMIN_LIST_DEFAULT_PAGE_SIZE } from '@/lib/shared/types/paginated-list'
+import { BlogArticlesTable } from '../../components/blog-articles-table'
 
 export const dynamic = 'force-dynamic'
 
-export default async function BlogArticlesListPage() {
-  const articles = await listArticlesForAdmin()
+function parsePage(raw: string | undefined): number {
+  if (!raw) return 1
+  const parsed = Number.parseInt(raw, 10)
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 1
+}
+
+export default async function BlogArticlesListPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string; q?: string }>
+}) {
+  const { page: pageRaw, q = '' } = await searchParams
+  const page = parsePage(pageRaw)
+  const result = await listArticlesForAdmin({
+    page,
+    pageSize: ADMIN_LIST_DEFAULT_PAGE_SIZE,
+    search: q,
+  })
 
   return (
     <div>
-      <div className="mb-8 flex items-center justify-between">
-        <h1 className="font-heading text-3xl font-light text-ink">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3 sm:mb-8">
+        <h1 className="font-heading text-2xl font-light text-ink sm:text-3xl">
           Blog articles
         </h1>
         <Link
@@ -22,68 +39,13 @@ export default async function BlogArticlesListPage() {
         </Link>
       </div>
 
-      {articles.length === 0 ? (
-        <p className="text-sm text-ink-60">No articles yet.</p>
-      ) : (
-        <div className="overflow-hidden rounded-2xl border border-line bg-paper">
-          <table className="w-full text-sm">
-            <thead className="border-b border-line text-left font-mono text-[0.6rem] uppercase tracking-wider text-ink-60">
-              <tr>
-                <th className="px-5 py-3">Title (EN)</th>
-                <th className="px-5 py-3">Slug</th>
-                <th className="px-5 py-3">Category</th>
-                <th className="px-5 py-3">Status</th>
-                <th className="px-5 py-3 text-end">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {articles.map((article) => (
-                <tr
-                  key={article.id}
-                  className="border-b border-line last:border-0"
-                >
-                  <td className="px-5 py-3 font-medium text-ink">
-                    {article.title.en}
-                    {article.featured && (
-                      <span className="ms-2 rounded-full bg-saffron/15 px-2 py-0.5 font-mono text-[0.55rem] uppercase tracking-wider text-saffron">
-                        Featured
-                      </span>
-                    )}
-                  </td>
-                  <td className="px-5 py-3 font-mono text-xs text-ink-60">
-                    {article.slug}
-                  </td>
-                  <td className="px-5 py-3 text-ink-60">
-                    {article.category.replace(/_/g, ' ').toLowerCase()}
-                  </td>
-                  <td className="px-5 py-3">
-                    <span
-                      className={
-                        article.status === 'PUBLISHED'
-                          ? 'text-forest'
-                          : 'text-ink-60'
-                      }
-                    >
-                      {article.status === 'PUBLISHED' ? 'Published' : 'Draft'}
-                    </span>
-                  </td>
-                  <td className="px-5 py-3">
-                    <div className="flex items-center justify-end gap-4">
-                      <Link
-                        href={`/admin/blog-articles/${article.id}`}
-                        className="text-sm text-ink/70 hover:text-ink"
-                      >
-                        Edit
-                      </Link>
-                      <DeleteEntityButton id={article.id} kind="article" />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+      <BlogArticlesTable
+        items={result.items}
+        total={result.total}
+        page={result.page}
+        pageSize={result.pageSize}
+        search={q}
+      />
     </div>
   )
 }

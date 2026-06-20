@@ -13,7 +13,7 @@ app/
     blogs/page.tsx         force-dynamic. Published articles list.
     blogs/[articleSlug]/page.tsx   force-dynamic. Article detail + related. notFound() on unknown slug.
     gallery/page.tsx       force-dynamic. Published gallery images.
-    contact/page.tsx       Enquiry form (client) → POST /api/enquiry.
+    contact/page.tsx       Contact details (email / phone / WhatsApp + office) + EnquiryForm → POST /api/enquiry.
     _about/                Private folder (leading _) → NOT routed. Kept for future reuse.
   (admin)/admin/           Admin dashboard — see app/(admin)/admin/CLAUDE.md
   api/                     Backend route handlers — see below
@@ -39,7 +39,7 @@ api/auth/{login,logout,me}        JWT cookie session
 api/products + /[id]              CRUD (admin)        api/categories + /[id]   CRUD (admin)
 api/blog-articles + /[id]         CRUD (admin)        api/gallery + /[id]      create/list/delete (admin)
 api/uploads/sign                  Cloudinary signature (admin)
-api/enquiry                       POST public (contact form) · GET admin (inbox) · /[id] PATCH status
+api/enquiry                       POST public (contact form) · GET admin (paginated inbox) · /[id] PATCH status
 ```
 
 Route handlers are thin: validate (zod) → call a `lib/server/services/*` function → `ok()/created()/noContent()`.

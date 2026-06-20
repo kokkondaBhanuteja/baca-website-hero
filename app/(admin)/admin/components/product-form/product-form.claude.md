@@ -41,6 +41,15 @@ Business Logic:
 - Published checkbox
 - Submit button disabled if categories.length === 0 (no category to select)
 
+Layout:
+
+- Two-column CMS layout on `lg+` via `grid grid-cols-1 lg:grid-cols-12 lg:gap-8`.
+  - MAIN (`lg:col-span-8`): localized Name / Summary / Description in a single bordered card.
+  - SIDEBAR (`lg:col-span-4`): three stacked cards — Save+Cancel + Published checkbox; Slug + Category + Sort order; Product image.
+  - Sidebar is `lg:sticky lg:top-6` so actions stay visible while scrolling long descriptions.
+- Mobile: single-column stack.
+- No more `max-w-2xl`; the form spans the full content area.
+
 Dependencies:
 
 - React hooks: useState

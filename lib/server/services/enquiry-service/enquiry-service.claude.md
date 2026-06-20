@@ -4,57 +4,46 @@ name: 'EnquiryService'
 file: 'lib/server/services/enquiry-service/enquiry-service.ts'
 exports:
   - 'createEnquiry'
-  - 'listEnquiries'
-  - 'countNewEnquiries'
-  - 'updateEnquiryStatus'
 imports_from:
+  - '@/lib/server/email'
   - '@/lib/server/http/prisma-error'
   - '@/lib/server/prisma'
-  - '@/lib/shared/types/enquiry-dto'
   - '@/lib/server/validation/enquiry-schema'
 called_by:
-  - 'app/(admin)/admin/(dashboard)/enquiries/page.tsx'
-  - 'app/api/enquiry/[id]/route.ts'
   - 'app/api/enquiry/route.ts'
-auth: 'createEnquiry: public (no guard); listEnquiries/countNewEnquiries/updateEnquiryStatus: requireAdmin internally'
-side_effects: 'DB writes (CREATE, UPDATE); timestamps auto-set by Prisma.'
+auth: 'Public (createEnquiry — guard is the rate-limit on the route handler)'
+side_effects: 'Prisma INSERT into `enquiries`; best-effort SMTP send via sendEnquiryNotification (failure logged + swallowed).'
 ---
 
 # EnquiryService
 
 Purpose:
-Handles public contact-form submissions and admin enquiry inbox. Tracks enquiry status (NEW, READ, ARCHIVED) and localization context of submission.
+Receives a public contact-form submission, persists it to the DB as an audit trail, and triggers an SMTP notification to the team. There is no admin-side listing or status mutation — those features were removed when the enquiry flow moved to email-only delivery.
 
 Exports:
 
-- createEnquiry(input: EnquiryInput): Promise<{ id: string }> — Public submission; returns ID
-- listEnquiries(): Promise<EnquiryDto[]> — Admin inbox, newest first
-- countNewEnquiries(): Promise<number> — Count unread enquiries (for admin dashboard badge)
-- updateEnquiryStatus(id: string, status: EnquiryStatusValue): Promise<EnquiryDto> — Admin status update; wraps mapPrismaError
+- `createEnquiry(input: EnquiryInput): Promise<{ id: string }>` — writes the Enquiry row, then best-effort sends an email to `ENQUIRY_NOTIFY_TO`. Returns the new row's `id`.
 
 Imports from:
 
-- @/lib/server/http/prisma-error — mapPrismaError
-- @/lib/server/prisma — PrismaClient
-- @/lib/shared/types/enquiry-dto — EnquiryDto, EnquiryStatusValue
-- @/lib/server/validation/enquiry-schema — EnquiryInput type
+- `@/lib/server/email` — `sendEnquiryNotification` (best-effort SMTP sender).
+- `@/lib/server/http/prisma-error` — `mapPrismaError` for the Prisma write try/catch.
+- `@/lib/server/prisma` — Prisma client singleton.
+- `@/lib/server/validation/enquiry-schema` — `EnquiryInput` (type-only import).
 
 Called by:
 
-- app/api/enquiry/route.ts (public POST, admin GET, admin PATCH)
-- app/(site)/[locale]/contact/page.tsx (client-side submit, public)
+- `app/api/enquiry/route.ts` — POST handler.
 
 Business Logic:
 
-- createEnquiry: normalizes email to lowercase, stores name/email/company/phone/message as-is, captures localeSent (locale of the form at submission time), creates row with status='NEW'
-- listEnquiries: fetches all enquiries ordered by createdAt DESC (newest first), maps rows to EnquiryDto with ISO timestamp
-- countNewEnquiries: counts enquiries where status='NEW' (unread badge)
-- updateEnquiryStatus: finds row by id, updates status field, returns mapped EnquiryDto; wraps in try/catch→mapPrismaError
-
-Auth: createEnquiry: public (no guard); listEnquiries/countNewEnquiries/updateEnquiryStatus: requireAdmin internally
+- Normalises the input: lowercases `email`, defaults `company` / `phone` to `null` if missing, copies the rest as-is, carries `localeSent` as metadata.
+- Writes the Prisma row inside a try/catch that goes through `mapPrismaError` (P2002 → 409 etc.). The DB write is the **source of truth** — its failure rejects the request.
+- After the row commits, fires `sendEnquiryNotification(normalised)`. The function swallows its own errors and returns `false` (no throw), so a missing SMTP config or a transient SMTP failure never fails the form submission.
+- DB enum `EnquiryStatus` defaults to `NEW` at the column level — we no longer set or read it here.
 
 Side Effects:
-DB writes (CREATE, UPDATE); timestamps auto-set by Prisma.
+Prisma INSERT into `enquiries`; outbound SMTP request via nodemailer when SMTP is configured.
 
 Notes:
-No image handling. localeSent is metadata (not a foreign key) tracking which locale the contact form was submitted from. Email lowercasing prevents duplicate submissions from case-variant addresses.
+Email lowercasing prevents duplicate buyers from registering under case-variant addresses. The `Enquiry` Prisma model stays in `schema.prisma` so existing rows remain accessible (Prisma client still exposes `prisma.enquiry`); if you ever want to drop the table entirely, that's a separate destructive change.

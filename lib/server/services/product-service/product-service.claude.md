@@ -18,6 +18,7 @@ imports_from:
   - '@/lib/server/prisma'
   - '@/lib/shared/types/catalogue-dto'
   - '@/lib/shared/types/localized-text'
+  - '@/lib/shared/types/paginated-list'
   - '@/lib/server/validation/product-schema'
   - 'next/cache'
 called_by:
@@ -38,7 +39,7 @@ CRUD for products with localized names/summaries/descriptions, images, and categ
 Exports:
 
 - PRODUCTS_TAG: 'products' — revalidateTag identifier
-- listProductsForAdmin(): Promise<ProductAdminDto[]> — All products with category info, admin view (raw LocalizedText)
+- listProductsForAdmin({ page?, pageSize?, search? }): Promise<PaginatedList<ProductAdminDto>> — Paginated, searchable admin list. Defaults: page=1, pageSize=10, search=''.
 - getProductForAdmin(id: string): Promise<ProductAdminDto> — Single product for editing
 - createProduct(input: ProductInput): Promise<ProductAdminDto> — Create; wraps mapPrismaError + revalidateTag
 - updateProduct(id: string, input: ProductInput): Promise<ProductAdminDto> — Update; replaces image if publicId changed, revalidates
@@ -66,7 +67,7 @@ Called by:
 
 Business Logic:
 
-- Admin read: returns all products ordered by categoryId ASC, sortOrder ASC; includes category object with raw LocalizedText name
+- Admin read: server-paginated (`skip`/`take` from `page`/`pageSize`) + server-search. Search is an `OR` across `slug` (case-insensitive `contains`), JSON `name.en` (`string_contains`, case-sensitive), and joined `category.name.en` (`string_contains`). Returns `{ items, total, page, pageSize }`. Ordered by `categoryId ASC, sortOrder ASC`.
 - Public read (via category service): filters isPublished=true AND category.isPublished=true, ordered by sortOrder ASC
 - Create: validates via zod, casts LocalizedText fields to Prisma.InputJsonValue, handles nullable summary/description (Prisma.DbNull), wraps in try/catch→mapPrismaError, revalidates
 - Update: checks exists, destroys old image if publicId differs, revalidates

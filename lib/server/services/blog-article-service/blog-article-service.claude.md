@@ -10,7 +10,6 @@ exports:
   - 'updateArticle'
   - 'deleteArticle'
   - 'listPublishedArticles'
-  - 'listPublishedSlugs'
   - 'getPublishedArticleBySlug'
   - 'listRelatedArticles'
 imports_from:
@@ -22,6 +21,7 @@ imports_from:
   - '@/lib/shared/cloudinary-url'
   - '@/lib/shared/types/blog-dto'
   - '@/lib/shared/types/localized-text'
+  - '@/lib/shared/types/paginated-list'
   - '@/lib/server/validation/blog-article-schema'
   - 'next/cache'
 called_by:
@@ -45,13 +45,12 @@ CRUD operations for blog articles with admin (raw localized text) and public (re
 Exports:
 
 - BLOG_ARTICLES_TAG: 'blog-articles' — revalidateTag identifier
-- listArticlesForAdmin(): Promise<BlogArticleAdminDto[]> — All articles, newest first, admin view (raw LocalizedText)
+- listArticlesForAdmin({ page?, pageSize?, search? }): Promise<PaginatedList<BlogArticleAdminDto>> — Paginated, searchable admin list. Defaults: page=1, pageSize=10, search=''.
 - getArticleForAdmin(id: string): Promise<BlogArticleAdminDto> — Single article for editing
 - createArticle(input: BlogArticleInput): Promise<BlogArticleAdminDto> — Create; wraps mapPrismaError + revalidateTag
 - updateArticle(id: string, input: BlogArticleInput): Promise<BlogArticleAdminDto> — Update; replaces image if publicId changed, revalidates
 - deleteArticle(id: string): Promise<void> — Delete; destroys Cloudinary asset, revalidates
 - listPublishedArticles(locale: Locale): Promise<BlogArticleSummaryDto[]> — Public; featured first, published-date ordered, resolved text
-- listPublishedSlugs(): Promise<string[]> — All published article slugs (for static generation)
 - getPublishedArticleBySlug(slug: string, locale: Locale): Promise<BlogArticleDetailDto | null> — Public detail; full body resolved
 - listRelatedArticles(excludeSlug: string, locale: Locale, limit?: number): Promise<BlogArticleSummaryDto[]> — Up to N related articles, newest first
 
@@ -77,7 +76,7 @@ Called by:
 
 Business Logic:
 
-- Admin read: returns all fields including raw LocalizedText objects and image URLs (no optimization)
+- Admin read: server-paginated + server-search. Search is `OR` across `slug` (insensitive) and JSON `title.en` (`string_contains`). Returns `{ items, total, page, pageSize }`. Ordered by `createdAt DESC` (newest first). Category-enum search is not wired through the backend.
 - Public read: filters status='PUBLISHED', orders by featured desc then publishedAt desc, resolves LocalizedText to single locale string
 - Create: validates input via zod, calls toData() to cast LocalizedText to Prisma.InputJsonValue, sets publishedAt to now if status=PUBLISHED, wraps in try/catch→mapPrismaError, revalidates BLOG_ARTICLES_TAG
 - Update: checks existing article exists, destroys old Cloudinary asset if publicId changed, re-resolves publishedAt (stays null unless transitioning to PUBLISHED)

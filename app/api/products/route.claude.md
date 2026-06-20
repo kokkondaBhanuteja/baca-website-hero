@@ -8,6 +8,7 @@ exports:
 imports_from:
   - '@/lib/server/auth/require-admin'
   - '@/lib/server/http/handle-route'
+  - '@/lib/server/http/parse-admin-list-query'
   - '@/lib/server/http/respond'
   - '@/lib/server/services/product-service'
   - '@/lib/server/validation/product-schema'
@@ -31,9 +32,9 @@ Product CRUD. GET lists all products (admin). POST creates a new product (admin)
 ### GET
 
 - **Auth:** requireAdmin
-- **Validation:** None (no body)
-- **Service:** listProductsForAdmin() — returns all products with all locales
-- **Response:** ok(products) — array of product DTOs
+- **Query params:** `?page=` (default 1), `?pageSize=` (default 10, capped at 100), `?q=` (search). Parsed by `parseAdminListQuery`.
+- **Service:** `listProductsForAdmin({ page, pageSize, search })` — returns `PaginatedList<ProductAdminDto>` ({ items, total, page, pageSize }).
+- **Response:** `ok({ items, total, page, pageSize })`.
 - **Errors:** 401 (not admin)
 
 ### POST

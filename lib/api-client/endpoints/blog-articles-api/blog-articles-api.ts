@@ -1,12 +1,22 @@
 import type { BlogArticleAdminDto } from '@/lib/shared/types/blog-dto'
+import type {
+  AdminListQuery,
+  PaginatedList,
+} from '@/lib/shared/types/paginated-list'
 import type { BlogArticleInput } from '@/lib/server/validation/blog-article-schema'
 
 import { apiClient } from '@/lib/api-client/axios-instance'
 
 export const blogArticlesApi = {
-  list: () =>
+  list: (query: AdminListQuery = {}) =>
     apiClient
-      .get<BlogArticleAdminDto[]>('/blog-articles')
+      .get<PaginatedList<BlogArticleAdminDto>>('/blog-articles', {
+        params: {
+          page: query.page,
+          pageSize: query.pageSize,
+          q: query.search,
+        },
+      })
       .then((response) => response.data),
   get: (id: string) =>
     apiClient

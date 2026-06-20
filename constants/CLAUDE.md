@@ -14,7 +14,6 @@ sections/        Per-section structure paired with message keys (or DB), e.g.:
   nav.ts         NAV items (key + href). Top-level only now; the header builds Products/Insights dropdowns
                  from the DB at runtime.
   footer.ts      FOOTER_COLUMNS (key + href). Links point to live routes / home anchors only.
-  commitments.ts ABOUT_COMMITMENTS keys (join to aboutPage.commitments.<key>).
   products.ts / insights.ts   Legacy static-content configs from before those sections became DB-driven;
                  the live home sections now read the DB, so treat these as historical unless re-used.
 ```

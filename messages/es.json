@@ -13,10 +13,16 @@
     "empty": "Nuestro catálogo se está actualizando. Vuelve pronto."
   },
   "contactPage": {
-    "eyebrow": "Iniciar una consulta",
+    "eyebrow": "Contáctenos",
     "heading": "¿Qué necesita importar?",
     "intro": "Cuéntenos qué productos compra y a dónde se envían. Respondemos a las consultas internacionales en menos de 12 horas.",
-    "detailsTitle": "O contáctenos directamente",
+    "officeTitle": "Oficina",
+    "channels": {
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Escríbanos"
+    },
     "form": {
       "name": "Nombre completo",
       "email": "Correo electrónico",
@@ -46,6 +52,13 @@
       "communityEngagement": "Compromiso con la comunidad"
     }
   },
+  "notFound": {
+    "eyebrow": "404 · Página no encontrada",
+    "heading": "Esta carga nunca se envió.",
+    "body": "No podemos encontrar lo que busca. La página puede haberse movido o el enlace puede estar incorrecto. Vuelva al inicio o explore el catálogo.",
+    "ctaHome": "Volver al inicio",
+    "ctaProducts": "Ver productos"
+  },
   "galleryPage": {
     "eyebrow": "Galería",
     "heading": "El trabajo, las personas, la tierra.",
@@ -53,8 +66,8 @@
     "empty": "Se están añadiendo fotos. Vuelve a visitarnos en breve."
   },
   "metadata": {
-    "title": "BACA — Exportador indio de especias, frutos secos y frutas | Bharat Cargo",
-    "description": "BACA (Bharat Cargo) es una casa exportadora india moderna: abastecimiento trazable de especias, frutos secos y frutas, calidad rigurosa y envíos internacionales fiables. Certificación ISO 22000, HACCP y FSSAI."
+    "title": "BACA — Exportador indio de especias, frutos secos y frutas",
+    "description": "BACA es una casa exportadora india moderna: abastecimiento trazable de especias, frutos secos y frutas, calidad rigurosa y envíos internacionales fiables. Certificación ISO 22000, HACCP y FSSAI."
   },
   "common": {
     "enquire": "Solicitar información",
@@ -65,8 +78,8 @@
   },
   "nav": {
     "items": {
-      "about": {
-        "label": "Nosotros"
+      "home": {
+        "label": "Inicio"
       },
       "products": {
         "label": "Productos"
@@ -89,7 +102,6 @@
     }
   },
   "hero": {
-    "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Cultivado en tierra india. La confianza de <em>todo el mundo.</em>",
     "body": "Una nueva generación de exportación india, fundada en un abastecimiento trazable, una calidad rigurosa y alianzas que mueven materias primas de forma fiable, contenedor tras contenedor.",
     "ctaProducts": "Explorar productos",
@@ -199,8 +211,6 @@
     "ctaCatalogue": "Descargar catálogo"
   },
   "footer": {
-    "talkLabel": "Hablemos",
-    "startEnquiry": "Iniciar una consulta",
     "description": "Cultivado en tierra india. La confianza de todo el mundo. Una casa exportadora india moderna de especias, frutos secos y frutas.",
     "certifiedTitle": "Certificados",
     "backToTop": "Volver arriba",

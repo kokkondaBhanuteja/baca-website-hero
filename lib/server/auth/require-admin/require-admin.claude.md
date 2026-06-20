@@ -14,8 +14,6 @@ called_by:
   - 'app/api/blog-articles/route.ts'
   - 'app/api/categories/[id]/route.ts'
   - 'app/api/categories/route.ts'
-  - 'app/api/enquiry/[id]/route.ts'
-  - 'app/api/enquiry/route.ts'
   - 'app/api/gallery/[id]/route.ts'
   - 'app/api/gallery/route.ts'
   - 'app/api/products/[id]/route.ts'
@@ -50,7 +48,6 @@ Called by:
 - app/api/products/[id]/route.ts (admin GET/PATCH/DELETE)
 - app/api/gallery/route.ts (admin GET/POST)
 - app/api/gallery/[id]/route.ts (admin DELETE)
-- app/api/enquiry/route.ts (admin GET/PATCH)
 - any other admin-only route
 
 Business Logic:

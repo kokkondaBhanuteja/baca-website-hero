@@ -39,6 +39,15 @@ Business Logic:
 - Status dropdown: DRAFT | PUBLISHED
 - Featured checkbox
 
+Layout:
+
+- Two-column CMS layout on `lg+` via `grid grid-cols-1 lg:grid-cols-12 lg:gap-8`.
+  - MAIN (`lg:col-span-8`): localized Title / Excerpt / Body inside a single bordered card.
+  - SIDEBAR / ASIDE (`lg:col-span-4`): three stacked bordered cards — (1) Save+Cancel actions + Status dropdown + Featured checkbox, (2) Slug + Category + Read minutes, (3) Cover image.
+  - Sidebar is `lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto` so the Save button stays in view while editing the long body field.
+- Mobile (`<lg`): everything stacks single column in DOM order — main first, then sidebar cards.
+- Form no longer caps at `max-w-2xl`; it spans the full content area so wide screens are used.
+
 Dependencies:
 
 - React hooks: useState

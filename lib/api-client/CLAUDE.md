@@ -1,8 +1,8 @@
 # lib/api-client/ — Global axios (CLIENT-ONLY)
 
 The browser-side API layer. `axios-instance.ts` starts with `import 'client-only'` → importing it from a
-Server Component is a build error. **Used only by admin Client Components** (and the public contact form's
-POST). Public pages never use this — they read via `lib/server/services/*` directly.
+Server Component is a build error. **Used by admin Client Components** and the public contact form's POST.
+Other public pages never use this — they read via `lib/server/services/*` directly.
 
 ```
 axios-instance.ts    The single global instance: apiClient = axios.create({
@@ -11,7 +11,7 @@ axios-instance.ts    The single global instance: apiClient = axios.create({
                      Response interceptor: 401 → redirect to /admin/login; errors normalized to
                      NormalizedApiError { code, message, fieldErrors? }.
 endpoints/           Typed wrappers (one object per entity). Each method returns response.data:
-  auth-api · products-api · categories-api · blog-articles-api · gallery-api · uploads-api · enquiry-api
+  auth-api · products-api · categories-api · blog-articles-api · gallery-api · uploads-api · enquiry-api · enquiry-api
 ```
 
 ## Conventions

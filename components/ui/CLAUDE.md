@@ -17,10 +17,9 @@ reveal-image/           Lusion-style clip-path wipe + scale settle for hero-styl
 rich/                   next-intl rich-text tag map (e.g. `<saffron>…</saffron>` accents).
 scroll-fx/              Home-only [data-reveal]/[data-parallax] GSAP driver.
 skeleton/               Animated placeholder block — used by every loading.tsx.
-wordmark-letters/       Per-letter clip-path montage (the hero BACA letters).
-wordmark-media/         Video-based wordmark clip — sister to wordmark-slideshow.
-wordmark-slideshow/     Image-based wordmark montage; GSAP timeline in sibling
-                        use-wordmark-slideshow.ts hook.
+wordmark-media/         Video-based wordmark clip (the hero BACA wordmark with India film).
+wordmark-slideshow/     Image-based wordmark montage (footer BACA + 404 "404"); GSAP timeline
+                        in sibling use-wordmark-slideshow.ts hook.
 wordmark-clip.ts        Shared SVG text-anchor + x-position constants (no folder — pure types).
 ```
 

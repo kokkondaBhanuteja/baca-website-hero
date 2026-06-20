@@ -9,10 +9,7 @@ imports_from:
   - 'gsap/ScrollTrigger'
   - 'lucide-react'
   - 'next-intl'
-  - '@/constants/contact'
-  - '@/constants/routes'
   - '@/constants/site'
-  - '@/i18n/navigation'
   - '@/components/layout/site-footer/footer-columns'
   - '@/components/layout/site-footer/footer-marquee'
   - '@/components/layout/site-footer/footer-wordmark'
@@ -21,41 +18,39 @@ imports_from:
 # SiteFooter
 
 Purpose:
-Site-wide footer: orchestrates [data-footer-reveal] GSAP scroll animations, includes marquee + columns + wordmark + legal strip.
+Site-wide footer (every public page). Compact stack: tagline marquee → columns block (description + address + nav columns + cert column) → oversized BACA wordmark with ocean stills → single-row legal strip with back-to-top. The previous "LET'S TALK / huge email / Start enquiry" hero block was removed to halve the footer's vertical footprint — the email + phone are now inline inside the description's `<address>` block, and Contact remains reachable from the top nav and the Resources column.
 
 Used In:
 
-- Every public page (app/(site)/[locale]/layout.tsx and all inner pages)
+- Every public page (`app/(site)/[locale]/layout.tsx` and all inner pages).
 
 Props:
 
-- No props — client component
+- None — client component.
 
 Business Logic:
 
-- useEffect: queries all [data-footer-reveal] elements, checks (prefers-reduced-motion: reduce)
-- If reduce-motion: returns (no animation)
-- If motion allowed: builds GSAP context, gsap.from() each element yPercent 16→0, autoAlpha 0→1, clipPath 'inset(0% 0% 100% 0%)' → 'inset(0% 0% 0%)', duration 1s, ease 'power3.out', ScrollTrigger start 'top 90%'
-- On unmount: context.revert()
-- Renders: FooterMarquee + ContactStatement + FooterColumns + FooterWordmark + Legal/Copyright strip
-- Footer contact section has email link (href={CONTACT.emailHref}), CTA button to Route.Contact
-- Legal: year from new Date().getFullYear(), SITE.brand + sub + GST + IEC display
+- `useEffect` queries every `[data-footer-reveal]` element under the footer ref. Reduced-motion bails out before building the timeline.
+- For each reveal, a GSAP `from` tween animates `yPercent 16 → 0`, `autoAlpha 0 → 1`, and `clipPath inset(0% 0% 100% 0%) → 0`, on a per-element `ScrollTrigger` with `start: 'top 90%'`. Cleanup uses `gsap.context().revert()`.
+- The `FooterWordmark` is intentionally **not** in the reveal pass — it shows immediately so the page never flashes blank; the cross-fading ocean stills inside (driven by `WordmarkSlideshow`'s own intersection timeline) carry the entrance motion.
+- Renders top-to-bottom: `FooterMarquee` (full-bleed tagline strip), `FooterColumns` (description + inline email/phone + 3 nav columns + cert column, padding tightened to `py-10 lg:py-12`), `FooterWordmark` (the attraction; top padding tightened to `pt-6`), single-row legal strip (`© {year} BACA · GST · IEC` on the left, `Back to top` button on the right; `mt-6 py-5` padding).
+- Year computed in the component via `new Date().getFullYear()` — fine because this is `'use client'` and only ever renders in the browser.
+- Back-to-top calls `window.scrollTo({ top: 0, behavior: 'smooth' })`.
 
 Dependencies:
 
-- React hooks: useEffect, useRef
-- gsap + gsap/ScrollTrigger
-- lucide-react: ArrowUp, ArrowUpRight
-- next-intl: useTranslations
-- @/constants/contact, @/constants/routes, @/constants/site
-- @/i18n/navigation: Link
-- @/components/layout/site-footer/\* subcomponents
+- React hooks: `useEffect`, `useRef`.
+- `gsap` + `gsap/ScrollTrigger`.
+- `lucide-react`: `ArrowUp`.
+- `next-intl`: `useTranslations`.
+- `@/constants/site`: `SITE` (brand, sub, gst, iec).
+- `@/components/layout/site-footer/footer-marquee`, `footer-columns`, `footer-wordmark`.
 
 i18n:
-Namespace: 'footer'. Keys: 'marqueeItems' (array via t.raw), 'talkLabel', 'startEnquiry', 'backToTop'.
+Namespace `footer`. Keys used here: `marqueeItems` (array via `t.raw`), `backToTop`. The earlier `talkLabel` / `startEnquiry` keys were dropped along with the big contact statement.
 
 Accessibility:
-Semantic links. Scroll animations do not impact a11y.
+Semantic `<footer>`, `<address>` in FooterColumns, `<nav>` per column with `aria-label`. Back-to-top is a real `<button>` with a visible focus ring (`focus-visible:outline-saffron`). Reduced motion fully honoured.
 
 Notes:
-The footer is present on every page. The [data-footer-reveal] selector allows sub-components to opt in to the scroll animation without coupling. The wordmark is intentionally NOT in the reveal pass (it shows immediately). Back-to-top button uses window.scrollTo() with smooth behavior.
+Sub-components opt into the scroll animation by adding `[data-footer-reveal]` to a wrapping element — no prop wiring needed.

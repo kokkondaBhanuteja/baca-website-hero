@@ -4,8 +4,6 @@
  */
 export const SITE = {
   brand: 'BACA',
-  sub: 'Bharat Cargo',
-  founded: 2009,
   gst: 'GST 32ABCDE1234F1Z5',
   iec: 'IEC 0912345678',
   /** Postal address kept in Latin script for international deliverability. */
@@ -15,5 +13,5 @@ export const SITE = {
   ],
 } as const
 
-/** Certification acronyms shown as proper-noun marks (the descriptive `sub` text is translated). */
+/** Certification acronyms shown as proper-noun marks. */
 export const CERT_MARKS = ['ISO 22000', 'HACCP', 'FSSAI', 'APEDA'] as const

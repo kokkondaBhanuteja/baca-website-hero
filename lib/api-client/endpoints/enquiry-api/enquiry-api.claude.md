@@ -5,46 +5,31 @@ file: 'lib/api-client/endpoints/enquiry-api/enquiry-api.ts'
 exports:
   - 'enquiryApi'
 imports_from:
-  - '@/lib/shared/types/enquiry-dto'
   - '@/lib/server/validation/enquiry-schema'
   - '@/lib/api-client/axios-instance'
 called_by:
-  - 'app/(admin)/admin/components/enquiry-status-control/enquiry-status-control.tsx'
   - 'components/sections/contact/enquiry-form/enquiry-form.tsx'
-auth: 'submit is public; list and updateStatus require valid session cookie (enforced server-side)'
-side_effects: 'HTTP requests to /api/enquiry/*; DB writes server-side.'
+auth: 'submit is public.'
+side_effects: 'HTTP POST to /api/enquiry; server-side DB write + best-effort SMTP send.'
 ---
 
 # EnquiryApi
 
 Purpose:
-Typed axios wrappers for enquiry endpoints. Public contact form submissions and admin enquiry inbox.
+Typed axios wrapper for the public enquiry submission. Only `submit` exists — there is no admin list / updateStatus client (the admin enquiry UI was removed when the flow moved to email-only delivery).
 
 Exports:
 
-- enquiryApi: object — { submit, list, updateStatus }
+- `enquiryApi: { submit }` — `submit(input: EnquiryInput) => Promise<{ id: string }>`.
 
 Imports from:
 
-- @/lib/shared/types/enquiry-dto — EnquiryDto, EnquiryStatusValue
-- @/lib/server/validation/enquiry-schema — EnquiryInput (type-only import)
-- @/lib/api-client/axios-instance — apiClient instance
+- `@/lib/server/validation/enquiry-schema` — `EnquiryInput` (type-only).
+- `@/lib/api-client/axios-instance` — global axios instance.
 
 Called by:
 
-- app/(site)/[locale]/contact/page.tsx (calls enquiryApi.submit from public form)
-- app/(admin)/admin/(dashboard)/enquiries/page.tsx (calls enquiryApi.list and enquiryApi.updateStatus)
-
-Business Logic:
-
-- submit: POST /api/enquiry with EnquiryInput body → returns { id: string } (public, no auth required)
-- list: GET /api/enquiry → returns EnquiryDto[] (admin-only)
-- updateStatus: PATCH /api/enquiry/:id with { status } body → returns EnquiryDto (admin-only)
-
-Auth: submit is public; list and updateStatus require valid session cookie (enforced server-side)
-
-Side Effects:
-HTTP requests to /api/enquiry/\*; DB writes server-side.
+- `components/sections/contact/enquiry-form/enquiry-form.tsx` — public form on `/contact`.
 
 Notes:
-submit is the only public endpoint in this group. EnquiryInput is type-only. updateStatus updates only the status field (not other fields).
+Type-only import of `EnquiryInput` keeps the server-only validation file out of the client bundle. The route is rate-limited server-side (5 / 10 min per IP).

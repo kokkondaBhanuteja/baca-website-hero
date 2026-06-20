@@ -8,6 +8,8 @@ exports:
   - 'default'
 imports_from:
   - '@/lib/server/services/blog-article-service'
+  - '@/lib/shared/types/paginated-list'
+  - '@/app/(admin)/admin/components/blog-articles-table'
 route: '/admin/blog-articles'
 auth: 'Admin-only (gated by parent (dashboard) layout)'
 ---
@@ -24,18 +26,19 @@ Admin list of all blog articles. Displays table with title (EN), slug, category,
 
 Data:
 
-- listArticlesForAdmin() — all articles with title (LocalizedString), slug, category (enum), status (PUBLISHED/DRAFT), featured
+- `listArticlesForAdmin({ page, pageSize, search })` — server-paginated. Returns `PaginatedList<BlogArticleAdminDto>`.
+- searchParams: `{ page?: string; q?: string }`.
 
 Business Logic:
 
-- export const dynamic = 'force-dynamic'
-- Table: title.en (with featured badge if featured), slug, category (formatted), status, edit/delete
-- Featured badge shows if article.featured is true
+- `export const dynamic = 'force-dynamic'`.
+- Parses `?page` and `?q` from the URL and forwards to the service.
+- Hands `{ items, total, page, pageSize, search }` to `<BlogArticlesTable />`. The wrapper uses `useAdminListUrlState` to write search/page back to the URL.
 
 Renders:
 
-- Heading 'Blog articles', New article button
-- Table or empty message
+- Page header: `<h1>Blog articles</h1>` + "New article" CTA, responsive.
+- `<BlogArticlesTable items total page pageSize search />` — search + 10-per-page table (cards on mobile).
 
 Notes:
-Category displayed as lowercase with underscores replaced by spaces. Featured badge is separate visual indicator.
+Category enum is normalised (e.g. `INDUSTRY_INSIGHTS` → `industry insights`) for display. Server-side search currently matches title/slug only (category enum search not yet wired). Featured badge sits inline next to the title.

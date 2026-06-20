@@ -17,16 +17,21 @@ export function FooterColumns() {
   const t = useTranslations('footer')
 
   return (
-    <div className="grid gap-x-8 gap-y-12 py-16 lg:grid-cols-12">
+    <div className="grid gap-x-8 gap-y-10 py-10 lg:grid-cols-12 lg:py-12">
       <div data-footer-reveal className="lg:col-span-5">
-        <p className="max-w-[42ch] text-[15px] leading-relaxed text-paper/65">
+        <p className="max-w-[42ch] text-sm leading-relaxed text-paper/65">
           {t('description')}
         </p>
-        <address className="mt-6 not-italic text-[13px] leading-relaxed text-paper/55">
-          {SITE.address[0]}
+        <address className="mt-4 not-italic text-[13px] leading-relaxed text-paper/55">
+          {SITE.address[0]} · {SITE.address[1]}
           <br />
-          {SITE.address[1]}
-          <br />
+          <a
+            href={CONTACT.emailHref}
+            className="transition-colors hover:text-paper"
+          >
+            {CONTACT.email}
+          </a>
+          {' · '}
           <a
             href={CONTACT.phoneHref}
             className="transition-colors hover:text-paper"

@@ -13,10 +13,16 @@
     "empty": "Our catalogue is being updated. Please check back soon."
   },
   "contactPage": {
-    "eyebrow": "Start an enquiry",
+    "eyebrow": "Get in touch",
     "heading": "What do you need to import?",
     "intro": "Tell us what you source and where it ships. We respond to international enquiries within 12 hours.",
-    "detailsTitle": "Or reach us directly",
+    "officeTitle": "Office",
+    "channels": {
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Message us"
+    },
     "form": {
       "name": "Full name",
       "email": "Email",
@@ -46,6 +52,13 @@
       "communityEngagement": "Community Engagement"
     }
   },
+  "notFound": {
+    "eyebrow": "404 · Page not found",
+    "heading": "This page never shipped.",
+    "body": "We can't find what you're looking for. The page may have moved, or the link may be wrong. Head back home or browse the catalogue.",
+    "ctaHome": "Return home",
+    "ctaProducts": "Browse products"
+  },
   "galleryPage": {
     "eyebrow": "Gallery",
     "heading": "The work, the people, the soil.",
@@ -53,8 +66,8 @@
     "empty": "Photos are being added. Please check back soon."
   },
   "metadata": {
-    "title": "BACA — Indian Spice, Nut & Fruit Exporter | Bharat Cargo",
-    "description": "BACA (Bharat Cargo) is a modern Indian export house — traceable sourcing of spices, nuts, and fruits, rigorous quality, and reliable global shipments. ISO 22000, HACCP & FSSAI certified."
+    "title": "BACA — Indian Spice, Nut & Fruit Exporter",
+    "description": "BACA is a modern Indian export house — traceable sourcing of spices, nuts, and fruits, rigorous quality, and reliable global shipments. ISO 22000, HACCP & FSSAI certified."
   },
   "common": {
     "enquire": "Enquire",
@@ -65,8 +78,8 @@
   },
   "nav": {
     "items": {
-      "about": {
-        "label": "About"
+      "home": {
+        "label": "Home"
       },
       "products": {
         "label": "Products"
@@ -89,7 +102,6 @@
     }
   },
   "hero": {
-    "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Sourced from Indian soil. Trusted across the <em>world.</em>",
     "body": "A new generation of Indian export — built on traceable sourcing, rigorous quality, and partnerships that move commodities reliably, container after container.",
     "ctaProducts": "Explore products",
@@ -199,8 +211,6 @@
     "ctaCatalogue": "Download catalogue"
   },
   "footer": {
-    "talkLabel": "Let's talk",
-    "startEnquiry": "Start an enquiry",
     "description": "Sourced from Indian soil. Trusted across the world. A modern Indian export house for spices, nuts, and fruits.",
     "certifiedTitle": "Certified",
     "backToTop": "Back to top",

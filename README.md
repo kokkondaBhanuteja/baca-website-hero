@@ -1,4 +1,4 @@
-# BACA — Bharat Cargo
+# BACA
 
 A full-stack marketing site and content-management system for **BACA**, an India-based
 spice & commodity export house. A fast, multilingual public site presents the catalogue
@@ -107,4 +107,4 @@ in technical, LLM-friendly form — start with the root `CLAUDE.md`, then the on
 
 ---
 
-Private / proprietary. © BACA · Bharat Cargo.
+Private / proprietary. © BACA.

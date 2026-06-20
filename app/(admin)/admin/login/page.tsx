@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 
 import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { authApi } from '@/lib/api-client/endpoints/auth-api'
+import { PasswordInput } from '@/components/ui/password-input'
 
 export default function AdminLoginPage() {
   const router = useRouter()
@@ -19,7 +20,7 @@ export default function AdminLoginPage() {
     setError(null)
     try {
       await authApi.login({ email, password })
-      router.replace('/admin')
+      router.replace('/admin/categories')
       router.refresh()
     } catch (caught) {
       setError((caught as NormalizedApiError).message ?? 'Login failed')
@@ -28,10 +29,10 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-5">
+    <div className="flex min-h-[100svh] items-center justify-center bg-bone px-4 py-10 sm:px-6">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-sm rounded-2xl border border-line bg-paper p-8 shadow-[0_18px_50px_-24px_rgba(20,24,26,0.3)]"
+        className="w-full max-w-sm rounded-2xl border border-line bg-paper p-6 shadow-[0_18px_50px_-24px_rgba(20,24,26,0.3)] sm:p-8"
       >
         <div className="mb-6">
           <span className="font-heading text-2xl font-medium text-ink">
@@ -70,14 +71,13 @@ export default function AdminLoginPage() {
         <label className="mb-1 block text-sm text-ink/80" htmlFor="password">
           Password
         </label>
-        <input
+        <PasswordInput
           id="password"
-          type="password"
           autoComplete="current-password"
           required
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          className="mb-6 w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink"
+          className="mb-6"
         />
 
         <button

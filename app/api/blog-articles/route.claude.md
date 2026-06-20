@@ -8,6 +8,7 @@ exports:
 imports_from:
   - '@/lib/server/auth/require-admin'
   - '@/lib/server/http/handle-route'
+  - '@/lib/server/http/parse-admin-list-query'
   - '@/lib/server/http/respond'
   - '@/lib/server/services/blog-article-service'
   - '@/lib/server/validation/blog-article-schema'
@@ -31,9 +32,9 @@ Blog article CRUD. GET lists all articles (admin). POST creates new article (adm
 ### GET
 
 - **Auth:** requireAdmin
-- **Validation:** None
-- **Service:** listArticlesForAdmin() — returns all articles with all locales
-- **Response:** ok(articles)
+- **Query params:** `?page=` (default 1), `?pageSize=` (default 10, cap 100), `?q=` (search). Parsed by `parseAdminListQuery`.
+- **Service:** `listArticlesForAdmin({ page, pageSize, search })` — returns `PaginatedList<BlogArticleAdminDto>`.
+- **Response:** `ok({ items, total, page, pageSize })`.
 - **Errors:** 401
 
 ### POST

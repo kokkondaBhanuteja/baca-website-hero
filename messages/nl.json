@@ -13,10 +13,16 @@
     "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug."
   },
   "contactPage": {
-    "eyebrow": "Start een aanvraag",
+    "eyebrow": "Neem contact op",
     "heading": "Wat wilt u importeren?",
     "intro": "Vertel ons wat u inkoopt en waarheen het wordt verscheept. Wij reageren binnen 12 uur op internationale aanvragen.",
-    "detailsTitle": "Of bereik ons rechtstreeks",
+    "officeTitle": "Kantoor",
+    "channels": {
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Stuur ons een bericht"
+    },
     "form": {
       "name": "Volledige naam",
       "email": "E-mail",
@@ -46,6 +52,13 @@
       "communityEngagement": "Betrokkenheid bij de gemeenschap"
     }
   },
+  "notFound": {
+    "eyebrow": "404 · Pagina niet gevonden",
+    "heading": "Deze zending is nooit verscheept.",
+    "body": "We kunnen niet vinden wat u zoekt. De pagina is mogelijk verplaatst of de link klopt niet. Ga terug naar home of bekijk de catalogus.",
+    "ctaHome": "Terug naar home",
+    "ctaProducts": "Bekijk producten"
+  },
   "galleryPage": {
     "eyebrow": "Galerij",
     "heading": "Het werk, de mensen, de grond.",
@@ -53,8 +66,8 @@
     "empty": "Foto's worden toegevoegd. Kom binnenkort weer langs."
   },
   "metadata": {
-    "title": "BACA — Indiase exporteur van specerijen, noten & fruit | Bharat Cargo",
-    "description": "BACA (Bharat Cargo) is een modern Indiaas exporthuis — traceerbare inkoop van specerijen, noten en fruit, strenge kwaliteitscontrole en betrouwbare wereldwijde leveringen. Gecertificeerd volgens ISO 22000, HACCP & FSSAI."
+    "title": "BACA — Indiase exporteur van specerijen, noten & fruit",
+    "description": "BACA is een modern Indiaas exporthuis — traceerbare inkoop van specerijen, noten en fruit, strenge kwaliteitscontrole en betrouwbare wereldwijde leveringen. Gecertificeerd volgens ISO 22000, HACCP & FSSAI."
   },
   "common": {
     "enquire": "Aanvraag indienen",
@@ -65,8 +78,8 @@
   },
   "nav": {
     "items": {
-      "about": {
-        "label": "Over ons"
+      "home": {
+        "label": "Home"
       },
       "products": {
         "label": "Producten"
@@ -89,7 +102,6 @@
     }
   },
   "hero": {
-    "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Geworteld in Indiase grond. Vertrouwd over de hele <em>wereld.</em>",
     "body": "Een nieuwe generatie Indiase export — gebouwd op traceerbare inkoop, strenge kwaliteit en partnerschappen die goederen betrouwbaar verplaatsen, container na container.",
     "ctaProducts": "Ontdek producten",
@@ -199,8 +211,6 @@
     "ctaCatalogue": "Catalogus downloaden"
   },
   "footer": {
-    "talkLabel": "Laten we praten",
-    "startEnquiry": "Een aanvraag starten",
     "description": "Geworteld in Indiase grond. Vertrouwd over de hele wereld. Een modern Indiaas exporthuis voor specerijen, noten en fruit.",
     "certifiedTitle": "Gecertificeerd",
     "backToTop": "Terug naar boven",

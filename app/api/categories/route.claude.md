@@ -8,6 +8,7 @@ exports:
 imports_from:
   - '@/lib/server/auth/require-admin'
   - '@/lib/server/http/handle-route'
+  - '@/lib/server/http/parse-admin-list-query'
   - '@/lib/server/http/respond'
   - '@/lib/server/services/category-service'
   - '@/lib/server/validation/category-schema'
@@ -31,9 +32,9 @@ Category CRUD. GET lists all categories (admin). POST creates new category (admi
 ### GET
 
 - **Auth:** requireAdmin
-- **Validation:** None
-- **Service:** listCategoriesForAdmin() — returns all categories with all locales
-- **Response:** ok(categories)
+- **Query params:** `?page=` (default 1), `?pageSize=` (default 10, cap 100), `?q=` (search). Parsed by `parseAdminListQuery`.
+- **Service:** `listCategoriesForAdmin({ page, pageSize, search })` — returns `PaginatedList<ProductCategoryAdminDto>`.
+- **Response:** `ok({ items, total, page, pageSize })`.
 - **Errors:** 401
 
 ### POST
