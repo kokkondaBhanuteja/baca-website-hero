@@ -8,6 +8,11 @@ import { Route } from '@/constants/routes'
 import { CERT_MARKS, SITE } from '@/constants/site'
 import { FOOTER_COLUMNS } from '@/constants/sections/footer'
 import { Link } from '@/i18n/navigation'
+import { WordmarkMedia } from '@/components/ui/wordmark-media'
+
+const FOOTER_WORDMARK_VIDEO_SOURCES = [
+  { src: '/videos/spice-heritage.mp4', type: 'video/mp4' },
+]
 
 function FooterLink({
   href,
@@ -126,16 +131,17 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Oversized wordmark */}
+        {/* Oversized wordmark — video showing through the letters */}
         <div data-reveal className="border-t border-paper/12 pt-8">
-          <div className="flex items-end justify-between gap-6">
-            <span className="font-heading text-[clamp(4rem,21vw,16rem)] font-medium leading-[0.78] tracking-[-0.04em] text-paper">
-              {SITE.brand}
-            </span>
-            <span className="hidden whitespace-nowrap pb-3 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-paper/45 sm:block">
-              {SITE.sub} · Est. {SITE.founded}
-            </span>
-          </div>
+          <WordmarkMedia
+            text={SITE.brand}
+            videoSources={FOOTER_WORDMARK_VIDEO_SOURCES}
+            posterSrc="/images/wordmark-poster.jpg"
+            className="w-full"
+          />
+          <p className="mt-2 text-end font-mono text-[0.62rem] uppercase tracking-[0.22em] text-paper/45">
+            {SITE.sub} · Est. {SITE.founded}
+          </p>
         </div>
 
         {/* Legal + back to top */}
