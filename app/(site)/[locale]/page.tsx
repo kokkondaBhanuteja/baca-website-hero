@@ -26,7 +26,7 @@ export default async function Page({ params }: PageParams) {
   return (
     <main className="min-h-screen bg-paper">
       <ScrollFX />
-      <SiteHeader />
+      <SiteHeader forceSolid />
       <Hero />
       <Manifesto />
       <StatsRow />
