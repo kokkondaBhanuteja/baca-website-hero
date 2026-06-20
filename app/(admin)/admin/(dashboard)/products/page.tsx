@@ -38,12 +38,25 @@ export default async function ProductsListPage() {
             </thead>
             <tbody>
               {products.map((product) => (
-                <tr key={product.id} className="border-b border-line last:border-0">
-                  <td className="px-5 py-3 font-medium text-ink">{product.name.en}</td>
-                  <td className="px-5 py-3 font-mono text-xs text-ink-60">{product.slug}</td>
-                  <td className="px-5 py-3 text-ink-60">{product.categoryName.en}</td>
+                <tr
+                  key={product.id}
+                  className="border-b border-line last:border-0"
+                >
+                  <td className="px-5 py-3 font-medium text-ink">
+                    {product.name.en}
+                  </td>
+                  <td className="px-5 py-3 font-mono text-xs text-ink-60">
+                    {product.slug}
+                  </td>
+                  <td className="px-5 py-3 text-ink-60">
+                    {product.categoryName.en}
+                  </td>
                   <td className="px-5 py-3">
-                    <span className={product.isPublished ? 'text-forest' : 'text-ink-60'}>
+                    <span
+                      className={
+                        product.isPublished ? 'text-forest' : 'text-ink-60'
+                      }
+                    >
                       {product.isPublished ? 'Published' : 'Draft'}
                     </span>
                   </td>

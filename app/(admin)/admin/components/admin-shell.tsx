@@ -37,7 +37,9 @@ export function AdminShell({
     <div className="flex min-h-screen">
       <aside className="flex w-60 shrink-0 flex-col border-r border-line bg-paper">
         <div className="border-b border-line px-6 py-5">
-          <span className="font-heading text-xl font-medium text-ink">BACA</span>
+          <span className="font-heading text-xl font-medium text-ink">
+            BACA
+          </span>
           <span className="ms-2 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink-60">
             Admin
           </span>

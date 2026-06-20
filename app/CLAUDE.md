@@ -20,6 +20,7 @@ app/
 ```
 
 ## Conventions for pages
+
 - `params` is a **Promise** (Next 16): `const { locale } = await params`.
 - Public pages call `setRequestLocale(locale as Locale)` then `getTranslations(ns)` / a service for data.
 - Locale inside a Server Component without params: `await getLocale()` (e.g. SiteHeader, FeaturedInsights).
@@ -28,9 +29,11 @@ app/
   the home section `#why-we-re-here`; section anchors live on the home (`#why-we-re-here`, `#approach`, `#compliance`).
 
 ## api/ — backend route handlers (Node runtime)
+
 Each handler: `export const POST = handleRoute(async (request, { params }) => { … })`.
 `handleRoute` (`@/lib/server/http/handle-route`) catches `HttpError`/`ZodError` → consistent JSON.
 Mutations and admin reads call `await requireAdmin()` first. Public: `POST /api/enquiry` only.
+
 ```
 api/auth/{login,logout,me}        JWT cookie session
 api/products + /[id]              CRUD (admin)        api/categories + /[id]   CRUD (admin)
@@ -38,4 +41,5 @@ api/blog-articles + /[id]         CRUD (admin)        api/gallery + /[id]      c
 api/uploads/sign                  Cloudinary signature (admin)
 api/enquiry                       POST public (contact form) · GET admin (inbox) · /[id] PATCH status
 ```
+
 Route handlers are thin: validate (zod) → call a `lib/server/services/*` function → `ok()/created()/noContent()`.

@@ -5,7 +5,9 @@ import { apiClient } from '../axios-instance'
 
 export const productsApi = {
   list: () =>
-    apiClient.get<ProductAdminDto[]>('/products').then((response) => response.data),
+    apiClient
+      .get<ProductAdminDto[]>('/products')
+      .then((response) => response.data),
   get: (id: string) =>
     apiClient
       .get<ProductAdminDto>(`/products/${id}`)

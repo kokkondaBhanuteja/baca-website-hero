@@ -19,8 +19,16 @@ export function MarqueeStrip() {
     if (!track) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const loop = gsap.to(track, { xPercent: -50, repeat: -1, duration: 24, ease: 'none' })
-    const skewTo = gsap.quickTo(track, 'skewX', { duration: 0.5, ease: 'power3' })
+    const loop = gsap.to(track, {
+      xPercent: -50,
+      repeat: -1,
+      duration: 24,
+      ease: 'none',
+    })
+    const skewTo = gsap.quickTo(track, 'skewX', {
+      duration: 0.5,
+      ease: 'power3',
+    })
 
     let lastY = window.scrollY
     let lastT = performance.now()
@@ -60,7 +68,11 @@ export function MarqueeStrip() {
     >
       <div ref={trackRef} className="flex w-max will-change-transform">
         {[0, 1].map((dup) => (
-          <ul key={dup} className="flex shrink-0 items-center" aria-hidden={dup === 1}>
+          <ul
+            key={dup}
+            className="flex shrink-0 items-center"
+            aria-hidden={dup === 1}
+          >
             {items.map((item) => (
               <li
                 key={`${dup}-${item}`}

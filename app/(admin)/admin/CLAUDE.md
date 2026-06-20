@@ -20,6 +20,7 @@ components/             Admin-only client components:
 ```
 
 ## Patterns
+
 - **Auth**: the `(dashboard)` group layout gate-keeps everything; `login` sits outside it. Sessions are the
   httpOnly cookie set by `/api/auth/login`. API guards are separate (`requireAdmin` in each handler).
 - **Forms**: hold per-field local state (localized fields as `LocalizedDraft = Partial<Record<Locale,string>>`),

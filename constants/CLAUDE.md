@@ -20,6 +20,7 @@ sections/        Per-section structure paired with message keys (or DB), e.g.:
 ```
 
 ## Rules
+
 - A constant value that's user-visible text and should change per language does **not** belong here —
   put it in `messages/`.
 - `LOCALES` must stay `as const` so `Locale` narrows to the literal union.

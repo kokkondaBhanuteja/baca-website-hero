@@ -11,7 +11,9 @@ export default async function BlogArticlesListPage() {
   return (
     <div>
       <div className="mb-8 flex items-center justify-between">
-        <h1 className="font-heading text-3xl font-light text-ink">Blog articles</h1>
+        <h1 className="font-heading text-3xl font-light text-ink">
+          Blog articles
+        </h1>
         <Link
           href="/admin/blog-articles/new"
           className="rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-forest"
@@ -36,7 +38,10 @@ export default async function BlogArticlesListPage() {
             </thead>
             <tbody>
               {articles.map((article) => (
-                <tr key={article.id} className="border-b border-line last:border-0">
+                <tr
+                  key={article.id}
+                  className="border-b border-line last:border-0"
+                >
                   <td className="px-5 py-3 font-medium text-ink">
                     {article.title.en}
                     {article.featured && (
@@ -45,12 +50,20 @@ export default async function BlogArticlesListPage() {
                       </span>
                     )}
                   </td>
-                  <td className="px-5 py-3 font-mono text-xs text-ink-60">{article.slug}</td>
+                  <td className="px-5 py-3 font-mono text-xs text-ink-60">
+                    {article.slug}
+                  </td>
                   <td className="px-5 py-3 text-ink-60">
                     {article.category.replace(/_/g, ' ').toLowerCase()}
                   </td>
                   <td className="px-5 py-3">
-                    <span className={article.status === 'PUBLISHED' ? 'text-forest' : 'text-ink-60'}>
+                    <span
+                      className={
+                        article.status === 'PUBLISHED'
+                          ? 'text-forest'
+                          : 'text-ink-60'
+                      }
+                    >
                       {article.status === 'PUBLISHED' ? 'Published' : 'Draft'}
                     </span>
                   </td>

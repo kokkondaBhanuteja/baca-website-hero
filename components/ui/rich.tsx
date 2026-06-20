@@ -5,5 +5,7 @@ import type { ReactNode } from 'react'
  * code while letting translators move the `<em>…</em>` span within a sentence.
  */
 export const richTags = {
-  em: (chunks: ReactNode) => <span className="italic text-saffron">{chunks}</span>,
+  em: (chunks: ReactNode) => (
+    <span className="italic text-saffron">{chunks}</span>
+  ),
 }

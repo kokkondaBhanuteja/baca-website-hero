@@ -34,7 +34,9 @@ function map(row: EnquiryRow): EnquiryDto {
   }
 }
 
-export async function createEnquiry(input: EnquiryInput): Promise<{ id: string }> {
+export async function createEnquiry(
+  input: EnquiryInput,
+): Promise<{ id: string }> {
   const row = await prisma.enquiry.create({
     data: {
       name: input.name,

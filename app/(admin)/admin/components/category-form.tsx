@@ -22,7 +22,11 @@ function imageFrom(entity?: ProductCategoryAdminDto): UploadedImage | null {
     : null
 }
 
-export function CategoryForm({ initial }: { initial?: ProductCategoryAdminDto }) {
+export function CategoryForm({
+  initial,
+}: {
+  initial?: ProductCategoryAdminDto
+}) {
   const router = useRouter()
   const [slug, setSlug] = useState(initial?.slug ?? '')
   const [name, setName] = useState<LocalizedDraft>(initial?.name ?? { en: '' })
@@ -75,7 +79,10 @@ export function CategoryForm({ initial }: { initial?: ProductCategoryAdminDto })
       )}
 
       <div className="mb-5">
-        <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="slug">
+        <label
+          className="mb-1.5 block text-sm font-medium text-ink/80"
+          htmlFor="slug"
+        >
           Slug <span className="text-clay">*</span>
         </label>
         <input
@@ -86,7 +93,9 @@ export function CategoryForm({ initial }: { initial?: ProductCategoryAdminDto })
           className="w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink outline-none focus:border-ink"
         />
         {fieldErrors.slug && (
-          <p className="mt-1 text-xs text-clay">{fieldErrors.slug.join(', ')}</p>
+          <p className="mt-1 text-xs text-clay">
+            {fieldErrors.slug.join(', ')}
+          </p>
         )}
       </div>
 
@@ -112,7 +121,10 @@ export function CategoryForm({ initial }: { initial?: ProductCategoryAdminDto })
 
       <div className="mb-5 flex items-center gap-6">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="sortOrder">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="sortOrder"
+          >
             Sort order
           </label>
           <input

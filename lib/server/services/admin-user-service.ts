@@ -21,5 +21,10 @@ export async function authenticateAdmin(
   const passwordMatches = await verifyPassword(admin.passwordHash, password)
   if (!passwordMatches) throw unauthorized('Invalid email or password')
 
-  return { id: admin.id, email: admin.email, name: admin.name, role: admin.role }
+  return {
+    id: admin.id,
+    email: admin.email,
+    name: admin.name,
+    role: admin.role,
+  }
 }

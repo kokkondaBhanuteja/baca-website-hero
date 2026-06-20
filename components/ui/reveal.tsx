@@ -1,6 +1,13 @@
 'use client'
 
-import { createElement, useEffect, useRef, useState, type ReactNode } from 'react'
+/* eslint-disable react-hooks/refs -- the polymorphic createElement forwards the ref; it is not read during render */
+import {
+  createElement,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react'
 
 interface RevealProps {
   children: ReactNode

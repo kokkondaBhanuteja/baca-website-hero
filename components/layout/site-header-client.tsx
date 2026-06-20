@@ -120,7 +120,10 @@ export function SiteHeaderClient({
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+          <nav
+            className="hidden items-center gap-1 lg:flex"
+            aria-label="Primary"
+          >
             {navItems.map((item) => (
               <div key={item.key} className="group relative">
                 <Link
@@ -192,7 +195,9 @@ export function SiteHeaderClient({
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] flex flex-col bg-ink text-paper lg:hidden">
           <div className="flex h-[72px] items-center justify-between px-5 sm:px-8">
-            <span className="font-heading text-2xl font-medium">{SITE.brand}</span>
+            <span className="font-heading text-2xl font-medium">
+              {SITE.brand}
+            </span>
             <button
               type="button"
               onClick={() => setMobileOpen(false)}

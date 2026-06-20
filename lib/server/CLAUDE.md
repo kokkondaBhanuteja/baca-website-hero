@@ -36,6 +36,7 @@ services/                business logic + DB access (the only place that touches
 ```
 
 ## Service patterns (follow these exactly)
+
 - **Two mappers per entity**: `mapAdmin(row)` returns raw all-locale `LocalizedText` objects (for edit forms);
   `…ForLocale(locale)` returns **resolved strings** via `localizedValue` (for public pages).
 - **Writes** (create/update/delete) wrap Prisma calls in `try/catch → mapPrismaError(error)`, then
@@ -48,13 +49,16 @@ services/                business logic + DB access (the only place that touches
 - `publishedAt` for articles: set to `now` when status becomes PUBLISHED, `null` otherwise.
 
 ## Gotchas
+
 - Prisma model types are imported as `import { type BlogArticle } from '@prisma/client'`; JSON columns come back
   as `Prisma.JsonValue` → cast `as LocalizedText` at the mapper boundary (zod guarantees the shape on write).
 - `revalidateTag(tag)` alone throws in Next 16 — always pass a profile (`'max'`).
 - Never put anything you need to filter/sort by inside a JSONB field.
 
 ## Recipe: add a CMS entity end-to-end
+
 The codebase repeats one pattern (Products/Articles/Gallery are all built this way). To add `Thing`:
+
 1. **Schema** — model in `prisma/schema.prisma` (translatable text as `Json`, scalar `slug`/`status`/`sortOrder`,
    image as `imageUrl` + `imagePublicId`); `pnpm prisma migrate dev --name add_thing`.
 2. **DTOs** — `lib/shared/types/thing-dto.ts`: `ThingAdminDto` (raw `LocalizedText`) + `ThingPublicDto` (resolved).

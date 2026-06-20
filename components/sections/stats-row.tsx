@@ -18,9 +18,7 @@ function CountUp({ stat, label }: { stat: StatConfig; label: string }) {
     const node = ref.current
     if (!node) return
 
-    const reduce = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const observer = new IntersectionObserver(
       ([entry]) => {

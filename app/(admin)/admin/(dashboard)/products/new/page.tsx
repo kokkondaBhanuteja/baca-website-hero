@@ -12,7 +12,9 @@ export default async function NewProductPage() {
 
   return (
     <div>
-      <h1 className="mb-8 font-heading text-3xl font-light text-ink">New product</h1>
+      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+        New product
+      </h1>
       <ProductForm categories={options} />
     </div>
   )

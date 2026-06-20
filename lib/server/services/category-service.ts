@@ -95,7 +95,10 @@ export async function updateCategory(
   if (!existing) throw notFoundError('Category not found')
 
   // If the image was replaced, clean up the old asset.
-  if (existing.imagePublicId && existing.imagePublicId !== input.imagePublicId) {
+  if (
+    existing.imagePublicId &&
+    existing.imagePublicId !== input.imagePublicId
+  ) {
     await destroyUploadedImage(existing.imagePublicId)
   }
 
@@ -119,7 +122,9 @@ export async function deleteCategory(id: string): Promise<void> {
   })
   if (!row) throw notFoundError('Category not found')
   if (row._count.products > 0) {
-    throw conflictError('Reassign or remove its products before deleting this category')
+    throw conflictError(
+      'Reassign or remove its products before deleting this category',
+    )
   }
 
   await destroyUploadedImage(row.imagePublicId)

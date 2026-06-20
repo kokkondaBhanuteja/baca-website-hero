@@ -12,18 +12,17 @@ export default async function EditCategoryPage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  try {
-    const category = await getCategoryForAdmin(id)
-    return (
-      <div>
-        <h1 className="mb-8 font-heading text-3xl font-light text-ink">
-          Edit category
-        </h1>
-        <CategoryForm initial={category} />
-      </div>
-    )
-  } catch (error) {
+  const category = await getCategoryForAdmin(id).catch((error: unknown) => {
     if (error instanceof HttpError && error.status === 404) notFound()
     throw error
-  }
+  })
+
+  return (
+    <div>
+      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+        Edit category
+      </h1>
+      <CategoryForm initial={category} />
+    </div>
+  )
 }

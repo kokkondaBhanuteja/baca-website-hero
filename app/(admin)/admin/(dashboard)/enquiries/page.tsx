@@ -8,7 +8,9 @@ export default async function EnquiriesPage() {
 
   return (
     <div>
-      <h1 className="mb-8 font-heading text-3xl font-light text-ink">Enquiries</h1>
+      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+        Enquiries
+      </h1>
 
       {enquiries.length === 0 ? (
         <p className="text-sm text-ink-60">No enquiries yet.</p>
@@ -26,7 +28,10 @@ export default async function EnquiriesPage() {
             </thead>
             <tbody>
               {enquiries.map((enquiry) => (
-                <tr key={enquiry.id} className="border-b border-line align-top last:border-0">
+                <tr
+                  key={enquiry.id}
+                  className="border-b border-line align-top last:border-0"
+                >
                   <td className="px-5 py-4">
                     <p className="font-medium text-ink">{enquiry.name}</p>
                     <a
@@ -42,7 +47,9 @@ export default async function EnquiriesPage() {
                       <p className="text-xs text-ink-60">{enquiry.phone}</p>
                     )}
                   </td>
-                  <td className="max-w-md px-5 py-4 text-ink/80">{enquiry.message}</td>
+                  <td className="max-w-md px-5 py-4 text-ink/80">
+                    {enquiry.message}
+                  </td>
                   <td className="px-5 py-4 font-mono text-xs uppercase text-ink-60">
                     {enquiry.localeSent}
                   </td>
@@ -50,7 +57,10 @@ export default async function EnquiriesPage() {
                     {enquiry.createdAt.slice(0, 10)}
                   </td>
                   <td className="px-5 py-4">
-                    <EnquiryStatusControl id={enquiry.id} status={enquiry.status} />
+                    <EnquiryStatusControl
+                      id={enquiry.id}
+                      status={enquiry.status}
+                    />
                   </td>
                 </tr>
               ))}

@@ -95,7 +95,10 @@ export function ProductForm({
 
       <div className="mb-5 grid grid-cols-2 gap-4">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="slug">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="slug"
+          >
             Slug <span className="text-clay">*</span>
           </label>
           <input
@@ -106,11 +109,16 @@ export function ProductForm({
             className="w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink outline-none focus:border-ink"
           />
           {fieldErrors.slug && (
-            <p className="mt-1 text-xs text-clay">{fieldErrors.slug.join(', ')}</p>
+            <p className="mt-1 text-xs text-clay">
+              {fieldErrors.slug.join(', ')}
+            </p>
           )}
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="category">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="category"
+          >
             Category <span className="text-clay">*</span>
           </label>
           <Dropdown
@@ -155,7 +163,10 @@ export function ProductForm({
 
       <div className="mb-5 flex items-center gap-6">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="sortOrder">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="sortOrder"
+          >
             Sort order
           </label>
           <input

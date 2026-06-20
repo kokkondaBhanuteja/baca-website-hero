@@ -21,6 +21,6 @@ export const serverEnvironment = environmentSchema.parse(process.env)
 /** Cloudinary is optional until the operator fills the credentials. */
 export const isCloudinaryConfigured = Boolean(
   serverEnvironment.CLOUDINARY_CLOUD_NAME &&
-    serverEnvironment.CLOUDINARY_API_KEY &&
-    serverEnvironment.CLOUDINARY_API_SECRET,
+  serverEnvironment.CLOUDINARY_API_KEY &&
+  serverEnvironment.CLOUDINARY_API_SECRET,
 )

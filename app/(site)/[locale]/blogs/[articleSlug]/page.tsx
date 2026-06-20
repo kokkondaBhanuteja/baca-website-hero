@@ -36,7 +36,9 @@ export default async function BlogArticlePage({ params }: PageParams) {
   if (!article) notFound()
 
   const related = await listRelatedArticles(articleSlug, locale as Locale)
-  const paragraphs = article.body.split(/\n{2,}/).filter((block) => block.trim())
+  const paragraphs = article.body
+    .split(/\n{2,}/)
+    .filter((block) => block.trim())
 
   return (
     <>

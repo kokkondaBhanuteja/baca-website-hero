@@ -1,6 +1,11 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Fraunces, Inter, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
+import {
+  Fraunces,
+  Inter,
+  JetBrains_Mono,
+  Noto_Sans_Arabic,
+} from 'next/font/google'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -42,14 +47,20 @@ export async function generateMetadata({
   params,
 }: LayoutParams): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale: locale as Locale, namespace: 'metadata' })
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: 'metadata',
+  })
 
   return {
     title: t('title'),
     description: t('description'),
     icons: {
       icon: [
-        { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
+        {
+          url: '/icon-light-32x32.png',
+          media: '(prefers-color-scheme: light)',
+        },
         { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
         { url: '/icon.svg', type: 'image/svg+xml' },
       ],

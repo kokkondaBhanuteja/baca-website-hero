@@ -9,6 +9,7 @@ handlers) serves it.
 > read the one nearest the code you're touching. Prefer these docs over reading every file.
 
 ## Stack (pinned, current)
+
 - **Next.js 16.2** App Router + Turbopack · **React 19** · **TypeScript strict** (`ignoreBuildErrors: false`)
 - **Tailwind v4** (CSS `@theme` in `app/globals.css`, no config file) · **GSAP** + Lenis · lucide-react
 - **next-intl v4** — 7 locales (`en` default, `ar` RTL, `de fr es nl it`), `localePrefix: 'as-needed'`
@@ -17,6 +18,7 @@ handlers) serves it.
 - **Cloudinary** (signed uploads) · **axios 1.18.0** (exact pin, client-only) · **zod 4** validation
 
 ## Architecture in one screen
+
 ```
 app/
   (site)/[locale]/   Public localized site (home, products, blogs, blogs/[slug], gallery, contact)
@@ -34,6 +36,7 @@ prisma/              schema.prisma + seed.ts
 ```
 
 ## The load-bearing rules (do not break these)
+
 1. **Server/client boundary is compiler-enforced.** Everything in `lib/server/*` starts with
    `import 'server-only'`; `lib/api-client/axios-instance.ts` starts with `import 'client-only'`.
    A Server Component importing axios, or a Client Component importing a service/prisma, is a **build error**.
@@ -54,6 +57,7 @@ prisma/              schema.prisma + seed.ts
    `Dropdown` component everywhere (**no native `<select>`**); images use `<MediaReveal>` (GSAP scroll reveal).
 
 ## Rendering model
+
 - **Home (`(site)/[locale]/page.tsx`) is static (SSG)**, prerendered per locale. Its header + product/insight
   sections fetch the DB at **build** → the home reflects build-time content (refreshes on rebuild/deploy).
 - **Inner content pages** (`products`, `blogs`, `blogs/[slug]`, `gallery`) are **`export const dynamic = 'force-dynamic'`**
@@ -61,6 +65,7 @@ prisma/              schema.prisma + seed.ts
 - Admin pages are dynamic (cookie-gated). API routes are dynamic (Node runtime — Prisma/argon2 need it).
 
 ## Local dev
+
 ```bash
 pnpm install
 pnpm prisma migrate deploy   # apply migrations to DATABASE_URL
@@ -68,10 +73,12 @@ pnpm prisma db seed          # admin user + Spices catalogue + 3 insight article
 pnpm dev -- -p 4010          # http://localhost:4010   (admin at /admin)
 pnpm build                   # strict TS + build; expect all locales prerendered
 ```
+
 `.env` (gitignored) needs: `DATABASE_URL`, `JWT_SECRET` (≥32 chars), `SEED_ADMIN_EMAIL`/`SEED_ADMIN_PASSWORD`,
 and the four `CLOUDINARY_*` (cloud name also in `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`). See `.env.example`.
 Without Cloudinary creds, image upload shows a clear "not configured" error; seeded images are local `/public/images`.
 
 ## Design tokens (Tailwind `@theme` in app/globals.css)
+
 `--ink` (text) · `--paper`/`--cream`/`--bone` (light surfaces) · `--saffron` (accent) · `--forest` ·
 `--clay` · `--line` (borders). Fonts: Fraunces (heading), Inter (sans), JetBrains Mono (mono), Noto Sans Arabic (`[lang=ar]`).

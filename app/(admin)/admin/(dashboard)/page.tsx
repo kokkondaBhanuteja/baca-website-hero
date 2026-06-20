@@ -4,7 +4,11 @@ import { prisma } from '@/lib/server/prisma'
 
 const CARDS = [
   { label: 'Products', href: '/admin/products', key: 'products' as const },
-  { label: 'Blog articles', href: '/admin/blog-articles', key: 'articles' as const },
+  {
+    label: 'Blog articles',
+    href: '/admin/blog-articles',
+    key: 'articles' as const,
+  },
   { label: 'Gallery images', href: '/admin/gallery', key: 'gallery' as const },
   { label: 'Enquiries', href: '/admin/enquiries', key: 'enquiries' as const },
 ]
@@ -20,8 +24,12 @@ export default async function AdminDashboardPage() {
 
   return (
     <div>
-      <h1 className="mb-1 font-heading text-3xl font-light text-ink">Dashboard</h1>
-      <p className="mb-8 text-sm text-ink-60">Manage the BACA catalogue and content.</p>
+      <h1 className="mb-1 font-heading text-3xl font-light text-ink">
+        Dashboard
+      </h1>
+      <p className="mb-8 text-sm text-ink-60">
+        Manage the BACA catalogue and content.
+      </p>
 
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         {CARDS.map((card) => (

@@ -9,7 +9,9 @@ export default async function GalleryAdminPage() {
 
   return (
     <div>
-      <h1 className="mb-8 font-heading text-3xl font-light text-ink">Gallery</h1>
+      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+        Gallery
+      </h1>
 
       <GalleryUploaderForm />
 

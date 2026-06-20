@@ -12,16 +12,17 @@ export default async function EditBlogArticlePage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  try {
-    const article = await getArticleForAdmin(id)
-    return (
-      <div>
-        <h1 className="mb-8 font-heading text-3xl font-light text-ink">Edit article</h1>
-        <BlogArticleForm initial={article} />
-      </div>
-    )
-  } catch (error) {
+  const article = await getArticleForAdmin(id).catch((error: unknown) => {
     if (error instanceof HttpError && error.status === 404) notFound()
     throw error
-  }
+  })
+
+  return (
+    <div>
+      <h1 className="mb-8 font-heading text-3xl font-light text-ink">
+        Edit article
+      </h1>
+      <BlogArticleForm initial={article} />
+    </div>
+  )
 }

@@ -34,12 +34,16 @@ export default function AdminLoginPage() {
         className="w-full max-w-sm rounded-2xl border border-line bg-paper p-8 shadow-[0_18px_50px_-24px_rgba(20,24,26,0.3)]"
       >
         <div className="mb-6">
-          <span className="font-heading text-2xl font-medium text-ink">BACA</span>
+          <span className="font-heading text-2xl font-medium text-ink">
+            BACA
+          </span>
           <span className="ms-2 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink-60">
             Admin
           </span>
         </div>
-        <h1 className="mb-6 font-heading text-xl font-light text-ink">Sign in</h1>
+        <h1 className="mb-6 font-heading text-xl font-light text-ink">
+          Sign in
+        </h1>
 
         {error && (
           <p className="mb-4 rounded-lg border border-clay/30 bg-clay/5 px-3 py-2 text-sm text-clay">

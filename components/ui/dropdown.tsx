@@ -89,7 +89,11 @@ export function Dropdown({
           )}
         >
           {options.map((option) => (
-            <li key={option.value} role="option" aria-selected={option.value === value}>
+            <li
+              key={option.value}
+              role="option"
+              aria-selected={option.value === value}
+            >
               <button
                 type="button"
                 onClick={() => {
@@ -105,7 +109,10 @@ export function Dropdown({
               >
                 <span className="truncate">{option.label}</span>
                 {option.value === value && (
-                  <Check className="h-3.5 w-3.5 shrink-0 text-saffron" aria-hidden />
+                  <Check
+                    className="h-3.5 w-3.5 shrink-0 text-saffron"
+                    aria-hidden
+                  />
                 )}
               </button>
             </li>

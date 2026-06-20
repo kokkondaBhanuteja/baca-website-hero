@@ -9,7 +9,10 @@ export const SITE = {
   gst: 'GST 32ABCDE1234F1Z5',
   iec: 'IEC 0912345678',
   /** Postal address kept in Latin script for international deliverability. */
-  address: ['2nd Floor, Spice Exchange, MG Road', 'Kochi, Kerala 682016, India'],
+  address: [
+    '2nd Floor, Spice Exchange, MG Road',
+    'Kochi, Kerala 682016, India',
+  ],
 } as const
 
 /** Certification acronyms shown as proper-noun marks (the descriptive `sub` text is translated). */

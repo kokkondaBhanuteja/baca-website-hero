@@ -55,7 +55,11 @@ async function seedCatalogue() {
     {
       slug: 'green-cardamom',
       image: '/images/product-green-cardamom.jpg',
-      name: json({ en: 'Green Cardamom', de: 'Grüner Kardamom', ar: 'هيل أخضر' }),
+      name: json({
+        en: 'Green Cardamom',
+        de: 'Grüner Kardamom',
+        ar: 'هيل أخضر',
+      }),
       summary: json({ en: '8mm bold · Alleppey Green · hand-picked' }),
     },
     {

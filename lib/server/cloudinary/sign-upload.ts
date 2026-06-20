@@ -20,7 +20,9 @@ export const UPLOAD_FOLDERS: readonly UploadFolder[] = [
 /** Builds a short-lived Cloudinary upload signature. The API secret never leaves the server. */
 export function createUploadSignature(folder: string): UploadSignature {
   if (!isCloudinaryConfigured) {
-    throw badRequest('Image upload is not configured (missing Cloudinary credentials)')
+    throw badRequest(
+      'Image upload is not configured (missing Cloudinary credentials)',
+    )
   }
   if (!UPLOAD_FOLDERS.includes(folder as UploadFolder)) {
     throw badRequest('Invalid upload folder')

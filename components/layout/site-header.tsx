@@ -12,7 +12,11 @@ import { SiteHeaderClient, type NavLink } from './site-header-client'
  * the current locale and hands them to the interactive client header, which
  * renders them as the Products / Insights dropdowns.
  */
-export async function SiteHeader({ forceSolid = false }: { forceSolid?: boolean }) {
+export async function SiteHeader({
+  forceSolid = false,
+}: {
+  forceSolid?: boolean
+}) {
   const locale = (await getLocale()) as Locale
 
   const [products, articles] = await Promise.all([

@@ -19,25 +19,27 @@ and insights; a built-in admin dashboard manages that content; a lightweight bac
 
 ## Tech stack
 
-| Area | Choice |
-|------|--------|
-| Framework | Next.js 16 (App Router, Turbopack), React 19, TypeScript (strict) |
-| Styling | Tailwind CSS v4, GSAP, lucide-react |
-| i18n | next-intl v4 |
-| Database | PostgreSQL (Neon in dev) + Prisma 6 |
-| Auth | jose (JWT) + @node-rs/argon2 |
-| Media | Cloudinary |
-| HTTP client | axios (pinned) |
-| Validation | zod 4 |
+| Area        | Choice                                                            |
+| ----------- | ----------------------------------------------------------------- |
+| Framework   | Next.js 16 (App Router, Turbopack), React 19, TypeScript (strict) |
+| Styling     | Tailwind CSS v4, GSAP, lucide-react                               |
+| i18n        | next-intl v4                                                      |
+| Database    | PostgreSQL (Neon in dev) + Prisma 6                               |
+| Auth        | jose (JWT) + @node-rs/argon2                                      |
+| Media       | Cloudinary                                                        |
+| HTTP client | axios (pinned)                                                    |
+| Validation  | zod 4                                                             |
 
 ## Getting started
 
 ### Prerequisites
+
 - Node 20+ and **pnpm**
 - A PostgreSQL database (a free [Neon](https://neon.tech) project works well)
-- A [Cloudinary](https://cloudinary.com) account *(optional — only needed for image uploads)*
+- A [Cloudinary](https://cloudinary.com) account _(optional — only needed for image uploads)_
 
 ### Setup
+
 ```bash
 pnpm install
 
@@ -60,18 +62,20 @@ Without Cloudinary credentials the site runs fine; image upload shows a "not con
 the seeded content uses local images from `public/images`.
 
 ### Scripts
-| Command | Purpose |
-|---------|---------|
-| `pnpm dev` | Dev server (Turbopack) |
-| `pnpm build` | Production build (strict type-check) |
-| `pnpm start` | Run the production build |
-| `pnpm lint` | ESLint |
-| `pnpm db:migrate` | `prisma migrate dev` |
-| `pnpm db:deploy` | `prisma migrate deploy` |
-| `pnpm db:seed` | Seed the database |
-| `pnpm db:studio` | Prisma Studio (browse data) |
+
+| Command           | Purpose                              |
+| ----------------- | ------------------------------------ |
+| `pnpm dev`        | Dev server (Turbopack)               |
+| `pnpm build`      | Production build (strict type-check) |
+| `pnpm start`      | Run the production build             |
+| `pnpm lint`       | ESLint                               |
+| `pnpm db:migrate` | `prisma migrate dev`                 |
+| `pnpm db:deploy`  | `prisma migrate deploy`              |
+| `pnpm db:seed`    | Seed the database                    |
+| `pnpm db:studio`  | Prisma Studio (browse data)          |
 
 ## Project structure
+
 ```
 app/(site)/[locale]/   Public localized site        app/(admin)/admin/   Admin dashboard
 app/api/               Backend route handlers
@@ -82,12 +86,14 @@ constants/  i18n/  messages/  prisma/
 ```
 
 ## Localization
+
 English is the source of truth. UI strings live in `messages/<locale>.json` (one namespace per page/section);
 every locale must share the same key tree. Database content stores each translatable field as a JSON object
 (`{ en, de, … }`) and falls back to English when a locale is missing. To add a locale, extend `LOCALES` in
 `constants/i18n.ts` and add its `messages/<locale>.json`.
 
 ## Deployment
+
 - Designed for **Vercel** (frontend + API) with **Neon** Postgres and **Cloudinary** media.
 - Set the same env vars on the host. Run `prisma migrate deploy` in the deploy/build step; `prisma generate`
   runs automatically on install.
@@ -95,8 +101,10 @@ every locale must share the same key tree. Database content stores each translat
   on redeploy.
 
 ## Documentation
+
 This repo ships layered **`CLAUDE.md`** files (root + per folder) describing the architecture and conventions
 in technical, LLM-friendly form — start with the root `CLAUDE.md`, then the one nearest the code you're editing.
 
 ---
+
 Private / proprietary. © BACA · Bharat Cargo.

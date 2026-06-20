@@ -15,6 +15,7 @@ endpoints/           Typed wrappers (one object per entity). Each method returns
 ```
 
 ## Conventions
+
 - Input types come from the zod schemas via `import type { ProductInput } from '@/lib/server/validation/…'`
   (**type-only import** — erased at compile, so it doesn't pull the server module at runtime). DTOs come from
   `@/lib/shared/types/*`.

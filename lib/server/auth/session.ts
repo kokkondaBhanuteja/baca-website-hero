@@ -24,5 +24,10 @@ export async function getCurrentAdmin(): Promise<AdminUserDto | null> {
   })
   if (!admin) return null
 
-  return { id: admin.id, email: admin.email, name: admin.name, role: admin.role }
+  return {
+    id: admin.id,
+    email: admin.email,
+    name: admin.name,
+    role: admin.role,
+  }
 }

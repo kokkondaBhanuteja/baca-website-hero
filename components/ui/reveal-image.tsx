@@ -30,9 +30,14 @@ export function RevealImage({
     if (!w || !i) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const tl = gsap.timeline({ scrollTrigger: { trigger: w, start: 'top 82%' } })
-    tl.to(w, { clipPath: 'inset(0 0% 0 0)', duration: 1.1, ease: 'power3.inOut' })
-      .to(i, { scale: 1, duration: 1.4, ease: 'power3.out' }, 0)
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: w, start: 'top 82%' },
+    })
+    tl.to(w, {
+      clipPath: 'inset(0 0% 0 0)',
+      duration: 1.1,
+      ease: 'power3.inOut',
+    }).to(i, { scale: 1, duration: 1.4, ease: 'power3.out' }, 0)
 
     return () => {
       tl.scrollTrigger?.kill()

@@ -50,7 +50,9 @@ export function GalleryUploaderForm() {
 
   return (
     <div className="mb-10 max-w-2xl rounded-2xl border border-line bg-paper p-6">
-      <h2 className="mb-4 font-heading text-lg font-light text-ink">Add an image</h2>
+      <h2 className="mb-4 font-heading text-lg font-light text-ink">
+        Add an image
+      </h2>
       {error && (
         <p className="mb-4 rounded-lg border border-clay/30 bg-clay/5 px-3 py-2 text-sm text-clay">
           {error}

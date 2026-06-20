@@ -17,7 +17,9 @@ export function EnquiryForm() {
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
 
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>(
+    'idle',
+  )
   const [error, setError] = useState<string | null>(null)
   const [fieldErrors, setFieldErrors] = useState<Record<string, string[]>>({})
 
@@ -96,7 +98,10 @@ export function EnquiryForm() {
       </div>
 
       <div className="mt-5">
-        <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="message">
+        <label
+          className="mb-1.5 block text-sm font-medium text-ink/80"
+          htmlFor="message"
+        >
           {t('message')} <span className="text-clay">*</span>
         </label>
         <textarea
@@ -109,7 +114,9 @@ export function EnquiryForm() {
           className="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink"
         />
         {fieldErrors.message && (
-          <p className="mt-1 text-xs text-clay">{fieldErrors.message.join(', ')}</p>
+          <p className="mt-1 text-xs text-clay">
+            {fieldErrors.message.join(', ')}
+          </p>
         )}
       </div>
 

@@ -39,7 +39,10 @@ export function SiteFooter() {
           {[...marquee, ...marquee].map((m, i) => (
             <span key={i} className="flex items-center gap-10">
               {m}
-              <span className="h-1.5 w-1.5 rounded-full bg-saffron" aria-hidden />
+              <span
+                className="h-1.5 w-1.5 rounded-full bg-saffron"
+                aria-hidden
+              />
             </span>
           ))}
         </div>

@@ -38,7 +38,9 @@ function toData(input: ProductInput) {
     slug: input.slug,
     categoryId: input.categoryId,
     name: input.name as Prisma.InputJsonValue,
-    summary: input.summary ? (input.summary as Prisma.InputJsonValue) : Prisma.DbNull,
+    summary: input.summary
+      ? (input.summary as Prisma.InputJsonValue)
+      : Prisma.DbNull,
     description: input.description
       ? (input.description as Prisma.InputJsonValue)
       : Prisma.DbNull,
@@ -66,7 +68,9 @@ export async function getProductForAdmin(id: string): Promise<ProductAdminDto> {
   return mapAdmin(row)
 }
 
-export async function createProduct(input: ProductInput): Promise<ProductAdminDto> {
+export async function createProduct(
+  input: ProductInput,
+): Promise<ProductAdminDto> {
   try {
     const row = await prisma.product.create({
       data: toData(input),
@@ -86,7 +90,10 @@ export async function updateProduct(
   const existing = await prisma.product.findUnique({ where: { id } })
   if (!existing) throw notFoundError('Product not found')
 
-  if (existing.imagePublicId && existing.imagePublicId !== input.imagePublicId) {
+  if (
+    existing.imagePublicId &&
+    existing.imagePublicId !== input.imagePublicId
+  ) {
     await destroyUploadedImage(existing.imagePublicId)
   }
 

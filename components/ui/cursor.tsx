@@ -28,7 +28,8 @@ export function Cursor() {
     let target: HTMLElement | null = null
 
     const fillSel = 'button, [data-cursor="fill"]'
-    const linkSel = 'a, [role="button"], input, textarea, select, label, [data-cursor]'
+    const linkSel =
+      'a, [role="button"], input, textarea, select, label, [data-cursor]'
 
     const onMove = (e: MouseEvent) => {
       mx = e.clientX
@@ -36,7 +37,9 @@ export function Cursor() {
       dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`
     }
     const onOver = (e: MouseEvent) => {
-      const fill = (e.target as Element)?.closest?.(fillSel) as HTMLElement | null
+      const fill = (e.target as Element)?.closest?.(
+        fillSel,
+      ) as HTMLElement | null
       if (fill) {
         target = fill
         ring.classList.add('is-filled')
@@ -50,13 +53,18 @@ export function Cursor() {
         target = null
         ring.classList.remove('is-filled')
       }
-      if ((e.target as Element)?.closest?.(linkSel)) ring.classList.remove('is-active')
+      if ((e.target as Element)?.closest?.(linkSel))
+        ring.classList.remove('is-active')
     }
 
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t
     let raf = 0
     const loop = () => {
-      let tx = mx, ty = my, tw = 34, th = 34, trad = 17
+      let tx = mx,
+        ty = my,
+        tw = 34,
+        th = 34,
+        trad = 17
       if (target && document.contains(target)) {
         // wrap the button exactly — no extra halo, reuse its own shape
         const b = target.getBoundingClientRect()
@@ -71,7 +79,7 @@ export function Cursor() {
         ring.classList.remove('is-filled')
       }
       const tp = reduce ? 1 : 0.25 // position trail
-      const ts = reduce ? 1 : 0.50 // size/radius — faster expansion
+      const ts = reduce ? 1 : 0.5 // size/radius — faster expansion
       r.x = lerp(r.x, tx, tp)
       r.y = lerp(r.y, ty, tp)
       r.w = lerp(r.w, tw, ts)

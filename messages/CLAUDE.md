@@ -17,6 +17,7 @@ global.d.ts (repo root)  AppConfig augmentation: types Locale + Messages from en
 ```
 
 ## How it works
+
 - `en` at `/`, others prefixed (`/de`, `/ar`, …). The locale layout sets `<html lang dir>` from `LOCALE_META`
   and `setRequestLocale(locale)`; components call `getTranslations(ns)` (server) or `useTranslations(ns)` (client).
 - **`en.json` is the source of truth for types** (`global.d.ts`). Every locale must have the **exact same key
@@ -27,10 +28,12 @@ global.d.ts (repo root)  AppConfig augmentation: types Locale + Messages from en
 - **Dynamic keys** cast: `t(\`items.${key}.title\` as Parameters<typeof t>[0])`.
 
 ## Adding / changing a string
+
 1. Add/edit the key in **all 7** `messages/<locale>.json` (same path in each). 2. Reference it via the namespace.
-3. Keep parity. Proper nouns (BACA, Bharat Cargo, ISO 22000, HACCP, FSSAI, APEDA, grade codes, GST/IEC, email) stay
+2. Keep parity. Proper nouns (BACA, Bharat Cargo, ISO 22000, HACCP, FSSAI, APEDA, grade codes, GST/IEC, email) stay
    untranslated in every locale. Long-form bodies may be English-now with other locales falling back.
 
 ## Adding a locale
+
 Add it to `LOCALES` in `constants/i18n.ts` + `LOCALE_META`, create `messages/<locale>.json` with the full key tree.
 That's it — routing, `<html lang dir>`, and the switcher derive from those two.

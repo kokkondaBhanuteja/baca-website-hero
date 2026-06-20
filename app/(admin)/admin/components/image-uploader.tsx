@@ -5,10 +5,7 @@ import { ImagePlus, X } from 'lucide-react'
 
 import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { uploadsApi } from '@/lib/api-client/endpoints/uploads-api'
-import type {
-  UploadedImage,
-  UploadFolder,
-} from '@/lib/shared/types/upload-dto'
+import type { UploadedImage, UploadFolder } from '@/lib/shared/types/upload-dto'
 
 interface CloudinaryUploadResponse {
   secure_url: string
@@ -65,7 +62,9 @@ export function ImageUploader({
 
   return (
     <div className="mb-5">
-      <span className="mb-1.5 block text-sm font-medium text-ink/80">{label}</span>
+      <span className="mb-1.5 block text-sm font-medium text-ink/80">
+        {label}
+      </span>
 
       {value ? (
         <div className="relative inline-block">
@@ -87,7 +86,9 @@ export function ImageUploader({
       ) : (
         <label className="flex h-40 w-40 cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line bg-paper text-ink-60 transition-colors hover:border-ink/40 hover:text-ink">
           <ImagePlus className="h-6 w-6" />
-          <span className="text-xs">{uploading ? 'Uploading…' : 'Upload image'}</span>
+          <span className="text-xs">
+            {uploading ? 'Uploading…' : 'Upload image'}
+          </span>
           <input
             type="file"
             accept="image/*"

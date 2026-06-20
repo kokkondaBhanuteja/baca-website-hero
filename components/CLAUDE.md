@@ -7,9 +7,11 @@ sections/    Home/page sections (hero, manifesto, product-preview, approach, cer
              featured-insights, cta-band, …). Grouped by area where useful (sections/contact/).
 shared/      Cross-page reusables (page-intro = inner-page header).
 ```
+
 (Admin-only components live with the admin app at `app/(admin)/admin/components/`, not here.)
 
 ## Key reusable primitives (ui/) — prefer these, don't reinvent
+
 - **`Dropdown`** — the custom select. **Use this instead of a native `<select>` anywhere.**
   Props: `value, options: {value,label}[], onChange, buttonClassName, menuAlign, disabled, ariaLabel`.
   Closes on outside-click/Escape. Used by `language-switcher` and all admin form selects.
@@ -23,6 +25,7 @@ shared/      Cross-page reusables (page-intro = inner-page header).
 - **`LanguageSwitcher`** — locale picker built on `Dropdown`; `router.replace(pathname, { locale })`.
 
 ## Patterns
+
 - **Server vs client**: sections that only render translated text are `async` Server Components
   (`await getTranslations(ns)`); interactive ones (`'use client'`) use `useTranslations`. The header is split:
   `site-header.tsx` (server, fetches top-3 products/insights for the nav dropdowns) → `site-header-client.tsx`

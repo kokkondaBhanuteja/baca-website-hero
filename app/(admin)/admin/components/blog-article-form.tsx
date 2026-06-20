@@ -16,10 +16,7 @@ import type { BlogArticleInput } from '@/lib/server/validation/blog-article-sche
 import { Dropdown } from '@/components/ui/dropdown'
 
 import { ImageUploader } from './image-uploader'
-import {
-  LocalizedTextInput,
-  type LocalizedDraft,
-} from './localized-text-input'
+import { LocalizedTextInput, type LocalizedDraft } from './localized-text-input'
 
 const CATEGORY_OPTIONS: { value: BlogCategoryValue; label: string }[] = [
   { value: 'INDUSTRY_INSIGHTS', label: 'Industry Insights' },
@@ -29,17 +26,26 @@ const CATEGORY_OPTIONS: { value: BlogCategoryValue; label: string }[] = [
 
 function imageFrom(entity?: BlogArticleAdminDto): UploadedImage | null {
   return entity?.coverImageUrl && entity.coverImagePublicId
-    ? { imageUrl: entity.coverImageUrl, imagePublicId: entity.coverImagePublicId }
+    ? {
+        imageUrl: entity.coverImageUrl,
+        imagePublicId: entity.coverImagePublicId,
+      }
     : null
 }
 
-export function BlogArticleForm({ initial }: { initial?: BlogArticleAdminDto }) {
+export function BlogArticleForm({
+  initial,
+}: {
+  initial?: BlogArticleAdminDto
+}) {
   const router = useRouter()
   const [slug, setSlug] = useState(initial?.slug ?? '')
   const [category, setCategory] = useState<BlogCategoryValue>(
     initial?.category ?? 'INDUSTRY_INSIGHTS',
   )
-  const [title, setTitle] = useState<LocalizedDraft>(initial?.title ?? { en: '' })
+  const [title, setTitle] = useState<LocalizedDraft>(
+    initial?.title ?? { en: '' },
+  )
   const [excerpt, setExcerpt] = useState<LocalizedDraft>(
     initial?.excerpt ?? { en: '' },
   )
@@ -97,7 +103,10 @@ export function BlogArticleForm({ initial }: { initial?: BlogArticleAdminDto }) 
 
       <div className="mb-5 grid grid-cols-2 gap-4">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="slug">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="slug"
+          >
             Slug <span className="text-clay">*</span>
           </label>
           <input
@@ -108,11 +117,16 @@ export function BlogArticleForm({ initial }: { initial?: BlogArticleAdminDto }) 
             className="w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink outline-none focus:border-ink"
           />
           {fieldErrors.slug && (
-            <p className="mt-1 text-xs text-clay">{fieldErrors.slug.join(', ')}</p>
+            <p className="mt-1 text-xs text-clay">
+              {fieldErrors.slug.join(', ')}
+            </p>
           )}
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="category">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="category"
+          >
             Category
           </label>
           <Dropdown
@@ -124,14 +138,42 @@ export function BlogArticleForm({ initial }: { initial?: BlogArticleAdminDto }) 
         </div>
       </div>
 
-      <LocalizedTextInput label="Title" required value={title} onChange={setTitle} error={fieldErrors['title.en']} />
-      <LocalizedTextInput label="Excerpt" multiline required value={excerpt} onChange={setExcerpt} error={fieldErrors['excerpt.en']} />
-      <LocalizedTextInput label="Body" multiline required value={body} onChange={setBody} error={fieldErrors['body.en']} />
-      <ImageUploader label="Cover image" folder="baca/blog" value={cover} onChange={setCover} />
+      <LocalizedTextInput
+        label="Title"
+        required
+        value={title}
+        onChange={setTitle}
+        error={fieldErrors['title.en']}
+      />
+      <LocalizedTextInput
+        label="Excerpt"
+        multiline
+        required
+        value={excerpt}
+        onChange={setExcerpt}
+        error={fieldErrors['excerpt.en']}
+      />
+      <LocalizedTextInput
+        label="Body"
+        multiline
+        required
+        value={body}
+        onChange={setBody}
+        error={fieldErrors['body.en']}
+      />
+      <ImageUploader
+        label="Cover image"
+        folder="baca/blog"
+        value={cover}
+        onChange={setCover}
+      />
 
       <div className="mb-5 flex flex-wrap items-center gap-6">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="readMinutes">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="readMinutes"
+          >
             Read minutes
           </label>
           <input
@@ -144,7 +186,10 @@ export function BlogArticleForm({ initial }: { initial?: BlogArticleAdminDto }) 
           />
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-ink/80" htmlFor="status">
+          <label
+            className="mb-1.5 block text-sm font-medium text-ink/80"
+            htmlFor="status"
+          >
             Status
           </label>
           <Dropdown
