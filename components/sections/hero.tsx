@@ -16,17 +16,18 @@ export async function Hero() {
   const t = await getTranslations('hero')
 
   return (
-    <section className="relative flex min-h-[100svh] w-full flex-col justify-end overflow-hidden bg-ink">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink via-ink to-[#1a120a]" />
-
+    <section className="relative flex min-h-[100svh] w-full flex-col justify-end overflow-hidden bg-paper">
       <HeroEntry>
-        <div className="relative mx-auto flex w-full max-w-[1340px] flex-col justify-end px-5 pb-12 pt-28 sm:px-8 sm:pb-16">
-          <div data-hero-reveal className="mb-6">
-            <Eyebrow className="text-paper/80">{t('eyebrow')}</Eyebrow>
+        <div className="relative flex w-full flex-col justify-end pb-12 pt-28 sm:pb-16">
+          <div
+            data-hero-reveal
+            className="mx-auto mb-6 w-full max-w-[1340px] px-5 sm:px-8"
+          >
+            <Eyebrow className="text-ink/70">{t('eyebrow')}</Eyebrow>
           </div>
 
-          {/* Showpiece: BACA rendered in spice */}
-          <div data-hero-reveal className="mb-8">
+          {/* Showpiece: BACA rendered in spice — full-bleed, edge to edge */}
+          <div data-hero-reveal className="mb-8 w-full px-3 sm:px-6">
             <WordmarkMedia
               text={SITE.brand}
               videoSources={WORDMARK_VIDEO_SOURCES}
@@ -35,9 +36,9 @@ export async function Hero() {
             />
           </div>
 
-          <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-12">
+          <div className="mx-auto grid w-full max-w-[1340px] grid-cols-1 items-end gap-10 px-5 sm:px-8 lg:grid-cols-12">
             <div data-hero-reveal className="max-w-md lg:col-span-7">
-              <p className="text-pretty text-[15px] leading-relaxed text-paper/85">
+              <p className="text-pretty text-[15px] leading-relaxed text-ink/75">
                 {t('body')}
               </p>
             </div>
@@ -56,7 +57,7 @@ export async function Hero() {
               <Link
                 href={Route.Contact}
                 data-cursor="fill"
-                className="inline-flex items-center gap-2 rounded-full border border-paper/35 px-6 py-3 text-sm font-medium text-paper transition-colors hover:bg-paper hover:text-ink"
+                className="inline-flex items-center gap-2 rounded-full border border-ink/25 px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-paper"
               >
                 {t('ctaContact')}
               </Link>
@@ -65,10 +66,10 @@ export async function Hero() {
 
           <div
             data-hero-reveal
-            className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-paper/15 pt-5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-paper/65"
+            className="mx-auto mt-12 flex w-full max-w-[1340px] flex-wrap items-center gap-x-6 gap-y-2 border-t border-ink/15 px-5 pt-5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ink/55 sm:px-8"
           >
             <span>{t('countries')}</span>
-            <span className="text-paper/30" aria-hidden>
+            <span className="text-ink/30" aria-hidden>
               /
             </span>
             <span>{t('certs')}</span>

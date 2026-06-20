@@ -69,7 +69,7 @@ export function WordmarkMedia({
     <div className={className}>
       <span className="sr-only">{text}</span>
       <svg
-        viewBox="0 0 1000 240"
+        viewBox="0 0 1000 320"
         preserveAspectRatio="xMidYMid meet"
         className="w-full"
         aria-hidden="true"
@@ -78,12 +78,12 @@ export function WordmarkMedia({
           <clipPath id={clipId}>
             <text
               x="50%"
-              y="188"
+              y="258"
               textAnchor="middle"
               fontFamily="var(--font-heading)"
-              fontSize="240"
+              fontSize="370"
               fontWeight="600"
-              letterSpacing="-6"
+              letterSpacing="-12"
             >
               {text}
             </text>
@@ -93,7 +93,7 @@ export function WordmarkMedia({
           x="0"
           y="0"
           width="1000"
-          height="240"
+          height="320"
           clipPath={`url(#${clipId})`}
         >
           <video
