@@ -11,7 +11,7 @@ import { Link } from '@/i18n/navigation'
 import { WordmarkMedia } from '@/components/ui/wordmark-media'
 
 const FOOTER_WORDMARK_VIDEO_SOURCES = [
-  { src: '/videos/spice-heritage.mp4', type: 'video/mp4' },
+  { src: '/videos/footer-export.mp4', type: 'video/mp4' },
 ]
 
 function FooterLink({
@@ -137,7 +137,7 @@ export function SiteFooter() {
           <WordmarkMedia
             text={SITE.brand}
             videoSources={FOOTER_WORDMARK_VIDEO_SOURCES}
-            posterSrc="/images/wordmark-poster.jpg"
+            posterSrc="/images/footer-export-poster.jpg"
             align="left"
             className="w-full max-w-[1080px]"
           />
