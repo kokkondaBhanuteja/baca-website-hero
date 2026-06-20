@@ -3,31 +3,41 @@
 import { useEffect, useId, useRef } from 'react'
 import gsap from 'gsap'
 
+export interface LetterVideo {
+  sources: { src: string; type: string }[]
+  poster: string
+}
+
 interface WordmarkLettersProps {
   /** The word to render. Brand proper noun — not translated. */
   text?: string
-  /** One image per letter (cycled if there are fewer images than letters). */
-  images: string[]
+  /** One image per letter (cycled). Used when `videos` is not provided. */
+  images?: string[]
+  /** One video per letter (cycled). Takes precedence over `images`. */
+  videos?: LetterVideo[]
   className?: string
 }
 
 const ENTRY_STAGGER = 0.16
 
 /**
- * Renders the wordmark with ONE image per letter — each glyph is its own
- * image-window (SVG single-letter clip over a full image, so the image reads
- * clearly). On scroll-into-view the letters reveal in a staggered wipe-up, and
- * each image keeps a slow Ken Burns drift. Decorative → aria-hidden, with a
- * visually hidden real-text label. Reduced-motion → letters shown, no motion.
+ * Renders the wordmark with ONE media per letter — each glyph is its own
+ * image/video window (SVG single-letter clip over a full media, so it reads
+ * clearly). On scroll-into-view the letters reveal in a staggered wipe-up; still
+ * images get a slow Ken Burns drift, videos play (paused off-screen, and on
+ * small screens / reduced-motion they hold their poster frame). Decorative →
+ * aria-hidden, with a visually hidden real-text label.
  */
 export function WordmarkLetters({
   text = 'BACA',
-  images,
+  images = [],
+  videos,
   className,
 }: WordmarkLettersProps) {
   const baseId = useId().replace(/[^a-zA-Z0-9-]/g, '')
   const rootRef = useRef<HTMLDivElement | null>(null)
   const letters = text.split('')
+  const useVideo = Boolean(videos && videos.length > 0)
 
   useEffect(() => {
     const root = rootRef.current
@@ -36,12 +46,15 @@ export function WordmarkLetters({
     const panels = gsap.utils.toArray<HTMLElement>(
       root.querySelectorAll('[data-letter]'),
     )
-    const letterImages = gsap.utils.toArray<HTMLElement>(
-      root.querySelectorAll('[data-letter-img]'),
-    )
     if (panels.length === 0) return
 
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const smallScreen = window.matchMedia('(max-width: 640px)').matches
+    const letterImages = gsap.utils.toArray<HTMLElement>(
+      root.querySelectorAll('[data-letter-img]'),
+    )
+    const letterVideos = Array.from(root.querySelectorAll('video'))
+
     if (reduce) return
 
     const context = gsap.context(() => {
@@ -51,7 +64,7 @@ export function WordmarkLetters({
         clipPath: 'inset(100% 0% 0% 0%)',
       })
 
-      // Each letter's image keeps a slow, independent Ken Burns drift.
+      // Slow Ken Burns drift on still images only (videos move on their own).
       letterImages.forEach((image, index) => {
         gsap.to(image, {
           scale: 1.14,
@@ -76,7 +89,11 @@ export function WordmarkLetters({
         ([entry]) => {
           if (entry.isIntersecting) {
             reveal.play()
-            observer.disconnect()
+            if (!smallScreen) {
+              letterVideos.forEach((video) => void video.play().catch(() => {}))
+            }
+          } else {
+            letterVideos.forEach((video) => video.pause())
           }
         },
         { threshold: 0.25 },
@@ -96,7 +113,8 @@ export function WordmarkLetters({
       >
         {letters.map((char, index) => {
           const clipId = `wordmark-letter-${baseId}-${index}`
-          const src = images[index % images.length]
+          const video = useVideo ? videos![index % videos!.length] : null
+          const imageSrc = images[index % images.length]
           return (
             <div key={index} data-letter className="relative w-full flex-1">
               <svg
@@ -125,12 +143,31 @@ export function WordmarkLetters({
                   height="132"
                   clipPath={`url(#${clipId})`}
                 >
-                  <img
-                    data-letter-img
-                    src={src}
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
+                  {video ? (
+                    <video
+                      className="h-full w-full object-cover"
+                      poster={video.poster}
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      {video.sources.map((source) => (
+                        <source
+                          key={source.src}
+                          src={source.src}
+                          type={source.type}
+                        />
+                      ))}
+                    </video>
+                  ) : (
+                    <img
+                      data-letter-img
+                      src={imageSrc}
+                      alt=""
+                      className="h-full w-full object-cover"
+                    />
+                  )}
                 </foreignObject>
               </svg>
             </div>

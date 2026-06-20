@@ -8,12 +8,17 @@ import { Eyebrow } from '@/components/ui/eyebrow'
 import { WordmarkLetters } from '@/components/ui/wordmark-letters'
 import { HeroEntry } from '@/components/sections/hero-entry'
 
-// Incredible-India montage shown through the letters: palace + festivals + culture.
-const HERO_WORDMARK_IMAGES = [
-  '/images/hero-india/india-1.jpg', // Hawa Mahal
-  '/images/hero-india/india-2.jpg', // Holi
-  '/images/hero-india/india-3.jpg', // Rangoli + diyas
-  '/images/hero-india/india-4.jpg', // Marigold + diyas
+// Both India clips, distributed across the letters (B/C = Varanasi aarti,
+// the two A's = the flower-garland market) so both play inside the word.
+const HERO_LETTER_VIDEOS = [
+  {
+    sources: [{ src: '/videos/hero-aarti.mp4', type: 'video/mp4' }],
+    poster: '/images/hero-india/aarti-poster.jpg',
+  },
+  {
+    sources: [{ src: '/videos/hero-garland.mp4', type: 'video/mp4' }],
+    poster: '/images/hero-india/garland-poster.jpg',
+  },
 ]
 
 export async function Hero() {
@@ -30,11 +35,11 @@ export async function Hero() {
             <Eyebrow className="text-ink/70">{t('eyebrow')}</Eyebrow>
           </div>
 
-          {/* Showpiece: each BACA letter is its own India image-window */}
+          {/* Showpiece: each BACA letter is its own India video-window */}
           <div className="mb-8 w-full px-3 sm:px-6">
             <WordmarkLetters
               text={SITE.brand}
-              images={HERO_WORDMARK_IMAGES}
+              videos={HERO_LETTER_VIDEOS}
               className="w-full"
             />
           </div>
