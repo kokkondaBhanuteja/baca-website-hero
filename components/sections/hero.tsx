@@ -5,21 +5,11 @@ import { Route } from '@/constants/routes'
 import { SITE } from '@/constants/site'
 import { Link } from '@/i18n/navigation'
 import { Eyebrow } from '@/components/ui/eyebrow'
-import { WordmarkLetters } from '@/components/ui/wordmark-letters'
+import { WordmarkMedia } from '@/components/ui/wordmark-media'
 import { HeroEntry } from '@/components/sections/hero-entry'
 
-// Both India clips, distributed across the letters (B/C = Varanasi aarti,
-// the two A's = the flower-garland market) so both play inside the word.
-const HERO_LETTER_VIDEOS = [
-  {
-    sources: [{ src: '/videos/hero-aarti.mp4', type: 'video/mp4' }],
-    poster: '/images/hero-india/aarti-poster.jpg',
-  },
-  {
-    sources: [{ src: '/videos/hero-garland.mp4', type: 'video/mp4' }],
-    poster: '/images/hero-india/garland-poster.jpg',
-  },
-]
+// Single illustrated India-heritage film shown through the whole wordmark.
+const HERO_VIDEO_SOURCES = [{ src: '/videos/hero-v4.mp4', type: 'video/mp4' }]
 
 export async function Hero() {
   const t = await getTranslations('hero')
@@ -35,11 +25,13 @@ export async function Hero() {
             <Eyebrow className="text-ink/70">{t('eyebrow')}</Eyebrow>
           </div>
 
-          {/* Showpiece: each BACA letter is its own India video-window */}
-          <div className="mb-8 w-full px-3 sm:px-6">
-            <WordmarkLetters
+          {/* Showpiece: the illustrated India film through the BACA letters */}
+          <div data-hero-reveal className="mb-8 w-full px-3 sm:px-6">
+            <WordmarkMedia
               text={SITE.brand}
-              videos={HERO_LETTER_VIDEOS}
+              videoSources={HERO_VIDEO_SOURCES}
+              posterSrc="/images/hero-v4-poster.jpg"
+              align="center"
               className="w-full"
             />
           </div>
