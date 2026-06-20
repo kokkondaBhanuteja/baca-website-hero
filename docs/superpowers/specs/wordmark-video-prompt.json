@@ -1,0 +1,37 @@
+{
+  "purpose": "Looping background footage that will be MASKED INSIDE the giant 'BACA' wordmark on the website (CSS text clip). Only broad, full-frame warm motion reads through the letters — fine detail and small centered subjects are lost. Optimize for texture, warmth, and a seamless loop.",
+  "concept": "The heritage of Indian spices — warm, cinematic, full-frame motion in golden light. Earthy, premium, alive but calm.",
+  "primary_scene": "Slow-motion golden turmeric and saffron powder cascading and swirling through warm shafts of light, fine spice dust drifting, rich saturated amber and ochre tones filling the entire frame.",
+  "alternate_scenes": [
+    "Close, full-frame bed of drying red chillies gently shifting in the breeze on a sunlit drying yard, deep reds and warm browns edge to edge.",
+    "Heritage spice market texture: mounds of vibrant spice powders (turmeric, paprika, cumin) in warm light, a slow gentle camera drift across the surface, no faces in focus.",
+    "Whole spices — cardamom, star anise, dried chillies, cinnamon — slowly tumbling and settling in warm directional light, full-frame, shallow depth."
+  ],
+  "subject": "Indian spices as texture and material (powders, whole spices, drying produce) — not people or products as a centered focal point.",
+  "motion": "Continuous, slow, organic motion (cascading, swirling, drifting, gentle tumble). Even across the whole frame. Starts and ends in a similar state so it loops seamlessly.",
+  "camera": "Locked or very slow drift/push-in. No hard cuts, no whip pans, no rapid zooms. Macro / close, shallow depth of field where it adds richness.",
+  "lighting": "Warm golden-hour / directional sunlight with soft volumetric shafts. High warmth, gentle contrast, glowing highlights.",
+  "color_palette": [
+    "saffron",
+    "turmeric gold",
+    "amber",
+    "ochre",
+    "terracotta",
+    "deep chilli red",
+    "warm brown"
+  ],
+  "mood": ["heritage", "premium", "warm", "authentic", "calm", "cinematic"],
+  "composition": "Full-frame texture that fills edge to edge (the letters can fall anywhere over the frame). Avoid a single small subject in the center, empty corners, or large dead/flat areas.",
+  "style": "Photoreal cinematic, organic film texture, slight grain, rich earthy grade. NOT neon, NOT holographic, NOT cartoon, NOT 3D-render look.",
+  "technical": {
+    "aspect_ratio": "16:9",
+    "resolution": "1920x1080 (1080p minimum)",
+    "duration_seconds": "5-8",
+    "fps": 24,
+    "loop": "seamless — first and last frame should match; if the tool can't loop, generate extra tail to crossfade",
+    "audio": "none (silent)"
+  },
+  "negative_prompt": "text, letters, words, logos, watermark, captions, subtitles, UI, human faces in focus, hands as focal point, fast cuts, strobing, flicker, neon, holographic, iridescent, rainbow, cool blue/teal tones, desaturated, washed out, cartoon, anime, 3d render, cgi look, distorted, warped, low quality, blurry, empty negative space, flat dead areas",
+  "image_to_video_note": "Preferred: upload a warm Indian-spice STILL (e.g. the site poster) and prompt it to come alive with the 'motion' + 'lighting' above. Gives more control and a cleaner loop than text-to-video.",
+  "delivery": "Export highest quality available; we then compress to web (.webm + .mp4 fallback, target < 2.5 MB) and generate a poster still from frame 1."
+}
