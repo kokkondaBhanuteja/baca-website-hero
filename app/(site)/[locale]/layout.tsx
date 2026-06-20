@@ -95,6 +95,13 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} ${notoArabic.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        {/* Skip link for keyboard users — jumps past the fixed header. */}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-paper"
+        >
+          Skip to main content
+        </a>
         {/* Global magnetic cursor — same behaviour on every page. */}
         <Cursor />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>

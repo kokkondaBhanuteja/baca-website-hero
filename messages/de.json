@@ -1,25 +1,16 @@
 {
+  "errors": {
+    "eyebrow": "Fehler",
+    "title": "Etwas ist schiefgelaufen.",
+    "body": "Ein unerwarteter Fehler hat das Laden dieser Seite verhindert. Sie können es erneut versuchen oder zur Startseite zurückkehren.",
+    "retry": "Erneut versuchen",
+    "home": "Startseite"
+  },
   "productsPage": {
     "eyebrow": "Unser Katalog",
     "heading": "Alles, was wir exportieren — am Ursprung beschafft.",
     "intro": "Gewürze, Nüsse und Früchte — sortiert, dokumentiert und an Abnehmer in 37 Ländern verschifft.",
     "empty": "Unser Katalog wird gerade aktualisiert. Bitte schauen Sie bald wieder vorbei."
-  },
-  "aboutPage": {
-    "eyebrow": "Über BACA",
-    "heading": "Ein Exportpartner, kein Händler.",
-    "lead": "BACA (Bharat Cargo) ist ein modernes indisches Exporthaus. Wir kaufen direkt am Ursprungsort, Saison für Saison von denselben Bauernfamilien, sortieren an der Quelle und transportieren dokumentierte Komplettcontainer zu Abnehmern in 37 Ländern.",
-    "commitmentsTitle": "Wofür wir einstehen.",
-    "commitments": {
-      "traceability": "Vollständige Rückverfolgbarkeit vom Feld des Erzeugers bis zum Kai des Spediteurs.",
-      "quality": "Jede Partie sortiert und nach ISO 22000 und HACCP laborgeprüft.",
-      "documentation": "Incoterms, HS codes und Zertifikate ausgestellt, bevor die Schiffe auslaufen.",
-      "relationships": "Feste Verträge und reservierte Ernten für Stammkunden.",
-      "fairness": "Direkte, faire Bezahlung der Bauernfamilien, von denen wir beziehen.",
-      "responsiveness": "Internationale Anfragen innerhalb von 12 Stunden beantwortet."
-    },
-    "ctaHeading": "Suchen Sie einen ersten Container? Schreiben Sie uns.",
-    "ctaButton": "Anfrage starten"
   },
   "contactPage": {
     "eyebrow": "Anfrage starten",
@@ -75,39 +66,13 @@
   "nav": {
     "items": {
       "about": {
-        "label": "Über uns",
-        "children": {
-          "whoWeAre": "Wer wir sind",
-          "vision": "Vision & Mission",
-          "approach": "Unser Ansatz",
-          "team": "Management-Team",
-          "why": "Warum BACA",
-          "brands": "Unsere Marken"
-        }
+        "label": "Über uns"
       },
       "products": {
-        "label": "Produkte",
-        "children": {
-          "spices": "Gewürze",
-          "nuts": "Nüsse",
-          "fruits": "Früchte",
-          "all": "Alle Kategorien ansehen"
-        }
+        "label": "Produkte"
       },
       "insights": {
-        "label": "Einblicke",
-        "children": {
-          "market": "Markteinblicke",
-          "impact": "Wirkungsgeschichten",
-          "community": "Gesellschaftliches Engagement"
-        }
-      },
-      "gallery": {
-        "label": "Galerie",
-        "children": {
-          "photos": "Fotos",
-          "videos": "Videos"
-        }
+        "label": "Einblicke"
       },
       "contact": {
         "label": "Kontakt"
@@ -118,20 +83,19 @@
     "aria": {
       "home": "Startseite",
       "openMenu": "Menü öffnen",
-      "closeMenu": "Menü schließen"
+      "closeMenu": "Menü schließen",
+      "primaryNav": "Hauptmenü",
+      "mobileNav": "Mobil"
     }
   },
   "hero": {
     "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Aus indischem Boden gewonnen. Weltweit <em>vertraut.</em>",
-    "standardLabel": "Der BACA-Standard",
     "body": "Eine neue Generation des indischen Exports — aufgebaut auf rückverfolgbarer Beschaffung, kompromissloser Qualität und Partnerschaften, die Waren zuverlässig bewegen, Container für Container.",
     "ctaProducts": "Produkte entdecken",
     "ctaContact": "Mit unserem Team sprechen",
-    "scroll": "Scrollen",
     "countries": "37 belieferte Länder",
-    "certs": "ISO 22000 · HACCP · FSSAI",
-    "imageAlt": "Ein Raster verschiedener indischer Gewürze in Schalen — Kurkuma, Chili, Kreuzkümmel, Zimt und mehr"
+    "certs": "ISO 22000 · HACCP · FSSAI"
   },
   "manifesto": {
     "eyebrow": "Unsere Geschichte",
@@ -149,24 +113,7 @@
   },
   "productPreview": {
     "eyebrow": "Was wir exportieren",
-    "heading": "Am Ursprung beschafft, für den Export sortiert.",
-    "items": {
-      "spices": {
-        "title": "Gewürze",
-        "alt": "Hügel leuchtender indischer Gewürze — Kurkuma, getrocknete Chilis, Pfeffer und Kardamom",
-        "note": "Kardamom · Pfeffer · Kurkuma · Kreuzkümmel · Chili"
-      },
-      "nuts": {
-        "title": "Nüsse",
-        "alt": "Eine Auswahl edler Nüsse — Cashews, Mandeln, Haselnüsse und Erdnüsse in einer Schale",
-        "note": "Cashew W180–W450 · Mandeln · Erdnüsse · Walnüsse"
-      },
-      "fruits": {
-        "title": "Früchte",
-        "alt": "Frische Granatäpfel und Trauben — zu Indiens wichtigsten Frischobst-Exporten zählend",
-        "note": "Granatapfel · Trauben · Alphonso · Banane"
-      }
-    }
+    "heading": "Am Ursprung beschafft, für den Export sortiert."
   },
   "approach": {
     "eyebrow": "Unser Ansatz",
@@ -196,14 +143,30 @@
     "heading": "Zertifiziert für den globalen Handel.",
     "intro": "Jeder Container wird mit vollständigen Lebensmittelsicherheits- und Exportunterlagen verschifft — registriert, auditiert und nach dem Standard dokumentiert, den jeder Markt verlangt.",
     "items": {
-      "fssai": { "sub": "Zentrallizenz" },
-      "spicesBoard": { "sub": "RCMC · Indien" },
-      "apeda": { "sub": "Exportregistrierung" },
-      "iso22000": { "sub": "Lebensmittelsicherheits-Management" },
-      "haccp": { "sub": "Gefahrenkontrolle" },
-      "indiaOrganic": { "sub": "NPOP-zertifiziert" },
-      "halal": { "sub": "Marktzugang" },
-      "kosher": { "sub": "Marktzugang" }
+      "fssai": {
+        "sub": "Zentrallizenz"
+      },
+      "spicesBoard": {
+        "sub": "RCMC · Indien"
+      },
+      "apeda": {
+        "sub": "Exportregistrierung"
+      },
+      "iso22000": {
+        "sub": "Lebensmittelsicherheits-Management"
+      },
+      "haccp": {
+        "sub": "Gefahrenkontrolle"
+      },
+      "indiaOrganic": {
+        "sub": "NPOP-zertifiziert"
+      },
+      "halal": {
+        "sub": "Marktzugang"
+      },
+      "kosher": {
+        "sub": "Marktzugang"
+      }
     }
   },
   "globalPresence": {
@@ -226,50 +189,7 @@
   "featuredInsights": {
     "eyebrow": "Einblicke",
     "heading": "Notizen aus dem Gewürz- und Warenhandel.",
-    "allArticles": "Alle Artikel",
-    "categories": {
-      "market": "Brancheneinblicke",
-      "impact": "Wirkungsgeschichten"
-    },
-    "items": {
-      "cardamom": {
-        "title": "Die globale Kardamom-Nachfrage verändert die Ernte 2026",
-        "alt": "Indisches Kurkuma- und Gewürzfeld zur Erntezeit mit arbeitenden Bauern"
-      },
-      "processing": {
-        "title": "Einblick in eine moderne Gewürzverarbeitungsanlage in Kerala",
-        "alt": "Mitarbeiter bei der Qualitätsprüfung in einer sauberen, modernen Gewürzverarbeitungsanlage"
-      },
-      "freight": {
-        "title": "Das Meer lesen: Seefrachttrends für Zutateneinkäufer",
-        "alt": "Containerschiff auf See während des goldenen Sonnenuntergangs"
-      }
-    }
-  },
-  "marqueeStrip": {
-    "ariaLabel": "Belieferte Länder, Waren und Zertifizierungen",
-    "items": [
-      "Niederlande",
-      "Kardamom",
-      "Vereinigte Staaten",
-      "ISO 22000",
-      "Vereinigte Arabische Emirate",
-      "Cashew W320",
-      "Deutschland",
-      "HACCP",
-      "Saudi-Arabien",
-      "Kurkuma",
-      "Vereinigtes Königreich",
-      "FSSAI",
-      "Singapur",
-      "Alphonso-Mango",
-      "Vietnam",
-      "APEDA",
-      "Kenia",
-      "Schwarzer Pfeffer",
-      "Kanada",
-      "Spices Board India"
-    ]
+    "allArticles": "Alle Artikel"
   },
   "ctaBand": {
     "eyebrow": "Sprechen wir",
@@ -289,8 +209,6 @@
         "title": "Produkte",
         "links": {
           "spices": "Gewürze",
-          "nuts": "Nüsse",
-          "fruits": "Früchte",
           "all": "Alle Kategorien"
         }
       },
@@ -298,9 +216,7 @@
         "title": "Unternehmen",
         "links": {
           "about": "Über uns",
-          "approach": "Unser Ansatz",
-          "team": "Management-Team",
-          "gallery": "Galerie"
+          "approach": "Unser Ansatz"
         }
       },
       "resources": {

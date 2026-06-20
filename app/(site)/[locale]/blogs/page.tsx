@@ -38,8 +38,8 @@ export default async function BlogsPage({ params }: PageParams) {
   return (
     <>
       <SiteHeader forceSolid />
-      <main className="min-h-screen bg-paper pt-[72px]">
-        <section className="mx-auto max-w-[1340px] px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
+      <main className="min-h-screen bg-paper pt-header-base">
+        <section className="mx-auto max-w-content px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
           <PageIntro
             eyebrow={t('eyebrow')}
             heading={t('heading')}
@@ -91,7 +91,7 @@ function ArticleCard({
           <img
             src={article.coverImageUrl}
             alt={article.title}
-            className="aspect-[16/11] w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+            className="aspect-[16/11] w-full object-cover transition-transform duration-baca-fast ease-baca group-hover:scale-[1.06]"
           />
         ) : (
           <div className="aspect-[16/11] w-full bg-bone" />

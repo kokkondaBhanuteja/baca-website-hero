@@ -27,7 +27,9 @@ export default async function GalleryAdminPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={image.imageUrl}
-                alt={image.caption?.en ?? ''}
+                // Without a caption it's purely decorative; the row already
+                // shows its index + delete button so SRs aren't left without context.
+                alt={image.caption?.en ?? `Gallery image ${image.id}`}
                 className="aspect-square w-full object-cover"
               />
               <div className="flex items-center justify-between gap-2 px-3 py-2">

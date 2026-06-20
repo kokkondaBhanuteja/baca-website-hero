@@ -1,25 +1,16 @@
 {
+  "errors": {
+    "eyebrow": "Errore",
+    "title": "Qualcosa è andato storto.",
+    "body": "Un errore imprevisto ha impedito il caricamento di questa pagina. Puoi riprovare o tornare alla home.",
+    "retry": "Riprova",
+    "home": "Home"
+  },
   "productsPage": {
     "eyebrow": "Il nostro catalogo",
     "heading": "Tutto ciò che esportiamo, selezionato all'origine.",
     "intro": "Spezie, frutta secca e frutta — selezionati, documentati e spediti ad acquirenti in 37 Paesi.",
     "empty": "Il nostro catalogo è in fase di aggiornamento. Torna presto."
-  },
-  "aboutPage": {
-    "eyebrow": "Chi è BACA",
-    "heading": "Un partner per l'export, non un intermediario.",
-    "lead": "BACA (Bharat Cargo) è una moderna export house indiana. Acquistiamo all'origine dalle stesse famiglie di agricoltori, stagione dopo stagione, classifichiamo la merce alla fonte e spediamo container completi e documentati ad acquirenti in 37 Paesi.",
-    "commitmentsTitle": "I nostri impegni.",
-    "commitments": {
-      "traceability": "Piena tracciabilità dal campo del coltivatore alla banchina dello spedizioniere.",
-      "quality": "Ogni lotto classificato e analizzato in laboratorio secondo gli standard ISO 22000 e HACCP.",
-      "documentation": "Incoterms, codici HS e certificati emessi prima della partenza delle navi.",
-      "relationships": "Contratti fissi e raccolti riservati per gli acquirenti abituali.",
-      "fairness": "Pagamenti diretti ed equi alle famiglie di agricoltori da cui ci riforniamo.",
-      "responsiveness": "Richieste internazionali evase entro 12 ore."
-    },
-    "ctaHeading": "Cerca il suo primo container? Ci scriva.",
-    "ctaButton": "Avvia una richiesta"
   },
   "contactPage": {
     "eyebrow": "Avvia una richiesta",
@@ -75,39 +66,13 @@
   "nav": {
     "items": {
       "about": {
-        "label": "Chi siamo",
-        "children": {
-          "whoWeAre": "Chi siamo",
-          "vision": "Visione e missione",
-          "approach": "Il nostro approccio",
-          "team": "Team di gestione",
-          "why": "Perché scegliere BACA",
-          "brands": "I nostri marchi"
-        }
+        "label": "Chi siamo"
       },
       "products": {
-        "label": "Prodotti",
-        "children": {
-          "spices": "Spezie",
-          "nuts": "Frutta secca",
-          "fruits": "Frutta",
-          "all": "Vedi tutte le categorie"
-        }
+        "label": "Prodotti"
       },
       "insights": {
-        "label": "Approfondimenti",
-        "children": {
-          "market": "Analisi di mercato",
-          "impact": "Storie di impatto",
-          "community": "Coinvolgimento della comunità"
-        }
-      },
-      "gallery": {
-        "label": "Galleria",
-        "children": {
-          "photos": "Foto",
-          "videos": "Video"
-        }
+        "label": "Approfondimenti"
       },
       "contact": {
         "label": "Contatti"
@@ -118,20 +83,19 @@
     "aria": {
       "home": "Pagina iniziale",
       "openMenu": "Apri il menu",
-      "closeMenu": "Chiudi il menu"
+      "closeMenu": "Chiudi il menu",
+      "primaryNav": "Principale",
+      "mobileNav": "Mobile"
     }
   },
   "hero": {
     "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Coltivato nella terra indiana. Apprezzato in tutto il <em>mondo.</em>",
-    "standardLabel": "Lo standard BACA",
     "body": "Una nuova generazione dell'esportazione indiana — costruita su approvvigionamento tracciabile, qualità rigorosa e partnership che movimentano le merci in modo affidabile, container dopo container.",
     "ctaProducts": "Esplora i prodotti",
     "ctaContact": "Parla con il nostro team",
-    "scroll": "Scorri",
     "countries": "37 Paesi serviti",
-    "certs": "ISO 22000 · HACCP · FSSAI",
-    "imageAlt": "Una griglia di assortite spezie indiane nei vassoi — curcuma, peperoncino, cumino, cannella e altro"
+    "certs": "ISO 22000 · HACCP · FSSAI"
   },
   "manifesto": {
     "eyebrow": "La nostra storia",
@@ -149,24 +113,7 @@
   },
   "productPreview": {
     "eyebrow": "Cosa esportiamo",
-    "heading": "Selezionato all'origine, classificato per l'export.",
-    "items": {
-      "spices": {
-        "title": "Spezie",
-        "alt": "Cumuli di vivaci spezie indiane — curcuma, peperoncini secchi, pepe e cardamomo",
-        "note": "Cardamomo · Pepe · Curcuma · Cumino · Peperoncino"
-      },
-      "nuts": {
-        "title": "Frutta secca",
-        "alt": "Un assortimento di frutta secca pregiata — anacardi, mandorle, nocciole e arachidi in una ciotola",
-        "note": "Cashew W180–W450 · Mandorle · Arachidi · Noci"
-      },
-      "fruits": {
-        "title": "Frutta",
-        "alt": "Melagrana e uva fresche — tra le principali esportazioni di frutta fresca dell'India",
-        "note": "Melagrana · Uva · Alphonso · Banana"
-      }
-    }
+    "heading": "Selezionato all'origine, classificato per l'export."
   },
   "approach": {
     "eyebrow": "Il nostro approccio",
@@ -196,14 +143,30 @@
     "heading": "Certificati per il commercio globale.",
     "intro": "Ogni container parte con la documentazione di sicurezza alimentare ed esportazione in regola — registrata, sottoposta ad audit e documentata secondo lo standard richiesto da ciascun mercato.",
     "items": {
-      "fssai": { "sub": "Licenza centrale" },
-      "spicesBoard": { "sub": "RCMC · India" },
-      "apeda": { "sub": "Registrazione all'esportazione" },
-      "iso22000": { "sub": "Gestione sicurezza alimentare" },
-      "haccp": { "sub": "Controllo dei rischi" },
-      "indiaOrganic": { "sub": "Certificato NPOP" },
-      "halal": { "sub": "Accesso al mercato" },
-      "kosher": { "sub": "Accesso al mercato" }
+      "fssai": {
+        "sub": "Licenza centrale"
+      },
+      "spicesBoard": {
+        "sub": "RCMC · India"
+      },
+      "apeda": {
+        "sub": "Registrazione all'esportazione"
+      },
+      "iso22000": {
+        "sub": "Gestione sicurezza alimentare"
+      },
+      "haccp": {
+        "sub": "Controllo dei rischi"
+      },
+      "indiaOrganic": {
+        "sub": "Certificato NPOP"
+      },
+      "halal": {
+        "sub": "Accesso al mercato"
+      },
+      "kosher": {
+        "sub": "Accesso al mercato"
+      }
     }
   },
   "globalPresence": {
@@ -226,50 +189,7 @@
   "featuredInsights": {
     "eyebrow": "Approfondimenti",
     "heading": "Note dal commercio di spezie e materie prime.",
-    "allArticles": "Tutti gli articoli",
-    "categories": {
-      "market": "Approfondimenti di settore",
-      "impact": "Storie di impatto"
-    },
-    "items": {
-      "cardamom": {
-        "title": "La domanda globale di cardamomo sta ridisegnando il raccolto del 2026",
-        "alt": "Campo indiano di curcuma e spezie durante il raccolto con i contadini al lavoro"
-      },
-      "processing": {
-        "title": "All'interno di un moderno impianto di lavorazione delle spezie in Kerala",
-        "alt": "Operai che controllano la qualità in un moderno e pulito impianto di lavorazione delle spezie"
-      },
-      "freight": {
-        "title": "Leggere il mare: tendenze del trasporto marittimo per gli acquirenti di ingredienti",
-        "alt": "Nave portacontainer in mare durante il tramonto dell'ora dorata"
-      }
-    }
-  },
-  "marqueeStrip": {
-    "ariaLabel": "Paesi serviti, materie prime e certificazioni",
-    "items": [
-      "Paesi Bassi",
-      "Cardamomo",
-      "Stati Uniti",
-      "ISO 22000",
-      "Emirati Arabi Uniti",
-      "Cashew W320",
-      "Germania",
-      "HACCP",
-      "Arabia Saudita",
-      "Curcuma",
-      "Regno Unito",
-      "FSSAI",
-      "Singapore",
-      "Mango Alphonso",
-      "Vietnam",
-      "APEDA",
-      "Kenya",
-      "Pepe nero",
-      "Canada",
-      "Spices Board India"
-    ]
+    "allArticles": "Tutti gli articoli"
   },
   "ctaBand": {
     "eyebrow": "Parliamone",
@@ -289,8 +209,6 @@
         "title": "Prodotti",
         "links": {
           "spices": "Spezie",
-          "nuts": "Frutta secca",
-          "fruits": "Frutta",
           "all": "Tutte le categorie"
         }
       },
@@ -298,9 +216,7 @@
         "title": "Azienda",
         "links": {
           "about": "Chi siamo",
-          "approach": "Il nostro approccio",
-          "team": "Team di gestione",
-          "gallery": "Galleria"
+          "approach": "Il nostro approccio"
         }
       },
       "resources": {

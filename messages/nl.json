@@ -1,25 +1,16 @@
 {
+  "errors": {
+    "eyebrow": "Fout",
+    "title": "Er is iets misgegaan.",
+    "body": "Een onverwachte fout heeft het laden van deze pagina verhinderd. Probeer het opnieuw of ga terug naar de startpagina.",
+    "retry": "Opnieuw proberen",
+    "home": "Home"
+  },
   "productsPage": {
     "eyebrow": "Onze catalogus",
     "heading": "Alles wat we exporteren, ingekocht aan de bron.",
     "intro": "Specerijen, noten en fruit — gesorteerd, gedocumenteerd en verscheept naar afnemers in 37 landen.",
     "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug."
-  },
-  "aboutPage": {
-    "eyebrow": "Over BACA",
-    "heading": "Een exportpartner, geen handelaar.",
-    "lead": "BACA (Bharat Cargo) is een modern Indiaas exporthuis. Wij kopen aan de bron, seizoen na seizoen, bij dezelfde boerenfamilies, sorteren ter plaatse en verschepen gedocumenteerde volledige containers naar afnemers in 37 landen.",
-    "commitmentsTitle": "Waar wij ons toe verbinden.",
-    "commitments": {
-      "traceability": "Volledige traceerbaarheid, van het veld van de teler tot de kade van de expediteur.",
-      "quality": "Elke partij gesorteerd en in het laboratorium getest volgens ISO 22000 en HACCP.",
-      "documentation": "Incoterms, HS codes en certificaten worden afgegeven voordat de schepen vertrekken.",
-      "relationships": "Vaste contracten en gereserveerde oogsten voor terugkerende afnemers.",
-      "fairness": "Directe, eerlijke betaling aan de boerenfamilies waarbij wij inkopen.",
-      "responsiveness": "Internationale aanvragen binnen 12 uur beantwoord."
-    },
-    "ctaHeading": "Op zoek naar een eerste container? Neem contact met ons op.",
-    "ctaButton": "Start een aanvraag"
   },
   "contactPage": {
     "eyebrow": "Start een aanvraag",
@@ -75,39 +66,13 @@
   "nav": {
     "items": {
       "about": {
-        "label": "Over ons",
-        "children": {
-          "whoWeAre": "Wie we zijn",
-          "vision": "Visie & missie",
-          "approach": "Onze aanpak",
-          "team": "Managementteam",
-          "why": "Waarom BACA",
-          "brands": "Onze merken"
-        }
+        "label": "Over ons"
       },
       "products": {
-        "label": "Producten",
-        "children": {
-          "spices": "Specerijen",
-          "nuts": "Noten",
-          "fruits": "Fruit",
-          "all": "Alle categorieën bekijken"
-        }
+        "label": "Producten"
       },
       "insights": {
-        "label": "Inzichten",
-        "children": {
-          "market": "Marktinzichten",
-          "impact": "Impactverhalen",
-          "community": "Maatschappelijke betrokkenheid"
-        }
-      },
-      "gallery": {
-        "label": "Galerij",
-        "children": {
-          "photos": "Foto's",
-          "videos": "Video's"
-        }
+        "label": "Inzichten"
       },
       "contact": {
         "label": "Contact"
@@ -118,20 +83,19 @@
     "aria": {
       "home": "Startpagina",
       "openMenu": "Menu openen",
-      "closeMenu": "Menu sluiten"
+      "closeMenu": "Menu sluiten",
+      "primaryNav": "Hoofdmenu",
+      "mobileNav": "Mobiel"
     }
   },
   "hero": {
     "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Geworteld in Indiase grond. Vertrouwd over de hele <em>wereld.</em>",
-    "standardLabel": "De BACA-standaard",
     "body": "Een nieuwe generatie Indiase export — gebouwd op traceerbare inkoop, strenge kwaliteit en partnerschappen die goederen betrouwbaar verplaatsen, container na container.",
     "ctaProducts": "Ontdek producten",
     "ctaContact": "Praat met ons team",
-    "scroll": "Scrollen",
     "countries": "37 landen bediend",
-    "certs": "ISO 22000 · HACCP · FSSAI",
-    "imageAlt": "Een raster van uiteenlopende Indiase specerijen in schalen — kurkuma, chili, komijn, kaneel en meer"
+    "certs": "ISO 22000 · HACCP · FSSAI"
   },
   "manifesto": {
     "eyebrow": "Ons verhaal",
@@ -149,24 +113,7 @@
   },
   "productPreview": {
     "eyebrow": "Wat we exporteren",
-    "heading": "Ingekocht aan de bron, gesorteerd voor export.",
-    "items": {
-      "spices": {
-        "title": "Specerijen",
-        "alt": "Bergen levendige Indiase specerijen — kurkuma, gedroogde chilipepers, peper en kardemom",
-        "note": "Kardemom · Peper · Kurkuma · Komijn · Chili"
-      },
-      "nuts": {
-        "title": "Noten",
-        "alt": "Een assortiment premium noten — cashewnoten, amandelen, hazelnoten en pinda's in een schaal",
-        "note": "Cashew W180–W450 · Amandelen · Pinda's · Walnoten"
-      },
-      "fruits": {
-        "title": "Fruit",
-        "alt": "Verse granaatappel en druiven — tot de belangrijkste versfruitexporten van India",
-        "note": "Granaatappel · Druiven · Alphonso · Banaan"
-      }
-    }
+    "heading": "Ingekocht aan de bron, gesorteerd voor export."
   },
   "approach": {
     "eyebrow": "Onze aanpak",
@@ -196,14 +143,30 @@
     "heading": "Gecertificeerd voor wereldwijde handel.",
     "intro": "Elke container vertrekt met de papieren voor voedselveiligheid en export volledig op orde — geregistreerd, geauditeerd en gedocumenteerd volgens de standaard die elke markt vereist.",
     "items": {
-      "fssai": { "sub": "Centrale licentie" },
-      "spicesBoard": { "sub": "RCMC · India" },
-      "apeda": { "sub": "Exportregistratie" },
-      "iso22000": { "sub": "Voedselveiligheidsbeheer" },
-      "haccp": { "sub": "Risicobeheersing" },
-      "indiaOrganic": { "sub": "NPOP-gecertificeerd" },
-      "halal": { "sub": "Markttoegang" },
-      "kosher": { "sub": "Markttoegang" }
+      "fssai": {
+        "sub": "Centrale licentie"
+      },
+      "spicesBoard": {
+        "sub": "RCMC · India"
+      },
+      "apeda": {
+        "sub": "Exportregistratie"
+      },
+      "iso22000": {
+        "sub": "Voedselveiligheidsbeheer"
+      },
+      "haccp": {
+        "sub": "Risicobeheersing"
+      },
+      "indiaOrganic": {
+        "sub": "NPOP-gecertificeerd"
+      },
+      "halal": {
+        "sub": "Markttoegang"
+      },
+      "kosher": {
+        "sub": "Markttoegang"
+      }
     }
   },
   "globalPresence": {
@@ -226,50 +189,7 @@
   "featuredInsights": {
     "eyebrow": "Inzichten",
     "heading": "Notities uit de specerijen- en grondstoffenhandel.",
-    "allArticles": "Alle artikelen",
-    "categories": {
-      "market": "Sectorinzichten",
-      "impact": "Impactverhalen"
-    },
-    "items": {
-      "cardamom": {
-        "title": "De wereldwijde vraag naar kardemom hervormt de oogst van 2026",
-        "alt": "Indiaas kurkuma- en specerijenveld tijdens de oogst met werkende boeren"
-      },
-      "processing": {
-        "title": "Binnenkijken bij een moderne specerijenverwerkingsfaciliteit in Kerala",
-        "alt": "Medewerkers controleren de kwaliteit in een schone, moderne specerijenverwerkingsfaciliteit"
-      },
-      "freight": {
-        "title": "De zee lezen: trends in zeevracht voor inkopers van ingrediënten",
-        "alt": "Vrachtcontainerschip op zee tijdens het gouden uur bij zonsondergang"
-      }
-    }
-  },
-  "marqueeStrip": {
-    "ariaLabel": "Bediende landen, goederen en certificeringen",
-    "items": [
-      "Nederland",
-      "Kardemom",
-      "Verenigde Staten",
-      "ISO 22000",
-      "Verenigde Arabische Emiraten",
-      "Cashew W320",
-      "Duitsland",
-      "HACCP",
-      "Saoedi-Arabië",
-      "Kurkuma",
-      "Verenigd Koninkrijk",
-      "FSSAI",
-      "Singapore",
-      "Alphonso-mango",
-      "Vietnam",
-      "APEDA",
-      "Kenia",
-      "Zwarte peper",
-      "Canada",
-      "Spices Board India"
-    ]
+    "allArticles": "Alle artikelen"
   },
   "ctaBand": {
     "eyebrow": "Laten we praten",
@@ -289,8 +209,6 @@
         "title": "Producten",
         "links": {
           "spices": "Specerijen",
-          "nuts": "Noten",
-          "fruits": "Fruit",
           "all": "Alle categorieën"
         }
       },
@@ -298,9 +216,7 @@
         "title": "Bedrijf",
         "links": {
           "about": "Over ons",
-          "approach": "Onze aanpak",
-          "team": "Managementteam",
-          "gallery": "Galerij"
+          "approach": "Onze aanpak"
         }
       },
       "resources": {

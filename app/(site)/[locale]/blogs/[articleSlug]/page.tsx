@@ -43,7 +43,7 @@ export default async function BlogArticlePage({ params }: PageParams) {
   return (
     <>
       <SiteHeader forceSolid />
-      <main className="min-h-screen bg-paper pt-[72px]">
+      <main className="min-h-screen bg-paper pt-header-base">
         <article className="mx-auto max-w-[760px] px-5 py-[clamp(3rem,6vw,5rem)] sm:px-8">
           <Link
             href={Route.Blogs}
@@ -92,7 +92,7 @@ export default async function BlogArticlePage({ params }: PageParams) {
 
         {related.length > 0 && (
           <section className="border-t border-line bg-cream">
-            <div className="mx-auto max-w-[1340px] px-5 py-[clamp(3rem,6vw,5rem)] sm:px-8">
+            <div className="mx-auto max-w-content px-5 py-[clamp(3rem,6vw,5rem)] sm:px-8">
               <h2 className="mb-8 font-heading text-2xl font-light text-ink">
                 {t('related')}
               </h2>

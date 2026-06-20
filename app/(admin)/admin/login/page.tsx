@@ -46,7 +46,10 @@ export default function AdminLoginPage() {
         </h1>
 
         {error && (
-          <p className="mb-4 rounded-lg border border-clay/30 bg-clay/5 px-3 py-2 text-sm text-clay">
+          <p
+            role="alert"
+            className="mb-4 rounded-lg border border-clay/30 bg-clay/5 px-3 py-2 text-sm text-clay"
+          >
             {error}
           </p>
         )}

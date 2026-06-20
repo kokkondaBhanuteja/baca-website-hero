@@ -1,25 +1,16 @@
 {
+  "errors": {
+    "eyebrow": "Error",
+    "title": "Something went wrong.",
+    "body": "An unexpected error stopped this page from loading. You can try again, or head back to the home page.",
+    "retry": "Try again",
+    "home": "Home"
+  },
   "productsPage": {
     "eyebrow": "Our catalogue",
     "heading": "Everything we export, sourced at origin.",
     "intro": "Spices, nuts and fruits — graded, documented, and shipped to buyers across 37 countries.",
     "empty": "Our catalogue is being updated. Please check back soon."
-  },
-  "aboutPage": {
-    "eyebrow": "About BACA",
-    "heading": "An export partner, not a trader.",
-    "lead": "BACA (Bharat Cargo) is a modern Indian export house. We buy at origin from the same farming families season after season, grade at source, and move documented full containers to buyers across 37 countries.",
-    "commitmentsTitle": "What we commit to.",
-    "commitments": {
-      "traceability": "Full traceability from the grower's field to the forwarder's dock.",
-      "quality": "Every lot graded and lab-tested against ISO 22000 and HACCP.",
-      "documentation": "Incoterms, HS codes and certificates issued before vessels depart.",
-      "relationships": "Fixed contracts and reserved harvests for repeat buyers.",
-      "fairness": "Direct, fair payment to the farming families we source from.",
-      "responsiveness": "International enquiries answered within 12 hours."
-    },
-    "ctaHeading": "Looking for a first container? Write to us.",
-    "ctaButton": "Start an enquiry"
   },
   "contactPage": {
     "eyebrow": "Start an enquiry",
@@ -75,39 +66,13 @@
   "nav": {
     "items": {
       "about": {
-        "label": "About",
-        "children": {
-          "whoWeAre": "Who We Are",
-          "vision": "Vision & Mission",
-          "approach": "Our Approach",
-          "team": "Management Team",
-          "why": "Why Choose BACA",
-          "brands": "Our Brands"
-        }
+        "label": "About"
       },
       "products": {
-        "label": "Products",
-        "children": {
-          "spices": "Spices",
-          "nuts": "Nuts",
-          "fruits": "Fruits",
-          "all": "View all categories"
-        }
+        "label": "Products"
       },
       "insights": {
-        "label": "Insights",
-        "children": {
-          "market": "Market Insights",
-          "impact": "Impact Stories",
-          "community": "Community Engagement"
-        }
-      },
-      "gallery": {
-        "label": "Gallery",
-        "children": {
-          "photos": "Photos",
-          "videos": "Videos"
-        }
+        "label": "Insights"
       },
       "contact": {
         "label": "Contact"
@@ -118,20 +83,19 @@
     "aria": {
       "home": "Homepage",
       "openMenu": "Open menu",
-      "closeMenu": "Close menu"
+      "closeMenu": "Close menu",
+      "primaryNav": "Primary",
+      "mobileNav": "Mobile"
     }
   },
   "hero": {
     "eyebrow": "Est. 2009 · Bharat Cargo",
     "headline": "Sourced from Indian soil. Trusted across the <em>world.</em>",
-    "standardLabel": "The BACA Standard",
     "body": "A new generation of Indian export — built on traceable sourcing, rigorous quality, and partnerships that move commodities reliably, container after container.",
     "ctaProducts": "Explore products",
     "ctaContact": "Talk to our team",
-    "scroll": "Scroll",
     "countries": "37 Countries Served",
-    "certs": "ISO 22000 · HACCP · FSSAI",
-    "imageAlt": "A grid of assorted Indian spices in trays — turmeric, chilli, cumin, cinnamon and more"
+    "certs": "ISO 22000 · HACCP · FSSAI"
   },
   "manifesto": {
     "eyebrow": "Why we're here",
@@ -149,24 +113,7 @@
   },
   "productPreview": {
     "eyebrow": "What we export",
-    "heading": "Sourced at origin, graded for export.",
-    "items": {
-      "spices": {
-        "title": "Spices",
-        "alt": "Mounds of vivid Indian spices — turmeric, dried chillies, pepper and cardamom",
-        "note": "Cardamom · Pepper · Turmeric · Cumin · Chilli"
-      },
-      "nuts": {
-        "title": "Nuts",
-        "alt": "An assortment of premium nuts — cashews, almonds, hazelnuts and peanuts in a bowl",
-        "note": "Cashew W180–W450 · Almonds · Peanuts · Walnuts"
-      },
-      "fruits": {
-        "title": "Fruits",
-        "alt": "Fresh pomegranate and grapes — among India's top fresh-fruit exports",
-        "note": "Pomegranate · Grapes · Alphonso · Banana"
-      }
-    }
+    "heading": "Sourced at origin, graded for export."
   },
   "approach": {
     "eyebrow": "Our approach",
@@ -196,14 +143,30 @@
     "heading": "Certified for global trade.",
     "intro": "Every container ships with its food-safety and export paperwork in order — registered, audited, and documented to the standard each market requires.",
     "items": {
-      "fssai": { "sub": "Central License" },
-      "spicesBoard": { "sub": "RCMC · India" },
-      "apeda": { "sub": "Export registration" },
-      "iso22000": { "sub": "Food safety mgmt" },
-      "haccp": { "sub": "Hazard control" },
-      "indiaOrganic": { "sub": "NPOP certified" },
-      "halal": { "sub": "Market access" },
-      "kosher": { "sub": "Market access" }
+      "fssai": {
+        "sub": "Central License"
+      },
+      "spicesBoard": {
+        "sub": "RCMC · India"
+      },
+      "apeda": {
+        "sub": "Export registration"
+      },
+      "iso22000": {
+        "sub": "Food safety mgmt"
+      },
+      "haccp": {
+        "sub": "Hazard control"
+      },
+      "indiaOrganic": {
+        "sub": "NPOP certified"
+      },
+      "halal": {
+        "sub": "Market access"
+      },
+      "kosher": {
+        "sub": "Market access"
+      }
     }
   },
   "globalPresence": {
@@ -226,50 +189,7 @@
   "featuredInsights": {
     "eyebrow": "Insights",
     "heading": "Notes from the spice and commodities trade.",
-    "allArticles": "All articles",
-    "categories": {
-      "market": "Industry Insights",
-      "impact": "Impact Stories"
-    },
-    "items": {
-      "cardamom": {
-        "title": "Global cardamom demand is reshaping the 2026 harvest",
-        "alt": "Indian turmeric and spice field at harvest with farmers working"
-      },
-      "processing": {
-        "title": "Inside a modern spice processing facility in Kerala",
-        "alt": "Workers inspecting quality inside a clean modern spice processing facility"
-      },
-      "freight": {
-        "title": "Reading the sea: ocean freight trends for ingredient buyers",
-        "alt": "Cargo container ship at sea during golden hour sunset"
-      }
-    }
-  },
-  "marqueeStrip": {
-    "ariaLabel": "Countries served, commodities, and certifications",
-    "items": [
-      "Netherlands",
-      "Cardamom",
-      "United States",
-      "ISO 22000",
-      "United Arab Emirates",
-      "Cashew W320",
-      "Germany",
-      "HACCP",
-      "Saudi Arabia",
-      "Turmeric",
-      "United Kingdom",
-      "FSSAI",
-      "Singapore",
-      "Alphonso Mango",
-      "Vietnam",
-      "APEDA",
-      "Kenya",
-      "Black Pepper",
-      "Canada",
-      "Spices Board India"
-    ]
+    "allArticles": "All articles"
   },
   "ctaBand": {
     "eyebrow": "Let's talk",
@@ -289,8 +209,6 @@
         "title": "Products",
         "links": {
           "spices": "Spices",
-          "nuts": "Nuts",
-          "fruits": "Fruits",
           "all": "All categories"
         }
       },
@@ -298,9 +216,7 @@
         "title": "Company",
         "links": {
           "about": "About",
-          "approach": "Our Approach",
-          "team": "Management Team",
-          "gallery": "Gallery"
+          "approach": "Our Approach"
         }
       },
       "resources": {

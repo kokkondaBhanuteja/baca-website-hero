@@ -32,8 +32,8 @@ export default async function GalleryPage({ params }: PageParams) {
   return (
     <>
       <SiteHeader forceSolid />
-      <main className="min-h-screen bg-paper pt-[72px]">
-        <section className="mx-auto max-w-[1340px] px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
+      <main className="min-h-screen bg-paper pt-header-base">
+        <section className="mx-auto max-w-content px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
           <PageIntro
             eyebrow={t('eyebrow')}
             heading={t('heading')}
@@ -53,8 +53,10 @@ export default async function GalleryPage({ params }: PageParams) {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={image.imageUrl}
-                      alt={image.caption}
-                      className="aspect-square w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+                      // Without a caption the image is purely decorative; mark
+                      // alt="" so SRs skip it instead of announcing the URL.
+                      alt={image.caption || ''}
+                      className="aspect-square w-full object-cover transition-transform duration-baca-fast ease-baca group-hover:scale-[1.05]"
                     />
                   </MediaReveal>
                   {image.caption && (

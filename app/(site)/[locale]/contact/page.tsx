@@ -30,8 +30,8 @@ export default async function ContactPage({ params }: PageParams) {
   return (
     <>
       <SiteHeader forceSolid />
-      <main className="min-h-screen bg-paper pt-[72px]">
-        <section className="mx-auto max-w-[1340px] px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
+      <main className="min-h-screen bg-paper pt-header-base">
+        <section className="mx-auto max-w-content px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <PageIntro

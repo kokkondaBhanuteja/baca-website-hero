@@ -53,6 +53,19 @@
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
+
+  /* Layout — header chrome and content frame.
+     Used by header itself (h-header-base), page mains (pt-header-base), and
+     anchored sections (scroll-mt-header-offset) so the section's heading lands
+     below the fixed 72px header rather than under it. */
+  --spacing-header-base: 72px;
+  --spacing-header-offset: 88px;
+  --container-content: 1340px;
+
+  /* Motion — BACA signature ease and the two reveal durations the site shares. */
+  --ease-baca: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-baca-fast: 600ms;
+  --duration-baca-slow: 700ms;
 }
 
 :root {

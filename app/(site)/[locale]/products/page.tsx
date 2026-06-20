@@ -33,8 +33,8 @@ export default async function ProductsPage({ params }: PageParams) {
   return (
     <>
       <SiteHeader forceSolid />
-      <main className="min-h-screen bg-paper pt-[72px]">
-        <section className="mx-auto max-w-[1340px] px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
+      <main className="min-h-screen bg-paper pt-header-base">
+        <section className="mx-auto max-w-content px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
           <Eyebrow className="mb-4 text-ink-60">{t('eyebrow')}</Eyebrow>
           <h1 className="max-w-[20ch] text-balance font-heading text-[clamp(2.2rem,5vw,4rem)] font-light leading-[1.04] tracking-[-0.02em] text-ink">
             {t('heading')}
@@ -65,7 +65,7 @@ export default async function ProductsPage({ params }: PageParams) {
                       <article
                         key={product.id}
                         id={product.slug}
-                        className="scroll-mt-[88px] overflow-hidden rounded-2xl border border-line bg-paper"
+                        className="scroll-mt-header-offset overflow-hidden rounded-2xl border border-line bg-paper"
                       >
                         <MediaReveal className="aspect-[4/3]">
                           {product.imageUrl ? (

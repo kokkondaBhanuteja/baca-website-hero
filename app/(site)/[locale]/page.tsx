@@ -24,21 +24,23 @@ export default async function Page({ params }: PageParams) {
   setRequestLocale(locale as Locale)
 
   return (
-    <main className="min-h-screen bg-paper">
+    <>
       <ScrollFX />
       <SiteHeader forceSolid />
-      <Hero />
-      <Manifesto />
-      <StatsRow />
-      <ProductPreview />
-      <Approach />
-      <Certifications />
-      <GlobalPresence />
-      <PullQuote />
-      <FeaturedInsights />
-      <CtaBand />
+      <main id="main" className="min-h-screen bg-paper">
+        <Hero />
+        <Manifesto />
+        <StatsRow />
+        <ProductPreview />
+        <Approach />
+        <Certifications />
+        <GlobalPresence />
+        <PullQuote />
+        <FeaturedInsights />
+        <CtaBand />
+      </main>
       <SiteFooter />
       <WhatsAppFab />
-    </main>
+    </>
   )
 }

@@ -1,0 +1,60 @@
+# Cursor — Project Rules
+
+This file is auto-loaded by Cursor. It tells the assistant where to start and how to navigate.
+
+## Read first
+- `CLAUDE.md` — load-bearing project rules
+- `AGENTS.md` — agent-facing conventions + grep recipes
+- `INDEX.md` — manifest of every per-file `.claude.md`
+
+## ⚠️ Hard rule before ANY code edit — READ + UPDATE the sibling .claude.md
+
+**Before** editing `<path>/<name>.{ts,tsx}` → **read** `<path>/<name>.claude.md` first.
+The doc declares the file's purpose, exports, dependencies, callers, and constraints.
+
+**After** editing, if exports / imports / business logic / auth / route / methods / i18n namespace changed,
+update the sibling `.claude.md` (both the YAML frontmatter AND the matching body section) in the same change.
+
+A stale `.claude.md` misleads the next agent. Treat it as part of the file.
+
+Examples of where the sibling doc lives:
+- `components/ui/dropdown/dropdown.tsx` → `components/ui/dropdown/dropdown.claude.md`
+- `lib/server/services/category-service/category-service.ts` → `lib/server/services/category-service/category-service.claude.md`
+- `app/api/products/route.ts` → `app/api/products/route.claude.md`
+
+If the matching `.claude.md` doesn't exist, CREATE it before finishing the change.
+
+## Naming conventions
+- Files: kebab-case (`product-form.tsx`, `category-service.ts`)
+- Folders: kebab-case, one per component / service / schema / etc.
+- Components: PascalCase identifiers, named exports
+- Constants: UPPER_SNAKE_CASE
+- Booleans: `is*` / `has*` / `can*`
+
+## Where things live
+- `components/ui/<name>/` — UI primitives (zero page copy)
+- `components/sections/<name>/` — page sections
+- `components/layout/site-header/` and `site-footer/` — site chrome (grouping folders)
+- `components/sections/contact/enquiry-form/` — contact form (grouping folder)
+- `app/(site)/[locale]/` — public localized routes (7 locales)
+- `app/(admin)/admin/(dashboard)/` — admin routes (gated, English only)
+- `app/api/` — backend route handlers
+- `lib/server/services/<name>/` — business logic + prisma queries
+- `lib/server/validation/<name>/` — zod schemas (API contracts)
+- `lib/api-client/endpoints/<name>/` — typed axios wrappers (admin client → API)
+- `messages/<locale>.json` — all translation catalogs (7 locales)
+- `constants/` — typed enums, routes, site metadata
+- `prisma/` — schema + migrations + seed
+
+## Boundaries (compiler-enforced)
+- `lib/server/*` starts with `'server-only'` — importing from a client component is a build error
+- `lib/api-client/axios-instance.ts` starts with `'client-only'` — importing from a server component is a build error
+- `lib/shared/*` is type-only, safe on both sides
+
+## Common grep patterns
+- All services: `grep -rln "kind: service" --include='*.claude.md'`
+- Doc for a symbol: `grep -rln "<symbolName>" --include='*.claude.md'`
+- Component using a translation namespace: `grep -rln "i18n_namespace: \"<ns>\"" --include='*.claude.md'`
+
+## When asked to add a new component / service / schema / route
+Always create the matching `.claude.md` in the same change. Folder pattern is non-negotiable.

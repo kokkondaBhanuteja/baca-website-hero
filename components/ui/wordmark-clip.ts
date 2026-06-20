@@ -1,9 +1,12 @@
 /**
- * Shared placement helpers for the wordmark showpiece components
- * (`WordmarkMedia` video fill + `WordmarkSlideshow` image montage). Both render
- * the brand word as an SVG `<text>` clip over media; these map the `align` prop to
- * the SVG text-anchor and x position. The wordmark viewBox is 1000 units wide.
+ * Shared placement helpers for the wordmark family (WordmarkMedia, WordmarkSlideshow,
+ * WordmarkLetters). Maps the `align` prop to SVG text-anchor and x-position within
+ * the 1000-unit viewBox the wordmark SVGs share.
+ *
+ * The 8 / 992 insets (instead of 0 / 1000) prevent the leftmost / rightmost letter
+ * stroke from being clipped at the viewBox edge.
  */
+
 export type WordmarkAlign = 'left' | 'center' | 'right'
 
 export const WORDMARK_ALIGN_ANCHOR: Record<
@@ -15,7 +18,6 @@ export const WORDMARK_ALIGN_ANCHOR: Record<
   right: 'end',
 }
 
-/** x in viewBox units; small inset so glyphs never clip the edge. */
 export const WORDMARK_ALIGN_X: Record<WordmarkAlign, number> = {
   left: 8,
   center: 500,

@@ -55,6 +55,45 @@ prisma/              schema.prisma + seed.ts
 6. **Conventions:** descriptive names (no single-letter identifiers, even loop vars); **no `any`**
    (cast via `as Parameters<typeof t>[0]` for dynamic next-intl keys, or `as unknown as T`); custom
    `Dropdown` component everywhere (**no native `<select>`**); images use `<MediaReveal>` (GSAP scroll reveal).
+   _Sanctioned exception to the single-letter rule:_ `const t = useTranslations(ns)` and
+   `const t = await getTranslations(ns)` — next-intl's standard convention; keeps dotted-key lookups readable.
+7. **Per-component folder + sibling `.claude.md` is the documentation convention.** Every component
+   lives in its own folder: `components/<area>/<name>/<name>.tsx` + `<name>/<name>.claude.md` + `<name>/index.ts`.
+   The `index.ts` barrel re-exports from the `.tsx` so imports stay `@/components/<area>/<name>`
+   (no path changes when a component grows additional helper files). Each `.claude.md` follows the
+   standard format: **Purpose / Used In / Business Logic / Dependencies / Impacted Modules** and starts with
+   a YAML frontmatter block (`kind`, `name`, `file`, `exports`, `imports_from`, …) so agents can grep by kind.
+   Each component directory also keeps a folder-level `CLAUDE.md` as a one-screen map of what's in the folder.
+   Creating a new component requires creating its folder, barrel, AND `.claude.md`.
+
+## ⚠️ Hard rule for ANY agent (Claude, Cursor, Copilot, etc.) modifying code
+
+**Before editing a `.tsx` / `.ts` file, READ its sibling `.claude.md`** — same folder, same basename:
+
+| You're editing                                             | Read first                                                        |
+| ---------------------------------------------------------- | ----------------------------------------------------------------- |
+| `components/ui/dropdown/dropdown.tsx`                      | `components/ui/dropdown/dropdown.claude.md`                       |
+| `lib/server/services/category-service/category-service.ts` | `lib/server/services/category-service/category-service.claude.md` |
+| `app/(site)/[locale]/products/page.tsx`                    | `app/(site)/[locale]/products/page.claude.md`                     |
+| `app/api/products/route.ts`                                | `app/api/products/route.claude.md`                                |
+
+The doc tells you the file's `purpose`, `exports`, `imports_from`, `called_by`, business logic, and constraints.
+Skipping it is how bugs get reintroduced and load-bearing context is missed.
+
+**After editing, UPDATE the sibling `.claude.md` in the same change** whenever ANY of the following changed:
+
+- Exports added/removed/renamed → update frontmatter `exports:` AND the Exports list in the body.
+- New external dependency → update frontmatter `imports_from:` AND the Dependencies list.
+- Business logic changed (a new branch, a removed check, a new side effect) → update Business Logic bullets.
+- New consumers / new caller → update `called_by:` (lib only).
+- Auth posture changed (e.g. requireAdmin added) → update `auth:` field.
+- Route / HTTP method / namespace changed → update `route:`, `methods:`, `i18n_namespace:`.
+
+**Out-of-date doc is worse than no doc.** An agent reading a stale `.claude.md` will make wrong decisions
+and reintroduce already-fixed bugs. Treat the `.claude.md` as part of the file, not as separate documentation.
+
+If the change is small enough that the doc still describes it correctly, no update is needed — but always re-read
+the doc to confirm. If a doc is missing, create it before merging the change.
 
 ## Rendering model
 
