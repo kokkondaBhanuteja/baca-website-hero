@@ -1,0 +1,105 @@
+import { Analytics } from '@vercel/analytics/next'
+import type { Metadata, Viewport } from 'next'
+import {
+  Fraunces,
+  Inter,
+  JetBrains_Mono,
+  Noto_Sans_Arabic,
+} from 'next/font/google'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { notFound } from 'next/navigation'
+
+import { LOCALE_META, type Locale } from '@/constants/i18n'
+import { routing } from '@/i18n/routing'
+import { Cursor } from '@/components/ui/cursor'
+
+import '../../globals.css'
+
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+})
+const fraunces = Fraunces({
+  variable: '--font-fraunces',
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  axes: ['SOFT', 'opsz'],
+})
+const jetbrainsMono = JetBrains_Mono({
+  variable: '--font-jetbrains-mono',
+  subsets: ['latin'],
+  weight: ['400', '500'],
+})
+const notoArabic = Noto_Sans_Arabic({
+  variable: '--font-arabic',
+  subsets: ['arabic'],
+  weight: ['400', '500', '600'],
+})
+
+type LayoutParams = { params: Promise<{ locale: string }> }
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
+export async function generateMetadata({
+  params,
+}: LayoutParams): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: 'metadata',
+  })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    icons: {
+      icon: [
+        {
+          url: '/icon-light-32x32.png',
+          media: '(prefers-color-scheme: light)',
+        },
+        { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
+      ],
+      apple: '/apple-icon.png',
+    },
+  }
+}
+
+export const viewport: Viewport = {
+  colorScheme: 'light',
+  themeColor: '#FDFBF6',
+}
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: Readonly<{ children: React.ReactNode } & LayoutParams>) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
+  // Enable static rendering for this locale.
+  setRequestLocale(locale)
+
+  const { dir } = LOCALE_META[locale as Locale]
+
+  return (
+    <html
+      lang={locale}
+      dir={dir}
+      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} ${notoArabic.variable} bg-background`}
+    >
+      <body className="font-sans antialiased">
+        {/* Global magnetic cursor — same behaviour on every page. */}
+        <Cursor />
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
+}

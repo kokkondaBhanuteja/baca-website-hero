@@ -109,6 +109,14 @@
     @apply font-sans;
     font-variation-settings: 'SOFT' 30;
   }
+  /* Arabic: route the whole type system through Noto Sans Arabic — the Latin
+     display (Fraunces) and mono (JetBrains Mono) faces carry no Arabic glyphs. */
+  [lang='ar'] {
+    --font-heading: var(--font-arabic), 'Geeza Pro', serif;
+    --font-display: var(--font-arabic), 'Geeza Pro', serif;
+    --font-sans: var(--font-arabic), 'Geeza Pro', sans-serif;
+    --font-mono: var(--font-arabic), 'Geeza Pro', monospace;
+  }
   ::selection {
     background: var(--saffron);
     color: var(--paper);
@@ -166,7 +174,9 @@
   fill: var(--paper);
   stroke: var(--saffron);
   stroke-width: 2;
-  transition: fill 0.35s ease, r 0.3s ease;
+  transition:
+    fill 0.35s ease,
+    r 0.3s ease;
 }
 .baca-thread circle.node.lit {
   r: 8px;
@@ -198,7 +208,10 @@
   height: 34px;
   border: 1.5px solid var(--saffron);
   opacity: 0.75;
-  transition: background-color 0.25s ease, border-color 0.25s ease, opacity 0.2s ease;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.2s ease;
 }
 .baca-cursor-ring.is-active {
   background: rgba(224, 146, 43, 0.14);
