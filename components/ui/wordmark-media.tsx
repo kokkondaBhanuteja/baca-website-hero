@@ -2,24 +2,15 @@
 
 import { useEffect, useId, useRef } from 'react'
 
+import {
+  WORDMARK_ALIGN_ANCHOR,
+  WORDMARK_ALIGN_X,
+  type WordmarkAlign,
+} from '@/components/ui/wordmark-clip'
+
 export interface WordmarkVideoSource {
   src: string
   type: string
-}
-
-type WordmarkAlign = 'left' | 'center' | 'right'
-
-/** Horizontal placement of the letters within the wordmark box. */
-const ANCHOR_BY_ALIGN: Record<WordmarkAlign, 'start' | 'middle' | 'end'> = {
-  left: 'start',
-  center: 'middle',
-  right: 'end',
-}
-/** x position in viewBox units (box is 1000 wide); small inset so glyphs never clip the edge. */
-const X_BY_ALIGN: Record<WordmarkAlign, number> = {
-  left: 8,
-  center: 500,
-  right: 992,
 }
 
 interface WordmarkMediaProps {
@@ -95,9 +86,9 @@ export function WordmarkMedia({
         <defs>
           <clipPath id={clipId}>
             <text
-              x={X_BY_ALIGN[align]}
+              x={WORDMARK_ALIGN_X[align]}
               y="258"
-              textAnchor={ANCHOR_BY_ALIGN[align]}
+              textAnchor={WORDMARK_ALIGN_ANCHOR[align]}
               fontFamily="var(--font-heading)"
               fontSize="370"
               fontWeight="600"

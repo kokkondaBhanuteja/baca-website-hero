@@ -8,10 +8,13 @@ import { Route } from '@/constants/routes'
 import { CERT_MARKS, SITE } from '@/constants/site'
 import { FOOTER_COLUMNS } from '@/constants/sections/footer'
 import { Link } from '@/i18n/navigation'
-import { WordmarkMedia } from '@/components/ui/wordmark-media'
+import { WordmarkSlideshow } from '@/components/ui/wordmark-slideshow'
 
-const FOOTER_WORDMARK_VIDEO_SOURCES = [
-  { src: '/videos/footer-export.mp4', type: 'video/mp4' },
+const FOOTER_WORDMARK_IMAGES = [
+  '/images/footer/ocean-1.jpg',
+  '/images/footer/ocean-2.jpg',
+  '/images/footer/ocean-3.jpg',
+  '/images/footer/ocean-4.jpg',
 ]
 
 function FooterLink({
@@ -134,10 +137,9 @@ export function SiteFooter() {
         {/* Oversized wordmark — video through the letters; left-placed + a notch
             smaller than the hero (editorial footer treatment). */}
         <div data-reveal className="border-t border-paper/12 pt-8">
-          <WordmarkMedia
+          <WordmarkSlideshow
             text={SITE.brand}
-            videoSources={FOOTER_WORDMARK_VIDEO_SOURCES}
-            posterSrc="/images/footer-export-poster.jpg"
+            images={FOOTER_WORDMARK_IMAGES}
             align="left"
             className="w-full max-w-[1080px]"
           />
