@@ -131,15 +131,17 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Oversized wordmark — video showing through the letters */}
+        {/* Oversized wordmark — video through the letters; left-placed + a notch
+            smaller than the hero (editorial footer treatment). */}
         <div data-reveal className="border-t border-paper/12 pt-8">
           <WordmarkMedia
             text={SITE.brand}
             videoSources={FOOTER_WORDMARK_VIDEO_SOURCES}
             posterSrc="/images/wordmark-poster.jpg"
-            className="w-full"
+            align="left"
+            className="w-full max-w-[1080px]"
           />
-          <p className="mt-2 text-end font-mono text-[0.62rem] uppercase tracking-[0.22em] text-paper/45">
+          <p className="mt-3 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-paper/45">
             {SITE.sub} · Est. {SITE.founded}
           </p>
         </div>

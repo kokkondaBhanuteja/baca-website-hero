@@ -7,12 +7,29 @@ export interface WordmarkVideoSource {
   type: string
 }
 
+type WordmarkAlign = 'left' | 'center' | 'right'
+
+/** Horizontal placement of the letters within the wordmark box. */
+const ANCHOR_BY_ALIGN: Record<WordmarkAlign, 'start' | 'middle' | 'end'> = {
+  left: 'start',
+  center: 'middle',
+  right: 'end',
+}
+/** x position in viewBox units (box is 1000 wide); small inset so glyphs never clip the edge. */
+const X_BY_ALIGN: Record<WordmarkAlign, number> = {
+  left: 8,
+  center: 500,
+  right: 992,
+}
+
 interface WordmarkMediaProps {
   /** The word to render. Brand proper noun — not translated. */
   text?: string
   videoSources: WordmarkVideoSource[]
   posterSrc: string
-  /** Sizing/spacing owned by the consumer. */
+  /** Horizontal placement of the letters (default 'center'). */
+  align?: WordmarkAlign
+  /** Sizing/spacing owned by the consumer (container width sets the overall scale). */
   className?: string
 }
 
@@ -30,6 +47,7 @@ export function WordmarkMedia({
   text = 'BACA',
   videoSources,
   posterSrc,
+  align = 'center',
   className,
 }: WordmarkMediaProps) {
   const rawId = useId()
@@ -77,9 +95,9 @@ export function WordmarkMedia({
         <defs>
           <clipPath id={clipId}>
             <text
-              x="50%"
+              x={X_BY_ALIGN[align]}
               y="258"
-              textAnchor="middle"
+              textAnchor={ANCHOR_BY_ALIGN[align]}
               fontFamily="var(--font-heading)"
               fontSize="370"
               fontWeight="600"
