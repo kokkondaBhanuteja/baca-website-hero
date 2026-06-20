@@ -9,7 +9,7 @@ import { WordmarkMedia } from '@/components/ui/wordmark-media'
 import { HeroEntry } from '@/components/sections/hero-entry'
 
 // Single illustrated India-heritage film shown through the whole wordmark.
-const HERO_VIDEO_SOURCES = [{ src: '/videos/hero-v4.mp4', type: 'video/mp4' }]
+const HERO_VIDEO_SOURCES = [{ src: '/videos/hero-v5.mp4', type: 'video/mp4' }]
 
 export async function Hero() {
   const t = await getTranslations('hero')
