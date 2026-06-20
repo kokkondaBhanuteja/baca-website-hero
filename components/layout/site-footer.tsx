@@ -77,19 +77,19 @@ export function SiteFooter() {
       })
 
       if (wordmark) {
+        // One-shot reveal that fires as soon as the wordmark enters the viewport,
+        // so it is fully shown well before the page bottom (a scroll-scrub here
+        // can't complete — there is no content below the footer to scroll through).
         gsap.fromTo(
           wordmark,
-          { yPercent: 16, clipPath: 'inset(0% 0% 100% 0%)' },
+          { yPercent: 12, autoAlpha: 0, clipPath: 'inset(0% 0% 100% 0%)' },
           {
-            yPercent: -4,
+            yPercent: 0,
+            autoAlpha: 1,
             clipPath: 'inset(0% 0% 0% 0%)',
-            ease: 'none',
-            scrollTrigger: {
-              trigger: wordmark,
-              start: 'top bottom',
-              end: 'bottom center',
-              scrub: 0.6,
-            },
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: wordmark, start: 'top 95%' },
           },
         )
       }
