@@ -35,18 +35,15 @@ export async function Hero() {
             />
           </div>
 
-          <div className="grid items-end gap-10 lg:grid-cols-12">
-            <div
-              data-hero-reveal
-              className="col-span-12 max-w-md lg:col-span-7"
-            >
+          <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-12">
+            <div data-hero-reveal className="max-w-md lg:col-span-7">
               <p className="text-pretty text-[15px] leading-relaxed text-paper/85">
                 {t('body')}
               </p>
             </div>
             <div
               data-hero-reveal
-              className="col-span-12 flex flex-wrap items-center gap-3 lg:col-span-5 lg:justify-self-end"
+              className="flex flex-wrap items-center gap-3 lg:col-span-5 lg:justify-self-end"
             >
               <Link
                 href={Route.Products}
