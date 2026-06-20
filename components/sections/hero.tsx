@@ -9,7 +9,7 @@ import { WordmarkMedia } from '@/components/ui/wordmark-media'
 import { HeroEntry } from '@/components/sections/hero-entry'
 
 const WORDMARK_VIDEO_SOURCES = [
-  { src: '/videos/spice-heritage.mp4', type: 'video/mp4' },
+  { src: '/videos/hero-heritage.mp4', type: 'video/mp4' },
 ]
 
 export async function Hero() {
