@@ -25,8 +25,8 @@ function isUploadFolder(value: string): value is UploadFolder {
 
 /**
  * Builds a short-lived Cloudinary upload signature. The API secret never leaves
- * the server. The signature pins `resource_type: image` so a caller can't sneak
- * a different asset type (raw/video) past the allowlisted folder check.
+ * the server. The upload destination is constrained because `folder` is signed
+ * (and allow-listed), and image-only is enforced by the `/image/upload` endpoint.
  */
 export function createUploadSignature(folder: string): UploadSignature {
   if (!isCloudinaryConfigured) {
@@ -39,12 +39,16 @@ export function createUploadSignature(folder: string): UploadSignature {
   }
 
   const timestamp = Math.round(Date.now() / 1000)
-  // Pin resource_type into the signed params so the client can't upload a
-  // non-image asset under our signature.
+  // Sign ONLY the params Cloudinary includes when it verifies an upload.
+  // Cloudinary excludes `resource_type` (along with `file`, `cloud_name` and
+  // `api_key`) from its signature — but the SDK's api_sign_request would still
+  // sign it, so including it makes our signature disagree with Cloudinary's and
+  // fails every upload with "401 Invalid Signature". Image-only is already
+  // enforced by the `/image/upload` endpoint, and the destination is locked
+  // because `folder` is signed.
   const signedParams = {
     timestamp,
     folder,
-    resource_type: 'image',
   }
   const signature = cloudinary.utils.api_sign_request(
     signedParams,
