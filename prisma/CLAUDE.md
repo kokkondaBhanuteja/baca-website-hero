@@ -6,9 +6,9 @@ PostgreSQL schema + seed. Dev DB is **Neon** (cloud) via `DATABASE_URL`. ORM = *
 ```
 schema.prisma   Models + enums (see below)
 migrations/     Generated SQL migrations
-seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogue/insights.
-                NOTE: seed.ts references the old BlogCategory enum and must be updated (Task 2)
-                before it can run again. The wipe (deleteMany products→articles→categories)
+seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogue/blogs:
+                1 category (Spices) · 4 products · 4 blog types · 12 articles (3 per type).
+                Wipe order: products→articles→categories→blogTypes (FK Restrict). The wipe
                 makes it the source of truth — re-running overwrites admin-made catalogue/article rows.
 ```
 

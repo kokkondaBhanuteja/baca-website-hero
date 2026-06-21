@@ -9,7 +9,7 @@ layout.tsx              Bare English <html> root (loads Inter + globals.css; rob
 login/page.tsx          The only unguarded admin route (client form → authApi.login).
 (dashboard)/            Route group (name doesn't appear in URL) — wraps every authenticated admin screen.
   layout.tsx            Server guard: getCurrentAdmin() → redirect('/admin/login'); renders <AdminShell>.
-  products/ categories/ blog-articles/ gallery/   list + new + [id] edit screens.
+  products/ categories/ blog-articles/ blog-types/ gallery/   list + new + [id] edit screens.
                         (No root page.tsx for `/admin` — login redirects straight to /admin/categories.)
 components/             Admin-only client components:
   admin-shell           Sidebar nav + sign-out.
