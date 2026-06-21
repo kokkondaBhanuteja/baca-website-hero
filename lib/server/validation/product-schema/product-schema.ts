@@ -6,6 +6,17 @@ import {
   slugField,
 } from '@/lib/server/validation/localized-text-schema'
 
+// An image reference is either an absolute http(s) URL (Cloudinary uploads) or a
+// root-relative path (/images/… — local/seed assets). Cloudinary uploads pass
+// `.url()`, but seeded products store local paths that must round-trip on edit.
+const imageReference = z
+  .string()
+  .max(2048)
+  .refine(
+    (value) => /^https?:\/\//.test(value) || value.startsWith('/'),
+    'Image URL must be a valid URL or a /path',
+  )
+
 export const productInputSchema = z
   .object({
     slug: slugField,
@@ -32,18 +43,14 @@ export const productInputSchema = z
       .nullish(),
     harvestMonths: z.array(z.number().int().min(1).max(12)).max(12).nullish(),
     peakMonths: z.array(z.number().int().min(1).max(12)).max(12).nullish(),
-    imageUrl: z
-      .string()
-      .url('Image URL must be a valid URL')
-      .max(2048)
-      .nullish(),
+    imageUrl: imageReference.nullish(),
     imagePublicId: z.string().max(255).nullish(),
     // Gallery images shown as a carousel. The server derives the cover
     // (imageUrl/imagePublicId) from images[0], so the form only sends this.
     images: z
       .array(
         z.object({
-          url: z.string().url('Image URL must be a valid URL').max(2048),
+          url: imageReference,
           publicId: z.string().min(1).max(255),
         }),
       )
