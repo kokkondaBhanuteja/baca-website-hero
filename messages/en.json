@@ -53,7 +53,7 @@
     }
   },
   "blogsPage": {
-    "eyebrow": "Insights",
+    "eyebrow": "Blogs",
     "heading": "Notes from the spice and commodities trade.",
     "intro": "Market reads, origin stories and the thinking behind how we source and ship.",
     "empty": "New articles are on the way. Please check back soon.",
@@ -61,12 +61,7 @@
     "featured": "Featured",
     "allArticles": "All articles",
     "related": "Keep reading",
-    "writtenBy": "Written by",
-    "categories": {
-      "industryInsights": "Industry Insights",
-      "impactStories": "Impact Stories",
-      "communityEngagement": "Community Engagement"
-    }
+    "writtenBy": "Written by"
   },
   "notFound": {
     "eyebrow": "404 · Page not found",
@@ -101,7 +96,7 @@
         "label": "Products"
       },
       "insights": {
-        "label": "Insights"
+        "label": "Blogs"
       },
       "contact": {
         "label": "Contact"
@@ -215,7 +210,7 @@
     "imageAlt": "Portrait of the Managing Director of BACA"
   },
   "featuredInsights": {
-    "eyebrow": "Insights",
+    "eyebrow": "Blogs",
     "heading": "Notes from the spice and commodities trade.",
     "allArticles": "All articles"
   },
@@ -248,7 +243,7 @@
       "resources": {
         "title": "Resources",
         "links": {
-          "insights": "Insights",
+          "insights": "Blogs",
           "certifications": "Certifications",
           "contact": "Contact",
           "catalogue": "Request a catalogue"

@@ -7,7 +7,7 @@ own folders so the per-component convention applies all the way down.
 
 ```
 site-header/                          (grouping + parent component)
-  site-header.tsx                     Server shell — fetches top-3 products + top-3 articles
+  site-header.tsx                     Server shell — fetches top-3 products + first 3 blog types
                                       and passes them to SiteHeaderClient.
   site-header.claude.md
   index.ts

@@ -51,7 +51,8 @@ prisma/              schema.prisma + seed.ts
    as `{ en, de, … }` JSON objects (`en` required, enforced in zod). `localizedValue(field, locale)` resolves
    with English fallback. Routing/sort/filter keys stay scalar columns — never query inside JSONB.
 5. **Static marketing copy lives in `messages/`** (next-intl), not the DB. DB = Products, Categories,
-   BlogArticles, GalleryImages, Enquiries.
+   BlogArticles, BlogTypes, GalleryImages, Enquiries. (Blog "types" are admin-managed rows — the
+   old `BlogCategory` enum is gone; articles FK to `BlogType`.)
 6. **Conventions:** descriptive names (no single-letter identifiers, even loop vars); **no `any`**
    (cast via `as Parameters<typeof t>[0]` for dynamic next-intl keys, or `as unknown as T`); custom
    `Dropdown` component everywhere (**no native `<select>`**); images use `<MediaReveal>` (GSAP scroll reveal).

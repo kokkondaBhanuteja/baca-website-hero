@@ -8,7 +8,7 @@ imports_from:
   - 'next-intl/server'
   - '@/constants/i18n'
   - '@/constants/routes'
-  - '@/lib/server/services/blog-article-service'
+  - '@/lib/server/services/blog-type-service'
   - '@/lib/server/services/product-service'
   - '@/components/layout/site-header/site-header-client'
 ---
@@ -16,7 +16,7 @@ imports_from:
 # SiteHeader
 
 Purpose:
-Server wrapper for the header: fetches top-3 products + top-3 articles for the current locale and passes them to SiteHeaderClient as nav dropdown data.
+Server wrapper for the header: fetches top-3 products + the first 3 published blog types for the current locale and passes them to SiteHeaderClient as nav dropdown data.
 
 Used In:
 
@@ -28,9 +28,9 @@ Props:
 
 Business Logic:
 
-- Calls await getLocale() + Promise.all([listPublishedProducts, listPublishedArticles])
+- Calls await getLocale() + Promise.all([listPublishedProducts, listPublishedBlogTypes])
 - Maps products → productLinks [{label, href: Route.Products#slug}, ...]
-- Maps articles.slice(0,3) → insightLinks [{label, href: Route.Blogs/slug}, ...]
+- Maps blogTypes.slice(0,3) → insightLinks [{label, href: Route.Blogs?type=slug}, ...] (Blogs dropdown = first 3 types, each pre-filtering the blogs page)
 - Passes forceSolid, productLinks, insightLinks to SiteHeaderClient
 
 Dependencies:
@@ -38,11 +38,11 @@ Dependencies:
 - next-intl/server: getLocale
 - @/constants/routes — Route.Products, Route.Blogs
 - @/lib/server/services/product-service: listPublishedProducts
-- @/lib/server/services/blog-article-service: listPublishedArticles
+- @/lib/server/services/blog-type-service: listPublishedBlogTypes
 - @/components/layout/site-header/site-header-client
 
 i18n:
-None — fetches translated product/article names from DB
+None — fetches translated product names / blog-type names from DB
 
 Accessibility:
 No a11y — rendering deferred to SiteHeaderClient

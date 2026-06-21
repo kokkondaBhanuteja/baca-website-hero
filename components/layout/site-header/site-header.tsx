@@ -2,7 +2,7 @@ import { getLocale } from 'next-intl/server'
 
 import type { Locale } from '@/constants/i18n'
 import { Route } from '@/constants/routes'
-import { listPublishedArticles } from '@/lib/server/services/blog-article-service'
+import { listPublishedBlogTypes } from '@/lib/server/services/blog-type-service'
 import { listPublishedProducts } from '@/lib/server/services/product-service'
 
 import {
@@ -11,9 +11,10 @@ import {
 } from '@/components/layout/site-header/site-header-client'
 
 /**
- * Server wrapper for the header — fetches the top 3 live products + insights for
- * the current locale and hands them to the interactive client header, which
- * renders them as the Products / Insights dropdowns.
+ * Server wrapper for the header — fetches the top 3 live products + the first 3
+ * published blog types for the current locale and hands them to the interactive
+ * client header, which renders them as the Products / Blogs dropdowns. Each blog
+ * type links to the blogs page pre-filtered to that type (`/blogs?type=<slug>`).
  */
 export async function SiteHeader({
   forceSolid = false,
@@ -22,9 +23,9 @@ export async function SiteHeader({
 }) {
   const locale = (await getLocale()) as Locale
 
-  const [products, articles] = await Promise.all([
+  const [products, blogTypes] = await Promise.all([
     listPublishedProducts(locale, 3),
-    listPublishedArticles(locale),
+    listPublishedBlogTypes(locale),
   ])
 
   const productLinks: NavLink[] = products.map((product) => ({
@@ -32,9 +33,9 @@ export async function SiteHeader({
     href: `${Route.Products}#${product.slug}`,
   }))
 
-  const insightLinks: NavLink[] = articles.slice(0, 3).map((article) => ({
-    label: article.title,
-    href: `${Route.Blogs}/${article.slug}`,
+  const insightLinks: NavLink[] = blogTypes.slice(0, 3).map((blogType) => ({
+    label: blogType.name,
+    href: `${Route.Blogs}?type=${blogType.slug}`,
   }))
 
   return (

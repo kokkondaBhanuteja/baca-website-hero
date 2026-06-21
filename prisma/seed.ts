@@ -27,13 +27,15 @@ async function seedAdminUser() {
 }
 
 // Clean slate before reseeding — the seed is the source of truth for the
-// catalogue + insights. Delete products before categories (Product.categoryId
-// is onDelete: Restrict). Gallery and Enquiry rows are left untouched.
+// catalogue + blogs. Delete products before categories (Product.categoryId is
+// onDelete: Restrict) and articles before blog types (BlogArticle.blogTypeId is
+// onDelete: Restrict). Gallery and Enquiry rows are left untouched.
 async function wipeContent() {
   await prisma.product.deleteMany()
   await prisma.blogArticle.deleteMany()
   await prisma.productCategory.deleteMany()
-  console.log('✔ Cleared existing products, articles, and categories')
+  await prisma.blogType.deleteMany()
+  console.log('✔ Cleared products, articles, categories, and blog types')
 }
 
 type ProductSeed = {
@@ -236,9 +238,33 @@ async function seedCatalogue() {
   )
 }
 
+const BLOG_TYPE_SEED: { slug: string; name: Record<string, string> }[] = [
+  { slug: 'market-insights', name: { en: 'Market Insights' } },
+  { slug: 'spices', name: { en: 'Spices' } },
+  { slug: 'exports', name: { en: 'Exports' } },
+]
+
+async function seedBlogTypes(): Promise<Record<string, string>> {
+  const idBySlug: Record<string, string> = {}
+  for (let index = 0; index < BLOG_TYPE_SEED.length; index += 1) {
+    const type = BLOG_TYPE_SEED[index]
+    const created = await prisma.blogType.create({
+      data: {
+        slug: type.slug,
+        name: json(type.name),
+        sortOrder: index,
+        isPublished: true,
+      },
+    })
+    idBySlug[type.slug] = created.id
+  }
+  console.log(`✔ Seeded ${BLOG_TYPE_SEED.length} blog types`)
+  return idBySlug
+}
+
 type ArticleSeed = {
   slug: string
-  category: 'INDUSTRY_INSIGHTS' | 'IMPACT_STORIES' | 'COMMUNITY_ENGAGEMENT'
+  typeSlug: 'market-insights' | 'spices' | 'exports'
   featured: boolean
   readMinutes: number
   publishedAt: Date
@@ -250,31 +276,12 @@ type ArticleSeed = {
   body: Record<string, string>
 }
 
-async function seedArticles() {
+async function seedArticles(blogTypeIdBySlug: Record<string, string>) {
   const articles: ArticleSeed[] = [
     {
-      slug: 'why-we-started-baca',
-      category: 'INDUSTRY_INSIGHTS',
-      featured: true,
-      readMinutes: 6,
-      publishedAt: new Date('2026-01-15'),
-      coverImageUrl: '/images/insight-3.jpg',
-      authorName: 'BACA Team',
-      authorRole: 'Founders',
-      title: {
-        en: 'Why we started BACA — and what we want to do differently',
-      },
-      excerpt: {
-        en: 'A short note on what we think is broken about most Indian spice exports, and what we are building instead.',
-      },
-      body: {
-        en: 'Most Indian spice exports pass through three or four hands before they reach a buyer. Each hand adds a margin and removes a little accountability. By the time a container lands, no one can tell you which farm the cardamom came from, or what it was graded against.\n\nWe started BACA to collapse that distance. We buy at origin, from the same farming families season after season. We grade at source, against ISO 22000 and HACCP, and we document every lot before it ships.\n\nThat is the whole idea: fewer hands, more traceability, and a grade in the container that matches the grade on the certificate — every single time.',
-      },
-    },
-    {
       slug: 'reading-the-2026-cardamom-market',
-      category: 'INDUSTRY_INSIGHTS',
-      featured: false,
+      typeSlug: 'market-insights',
+      featured: true,
       readMinutes: 5,
       publishedAt: new Date('2026-02-04'),
       coverImageUrl: '/images/insight-1.jpg',
@@ -287,64 +294,216 @@ async function seedArticles() {
         en: "Why this season's auctions are behaving differently, and what it means for buyers.",
       },
       body: {
-        en: 'The 2026 cardamom season is being shaped by small estates rather than the large auction lots that used to set the price. Yields from the high ranges of Kerala have been uneven, and buyers who once waited for the big sales are now contracting earlier and directly.\n\nFor importers, that means two things. Price discovery is happening sooner, and the premium for documented, single-estate material is widening.\n\nWe think this is healthy. It rewards growers who invest in quality, and it gives buyers a clearer line of sight to where their spice actually comes from.',
+        en: 'The 2026 cardamom season is being shaped by small estates rather than the large auction lots that used to set the price. Yields from the high ranges of Kerala have been uneven, and buyers who once waited for the big sales are now contracting earlier and directly.\n\nFor importers that means two things. Price discovery is happening sooner, and the premium for documented, single-estate material is widening.\n\nWe think this is healthy. It rewards growers who invest in quality and gives buyers a clearer line of sight to where their spice actually comes from.',
       },
     },
     {
-      slug: 'the-cost-of-cheap-turmeric',
-      category: 'IMPACT_STORIES',
-      featured: false,
-      readMinutes: 3,
-      publishedAt: new Date('2026-03-02'),
-      coverImageUrl: '/images/insight-2.jpg',
-      authorName: 'BACA Team',
-      authorRole: 'Quality',
-      title: {
-        en: 'The cost of cheap turmeric — and why we will not sell it',
-      },
-      excerpt: {
-        en: 'Curcumin, lead-chromate adulteration, and the price of doing it properly.',
-      },
-      body: {
-        en: 'There is always a cheaper turmeric. The question is what you are paying for when you buy it.\n\nCheap turmeric is often low in curcumin, the compound buyers actually want. Worse, some lots are brightened with lead chromate — an industrial pigment that has no business in food. It is invisible in a sample and dangerous in a kitchen.\n\nWe test every lot for curcumin content and for adulteration before it ships. It costs us margin, and it costs us volume, because we turn away material that does not pass. We think that is the right trade.',
-      },
-    },
-    {
-      slug: 'sourcing-with-idukki-growers',
-      category: 'COMMUNITY_ENGAGEMENT',
+      slug: 'why-pepper-prices-moved-this-quarter',
+      typeSlug: 'market-insights',
       featured: false,
       readMinutes: 4,
-      publishedAt: new Date('2026-03-20'),
-      coverImageUrl: '/images/cat-spices.jpg',
-      authorName: 'BACA Team',
-      authorRole: 'Sourcing',
-      title: {
-        en: 'Sourcing season with the cardamom growers of Idukki',
-      },
-      excerpt: {
-        en: 'What buying directly, season after season, actually looks like on the ground in the Kerala high ranges.',
-      },
-      body: {
-        en: 'Every cardamom season starts the same way for us: on a hillside in Idukki, with the families who have grown these capsules for generations. We do not buy through a chain of agents. We sit with growers, agree a grade and a price, and come back the next season — and the one after that.\n\nThat continuity changes what we can ask for. Growers who know we will return invest in better curing and cleaner picking, because the quality is rewarded directly rather than averaged away in a pooled auction lot.\n\nIt is slower than buying off the exchange, and it costs more. But it is the only way we know to put a name and a place behind every lot we ship.',
-      },
-    },
-    {
-      slug: 'grading-cashew-for-export',
-      category: 'INDUSTRY_INSIGHTS',
-      featured: false,
-      readMinutes: 4,
-      publishedAt: new Date('2026-04-05'),
-      coverImageUrl: '/images/cat-nuts.jpg',
+      publishedAt: new Date('2026-04-09'),
+      coverImageUrl: '/images/insight-3.jpg',
       authorName: 'BACA Team',
       authorRole: 'Trade desk',
       title: {
-        en: 'How we grade cashew for export — and why W320 is only the start',
+        en: 'Why pepper prices moved this quarter — supply, freight and the dollar',
       },
       excerpt: {
-        en: 'Counts, colour, breakage and moisture: a short guide to what actually goes into a cashew grade.',
+        en: 'Three forces set the black pepper price this quarter, and only one of them was the harvest.',
       },
       body: {
-        en: 'A cashew grade like W320 looks simple — "320 kernels to the pound" — but the number only tells you size. A real export grade is four things at once: count, colour, breakage and moisture.\n\nCount sets the size band. Colour separates first-quality white wholes from scorched or dessert grades. Breakage decides whether a lot ships as wholes or drops to splits and pieces. And moisture, held under 5%, is what keeps the kernel crisp and stops it turning rancid in transit.\n\nWe sort against all four before a container is sealed. It is why two lots both labelled W320 can be very different — and why we would rather show a buyer the spec sheet than just the grade.',
+        en: 'Black pepper rarely moves for a single reason. This quarter the harvest was the smallest input: tight Vietnamese carry-over and a thin Indian crop set the floor, but freight and currency did most of the work above it.\n\nWhen container rates climb, landed cost climbs with them, and buyers quietly shift origin to protect margin. A firmer dollar then re-prices every contract written in it.\n\nFor anyone planning cover, the lesson is to watch freight and FX alongside the crop report — the three together explain the move the crop alone never could.',
+      },
+    },
+    {
+      slug: 'what-global-buyers-are-asking-for-in-2026',
+      typeSlug: 'market-insights',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-05-15'),
+      coverImageUrl: '/images/insight-2.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Trade desk',
+      title: {
+        en: 'What global buyers are asking for in 2026',
+      },
+      excerpt: {
+        en: 'Specifications used to be a formality. This year they are the negotiation.',
+      },
+      body: {
+        en: 'The questions on a first call have changed. Where buyers once led with price, they now lead with proof: a spec sheet, a residue report, a traceable origin.\n\nPart of this is regulation — tighter limits on pesticide residues and aflatoxin across the EU and Gulf. Part of it is risk: nobody wants a rejected container at port.\n\nWe read it as a shift in their favour and ours. Material that is graded and documented at source clears faster and holds its premium, and that is exactly the material we set out to ship.',
+      },
+    },
+    {
+      slug: 'freight-and-the-real-cost-of-landed-spice',
+      typeSlug: 'market-insights',
+      featured: false,
+      readMinutes: 5,
+      publishedAt: new Date('2026-06-02'),
+      coverImageUrl: '/images/global-port.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Trade desk',
+      title: {
+        en: 'Freight and the real cost of landed spice',
+      },
+      excerpt: {
+        en: 'The number on the contract is not the number that lands. Here is the gap.',
+      },
+      body: {
+        en: 'A FOB price tells you what spice costs at the port of loading. It says nothing about what it costs in your warehouse — and in 2026 that gap is wide.\n\nOcean freight, congestion surcharges, insurance and the last-mile haul can add a meaningful share to the landed cost of a container, and they move week to week while the crop price sits still.\n\nWe quote both FOB and CIF for exactly this reason: a buyer planning a year of cover needs to model the lane, not just the lot.',
+      },
+    },
+    {
+      slug: 'green-cardamom-grades-explained',
+      typeSlug: 'spices',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-02-20'),
+      coverImageUrl: '/images/product-green-cardamom.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Quality',
+      title: {
+        en: 'Green cardamom grades explained — AGEB, AGB and bold size',
+      },
+      excerpt: {
+        en: 'What the grade letters mean, and why size and colour set the price.',
+      },
+      body: {
+        en: 'A cardamom grade looks like code until you break it down. AGEB, AGB and AGS describe Alleppey Green capsules sorted by size and colour — bold, well-cured pods at the top, smaller and paler ones below.\n\nSize is measured in millimetres across the capsule; 7–8 mm bold commands the premium because it looks the part and holds aroma. Colour matters next: a deep, even green signals careful curing.\n\nWe grade against AGEB and AGB and publish the size band on every lot, so a buyer is choosing a specification, not a promise.',
+      },
+    },
+    {
+      slug: 'malabar-black-pepper-and-bulk-density',
+      typeSlug: 'spices',
+      featured: false,
+      readMinutes: 3,
+      publishedAt: new Date('2026-03-12'),
+      coverImageUrl: '/images/product-malabar-black-pepper.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Quality',
+      title: {
+        en: 'Malabar black pepper and the meaning of bulk density',
+      },
+      excerpt: {
+        en: '550–570 g/l is the one number that tells you the berry is mature.',
+      },
+      body: {
+        en: 'Bulk density is the quiet workhorse of a pepper spec. Measured in grams per litre, it tells a buyer whether the berries are dense and fully mature or light and underdeveloped.\n\nGarbled Malabar pepper at 550–570 g/l is heavy, pungent and clean — the light and broken berries already removed. Below that band, you are paying for air and stalk.\n\nWe clean to export grade and document the density on every lot, because it is the single fastest way to prove the pepper is what the label says.',
+      },
+    },
+    {
+      slug: 'erode-turmeric-and-the-curcumin-question',
+      typeSlug: 'spices',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-04-22'),
+      coverImageUrl: '/images/product-turmeric-fingers.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Quality',
+      title: {
+        en: 'Erode turmeric and the curcumin question',
+      },
+      excerpt: {
+        en: 'Colour sells turmeric, but curcumin is what buyers are really paying for.',
+      },
+      body: {
+        en: "Turmeric is judged first by its bright finger and even colour, but the value is in the curcumin — the compound behind both the colour and the health claims that drive demand.\n\nErode and Salem fingers run naturally high in curcumin, typically 3–5%, without the artificial brightening that plagues cheaper lots. That natural strength is why the district's name travels.\n\nWe test every lot for curcumin content and for adulteration before it ships, and we would rather show a buyer the certificate than just the colour.",
+      },
+    },
+    {
+      slug: 'guntur-chilli-heat-versus-colour',
+      typeSlug: 'spices',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-05-18'),
+      coverImageUrl: '/images/product-guntur-red-chilli.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Quality',
+      title: {
+        en: 'Guntur chilli — reading heat against colour',
+      },
+      excerpt: {
+        en: 'Scoville heat and ASTA colour are different axes. Most buyers want colour.',
+      },
+      body: {
+        en: 'It is easy to assume a hotter chilli is a better one. In the trade, colour usually matters more: ASTA measures the extractable pigment that shows up in a finished sauce, oil or blend.\n\nGuntur S17 Teja sits in a useful place — real heat at 75,000–85,000 SHU and strong ASTA colour in the 32–38 band, stemless and clean for export.\n\nWe grade heat and colour separately so a buyer can match the chilli to the product, not just the number on the bag.',
+      },
+    },
+    {
+      slug: 'what-makes-a-lot-export-ready',
+      typeSlug: 'exports',
+      featured: false,
+      readMinutes: 5,
+      publishedAt: new Date('2026-01-30'),
+      coverImageUrl: '/images/global-port.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Operations',
+      title: {
+        en: 'What makes a lot export-ready',
+      },
+      excerpt: {
+        en: 'Export-ready is not a grade — it is a stack of paperwork that has to match the goods.',
+      },
+      body: {
+        en: "A lot can be perfectly graded and still not be export-ready. Ready means the goods, the documents and the destination's rules all line up: phytosanitary certificate, certificate of origin, residue and aflatoxin reports, and packing that survives the lane.\n\nThe work happens before the container is sealed. We grade at source, test against the destination's limits, and assemble the document set so the certificate matches the contents.\n\nWhen all of it agrees, a container clears customs quickly. When one piece is missing, it sits at port — and that delay is the most expensive thing in the chain.",
+      },
+    },
+    {
+      slug: 'iso-22000-haccp-and-why-documentation-ships',
+      typeSlug: 'exports',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-03-06'),
+      coverImageUrl: '/images/who-we-are.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Compliance',
+      title: {
+        en: 'ISO 22000, HACCP, and why documentation is what actually ships',
+      },
+      excerpt: {
+        en: 'Food-safety systems are not a badge for the website — they are the reason the goods clear.',
+      },
+      body: {
+        en: 'ISO 22000 and HACCP are often treated as logos. In practice they are working systems: a documented chain of controls from intake to loading that an auditor — or a customs officer — can follow.\n\nThe value shows up at the border. A buyer importing into the EU or the Gulf needs evidence that hazards were controlled, not just a clean-looking sample.\n\nWe grade against these systems and keep records that survive an audit, because in export the documentation is not paperwork around the trade — it is the trade.',
+      },
+    },
+    {
+      slug: 'containers-incoterms-and-a-clean-handover',
+      typeSlug: 'exports',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-04-28'),
+      coverImageUrl: '/images/cat-nuts.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Operations',
+      title: {
+        en: 'Containers, Incoterms and a clean handover',
+      },
+      excerpt: {
+        en: 'FOB or CIF decides who owns the risk at sea. Pick deliberately.',
+      },
+      body: {
+        en: 'Incoterms look like jargon until a container is delayed and everyone asks who is responsible. FOB hands risk to the buyer at the port of loading; CIF keeps it with the seller through the voyage.\n\nNeither is right or wrong — it depends on who can manage the lane better. A buyer with a strong freight desk often prefers FOB; one who wants a single landed price prefers CIF.\n\nWe quote both and ship in 20-foot containers with packing matched to the route, so the handover is clean and the risk sits where it was agreed.',
+      },
+    },
+    {
+      slug: 'building-direct-trade-from-origin',
+      typeSlug: 'exports',
+      featured: false,
+      readMinutes: 5,
+      publishedAt: new Date('2026-05-30'),
+      coverImageUrl: '/images/cat-spices.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Founders',
+      title: {
+        en: 'Building direct trade from origin',
+      },
+      excerpt: {
+        en: 'Fewer hands between the farm and the container is the whole model.',
+      },
+      body: {
+        en: 'Most Indian spice exports pass through three or four intermediaries before they reach a buyer. Each hand adds a margin and removes a little accountability, until no one can say which farm the lot came from.\n\nOur model is to collapse that distance: buy at origin from the same farming families season after season, grade at source, and document every lot before it ships.\n\nDirect trade is slower and costs more up front. But it is the only way we know to put a name and a place behind a container — and to make the grade inside it match the certificate on it.',
       },
     },
   ]
@@ -353,7 +512,7 @@ async function seedArticles() {
     await prisma.blogArticle.create({
       data: {
         slug: article.slug,
-        category: article.category,
+        blogTypeId: blogTypeIdBySlug[article.typeSlug],
         featured: article.featured,
         readMinutes: article.readMinutes,
         status: 'PUBLISHED',
@@ -374,7 +533,8 @@ async function main() {
   await seedAdminUser()
   await wipeContent()
   await seedCatalogue()
-  await seedArticles()
+  const blogTypeIdBySlug = await seedBlogTypes()
+  await seedArticles(blogTypeIdBySlug)
 }
 
 main()

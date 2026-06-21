@@ -7,9 +7,9 @@ import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { blogArticlesApi } from '@/lib/api-client/endpoints/blog-articles-api'
 import type {
   BlogArticleAdminDto,
-  BlogCategoryValue,
   ContentStatusValue,
 } from '@/lib/shared/types/blog-dto'
+import type { BlogTypeAdminDto } from '@/lib/shared/types/blog-type-dto'
 import type { UploadedImage } from '@/lib/shared/types/upload-dto'
 import type { BlogArticleInput } from '@/lib/server/validation/blog-article-schema'
 
@@ -20,12 +20,6 @@ import {
   LocalizedTextInput,
   type LocalizedDraft,
 } from '@/app/(admin)/admin/components/localized-text-input'
-
-const CATEGORY_OPTIONS: { value: BlogCategoryValue; label: string }[] = [
-  { value: 'INDUSTRY_INSIGHTS', label: 'Industry Insights' },
-  { value: 'IMPACT_STORIES', label: 'Impact Stories' },
-  { value: 'COMMUNITY_ENGAGEMENT', label: 'Community Engagement' },
-]
 
 const STATUS_OPTIONS: { value: ContentStatusValue; label: string }[] = [
   { value: 'DRAFT', label: 'Draft' },
@@ -52,13 +46,20 @@ function avatarFrom(entity?: BlogArticleAdminDto): UploadedImage | null {
 
 export function BlogArticleForm({
   initial,
+  blogTypes,
 }: {
   initial?: BlogArticleAdminDto
+  blogTypes: BlogTypeAdminDto[]
 }) {
+  const blogTypeOptions = blogTypes.map((type) => ({
+    value: type.id,
+    label: type.name.en,
+  }))
+
   const router = useRouter()
   const [slug, setSlug] = useState(initial?.slug ?? '')
-  const [category, setCategory] = useState<BlogCategoryValue>(
-    initial?.category ?? 'INDUSTRY_INSIGHTS',
+  const [blogTypeId, setBlogTypeId] = useState<string>(
+    initial?.blogTypeId ?? blogTypes[0]?.id ?? '',
   )
   const [title, setTitle] = useState<LocalizedDraft>(
     initial?.title ?? { en: '' },
@@ -91,7 +92,7 @@ export function BlogArticleForm({
 
     const payload = {
       slug,
-      category,
+      blogTypeId,
       title,
       excerpt,
       body,
@@ -239,17 +240,23 @@ export function BlogArticleForm({
                 <div className="mb-4">
                   <label
                     className="mb-1.5 block text-sm font-medium text-ink/80"
-                    htmlFor="category"
+                    htmlFor="blogType"
                   >
-                    Category
+                    Blog type <span className="text-clay">*</span>
                   </label>
                   <Dropdown
-                    id="category"
-                    value={category}
-                    options={CATEGORY_OPTIONS}
-                    onChange={(next) => setCategory(next as BlogCategoryValue)}
+                    id="blogType"
+                    value={blogTypeId}
+                    options={blogTypeOptions}
+                    onChange={setBlogTypeId}
+                    placeholder="Select a blog type…"
                     buttonClassName="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink"
                   />
+                  {fieldErrors.blogTypeId && (
+                    <p className="mt-1 text-xs text-clay">
+                      {fieldErrors.blogTypeId.join(', ')}
+                    </p>
+                  )}
                 </div>
 
                 <div>

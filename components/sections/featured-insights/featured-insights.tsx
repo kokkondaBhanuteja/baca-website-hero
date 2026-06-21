@@ -6,7 +6,6 @@ import type { Locale } from '@/constants/i18n'
 import { Route } from '@/constants/routes'
 import { Link } from '@/i18n/navigation'
 import { listPublishedArticles } from '@/lib/server/services/blog-article-service'
-import { BLOG_CATEGORY_KEY } from '@/lib/shared/types/blog-dto'
 import { Eyebrow } from '@/components/ui/eyebrow'
 import { MediaReveal } from '@/components/ui/media-reveal'
 import { Reveal } from '@/components/ui/reveal'
@@ -68,11 +67,7 @@ export async function FeaturedInsights() {
                   <span className="rounded-full border border-line px-3 py-1 font-mono text-[0.6rem] uppercase tracking-[0.16em] text-ink-60">
                     {article.featured
                       ? tBlogs('featured')
-                      : tBlogs(
-                          `categories.${BLOG_CATEGORY_KEY[article.category]}` as Parameters<
-                            typeof tBlogs
-                          >[0],
-                        )}
+                      : article.blogType.name}
                   </span>
                   <span className="font-mono text-[0.6rem] uppercase tracking-[0.16em] text-ink-60">
                     {article.readMinutes} {tBlogs('minRead')}

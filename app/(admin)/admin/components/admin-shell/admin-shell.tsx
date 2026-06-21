@@ -12,6 +12,7 @@ import {
   Package,
   PanelLeftClose,
   PanelLeftOpen,
+  Tag,
   X,
   type LucideIcon,
 } from 'lucide-react'
@@ -30,6 +31,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Categories', href: '/admin/categories', icon: Layers },
   { label: 'Products', href: '/admin/products', icon: Package },
   { label: 'Blog articles', href: '/admin/blog-articles', icon: FileText },
+  { label: 'Blog types', href: '/admin/blog-types', icon: Tag },
   { label: 'Gallery', href: '/admin/gallery', icon: Images },
 ]
 

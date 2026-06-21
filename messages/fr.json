@@ -53,7 +53,7 @@
     }
   },
   "blogsPage": {
-    "eyebrow": "Perspectives",
+    "eyebrow": "Blogs",
     "heading": "Notes sur le négoce des épices et des matières premières.",
     "intro": "Analyses de marché, histoires d'origine et la réflexion qui guide notre sourcing et nos expéditions.",
     "empty": "De nouveaux articles arrivent prochainement. Revenez bientôt.",
@@ -61,12 +61,7 @@
     "featured": "À la une",
     "allArticles": "Tous les articles",
     "related": "Poursuivre la lecture",
-    "writtenBy": "Écrit par",
-    "categories": {
-      "industryInsights": "Analyses sectorielles",
-      "impactStories": "Histoires d'impact",
-      "communityEngagement": "Engagement communautaire"
-    }
+    "writtenBy": "Écrit par"
   },
   "notFound": {
     "eyebrow": "404 · Page introuvable",
@@ -101,7 +96,7 @@
         "label": "Produits"
       },
       "insights": {
-        "label": "Analyses"
+        "label": "Blogs"
       },
       "contact": {
         "label": "Contact"
@@ -215,7 +210,7 @@
     "imageAlt": "Portrait du directeur général de BACA"
   },
   "featuredInsights": {
-    "eyebrow": "Analyses",
+    "eyebrow": "Blogs",
     "heading": "Notes du commerce des épices et des matières premières.",
     "allArticles": "Tous les articles"
   },
@@ -248,7 +243,7 @@
       "resources": {
         "title": "Ressources",
         "links": {
-          "insights": "Analyses",
+          "insights": "Blogs",
           "certifications": "Certifications",
           "contact": "Contact",
           "catalogue": "Demander un catalogue"

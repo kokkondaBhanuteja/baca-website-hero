@@ -53,7 +53,7 @@
     }
   },
   "blogsPage": {
-    "eyebrow": "Inzichten",
+    "eyebrow": "Blogs",
     "heading": "Aantekeningen uit de handel in specerijen en grondstoffen.",
     "intro": "Marktanalyses, verhalen over de herkomst en de visie achter onze inkoop en verscheping.",
     "empty": "Nieuwe artikelen zijn onderweg. Kom binnenkort weer langs.",
@@ -61,12 +61,7 @@
     "featured": "Uitgelicht",
     "allArticles": "Alle artikelen",
     "related": "Verder lezen",
-    "writtenBy": "Geschreven door",
-    "categories": {
-      "industryInsights": "Sectorinzichten",
-      "impactStories": "Impactverhalen",
-      "communityEngagement": "Betrokkenheid bij de gemeenschap"
-    }
+    "writtenBy": "Geschreven door"
   },
   "notFound": {
     "eyebrow": "404 · Pagina niet gevonden",
@@ -101,7 +96,7 @@
         "label": "Producten"
       },
       "insights": {
-        "label": "Inzichten"
+        "label": "Blogs"
       },
       "contact": {
         "label": "Contact"
@@ -215,7 +210,7 @@
     "imageAlt": "Portret van de Managing Director van BACA"
   },
   "featuredInsights": {
-    "eyebrow": "Inzichten",
+    "eyebrow": "Blogs",
     "heading": "Notities uit de specerijen- en grondstoffenhandel.",
     "allArticles": "Alle artikelen"
   },
@@ -248,7 +243,7 @@
       "resources": {
         "title": "Bronnen",
         "links": {
-          "insights": "Inzichten",
+          "insights": "Blogs",
           "certifications": "Certificeringen",
           "contact": "Contact",
           "catalogue": "Catalogus aanvragen"

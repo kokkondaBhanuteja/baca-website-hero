@@ -9,7 +9,6 @@ import {
   getPublishedArticleBySlug,
   listRelatedArticles,
 } from '@/lib/server/services/blog-article-service'
-import { BLOG_CATEGORY_KEY } from '@/lib/shared/types/blog-dto'
 import { formatPublishedDate } from '@/lib/shared/format-date'
 import { MediaReveal } from '@/components/ui/media-reveal'
 import { MediaHero } from '@/components/shared/media-hero'
@@ -52,11 +51,7 @@ export default async function BlogArticlePage({ params }: PageParams) {
     article.publishedAt,
     locale as Locale,
   )
-  const categoryLabel = t(
-    `categories.${BLOG_CATEGORY_KEY[article.category]}` as Parameters<
-      typeof t
-    >[0],
-  )
+  const categoryLabel = article.blogType.name
 
   return (
     <>

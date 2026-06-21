@@ -53,7 +53,7 @@
     }
   },
   "blogsPage": {
-    "eyebrow": "Approfondimenti",
+    "eyebrow": "Blog",
     "heading": "Note dal commercio di spezie e materie prime.",
     "intro": "Analisi di mercato, storie d'origine e la visione dietro il nostro modo di selezionare e spedire.",
     "empty": "Nuovi articoli sono in arrivo. Torna presto a trovarci.",
@@ -61,12 +61,7 @@
     "featured": "In evidenza",
     "allArticles": "Tutti gli articoli",
     "related": "Continua a leggere",
-    "writtenBy": "Scritto da",
-    "categories": {
-      "industryInsights": "Approfondimenti di settore",
-      "impactStories": "Storie di impatto",
-      "communityEngagement": "Coinvolgimento della comunità"
-    }
+    "writtenBy": "Scritto da"
   },
   "notFound": {
     "eyebrow": "404 · Pagina non trovata",
@@ -101,7 +96,7 @@
         "label": "Prodotti"
       },
       "insights": {
-        "label": "Approfondimenti"
+        "label": "Blog"
       },
       "contact": {
         "label": "Contatti"
@@ -215,7 +210,7 @@
     "imageAlt": "Ritratto del Direttore Generale di BACA"
   },
   "featuredInsights": {
-    "eyebrow": "Approfondimenti",
+    "eyebrow": "Blog",
     "heading": "Note dal commercio di spezie e materie prime.",
     "allArticles": "Tutti gli articoli"
   },
@@ -248,7 +243,7 @@
       "resources": {
         "title": "Risorse",
         "links": {
-          "insights": "Approfondimenti",
+          "insights": "Blog",
           "certifications": "Certificazioni",
           "contact": "Contatti",
           "catalogue": "Richiedi un catalogo"

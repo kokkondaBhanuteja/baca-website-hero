@@ -1,6 +1,6 @@
 import 'server-only'
 
-import { Prisma, type BlogArticle } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 import { revalidateTag, unstable_cache } from 'next/cache'
 
 import type { Locale } from '@/constants/i18n'
@@ -23,13 +23,16 @@ import {
 } from '@/lib/shared/types/paginated-list'
 import type { BlogArticleInput } from '@/lib/server/validation/blog-article-schema'
 
+type ArticleRow = Prisma.BlogArticleGetPayload<{ include: { blogType: true } }>
+
 export const BLOG_ARTICLES_TAG = 'blog-articles'
 
-function mapAdmin(row: BlogArticle): BlogArticleAdminDto {
+function mapAdmin(row: ArticleRow): BlogArticleAdminDto {
   return {
     id: row.id,
     slug: row.slug,
-    category: row.category,
+    blogTypeId: row.blogTypeId,
+    blogTypeName: (row.blogType.name as LocalizedText).en,
     title: row.title as LocalizedText,
     excerpt: row.excerpt as LocalizedText,
     body: row.body as LocalizedText,
@@ -46,10 +49,13 @@ function mapAdmin(row: BlogArticle): BlogArticleAdminDto {
   }
 }
 
-function mapSummary(row: BlogArticle, locale: Locale): BlogArticleSummaryDto {
+function mapSummary(row: ArticleRow, locale: Locale): BlogArticleSummaryDto {
   return {
     slug: row.slug,
-    category: row.category,
+    blogType: {
+      slug: row.blogType.slug,
+      name: localizedValue(row.blogType.name as LocalizedText, locale),
+    },
     title: localizedValue(row.title as LocalizedText, locale),
     excerpt: localizedValue(row.excerpt as LocalizedText, locale),
     coverImageUrl: optimizedImageUrl(row.coverImageUrl),
@@ -62,7 +68,7 @@ function mapSummary(row: BlogArticle, locale: Locale): BlogArticleSummaryDto {
   }
 }
 
-function mapDetail(row: BlogArticle, locale: Locale): BlogArticleDetailDto {
+function mapDetail(row: ArticleRow, locale: Locale): BlogArticleDetailDto {
   return {
     ...mapSummary(row, locale),
     body: localizedValue(row.body as LocalizedText, locale),
@@ -72,7 +78,7 @@ function mapDetail(row: BlogArticle, locale: Locale): BlogArticleDetailDto {
 function toData(input: BlogArticleInput, publishedAt: Date | null) {
   return {
     slug: input.slug,
-    category: input.category,
+    blogTypeId: input.blogTypeId,
     title: input.title as Prisma.InputJsonValue,
     excerpt: input.excerpt as Prisma.InputJsonValue,
     body: input.body as Prisma.InputJsonValue,
@@ -118,6 +124,7 @@ export async function listArticlesForAdmin({
       orderBy: [{ createdAt: 'desc' }],
       skip: (page - 1) * pageSize,
       take: pageSize,
+      include: { blogType: true },
     }),
     prisma.blogArticle.count({ where }),
   ])
@@ -128,7 +135,10 @@ export async function listArticlesForAdmin({
 export async function getArticleForAdmin(
   id: string,
 ): Promise<BlogArticleAdminDto> {
-  const row = await prisma.blogArticle.findUnique({ where: { id } })
+  const row = await prisma.blogArticle.findUnique({
+    where: { id },
+    include: { blogType: true },
+  })
   if (!row) throw notFoundError('Article not found')
   return mapAdmin(row)
 }
@@ -139,6 +149,7 @@ export async function createArticle(
   try {
     const row = await prisma.blogArticle.create({
       data: toData(input, resolvePublishedAt(input, null)),
+      include: { blogType: true },
     })
     revalidateTag(BLOG_ARTICLES_TAG, 'max')
     return mapAdmin(row)
@@ -173,6 +184,7 @@ export async function updateArticle(
     const row = await prisma.blogArticle.update({
       where: { id },
       data: toData(input, resolvePublishedAt(input, existing.publishedAt)),
+      include: { blogType: true },
     })
     revalidateTag(BLOG_ARTICLES_TAG, 'max')
     if (previousCoverPublicId) {
@@ -218,6 +230,7 @@ export const listPublishedArticles = unstable_cache(
     const rows = await prisma.blogArticle.findMany({
       where: { status: 'PUBLISHED' },
       orderBy: [{ featured: 'desc' }, { publishedAt: 'desc' }],
+      include: { blogType: true },
     })
     return rows.map((row) => mapSummary(row, locale))
   },
@@ -231,7 +244,10 @@ export const getPublishedArticleBySlug = unstable_cache(
     locale: Locale,
   ): Promise<BlogArticleDetailDto | null> => {
     // slug is a unique column → use findUnique (cheaper than findFirst).
-    const row = await prisma.blogArticle.findUnique({ where: { slug } })
+    const row = await prisma.blogArticle.findUnique({
+      where: { slug },
+      include: { blogType: true },
+    })
     if (!row || row.status !== 'PUBLISHED') return null
     return mapDetail(row, locale)
   },
@@ -245,22 +261,23 @@ export const listRelatedArticles = unstable_cache(
     locale: Locale,
     limit = 3,
   ): Promise<BlogArticleSummaryDto[]> => {
-    // Find the source article to anchor the "related" set on its category.
+    // Find the source article to anchor the "related" set on its blogTypeId.
     const source = await prisma.blogArticle.findUnique({
       where: { slug: excludeSlug },
-      select: { category: true },
+      select: { blogTypeId: true },
     })
 
-    // Prefer same-category articles first, then fall back to recent published ones.
+    // Prefer same-type articles first, then fall back to recent published ones.
     const sameCategory = source
       ? await prisma.blogArticle.findMany({
           where: {
             status: 'PUBLISHED',
             slug: { not: excludeSlug },
-            category: source.category,
+            blogTypeId: source.blogTypeId,
           },
           orderBy: [{ publishedAt: 'desc' }],
           take: limit,
+          include: { blogType: true },
         })
       : []
 
@@ -276,6 +293,7 @@ export const listRelatedArticles = unstable_cache(
       },
       orderBy: [{ publishedAt: 'desc' }],
       take: limit - sameCategory.length,
+      include: { blogType: true },
     })
 
     return [...sameCategory, ...filler].map((row) => mapSummary(row, locale))
