@@ -21,7 +21,8 @@ side_effects: 'Pure — no side effects.'
 # BlogArticleSchema
 
 Purpose:
-Zod schema for blog article creation/update. Validates localized title/excerpt/body, metadata (status, featured), and image fields.
+Zod schema for blog article creation/update. Validates localized title/excerpt/body, the author
+byline (name/role/avatar), metadata (status, featured), and image fields.
 
 Exports:
 
@@ -48,6 +49,10 @@ Business Logic:
 - body: requiredLocalizedText — same as title
 - coverImageUrl: z.string().nullish() — optional Cloudinary URL
 - coverImagePublicId: z.string().nullish() — optional Cloudinary public ID (for deletion)
+- authorName: z.string().trim().max(120).nullish() — byline name (scalar; page falls back to "BACA Team")
+- authorRole: z.string().trim().max(120).nullish() — byline role/title (scalar)
+- authorAvatarUrl: z.string().url().nullish() — optional Cloudinary avatar URL
+- authorAvatarPublicId: z.string().nullish() — optional Cloudinary public ID (for deletion)
 - readMinutes: z.number().int().min(1).max(120).default(3) — estimated read time, 1-120 minutes, defaults to 3
 - status: z.enum(['DRAFT', 'PUBLISHED']).default('DRAFT') — publication state, defaults to DRAFT
 - featured: z.boolean().default(false) — if true, sorts to top on list views

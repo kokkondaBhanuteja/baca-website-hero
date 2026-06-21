@@ -19,7 +19,8 @@ imports_from:
 # ProductForm
 
 Purpose:
-Product create/edit form: slug, category dropdown, localized name/summary/description, product image, sort order, published toggle.
+Product create/edit form: slug, category dropdown, localized name/summary/description, the
+Origin/Specifications/Seasonality detail-page attributes, product image, sort order, published toggle.
 
 Used In:
 
@@ -32,10 +33,10 @@ Props:
 
 Business Logic:
 
-- Local state: slug, categoryId, name/summary/description (LocalizedDraft), image, sortOrder, isPublished
+- Local state: slug, categoryId, name/summary/description/origin/specifications/seasonality (LocalizedDraft), image, sortOrder, isPublished
 - onSubmit: builds payload, calls productsApi.create/update
 - Category dropdown uses categories array (id → label mapping); default to first if available
-- Name is required, summary/description optional (checked via hasAnyLocaleValue)
+- Name is required; summary/description/origin/specifications/seasonality optional (checked via hasAnyLocaleValue → null when empty)
 - ImageUploader (folder: 'baca/products')
 - Sort order: number input
 - Published checkbox
@@ -44,7 +45,7 @@ Business Logic:
 Layout:
 
 - Two-column CMS layout on `lg+` via `grid grid-cols-1 lg:grid-cols-12 lg:gap-8`.
-  - MAIN (`lg:col-span-8`): localized Name / Summary / Description in a single bordered card.
+  - MAIN (`lg:col-span-8`): localized Name / Summary / Description / Origin regions / Specifications / Seasonality in a single bordered card.
   - SIDEBAR (`lg:col-span-4`): three stacked cards — Save+Cancel + Published checkbox; Slug + Category + Sort order; Product image.
   - Sidebar is `lg:sticky lg:top-6` so actions stay visible while scrolling long descriptions.
 - Mobile: single-column stack.

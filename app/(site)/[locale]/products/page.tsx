@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Locale } from '@/constants/i18n'
 import { getCategoriesForLocale } from '@/lib/server/services/category-service'
 import { Eyebrow } from '@/components/ui/eyebrow'
-import { MediaReveal } from '@/components/ui/media-reveal'
+import { ProductCard } from '@/components/shared/product-card'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
 
@@ -62,34 +62,7 @@ export default async function ProductsPage({ params }: PageParams) {
 
                   <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     {category.products.map((product) => (
-                      <article
-                        key={product.id}
-                        id={product.slug}
-                        className="scroll-mt-header-offset overflow-hidden rounded-2xl border border-line bg-paper"
-                      >
-                        <MediaReveal className="aspect-[4/3]">
-                          {product.imageUrl ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                              src={product.imageUrl}
-                              alt={product.name}
-                              className="h-full w-full object-cover"
-                            />
-                          ) : (
-                            <div className="h-full w-full bg-bone" />
-                          )}
-                        </MediaReveal>
-                        <div className="p-5">
-                          <h3 className="font-heading text-lg font-light text-ink">
-                            {product.name}
-                          </h3>
-                          {product.summary && (
-                            <p className="mt-1 text-[13px] leading-relaxed text-ink-60">
-                              {product.summary}
-                            </p>
-                          )}
-                        </div>
-                      </article>
+                      <ProductCard key={product.id} product={product} />
                     ))}
                   </div>
                 </div>

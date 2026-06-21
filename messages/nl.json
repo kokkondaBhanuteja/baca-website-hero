@@ -10,7 +10,18 @@
     "eyebrow": "Onze catalogus",
     "heading": "Alles wat we exporteren, ingekocht aan de bron.",
     "intro": "Specerijen, noten en fruit — gesorteerd, gedocumenteerd en verscheept naar afnemers in 37 landen.",
-    "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug."
+    "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug.",
+    "detail": {
+      "backToProducts": "Alle producten",
+      "originRegions": "Herkomstregio’s",
+      "specifications": "Specificaties",
+      "seasonality": "Seizoensgebondenheid",
+      "seasonalityHint": "Oogst / piekbeschikbaarheid",
+      "requestQuote": "Offerte aanvragen",
+      "requestSample": "Monster aanvragen",
+      "pairsNaturally": "Past van nature",
+      "viewAllProducts": "Bekijk alle producten"
+    }
   },
   "contactPage": {
     "eyebrow": "Neem contact op",
@@ -46,6 +57,7 @@
     "featured": "Uitgelicht",
     "allArticles": "Alle artikelen",
     "related": "Verder lezen",
+    "writtenBy": "Geschreven door",
     "categories": {
       "industryInsights": "Sectorinzichten",
       "impactStories": "Impactverhalen",

@@ -10,7 +10,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - **Find who calls a service**: look at the `called_by` field in the service's frontmatter, OR grep `from '@/lib/server/services/<name>'`.
 - **Find the source file**: every `.claude.md` declares its `file:` in frontmatter.
 
-### Components (UI primitives, sections, layout, shared, admin) (50)
+### Components (UI primitives, sections, layout, shared, admin) (52)
 
 - [`AdminListSkeleton`](<app/(admin)/admin/components/admin-list-skeleton/admin-list-skeleton.claude.md>) — The single generic loading skeleton for every admin dashboard page. Replaces what
 - [`AdminListTable`](<app/(admin)/admin/components/admin-list-table/admin-list-table.claude.md>) — Generic, controlled admin list table with always-visible search, sticky thead, mobile cards, and pagination (10/page default). Caller wires state via `useAdminListUrlState`.
@@ -50,6 +50,8 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`StatsRow`](components/sections/stats-row/stats-row.claude.md) — 4-stat count-up row: numbers animate from 0 to target on intersection, with IntersectionObserver + RAF animation frame.
 - [`WhatsappFab`](components/sections/whatsapp-fab/whatsapp-fab.claude.md) — Floating WhatsApp action button fixed in bottom-right corner, links to CONTACT.whatsappUrl.
 - [`PageIntro`](components/shared/page-intro/page-intro.claude.md) — Shared inner-page header: eyebrow + oversized H1 + optional intro text. Used on all non-home pages.
+- [`MediaHero`](components/shared/media-hero/media-hero.claude.md) — Full-bleed editorial hero (cover image + gradient + overlaid eyebrow/title + meta slot). Shared by the product- and article-detail pages.
+- [`ProductCard`](components/shared/product-card/product-card.claude.md) — Catalogue product card (image + name + summary) linking to /products/<slug>. Shared by the /products grid and the detail "Pairs naturally" grid.
 - [`Button`](components/ui/button/button.claude.md) — Base button primitive with CVA variants for size/style. Wraps @base-ui ButtonPrimitive with outline, disabled, aria-invalid, and focus-visib
 - [`CtaLink`](components/ui/cta-link/cta-link.claude.md) — Shared marketing CTA pill: locale-aware Link styled as a saffron/outline rounded-full pill (cva variant × tone × size + optional RTL-aware arrow). Replaced four hand-rolled copies across hero, cta-band, 404, and mobile menu.
 - [`Cursor`](components/ui/cursor/cursor.claude.md) — Desktop-only magnetic cursor: a saffron dot tracks the pointer instantly; a ring trails with easing and morphs to wrap buttons/data-cursor e
@@ -135,7 +137,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`ProductsApi`](lib/api-client/endpoints/products-api/products-api.claude.md) — Typed axios wrappers for product CRUD endpoints. Used by admin products dashboard.
 - [`UploadsApi`](lib/api-client/endpoints/uploads-api/uploads-api.claude.md) — Typed axios wrapper for Cloudinary upload signature generation. Returns a signed request object that allows the browser uploader to upload d
 
-### Pages (app/.../page.tsx) (18)
+### Pages (app/.../page.tsx) (19)
 
 - [`PageAppAdminAdminDashboardBlogArticlesId`](<app/(admin)/admin/(dashboard)/blog-articles/[id]/page.claude.md>) — Edit existing blog article. Fetches article (all locales), passes as initial data to BlogArticleForm. notFound() if not found.
 - [`PageAppAdminAdminDashboardBlogArticlesNew`](<app/(admin)/admin/(dashboard)/blog-articles/new/page.claude.md>) — Create new blog article form. Renders BlogArticleForm client component with no initial data.
@@ -155,6 +157,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`PageAppSiteLocaleGallery`](<app/(site)/[locale]/gallery/page.claude.md>) — Gallery of published images. Displays in a responsive grid (2 cols mobile, 3 cols tablet, 4 cols desktop) with captions. force-dynamic ensur
 - [`PageAppSiteLocale`](<app/(site)/[locale]/page.claude.md>) — Marketing homepage. Composed of multiple hero and content sections (Hero, Manifesto, Stats, ProductPreview, Approach, Certifications, Global
 - [`PageAppSiteLocaleProducts`](<app/(site)/[locale]/products/page.claude.md>) — Catalog of products grouped by category. force-dynamic ensures live updates when admins publish/edit products. Displays categories with loca
+- [`ProductDetailPage`](<app/(site)/[locale]/products/[slug]/page.claude.md>) — Product detail (force-dynamic): MediaHero + description + Origin/Specifications/Seasonality attributes + quotation/sample CTAs + "Pairs naturally" related grid. notFound() on unknown/unpublished slug.
 
 ### Layouts (app/.../layout.tsx) (3)
 
@@ -162,13 +165,14 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`LayoutAppAdminAdmin`](<app/(admin)/admin/layout.claude.md>) — Root HTML document for the admin dashboard. English only (LTR), no next-intl provider. Loads Inter font and sets robots noindex.
 - [`LayoutAppSiteLocale`](<app/(site)/[locale]/layout.claude.md>) — Root HTML document for the public site. Sets up localization via NextIntlClientProvider, loads 4 fonts (Inter, Fraunces, JetBrains Mono, Not
 
-### Loading boundaries (app/.../loading.tsx) (5)
+### Loading boundaries (app/.../loading.tsx) (6)
 
 - [`LoadingAppAdminAdminDashboard`](<app/(admin)/admin/(dashboard)/loading.claude.md>) — Single shared loading boundary for every admin dashboard route — products,
 - [`LoadingAppSiteLocaleBlogsArticleSlug`](<app/(site)/[locale]/blogs/[articleSlug]/loading.claude.md>) — Skeleton fallback for article detail page. Shows back link, metadata, cover image, and body paragraph placeholders.
 - [`LoadingAppSiteLocaleBlogs`](<app/(site)/[locale]/blogs/loading.claude.md>) — Skeleton fallback for blogs list. Shows 6 article card placeholders in a 3-column grid.
 - [`LoadingAppSiteLocaleGallery`](<app/(site)/[locale]/gallery/loading.claude.md>) — Skeleton fallback for gallery. Shows 12 square image placeholders in responsive grid.
 - [`LoadingAppSiteLocaleProducts`](<app/(site)/[locale]/products/loading.claude.md>) — Skeleton fallback UI while products page data is loading. Shows header, intro skeletons, and 2 category sections with 6 products each.
+- [`ProductDetailLoading`](<app/(site)/[locale]/products/[slug]/loading.claude.md>) — Skeleton fallback for the product detail page: hero placeholder, description lines, 3-column attribute block, two CTA pills.
 
 ### Error boundaries (app/.../error.tsx) (2)
 

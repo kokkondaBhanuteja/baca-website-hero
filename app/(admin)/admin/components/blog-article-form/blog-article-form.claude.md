@@ -18,7 +18,8 @@ imports_from:
 # BlogArticleForm
 
 Purpose:
-Blog article create/edit form: slug, category dropdown, localized title/excerpt/body, cover image, read minutes, status, featured toggle.
+Blog article create/edit form: slug, category dropdown, localized title/excerpt/body, cover image,
+author (name/role/avatar), read minutes, status, featured toggle.
 
 Used In:
 
@@ -36,6 +37,7 @@ Business Logic:
 - On error: displays error message + fieldErrors map (keys like 'title.en')
 - LocalizedTextInput components for title/excerpt/body with multiline option
 - ImageUploader for cover image (folder: 'baca/blog')
+- Author card: plain-text Name + Role inputs and an ImageUploader avatar (folder: 'baca/authors'); empty name/role serialized as null
 - Status dropdown: DRAFT | PUBLISHED
 - Featured checkbox
 
@@ -43,7 +45,7 @@ Layout:
 
 - Two-column CMS layout on `lg+` via `grid grid-cols-1 lg:grid-cols-12 lg:gap-8`.
   - MAIN (`lg:col-span-8`): localized Title / Excerpt / Body inside a single bordered card.
-  - SIDEBAR / ASIDE (`lg:col-span-4`): three stacked bordered cards — (1) Save+Cancel actions + Status dropdown + Featured checkbox, (2) Slug + Category + Read minutes, (3) Cover image.
+  - SIDEBAR / ASIDE (`lg:col-span-4`): four stacked bordered cards — (1) Save+Cancel actions + Status dropdown + Featured checkbox, (2) Slug + Category + Read minutes, (3) Cover image, (4) Author (name + role + avatar uploader).
   - Sidebar is `lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto` so the Save button stays in view while editing the long body field.
 - Mobile (`<lg`): everything stacks single column in DOM order — main first, then sidebar cards.
 - Form no longer caps at `max-w-2xl`; it spans the full content area so wide screens are used.

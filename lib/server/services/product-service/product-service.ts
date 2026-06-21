@@ -9,7 +9,12 @@ import { notFoundError } from '@/lib/server/http/http-error'
 import { mapPrismaError } from '@/lib/server/http/prisma-error'
 import { localizedValue } from '@/lib/server/localization/localized-value'
 import { prisma } from '@/lib/server/prisma'
-import type { ProductAdminDto } from '@/lib/shared/types/catalogue-dto'
+import { optimizedImageUrl } from '@/lib/shared/cloudinary-url'
+import type {
+  ProductAdminDto,
+  ProductDetailPublicDto,
+  ProductPublicDto,
+} from '@/lib/shared/types/catalogue-dto'
 import type { LocalizedText } from '@/lib/shared/types/localized-text'
 import {
   ADMIN_LIST_DEFAULT_PAGE_SIZE,
@@ -31,6 +36,9 @@ function mapAdmin(row: ProductRow): ProductAdminDto {
     name: row.name as LocalizedText,
     summary: (row.summary as LocalizedText | null) ?? null,
     description: (row.description as LocalizedText | null) ?? null,
+    origin: (row.origin as LocalizedText | null) ?? null,
+    specifications: (row.specifications as LocalizedText | null) ?? null,
+    seasonality: (row.seasonality as LocalizedText | null) ?? null,
     imageUrl: row.imageUrl,
     imagePublicId: row.imagePublicId,
     sortOrder: row.sortOrder,
@@ -48,6 +56,15 @@ function toData(input: ProductInput) {
       : Prisma.DbNull,
     description: input.description
       ? (input.description as Prisma.InputJsonValue)
+      : Prisma.DbNull,
+    origin: input.origin
+      ? (input.origin as Prisma.InputJsonValue)
+      : Prisma.DbNull,
+    specifications: input.specifications
+      ? (input.specifications as Prisma.InputJsonValue)
+      : Prisma.DbNull,
+    seasonality: input.seasonality
+      ? (input.seasonality as Prisma.InputJsonValue)
       : Prisma.DbNull,
     imageUrl: input.imageUrl ?? null,
     imagePublicId: input.imagePublicId ?? null,
@@ -187,5 +204,104 @@ export const listPublishedProducts = unstable_cache(
     }))
   },
   ['listPublishedProducts'],
+  { tags: [PRODUCTS_TAG] },
+)
+
+/**
+ * Single published product by slug (with its category), resolved for the locale.
+ * Returns null when the slug is unknown, the product is unpublished, or its
+ * category is unpublished — the detail page calls notFound() on null.
+ * Cached + tagged with PRODUCTS_TAG so admin edits flush it.
+ */
+export const getPublishedProductBySlug = unstable_cache(
+  async (
+    slug: string,
+    locale: Locale,
+  ): Promise<ProductDetailPublicDto | null> => {
+    // slug is a unique column → findUnique (cheaper than findFirst).
+    const row = await prisma.product.findUnique({
+      where: { slug },
+      include: { category: true },
+    })
+    if (!row || !row.isPublished || !row.category.isPublished) return null
+    return {
+      id: row.id,
+      slug: row.slug,
+      name: localizedValue(row.name as LocalizedText, locale),
+      summary: localizedValue(row.summary as LocalizedText | null, locale),
+      description: localizedValue(
+        row.description as LocalizedText | null,
+        locale,
+      ),
+      origin: localizedValue(row.origin as LocalizedText | null, locale),
+      specifications: localizedValue(
+        row.specifications as LocalizedText | null,
+        locale,
+      ),
+      seasonality: localizedValue(
+        row.seasonality as LocalizedText | null,
+        locale,
+      ),
+      imageUrl: optimizedImageUrl(row.imageUrl),
+      categorySlug: row.category.slug,
+      categoryName: localizedValue(row.category.name as LocalizedText, locale),
+    }
+  },
+  ['getPublishedProductBySlug'],
+  { tags: [PRODUCTS_TAG] },
+)
+
+/**
+ * "Pairs naturally" — other published products, preferring the same category as
+ * `excludeSlug`, falling back to recent products to fill the limit (mirrors
+ * listRelatedArticles). Cached + tagged with PRODUCTS_TAG.
+ */
+export const listRelatedProducts = unstable_cache(
+  async (
+    excludeSlug: string,
+    locale: Locale,
+    limit = 3,
+  ): Promise<ProductPublicDto[]> => {
+    const source = await prisma.product.findUnique({
+      where: { slug: excludeSlug },
+      select: { categoryId: true },
+    })
+
+    const sameCategory = source
+      ? await prisma.product.findMany({
+          where: {
+            isPublished: true,
+            category: { isPublished: true },
+            slug: { not: excludeSlug },
+            categoryId: source.categoryId,
+          },
+          orderBy: [{ sortOrder: 'asc' }],
+          take: limit,
+        })
+      : []
+
+    const filler =
+      sameCategory.length >= limit
+        ? []
+        : await prisma.product.findMany({
+            where: {
+              isPublished: true,
+              category: { isPublished: true },
+              slug: { not: excludeSlug },
+              NOT: { id: { in: sameCategory.map((product) => product.id) } },
+            },
+            orderBy: [{ categoryId: 'asc' }, { sortOrder: 'asc' }],
+            take: limit - sameCategory.length,
+          })
+
+    return [...sameCategory, ...filler].map((product) => ({
+      id: product.id,
+      slug: product.slug,
+      name: localizedValue(product.name as LocalizedText, locale),
+      summary: localizedValue(product.summary as LocalizedText | null, locale),
+      imageUrl: optimizedImageUrl(product.imageUrl),
+    }))
+  },
+  ['listRelatedProducts'],
   { tags: [PRODUCTS_TAG] },
 )

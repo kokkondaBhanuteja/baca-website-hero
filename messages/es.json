@@ -10,7 +10,18 @@
     "eyebrow": "Nuestro catálogo",
     "heading": "Todo lo que exportamos, abastecido en origen.",
     "intro": "Especias, frutos secos y frutas: clasificados, documentados y enviados a compradores de 37 países.",
-    "empty": "Nuestro catálogo se está actualizando. Vuelve pronto."
+    "empty": "Nuestro catálogo se está actualizando. Vuelve pronto.",
+    "detail": {
+      "backToProducts": "Todos los productos",
+      "originRegions": "Regiones de origen",
+      "specifications": "Especificaciones",
+      "seasonality": "Estacionalidad",
+      "seasonalityHint": "Cosecha / disponibilidad máxima",
+      "requestQuote": "Solicitar cotización",
+      "requestSample": "Solicitar muestra",
+      "pairsNaturally": "Combina naturalmente",
+      "viewAllProducts": "Ver todos los productos"
+    }
   },
   "contactPage": {
     "eyebrow": "Contáctenos",
@@ -46,6 +57,7 @@
     "featured": "Destacado",
     "allArticles": "Todos los artículos",
     "related": "Sigue leyendo",
+    "writtenBy": "Escrito por",
     "categories": {
       "industryInsights": "Perspectivas del sector",
       "impactStories": "Historias de impacto",

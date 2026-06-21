@@ -10,7 +10,18 @@
     "eyebrow": "Unser Katalog",
     "heading": "Alles, was wir exportieren — am Ursprung beschafft.",
     "intro": "Gewürze, Nüsse und Früchte — sortiert, dokumentiert und an Abnehmer in 37 Ländern verschifft.",
-    "empty": "Unser Katalog wird gerade aktualisiert. Bitte schauen Sie bald wieder vorbei."
+    "empty": "Unser Katalog wird gerade aktualisiert. Bitte schauen Sie bald wieder vorbei.",
+    "detail": {
+      "backToProducts": "Alle Produkte",
+      "originRegions": "Herkunftsregionen",
+      "specifications": "Spezifikationen",
+      "seasonality": "Saisonalität",
+      "seasonalityHint": "Ernte / Hauptverfügbarkeit",
+      "requestQuote": "Angebot anfordern",
+      "requestSample": "Muster anfordern",
+      "pairsNaturally": "Passt natürlich dazu",
+      "viewAllProducts": "Alle Produkte ansehen"
+    }
   },
   "contactPage": {
     "eyebrow": "Kontakt aufnehmen",
@@ -46,6 +57,7 @@
     "featured": "Empfohlen",
     "allArticles": "Alle Artikel",
     "related": "Weiterlesen",
+    "writtenBy": "Geschrieben von",
     "categories": {
       "industryInsights": "Brancheneinblicke",
       "impactStories": "Wirkungsgeschichten",

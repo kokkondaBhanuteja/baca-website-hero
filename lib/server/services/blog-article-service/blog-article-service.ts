@@ -35,6 +35,10 @@ function mapAdmin(row: BlogArticle): BlogArticleAdminDto {
     body: row.body as LocalizedText,
     coverImageUrl: row.coverImageUrl,
     coverImagePublicId: row.coverImagePublicId,
+    authorName: row.authorName,
+    authorRole: row.authorRole,
+    authorAvatarUrl: row.authorAvatarUrl,
+    authorAvatarPublicId: row.authorAvatarPublicId,
     readMinutes: row.readMinutes,
     status: row.status,
     featured: row.featured,
@@ -49,6 +53,9 @@ function mapSummary(row: BlogArticle, locale: Locale): BlogArticleSummaryDto {
     title: localizedValue(row.title as LocalizedText, locale),
     excerpt: localizedValue(row.excerpt as LocalizedText, locale),
     coverImageUrl: optimizedImageUrl(row.coverImageUrl),
+    authorName: row.authorName,
+    authorRole: row.authorRole,
+    authorAvatarUrl: optimizedImageUrl(row.authorAvatarUrl),
     readMinutes: row.readMinutes,
     featured: row.featured,
     publishedAt: row.publishedAt?.toISOString() ?? null,
@@ -71,6 +78,10 @@ function toData(input: BlogArticleInput, publishedAt: Date | null) {
     body: input.body as Prisma.InputJsonValue,
     coverImageUrl: input.coverImageUrl ?? null,
     coverImagePublicId: input.coverImagePublicId ?? null,
+    authorName: input.authorName ?? null,
+    authorRole: input.authorRole ?? null,
+    authorAvatarUrl: input.authorAvatarUrl ?? null,
+    authorAvatarPublicId: input.authorAvatarPublicId ?? null,
     readMinutes: input.readMinutes,
     status: input.status,
     featured: input.featured,
@@ -152,6 +163,11 @@ export async function updateArticle(
     existing.coverImagePublicId !== input.coverImagePublicId
       ? existing.coverImagePublicId
       : null
+  const previousAvatarPublicId =
+    existing.authorAvatarPublicId &&
+    existing.authorAvatarPublicId !== input.authorAvatarPublicId
+      ? existing.authorAvatarPublicId
+      : null
 
   try {
     const row = await prisma.blogArticle.update({
@@ -161,6 +177,9 @@ export async function updateArticle(
     revalidateTag(BLOG_ARTICLES_TAG, 'max')
     if (previousCoverPublicId) {
       await destroyUploadedImage(previousCoverPublicId)
+    }
+    if (previousAvatarPublicId) {
+      await destroyUploadedImage(previousAvatarPublicId)
     }
     return mapAdmin(row)
   } catch (error) {
@@ -181,6 +200,9 @@ export async function deleteArticle(id: string): Promise<void> {
   revalidateTag(BLOG_ARTICLES_TAG, 'max')
   if (row.coverImagePublicId) {
     await destroyUploadedImage(row.coverImagePublicId)
+  }
+  if (row.authorAvatarPublicId) {
+    await destroyUploadedImage(row.authorAvatarPublicId)
   }
 }
 

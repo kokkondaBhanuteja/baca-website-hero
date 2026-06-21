@@ -14,6 +14,7 @@ export const UPLOAD_FOLDERS: readonly UploadFolder[] = [
   'baca/products',
   'baca/categories',
   'baca/blog',
+  'baca/authors',
   'baca/gallery',
 ]
 

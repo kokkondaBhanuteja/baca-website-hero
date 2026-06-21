@@ -19,6 +19,9 @@ export const productInputSchema = z
     name: requiredLocalizedText,
     summary: optionalLocalizedText.nullish(),
     description: optionalLocalizedText.nullish(),
+    origin: optionalLocalizedText.nullish(),
+    specifications: optionalLocalizedText.nullish(),
+    seasonality: optionalLocalizedText.nullish(),
     imageUrl: z
       .string()
       .url('Image URL must be a valid URL')

@@ -10,7 +10,18 @@
     "eyebrow": "Our catalogue",
     "heading": "Everything we export, sourced at origin.",
     "intro": "Spices, nuts and fruits — graded, documented, and shipped to buyers across 37 countries.",
-    "empty": "Our catalogue is being updated. Please check back soon."
+    "empty": "Our catalogue is being updated. Please check back soon.",
+    "detail": {
+      "backToProducts": "All products",
+      "originRegions": "Origin regions",
+      "specifications": "Specifications",
+      "seasonality": "Seasonality",
+      "seasonalityHint": "Harvest / peak availability",
+      "requestQuote": "Request quotation",
+      "requestSample": "Request sample",
+      "pairsNaturally": "Pairs naturally",
+      "viewAllProducts": "View all products"
+    }
   },
   "contactPage": {
     "eyebrow": "Get in touch",
@@ -46,6 +57,7 @@
     "featured": "Featured",
     "allArticles": "All articles",
     "related": "Keep reading",
+    "writtenBy": "Written by",
     "categories": {
       "industryInsights": "Industry Insights",
       "impactStories": "Impact Stories",
