@@ -49,9 +49,14 @@ Business Logic:
 - `export const dynamic = 'force-dynamic'` — live with admin edits.
 - `generateMetadata()` builds the title from the product name + summary/description.
 - Breadcrumb: Home / Products / {name}.
-- Split section (`lg:grid-cols-2`): LEFT = product image (`MediaReveal`, `lg:sticky lg:top-24`, bone
-  fallback); RIGHT = `<h1>` name + italic `botanicalName` subtitle, a `summary` lead line, and the three
-  (optional) structured attribute sections — each rendered only when its data is non-empty:
+- **Adaptive layout** (`useTwoColumn = hasImage`):
+  - **With image** → two-column split (`lg:grid-cols-2`): LEFT = product image (`MediaReveal`,
+    `lg:sticky lg:top-24`); RIGHT = heading + structured sections + CTAs.
+  - **No image (paste-only / README-first product)** → single centered `max-w-[760px]` column
+    (heading + CTAs + any structured sections), matching the Markdown body width below. No empty
+    image box is rendered. `heading`, `ctaRow`, `structuredSections` are extracted JSX reused by both branches.
+- Heading = `<h1>` name + italic `botanicalName` subtitle + `summary` lead line. The three structured
+  attribute sections render only when their data is non-empty (`hasStructured`):
   - Origin regions → bordered rounded-full pills from `originRegions[]`.
   - Specifications → 2-col `<dl>` of `specs[{label,value}]`.
   - Seasonality → `seasonalityHint` + `<SeasonalityCalendar>` driven by `harvest/peakMonths`.
