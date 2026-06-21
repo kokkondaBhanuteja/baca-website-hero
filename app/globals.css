@@ -234,6 +234,33 @@
   border-color: transparent;
 }
 
+/* Brand-matched scrollbar — saffron pill thumb on a transparent track.
+   Fine pointers only (touch devices auto-hide their scrollbars). The browser
+   places the bar on the correct edge from <html dir>, so RTL needs no extra rules. */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--saffron) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--saffron);
+    border-radius: 9999px;
+    /* transparent gutter via padding-box → a thin floating pill on any bg */
+    border: 3px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--clay);
+  }
+}
+
 /* Lusion-style image reveal — initial masked state (GSAP animates the rest) */
 .reveal-img {
   clip-path: inset(0 100% 0 0);

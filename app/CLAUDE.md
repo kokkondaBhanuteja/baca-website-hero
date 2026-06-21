@@ -11,7 +11,8 @@ app/
     page.tsx               Home (ISR, revalidate=3600). Composes section components from components/sections/*.
                            DB slices (header nav, ProductPreview, FeaturedInsights) use tagged unstable_cache
                            in lib/server/services/* — admin mutations revalidate via revalidateTag.
-    products/page.tsx      force-dynamic. DB catalogue (category-service.getCategoriesForLocale).
+    products/page.tsx      force-dynamic. DB catalogue (category-service.getCategoriesForLocale). Cards link to [slug].
+    products/[slug]/page.tsx   force-dynamic. Product detail — MediaHero + attributes + CTAs + "Pairs naturally".
     blogs/page.tsx         force-dynamic. Published articles list.
     blogs/[articleSlug]/page.tsx   force-dynamic. Article detail + related. notFound() on unknown slug.
     gallery/page.tsx       force-dynamic. Published gallery images.

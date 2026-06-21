@@ -6,6 +6,10 @@ Cross-page reusables that don't fit `ui/` (pure primitives, no page copy) or
 ```
 page-intro/             Inner-page header — Eyebrow + oversized H1 + optional intro.
                         Used by every non-home page.
+media-hero/             Full-bleed editorial hero (cover image + gradient + overlaid eyebrow/title +
+                        meta slot). Shared by the product- and article-detail pages.
+product-card/           Catalogue product card (image + name + summary) linking to /products/<slug>.
+                        Used by the /products grid and the detail page's "Pairs naturally" grid.
 ```
 
 Add new shared primitives here only when they're used by 2+ pages AND don't fit

@@ -41,6 +41,15 @@ function imageFrom(entity?: BlogArticleAdminDto): UploadedImage | null {
     : null
 }
 
+function avatarFrom(entity?: BlogArticleAdminDto): UploadedImage | null {
+  return entity?.authorAvatarUrl && entity.authorAvatarPublicId
+    ? {
+        imageUrl: entity.authorAvatarUrl,
+        imagePublicId: entity.authorAvatarPublicId,
+      }
+    : null
+}
+
 export function BlogArticleForm({
   initial,
 }: {
@@ -59,6 +68,11 @@ export function BlogArticleForm({
   )
   const [body, setBody] = useState<LocalizedDraft>(initial?.body ?? { en: '' })
   const [cover, setCover] = useState<UploadedImage | null>(imageFrom(initial))
+  const [authorName, setAuthorName] = useState(initial?.authorName ?? '')
+  const [authorRole, setAuthorRole] = useState(initial?.authorRole ?? '')
+  const [avatar, setAvatar] = useState<UploadedImage | null>(
+    avatarFrom(initial),
+  )
   const [readMinutes, setReadMinutes] = useState(initial?.readMinutes ?? 3)
   const [status, setStatus] = useState<ContentStatusValue>(
     initial?.status ?? 'DRAFT',
@@ -83,6 +97,10 @@ export function BlogArticleForm({
       body,
       coverImageUrl: cover?.imageUrl ?? null,
       coverImagePublicId: cover?.imagePublicId ?? null,
+      authorName: authorName.trim() || null,
+      authorRole: authorRole.trim() || null,
+      authorAvatarUrl: avatar?.imageUrl ?? null,
+      authorAvatarPublicId: avatar?.imagePublicId ?? null,
       readMinutes,
       status,
       featured: isFeatured,
@@ -260,6 +278,51 @@ export function BlogArticleForm({
                   folder="baca/blog"
                   value={cover}
                   onChange={setCover}
+                />
+              </div>
+
+              <div className="rounded-2xl border border-line bg-paper p-5 sm:p-6">
+                <p className="mb-3 text-sm font-medium text-ink/80">
+                  Author{' '}
+                  <span className="font-normal text-ink/45">
+                    (falls back to “BACA Team”)
+                  </span>
+                </p>
+                <div className="mb-4">
+                  <label
+                    className="mb-1.5 block text-sm font-medium text-ink/80"
+                    htmlFor="authorName"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id="authorName"
+                    value={authorName}
+                    onChange={(event) => setAuthorName(event.target.value)}
+                    placeholder="BACA Team"
+                    className="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="mb-1.5 block text-sm font-medium text-ink/80"
+                    htmlFor="authorRole"
+                  >
+                    Role
+                  </label>
+                  <input
+                    id="authorRole"
+                    value={authorRole}
+                    onChange={(event) => setAuthorRole(event.target.value)}
+                    placeholder="Editorial"
+                    className="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink"
+                  />
+                </div>
+                <ImageUploader
+                  label="Author avatar"
+                  folder="baca/authors"
+                  value={avatar}
+                  onChange={setAvatar}
                 />
               </div>
             </div>

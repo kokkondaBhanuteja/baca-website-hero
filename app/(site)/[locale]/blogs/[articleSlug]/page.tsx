@@ -10,11 +10,16 @@ import {
   listRelatedArticles,
 } from '@/lib/server/services/blog-article-service'
 import { BLOG_CATEGORY_KEY } from '@/lib/shared/types/blog-dto'
+import { formatPublishedDate } from '@/lib/shared/format-date'
 import { MediaReveal } from '@/components/ui/media-reveal'
+import { MediaHero } from '@/components/shared/media-hero'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
 
 export const dynamic = 'force-dynamic'
+
+// Byline fallback when an article has no explicit author.
+const DEFAULT_AUTHOR = { name: 'BACA Team', role: '' }
 
 type PageParams = { params: Promise<{ locale: string; articleSlug: string }> }
 
@@ -40,10 +45,57 @@ export default async function BlogArticlePage({ params }: PageParams) {
     .split(/\n{2,}/)
     .filter((block) => block.trim())
 
+  const authorName = article.authorName ?? DEFAULT_AUTHOR.name
+  const authorRole = article.authorRole ?? DEFAULT_AUTHOR.role
+  const authorInitial = authorName.charAt(0).toUpperCase()
+  const publishedDate = formatPublishedDate(
+    article.publishedAt,
+    locale as Locale,
+  )
+  const categoryLabel = t(
+    `categories.${BLOG_CATEGORY_KEY[article.category]}` as Parameters<
+      typeof t
+    >[0],
+  )
+
   return (
     <>
-      <SiteHeader forceSolid />
-      <main className="min-h-screen bg-paper pt-header-base">
+      <SiteHeader />
+      <main className="min-h-screen bg-paper">
+        <MediaHero
+          imageUrl={article.coverImageUrl}
+          imageAlt={article.title}
+          eyebrow={categoryLabel}
+          title={article.title}
+        >
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <div className="flex items-center gap-3">
+              {article.authorAvatarUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={article.authorAvatarUrl}
+                  alt={authorName}
+                  className="h-10 w-10 rounded-full object-cover"
+                />
+              ) : (
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-saffron/25 font-heading text-base text-paper">
+                  {authorInitial}
+                </span>
+              )}
+              <div className="leading-tight">
+                <p className="text-sm font-medium text-paper">{authorName}</p>
+                {authorRole && (
+                  <p className="text-[12px] text-paper/60">{authorRole}</p>
+                )}
+              </div>
+            </div>
+            <span className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-paper/65">
+              {publishedDate && `${publishedDate} · `}
+              {article.readMinutes} {t('minRead')}
+            </span>
+          </div>
+        </MediaHero>
+
         <article className="mx-auto max-w-[760px] px-5 py-[clamp(3rem,6vw,5rem)] sm:px-8">
           <Link
             href={Route.Blogs}
@@ -52,41 +104,50 @@ export default async function BlogArticlePage({ params }: PageParams) {
             ← {t('allArticles')}
           </Link>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-ink-60">
-            <span className="rounded-full border border-line px-3 py-1">
-              {t(
-                `categories.${BLOG_CATEGORY_KEY[article.category]}` as Parameters<
-                  typeof t
-                >[0],
-              )}
-            </span>
-            <span>
-              {article.readMinutes} {t('minRead')}
-            </span>
-          </div>
-
-          <h1 className="mt-5 text-balance font-heading text-[clamp(2rem,5vw,3.5rem)] font-light leading-[1.08] tracking-[-0.02em] text-ink">
-            {article.title}
-          </h1>
-          <p className="mt-5 text-[17px] leading-relaxed text-ink-60">
+          <p className="mt-8 text-pretty text-[19px] leading-relaxed text-ink/80">
             {article.excerpt}
           </p>
 
-          {article.coverImageUrl && (
-            <MediaReveal className="mt-10 aspect-[16/9] rounded-2xl border border-line">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={article.coverImageUrl}
-                alt={article.title}
-                className="h-full w-full object-cover"
-              />
-            </MediaReveal>
-          )}
-
-          <div className="mt-10 space-y-5 text-[16px] leading-relaxed text-ink/85">
+          <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-ink/85">
             {paragraphs.map((block, index) => (
-              <p key={index}>{block}</p>
+              <p
+                key={index}
+                className={
+                  index === 0
+                    ? 'first-letter:float-start first-letter:me-3 first-letter:mt-1 first-letter:font-heading first-letter:text-[3.4rem] first-letter:font-light first-letter:leading-[0.78] first-letter:text-clay'
+                    : undefined
+                }
+              >
+                {block}
+              </p>
             ))}
+          </div>
+
+          {/* Author card */}
+          <div className="mt-12 flex items-center gap-4 border-t border-line pt-8">
+            {article.authorAvatarUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={article.authorAvatarUrl}
+                alt={authorName}
+                className="h-14 w-14 rounded-full object-cover"
+              />
+            ) : (
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-saffron/15 font-heading text-xl text-clay">
+                {authorInitial}
+              </span>
+            )}
+            <div>
+              <p className="font-mono text-[0.6rem] uppercase tracking-[0.16em] text-ink-60">
+                {t('writtenBy')}
+              </p>
+              <p className="mt-1 font-heading text-lg font-light text-ink">
+                {authorName}
+              </p>
+              {authorRole && (
+                <p className="text-[13px] text-ink-60">{authorRole}</p>
+              )}
+            </div>
           </div>
         </article>
 

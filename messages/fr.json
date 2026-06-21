@@ -10,7 +10,18 @@
     "eyebrow": "Notre catalogue",
     "heading": "Tout ce que nous exportons, sourcé à l'origine.",
     "intro": "Épices, fruits à coque et fruits — triés, documentés et expédiés vers des acheteurs dans 37 pays.",
-    "empty": "Notre catalogue est en cours de mise à jour. Revenez bientôt."
+    "empty": "Notre catalogue est en cours de mise à jour. Revenez bientôt.",
+    "detail": {
+      "backToProducts": "Tous les produits",
+      "originRegions": "Régions d’origine",
+      "specifications": "Spécifications",
+      "seasonality": "Saisonnalité",
+      "seasonalityHint": "Récolte / pic de disponibilité",
+      "requestQuote": "Demander un devis",
+      "requestSample": "Demander un échantillon",
+      "pairsNaturally": "S’accorde naturellement",
+      "viewAllProducts": "Voir tous les produits"
+    }
   },
   "contactPage": {
     "eyebrow": "Contactez-nous",
@@ -46,6 +57,7 @@
     "featured": "À la une",
     "allArticles": "Tous les articles",
     "related": "Poursuivre la lecture",
+    "writtenBy": "Écrit par",
     "categories": {
       "industryInsights": "Analyses sectorielles",
       "impactStories": "Histoires d'impact",

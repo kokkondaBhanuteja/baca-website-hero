@@ -10,7 +10,18 @@
     "eyebrow": "كتالوجنا",
     "heading": "كل ما نصدّره، مورَّد من المنشأ.",
     "intro": "توابل ومكسرات وفواكه — مفروزة وموثّقة وتُشحن إلى المشترين في 37 دولة.",
-    "empty": "يجري تحديث الكتالوج. يرجى العودة قريبًا."
+    "empty": "يجري تحديث الكتالوج. يرجى العودة قريبًا.",
+    "detail": {
+      "backToProducts": "كل المنتجات",
+      "originRegions": "مناطق المنشأ",
+      "specifications": "المواصفات",
+      "seasonality": "الموسمية",
+      "seasonalityHint": "الحصاد / ذروة التوفر",
+      "requestQuote": "اطلب عرض سعر",
+      "requestSample": "اطلب عينة",
+      "pairsNaturally": "يتناغم بشكل طبيعي",
+      "viewAllProducts": "عرض كل المنتجات"
+    }
   },
   "contactPage": {
     "eyebrow": "تواصل معنا",
@@ -46,6 +57,7 @@
     "featured": "مميّز",
     "allArticles": "جميع المقالات",
     "related": "تابع القراءة",
+    "writtenBy": "بقلم",
     "categories": {
       "industryInsights": "رؤى القطاع",
       "impactStories": "قصص الأثر",

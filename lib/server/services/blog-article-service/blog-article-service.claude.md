@@ -79,8 +79,9 @@ Business Logic:
 - Admin read: server-paginated + server-search. Search is `OR` across `slug` (insensitive) and JSON `title.en` (`string_contains`). Returns `{ items, total, page, pageSize }`. Ordered by `createdAt DESC` (newest first). Category-enum search is not wired through the backend.
 - Public read: filters status='PUBLISHED', orders by featured desc then publishedAt desc, resolves LocalizedText to single locale string
 - Create: validates input via zod, calls toData() to cast LocalizedText to Prisma.InputJsonValue, sets publishedAt to now if status=PUBLISHED, wraps in try/catch→mapPrismaError, revalidates BLOG_ARTICLES_TAG
-- Update: checks existing article exists, destroys old Cloudinary asset if publicId changed, re-resolves publishedAt (stays null unless transitioning to PUBLISHED)
-- Delete: destroys Cloudinary asset, deletes row, revalidates tag
+- Update: checks existing article exists, destroys old cover AND author-avatar Cloudinary assets if their publicId changed, re-resolves publishedAt (stays null unless transitioning to PUBLISHED)
+- Delete: destroys cover + author-avatar Cloudinary assets, deletes row, revalidates tag
+- Author byline: scalar `authorName`/`authorRole` and Cloudinary `authorAvatarUrl`/`authorAvatarPublicId` thread through mapAdmin/mapSummary/toData; the public page falls back to "BACA Team" when name is null
 - listRelatedArticles: excludes current article, limits to N (default 3), orders by publishedAt DESC
 
 Auth: Public reads (no guard); admin writes require auth via route handler

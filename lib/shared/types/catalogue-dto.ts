@@ -21,6 +21,9 @@ export interface ProductAdminDto {
   name: LocalizedText
   summary: LocalizedText | null
   description: LocalizedText | null
+  origin: LocalizedText | null
+  specifications: LocalizedText | null
+  seasonality: LocalizedText | null
   imageUrl: string | null
   imagePublicId: string | null
   sortOrder: number
@@ -34,6 +37,21 @@ export interface ProductPublicDto {
   name: string
   summary: string
   imageUrl: string | null
+}
+
+/** Public product detail — resolved strings for one locale, incl. long copy + attributes. */
+export interface ProductDetailPublicDto {
+  id: string
+  slug: string
+  name: string
+  summary: string
+  description: string
+  origin: string
+  specifications: string
+  seasonality: string
+  imageUrl: string | null
+  categorySlug: string
+  categoryName: string
 }
 
 export interface ProductCategoryPublicDto {

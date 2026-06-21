@@ -24,6 +24,10 @@ export interface BlogArticleAdminDto {
   body: LocalizedText
   coverImageUrl: string | null
   coverImagePublicId: string | null
+  authorName: string | null
+  authorRole: string | null
+  authorAvatarUrl: string | null
+  authorAvatarPublicId: string | null
   readMinutes: number
   status: ContentStatusValue
   featured: boolean
@@ -37,6 +41,9 @@ export interface BlogArticleSummaryDto {
   title: string
   excerpt: string
   coverImageUrl: string | null
+  authorName: string | null
+  authorRole: string | null
+  authorAvatarUrl: string | null
   readMinutes: number
   featured: boolean
   publishedAt: string | null

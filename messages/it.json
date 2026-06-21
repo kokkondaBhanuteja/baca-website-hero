@@ -10,7 +10,18 @@
     "eyebrow": "Il nostro catalogo",
     "heading": "Tutto ciò che esportiamo, selezionato all'origine.",
     "intro": "Spezie, frutta secca e frutta — selezionati, documentati e spediti ad acquirenti in 37 Paesi.",
-    "empty": "Il nostro catalogo è in fase di aggiornamento. Torna presto."
+    "empty": "Il nostro catalogo è in fase di aggiornamento. Torna presto.",
+    "detail": {
+      "backToProducts": "Tutti i prodotti",
+      "originRegions": "Regioni d’origine",
+      "specifications": "Specifiche",
+      "seasonality": "Stagionalità",
+      "seasonalityHint": "Raccolto / disponibilità massima",
+      "requestQuote": "Richiedi un preventivo",
+      "requestSample": "Richiedi un campione",
+      "pairsNaturally": "Si abbina naturalmente",
+      "viewAllProducts": "Vedi tutti i prodotti"
+    }
   },
   "contactPage": {
     "eyebrow": "Contattaci",
@@ -46,6 +57,7 @@
     "featured": "In evidenza",
     "allArticles": "Tutti gli articoli",
     "related": "Continua a leggere",
+    "writtenBy": "Scritto da",
     "categories": {
       "industryInsights": "Approfondimenti di settore",
       "impactStories": "Storie di impatto",

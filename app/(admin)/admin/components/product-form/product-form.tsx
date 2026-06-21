@@ -46,6 +46,13 @@ export function ProductForm({
   const [description, setDescription] = useState<LocalizedDraft>(
     initial?.description ?? {},
   )
+  const [origin, setOrigin] = useState<LocalizedDraft>(initial?.origin ?? {})
+  const [specifications, setSpecifications] = useState<LocalizedDraft>(
+    initial?.specifications ?? {},
+  )
+  const [seasonality, setSeasonality] = useState<LocalizedDraft>(
+    initial?.seasonality ?? {},
+  )
   const [image, setImage] = useState<UploadedImage | null>(imageFrom(initial))
   const [sortOrder, setSortOrder] = useState(initial?.sortOrder ?? 0)
   const [isPublished, setIsPublished] = useState(initial?.isPublished ?? true)
@@ -66,6 +73,9 @@ export function ProductForm({
       name,
       summary: hasAnyLocaleValue(summary) ? summary : null,
       description: hasAnyLocaleValue(description) ? description : null,
+      origin: hasAnyLocaleValue(origin) ? origin : null,
+      specifications: hasAnyLocaleValue(specifications) ? specifications : null,
+      seasonality: hasAnyLocaleValue(seasonality) ? seasonality : null,
       imageUrl: image?.imageUrl ?? null,
       imagePublicId: image?.imagePublicId ?? null,
       sortOrder,
@@ -112,12 +122,28 @@ export function ProductForm({
               value={summary}
               onChange={setSummary}
             />
+            <LocalizedTextInput
+              label="Description"
+              multiline
+              value={description}
+              onChange={setDescription}
+            />
+            <LocalizedTextInput
+              label="Origin regions"
+              value={origin}
+              onChange={setOrigin}
+            />
+            <LocalizedTextInput
+              label="Specifications"
+              multiline
+              value={specifications}
+              onChange={setSpecifications}
+            />
             <div className="-mb-5">
               <LocalizedTextInput
-                label="Description"
-                multiline
-                value={description}
-                onChange={setDescription}
+                label="Seasonality"
+                value={seasonality}
+                onChange={setSeasonality}
               />
             </div>
           </div>

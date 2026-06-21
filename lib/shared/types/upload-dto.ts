@@ -2,6 +2,7 @@ export type UploadFolder =
   | 'baca/products'
   | 'baca/categories'
   | 'baca/blog'
+  | 'baca/authors'
   | 'baca/gallery'
 
 export interface UploadSignature {
