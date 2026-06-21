@@ -200,6 +200,23 @@
   filter: drop-shadow(0 0 7px rgba(224, 146, 43, 0.7));
 }
 
+/* Global pointer cursor for interactive elements — links, buttons, and
+   anything acting like a button. One rule so individual components don't set it.
+   Disabled controls fall back to not-allowed. */
+a[href],
+button,
+[role='button'],
+label[for],
+summary,
+[data-cursor] {
+  cursor: pointer;
+}
+button:disabled,
+[aria-disabled='true'],
+[disabled] {
+  cursor: not-allowed;
+}
+
 /* Brand-matched scrollbar — saffron pill thumb on a transparent track.
    Fine pointers only (touch devices auto-hide their scrollbars). The browser
    places the bar on the correct edge from <html dir>, so RTL needs no extra rules. */
