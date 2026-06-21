@@ -16,14 +16,19 @@ import { Link } from '@/i18n/navigation'
 import type { NavItem } from '@/components/layout/site-header/nav-types'
 
 /**
- * Desktop nav row — top-level Links (for items without children) and disclosure
- * <button>s (for items with children) that open a submenu panel. Hidden below `lg`;
- * the mobile menu takes over there.
+ * Desktop nav row — top-level Links (for items without children) and split
+ * label+disclosure pairs (for items with children: the label is a navigable
+ * `Link` to the parent page, the chevron next to it is a small disclosure
+ * `<button>` that opens the submenu). Hidden below `lg`; the mobile menu
+ * takes over there.
  *
  * Accessibility:
- *   - Disclosure triggers use aria-haspopup="menu" + aria-expanded + aria-controls.
- *   - Mouse opens on hover, keyboard opens on focus / Enter / Space / ArrowDown.
- *   - Escape closes and returns focus to the trigger.
+ *   - Parent label is a real `<Link>` — Enter/click navigates to the parent
+ *     page (e.g. "Products" → /products), Cmd-click opens in a new tab.
+ *   - Chevron uses aria-haspopup="menu" + aria-expanded + aria-controls.
+ *   - Mouse opens the submenu on hover of the wrapper; touch/keyboard users
+ *     activate the chevron explicitly.
+ *   - Escape closes and returns focus to the chevron trigger.
  *   - Click outside closes.
  *   - Only one submenu open at a time.
  */
@@ -111,10 +116,24 @@ export function SiteHeaderDesktopNav({
         return (
           <div
             key={item.key}
-            className="relative"
+            className="relative flex items-center"
             onMouseEnter={() => setOpenKey(item.key)}
             onMouseLeave={close}
           >
+            {/* Parent label — real `<Link>` so clicking navigates to /products,
+                /blogs, /profile etc., AND so Cmd-click opens in a new tab. */}
+            <Link
+              href={item.href}
+              className={`rounded-full py-2 ps-3 pe-1 text-sm transition-colors ${
+                scrolled
+                  ? 'text-ink/80 hover:text-ink'
+                  : 'text-paper/85 hover:text-paper'
+              }`}
+            >
+              {item.label}
+            </Link>
+            {/* Chevron disclosure — opens the submenu (mouse hover already
+                opens via the wrapper; this exists for touch + keyboard). */}
             <button
               ref={(element) => {
                 triggerRefs.current[item.key] = element
@@ -123,17 +142,17 @@ export function SiteHeaderDesktopNav({
               aria-haspopup="menu"
               aria-expanded={isOpen}
               aria-controls={panelId}
+              aria-label={`${item.label} submenu`}
               onClick={() => setOpenKey(isOpen ? null : item.key)}
               onKeyDown={(event) => onTriggerKeyDown(event, item.key)}
-              className={`flex items-center gap-1 rounded-full px-3 py-2 text-sm transition-colors ${
+              className={`inline-flex h-7 w-6 items-center justify-center rounded-full transition-colors ${
                 scrolled
-                  ? 'text-ink/80 hover:text-ink'
-                  : 'text-paper/85 hover:text-paper'
+                  ? 'text-ink/60 hover:text-ink'
+                  : 'text-paper/70 hover:text-paper'
               }`}
             >
-              {item.label}
               <ChevronDown
-                className={`h-3.5 w-3.5 opacity-60 transition-transform ${
+                className={`h-3.5 w-3.5 transition-transform ${
                   isOpen ? 'rotate-180' : ''
                 }`}
                 aria-hidden

@@ -36,10 +36,14 @@ Business Logic:
 - Fixed inset-0 z-[60] flex flex-col bg-ink text-paper
 - Header row: wordmark + close button (X icon)
 - Nav: flex-1 overflow-y-auto px-5 pb-10 pt-4
-- Each nav item: if has children, renders as accordion button + conditional expanded list; otherwise plain link
-- Accordion state: openAccordion useState, toggle on button click
-- Plus icon rotates 45° when accordion opens
-- All links onClick close the menu
+- Each nav item: if no children, plain `<Link>`. If has children, renders a
+  **split row**: a navigable `<Link>` for the label (tapping it goes straight
+  to the parent page, e.g. /products / /blogs / /profile) PLUS a separate
+  plus-icon `<button>` for the accordion toggle (tapping it expands the
+  submenu without dismissing the menu or navigating).
+- Accordion state: `openAccordion` useState, toggled by the plus button only.
+- Plus icon rotates 45° when accordion opens.
+- All links call `onClose` so navigating dismisses the overlay.
 - Footer: LanguageSwitcher (tone='paper') + Contact CTA — shared `CtaLink` (`size="block"`, full-width saffron)
 - Dividers between items: divide-y divide-paper/10
 

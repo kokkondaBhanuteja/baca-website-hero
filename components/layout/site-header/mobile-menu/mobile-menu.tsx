@@ -126,24 +126,37 @@ export function SiteHeaderMobileMenu({
             <li key={item.key} className="py-1">
               {item.children ? (
                 <>
-                  <button
-                    type="button"
-                    aria-expanded={openAccordion === item.key}
-                    onClick={() =>
-                      setOpenAccordion(
-                        openAccordion === item.key ? null : item.key,
-                      )
-                    }
-                    className="flex w-full items-center justify-between py-3 text-start font-heading text-3xl font-light"
-                  >
-                    {item.label}
-                    <Plus
-                      className={`h-5 w-5 transition-transform ${
-                        openAccordion === item.key ? 'rotate-45' : ''
-                      }`}
-                      aria-hidden
-                    />
-                  </button>
+                  {/* Split row: label is a navigable Link to the parent page;
+                      the plus icon is the accordion toggle so tapping the
+                      label navigates (and tapping the plus expands the
+                      submenu without dismissing the menu). */}
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      onClick={onClose}
+                      className="flex-1 py-3 font-heading text-3xl font-light"
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      type="button"
+                      aria-expanded={openAccordion === item.key}
+                      aria-label={`${item.label} submenu`}
+                      onClick={() =>
+                        setOpenAccordion(
+                          openAccordion === item.key ? null : item.key,
+                        )
+                      }
+                      className="inline-flex h-10 w-10 items-center justify-center text-paper/80"
+                    >
+                      <Plus
+                        className={`h-5 w-5 transition-transform ${
+                          openAccordion === item.key ? 'rotate-45' : ''
+                        }`}
+                        aria-hidden
+                      />
+                    </button>
+                  </div>
                   {openAccordion === item.key && (
                     <ul className="pb-3 ps-1">
                       {item.children.map((child) => (
