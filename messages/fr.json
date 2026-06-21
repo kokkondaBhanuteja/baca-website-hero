@@ -61,7 +61,8 @@
     "featured": "À la une",
     "allArticles": "Tous les articles",
     "related": "Poursuivre la lecture",
-    "writtenBy": "Écrit par"
+    "writtenBy": "Écrit par",
+    "filterBy": "Filtrer par type"
   },
   "notFound": {
     "eyebrow": "404 · Page introuvable",

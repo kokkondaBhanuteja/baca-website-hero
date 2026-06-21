@@ -61,7 +61,8 @@
     "featured": "Uitgelicht",
     "allArticles": "Alle artikelen",
     "related": "Verder lezen",
-    "writtenBy": "Geschreven door"
+    "writtenBy": "Geschreven door",
+    "filterBy": "Filteren op type"
   },
   "notFound": {
     "eyebrow": "404 · Pagina niet gevonden",

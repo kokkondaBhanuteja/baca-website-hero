@@ -61,7 +61,8 @@
     "featured": "Destacado",
     "allArticles": "Todos los artículos",
     "related": "Sigue leyendo",
-    "writtenBy": "Escrito por"
+    "writtenBy": "Escrito por",
+    "filterBy": "Filtrar por tipo"
   },
   "notFound": {
     "eyebrow": "404 · Página no encontrada",

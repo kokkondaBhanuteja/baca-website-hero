@@ -14,6 +14,7 @@ const ALL = '__all__'
 
 interface BlogsFilterLabels {
   all: string
+  filterBy: string
   minRead: string
   featured: string
   empty: string
@@ -55,9 +56,12 @@ export function BlogsFilter({
 
   return (
     <div className="mt-12">
+      <p className="mb-3 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink-60">
+        {labels.filterBy}
+      </p>
       <div
         role="tablist"
-        aria-label={labels.all}
+        aria-label={labels.filterBy}
         className="flex flex-wrap gap-2.5"
       >
         {pills.map((pill) => {

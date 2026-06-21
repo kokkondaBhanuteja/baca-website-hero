@@ -50,6 +50,7 @@ export default async function BlogsPage({ params }: PageParams) {
             types={types}
             labels={{
               all: t('allArticles'),
+              filterBy: t('filterBy'),
               minRead: t('minRead'),
               featured: t('featured'),
               empty: t('empty'),

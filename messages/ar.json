@@ -61,7 +61,8 @@
     "featured": "مميّز",
     "allArticles": "جميع المقالات",
     "related": "تابع القراءة",
-    "writtenBy": "بقلم"
+    "writtenBy": "بقلم",
+    "filterBy": "تصفية حسب النوع"
   },
   "notFound": {
     "eyebrow": "404 · الصفحة غير موجودة",
