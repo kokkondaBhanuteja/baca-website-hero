@@ -45,132 +45,165 @@ export default async function ProductDetailPage({ params }: PageParams) {
   const related = await listRelatedProducts(slug, locale as Locale)
   const hasSeasonality =
     product.peakMonths.length > 0 || product.harvestMonths.length > 0
+  const hasImage = Boolean(product.imageUrl)
+  const hasStructured =
+    Boolean(product.botanicalName) ||
+    product.originRegions.length > 0 ||
+    product.specs.length > 0 ||
+    hasSeasonality
+  // The two-column treatment earns its keep only when there's an image to anchor
+  // the left rail. Paste-only products (no image) read better as a single
+  // centered column — the same width as the Markdown body that follows.
+  const useTwoColumn = hasImage
+
+  const breadcrumb = (
+    <nav
+      aria-label="Breadcrumb"
+      className="flex flex-wrap items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-ink-60"
+    >
+      <Link href={Route.Home} className="hover:text-clay">
+        {t('detail.home')}
+      </Link>
+      <span aria-hidden>/</span>
+      <Link href={Route.Products} className="hover:text-clay">
+        {t('detail.products')}
+      </Link>
+      <span aria-hidden>/</span>
+      <span className="text-ink">{product.name}</span>
+    </nav>
+  )
+
+  const heading = (
+    <>
+      <h1 className="font-heading text-[clamp(2.4rem,5vw,3.75rem)] font-light leading-[1.02] tracking-[-0.02em] text-ink">
+        {product.name}
+      </h1>
+      {product.botanicalName && (
+        <p className="mt-2 font-heading text-lg italic text-clay">
+          {product.botanicalName}
+        </p>
+      )}
+      {product.summary && (
+        <p className="mt-6 text-pretty text-[17px] leading-relaxed text-ink/80">
+          {product.summary}
+        </p>
+      )}
+    </>
+  )
+
+  const ctaRow = (
+    <div className="mt-8 flex flex-wrap items-center gap-3">
+      <CtaLink href={Route.Contact} arrow>
+        {t('detail.requestQuote')}
+      </CtaLink>
+      <CtaLink href={Route.Contact} variant="outline">
+        {t('detail.requestSample')}
+      </CtaLink>
+    </div>
+  )
+
+  const structuredSections = hasStructured ? (
+    <>
+      {product.originRegions.length > 0 && (
+        <section className="mt-10 border-t border-line pt-8">
+          <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
+            {t('detail.originRegions')}
+          </h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {product.originRegions.map((region) => (
+              <li
+                key={region}
+                className="rounded-full border border-line px-3 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.12em] text-ink/75"
+              >
+                {region}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {product.specs.length > 0 && (
+        <section className="mt-10 border-t border-line pt-8">
+          <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
+            {t('detail.specifications')}
+          </h2>
+          <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
+            {product.specs.map((spec) => (
+              <div key={spec.label}>
+                <dt className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-ink-60">
+                  {spec.label}
+                </dt>
+                <dd className="mt-1 text-[15px] leading-snug text-ink">
+                  {spec.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
+      {hasSeasonality && (
+        <section className="mt-10 border-t border-line pt-8">
+          <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
+            {t('detail.seasonality')}
+          </h2>
+          <p className="mb-4 mt-1 text-[12px] text-ink-60">
+            {t('detail.seasonalityHint')}
+          </p>
+          <SeasonalityCalendar
+            peakMonths={product.peakMonths}
+            harvestMonths={product.harvestMonths}
+            locale={locale as Locale}
+            harvestLabel={t('detail.harvest')}
+            peakLabel={t('detail.peak')}
+          />
+        </section>
+      )}
+    </>
+  ) : null
 
   return (
     <>
       <SiteHeader forceSolid />
       <main className="min-h-screen bg-paper pt-header-base">
-        <div className="mx-auto max-w-content px-5 py-[clamp(2rem,4vw,3.5rem)] sm:px-8">
-          {/* Breadcrumb */}
-          <nav
-            aria-label="Breadcrumb"
-            className="flex flex-wrap items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-ink-60"
-          >
-            <Link href={Route.Home} className="hover:text-clay">
-              {t('detail.home')}
-            </Link>
-            <span aria-hidden>/</span>
-            <Link href={Route.Products} className="hover:text-clay">
-              {t('detail.products')}
-            </Link>
-            <span aria-hidden>/</span>
-            <span className="text-ink">{product.name}</span>
-          </nav>
-
-          {/* Split: image left, content right */}
-          <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2">
-            <div className="lg:sticky lg:top-24 lg:self-start">
-              <MediaReveal className="aspect-[4/5] overflow-hidden rounded-2xl border border-line">
-                {product.imageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
+        {useTwoColumn ? (
+          <div className="mx-auto max-w-content px-5 py-[clamp(2rem,4vw,3.5rem)] sm:px-8">
+            {breadcrumb}
+            {/* Split: image left, content right */}
+            <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2">
+              <div className="lg:sticky lg:top-24 lg:self-start">
+                <MediaReveal className="aspect-[4/5] overflow-hidden rounded-2xl border border-line">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={product.imageUrl}
+                    src={product.imageUrl ?? ''}
                     alt={product.name}
                     className="h-full w-full object-cover"
                   />
-                ) : (
-                  <div className="h-full w-full bg-bone" />
-                )}
-              </MediaReveal>
-            </div>
+                </MediaReveal>
+              </div>
 
-            <div>
-              <h1 className="font-heading text-[clamp(2.4rem,5vw,3.75rem)] font-light leading-[1.02] tracking-[-0.02em] text-ink">
-                {product.name}
-              </h1>
-              {product.botanicalName && (
-                <p className="mt-2 font-heading text-lg italic text-clay">
-                  {product.botanicalName}
-                </p>
-              )}
-
-              {product.summary && (
-                <p className="mt-6 text-pretty text-[17px] leading-relaxed text-ink/80">
-                  {product.summary}
-                </p>
-              )}
-
-              {product.originRegions.length > 0 && (
-                <section className="mt-10 border-t border-line pt-8">
-                  <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
-                    {t('detail.originRegions')}
-                  </h2>
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {product.originRegions.map((region) => (
-                      <li
-                        key={region}
-                        className="rounded-full border border-line px-3 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.12em] text-ink/75"
-                      >
-                        {region}
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {product.specs.length > 0 && (
-                <section className="mt-10 border-t border-line pt-8">
-                  <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
-                    {t('detail.specifications')}
-                  </h2>
-                  <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
-                    {product.specs.map((spec) => (
-                      <div key={spec.label}>
-                        <dt className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-ink-60">
-                          {spec.label}
-                        </dt>
-                        <dd className="mt-1 text-[15px] leading-snug text-ink">
-                          {spec.value}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </section>
-              )}
-
-              {hasSeasonality && (
-                <section className="mt-10 border-t border-line pt-8">
-                  <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
-                    {t('detail.seasonality')}
-                  </h2>
-                  <p className="mb-4 mt-1 text-[12px] text-ink-60">
-                    {t('detail.seasonalityHint')}
-                  </p>
-                  <SeasonalityCalendar
-                    peakMonths={product.peakMonths}
-                    harvestMonths={product.harvestMonths}
-                    locale={locale as Locale}
-                    harvestLabel={t('detail.harvest')}
-                    peakLabel={t('detail.peak')}
-                  />
-                </section>
-              )}
-
-              <div className="mt-10 flex flex-wrap items-center gap-3">
-                <CtaLink href={Route.Contact} arrow>
-                  {t('detail.requestQuote')}
-                </CtaLink>
-                <CtaLink href={Route.Contact} variant="outline">
-                  {t('detail.requestSample')}
-                </CtaLink>
+              <div>
+                {heading}
+                {structuredSections}
+                {ctaRow}
               </div>
             </div>
           </div>
-        </div>
+        ) : (
+          // Paste-only / no-image product → single centered column (article style)
+          <div className="mx-auto max-w-[760px] px-5 pt-[clamp(2rem,4vw,3.5rem)] sm:px-8">
+            {breadcrumb}
+            <div className="mt-8">
+              {heading}
+              {ctaRow}
+              {structuredSections}
+            </div>
+          </div>
+        )}
 
-        {/* Full-width details — admin-pasted Markdown (narrative + specs table) */}
+        {/* Details — admin-pasted Markdown (narrative + specs table) */}
         {product.description && (
-          <section className="mx-auto max-w-[760px] px-5 pb-[clamp(3rem,6vw,5rem)] sm:px-8">
+          <section className="mx-auto max-w-[760px] px-5 pb-[clamp(3rem,6vw,5rem)] pt-[clamp(2rem,4vw,3rem)] sm:px-8">
             <MarkdownContent content={product.description} />
           </section>
         )}
