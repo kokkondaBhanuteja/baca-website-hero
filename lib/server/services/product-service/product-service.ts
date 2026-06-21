@@ -120,7 +120,11 @@ export async function listProductsForAdmin({
   const [rows, total] = await Promise.all([
     prisma.product.findMany({
       where,
-      orderBy: [{ categoryId: 'asc' }, { sortOrder: 'asc' }],
+      orderBy: [
+        { categoryId: 'asc' },
+        { sortOrder: 'asc' },
+        { createdAt: 'asc' },
+      ],
       include: { category: true },
       skip: (page - 1) * pageSize,
       take: pageSize,
@@ -229,7 +233,11 @@ export const listPublishedProducts = unstable_cache(
       where: { isPublished: true, category: { isPublished: true } },
       // Match the admin list ordering ([categoryId, sortOrder]) so admins see
       // the same "top 3" in the nav preview as in the admin table.
-      orderBy: [{ categoryId: 'asc' }, { sortOrder: 'asc' }],
+      orderBy: [
+        { categoryId: 'asc' },
+        { sortOrder: 'asc' },
+        { createdAt: 'asc' },
+      ],
       take,
     })
     return rows.map((row) => ({
@@ -314,7 +322,7 @@ export const listRelatedProducts = unstable_cache(
             slug: { not: excludeSlug },
             categoryId: source.categoryId,
           },
-          orderBy: [{ sortOrder: 'asc' }],
+          orderBy: [{ sortOrder: 'asc' }, { createdAt: 'asc' }],
           take: limit,
         })
       : []
@@ -329,7 +337,11 @@ export const listRelatedProducts = unstable_cache(
               slug: { not: excludeSlug },
               NOT: { id: { in: sameCategory.map((product) => product.id) } },
             },
-            orderBy: [{ categoryId: 'asc' }, { sortOrder: 'asc' }],
+            orderBy: [
+              { categoryId: 'asc' },
+              { sortOrder: 'asc' },
+              { createdAt: 'asc' },
+            ],
             take: limit - sameCategory.length,
           })
 

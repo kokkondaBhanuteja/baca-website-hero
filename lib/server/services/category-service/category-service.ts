@@ -68,7 +68,7 @@ export async function listAllCategoriesForAdmin(): Promise<
   ProductCategoryAdminDto[]
 > {
   const rows = await prisma.productCategory.findMany({
-    orderBy: { sortOrder: 'asc' },
+    orderBy: [{ sortOrder: 'asc' }, { createdAt: 'asc' }],
     include: { _count: { select: { products: true } } },
   })
   return rows.map(mapAdmin)
@@ -92,7 +92,7 @@ export async function listCategoriesForAdmin({
   const [rows, total] = await Promise.all([
     prisma.productCategory.findMany({
       where,
-      orderBy: { sortOrder: 'asc' },
+      orderBy: [{ sortOrder: 'asc' }, { createdAt: 'asc' }],
       include: { _count: { select: { products: true } } },
       skip: (page - 1) * pageSize,
       take: pageSize,
@@ -202,11 +202,11 @@ export const getCategoriesForLocale = unstable_cache(
   async (locale: Locale): Promise<ProductCategoryPublicDto[]> => {
     const rows = await prisma.productCategory.findMany({
       where: { isPublished: true },
-      orderBy: { sortOrder: 'asc' },
+      orderBy: [{ sortOrder: 'asc' }, { createdAt: 'asc' }],
       include: {
         products: {
           where: { isPublished: true },
-          orderBy: { sortOrder: 'asc' },
+          orderBy: [{ sortOrder: 'asc' }, { createdAt: 'asc' }],
         },
       },
     })
