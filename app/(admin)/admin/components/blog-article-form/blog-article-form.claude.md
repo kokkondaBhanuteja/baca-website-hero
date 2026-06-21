@@ -8,6 +8,7 @@ imports_from:
   - '@/lib/api-client/axios-instance'
   - '@/lib/api-client/endpoints/blog-articles-api'
   - '@/lib/shared/types/blog-dto'
+  - '@/lib/shared/types/blog-type-dto'
   - '@/lib/shared/types/upload-dto'
   - '@/lib/server/validation/blog-article-schema'
   - '@/components/ui/dropdown'
@@ -18,7 +19,7 @@ imports_from:
 # BlogArticleForm
 
 Purpose:
-Blog article create/edit form: slug, category dropdown, localized title/excerpt/body, cover image,
+Blog article create/edit form: slug, blog type dropdown (admin-defined), localized title/excerpt/body, cover image,
 author (name/role/avatar), read minutes, status, featured toggle.
 
 Used In:
@@ -28,18 +29,20 @@ Used In:
 Props:
 
 - initial?: BlogArticleAdminDto — existing article data (if editing); undefined if creating
+- blogTypes: BlogTypeAdminDto[] — all admin-defined blog types (fetched server-side by the page)
 
 Business Logic:
 
-- Local state: slug, category (INDUSTRY_INSIGHTS default), title/excerpt/body (LocalizedDraft), cover (UploadedImage), readMinutes, status (DRAFT default), isFeatured
-- onSubmit: validates, builds payload, calls blogArticlesApi.create/update
+- Local state: slug, blogTypeId (defaults to initial.blogTypeId ?? blogTypes[0]?.id ?? ''), title/excerpt/body (LocalizedDraft), cover (UploadedImage), readMinutes, status (DRAFT default), isFeatured
+- blogTypeOptions derived from blogTypes prop (value = type.id, label = type.name.en)
+- onSubmit: validates, builds payload (with blogTypeId), calls blogArticlesApi.create/update
 - On success: router.push('/admin/blog-articles'); router.refresh()
-- On error: displays error message + fieldErrors map (keys like 'title.en')
+- On error: displays error message + fieldErrors map (keys like 'title.en', 'blogTypeId')
 - LocalizedTextInput components for title/excerpt/body with multiline option
 - ImageUploader for cover image (folder: 'baca/blog')
 - Author card: plain-text Name + Role inputs and an ImageUploader avatar (folder: 'baca/authors'); empty name/role serialized as null
 - Status dropdown: DRAFT | PUBLISHED
-- Featured checkbox
+- Featured checkbox (local state isFeatured; API payload key is featured)
 
 Layout:
 

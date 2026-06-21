@@ -10,10 +10,6 @@ import {
 } from '@/app/(admin)/admin/components/admin-list-table'
 import { DeleteEntityButton } from '@/app/(admin)/admin/components/delete-entity-button'
 
-function formatCategory(category: BlogArticleAdminDto['category']): string {
-  return category.replace(/_/g, ' ').toLowerCase()
-}
-
 export interface BlogArticlesTableProps {
   items: BlogArticleAdminDto[]
   total: number
@@ -65,9 +61,7 @@ export function BlogArticlesTable({
           <td className="px-5 py-3 font-mono text-xs text-ink-60">
             {article.slug}
           </td>
-          <td className="px-5 py-3 text-ink-60">
-            {formatCategory(article.category)}
-          </td>
+          <td className="px-5 py-3 text-ink-60">{article.blogTypeName}</td>
           <td className="px-5 py-3">
             <span
               className={
@@ -119,9 +113,7 @@ export function BlogArticlesTable({
             <span className="font-mono text-[0.55rem] uppercase tracking-wider text-ink-60">
               Category
             </span>
-            <span className="ms-2 text-ink/80">
-              {formatCategory(article.category)}
-            </span>
+            <span className="ms-2 text-ink/80">{article.blogTypeName}</span>
           </p>
           <div className="mt-4 flex items-center justify-end gap-4 border-t border-line pt-3">
             <Link

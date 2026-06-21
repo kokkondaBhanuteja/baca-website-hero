@@ -28,12 +28,12 @@ Props:
 
 Business Logic:
 
-- `formatCategory` normalises the enum (e.g. `INDUSTRY_INSIGHTS` → `industry insights`) for display.
+- No `formatCategory` helper — the DTO now carries `blogTypeName` directly from the joined blog type.
 - `useAdminListUrlState({ initialSearch: search })` for debounced URL writes.
 - `AdminListTable<BlogArticleAdminDto>` with `columnCount = 5`, `minWidth = 720` (slightly wider so "Featured" badge fits next to title without wrapping), placeholder "Search articles by title or slug…".
-- Desktop `renderRow`: title (EN) with optional Featured saffron pill, slug (mono), formatted category, status with conditional colour (PUBLISHED → forest), Edit + DeleteEntityButton.
-- Mobile `renderCard`: title + Featured pill, slug, status; Category label-value below; Edit/Delete actions in a bordered footer.
-- Server-side search matches `slug` (insensitive) + JSON `title.en` (`string_contains`). Category enum search not yet wired through the backend (was client-side only); rare enough that title/slug coverage is acceptable.
+- Desktop `renderRow`: title (EN) with optional Featured saffron pill, slug (mono), article.blogTypeName, status with conditional colour (PUBLISHED → forest), Edit + DeleteEntityButton.
+- Mobile `renderCard`: title + Featured pill, slug, status; Category label-value (article.blogTypeName) below; Edit/Delete actions in a bordered footer.
+- Server-side search matches `slug` (insensitive) + JSON `title.en` (`string_contains`).
 
 Dependencies:
 
