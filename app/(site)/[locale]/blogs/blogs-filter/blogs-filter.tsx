@@ -10,10 +10,8 @@ import type { BlogTypePublicDto } from '@/lib/shared/types/blog-type-dto'
 import { MediaReveal } from '@/components/ui/media-reveal'
 import { cn } from '@/lib/utils'
 
-const ALL = '__all__'
-
 interface BlogsFilterLabels {
-  all: string
+  filter: string
   minRead: string
   featured: string
   empty: string
@@ -28,16 +26,17 @@ export function BlogsFilter({
   types: BlogTypePublicDto[]
   labels: BlogsFilterLabels
 }) {
-  // The header's "Blogs" dropdown links here as `/blogs?type=<slug>`. Read that
-  // param as the initial selection (falling back to ALL when absent/unknown),
-  // and sync it on later navigations — pill clicks still update state instantly
-  // without touching the URL.
+  // One type is always selected — there is no "All" option. The header's "Blogs"
+  // dropdown links here as `/blogs?type=<slug>`; read that param as the initial
+  // selection (falling back to the first type), and sync it on later
+  // navigations. Pill clicks update state instantly without touching the URL.
   const searchParams = useSearchParams()
   const requestedType = searchParams.get('type')
+  const defaultType = types[0]?.slug ?? ''
   const resolvedType =
     requestedType && types.some((type) => type.slug === requestedType)
       ? requestedType
-      : ALL
+      : defaultType
 
   const [selected, setSelected] = useState<string>(resolvedType)
   const [lastRequested, setLastRequested] = useState<string>(resolvedType)
@@ -46,29 +45,26 @@ export function BlogsFilter({
     setSelected(resolvedType)
   }
 
-  const visible =
-    selected === ALL
-      ? articles
-      : articles.filter((article) => article.blogType.slug === selected)
-
-  const pills = [{ slug: ALL, name: labels.all }, ...types]
+  const visible = articles.filter(
+    (article) => article.blogType.slug === selected,
+  )
 
   return (
     <div className="mt-12">
       <div
         role="tablist"
-        aria-label={labels.all}
+        aria-label={labels.filter}
         className="flex flex-wrap gap-2.5"
       >
-        {pills.map((pill) => {
-          const isActive = pill.slug === selected
+        {types.map((type) => {
+          const isActive = type.slug === selected
           return (
             <button
-              key={pill.slug}
+              key={type.slug}
               type="button"
               role="tab"
               aria-selected={isActive}
-              onClick={() => setSelected(pill.slug)}
+              onClick={() => setSelected(type.slug)}
               className={cn(
                 'rounded-full border px-4 py-1.5 font-mono text-[0.66rem] uppercase tracking-[0.16em] transition-colors',
                 isActive
@@ -76,7 +72,7 @@ export function BlogsFilter({
                   : 'border-line text-ink-60 hover:border-ink/40 hover:text-ink',
               )}
             >
-              {pill.name}
+              {type.name}
             </button>
           )
         })}

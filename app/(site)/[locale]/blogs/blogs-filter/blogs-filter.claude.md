@@ -25,13 +25,14 @@ Used In: `app/(site)/[locale]/blogs/page.tsx`.
 
 Business Logic:
 
-- `ALL` sentinel (`__all__`) shows everything; otherwise filters by `blogType.slug`.
+- **One type is always selected — there is no "All" option.** Pills are exactly
+  the published types; the grid always filters by the selected `blogType.slug`.
 - Initial selection comes from the `?type=<slug>` search param (the header "Blogs"
-  dropdown links here as `/blogs?type=<slug>`); unknown/absent → ALL. A
-  setState-during-render sync re-applies the param on later navigations, while
+  dropdown links here as `/blogs?type=<slug>`); unknown/absent → the first type.
+  A setState-during-render sync re-applies the param on later navigations, while
   pill clicks update state instantly without touching the URL.
 - Active pill uses `--saffron` accent; idle pills use `--line` border.
-- Cards link to `${Route.Blogs}/${slug}`; per-filter empty state when no match.
+- Cards link to `${Route.Blogs}/${slug}`; per-type empty state when no match.
 
 Dependencies: MediaReveal (GSAP reveal), i18n `Link` (locale-prefixed), `cn`,
 `useSearchParams` (next/navigation).

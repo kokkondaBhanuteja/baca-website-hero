@@ -49,7 +49,6 @@ export function SiteHeaderClient({
   const tNav = useTranslations('nav')
   const tCommon = useTranslations('common')
   const tHeader = useTranslations('header')
-  const tBlogs = useTranslations('blogsPage')
 
   useEffect(() => {
     const onScroll = () =>
@@ -88,10 +87,8 @@ export function SiteHeaderClient({
         key: item.key,
         label,
         href: item.href,
-        children: [
-          ...insightLinks,
-          { label: tBlogs('allArticles'), href: Route.Blogs },
-        ],
+        // Blogs dropdown lists the blog types only — no "All articles" entry.
+        children: [...insightLinks],
       }
     }
     return { key: item.key, label, href: item.href }
