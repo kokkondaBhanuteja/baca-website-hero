@@ -11,6 +11,7 @@ import {
 } from '@/lib/server/services/blog-article-service'
 import { formatPublishedDate } from '@/lib/shared/format-date'
 import { MediaReveal } from '@/components/ui/media-reveal'
+import { MarkdownContent } from '@/components/shared/markdown-content'
 import { MediaHero } from '@/components/shared/media-hero'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
@@ -40,9 +41,6 @@ export default async function BlogArticlePage({ params }: PageParams) {
   if (!article) notFound()
 
   const related = await listRelatedArticles(articleSlug, locale as Locale)
-  const paragraphs = article.body
-    .split(/\n{2,}/)
-    .filter((block) => block.trim())
 
   const authorName = article.authorName ?? DEFAULT_AUTHOR.name
   const authorRole = article.authorRole ?? DEFAULT_AUTHOR.role
@@ -103,20 +101,7 @@ export default async function BlogArticlePage({ params }: PageParams) {
             {article.excerpt}
           </p>
 
-          <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-ink/85">
-            {paragraphs.map((block, index) => (
-              <p
-                key={index}
-                className={
-                  index === 0
-                    ? 'first-letter:float-start first-letter:me-3 first-letter:mt-1 first-letter:font-heading first-letter:text-[3.4rem] first-letter:font-light first-letter:leading-[0.78] first-letter:text-clay'
-                    : undefined
-                }
-              >
-                {block}
-              </p>
-            ))}
-          </div>
+          <MarkdownContent content={article.body} className="mt-8" />
 
           {/* Author card */}
           <div className="mt-12 flex items-center gap-4 border-t border-line pt-8">

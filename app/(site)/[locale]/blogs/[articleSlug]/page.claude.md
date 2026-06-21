@@ -34,7 +34,7 @@ Auth: Public
 Purpose:
 Single article detail page in a magazine layout: a full-bleed `MediaHero` (cover image with the
 title overlaid) carrying an author byline + date + read-time meta row, then a lead excerpt, a
-drop-cap body, an author card, and a related-articles grid. notFound() if the slug is unknown.
+Markdown-rendered body, an author card, and a related-articles grid. notFound() if the slug is unknown.
 
 Data:
 
@@ -49,19 +49,20 @@ Business Logic:
 - Author: `authorName`/`authorRole` fall back to the `DEFAULT_AUTHOR` constant ("BACA Team"); avatar
   shows the image or an initials circle
 - Date via `formatPublishedDate(publishedAt, locale)` (Intl, no dependency); read time from `readMinutes`
-- Splits article.body by double newlines; the FIRST paragraph gets a `first-letter:` drop-cap
-  (logical `me-3` so it mirrors under RTL)
+- Renders `article.body` via `<MarkdownContent>` (react-markdown + remark-gfm) — admins paste
+  Markdown / a README; headings, lists, links, tables, code blocks render brand-styled. Plain-text
+  bodies still render as paragraphs (backward compatible). XSS-safe (no raw HTML).
 - Related articles section if related.length > 0
 
 Renders:
 
 - SiteHeader (transparent — dark hero)
 - MediaHero (eyebrow = category, title overlaid, meta = author chip + date + read time)
-- Back link to blogs list · lead excerpt · drop-cap body · author card
+- Back link to blogs list · lead excerpt · Markdown body (MarkdownContent) · author card
 - Related articles grid (3 columns on md+, MediaReveal images)
 - SiteFooter
 
 Notes:
 Uses the transparent `SiteHeader` (no `forceSolid`) so the nav floats over the dark hero. Body is
-plain text split by double newlines; drop-cap is CSS-only. Articles fetched in generateMetadata and
-page render (two calls).
+rendered as Markdown via the shared `MarkdownContent` component. Articles fetched in generateMetadata
+and page render (two calls).

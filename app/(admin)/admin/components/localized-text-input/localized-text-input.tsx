@@ -28,6 +28,8 @@ export function LocalizedTextInput({
   multiline = false,
   required = false,
   error,
+  hint,
+  rows = 5,
 }: {
   label: string
   value: LocalizedDraft
@@ -35,6 +37,10 @@ export function LocalizedTextInput({
   multiline?: boolean
   required?: boolean
   error?: string[]
+  /** Optional helper line under the label (e.g. "Paste Markdown"). */
+  hint?: string
+  /** Textarea height when multiline (default 5). */
+  rows?: number
 }) {
   const [activeLocale, setActiveLocale] = useState<Locale>(DEFAULT_LOCALE)
   const reactId = useId()
@@ -51,6 +57,8 @@ export function LocalizedTextInput({
         {label}
         {required && <span className="text-clay"> *</span>}
       </label>
+
+      {hint && <p className="mb-2 text-xs text-ink-60">{hint}</p>}
 
       <div
         role="tablist"
@@ -85,7 +93,7 @@ export function LocalizedTextInput({
       {multiline ? (
         <textarea
           id={inputId}
-          rows={5}
+          rows={rows}
           value={value[activeLocale] ?? ''}
           onChange={(event) =>
             onChange({ ...value, [activeLocale]: event.target.value })

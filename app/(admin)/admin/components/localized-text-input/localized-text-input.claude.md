@@ -28,6 +28,8 @@ Props:
 - multiline?: boolean — textarea if true (default: false)
 - required?: boolean — marks EN required (default: false)
 - error?: string[] — field errors to display
+- hint?: string — optional helper line under the label (e.g. "Paste Markdown")
+- rows?: number — textarea height when multiline (default: 5; blog body uses 16)
 
 Business Logic:
 

@@ -152,8 +152,10 @@ export function BlogArticleForm({
             />
             <div className="-mb-5">
               <LocalizedTextInput
-                label="Body"
+                label="Body (Markdown)"
+                hint="Paste Markdown here — e.g. a README. # headings, **bold**, lists, links, tables and `code` all render on the article page."
                 multiline
+                rows={16}
                 required
                 value={body}
                 onChange={setBody}

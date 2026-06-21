@@ -49,6 +49,8 @@
     "nodemailer": "^9.0.1",
     "react": "^19",
     "react-dom": "^19",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "server-only": "^0.0.1",
     "shadcn": "^4.8.0",
     "tailwind-merge": "^3.3.1",
