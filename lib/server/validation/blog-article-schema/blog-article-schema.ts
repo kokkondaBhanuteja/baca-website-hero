@@ -8,11 +8,7 @@ import {
 export const blogArticleInputSchema = z
   .object({
     slug: slugField,
-    category: z.enum([
-      'INDUSTRY_INSIGHTS',
-      'IMPACT_STORIES',
-      'COMMUNITY_ENGAGEMENT',
-    ]),
+    blogTypeId: z.string().min(1, 'Select a blog type'),
     title: requiredLocalizedText,
     excerpt: requiredLocalizedText,
     body: requiredLocalizedText,

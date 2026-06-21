@@ -23,6 +23,7 @@ imports_from:
   - '@/lib/shared/types/localized-text'
   - '@/lib/shared/types/paginated-list'
   - '@/lib/server/validation/blog-article-schema'
+  - '@prisma/client'
   - 'next/cache'
 called_by:
   - 'app/(admin)/admin/(dashboard)/blog-articles/[id]/page.tsx'
@@ -65,6 +66,7 @@ Imports from:
 - @/lib/shared/types/blog-dto — BlogArticleAdminDto, BlogArticleSummaryDto, BlogArticleDetailDto
 - @/lib/shared/types/localized-text — LocalizedText type
 - @/lib/server/validation/blog-article-schema — BlogArticleInput type
+- @prisma/client — Prisma namespace (for ArticleRow payload type and InputJsonValue)
 - next/cache — revalidateTag
 
 Called by:
@@ -76,13 +78,14 @@ Called by:
 
 Business Logic:
 
-- Admin read: server-paginated + server-search. Search is `OR` across `slug` (insensitive) and JSON `title.en` (`string_contains`). Returns `{ items, total, page, pageSize }`. Ordered by `createdAt DESC` (newest first). Category-enum search is not wired through the backend.
-- Public read: filters status='PUBLISHED', orders by featured desc then publishedAt desc, resolves LocalizedText to single locale string
-- Create: validates input via zod, calls toData() to cast LocalizedText to Prisma.InputJsonValue, sets publishedAt to now if status=PUBLISHED, wraps in try/catch→mapPrismaError, revalidates BLOG_ARTICLES_TAG
+- Admin read: server-paginated + server-search. Search is `OR` across `slug` (insensitive) and JSON `title.en` (`string_contains`). Returns `{ items, total, page, pageSize }`. Ordered by `createdAt DESC` (newest first). All queries include `{ blogType: true }` so mapAdmin/mapSummary can resolve the relation.
+- Public read: filters status='PUBLISHED', orders by featured desc then publishedAt desc, resolves LocalizedText to single locale string. `mapSummary` exposes `blogType: { slug, name }` (resolved for locale).
+- Create: validates input via zod (blogTypeId FK), calls toData() to cast LocalizedText to Prisma.InputJsonValue and sets blogTypeId, sets publishedAt to now if status=PUBLISHED, wraps in try/catch→mapPrismaError, revalidates BLOG_ARTICLES_TAG
 - Update: checks existing article exists, destroys old cover AND author-avatar Cloudinary assets if their publicId changed, re-resolves publishedAt (stays null unless transitioning to PUBLISHED)
 - Delete: destroys cover + author-avatar Cloudinary assets, deletes row, revalidates tag
 - Author byline: scalar `authorName`/`authorRole` and Cloudinary `authorAvatarUrl`/`authorAvatarPublicId` thread through mapAdmin/mapSummary/toData; the public page falls back to "BACA Team" when name is null
-- listRelatedArticles: excludes current article, limits to N (default 3), orders by publishedAt DESC
+- listRelatedArticles: anchors "related" set on `blogTypeId` (from the source article); prefers same-type articles first, fills up to limit with other recent published articles. All sub-queries include `{ blogType: true }`.
+- ArticleRow type: `Prisma.BlogArticleGetPayload<{ include: { blogType: true } }>` — used by all three mappers (mapAdmin, mapSummary, mapDetail).
 
 Auth: Public reads (no guard); admin writes require auth via route handler
 

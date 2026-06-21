@@ -10,7 +10,7 @@ types/
   catalogue-dto.ts    ProductCategoryAdminDto / ProductAdminDto (raw LocalizedText + structured attrs:
                       botanicalName, originRegions[], specs[ProductSpec], harvest/peakMonths[]) + …PublicDto
                       + ProductDetailPublicDto (resolved) + ProductSpec ({label,value}, not localized)
-  blog-dto.ts         BlogArticleAdminDto / SummaryDto / DetailDto (incl. author name/role/avatar), BlogCategoryValue, BLOG_CATEGORY_KEY
+  blog-dto.ts         BlogArticleAdminDto / SummaryDto / DetailDto (incl. author name/role/avatar, blogType relation); ContentStatusValue
   gallery-dto.ts      GalleryImageAdminDto / GalleryImagePublicDto
   paginated-list.ts   PaginatedList<T> = { items, total, page, pageSize } + AdminListQuery shape +
                       ADMIN_LIST_DEFAULT_PAGE_SIZE constant. Used by every admin paginated list endpoint.

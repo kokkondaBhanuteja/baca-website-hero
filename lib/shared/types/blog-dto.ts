@@ -1,24 +1,13 @@
 import type { LocalizedText } from './localized-text'
 
-export type BlogCategoryValue =
-  | 'INDUSTRY_INSIGHTS'
-  | 'IMPACT_STORIES'
-  | 'COMMUNITY_ENGAGEMENT'
-
 export type ContentStatusValue = 'DRAFT' | 'PUBLISHED'
-
-/** Maps the DB enum to the camelCase message key under `blogsPage.categories`. */
-export const BLOG_CATEGORY_KEY: Record<BlogCategoryValue, string> = {
-  INDUSTRY_INSIGHTS: 'industryInsights',
-  IMPACT_STORIES: 'impactStories',
-  COMMUNITY_ENGAGEMENT: 'communityEngagement',
-}
 
 /** Admin view — raw all-locale objects for the editor. */
 export interface BlogArticleAdminDto {
   id: string
   slug: string
-  category: BlogCategoryValue
+  blogTypeId: string
+  blogTypeName: string
   title: LocalizedText
   excerpt: LocalizedText
   body: LocalizedText
@@ -37,7 +26,10 @@ export interface BlogArticleAdminDto {
 /** Public listing card — resolved for the active locale. */
 export interface BlogArticleSummaryDto {
   slug: string
-  category: BlogCategoryValue
+  blogType: {
+    slug: string
+    name: string
+  }
   title: string
   excerpt: string
   coverImageUrl: string | null
