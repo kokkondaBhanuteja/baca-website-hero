@@ -41,6 +41,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`EnquiryForm`](components/sections/contact/enquiry-form/enquiry-form.claude.md) — Public contact form: name, email, company, phone, message. Submits to POST /api/enquiry. Shows success message or field errors on response.
 - [`FeaturedInsights`](components/sections/featured-insights/featured-insights.claude.md) — DB-driven: fetches top 3 published blog articles and renders them in a 3-column card grid with cover, category badge, title, excerpt.
 - [`GlobalPresence`](components/sections/global-presence/global-presence.claude.md) — 4-stat strip showing regional presence (countries, certifications, etc.) over a parallax-enabled background image.
+- [`Hero`](components/sections/hero/hero.claude.md) — Home hero — WordmarkMedia showpiece (illustrated India film through BACA letters) + body copy + dual CTA + meta strip.
 - [`HeroEntry`](components/sections/hero-entry/hero-entry.claude.md) — Home-only GSAP entry timeline: header slides down + fades in, then hero-reveal elements stagger up. Runs once on mount; honors reduced motio
 - [`Manifesto`](components/sections/manifesto/manifesto.claude.md) — Why-we're-here section: headline + body text + hero-style reveal image (Lusion-style clip + scale). Anchor #why-we-re-here.
 - [`MarqueeStrip`](components/sections/marquee-strip/marquee-strip.claude.md) — GSAP banner marquee with scroll-velocity reactivity: seamless horizontal loop speeds up + skews on fast scroll, eases back on idle.
@@ -50,6 +51,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`WhatsappFab`](components/sections/whatsapp-fab/whatsapp-fab.claude.md) — Floating WhatsApp action button fixed in bottom-right corner, links to CONTACT.whatsappUrl.
 - [`PageIntro`](components/shared/page-intro/page-intro.claude.md) — Shared inner-page header: eyebrow + oversized H1 + optional intro text. Used on all non-home pages.
 - [`Button`](components/ui/button/button.claude.md) — Base button primitive with CVA variants for size/style. Wraps @base-ui ButtonPrimitive with outline, disabled, aria-invalid, and focus-visib
+- [`CtaLink`](components/ui/cta-link/cta-link.claude.md) — Shared marketing CTA pill: locale-aware Link styled as a saffron/outline rounded-full pill (cva variant × tone × size + optional RTL-aware arrow). Replaced four hand-rolled copies across hero, cta-band, 404, and mobile menu.
 - [`Cursor`](components/ui/cursor/cursor.claude.md) — Desktop-only magnetic cursor: a saffron dot tracks the pointer instantly; a ring trails with easing and morphs to wrap buttons/data-cursor e
 - [`Dropdown`](components/ui/dropdown/dropdown.claude.md) — Custom replacement for native `<select>`. Full keyboard support (Arrow/Home/End/Enter/Space/Tab), roving active-descendant pattern, outside-
 - [`Eyebrow`](components/ui/eyebrow/eyebrow.claude.md) — Repeated micro-label: saffron horizontal rule (6px wide) + upper-cased mono label. Used above every section heading.

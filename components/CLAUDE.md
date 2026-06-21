@@ -12,6 +12,10 @@ shared/      Cross-page reusables (page-intro = inner-page header).
 
 ## Key reusable primitives (ui/) — prefer these, don't reinvent
 
+- **`CtaLink`** — the marketing CTA pill (saffron/outline rounded-full, rendered as the i18n `Link`).
+  **Use this for any public call-to-action** instead of hand-rolling the pill classes. Props:
+  `href, variant: 'solid'|'outline', tone: 'light'|'dark', size: 'md'|'lg'|'block', arrow`.
+  (Distinct from `Button`, which is the admin/`<button>` primitive on the shadcn token set.)
 - **`Dropdown`** — the custom select. **Use this instead of a native `<select>` anywhere.**
   Props: `value, options: {value,label}[], onChange, buttonClassName, menuAlign, disabled, ariaLabel`.
   Closes on outside-click/Escape. Used by `language-switcher` and all admin form selects.

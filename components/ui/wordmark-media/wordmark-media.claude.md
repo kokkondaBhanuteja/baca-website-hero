@@ -16,7 +16,7 @@ Full-width wordmark revealing a looping video (every.com-style media inside text
 
 Used In:
 
-- `components/sections/hero.tsx` (the active home hero — single illustrated India film through the BACA letters)
+- `components/sections/hero/hero.tsx` (the active home hero — single illustrated India film through the BACA letters)
 
 Props:
 

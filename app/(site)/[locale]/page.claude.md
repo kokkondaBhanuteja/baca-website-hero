@@ -30,19 +30,22 @@ auth: 'Public'
 
 Route: `/[locale]`  
 Kind: page (Next.js route convention file)  
-Rendering: Server (SSG)  
+Rendering: Server (ISR — `revalidate = 3600`)  
 Auth: Public
 
 Purpose:
-Marketing homepage. Composed of multiple hero and content sections (Hero, Manifesto, Stats, ProductPreview, Approach, Certifications, GlobalPresence, PullQuote, FeaturedInsights, CTA, WhatsApp FAB). Static rendered per locale.
+Marketing homepage. Composed of multiple hero and content sections (Hero, Manifesto, Stats, ProductPreview, Approach, Certifications, GlobalPresence, PullQuote, FeaturedInsights, CTA). WhatsAppFab is rendered in the locale layout.
 
 Data:
 
-- _No external data sources_
+- ProductPreview → `getCategoriesForLocale` (tagged `CATEGORIES_TAG`)
+- FeaturedInsights → `listPublishedArticles` (tagged `BLOG_ARTICLES_TAG`)
+- SiteHeader nav dropdowns → `listPublishedProducts` / `listPublishedArticles` (tagged `PRODUCTS_TAG`, `BLOG_ARTICLES_TAG`)
 
 Business Logic:
 
-- setRequestLocale(locale as Locale) enables static rendering
+- `export const revalidate = 3600` — ISR fallback; admin mutations also call `revalidateTag(…, 'max')` in services so DB slices refresh on the next request
+- setRequestLocale(locale as Locale) enables static rendering per locale
 - SiteHeader rendered with forceSolid=true (always opaque)
 - ScrollFX component (scroll animations on mount)
 

@@ -10,6 +10,21 @@ Cold-start reading order:
 2. **`INDEX.md`** (root) — manifest of every per-file `.claude.md`, grouped by kind.
 3. **This file** — agent-facing conventions and grep recipes.
 
+## Architecture map (folder-level `CLAUDE.md`)
+
+| Area         | Map file                                                       | What it covers                                |
+| ------------ | -------------------------------------------------------------- | --------------------------------------------- |
+| Routing      | [`app/CLAUDE.md`](app/CLAUDE.md)                               | Public `[locale]` routes, admin, API handlers |
+| Backend      | [`lib/server/CLAUDE.md`](lib/server/CLAUDE.md)                 | Services, auth, validation, Prisma patterns   |
+| Client API   | [`lib/api-client/CLAUDE.md`](lib/api-client/CLAUDE.md)         | axios instance + admin endpoint wrappers      |
+| Shared types | [`lib/shared/CLAUDE.md`](lib/shared/CLAUDE.md)                 | DTOs safe on both server and client           |
+| Components   | [`components/CLAUDE.md`](components/CLAUDE.md)                 | ui / layout / sections / shared conventions   |
+| Admin UI     | [`app/(admin)/admin/CLAUDE.md`](<app/(admin)/admin/CLAUDE.md>) | Dashboard, forms, auth flow                   |
+| i18n         | [`messages/CLAUDE.md`](messages/CLAUDE.md)                     | Locale files + next-intl wiring               |
+| Database     | [`prisma/CLAUDE.md`](prisma/CLAUDE.md)                         | Models, JSONB localization, seed              |
+
+**Data flow rule:** public Server Components → `lib/server/services/*` directly; admin Client Components → `lib/api-client/*` → `app/api/*` → same services. Never fetch your own `/api` from a Server Component.
+
 ## ⚠️ Hard rule before ANY code edit — READ + UPDATE the sibling .claude.md
 
 This project has a per-file `.claude.md` next to every component, service, schema, page, layout,

@@ -97,8 +97,10 @@ the doc to confirm. If a doc is missing, create it before merging the change.
 
 ## Rendering model
 
-- **Home (`(site)/[locale]/page.tsx`) is static (SSG)**, prerendered per locale. Its header + product/insight
-  sections fetch the DB at **build** → the home reflects build-time content (refreshes on rebuild/deploy).
+- **Home (`(site)/[locale]/page.tsx`) is ISR** — prerendered per locale with `revalidate = 3600` (1 h fallback).
+  DB-driven slices (header nav dropdowns, ProductPreview, FeaturedInsights) read through `unstable_cache` +
+  cache tags (`CATEGORIES_TAG`, `PRODUCTS_TAG`, `BLOG_ARTICLES_TAG`) in `lib/server/services/*`. Admin mutations
+  call `revalidateTag(…, 'max')` so those sections refresh on the next request without a full redeploy.
 - **Inner content pages** (`products`, `blogs`, `blogs/[slug]`, `gallery`) are **`export const dynamic = 'force-dynamic'`**
   → always live. Admin edits appear immediately there.
 - Admin pages are dynamic (cookie-gated). API routes are dynamic (Node runtime — Prisma/argon2 need it).

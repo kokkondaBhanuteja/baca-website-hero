@@ -8,7 +8,9 @@ app/
   (site)/[locale]/         Public localized site. (site) is a URL-invisible group.
     layout.tsx             Root <html lang dir> for public; next-intl provider; loads fonts + globals.css;
                            renders the global <Cursor/>. generateStaticParams over the 7 locales.
-    page.tsx               Home (SSG, static). Composes section components from components/sections/*.
+    page.tsx               Home (ISR, revalidate=3600). Composes section components from components/sections/*.
+                           DB slices (header nav, ProductPreview, FeaturedInsights) use tagged unstable_cache
+                           in lib/server/services/* — admin mutations revalidate via revalidateTag.
     products/page.tsx      force-dynamic. DB catalogue (category-service.getCategoriesForLocale).
     blogs/page.tsx         force-dynamic. Published articles list.
     blogs/[articleSlug]/page.tsx   force-dynamic. Article detail + related. notFound() on unknown slug.

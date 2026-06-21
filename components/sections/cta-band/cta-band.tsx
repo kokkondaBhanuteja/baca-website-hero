@@ -1,8 +1,7 @@
-import { ArrowRight } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
 import { Route } from '@/constants/routes'
-import { Link } from '@/i18n/navigation'
+import { CtaLink } from '@/components/ui/cta-link'
 import { Eyebrow } from '@/components/ui/eyebrow'
 import { Reveal } from '@/components/ui/reveal'
 import { richTags } from '@/components/ui/rich'
@@ -24,21 +23,17 @@ export async function CtaBand() {
             {t('body')}
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href={Route.Contact}
-              data-cursor="fill"
-              className="group inline-flex items-center gap-2 rounded-full bg-saffron px-7 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-paper"
-            >
+            <CtaLink href={Route.Contact} tone="dark" size="lg" arrow>
               {t('ctaEnquire')}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-            <Link
+            </CtaLink>
+            <CtaLink
               href={Route.Products}
-              data-cursor="fill"
-              className="inline-flex items-center gap-2 rounded-full border border-paper/35 px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-paper/10"
+              variant="outline"
+              tone="dark"
+              size="lg"
             >
               {t('ctaCatalogue')}
-            </Link>
+            </CtaLink>
           </div>
         </Reveal>
       </div>

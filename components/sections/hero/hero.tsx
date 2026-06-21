@@ -1,9 +1,8 @@
-import { ArrowRight } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
 import { Route } from '@/constants/routes'
 import { SITE } from '@/constants/site'
-import { Link } from '@/i18n/navigation'
+import { CtaLink } from '@/components/ui/cta-link'
 import { WordmarkMedia } from '@/components/ui/wordmark-media'
 import { HeroEntry } from '@/components/sections/hero-entry'
 
@@ -38,21 +37,12 @@ export async function Hero() {
               data-hero-reveal
               className="flex flex-wrap items-center gap-3 lg:col-span-5 lg:justify-self-end"
             >
-              <Link
-                href={Route.Products}
-                data-cursor="fill"
-                className="group inline-flex items-center gap-2 rounded-full bg-saffron px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-clay hover:text-paper"
-              >
+              <CtaLink href={Route.Products} arrow>
                 {t('ctaProducts')}
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-              <Link
-                href={Route.Contact}
-                data-cursor="fill"
-                className="inline-flex items-center gap-2 rounded-full border border-ink/25 px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-paper"
-              >
+              </CtaLink>
+              <CtaLink href={Route.Contact} variant="outline">
                 {t('ctaContact')}
-              </Link>
+              </CtaLink>
             </div>
           </div>
 

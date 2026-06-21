@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { Route } from '@/constants/routes'
 import { SITE } from '@/constants/site'
 import { Link } from '@/i18n/navigation'
+import { CtaLink } from '@/components/ui/cta-link'
 import { LanguageSwitcher } from '@/components/ui/language-switcher'
 
 import type { NavItem } from '@/components/layout/site-header/nav-types'
@@ -175,13 +176,14 @@ export function SiteHeaderMobileMenu({
         <div className="mt-8 flex items-center justify-between gap-4">
           <LanguageSwitcher tone="paper" />
         </div>
-        <Link
+        <CtaLink
           href={Route.Contact}
           onClick={onClose}
-          className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-saffron px-6 py-4 text-base font-medium text-ink"
+          size="block"
+          className="mt-4"
         >
           {tCommon('enquire')}
-        </Link>
+        </CtaLink>
       </nav>
     </div>
   )

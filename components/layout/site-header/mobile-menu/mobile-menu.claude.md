@@ -10,6 +10,7 @@ imports_from:
   - '@/constants/routes'
   - '@/constants/site'
   - '@/i18n/navigation'
+  - '@/components/ui/cta-link'
   - '@/components/ui/language-switcher'
   - '@/components/layout/site-header/nav-types'
 ---
@@ -39,7 +40,7 @@ Business Logic:
 - Accordion state: openAccordion useState, toggle on button click
 - Plus icon rotates 45° when accordion opens
 - All links onClick close the menu
-- Footer: LanguageSwitcher (tone='paper') + Contact CTA link (full width, saffron bg)
+- Footer: LanguageSwitcher (tone='paper') + Contact CTA — shared `CtaLink` (`size="block"`, full-width saffron)
 - Dividers between items: divide-y divide-paper/10
 
 Dependencies:
@@ -48,7 +49,8 @@ Dependencies:
 - lucide-react: Plus, X
 - next-intl: useTranslations
 - @/constants/routes, @/constants/site
-- @/i18n/navigation: Link
+- @/i18n/navigation: Link (nav items)
+- @/components/ui/cta-link: CtaLink (the full-width Enquire pill)
 - @/components/ui/language-switcher
 
 i18n:

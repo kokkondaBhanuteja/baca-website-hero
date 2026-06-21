@@ -17,6 +17,9 @@ import { CtaBand } from '@/components/sections/cta-band'
 
 type PageParams = { params: Promise<{ locale: string }> }
 
+/** ISR fallback; admin CMS edits invalidate DB slices via cache tags in lib/server/services/*. */
+export const revalidate = 3600
+
 export default async function Page({ params }: PageParams) {
   const { locale } = await params
   // Enable static rendering for this route.

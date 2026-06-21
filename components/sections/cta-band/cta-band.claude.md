@@ -5,10 +5,9 @@ file: 'components/sections/cta-band/cta-band.tsx'
 exports:
   - 'CtaBand'
 imports_from:
-  - 'lucide-react'
   - 'next-intl/server'
   - '@/constants/routes'
-  - '@/i18n/navigation'
+  - '@/components/ui/cta-link'
   - '@/components/ui/eyebrow'
   - '@/components/ui/reveal'
   - '@/components/ui/rich'
@@ -31,16 +30,14 @@ Business Logic:
 
 - Single Reveal wrapper around the entire section
 - t.rich('heading', richTags) renders the headline with saffron italic <em> spans
-- Two links: Route.Contact (saffron bg-saffron, hover bg-paper), Route.Products (outline border border-paper/35)
-- Primary link: bg-saffron px-7 py-3.5 text-ink, hover:bg-paper text-transition, includes ArrowRight icon with hover translate-x
-- Secondary link: border-paper/35 px-7 py-3.5 text-paper, hover:bg-paper/10
+- Two shared `CtaLink` pills on the dark surface (`tone="dark" size="lg"`): Route.Contact (solid, `arrow`)
+  and Route.Products (`variant="outline"`)
 
 Dependencies:
 
-- lucide-react: ArrowRight
 - next-intl: getTranslations
 - @/constants/routes
-- @/i18n/navigation: Link
+- @/components/ui/cta-link: CtaLink (shared marketing CTA pill — `tone="dark"` for this forest band)
 - @/components/ui/eyebrow
 - @/components/ui/reveal
 - @/components/ui/rich: richTags

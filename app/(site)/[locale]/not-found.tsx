@@ -1,10 +1,9 @@
-import { ArrowRight } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 
 import { Route } from '@/constants/routes'
+import { CtaLink } from '@/components/ui/cta-link'
 import { Eyebrow } from '@/components/ui/eyebrow'
 import { WordmarkSlideshow } from '@/components/ui/wordmark-slideshow'
-import { Link } from '@/i18n/navigation'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
 
@@ -48,24 +47,12 @@ export default async function NotFound() {
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href={Route.Home}
-                data-cursor="fill"
-                className="group inline-flex items-center gap-2 rounded-full bg-saffron px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-clay hover:text-paper"
-              >
+              <CtaLink href={Route.Home} arrow>
                 {t('ctaHome')}
-                <ArrowRight
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1"
-                  aria-hidden
-                />
-              </Link>
-              <Link
-                href={Route.Products}
-                data-cursor="fill"
-                className="inline-flex items-center gap-2 rounded-full border border-ink/25 px-6 py-3 text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-paper"
-              >
+              </CtaLink>
+              <CtaLink href={Route.Products} variant="outline">
                 {t('ctaProducts')}
-              </Link>
+              </CtaLink>
             </div>
           </div>
         </section>
