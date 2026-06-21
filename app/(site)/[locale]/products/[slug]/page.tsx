@@ -11,6 +11,7 @@ import {
 } from '@/lib/server/services/product-service'
 import { CtaLink } from '@/components/ui/cta-link'
 import { MediaReveal } from '@/components/ui/media-reveal'
+import { MarkdownContent } from '@/components/shared/markdown-content'
 import { ProductCard } from '@/components/shared/product-card'
 import { SeasonalityCalendar } from '@/components/shared/seasonality-calendar'
 import { CtaBand } from '@/components/sections/cta-band'
@@ -42,9 +43,6 @@ export default async function ProductDetailPage({ params }: PageParams) {
   if (!product) notFound()
 
   const related = await listRelatedProducts(slug, locale as Locale)
-  const paragraphs = product.description
-    .split(/\n{2,}/)
-    .filter((block) => block.trim())
   const hasSeasonality =
     product.peakMonths.length > 0 || product.harvestMonths.length > 0
 
@@ -96,12 +94,10 @@ export default async function ProductDetailPage({ params }: PageParams) {
                 </p>
               )}
 
-              {paragraphs.length > 0 && (
-                <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink/80">
-                  {paragraphs.map((block, index) => (
-                    <p key={index}>{block}</p>
-                  ))}
-                </div>
+              {product.summary && (
+                <p className="mt-6 text-pretty text-[17px] leading-relaxed text-ink/80">
+                  {product.summary}
+                </p>
               )}
 
               {product.originRegions.length > 0 && (
@@ -171,6 +167,13 @@ export default async function ProductDetailPage({ params }: PageParams) {
             </div>
           </div>
         </div>
+
+        {/* Full-width details — admin-pasted Markdown (narrative + specs table) */}
+        {product.description && (
+          <section className="mx-auto max-w-[760px] px-5 pb-[clamp(3rem,6vw,5rem)] sm:px-8">
+            <MarkdownContent content={product.description} />
+          </section>
+        )}
 
         {related.length > 0 && (
           <section className="border-t border-line bg-cream">

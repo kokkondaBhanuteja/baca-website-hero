@@ -135,15 +135,30 @@ export function ProductForm({
             />
             <LocalizedTextInput
               label="Summary"
+              hint="Short one-line lead shown on cards and at the top of the product page."
               value={summary}
               onChange={setSummary}
             />
             <LocalizedTextInput
-              label="Description"
+              label="Details (Markdown)"
+              hint="Paste the full product details as Markdown — narrative plus a specs table. # headings, **bold**, lists, links and | tables | render on the product page."
               multiline
+              rows={16}
               value={description}
               onChange={setDescription}
             />
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-line bg-paper p-5 sm:p-6">
+            <h2 className="text-sm font-medium text-ink">
+              Advanced attributes{' '}
+              <span className="font-normal text-ink-60">(optional)</span>
+            </h2>
+            <p className="mb-5 mt-1 text-xs text-ink-60">
+              For products that want the structured pills, specs grid and
+              seasonality calendar. Leave blank if everything is in the Details
+              body above.
+            </p>
 
             <div className="mb-5">
               <label

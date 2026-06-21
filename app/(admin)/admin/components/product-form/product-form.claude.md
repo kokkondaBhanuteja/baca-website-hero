@@ -49,7 +49,11 @@ Business Logic:
 Layout:
 
 - Two-column CMS layout on `lg+` via `grid grid-cols-1 lg:grid-cols-12 lg:gap-8`.
-  - MAIN (`lg:col-span-8`): localized Name / Summary / Description, then Botanical name, Origin regions (textarea), Specifications (`SpecListInput`), Harvest months + Peak months (`MonthPicker`) in a single bordered card.
+  - MAIN (`lg:col-span-8`): a primary card with localized Name / Summary / **Details (Markdown)** (the
+    `description` field — relabeled, with a hint + tall 16-row textarea; pasted Markdown renders on the
+    product page via `MarkdownContent`), followed by a second **"Advanced attributes (optional)"** card
+    holding Botanical name, Origin regions (textarea), Specifications (`SpecListInput`), Harvest + Peak
+    months (`MonthPicker`). The advanced fields are optional — paste-only products leave them blank.
   - SIDEBAR (`lg:col-span-4`): three stacked cards — Save+Cancel + Published checkbox; Slug + Category + Sort order; Product image.
   - Sidebar is `lg:sticky lg:top-6` so actions stay visible while scrolling long descriptions.
 - Mobile: single-column stack.

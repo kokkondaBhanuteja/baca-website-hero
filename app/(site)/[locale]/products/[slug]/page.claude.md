@@ -16,6 +16,7 @@ imports_from:
   - '@/lib/server/services/product-service'
   - '@/components/ui/cta-link'
   - '@/components/ui/media-reveal'
+  - '@/components/shared/markdown-content'
   - '@/components/shared/product-card'
   - '@/components/shared/seasonality-calendar'
   - '@/components/sections/cta-band'
@@ -49,12 +50,15 @@ Business Logic:
 - `generateMetadata()` builds the title from the product name + summary/description.
 - Breadcrumb: Home / Products / {name}.
 - Split section (`lg:grid-cols-2`): LEFT = product image (`MediaReveal`, `lg:sticky lg:top-24`, bone
-  fallback); RIGHT = `<h1>` name + italic `botanicalName` subtitle, description paragraphs, and the three
-  attribute sections — each rendered only when its data is non-empty:
+  fallback); RIGHT = `<h1>` name + italic `botanicalName` subtitle, a `summary` lead line, and the three
+  (optional) structured attribute sections — each rendered only when its data is non-empty:
   - Origin regions → bordered rounded-full pills from `originRegions[]`.
   - Specifications → 2-col `<dl>` of `specs[{label,value}]`.
   - Seasonality → `seasonalityHint` + `<SeasonalityCalendar>` driven by `harvest/peakMonths`.
 - CTAs: `CtaLink` solid "Request quotation" + outline "Request sample" → `Route.Contact`.
+- **Full-width details section** below the hero: `description` rendered via `<MarkdownContent>`
+  (react-markdown + remark-gfm) when non-empty — admins paste a Markdown body (narrative + a GFM specs
+  table). `max-w-[760px]`, mirrors the blog article body. (Replaced the old plain-text paragraph split.)
 - "Pairs naturally" related grid (`ProductCard`); then `<CtaBand />` enquiry band before the footer.
 
 Renders:
