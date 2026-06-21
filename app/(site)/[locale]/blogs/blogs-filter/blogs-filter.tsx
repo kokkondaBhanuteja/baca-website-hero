@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 import { Route } from '@/constants/routes'
 import { Link } from '@/i18n/navigation'
@@ -27,7 +28,23 @@ export function BlogsFilter({
   types: BlogTypePublicDto[]
   labels: BlogsFilterLabels
 }) {
-  const [selected, setSelected] = useState<string>(ALL)
+  // The header's "Blogs" dropdown links here as `/blogs?type=<slug>`. Read that
+  // param as the initial selection (falling back to ALL when absent/unknown),
+  // and sync it on later navigations — pill clicks still update state instantly
+  // without touching the URL.
+  const searchParams = useSearchParams()
+  const requestedType = searchParams.get('type')
+  const resolvedType =
+    requestedType && types.some((type) => type.slug === requestedType)
+      ? requestedType
+      : ALL
+
+  const [selected, setSelected] = useState<string>(resolvedType)
+  const [lastRequested, setLastRequested] = useState<string>(resolvedType)
+  if (resolvedType !== lastRequested) {
+    setLastRequested(resolvedType)
+    setSelected(resolvedType)
+  }
 
   const visible =
     selected === ALL
