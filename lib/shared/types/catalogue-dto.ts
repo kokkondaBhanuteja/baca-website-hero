@@ -1,5 +1,11 @@
 import type { LocalizedText } from './localized-text'
 
+/** One specification row in a product's key/value grid (not localized). */
+export interface ProductSpec {
+  label: string
+  value: string
+}
+
 /** Admin view — raw all-locale objects so edit forms can populate every tab. */
 export interface ProductCategoryAdminDto {
   id: string
@@ -21,9 +27,11 @@ export interface ProductAdminDto {
   name: LocalizedText
   summary: LocalizedText | null
   description: LocalizedText | null
-  origin: LocalizedText | null
-  specifications: LocalizedText | null
-  seasonality: LocalizedText | null
+  botanicalName: string | null
+  originRegions: string[]
+  specs: ProductSpec[]
+  harvestMonths: number[]
+  peakMonths: number[]
   imageUrl: string | null
   imagePublicId: string | null
   sortOrder: number
@@ -46,9 +54,11 @@ export interface ProductDetailPublicDto {
   name: string
   summary: string
   description: string
-  origin: string
-  specifications: string
-  seasonality: string
+  botanicalName: string
+  originRegions: string[]
+  specs: ProductSpec[]
+  harvestMonths: number[]
+  peakMonths: number[]
   imageUrl: string | null
   categorySlug: string
   categoryName: string

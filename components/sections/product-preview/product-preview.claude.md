@@ -20,7 +20,8 @@ imports_from:
 # ProductPreview
 
 Purpose:
-DB-driven: fetches published categories and renders each as a full-width feature row with image + name + products list + CTA.
+DB-driven: fetches published categories and renders them ADAPTIVELY — a single category becomes one
+full-width feature row (image + name + product pills + CTA); two or more switch to a 3-column card grid.
 
 Used In:
 
@@ -34,11 +35,12 @@ Business Logic:
 
 - Calls await getLocale() + await getTranslations('productPreview') + await getTranslations('hero')
 - Calls await getCategoriesForLocale(locale), returns null if empty
-- Maps categories; each wrapped in Reveal with delay: index \* REVEAL_STAGGER_MS.PRODUCT_PREVIEW
-- Each category: Link to Route.Products with group class + grid lg:grid-cols-2
-- Left (image): MediaReveal with category.imageUrl or bone placeholder, aspect-[16/11] mobile, lg:min-h-[440px], scale-[1.04] on hover duration-baca-slow ease-baca
-- Right (content): h3 + optional description + products list (ul flex flex-wrap gap-2 with pill badges) + CTA arrow text
-- CTA: inline-flex group-hover:text-clay transition
+- `isSingle = categories.length === 1` picks the layout.
+- SINGLE → one full-width row: `Link` to Route.Products, `grid lg:grid-cols-2`, image left (`MediaReveal`,
+  `lg:min-h-[440px]`, hover `scale-[1.04]`), content right (h3 + description + product pills + CTA arrow).
+- MULTI → `grid gap-6 sm:grid-cols-2 lg:grid-cols-3` of category cards: image on top (`aspect-[4/3]`),
+  name, 2-line-clamped description, up to 4 product pills, CTA arrow pinned to the bottom (`mt-auto`).
+- Each entry wrapped in Reveal with delay `index * REVEAL_STAGGER_MS.PRODUCT_PREVIEW`.
 
 Dependencies:
 

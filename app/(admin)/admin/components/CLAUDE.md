@@ -18,8 +18,10 @@ products-table/               Client wrapper for the /admin/products list.
 categories-table/             Client wrapper for the /admin/categories list.
 blog-articles-table/          Client wrapper for the /admin/blog-articles list.
 localized-text-input/         Tabbed input with one tab per locale; EN required.
+spec-list-input/              Repeatable {label,value} rows for a product's specs grid (not localized).
+month-picker/                 Labeled row of 12 toggle chips → month numbers (harvest / peak seasonality).
 image-uploader/               Cloudinary signed upload (sign → direct upload).
-product-form/                 Product create/edit form.
+product-form/                 Product create/edit form (incl. botanical/regions/specs/months editors).
 category-form/                Product-category create/edit form.
 blog-article-form/            Blog-article create/edit form. NOTE: local state is
                               `isFeatured` but the API payload key stays `featured`.

@@ -19,9 +19,19 @@ export const productInputSchema = z
     name: requiredLocalizedText,
     summary: optionalLocalizedText.nullish(),
     description: optionalLocalizedText.nullish(),
-    origin: optionalLocalizedText.nullish(),
-    specifications: optionalLocalizedText.nullish(),
-    seasonality: optionalLocalizedText.nullish(),
+    botanicalName: z.string().trim().max(160).nullish(),
+    originRegions: z.array(z.string().trim().min(1).max(120)).max(20).nullish(),
+    specs: z
+      .array(
+        z.object({
+          label: z.string().trim().min(1).max(60),
+          value: z.string().trim().min(1).max(200),
+        }),
+      )
+      .max(30)
+      .nullish(),
+    harvestMonths: z.array(z.number().int().min(1).max(12)).max(12).nullish(),
+    peakMonths: z.array(z.number().int().min(1).max(12)).max(12).nullish(),
     imageUrl: z
       .string()
       .url('Image URL must be a valid URL')

@@ -5,7 +5,10 @@ import { useRouter } from 'next/navigation'
 
 import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { productsApi } from '@/lib/api-client/endpoints/products-api'
-import type { ProductAdminDto } from '@/lib/shared/types/catalogue-dto'
+import type {
+  ProductAdminDto,
+  ProductSpec,
+} from '@/lib/shared/types/catalogue-dto'
 import type { UploadedImage } from '@/lib/shared/types/upload-dto'
 import type { ProductInput } from '@/lib/server/validation/product-schema'
 
@@ -17,6 +20,8 @@ import {
   LocalizedTextInput,
   type LocalizedDraft,
 } from '@/app/(admin)/admin/components/localized-text-input'
+import { SpecListInput } from '@/app/(admin)/admin/components/spec-list-input'
+import { MonthPicker } from '@/app/(admin)/admin/components/month-picker'
 
 export interface CategoryOption {
   id: string
@@ -46,12 +51,18 @@ export function ProductForm({
   const [description, setDescription] = useState<LocalizedDraft>(
     initial?.description ?? {},
   )
-  const [origin, setOrigin] = useState<LocalizedDraft>(initial?.origin ?? {})
-  const [specifications, setSpecifications] = useState<LocalizedDraft>(
-    initial?.specifications ?? {},
+  const [botanicalName, setBotanicalName] = useState(
+    initial?.botanicalName ?? '',
   )
-  const [seasonality, setSeasonality] = useState<LocalizedDraft>(
-    initial?.seasonality ?? {},
+  const [originRegions, setOriginRegions] = useState(
+    (initial?.originRegions ?? []).join('\n'),
+  )
+  const [specs, setSpecs] = useState<ProductSpec[]>(initial?.specs ?? [])
+  const [harvestMonths, setHarvestMonths] = useState<number[]>(
+    initial?.harvestMonths ?? [],
+  )
+  const [peakMonths, setPeakMonths] = useState<number[]>(
+    initial?.peakMonths ?? [],
   )
   const [image, setImage] = useState<UploadedImage | null>(imageFrom(initial))
   const [sortOrder, setSortOrder] = useState(initial?.sortOrder ?? 0)
@@ -73,9 +84,14 @@ export function ProductForm({
       name,
       summary: hasAnyLocaleValue(summary) ? summary : null,
       description: hasAnyLocaleValue(description) ? description : null,
-      origin: hasAnyLocaleValue(origin) ? origin : null,
-      specifications: hasAnyLocaleValue(specifications) ? specifications : null,
-      seasonality: hasAnyLocaleValue(seasonality) ? seasonality : null,
+      botanicalName: botanicalName.trim() || null,
+      originRegions: originRegions
+        .split('\n')
+        .map((region) => region.trim())
+        .filter(Boolean),
+      specs: specs.filter((spec) => spec.label.trim() && spec.value.trim()),
+      harvestMonths,
+      peakMonths,
       imageUrl: image?.imageUrl ?? null,
       imagePublicId: image?.imagePublicId ?? null,
       sortOrder,
@@ -128,22 +144,53 @@ export function ProductForm({
               value={description}
               onChange={setDescription}
             />
-            <LocalizedTextInput
-              label="Origin regions"
-              value={origin}
-              onChange={setOrigin}
-            />
-            <LocalizedTextInput
-              label="Specifications"
-              multiline
-              value={specifications}
-              onChange={setSpecifications}
+
+            <div className="mb-5">
+              <label
+                htmlFor="botanicalName"
+                className="mb-1.5 block text-sm font-medium text-ink/80"
+              >
+                Botanical name
+              </label>
+              <input
+                id="botanicalName"
+                value={botanicalName}
+                onChange={(event) => setBotanicalName(event.target.value)}
+                placeholder="Elettaria cardamomum"
+                className="w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm italic text-ink outline-none focus:border-ink"
+              />
+            </div>
+
+            <div className="mb-5">
+              <label
+                htmlFor="originRegions"
+                className="mb-1.5 block text-sm font-medium text-ink/80"
+              >
+                Origin regions
+              </label>
+              <p className="mb-2 text-xs text-ink-60">One region per line.</p>
+              <textarea
+                id="originRegions"
+                rows={4}
+                value={originRegions}
+                onChange={(event) => setOriginRegions(event.target.value)}
+                placeholder={'Coorg, Kerala\nWayanad, Kerala\nIdukki, Kerala'}
+                className="w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink outline-none focus:border-ink"
+              />
+            </div>
+
+            <SpecListInput value={specs} onChange={setSpecs} />
+
+            <MonthPicker
+              label="Harvest months"
+              value={harvestMonths}
+              onChange={setHarvestMonths}
             />
             <div className="-mb-5">
-              <LocalizedTextInput
-                label="Seasonality"
-                value={seasonality}
-                onChange={setSeasonality}
+              <MonthPicker
+                label="Peak months"
+                value={peakMonths}
+                onChange={setPeakMonths}
               />
             </div>
           </div>

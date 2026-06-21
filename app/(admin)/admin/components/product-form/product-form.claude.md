@@ -14,13 +14,17 @@ imports_from:
   - '@/components/ui/dropdown'
   - '@/app/(admin)/admin/components/image-uploader'
   - '@/app/(admin)/admin/components/localized-text-input'
+  - '@/app/(admin)/admin/components/spec-list-input'
+  - '@/app/(admin)/admin/components/month-picker'
 ---
 
 # ProductForm
 
 Purpose:
-Product create/edit form: slug, category dropdown, localized name/summary/description, the
-Origin/Specifications/Seasonality detail-page attributes, product image, sort order, published toggle.
+Product create/edit form: slug, category dropdown, localized name/summary/description, the structured
+detail-page attributes — botanical name (text), origin regions (textarea, one per line → string[]),
+specifications (`SpecListInput` key/value rows), and harvest/peak months (`MonthPicker` ×2) — product
+image, sort order, published toggle. This is the admin path that drives the product detail page.
 
 Used In:
 
@@ -33,10 +37,10 @@ Props:
 
 Business Logic:
 
-- Local state: slug, categoryId, name/summary/description/origin/specifications/seasonality (LocalizedDraft), image, sortOrder, isPublished
-- onSubmit: builds payload, calls productsApi.create/update
+- Local state: slug, categoryId, name/summary/description (LocalizedDraft), botanicalName (string), originRegions (newline-joined string), specs (ProductSpec[]), harvestMonths/peakMonths (number[]), image, sortOrder, isPublished
+- onSubmit: builds payload — originRegions split by newline → string[]; specs filtered to non-empty rows; botanicalName trimmed (null if empty) — then calls productsApi.create/update
 - Category dropdown uses categories array (id → label mapping); default to first if available
-- Name is required; summary/description/origin/specifications/seasonality optional (checked via hasAnyLocaleValue → null when empty)
+- Name is required; the structured attributes are optional (the public page renders each section only when present)
 - ImageUploader (folder: 'baca/products')
 - Sort order: number input
 - Published checkbox
@@ -45,7 +49,7 @@ Business Logic:
 Layout:
 
 - Two-column CMS layout on `lg+` via `grid grid-cols-1 lg:grid-cols-12 lg:gap-8`.
-  - MAIN (`lg:col-span-8`): localized Name / Summary / Description / Origin regions / Specifications / Seasonality in a single bordered card.
+  - MAIN (`lg:col-span-8`): localized Name / Summary / Description, then Botanical name, Origin regions (textarea), Specifications (`SpecListInput`), Harvest months + Peak months (`MonthPicker`) in a single bordered card.
   - SIDEBAR (`lg:col-span-4`): three stacked cards — Save+Cancel + Published checkbox; Slug + Category + Sort order; Product image.
   - Sidebar is `lg:sticky lg:top-6` so actions stay visible while scrolling long descriptions.
 - Mobile: single-column stack.

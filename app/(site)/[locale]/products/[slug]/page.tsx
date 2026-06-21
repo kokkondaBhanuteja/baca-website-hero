@@ -10,8 +10,10 @@ import {
   listRelatedProducts,
 } from '@/lib/server/services/product-service'
 import { CtaLink } from '@/components/ui/cta-link'
+import { MediaReveal } from '@/components/ui/media-reveal'
 import { ProductCard } from '@/components/shared/product-card'
-import { MediaHero } from '@/components/shared/media-hero'
+import { SeasonalityCalendar } from '@/components/shared/seasonality-calendar'
+import { CtaBand } from '@/components/sections/cta-band'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
 
@@ -43,83 +45,132 @@ export default async function ProductDetailPage({ params }: PageParams) {
   const paragraphs = product.description
     .split(/\n{2,}/)
     .filter((block) => block.trim())
-
-  const attributes = [
-    { label: t('detail.originRegions'), value: product.origin, hint: '' },
-    {
-      label: t('detail.specifications'),
-      value: product.specifications,
-      hint: '',
-    },
-    {
-      label: t('detail.seasonality'),
-      value: product.seasonality,
-      hint: t('detail.seasonalityHint'),
-    },
-  ].filter((attribute) => attribute.value)
+  const hasSeasonality =
+    product.peakMonths.length > 0 || product.harvestMonths.length > 0
 
   return (
     <>
-      <SiteHeader />
-      <main className="min-h-screen bg-paper">
-        <MediaHero
-          imageUrl={product.imageUrl}
-          imageAlt={product.name}
-          eyebrow={product.categoryName}
-          title={product.name}
-        >
-          {product.summary && (
-            <p className="max-w-[56ch] text-[15px] leading-relaxed text-paper/80">
-              {product.summary}
-            </p>
-          )}
-        </MediaHero>
-
-        <section className="mx-auto max-w-[860px] px-5 py-[clamp(3rem,6vw,5rem)] sm:px-8">
-          <Link
-            href={Route.Products}
-            className="font-mono text-[0.66rem] uppercase tracking-[0.18em] text-ink-60 hover:text-clay"
+      <SiteHeader forceSolid />
+      <main className="min-h-screen bg-paper pt-header-base">
+        <div className="mx-auto max-w-content px-5 py-[clamp(2rem,4vw,3.5rem)] sm:px-8">
+          {/* Breadcrumb */}
+          <nav
+            aria-label="Breadcrumb"
+            className="flex flex-wrap items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-ink-60"
           >
-            ← {t('detail.backToProducts')}
-          </Link>
+            <Link href={Route.Home} className="hover:text-clay">
+              {t('detail.home')}
+            </Link>
+            <span aria-hidden>/</span>
+            <Link href={Route.Products} className="hover:text-clay">
+              {t('detail.products')}
+            </Link>
+            <span aria-hidden>/</span>
+            <span className="text-ink">{product.name}</span>
+          </nav>
 
-          {paragraphs.length > 0 && (
-            <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-ink/85">
-              {paragraphs.map((block, index) => (
-                <p key={index}>{block}</p>
-              ))}
+          {/* Split: image left, content right */}
+          <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2">
+            <div className="lg:sticky lg:top-24 lg:self-start">
+              <MediaReveal className="aspect-[4/5] overflow-hidden rounded-2xl border border-line">
+                {product.imageUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-bone" />
+                )}
+              </MediaReveal>
             </div>
-          )}
 
-          {attributes.length > 0 && (
-            <dl className="mt-12 grid gap-8 border-t border-line pt-10 sm:grid-cols-3">
-              {attributes.map((attribute) => (
-                <div key={attribute.label}>
-                  <dt className="font-mono text-[0.62rem] uppercase tracking-[0.16em] text-ink-60">
-                    {attribute.label}
-                  </dt>
-                  <dd className="mt-2 text-[15px] leading-relaxed text-ink/85">
-                    {attribute.value}
-                  </dd>
-                  {attribute.hint && (
-                    <p className="mt-1 text-[12px] text-ink-60">
-                      {attribute.hint}
-                    </p>
-                  )}
+            <div>
+              <h1 className="font-heading text-[clamp(2.4rem,5vw,3.75rem)] font-light leading-[1.02] tracking-[-0.02em] text-ink">
+                {product.name}
+              </h1>
+              {product.botanicalName && (
+                <p className="mt-2 font-heading text-lg italic text-clay">
+                  {product.botanicalName}
+                </p>
+              )}
+
+              {paragraphs.length > 0 && (
+                <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-ink/80">
+                  {paragraphs.map((block, index) => (
+                    <p key={index}>{block}</p>
+                  ))}
                 </div>
-              ))}
-            </dl>
-          )}
+              )}
 
-          <div className="mt-12 flex flex-wrap items-center gap-3">
-            <CtaLink href={Route.Contact} arrow>
-              {t('detail.requestQuote')}
-            </CtaLink>
-            <CtaLink href={Route.Contact} variant="outline">
-              {t('detail.requestSample')}
-            </CtaLink>
+              {product.originRegions.length > 0 && (
+                <section className="mt-10 border-t border-line pt-8">
+                  <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
+                    {t('detail.originRegions')}
+                  </h2>
+                  <ul className="mt-3 flex flex-wrap gap-2">
+                    {product.originRegions.map((region) => (
+                      <li
+                        key={region}
+                        className="rounded-full border border-line px-3 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.12em] text-ink/75"
+                      >
+                        {region}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {product.specs.length > 0 && (
+                <section className="mt-10 border-t border-line pt-8">
+                  <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
+                    {t('detail.specifications')}
+                  </h2>
+                  <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
+                    {product.specs.map((spec) => (
+                      <div key={spec.label}>
+                        <dt className="font-mono text-[0.58rem] uppercase tracking-[0.16em] text-ink-60">
+                          {spec.label}
+                        </dt>
+                        <dd className="mt-1 text-[15px] leading-snug text-ink">
+                          {spec.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </section>
+              )}
+
+              {hasSeasonality && (
+                <section className="mt-10 border-t border-line pt-8">
+                  <h2 className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
+                    {t('detail.seasonality')}
+                  </h2>
+                  <p className="mb-4 mt-1 text-[12px] text-ink-60">
+                    {t('detail.seasonalityHint')}
+                  </p>
+                  <SeasonalityCalendar
+                    peakMonths={product.peakMonths}
+                    harvestMonths={product.harvestMonths}
+                    locale={locale as Locale}
+                    harvestLabel={t('detail.harvest')}
+                    peakLabel={t('detail.peak')}
+                  />
+                </section>
+              )}
+
+              <div className="mt-10 flex flex-wrap items-center gap-3">
+                <CtaLink href={Route.Contact} arrow>
+                  {t('detail.requestQuote')}
+                </CtaLink>
+                <CtaLink href={Route.Contact} variant="outline">
+                  {t('detail.requestSample')}
+                </CtaLink>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
 
         {related.length > 0 && (
           <section className="border-t border-line bg-cream">
@@ -143,6 +194,8 @@ export default async function ProductDetailPage({ params }: PageParams) {
             </div>
           </section>
         )}
+
+        <CtaBand />
       </main>
       <SiteFooter />
     </>

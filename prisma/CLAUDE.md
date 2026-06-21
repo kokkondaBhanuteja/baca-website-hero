@@ -7,7 +7,7 @@ PostgreSQL schema + seed. Dev DB is **Neon** (cloud) via `DATABASE_URL`. ORM = *
 schema.prisma   Models + enums (see below)
 migrations/     Generated SQL migrations
 seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogue/insights:
-                3 categories (Spices/Nuts/Fruits) · 10 products (full attributes) · 5 insight articles
+                1 category (Spices) · 4 products (full structured attributes) · 5 insight articles
                 spanning all 3 blog categories. The wipe (deleteMany products→articles→categories)
                 makes it the source of truth — re-running overwrites admin-made catalogue/article rows.
 ```
@@ -16,8 +16,9 @@ seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogu
 
 - **AdminUser** — email (unique), passwordHash (argon2id), name, role (ADMIN|SUPER_ADMIN).
 - **ProductCategory** — slug (unique), `name`/`description` JSONB, imageUrl/imagePublicId, sortOrder, isPublished.
-- **Product** — slug, FK categoryId (`onDelete: Restrict`), `name`/`summary`/`description` JSONB, plus
-  `origin`/`specifications`/`seasonality` JSONB (detail-page attributes), image, sort, isPublished.
+- **Product** — slug, FK categoryId (`onDelete: Restrict`), `name`/`summary`/`description` JSONB (localized),
+  plus **structured (non-localized) detail attributes**: `botanicalName` (scalar), `originRegions` (string[]),
+  `specs` ({label,value}[]), `harvestMonths`/`peakMonths` (number[1–12][]); image, sort, isPublished.
 - **BlogArticle** — slug, `category` enum, `title`/`excerpt`/`body` JSONB, coverImage, scalar author
   byline (`authorName`/`authorRole`) + `authorAvatarUrl`/`authorAvatarPublicId`, readMinutes,
   `status` (DRAFT|PUBLISHED), featured, publishedAt.

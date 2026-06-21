@@ -42,9 +42,11 @@ type ProductSeed = {
   name: Prisma.InputJsonValue
   summary: Prisma.InputJsonValue
   description: Prisma.InputJsonValue
-  origin: Prisma.InputJsonValue
-  specifications: Prisma.InputJsonValue
-  seasonality: Prisma.InputJsonValue
+  botanicalName: string
+  originRegions: string[]
+  specs: { label: string; value: string }[]
+  harvestMonths: number[]
+  peakMonths: number[]
 }
 
 type CategorySeed = {
@@ -85,13 +87,25 @@ async function seedCatalogue() {
           description: json({
             en: 'Alleppey Green cardamom from the high ranges of Idukki — hand-picked, cured, and graded for size and colour. Bold capsules with a sweet, intense aroma, the grade buyers ask for by name.',
           }),
-          origin: json({ en: 'Idukki & the Cardamom Hills, Kerala' }),
-          specifications: json({
-            en: '8mm bold · Alleppey Green Extra Bold (AGEB) · moisture ≤ 10% · hand-picked',
-          }),
-          seasonality: json({
-            en: 'August – February (peak October – December)',
-          }),
+          botanicalName: 'Elettaria cardamomum',
+          originRegions: [
+            'Idukki, Kerala',
+            'Wayanad, Kerala',
+            'Coorg, Karnataka',
+          ],
+          specs: [
+            { label: 'Variety', value: 'Alleppey Green (Malabar / Mysore)' },
+            { label: 'Grade', value: 'AGEB · AGB · AGS' },
+            { label: 'Size', value: '7–8 mm bold' },
+            { label: 'Moisture', value: '≤ 10%' },
+            { label: 'Volatile oil', value: '≥ 6%' },
+            { label: 'Packaging', value: '5 / 10 / 25 kg jute or vacuum' },
+            { label: 'MOQ', value: '5 MT (1×20ft container)' },
+            { label: 'HS code', value: '0908.31' },
+            { label: 'Incoterms', value: 'FOB Cochin · CIF EU/Dubai/USA' },
+          ],
+          harvestMonths: [8, 9, 10, 11, 12, 1, 2],
+          peakMonths: [10, 11, 12],
         },
         {
           slug: 'malabar-black-pepper',
@@ -101,11 +115,25 @@ async function seedCatalogue() {
           description: json({
             en: 'Garbled Malabar black pepper — dense, pungent berries cleaned to export grade. High bulk density and a sharp, lingering heat from the coast that gave pepper its name.',
           }),
-          origin: json({ en: 'Malabar coast, Kerala & Karnataka' }),
-          specifications: json({
-            en: 'Garbled (MG1) · 550–570 g/l bulk density · 5mm · moisture ≤ 11%',
-          }),
-          seasonality: json({ en: 'December – March' }),
+          botanicalName: 'Piper nigrum',
+          originRegions: [
+            'Malabar, Kerala',
+            'Wayanad, Kerala',
+            'Coorg, Karnataka',
+          ],
+          specs: [
+            { label: 'Variety', value: 'Malabar Garbled' },
+            { label: 'Grade', value: 'MG1 · TGSEB' },
+            { label: 'Bulk density', value: '550–570 g/l' },
+            { label: 'Size', value: '4.25–5 mm' },
+            { label: 'Moisture', value: '≤ 11%' },
+            { label: 'Packaging', value: '25 / 50 kg PP or jute' },
+            { label: 'MOQ', value: '5 MT (1×20ft container)' },
+            { label: 'HS code', value: '0904.11' },
+            { label: 'Incoterms', value: 'FOB Cochin · CIF EU/USA' },
+          ],
+          harvestMonths: [12, 1, 2, 3],
+          peakMonths: [1, 2],
         },
         {
           slug: 'turmeric-fingers',
@@ -115,11 +143,25 @@ async function seedCatalogue() {
           description: json({
             en: 'Erode and Salem turmeric fingers — naturally high in curcumin, hard, bright, and free of artificial colour. Every lot is tested for purity and adulteration before it ships.',
           }),
-          origin: json({ en: 'Erode & Salem, Tamil Nadu' }),
-          specifications: json({
-            en: '3–5% curcumin · polished fingers · moisture ≤ 10% · lead-chromate tested',
-          }),
-          seasonality: json({ en: 'January – April' }),
+          botanicalName: 'Curcuma longa',
+          originRegions: [
+            'Erode, Tamil Nadu',
+            'Salem, Tamil Nadu',
+            'Nizamabad, Telangana',
+          ],
+          specs: [
+            { label: 'Variety', value: 'Erode / Salem fingers' },
+            { label: 'Curcumin', value: '3–5%' },
+            { label: 'Length', value: '2.5–7 cm fingers' },
+            { label: 'Moisture', value: '≤ 10%' },
+            { label: 'Purity', value: 'Lead-chromate tested' },
+            { label: 'Packaging', value: '25 / 50 kg PP or jute' },
+            { label: 'MOQ', value: '5 MT (1×20ft container)' },
+            { label: 'HS code', value: '0910.30' },
+            { label: 'Incoterms', value: 'FOB Chennai · CIF EU/Gulf' },
+          ],
+          harvestMonths: [1, 2, 3, 4],
+          peakMonths: [2, 3],
         },
         {
           slug: 'guntur-red-chilli',
@@ -129,133 +171,21 @@ async function seedCatalogue() {
           description: json({
             en: 'Guntur S17 Teja chillies — stemless, with the heat and ASTA colour that make them the benchmark Indian chilli. Sorted and graded for export consistency.',
           }),
-          origin: json({ en: 'Guntur, Andhra Pradesh' }),
-          specifications: json({
-            en: 'S17 Teja · stemless · 75,000–85,000 SHU · ASTA colour 32–38',
-          }),
-          seasonality: json({ en: 'February – May' }),
-        },
-      ],
-    },
-    {
-      slug: 'nuts',
-      image: '/images/cat-nuts.jpg',
-      name: json({
-        en: 'Nuts',
-        de: 'Nüsse',
-        ar: 'المكسرات',
-        fr: 'Noix',
-        es: 'Frutos secos',
-        nl: 'Noten',
-        it: 'Frutta secca',
-      }),
-      description: json({
-        en: 'Cashew and groundnut kernels — sorted, graded and lab-tested for export.',
-      }),
-      products: [
-        {
-          slug: 'cashew-w320',
-          image: '/images/cat-nuts.jpg',
-          name: json({ en: 'Cashew Kernels W320' }),
-          summary: json({ en: 'W320 · white wholes · ≤ 5% broken' }),
-          description: json({
-            en: 'W320 grade cashew kernels — the most-traded export grade, uniform ivory-white wholes. Steam-roasted, hand-sorted and vacuum-packed to hold crunch and colour.',
-          }),
-          origin: json({ en: 'Panruti, Tamil Nadu & Mangalore, Karnataka' }),
-          specifications: json({
-            en: 'W320 · 300–320 kernels/lb · ≤ 5% broken · moisture ≤ 5%',
-          }),
-          seasonality: json({
-            en: 'Processed year-round (harvest March – May)',
-          }),
-        },
-        {
-          slug: 'groundnut-bold',
-          image: '/images/cat-nuts.jpg',
-          name: json({ en: 'Bold Groundnut Kernels' }),
-          summary: json({ en: 'Java/Bold 50/60 · aflatoxin tested' }),
-          description: json({
-            en: 'Bold groundnut (peanut) kernels — clean, uniform and aflatoxin-tested. Java and Bold counts suited to roasting, oil and confectionery buyers.',
-          }),
-          origin: json({ en: 'Gujarat & Tamil Nadu' }),
-          specifications: json({
-            en: 'Java/Bold 50/60 count · admixture ≤ 1% · aflatoxin ≤ 4 ppb · moisture ≤ 7%',
-          }),
-          seasonality: json({ en: 'November – February' }),
-        },
-        {
-          slug: 'cashew-splits',
-          image: '/images/cat-nuts.jpg',
-          name: json({ en: 'Cashew Splits & Pieces' }),
-          summary: json({ en: 'Splits · LWP · for processing' }),
-          description: json({
-            en: 'Cashew splits, butts and large white pieces — the value grade for snack, bakery and confectionery manufacturers who want kernel quality at a piece price.',
-          }),
-          origin: json({ en: 'Panruti, Tamil Nadu' }),
-          specifications: json({
-            en: 'Splits / LWP / SWP · moisture ≤ 5% · vacuum-packed',
-          }),
-          seasonality: json({ en: 'Processed year-round' }),
-        },
-      ],
-    },
-    {
-      slug: 'fruits',
-      image: '/images/cat-fruits.jpg',
-      name: json({
-        en: 'Fruits',
-        de: 'Früchte',
-        ar: 'الفواكه',
-        fr: 'Fruits',
-        es: 'Frutas',
-        nl: 'Fruit',
-        it: 'Frutta',
-      }),
-      description: json({
-        en: 'Fresh and processed fruit — from Alphonso mango pulp to pomegranate and grapes.',
-      }),
-      products: [
-        {
-          slug: 'alphonso-mango-pulp',
-          image: '/images/cat-fruits.jpg',
-          name: json({ en: 'Alphonso Mango Pulp' }),
-          summary: json({ en: 'Ratnagiri Alphonso · Brix 14–16' }),
-          description: json({
-            en: 'Aseptically packed Alphonso mango pulp from the Konkan coast — rich, low-fibre and naturally sweet. Drummed for bakery, beverage and dairy buyers worldwide.',
-          }),
-          origin: json({ en: 'Ratnagiri & Devgad, Maharashtra' }),
-          specifications: json({
-            en: 'Total soluble solids 14–16 °Brix · acidity 0.3–0.5% · aseptic 215 kg drums',
-          }),
-          seasonality: json({ en: 'April – June' }),
-        },
-        {
-          slug: 'bhagwa-pomegranate',
-          image: '/images/cat-fruits.jpg',
-          name: json({ en: 'Bhagwa Pomegranate' }),
-          summary: json({ en: 'Bhagwa · deep-red arils · count 6–12' }),
-          description: json({
-            en: 'Bhagwa pomegranates — glossy red skin and deep, sweet arils with a long shelf life. Field-graded by count and pre-cooled for sea and air freight.',
-          }),
-          origin: json({ en: 'Solapur & Nashik, Maharashtra' }),
-          specifications: json({
-            en: 'Bhagwa cultivar · count 6–12 · 200–400 g · pre-cooled',
-          }),
-          seasonality: json({ en: 'August – February' }),
-        },
-        {
-          slug: 'thompson-grapes',
-          image: '/images/cat-fruits.jpg',
-          name: json({ en: 'Thompson Seedless Grapes' }),
-          summary: json({ en: 'Thompson · seedless · Brix ≥ 16' }),
-          description: json({
-            en: 'Thompson Seedless table grapes from Nashik — crisp, seedless and uniformly sized. Cold-chain packed in punnets for European and Middle East retail.',
-          }),
-          origin: json({ en: 'Nashik, Maharashtra' }),
-          specifications: json({
-            en: 'Thompson Seedless · berry 16–18 mm · Brix ≥ 16 · 4.5/9 kg cartons',
-          }),
-          seasonality: json({ en: 'January – April' }),
+          botanicalName: 'Capsicum annuum',
+          originRegions: ['Guntur, Andhra Pradesh', 'Warangal, Telangana'],
+          specs: [
+            { label: 'Variety', value: 'S17 Teja' },
+            { label: 'Style', value: 'Stemless' },
+            { label: 'Heat', value: '75,000–85,000 SHU' },
+            { label: 'Colour', value: 'ASTA 32–38' },
+            { label: 'Moisture', value: '≤ 11%' },
+            { label: 'Packaging', value: '10 / 25 kg cartons or PP' },
+            { label: 'MOQ', value: '5 MT (1×20ft container)' },
+            { label: 'HS code', value: '0904.21' },
+            { label: 'Incoterms', value: 'FOB Chennai · CIF Asia/Gulf' },
+          ],
+          harvestMonths: [2, 3, 4, 5],
+          peakMonths: [3, 4],
         },
       ],
     },
@@ -288,9 +218,11 @@ async function seedCatalogue() {
           name: product.name,
           summary: product.summary,
           description: product.description,
-          origin: product.origin,
-          specifications: product.specifications,
-          seasonality: product.seasonality,
+          botanicalName: product.botanicalName,
+          originRegions: product.originRegions,
+          specs: product.specs,
+          harvestMonths: product.harvestMonths,
+          peakMonths: product.peakMonths,
           imageUrl: product.image,
           sortOrder: index,
           isPublished: true,

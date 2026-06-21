@@ -15,8 +15,10 @@ imports_from:
   - '@/i18n/navigation'
   - '@/lib/server/services/product-service'
   - '@/components/ui/cta-link'
+  - '@/components/ui/media-reveal'
   - '@/components/shared/product-card'
-  - '@/components/shared/media-hero'
+  - '@/components/shared/seasonality-calendar'
+  - '@/components/sections/cta-band'
   - '@/components/layout/site-header'
   - '@/components/layout/site-footer'
 route: '/[locale]/products/[slug]'
@@ -31,9 +33,9 @@ Rendering: Server (force-dynamic)
 Auth: Public
 
 Purpose:
-Single product detail page — magazine hero + description + Origin/Specifications/Seasonality
-attributes + quotation/sample CTAs + "Pairs naturally" related grid. Reachable from the `/products`
-cards (and the header nav).
+Single product detail page — a two-column split (product photo left, content right) modeled on the
+reference: title + botanical subtitle, origin-region pills, a specifications key/value grid, a 12-month
+seasonality calendar, quotation/sample CTAs, "Pairs naturally" related grid, and an enquiry band.
 
 Data:
 
@@ -45,21 +47,26 @@ Business Logic:
 
 - `export const dynamic = 'force-dynamic'` — live with admin edits.
 - `generateMetadata()` builds the title from the product name + summary/description.
-- `MediaHero` shows the cover image, category eyebrow, name, and summary (meta slot).
-- Description split on blank lines into `<p>` paragraphs (same approach as the blog body).
-- Attributes: an array of `{ label, value, hint }` filtered to present values, rendered as a 3-col `<dl>`
-  (seasonality carries the `seasonalityHint` sub-label).
-- CTAs: `CtaLink` solid "Request quotation" + outline "Request sample", both → `Route.Contact`.
-- Related grid uses the shared `ProductCard`; section also links back to `/products`.
+- Breadcrumb: Home / Products / {name}.
+- Split section (`lg:grid-cols-2`): LEFT = product image (`MediaReveal`, `lg:sticky lg:top-24`, bone
+  fallback); RIGHT = `<h1>` name + italic `botanicalName` subtitle, description paragraphs, and the three
+  attribute sections — each rendered only when its data is non-empty:
+  - Origin regions → bordered rounded-full pills from `originRegions[]`.
+  - Specifications → 2-col `<dl>` of `specs[{label,value}]`.
+  - Seasonality → `seasonalityHint` + `<SeasonalityCalendar>` driven by `harvest/peakMonths`.
+- CTAs: `CtaLink` solid "Request quotation" + outline "Request sample" → `Route.Contact`.
+- "Pairs naturally" related grid (`ProductCard`); then `<CtaBand />` enquiry band before the footer.
 
 Renders:
 
-- SiteHeader (transparent — dark hero) · MediaHero · description · attributes `<dl>` · CTA row ·
-  "Pairs naturally" `ProductCard` grid · SiteFooter
+- SiteHeader (`forceSolid` — page is on `bg-paper`, no dark hero) · breadcrumb · split image/content ·
+  origin pills · spec grid · SeasonalityCalendar · CTA row · "Pairs naturally" grid · CtaBand · SiteFooter
 
 i18n:
-Namespace `productsPage`, `detail.*` keys (`backToProducts`, `originRegions`, `specifications`,
-`seasonality`, `seasonalityHint`, `requestQuote`, `requestSample`, `pairsNaturally`, `viewAllProducts`).
+Namespace `productsPage`, `detail.*` keys (`home`, `products`, `originRegions`, `specifications`,
+`seasonality`, `seasonalityHint`, `harvest`, `peak`, `requestQuote`, `requestSample`, `pairsNaturally`,
+`viewAllProducts`). Structured attribute VALUES are stored in the DB (not localized).
 
 Notes:
-Uses the transparent `SiteHeader` (no `forceSolid`) so the nav floats over the dark full-bleed hero.
+No longer uses `MediaHero` (that stays on the blog page). Fully responsive: the split stacks to one
+column below `lg`, the spec grid to one column below `sm`, and the calendar to two rows below `sm`.

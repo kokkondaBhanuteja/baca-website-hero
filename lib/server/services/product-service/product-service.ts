@@ -14,6 +14,7 @@ import type {
   ProductAdminDto,
   ProductDetailPublicDto,
   ProductPublicDto,
+  ProductSpec,
 } from '@/lib/shared/types/catalogue-dto'
 import type { LocalizedText } from '@/lib/shared/types/localized-text'
 import {
@@ -36,9 +37,11 @@ function mapAdmin(row: ProductRow): ProductAdminDto {
     name: row.name as LocalizedText,
     summary: (row.summary as LocalizedText | null) ?? null,
     description: (row.description as LocalizedText | null) ?? null,
-    origin: (row.origin as LocalizedText | null) ?? null,
-    specifications: (row.specifications as LocalizedText | null) ?? null,
-    seasonality: (row.seasonality as LocalizedText | null) ?? null,
+    botanicalName: row.botanicalName,
+    originRegions: (row.originRegions as string[] | null) ?? [],
+    specs: (row.specs as ProductSpec[] | null) ?? [],
+    harvestMonths: (row.harvestMonths as number[] | null) ?? [],
+    peakMonths: (row.peakMonths as number[] | null) ?? [],
     imageUrl: row.imageUrl,
     imagePublicId: row.imagePublicId,
     sortOrder: row.sortOrder,
@@ -57,14 +60,18 @@ function toData(input: ProductInput) {
     description: input.description
       ? (input.description as Prisma.InputJsonValue)
       : Prisma.DbNull,
-    origin: input.origin
-      ? (input.origin as Prisma.InputJsonValue)
+    botanicalName: input.botanicalName ?? null,
+    originRegions: input.originRegions?.length
+      ? (input.originRegions as Prisma.InputJsonValue)
       : Prisma.DbNull,
-    specifications: input.specifications
-      ? (input.specifications as Prisma.InputJsonValue)
+    specs: input.specs?.length
+      ? (input.specs as Prisma.InputJsonValue)
       : Prisma.DbNull,
-    seasonality: input.seasonality
-      ? (input.seasonality as Prisma.InputJsonValue)
+    harvestMonths: input.harvestMonths?.length
+      ? (input.harvestMonths as Prisma.InputJsonValue)
+      : Prisma.DbNull,
+    peakMonths: input.peakMonths?.length
+      ? (input.peakMonths as Prisma.InputJsonValue)
       : Prisma.DbNull,
     imageUrl: input.imageUrl ?? null,
     imagePublicId: input.imagePublicId ?? null,
@@ -233,15 +240,11 @@ export const getPublishedProductBySlug = unstable_cache(
         row.description as LocalizedText | null,
         locale,
       ),
-      origin: localizedValue(row.origin as LocalizedText | null, locale),
-      specifications: localizedValue(
-        row.specifications as LocalizedText | null,
-        locale,
-      ),
-      seasonality: localizedValue(
-        row.seasonality as LocalizedText | null,
-        locale,
-      ),
+      botanicalName: row.botanicalName ?? '',
+      originRegions: (row.originRegions as string[] | null) ?? [],
+      specs: (row.specs as ProductSpec[] | null) ?? [],
+      harvestMonths: (row.harvestMonths as number[] | null) ?? [],
+      peakMonths: (row.peakMonths as number[] | null) ?? [],
       imageUrl: optimizedImageUrl(row.imageUrl),
       categorySlug: row.category.slug,
       categoryName: localizedValue(row.category.name as LocalizedText, locale),

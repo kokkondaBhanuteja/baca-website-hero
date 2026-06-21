@@ -70,22 +70,24 @@ model ProductCategory {
 }
 
 model Product {
-  id             String          @id @default(cuid())
-  slug           String          @unique
-  name           Json // LocalizedText
-  summary        Json? // LocalizedText (short "Cardamom · Pepper …" line)
-  description    Json? // LocalizedText (long copy)
-  origin         Json? // LocalizedText — origin regions (detail page attribute)
-  specifications Json? // LocalizedText — grades / packing / specs (detail page attribute)
-  seasonality    Json? // LocalizedText — harvest / peak availability (detail page attribute)
-  imageUrl       String?
-  imagePublicId  String?
-  categoryId     String
-  category       ProductCategory @relation(fields: [categoryId], references: [id], onDelete: Restrict)
-  sortOrder      Int             @default(0)
-  isPublished    Boolean         @default(true)
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
+  id            String          @id @default(cuid())
+  slug          String          @unique
+  name          Json // LocalizedText
+  summary       Json? // LocalizedText (short "Cardamom · Pepper …" line)
+  description   Json? // LocalizedText (long copy)
+  botanicalName String? // Latin name, italic subtitle (e.g. "Elettaria cardamomum")
+  originRegions Json? // string[] — region pills, e.g. ["Coorg, Kerala", …]
+  specs         Json? // { label, value }[] — specifications key/value grid
+  harvestMonths Json? // number[] (1–12) — seasonality calendar light highlight
+  peakMonths    Json? // number[] (1–12) — seasonality calendar peak highlight
+  imageUrl      String?
+  imagePublicId String?
+  categoryId    String
+  category      ProductCategory @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  sortOrder     Int             @default(0)
+  isPublished   Boolean         @default(true)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
 
   @@index([categoryId, sortOrder])
   @@map("products")

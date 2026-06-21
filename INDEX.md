@@ -10,7 +10,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - **Find who calls a service**: look at the `called_by` field in the service's frontmatter, OR grep `from '@/lib/server/services/<name>'`.
 - **Find the source file**: every `.claude.md` declares its `file:` in frontmatter.
 
-### Components (UI primitives, sections, layout, shared, admin) (52)
+### Components (UI primitives, sections, layout, shared, admin) (55)
 
 - [`AdminListSkeleton`](<app/(admin)/admin/components/admin-list-skeleton/admin-list-skeleton.claude.md>) — The single generic loading skeleton for every admin dashboard page. Replaces what
 - [`AdminListTable`](<app/(admin)/admin/components/admin-list-table/admin-list-table.claude.md>) — Generic, controlled admin list table with always-visible search, sticky thead, mobile cards, and pagination (10/page default). Caller wires state via `useAdminListUrlState`.
@@ -24,6 +24,8 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`GalleryUploaderForm`](<app/(admin)/admin/components/gallery-uploader-form/gallery-uploader-form.claude.md>) — Single-image gallery upload form: select image (via ImageUploader), optional caption (via LocalizedTextInput), upload to gallery.
 - [`ImageUploader`](<app/(admin)/admin/components/image-uploader/image-uploader.claude.md>) — Cloudinary signed upload component: get signature from backend, POST file directly to Cloudinary, capture URL + public_id.
 - [`LocalizedTextInput`](<app/(admin)/admin/components/localized-text-input/localized-text-input.claude.md>) — Multi-locale input: tabs for each locale, English required, others optional. Rendered as text or textarea. Dots indicate filled locales.
+- [`SpecListInput`](<app/(admin)/admin/components/spec-list-input/spec-list-input.claude.md>) — Admin editor: repeatable {label,value} rows for a product's specifications grid (not localized).
+- [`MonthPicker`](<app/(admin)/admin/components/month-picker/month-picker.claude.md>) — Admin editor: a labeled row of 12 toggle chips (Jan–Dec) → month numbers; used for harvest + peak seasonality.
 - [`ProductForm`](<app/(admin)/admin/components/product-form/product-form.claude.md>) — Product create/edit form: slug, category dropdown, localized name/summary/description, product image, sort order, published toggle.
 - [`ProductsTable`](<app/(admin)/admin/components/products-table/products-table.claude.md>) — Client wrapper around AdminListTable for /admin/products: searchable by name/slug/category, 10-per-page.
 - [`FooterColumns`](components/layout/site-footer/footer-columns/footer-columns.claude.md) — Middle grid of footer: description + address block, localized nav columns, certifications strip. Opts into parent's [data-footer-reveal] ani
@@ -52,6 +54,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 - [`PageIntro`](components/shared/page-intro/page-intro.claude.md) — Shared inner-page header: eyebrow + oversized H1 + optional intro text. Used on all non-home pages.
 - [`MediaHero`](components/shared/media-hero/media-hero.claude.md) — Full-bleed editorial hero (cover image + gradient + overlaid eyebrow/title + meta slot). Shared by the product- and article-detail pages.
 - [`ProductCard`](components/shared/product-card/product-card.claude.md) — Catalogue product card (image + name + summary) linking to /products/<slug>. Shared by the /products grid and the detail "Pairs naturally" grid.
+- [`SeasonalityCalendar`](components/shared/seasonality-calendar/seasonality-calendar.claude.md) — 12-month harvest/peak strip (locale-aware month labels via Intl) on the product detail page.
 - [`Button`](components/ui/button/button.claude.md) — Base button primitive with CVA variants for size/style. Wraps @base-ui ButtonPrimitive with outline, disabled, aria-invalid, and focus-visib
 - [`CtaLink`](components/ui/cta-link/cta-link.claude.md) — Shared marketing CTA pill: locale-aware Link styled as a saffron/outline rounded-full pill (cva variant × tone × size + optional RTL-aware arrow). Replaced four hand-rolled copies across hero, cta-band, 404, and mobile menu.
 - [`Cursor`](components/ui/cursor/cursor.claude.md) — Desktop-only magnetic cursor: a saffron dot tracks the pointer instantly; a ring trails with easing and morphs to wrap buttons/data-cursor e

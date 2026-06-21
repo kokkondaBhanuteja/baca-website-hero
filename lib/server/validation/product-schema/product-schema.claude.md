@@ -21,9 +21,9 @@ side_effects: 'Pure — no side effects.'
 # ProductSchema
 
 Purpose:
-Zod schema for product creation/update. Validates localized name/summary/description, the
-Origin/Specifications/Seasonality detail-page attributes, category relationship, image fields, and
-publication status.
+Zod schema for product creation/update. Validates localized name/summary/description, the structured
+detail-page attributes (botanicalName, originRegions[], specs[{label,value}], harvest/peakMonths[]),
+category relationship, image fields, and publication status.
 
 Exports:
 
@@ -48,9 +48,10 @@ Business Logic:
 - name: requiredLocalizedText — 7-locale object, en required, all trimmed
 - summary: optionalLocalizedText.nullish() — optional per-locale short description, may be null
 - description: optionalLocalizedText.nullish() — optional per-locale full description, may be null
-- origin: optionalLocalizedText.nullish() — detail-page "Origin regions" attribute, may be null
-- specifications: optionalLocalizedText.nullish() — detail-page "Specifications" attribute, may be null
-- seasonality: optionalLocalizedText.nullish() — detail-page "Seasonality" attribute, may be null
+- botanicalName: z.string().max(160).nullish() — Latin name (italic subtitle); NOT localized
+- originRegions: z.array(z.string().max(120)).max(20).nullish() — region pills; NOT localized
+- specs: z.array({ label, value }).max(30).nullish() — specifications key/value grid; NOT localized
+- harvestMonths / peakMonths: z.array(z.number().int().min(1).max(12)).max(12).nullish() — seasonality calendar
 - imageUrl: z.string().nullish() — optional product image
 - imagePublicId: z.string().nullish() — optional Cloudinary public ID
 - sortOrder: z.number().int().default(0) — display order within category, defaults to 0

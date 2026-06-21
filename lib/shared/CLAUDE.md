@@ -7,8 +7,9 @@ Type-only DTOs and pure helpers usable from **both** server and client. Nothing 
 types/
   localized-text.ts   LocalizedText = { en: string } & Partial<Record<Exclude<Locale,'en'>, string>>
   admin-user-dto.ts   AdminUserDto, AdminRole
-  catalogue-dto.ts    ProductCategoryAdminDto / ProductAdminDto (raw LocalizedText, incl. origin/specifications/seasonality)
-                      + …PublicDto + ProductDetailPublicDto (resolved strings for the detail page)
+  catalogue-dto.ts    ProductCategoryAdminDto / ProductAdminDto (raw LocalizedText + structured attrs:
+                      botanicalName, originRegions[], specs[ProductSpec], harvest/peakMonths[]) + …PublicDto
+                      + ProductDetailPublicDto (resolved) + ProductSpec ({label,value}, not localized)
   blog-dto.ts         BlogArticleAdminDto / SummaryDto / DetailDto (incl. author name/role/avatar), BlogCategoryValue, BLOG_CATEGORY_KEY
   gallery-dto.ts      GalleryImageAdminDto / GalleryImagePublicDto
   paginated-list.ts   PaginatedList<T> = { items, total, page, pageSize } + AdminListQuery shape +

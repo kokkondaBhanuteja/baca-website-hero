@@ -10,6 +10,7 @@ media-hero/             Full-bleed editorial hero (cover image + gradient + over
                         meta slot). Shared by the product- and article-detail pages.
 product-card/           Catalogue product card (image + name + summary) linking to /products/<slug>.
                         Used by the /products grid and the detail page's "Pairs naturally" grid.
+seasonality-calendar/   12-month harvest/peak strip (locale-aware via Intl) on the product detail page.
 ```
 
 Add new shared primitives here only when they're used by 2+ pages AND don't fit

@@ -49,7 +49,7 @@ Exports:
 - updateProduct(id: string, input: ProductInput): Promise<ProductAdminDto> — Update; replaces image if publicId changed, revalidates
 - deleteProduct(id: string): Promise<void> — Delete; destroys Cloudinary asset, revalidates
 - listPublishedProducts(locale: Locale, take?: number): Promise<{ slug: string; name: string }[]> — Top published products (nav dropdown); resolved names
-- getPublishedProductBySlug(slug: string, locale: Locale): Promise<ProductDetailPublicDto | null> — Cached (PRODUCTS_TAG) single product + category, resolved strings incl. origin/specifications/seasonality; null if unknown/unpublished
+- getPublishedProductBySlug(slug: string, locale: Locale): Promise<ProductDetailPublicDto | null> — Cached (PRODUCTS_TAG) single product + category; localized name/summary/description + structured botanicalName/originRegions/specs/harvest+peakMonths (passed through, not localized); null if unknown/unpublished
 - listRelatedProducts(excludeSlug: string, locale: Locale, limit?: number): Promise<ProductPublicDto[]> — Cached (PRODUCTS_TAG) "Pairs naturally": same category first, then recent fillers
 
 Imports from:
@@ -79,7 +79,7 @@ Business Logic:
 - Update: checks exists, destroys old image if publicId differs, revalidates
 - Delete: checks exists, destroys image, revalidates
 - listPublishedProducts: queries top N (default 3) published products with published category, returns { slug, resolvedName } (used by nav dropdown to list featured products)
-- getPublishedProductBySlug: findUnique by slug + include category; returns null when missing/unpublished (page calls notFound()); resolves all localized fields + optimizedImageUrl; cached + tagged PRODUCTS_TAG
+- getPublishedProductBySlug: findUnique by slug + include category; returns null when missing/unpublished (page calls notFound()); resolves localized text + optimizedImageUrl, and passes the structured JSON fields (originRegions/specs/harvest+peakMonths cast from Prisma.JsonValue, null → [] / ''); cached + tagged PRODUCTS_TAG
 - listRelatedProducts: same-category published products (exclude self) first, then recent fillers to reach limit (mirrors listRelatedArticles); cached + tagged PRODUCTS_TAG
 
 Auth: Public reads filtered via category service; admin writes require auth via route handler
