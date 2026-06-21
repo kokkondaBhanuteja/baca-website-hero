@@ -49,7 +49,7 @@ export default async function BlogsPage({ params }: PageParams) {
             articles={articles}
             types={types}
             labels={{
-              filter: t('eyebrow'),
+              all: t('allArticles'),
               minRead: t('minRead'),
               featured: t('featured'),
               empty: t('empty'),
