@@ -53,7 +53,7 @@
     }
   },
   "blogsPage": {
-    "eyebrow": "Perspectivas",
+    "eyebrow": "Blogs",
     "heading": "Apuntes del comercio de especias y materias primas.",
     "intro": "Análisis del mercado, historias de origen y la visión detrás de cómo abastecemos y enviamos.",
     "empty": "Pronto llegarán nuevos artículos. Vuelve a visitarnos en breve.",
@@ -61,12 +61,7 @@
     "featured": "Destacado",
     "allArticles": "Todos los artículos",
     "related": "Sigue leyendo",
-    "writtenBy": "Escrito por",
-    "categories": {
-      "industryInsights": "Perspectivas del sector",
-      "impactStories": "Historias de impacto",
-      "communityEngagement": "Compromiso con la comunidad"
-    }
+    "writtenBy": "Escrito por"
   },
   "notFound": {
     "eyebrow": "404 · Página no encontrada",
@@ -101,7 +96,7 @@
         "label": "Productos"
       },
       "insights": {
-        "label": "Análisis"
+        "label": "Blogs"
       },
       "contact": {
         "label": "Contacto"
@@ -215,7 +210,7 @@
     "imageAlt": "Retrato del director general de BACA"
   },
   "featuredInsights": {
-    "eyebrow": "Análisis",
+    "eyebrow": "Blogs",
     "heading": "Apuntes del comercio de especias y materias primas.",
     "allArticles": "Todos los artículos"
   },
@@ -248,7 +243,7 @@
       "resources": {
         "title": "Recursos",
         "links": {
-          "insights": "Análisis",
+          "insights": "Blogs",
           "certifications": "Certificaciones",
           "contact": "Contacto",
           "catalogue": "Solicitar un catálogo"

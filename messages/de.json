@@ -53,7 +53,7 @@
     }
   },
   "blogsPage": {
-    "eyebrow": "Einblicke",
+    "eyebrow": "Blogs",
     "heading": "Notizen aus dem Gewürz- und Rohstoffhandel.",
     "intro": "Marktanalysen, Geschichten vom Ursprung und die Überlegungen hinter unserer Beschaffung und Verschiffung.",
     "empty": "Neue Artikel sind in Vorbereitung. Schauen Sie bald wieder vorbei.",
@@ -61,12 +61,7 @@
     "featured": "Empfohlen",
     "allArticles": "Alle Artikel",
     "related": "Weiterlesen",
-    "writtenBy": "Geschrieben von",
-    "categories": {
-      "industryInsights": "Brancheneinblicke",
-      "impactStories": "Wirkungsgeschichten",
-      "communityEngagement": "Gesellschaftliches Engagement"
-    }
+    "writtenBy": "Geschrieben von"
   },
   "notFound": {
     "eyebrow": "404 · Seite nicht gefunden",
@@ -101,7 +96,7 @@
         "label": "Produkte"
       },
       "insights": {
-        "label": "Einblicke"
+        "label": "Blogs"
       },
       "contact": {
         "label": "Kontakt"
@@ -215,7 +210,7 @@
     "imageAlt": "Porträt des Geschäftsführers von BACA"
   },
   "featuredInsights": {
-    "eyebrow": "Einblicke",
+    "eyebrow": "Blogs",
     "heading": "Notizen aus dem Gewürz- und Warenhandel.",
     "allArticles": "Alle Artikel"
   },
@@ -248,7 +243,7 @@
       "resources": {
         "title": "Ressourcen",
         "links": {
-          "insights": "Einblicke",
+          "insights": "Blogs",
           "certifications": "Zertifizierungen",
           "contact": "Kontakt",
           "catalogue": "Katalog anfordern"
