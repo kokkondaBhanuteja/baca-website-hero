@@ -27,13 +27,15 @@ async function seedAdminUser() {
 }
 
 // Clean slate before reseeding — the seed is the source of truth for the
-// catalogue + insights. Delete products before categories (Product.categoryId
-// is onDelete: Restrict). Gallery and Enquiry rows are left untouched.
+// catalogue + blogs. Delete products before categories (Product.categoryId is
+// onDelete: Restrict) and articles before blog types (BlogArticle.blogTypeId is
+// onDelete: Restrict). Gallery and Enquiry rows are left untouched.
 async function wipeContent() {
   await prisma.product.deleteMany()
   await prisma.blogArticle.deleteMany()
   await prisma.productCategory.deleteMany()
-  console.log('✔ Cleared existing products, articles, and categories')
+  await prisma.blogType.deleteMany()
+  console.log('✔ Cleared products, articles, categories, and blog types')
 }
 
 type ProductSeed = {
@@ -236,9 +238,38 @@ async function seedCatalogue() {
   )
 }
 
+const BLOG_TYPE_SEED: { slug: string; name: Record<string, string> }[] = [
+  { slug: 'industry-insights', name: { en: 'Industry Insights' } },
+  { slug: 'origin-stories', name: { en: 'Origin Stories' } },
+  { slug: 'recipes-and-uses', name: { en: 'Recipes & Uses' } },
+  { slug: 'sustainability', name: { en: 'Sustainability' } },
+]
+
+async function seedBlogTypes(): Promise<Record<string, string>> {
+  const idBySlug: Record<string, string> = {}
+  for (let index = 0; index < BLOG_TYPE_SEED.length; index += 1) {
+    const type = BLOG_TYPE_SEED[index]
+    const created = await prisma.blogType.create({
+      data: {
+        slug: type.slug,
+        name: json(type.name),
+        sortOrder: index,
+        isPublished: true,
+      },
+    })
+    idBySlug[type.slug] = created.id
+  }
+  console.log(`✔ Seeded ${BLOG_TYPE_SEED.length} blog types`)
+  return idBySlug
+}
+
 type ArticleSeed = {
   slug: string
-  category: 'INDUSTRY_INSIGHTS' | 'IMPACT_STORIES' | 'COMMUNITY_ENGAGEMENT'
+  typeSlug:
+    | 'industry-insights'
+    | 'origin-stories'
+    | 'recipes-and-uses'
+    | 'sustainability'
   featured: boolean
   readMinutes: number
   publishedAt: Date
@@ -250,31 +281,12 @@ type ArticleSeed = {
   body: Record<string, string>
 }
 
-async function seedArticles() {
+async function seedArticles(blogTypeIdBySlug: Record<string, string>) {
   const articles: ArticleSeed[] = [
     {
-      slug: 'why-we-started-baca',
-      category: 'INDUSTRY_INSIGHTS',
-      featured: true,
-      readMinutes: 6,
-      publishedAt: new Date('2026-01-15'),
-      coverImageUrl: '/images/insight-3.jpg',
-      authorName: 'BACA Team',
-      authorRole: 'Founders',
-      title: {
-        en: 'Why we started BACA — and what we want to do differently',
-      },
-      excerpt: {
-        en: 'A short note on what we think is broken about most Indian spice exports, and what we are building instead.',
-      },
-      body: {
-        en: 'Most Indian spice exports pass through three or four hands before they reach a buyer. Each hand adds a margin and removes a little accountability. By the time a container lands, no one can tell you which farm the cardamom came from, or what it was graded against.\n\nWe started BACA to collapse that distance. We buy at origin, from the same farming families season after season. We grade at source, against ISO 22000 and HACCP, and we document every lot before it ships.\n\nThat is the whole idea: fewer hands, more traceability, and a grade in the container that matches the grade on the certificate — every single time.',
-      },
-    },
-    {
       slug: 'reading-the-2026-cardamom-market',
-      category: 'INDUSTRY_INSIGHTS',
-      featured: false,
+      typeSlug: 'industry-insights',
+      featured: true,
       readMinutes: 5,
       publishedAt: new Date('2026-02-04'),
       coverImageUrl: '/images/insight-1.jpg',
@@ -291,8 +303,179 @@ async function seedArticles() {
       },
     },
     {
+      slug: 'how-we-grade-cashew-for-export',
+      typeSlug: 'industry-insights',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-04-05'),
+      coverImageUrl: '/images/cat-nuts.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Trade desk',
+      title: {
+        en: 'How we grade cashew for export — and why W320 is only the start',
+      },
+      excerpt: {
+        en: 'Counts, colour, breakage and moisture: a short guide to what actually goes into a cashew grade.',
+      },
+      body: {
+        en: 'A cashew grade like W320 looks simple — "320 kernels to the pound" — but the number only tells you size. A real export grade is four things at once: count, colour, breakage and moisture.\n\nCount sets the size band. Colour separates first-quality white wholes from scorched or dessert grades. Breakage decides whether a lot ships as wholes or drops to splits and pieces. And moisture, held under 5%, is what keeps the kernel crisp.\n\nWe sort against all four before a container is sealed. It is why two lots both labelled W320 can be very different.',
+      },
+    },
+    {
+      slug: 'what-asta-colour-really-tells-you',
+      typeSlug: 'industry-insights',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-05-12'),
+      coverImageUrl: '/images/product-guntur-red-chilli.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Quality',
+      title: {
+        en: 'What ASTA colour really tells you about a red chilli',
+      },
+      excerpt: {
+        en: 'Heat gets the headlines, but for most buyers colour is what sells the chilli.',
+      },
+      body: {
+        en: 'Buyers talk about Scoville heat, but in practice it is ASTA colour that moves a red chilli. ASTA measures extractable colour — the pigment that survives drying and shows up in a finished sauce, oil or blend.\n\nGuntur S17 Teja sits in the 32–38 ASTA band, high enough for vivid colour without the cost of premium paprika grades. Heat and colour are not the same axis, and a good spec sheet reports both.\n\nWe grade for colour and heat separately so a buyer can match the chilli to the product, not just the heat label on the bag.',
+      },
+    },
+    {
+      slug: 'sourcing-season-with-idukki-growers',
+      typeSlug: 'origin-stories',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-03-20'),
+      coverImageUrl: '/images/cat-spices.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Sourcing',
+      title: {
+        en: 'Sourcing season with the cardamom growers of Idukki',
+      },
+      excerpt: {
+        en: 'What buying directly, season after season, actually looks like on the ground in the Kerala high ranges.',
+      },
+      body: {
+        en: 'Every cardamom season starts the same way for us: on a hillside in Idukki, with the families who have grown these capsules for generations. We do not buy through a chain of agents. We sit with growers, agree a grade and a price, and come back the next season.\n\nThat continuity changes what we can ask for. Growers who know we will return invest in better curing and cleaner picking, because the quality is rewarded directly rather than averaged away in a pooled auction lot.\n\nIt is slower than buying off the exchange, and it costs more. But it is the only way we know to put a name and a place behind every lot we ship.',
+      },
+    },
+    {
+      slug: 'the-turmeric-fields-of-erode',
+      typeSlug: 'origin-stories',
+      featured: false,
+      readMinutes: 5,
+      publishedAt: new Date('2026-04-18'),
+      coverImageUrl: '/images/product-turmeric-fingers.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Sourcing',
+      title: {
+        en: 'The turmeric fields of Erode — a place that became a grade',
+      },
+      excerpt: {
+        en: 'How one district in Tamil Nadu turned its name into a global byword for turmeric quality.',
+      },
+      body: {
+        en: 'Say "Erode turmeric" anywhere in the trade and people know what you mean: hard, bright fingers with naturally high curcumin. The district turned its name into a grade through generations of growing and curing the same crop.\n\nWe work the Erode and Salem belts because the soil and the know-how are hard to replicate elsewhere. The fingers cure denser and hold colour without any artificial help.\n\nOrigin is not marketing here — it is the reason the lot performs.',
+      },
+    },
+    {
+      slug: 'why-malabar-pepper-carries-a-coastline',
+      typeSlug: 'origin-stories',
+      featured: false,
+      readMinutes: 3,
+      publishedAt: new Date('2026-05-28'),
+      coverImageUrl: '/images/product-malabar-black-pepper.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Sourcing',
+      title: {
+        en: 'Why Malabar pepper still carries the name of a coastline',
+      },
+      excerpt: {
+        en: 'The pepper that gave a coast its reputation, and the bulk density that proves it.',
+      },
+      body: {
+        en: 'The Malabar coast gave black pepper its name long before bulk density was a spec line. Today that heritage shows up as a number: 550–570 g/l, the density that tells a buyer the berries are dense and fully mature.\n\nGarbled Malabar pepper is cleaned to remove light and broken berries, leaving a uniform, pungent lot. The place and the grade are the same story told twice.\n\nWe buy from the Wayanad and Coorg ranges that feed that coast, and we document the density on every lot.',
+      },
+    },
+    {
+      slug: 'cardamom-three-ways-in-the-kitchen',
+      typeSlug: 'recipes-and-uses',
+      featured: false,
+      readMinutes: 3,
+      publishedAt: new Date('2026-02-22'),
+      coverImageUrl: '/images/product-green-cardamom.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Editorial',
+      title: {
+        en: 'Green cardamom, three ways — from chai to slow-braised meat',
+      },
+      excerpt: {
+        en: 'A bold Alleppey capsule is a different ingredient depending on how you open it.',
+      },
+      body: {
+        en: 'Cardamom changes character with how you treat it. Crushed whole into simmering milk, it perfumes chai without bitterness. Ground fresh, it lifts a cake or a kheer. Bruised and dropped into a slow braise, it threads sweetness through rich meat.\n\nThe trick is to grind only what you need. The volatile oils that make a bold Alleppey capsule worth buying fade fast once the pod is opened.\n\nBuy whole, grind late, and a single grade does the work of three.',
+      },
+    },
+    {
+      slug: 'a-simple-guide-to-blooming-turmeric',
+      typeSlug: 'recipes-and-uses',
+      featured: false,
+      readMinutes: 3,
+      publishedAt: new Date('2026-03-30'),
+      coverImageUrl: '/images/insight-2.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Editorial',
+      title: {
+        en: 'A simple guide to blooming turmeric for colour and flavour',
+      },
+      excerpt: {
+        en: 'Why a minute in hot oil changes everything turmeric does in a dish.',
+      },
+      body: {
+        en: 'Raw turmeric stirred in at the end tastes flat and dusty. Bloomed — cooked briefly in hot oil or ghee at the start — it turns earthy, round and deeply coloured.\n\nThe heat releases the fat-soluble curcumin that carries both colour and flavour. Thirty to sixty seconds is enough; push it too far and it turns bitter.\n\nWith a high-curcumin Erode grade, a little goes a long way, so bloom gently and taste as you go.',
+      },
+    },
+    {
+      slug: 'building-a-house-blend-with-guntur-chilli',
+      typeSlug: 'recipes-and-uses',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-05-02'),
+      coverImageUrl: '/images/cat-spices.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Editorial',
+      title: {
+        en: 'Building a house chilli blend with Guntur S17',
+      },
+      excerpt: {
+        en: 'How to balance heat, colour and aroma when a single chilli anchors the mix.',
+      },
+      body: {
+        en: 'A good house blend usually leans on one workhorse chilli. Guntur S17 Teja is a fair anchor: enough heat to register, enough ASTA colour to look the part, and a clean, direct flavour that takes additions well.\n\nStart with Guntur for the base, add a milder, high-colour chilli to deepen the red, and finish with a small aromatic note — a little roasted cumin or coriander.\n\nGrade matters here: stemless, low-moisture chilli grinds cleaner and stores longer than market-grade material.',
+      },
+    },
+    {
+      slug: 'what-traceability-actually-costs',
+      typeSlug: 'sustainability',
+      featured: false,
+      readMinutes: 4,
+      publishedAt: new Date('2026-01-28'),
+      coverImageUrl: '/images/insight-3.jpg',
+      authorName: 'BACA Team',
+      authorRole: 'Founders',
+      title: {
+        en: 'What traceability actually costs — and who should pay for it',
+      },
+      excerpt: {
+        en: 'Documenting every lot is not free. Here is where the cost goes and why we carry it.',
+      },
+      body: {
+        en: 'Traceability sounds like a feature until you price it. Documenting every lot means grading at source, keeping records that survive an audit, and turning away material that cannot be traced.\n\nThat cost lands somewhere. We choose to carry most of it rather than push it onto growers, because the growers are the ones whose names make the documentation worth anything.\n\nThe payoff is a container whose certificate matches its contents — every time. For buyers who have been burned, that is worth paying for.',
+      },
+    },
+    {
       slug: 'the-cost-of-cheap-turmeric',
-      category: 'IMPACT_STORIES',
+      typeSlug: 'sustainability',
       featured: false,
       readMinutes: 3,
       publishedAt: new Date('2026-03-02'),
@@ -310,41 +493,22 @@ async function seedArticles() {
       },
     },
     {
-      slug: 'sourcing-with-idukki-growers',
-      category: 'COMMUNITY_ENGAGEMENT',
+      slug: 'why-we-started-baca',
+      typeSlug: 'sustainability',
       featured: false,
-      readMinutes: 4,
-      publishedAt: new Date('2026-03-20'),
-      coverImageUrl: '/images/cat-spices.jpg',
+      readMinutes: 6,
+      publishedAt: new Date('2026-01-15'),
+      coverImageUrl: '/images/insight-3.jpg',
       authorName: 'BACA Team',
-      authorRole: 'Sourcing',
+      authorRole: 'Founders',
       title: {
-        en: 'Sourcing season with the cardamom growers of Idukki',
+        en: 'Why we started BACA — and what we want to do differently',
       },
       excerpt: {
-        en: 'What buying directly, season after season, actually looks like on the ground in the Kerala high ranges.',
+        en: 'A short note on what we think is broken about most Indian spice exports, and what we are building instead.',
       },
       body: {
-        en: 'Every cardamom season starts the same way for us: on a hillside in Idukki, with the families who have grown these capsules for generations. We do not buy through a chain of agents. We sit with growers, agree a grade and a price, and come back the next season — and the one after that.\n\nThat continuity changes what we can ask for. Growers who know we will return invest in better curing and cleaner picking, because the quality is rewarded directly rather than averaged away in a pooled auction lot.\n\nIt is slower than buying off the exchange, and it costs more. But it is the only way we know to put a name and a place behind every lot we ship.',
-      },
-    },
-    {
-      slug: 'grading-cashew-for-export',
-      category: 'INDUSTRY_INSIGHTS',
-      featured: false,
-      readMinutes: 4,
-      publishedAt: new Date('2026-04-05'),
-      coverImageUrl: '/images/cat-nuts.jpg',
-      authorName: 'BACA Team',
-      authorRole: 'Trade desk',
-      title: {
-        en: 'How we grade cashew for export — and why W320 is only the start',
-      },
-      excerpt: {
-        en: 'Counts, colour, breakage and moisture: a short guide to what actually goes into a cashew grade.',
-      },
-      body: {
-        en: 'A cashew grade like W320 looks simple — "320 kernels to the pound" — but the number only tells you size. A real export grade is four things at once: count, colour, breakage and moisture.\n\nCount sets the size band. Colour separates first-quality white wholes from scorched or dessert grades. Breakage decides whether a lot ships as wholes or drops to splits and pieces. And moisture, held under 5%, is what keeps the kernel crisp and stops it turning rancid in transit.\n\nWe sort against all four before a container is sealed. It is why two lots both labelled W320 can be very different — and why we would rather show a buyer the spec sheet than just the grade.',
+        en: 'Most Indian spice exports pass through three or four hands before they reach a buyer. Each hand adds a margin and removes a little accountability. By the time a container lands, no one can tell you which farm the cardamom came from.\n\nWe started BACA to collapse that distance. We buy at origin, from the same farming families season after season. We grade at source, against ISO 22000 and HACCP, and we document every lot before it ships.\n\nThat is the whole idea: fewer hands, more traceability, and a grade in the container that matches the grade on the certificate.',
       },
     },
   ]
@@ -353,7 +517,7 @@ async function seedArticles() {
     await prisma.blogArticle.create({
       data: {
         slug: article.slug,
-        category: article.category,
+        blogTypeId: blogTypeIdBySlug[article.typeSlug],
         featured: article.featured,
         readMinutes: article.readMinutes,
         status: 'PUBLISHED',
@@ -374,7 +538,8 @@ async function main() {
   await seedAdminUser()
   await wipeContent()
   await seedCatalogue()
-  await seedArticles()
+  const blogTypeIdBySlug = await seedBlogTypes()
+  await seedArticles(blogTypeIdBySlug)
 }
 
 main()
