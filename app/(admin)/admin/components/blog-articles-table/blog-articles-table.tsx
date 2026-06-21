@@ -43,7 +43,7 @@ export function BlogArticlesTable({
         <tr>
           <th className="px-5 py-3">Title (EN)</th>
           <th className="px-5 py-3">Slug</th>
-          <th className="px-5 py-3">Category</th>
+          <th className="px-5 py-3">Blog type</th>
           <th className="px-5 py-3">Status</th>
           <th className="px-5 py-3 text-end">Actions</th>
         </tr>

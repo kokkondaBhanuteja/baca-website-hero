@@ -10,46 +10,51 @@ exports:
 imports_from:
   - 'next-intl/server'
   - '@/constants/i18n'
-  - '@/constants/routes'
-  - '@/i18n/navigation'
   - '@/lib/server/services/blog-article-service'
-  - '@/lib/shared/types/blog-dto'
-  - '@/components/ui/media-reveal'
+  - '@/lib/server/services/blog-type-service'
   - '@/components/shared/page-intro'
   - '@/components/layout/site-header'
   - '@/components/layout/site-footer'
+  - './blogs-filter'
 route: '/[locale]/blogs'
 auth: 'Public'
 ---
 
 # BlogsPage
 
-Route: `/[locale]/blogs`  
-Kind: page (Next.js route convention file)  
-Rendering: Server (force-dynamic)  
+Route: `/[locale]/blogs`
+Kind: page (Next.js route convention file)
+Rendering: Server (force-dynamic)
 Auth: Public
 
 Purpose:
-List of published blog articles. Displays articles in a 3-column grid with cover images, category badges, read time, title, and excerpt. force-dynamic ensures fresh content.
+Lists published blog articles with instant client-side filtering by admin-defined
+blog type. The server loads articles + published types and hands both to the
+`BlogsFilter` client component (pill bar + uniform 3-col grid). force-dynamic
+keeps content live with admin edits.
 
 Data:
 
-- listPublishedArticles(locale) — returns published BlogArticleSummaryDto items with title, slug, excerpt, featured, category, readMinutes, coverImageUrl
+- listPublishedArticles(locale) — published BlogArticleSummaryDto items (each
+  carries `blogType: { slug, name }`, resolved for the locale)
+- listPublishedBlogTypes(locale) — published BlogTypePublicDto pills, sorted
 
 Business Logic:
 
 - export const dynamic = 'force-dynamic'
-- setRequestLocale(locale as Locale)
-- generateMetadata() fetches 'blogsPage' namespace
-- Maps articles; calls ArticleCard component for each
-- ArticleCard: features category label or featured badge, read time, title, excerpt
+- setRequestLocale(locale)
+- generateMetadata() reads the 'blogsPage' namespace
+- Renders PageIntro + BlogsFilter (the card grid + filter pills live in the
+  client component so filtering needs no reload)
 
 Renders:
 
 - SiteHeader (forceSolid)
 - PageIntro
-- ArticleCard grid (3 columns on md+)
+- BlogsFilter (client) — pills + article grid
 - SiteFooter
 
 Notes:
-ArticleCard is an inline component. Uses BLOG_CATEGORY_KEY to map category enum to i18n key. Renders featured label if article.featured, else category label.
+The article card markup + filtering moved into the `blogs-filter/` client
+component. Category i18n keys (BLOG_CATEGORY_KEY) are gone — the type label
+comes from `article.blogType.name`.
