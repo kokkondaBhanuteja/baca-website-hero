@@ -27,11 +27,95 @@
       "viewAllProducts": "Bekijk alle producten"
     }
   },
+  "profilePage": {
+    "eyebrow": "Over BACA",
+    "heading": "Een Indiaas familiaal exporthuis, gebouwd voor de lange termijn.",
+    "intro": "Twee decennia in oorsprong in Kerala, Gujarat en Andhra — seizoen na seizoen kopen bij dezelfde boerenfamilies, sorteren aan de bron en volledige containers naar kopers in 37 landen.",
+    "whoWeAre": {
+      "eyebrow": "Wie wij zijn",
+      "heading": "Een exporthuis gebouwd op relaties.",
+      "body": "BACA is een modern Indiaas exporthuis, gespecialiseerd in specerijen, noten en fruit. Wij werken direct met boerenfamilies in de traditionele teeltgebieden van India, sorteren en testen elke partij in het laboratorium bij de bron en verzenden gedocumenteerde volledige containers naar importeurs, distributeurs en detailhandelaren wereldwijd. Het team heeft meer dan twee decennia ervaring in oorsprong, sortering en logistiek; het bedrijf is de formalisering van die ervaring onder één merk."
+    },
+    "visionMission": {
+      "eyebrow": "Visie & missie",
+      "heading": "Waar we naartoe werken — en hoe.",
+      "vision": {
+        "title": "Visie",
+        "body": "Een wereld waarin de Indiase landbouw verhandeld wordt op gelijke voet met elke premium oorsprong — traceerbaar, naar behoren gedocumenteerd en geprijsd voor het werk dat zij vertegenwoordigt aan de boerderijpoort."
+      },
+      "mission": {
+        "title": "Missie",
+        "body": "Kleine boeren in India verbinden met veeleisende kopers in het buitenland via rigoureuze kwaliteitscontrole, transparante documentatie en verzendrelaties gemeten in jaren."
+      }
+    },
+    "howWeWork": {
+      "eyebrow": "Hoe wij werken",
+      "heading": "Van bodem tot verzending, in vier gedisciplineerde stappen.",
+      "intro": "Elke container die ons huis verlaat heeft zijn plek verdiend via dezelfde volgorde.",
+      "steps": {
+        "source": {
+          "title": "Inkopen",
+          "body": "Wij kopen rechtstreeks bij boerencoöperaties in de oorspronggebieden van elk gewas — kardemom uit Kerala, chili uit Guntur, peper uit Malabar — voor volledige traceerbaarheid van veld tot expediteur."
+        },
+        "grade": {
+          "title": "Sorteren",
+          "body": "Elke partij wordt met de hand gesorteerd, in het laboratorium getest op vocht, pesticideresiduen en aflatoxinen, en gedocumenteerd volgens ISO 22000- en HACCP-protocollen voordat zij ooit een container ziet."
+        },
+        "document": {
+          "title": "Documenteren",
+          "body": "Fytosanitaire certificaten, HS-codes, Incoterms en oorsprongspapieren worden afgegeven voordat het schip vaart, zodat de douane nooit een zending in de bestemmingshaven ophoudt."
+        },
+        "ship": {
+          "title": "Verzenden",
+          "body": "Verpakt aan de bron en verzonden als gedocumenteerde volledige containers met gecontracteerde expediteurs — dezelfde schepen, dezelfde routes, dezelfde aankomstvensters waarop uw toeleveringsketen kan plannen."
+        }
+      }
+    },
+    "founders": {
+      "eyebrow": "Oprichters",
+      "heading": "De mensen achter BACA.",
+      "intro": "BACA wordt geleid door twee broers/zussen die het bedrijf hebben opgebouwd vanuit twee decennia praktijkervaring in de Indiase specerijhandel.",
+      "items": {
+        "founder1": {
+          "role": "Medeoprichter · Inkoop & kwaliteit",
+          "bio": "Twee decennia directe inkoop bij coöperaties in Kerala en Andhra. Toezicht op boerenrelaties, sortering aan de bron en laboratoriumprogramma's voor elke zending."
+        },
+        "founder2": {
+          "role": "Medeoprichter · Handel & logistiek",
+          "bio": "Beheert exportdocumentatie, expediteursrelaties en de handelsdesk. Leidde voorheen de logistieke tak van een grondstoffenhandelshuis in Mumbai."
+        }
+      },
+      "imageAltPrefix": "Portret van"
+    },
+    "whyBaca": {
+      "eyebrow": "Waarom BACA",
+      "heading": "Vier redenen waarom importeurs bij ons blijven.",
+      "intro": "Inkoopteams kiezen voor BACA wanneer zij willen stoppen met brandjes blussen en willen beginnen met plannen.",
+      "items": {
+        "traceability": {
+          "title": "Volledige traceerbaarheid",
+          "body": "Elke partij is gekoppeld aan een specifieke boerencoöperatie, oogstvenster en laboratoriumresultaat — controleerbaar van uw magazijn terug tot het veld."
+        },
+        "quality": {
+          "title": "Laboratorium-geteste kwaliteit",
+          "body": "ISO 22000 + HACCP-controles aan de bron: vocht, pesticideresiduen, aflatoxinen en microbiologische tests — geen willekeurige steekproeven in de haven."
+        },
+        "logistics": {
+          "title": "Betrouwbare logistiek",
+          "body": "Gecontracteerde scheepsplekken en ervaren expediteurs: uw container arriveert in het venster dat wij hebben opgegeven — niet «ergens in die maand»."
+        },
+        "partnership": {
+          "title": "Langetermijnpartnerschap",
+          "body": "Contracten met vaste prijzen en oogstreserveringen voor terugkerende kopers. Wij meten relaties in groeiseizoenen, niet in losse bestelnummers."
+        }
+      }
+    }
+  },
   "contactPage": {
     "eyebrow": "Neem contact op",
-    "heading": "Wat wilt u importeren?",
-    "intro": "Vertel ons wat u inkoopt en waarheen het wordt verscheept. Wij reageren binnen 12 uur op internationale aanvragen.",
-    "officeTitle": "Kantoor",
+    "heading": "Uitgebreid productassortiment",
+    "subheading": "concurrerende prijzen en tijdige levering",
+    "officeTitle": "Bedrijfsadres",
     "channels": {
       "email": "E-mail",
       "phone": "Telefoon",
@@ -39,17 +123,24 @@
       "whatsappAction": "Stuur ons een bericht"
     },
     "form": {
+      "title": "Aanvraag versturen",
+      "subtitle": "We reageren binnen 12 uur.",
       "name": "Volledige naam",
       "email": "E-mail",
+      "country": "Land",
       "company": "Bedrijf",
       "phone": "Telefoon",
       "message": "Bericht",
-      "optional": "optioneel",
       "messagePlaceholder": "Vertel ons kort uw behoefte — producten, volumes, bestemming.",
       "submit": "Aanvraag verzenden",
       "submitting": "Bezig met verzenden…",
       "success": "Dank u — uw aanvraag is ontvangen. Wij nemen binnen 12 uur contact met u op.",
       "error": "Er is iets misgegaan. Probeer het opnieuw of stuur ons rechtstreeks een e-mail."
+    },
+    "map": {
+      "eyebrow": "Vind ons",
+      "directions": "Routebeschrijving",
+      "iframeTitle": "Kaart met het hoofdkantoor van BACA"
     }
   },
   "blogsPage": {
@@ -93,6 +184,9 @@
       "home": {
         "label": "Home"
       },
+      "profile": {
+        "label": "Profiel"
+      },
       "products": {
         "label": "Producten"
       },
@@ -100,7 +194,7 @@
         "label": "Blogs"
       },
       "contact": {
-        "label": "Contact"
+        "label": "Neem contact op"
       }
     }
   },
@@ -223,8 +317,7 @@
     "ctaCatalogue": "Catalogus downloaden"
   },
   "footer": {
-    "description": "Geworteld in Indiase grond. Vertrouwd over de hele wereld. Een modern Indiaas exporthuis voor specerijen, noten en fruit.",
-    "certifiedTitle": "Gecertificeerd",
+    "description": "Een modern Indiaas exporthuis voor specerijen, noten en fruit.",
     "backToTop": "Terug naar boven",
     "columns": {
       "products": {
@@ -237,6 +330,7 @@
       "company": {
         "title": "Bedrijf",
         "links": {
+          "profile": "Profiel",
           "about": "Over ons",
           "approach": "Onze aanpak"
         }
@@ -245,9 +339,7 @@
         "title": "Bronnen",
         "links": {
           "insights": "Blogs",
-          "certifications": "Certificeringen",
-          "contact": "Contact",
-          "catalogue": "Catalogus aanvragen"
+          "contact": "Neem contact op"
         }
       }
     },

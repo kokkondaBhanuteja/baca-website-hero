@@ -1,9 +1,9 @@
 /** Contact channels. Values are literal identifiers, not translated. */
 export const CONTACT = {
-  email: 'trade@baca.export',
-  emailHref: 'mailto:trade@baca.export',
-  phoneDisplay: '+91 484 123 4567',
-  phoneHref: 'tel:+914841234567',
-  whatsappNumber: '914841234567',
-  whatsappUrl: 'https://wa.me/914841234567',
+  email: 'cbky2603@gmail.com',
+  emailHref: 'mailto:cbky2603@gmail.com',
+  phoneDisplay: '+91 93982 03453',
+  phoneHref: 'tel:+919398203453',
+  whatsappNumber: '919398203453',
+  whatsappUrl: 'https://wa.me/919398203453',
 } as const

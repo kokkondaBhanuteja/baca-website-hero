@@ -49,6 +49,27 @@ export function SiteHeaderClient({
   const tNav = useTranslations('nav')
   const tCommon = useTranslations('common')
   const tHeader = useTranslations('header')
+  const tProfile = useTranslations('profilePage')
+
+  // Profile dropdown children — section anchors on /profile. Labels reuse
+  // each section's `eyebrow` translation so there's no duplicate copy to keep
+  // in sync.
+  const profileLinks: NavLink[] = [
+    {
+      label: tProfile('whoWeAre.eyebrow'),
+      href: `${Route.Profile}#who-we-are`,
+    },
+    {
+      label: tProfile('visionMission.eyebrow'),
+      href: `${Route.Profile}#vision-mission`,
+    },
+    {
+      label: tProfile('howWeWork.eyebrow'),
+      href: `${Route.Profile}#how-we-work`,
+    },
+    { label: tProfile('founders.eyebrow'), href: `${Route.Profile}#founders` },
+    { label: tProfile('whyBaca.eyebrow'), href: `${Route.Profile}#why-baca` },
+  ]
 
   useEffect(() => {
     const onScroll = () =>
@@ -90,6 +111,11 @@ export function SiteHeaderClient({
         // Blogs dropdown lists the blog types only — no "All articles" entry.
         children: [...insightLinks],
       }
+    }
+    if (item.key === 'profile') {
+      // Static dropdown — five section anchors on /profile. No DB call needed;
+      // labels reuse each section's `eyebrow` translation.
+      return { key: item.key, label, href: item.href, children: profileLinks }
     }
     return { key: item.key, label, href: item.href }
   })

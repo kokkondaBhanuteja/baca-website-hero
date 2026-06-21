@@ -26,6 +26,7 @@ export interface EnquiryEmailPayload {
   email: string
   company: string | null
   phone: string | null
+  country: string
   message: string
   localeSent: string
 }
@@ -43,6 +44,7 @@ function plainText(input: EnquiryEmailPayload): string {
   const lines = [
     `Name:    ${input.name}`,
     `Email:   ${input.email}`,
+    `Country: ${input.country}`,
     input.company ? `Company: ${input.company}` : null,
     input.phone ? `Phone:   ${input.phone}` : null,
     `Locale:  ${input.localeSent}`,
@@ -59,6 +61,7 @@ function html(input: EnquiryEmailPayload): string {
     email: escapeHtml(input.email),
     company: input.company ? escapeHtml(input.company) : null,
     phone: input.phone ? escapeHtml(input.phone) : null,
+    country: escapeHtml(input.country),
     locale: escapeHtml(input.localeSent),
     // Preserve line breaks in the message but escape HTML.
     message: escapeHtml(input.message).replace(/\n/g, '<br>'),
@@ -66,6 +69,7 @@ function html(input: EnquiryEmailPayload): string {
   const rows = [
     ['Name', safe.name],
     ['Email', `<a href="mailto:${safe.email}">${safe.email}</a>`],
+    ['Country', safe.country],
     safe.company ? ['Company', safe.company] : null,
     safe.phone
       ? ['Phone', `<a href="tel:${safe.phone}">${safe.phone}</a>`]

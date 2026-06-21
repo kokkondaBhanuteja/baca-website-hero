@@ -27,11 +27,95 @@
       "viewAllProducts": "Alle Produkte ansehen"
     }
   },
+  "profilePage": {
+    "eyebrow": "Über BACA",
+    "heading": "Ein familiengeführtes indisches Exporthaus, langfristig gedacht.",
+    "intro": "Zwei Jahrzehnte am Ursprung in Kerala, Gujarat und Andhra — wir kaufen Saison für Saison bei denselben Bauernfamilien, sortieren am Ursprung und liefern Vollcontainerladungen an Käufer in 37 Ländern.",
+    "whoWeAre": {
+      "eyebrow": "Wer wir sind",
+      "heading": "Ein Exporthaus, gebaut auf Beziehungen.",
+      "body": "BACA ist ein modernes indisches Exporthaus, spezialisiert auf Gewürze, Nüsse und Früchte. Wir arbeiten direkt mit Bauernfamilien in den traditionellen Anbauregionen Indiens, sortieren und prüfen jede Charge im Labor am Ursprung und versenden dokumentierte Vollcontainer an Importeure, Distributoren und Händler weltweit. Das Team verfügt über mehr als zwei Jahrzehnte Erfahrung in Ursprung, Sortierung und Logistik; das Unternehmen ist die Formalisierung dieser Erfahrung unter einer Marke."
+    },
+    "visionMission": {
+      "eyebrow": "Vision & Mission",
+      "heading": "Worauf wir hinarbeiten — und wie.",
+      "vision": {
+        "title": "Vision",
+        "body": "Eine Welt, in der die indische Landwirtschaft auf Augenhöhe mit jedem Premium-Ursprung gehandelt wird — nachvollziehbar, ordentlich dokumentiert und so bepreist, wie es die Arbeit am Bauernhof verdient."
+      },
+      "mission": {
+        "title": "Mission",
+        "body": "Kleinbauernfamilien in Indien mit anspruchsvollen Käufern im Ausland verbinden — durch strenge Qualitätskontrolle, transparente Dokumentation und Lieferbeziehungen, die in Jahren gemessen werden."
+      }
+    },
+    "howWeWork": {
+      "eyebrow": "So arbeiten wir",
+      "heading": "Vom Boden zur Verschiffung in vier disziplinierten Schritten.",
+      "intro": "Jeder Container, der unser Haus verlässt, hat seinen Platz nach derselben Sequenz verdient.",
+      "steps": {
+        "source": {
+          "title": "Beschaffen",
+          "body": "Wir kaufen direkt bei Bauernkooperativen in den Ursprungsregionen jeder Sorte — Kardamom aus Kerala, Chili aus Guntur, Pfeffer aus Malabar — für volle Rückverfolgbarkeit vom Feld bis zum Spediteur."
+        },
+        "grade": {
+          "title": "Sortieren",
+          "body": "Jede Charge wird von Hand sortiert, im Labor auf Feuchtigkeit, Pestizidrückstände und Aflatoxine geprüft und gemäß ISO 22000 und HACCP dokumentiert, bevor sie überhaupt einen Container sieht."
+        },
+        "document": {
+          "title": "Dokumentieren",
+          "body": "Pflanzengesundheitszeugnisse, HS-Codes, Incoterms und Ursprungspapiere werden vor dem Auslaufen des Schiffes ausgestellt, sodass die Zollabfertigung keine Sendung am Zielhafen aufhält."
+        },
+        "ship": {
+          "title": "Verschiffen",
+          "body": "Am Ursprung verpackt und als dokumentierte Vollcontainer mit vertraglich gebundenen Spediteuren versendet — gleiche Schiffe, gleiche Routen, gleiche Ankunftsfenster, auf die Ihre Lieferkette planen kann."
+        }
+      }
+    },
+    "founders": {
+      "eyebrow": "Gründer",
+      "heading": "Die Menschen hinter BACA.",
+      "intro": "BACA wird von zwei Geschwistern geführt, die das Unternehmen aus zwei Jahrzehnten praktischer Erfahrung im indischen Gewürzhandel aufgebaut haben.",
+      "items": {
+        "founder1": {
+          "role": "Mitgründer · Beschaffung & Qualität",
+          "bio": "Zwei Jahrzehnte direkter Einkauf bei Kooperativen in Kerala und Andhra. Verantwortlich für Bauernbeziehungen, Sortierung am Ursprung und Laborprogramme für jede Sendung."
+        },
+        "founder2": {
+          "role": "Mitgründer · Handel & Logistik",
+          "bio": "Verantwortet Exportdokumentation, Spediteursbeziehungen und das Handelsdesk. Leitete zuvor die Logistikabteilung eines Mumbai-basierten Rohstoffhandelshauses."
+        }
+      },
+      "imageAltPrefix": "Porträt von"
+    },
+    "whyBaca": {
+      "eyebrow": "Warum BACA",
+      "heading": "Vier Gründe, warum Importeure bei uns bleiben.",
+      "intro": "Einkaufsabteilungen wählen BACA, wenn sie aufhören wollen, Brände zu löschen, und anfangen wollen, zu planen.",
+      "items": {
+        "traceability": {
+          "title": "Volle Rückverfolgbarkeit",
+          "body": "Jede Charge ist einer bestimmten Bauernkooperative, einem Erntefenster und einem Laborergebnis zugeordnet — vom Lager bis zurück aufs Feld prüfbar."
+        },
+        "quality": {
+          "title": "Im Labor geprüfte Qualität",
+          "body": "ISO 22000 + HACCP-Kontrollen am Ursprung: Feuchtigkeit, Pestizidrückstände, Aflatoxine und mikrobiologische Tests — keine Stichproben am Hafen."
+        },
+        "logistics": {
+          "title": "Verlässliche Logistik",
+          "body": "Vertraglich gesicherte Schiffsplätze und erfahrene Spediteure: Ihr Container kommt im genannten Zeitfenster an — nicht „irgendwann in dem Monat“."
+        },
+        "partnership": {
+          "title": "Langfristige Partnerschaft",
+          "body": "Festpreisverträge und Ernte-Reservierungen für Stammkäufer. Wir messen Beziehungen in Anbausaisons, nicht in einzelnen Bestellnummern."
+        }
+      }
+    }
+  },
   "contactPage": {
     "eyebrow": "Kontakt aufnehmen",
-    "heading": "Was möchten Sie importieren?",
-    "intro": "Sagen Sie uns, was Sie beziehen und wohin es verschifft wird. Internationale Anfragen beantworten wir innerhalb von 12 Stunden.",
-    "officeTitle": "Büro",
+    "heading": "Umfassendes Produktsortiment",
+    "subheading": "wettbewerbsfähige Preise & pünktliche Lieferung",
+    "officeTitle": "Firmenadresse",
     "channels": {
       "email": "E-Mail",
       "phone": "Telefon",
@@ -39,17 +123,24 @@
       "whatsappAction": "Nachricht senden"
     },
     "form": {
+      "title": "Anfrage senden",
+      "subtitle": "Wir antworten innerhalb von 12 Stunden.",
       "name": "Vollständiger Name",
       "email": "E-Mail",
+      "country": "Land",
       "company": "Unternehmen",
       "phone": "Telefon",
       "message": "Nachricht",
-      "optional": "optional",
       "messagePlaceholder": "Beschreiben Sie uns kurz Ihren Bedarf — Produkte, Mengen, Bestimmungsort.",
       "submit": "Anfrage senden",
       "submitting": "Wird gesendet…",
       "success": "Vielen Dank — Ihre Anfrage ist bei uns eingegangen. Wir melden uns innerhalb von 12 Stunden.",
       "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt."
+    },
+    "map": {
+      "eyebrow": "So finden Sie uns",
+      "directions": "Route planen",
+      "iframeTitle": "Karte mit dem Standort des BACA-Hauptsitzes"
     }
   },
   "blogsPage": {
@@ -93,6 +184,9 @@
       "home": {
         "label": "Startseite"
       },
+      "profile": {
+        "label": "Profil"
+      },
       "products": {
         "label": "Produkte"
       },
@@ -100,7 +194,7 @@
         "label": "Blogs"
       },
       "contact": {
-        "label": "Kontakt"
+        "label": "Kontaktieren Sie uns"
       }
     }
   },
@@ -223,8 +317,7 @@
     "ctaCatalogue": "Katalog herunterladen"
   },
   "footer": {
-    "description": "Aus indischem Boden gewonnen. Weltweit vertraut. Ein modernes indisches Exporthaus für Gewürze, Nüsse und Früchte.",
-    "certifiedTitle": "Zertifiziert",
+    "description": "Ein modernes indisches Exporthaus für Gewürze, Nüsse und Früchte.",
     "backToTop": "Nach oben",
     "columns": {
       "products": {
@@ -237,6 +330,7 @@
       "company": {
         "title": "Unternehmen",
         "links": {
+          "profile": "Profil",
           "about": "Über uns",
           "approach": "Unser Ansatz"
         }
@@ -245,9 +339,7 @@
         "title": "Ressourcen",
         "links": {
           "insights": "Blogs",
-          "certifications": "Zertifizierungen",
-          "contact": "Kontakt",
-          "catalogue": "Katalog anfordern"
+          "contact": "Kontaktieren Sie uns"
         }
       }
     },

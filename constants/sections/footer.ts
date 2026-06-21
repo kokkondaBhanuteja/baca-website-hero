@@ -28,6 +28,7 @@ export const FOOTER_COLUMNS: FooterColumnConfig[] = [
   {
     key: 'company',
     links: [
+      { key: 'profile', href: Route.Profile },
       { key: 'about', href: `${Route.Home}#why-we-re-here` },
       { key: 'approach', href: `${Route.Home}#approach` },
     ],
@@ -36,9 +37,7 @@ export const FOOTER_COLUMNS: FooterColumnConfig[] = [
     key: 'resources',
     links: [
       { key: 'insights', href: Route.Blogs },
-      { key: 'certifications', href: `${Route.Home}#compliance` },
       { key: 'contact', href: Route.Contact },
-      { key: 'catalogue', href: Route.Contact },
     ],
   },
 ]

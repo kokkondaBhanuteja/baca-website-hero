@@ -8,10 +8,12 @@ import { enquiryInputSchema } from '@/lib/server/validation/enquiry-schema'
 
 const ENQUIRY_RATE_LIMIT = { max: 5, windowMs: 10 * 60 * 1000 }
 
-// Public — anyone can submit an enquiry from the contact page. Rate-limited
-// per IP so the inbox can't be flooded with spam from a single source. There
-// is no admin GET here: enquiries are delivered by email (SMTP), not viewed
-// in admin. The DB row is kept as an audit trail.
+// Public — anyone can submit an enquiry from the contact form (shown on every
+// page via the global pre-footer strip + the dedicated /contact panel).
+// Rate-limited per IP so the inbox can't be flooded with spam from a single
+// source. Email-only — `createEnquiry` validates and forwards via SMTP; no DB
+// persistence (the Enquiry table was removed once SMTP became the sole
+// notification path).
 export const POST = handleRoute(async (request) => {
   const ip = await getClientIp()
   const limit = rateLimit(`enquiry:${ip}`, ENQUIRY_RATE_LIMIT)
@@ -23,5 +25,6 @@ export const POST = handleRoute(async (request) => {
     )
   }
   const input = enquiryInputSchema.parse(await request.json())
-  return created(await createEnquiry(input))
+  await createEnquiry(input)
+  return created({ ok: true })
 })

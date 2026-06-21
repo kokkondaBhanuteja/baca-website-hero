@@ -27,11 +27,95 @@
       "viewAllProducts": "View all products"
     }
   },
+  "profilePage": {
+    "eyebrow": "About BACA",
+    "heading": "A family-led Indian export house, built for the long view.",
+    "intro": "Two decades at origin in Kerala, Gujarat and Andhra — buying from the same grower families season after season, grading at source, and moving full containers to buyers in 37 countries.",
+    "whoWeAre": {
+      "eyebrow": "Who we are",
+      "heading": "An export house built on relationships.",
+      "body": "BACA is a modern Indian export house specialising in spices, nuts and fruits. We work directly with farming families in India's traditional growing regions, grade and lab-test every lot at origin, and ship documented full-container loads to importers, distributors and retailers worldwide. The team has worked across origin, grading and logistics for over two decades; the company is the formalisation of that experience under one brand."
+    },
+    "visionMission": {
+      "eyebrow": "Vision & mission",
+      "heading": "What we're working toward — and how.",
+      "vision": {
+        "title": "Vision",
+        "body": "A world where Indian agriculture trades on the same footing as any premium origin — traceable, properly documented, and priced for the work it represents at the farm gate."
+      },
+      "mission": {
+        "title": "Mission",
+        "body": "Connect smallholder farmers in India to discerning buyers abroad through rigorous quality control, transparent paperwork, and shipping relationships measured in years."
+      }
+    },
+    "howWeWork": {
+      "eyebrow": "How we work",
+      "heading": "From soil to shipping, in four disciplined steps.",
+      "intro": "Every container that leaves our door has earned its place through the same sequence.",
+      "steps": {
+        "source": {
+          "title": "Source",
+          "body": "We buy direct from grower cooperatives in the regions each crop is native to — cardamom from Kerala, chilli from Guntur, pepper from Malabar — for full traceability from field to forwarder."
+        },
+        "grade": {
+          "title": "Grade",
+          "body": "Every lot is hand-sorted, lab-tested for moisture, pesticide residue and aflatoxins, and documented to ISO 22000 and HACCP protocols before it ever sees a container."
+        },
+        "document": {
+          "title": "Document",
+          "body": "Phytosanitary certificates, HS codes, Incoterms and origin paperwork are issued before the vessel sails so customs clearance never holds up a shipment at the destination port."
+        },
+        "ship": {
+          "title": "Ship",
+          "body": "Packed at origin and moved as documented full-container loads with contracted forwarders — same vessels, same lanes, same arrival windows your supply chain can plan around."
+        }
+      }
+    },
+    "founders": {
+      "eyebrow": "Founders",
+      "heading": "The people behind BACA.",
+      "intro": "BACA is led by two siblings who built the business out of two decades on the ground in India's spice trade.",
+      "items": {
+        "founder1": {
+          "role": "Co-founder · Sourcing & quality",
+          "bio": "Two decades buying directly from cooperatives across Kerala and Andhra. Oversees grower relationships, origin grading, and lab-testing programmes for every shipment."
+        },
+        "founder2": {
+          "role": "Co-founder · Trade & logistics",
+          "bio": "Manages export documentation, forwarder relationships and the buyer-facing trade desk. Previously ran the logistics arm of a Mumbai-based commodity trading house."
+        }
+      },
+      "imageAltPrefix": "Portrait of"
+    },
+    "whyBaca": {
+      "eyebrow": "Why BACA",
+      "heading": "Four reasons importers stay with us.",
+      "intro": "Procurement teams choose BACA when they want to stop firefighting and start planning.",
+      "items": {
+        "traceability": {
+          "title": "Full traceability",
+          "body": "Every lot is tied to a specific grower cooperative, harvest window and lab result — auditable from your warehouse back to the field."
+        },
+        "quality": {
+          "title": "Lab-tested quality",
+          "body": "ISO 22000 + HACCP-grade controls at origin: moisture, pesticide residue, aflatoxin and microbiological tests, not random sampling at port."
+        },
+        "logistics": {
+          "title": "Reliable logistics",
+          "body": "Contracted vessel slots and seasoned forwarders mean your container arrives in the window we quoted — not 'sometime that month.'"
+        },
+        "partnership": {
+          "title": "Long-term partnership",
+          "body": "Fixed-price contracts and crop reservations for repeat buyers. We measure relationships in growing seasons, not single PO numbers."
+        }
+      }
+    }
+  },
   "contactPage": {
     "eyebrow": "Get in touch",
-    "heading": "What do you need to import?",
-    "intro": "Tell us what you source and where it ships. We respond to international enquiries within 12 hours.",
-    "officeTitle": "Office",
+    "heading": "Comprehensive product range",
+    "subheading": "competitive prices & timely delivery",
+    "officeTitle": "Corporate Address",
     "channels": {
       "email": "Email",
       "phone": "Phone",
@@ -39,17 +123,24 @@
       "whatsappAction": "Message us"
     },
     "form": {
+      "title": "Send an enquiry",
+      "subtitle": "We'll respond within 12 hours.",
       "name": "Full name",
       "email": "Email",
+      "country": "Country",
       "company": "Company",
       "phone": "Phone",
       "message": "Message",
-      "optional": "optional",
       "messagePlaceholder": "Briefly tell us your requirement — products, volumes, destination.",
       "submit": "Send enquiry",
       "submitting": "Sending…",
       "success": "Thank you — your enquiry has been received. We'll be in touch within 12 hours.",
       "error": "Something went wrong. Please try again or email us directly."
+    },
+    "map": {
+      "eyebrow": "Find us",
+      "directions": "Directions",
+      "iframeTitle": "Map showing the BACA corporate office"
     }
   },
   "blogsPage": {
@@ -93,6 +184,9 @@
       "home": {
         "label": "Home"
       },
+      "profile": {
+        "label": "Profile"
+      },
       "products": {
         "label": "Products"
       },
@@ -100,7 +194,7 @@
         "label": "Blogs"
       },
       "contact": {
-        "label": "Contact"
+        "label": "Contact us"
       }
     }
   },
@@ -223,8 +317,7 @@
     "ctaCatalogue": "Download catalogue"
   },
   "footer": {
-    "description": "Sourced from Indian soil. Trusted across the world. A modern Indian export house for spices, nuts, and fruits.",
-    "certifiedTitle": "Certified",
+    "description": "A modern Indian export house for spices, nuts, and fruits.",
     "backToTop": "Back to top",
     "columns": {
       "products": {
@@ -237,6 +330,7 @@
       "company": {
         "title": "Company",
         "links": {
+          "profile": "Profile",
           "about": "About",
           "approach": "Our Approach"
         }
@@ -245,9 +339,7 @@
         "title": "Resources",
         "links": {
           "insights": "Blogs",
-          "certifications": "Certifications",
-          "contact": "Contact",
-          "catalogue": "Request a catalogue"
+          "contact": "Contact us"
         }
       }
     },

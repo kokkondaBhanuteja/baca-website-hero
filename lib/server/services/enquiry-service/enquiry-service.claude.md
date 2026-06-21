@@ -6,44 +6,63 @@ exports:
   - 'createEnquiry'
 imports_from:
   - '@/lib/server/email'
-  - '@/lib/server/http/prisma-error'
-  - '@/lib/server/prisma'
+  - '@/lib/server/http/http-error'
   - '@/lib/server/validation/enquiry-schema'
 called_by:
   - 'app/api/enquiry/route.ts'
 auth: 'Public (createEnquiry — guard is the rate-limit on the route handler)'
-side_effects: 'Prisma INSERT into `enquiries`; best-effort SMTP send via sendEnquiryNotification (failure logged + swallowed).'
+side_effects: 'SMTP send via sendEnquiryNotification. No DB writes — the Enquiry table was removed when the flow became email-only.'
 ---
 
 # EnquiryService
 
 Purpose:
-Receives a public contact-form submission, persists it to the DB as an audit trail, and triggers an SMTP notification to the team. There is no admin-side listing or status mutation — those features were removed when the enquiry flow moved to email-only delivery.
+Receives a public contact-form submission and forwards it to the BACA team via
+SMTP. Email-only — there is no DB persistence. The previous `enquiries` table
+
+- `EnquiryStatus` enum were removed once SMTP became the sole notification
+  path; if SMTP is misconfigured or the send fails, the submission is lost and
+  the caller is told so (503).
 
 Exports:
 
-- `createEnquiry(input: EnquiryInput): Promise<{ id: string }>` — writes the Enquiry row, then best-effort sends an email to `ENQUIRY_NOTIFY_TO`. Returns the new row's `id`.
+- `createEnquiry(input: EnquiryInput): Promise<void>` — assembles the email
+  payload (lowercasing the address, defaulting nullable fields), calls
+  `sendEnquiryNotification`, throws `HttpError(503, 'EMAIL_SEND_FAILED', …)` if
+  the send returns `false`. Returns `void` on success — there is no row id to
+  hand back.
 
 Imports from:
 
-- `@/lib/server/email` — `sendEnquiryNotification` (best-effort SMTP sender).
-- `@/lib/server/http/prisma-error` — `mapPrismaError` for the Prisma write try/catch.
-- `@/lib/server/prisma` — Prisma client singleton.
+- `@/lib/server/email` — `sendEnquiryNotification` (SMTP sender, returns boolean).
+- `@/lib/server/http/http-error` — `HttpError` for the 503 path.
 - `@/lib/server/validation/enquiry-schema` — `EnquiryInput` (type-only import).
 
 Called by:
 
-- `app/api/enquiry/route.ts` — POST handler.
+- `app/api/enquiry/route.ts` — POST handler (rate-limited, zod-validated).
 
 Business Logic:
 
-- Normalises the input: lowercases `email`, defaults `company` / `phone` to `null` if missing, copies the rest as-is, carries `localeSent` as metadata.
-- Writes the Prisma row inside a try/catch that goes through `mapPrismaError` (P2002 → 409 etc.). The DB write is the **source of truth** — its failure rejects the request.
-- After the row commits, fires `sendEnquiryNotification(normalised)`. The function swallows its own errors and returns `false` (no throw), so a missing SMTP config or a transient SMTP failure never fails the form submission.
-- DB enum `EnquiryStatus` defaults to `NEW` at the column level — we no longer set or read it here.
+- Builds the email payload: lowercases `email`, defaults `company` / `phone` to
+  `null` if empty, copies the required `name`, `country`, `message`, and
+  `localeSent` (carried as send metadata).
+- Awaits `sendEnquiryNotification(payload)`. The email module swallows its own
+  internal exceptions and returns `false` on any failure (missing SMTP config,
+  network error, auth reject). If `false`, the service throws a 503 so the
+  form shows a clear error instead of silently dropping the enquiry.
 
 Side Effects:
-Prisma INSERT into `enquiries`; outbound SMTP request via nodemailer when SMTP is configured.
+
+- One outbound SMTP request per call when SMTP is configured.
+- No DB writes — the `enquiries` table no longer exists in the schema.
 
 Notes:
-Email lowercasing prevents duplicate buyers from registering under case-variant addresses. The `Enquiry` Prisma model stays in `schema.prisma` so existing rows remain accessible (Prisma client still exposes `prisma.enquiry`); if you ever want to drop the table entirely, that's a separate destructive change.
+
+- Trade-off vs. the prior design: lost the audit trail (no row to show in an
+  admin inbox), gained simplicity (no DB drift, one notification path). If
+  enquiries ever need to be reviewable in the admin, restore the model + the
+  insert here.
+- The Neon DB may still contain the orphan `enquiries` table physically — the
+  schema removal makes it unreachable from this codebase. Drop it via the Neon
+  console when convenient.

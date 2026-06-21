@@ -28,12 +28,6 @@ enum GalleryMediaType {
   VIDEO
 }
 
-enum EnquiryStatus {
-  NEW
-  READ
-  ARCHIVED
-}
-
 model AdminUser {
   id           String    @id @default(cuid())
   email        String    @unique
@@ -143,17 +137,3 @@ model GalleryImage {
   @@map("gallery_images")
 }
 
-model Enquiry {
-  id         String        @id @default(cuid())
-  name       String
-  email      String
-  company    String?
-  phone      String?
-  message    String
-  localeSent String
-  status     EnquiryStatus @default(NEW)
-  createdAt  DateTime      @default(now())
-
-  @@index([status, createdAt])
-  @@map("enquiries")
-}

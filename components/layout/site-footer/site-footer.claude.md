@@ -10,9 +10,9 @@ imports_from:
   - 'lucide-react'
   - 'next-intl'
   - '@/constants/site'
+  - '@/components/sections/contact/contact-strip'
   - '@/components/layout/site-footer/footer-columns'
   - '@/components/layout/site-footer/footer-marquee'
-  - '@/components/layout/site-footer/footer-wordmark'
 ---
 
 # SiteFooter
@@ -26,14 +26,17 @@ Used In:
 
 Props:
 
-- None — client component.
+- `hideContactStrip?: boolean` (default `false`) — when `true`, the global
+  `<ContactStrip />` (rendered above the `<footer>` element) is suppressed.
+  Used by `/contact`, which already shows the full panel + same form above
+  and would otherwise display a duplicate form in the pre-footer.
 
 Business Logic:
 
 - `useEffect` queries every `[data-footer-reveal]` element under the footer ref. Reduced-motion bails out before building the timeline.
 - For each reveal, a GSAP `from` tween animates `yPercent 16 → 0`, `autoAlpha 0 → 1`, and `clipPath inset(0% 0% 100% 0%) → 0`, on a per-element `ScrollTrigger` with `start: 'top 90%'`. Cleanup uses `gsap.context().revert()`.
 - The `FooterWordmark` is intentionally **not** in the reveal pass — it shows immediately so the page never flashes blank; the cross-fading ocean stills inside (driven by `WordmarkSlideshow`'s own intersection timeline) carry the entrance motion.
-- Renders top-to-bottom: `FooterMarquee` (full-bleed tagline strip), `FooterColumns` (description + inline email/phone + 3 nav columns + cert column, padding tightened to `py-10 lg:py-12`), `FooterWordmark` (the attraction; top padding tightened to `pt-6`), single-row legal strip (`© {year} BACA · GST · IEC` on the left, `Back to top` button on the right; `mt-6 py-5` padding).
+- Renders top-to-bottom: **`ContactStrip` (pre-footer global section — wraps the shared `<EnquiryForm />` in a cream card so every page surfaces the form just above the dark footer; rendered as a fragment sibling ABOVE the `<footer>` element)**, then the `<footer>` itself with `FooterMarquee` (full-bleed tagline strip), `FooterColumns` (description + inline email/phone + 3 nav columns + cert column, padding tightened to `py-10 lg:py-12`), single-row legal strip (`© {year} BACA · GST · IEC` on the left, `Back to top` button on the right; `mt-6 py-5` padding). When the consumer passes `hideContactStrip` (currently only `/contact`, which already shows the same form above in its own panel), the strip is skipped and only the dark footer renders. **`FooterWordmark` (the oversized BACA wordmark with cross-fading ocean stills) was removed at the user's request — the JSX import + render are gone. The component folder still exists in `components/layout/site-footer/footer-wordmark/` in case you want to bring it back; no consumer references it now.**
 - Year computed in the component via `new Date().getFullYear()` — fine because this is `'use client'` and only ever renders in the browser.
 - Back-to-top calls `window.scrollTo({ top: 0, behavior: 'smooth' })`.
 
@@ -44,6 +47,7 @@ Dependencies:
 - `lucide-react`: `ArrowUp`.
 - `next-intl`: `useTranslations`.
 - `@/constants/site`: `SITE` (brand, sub, gst, iec).
+- `@/components/sections/contact/contact-strip`: `ContactStrip` (rendered above `<footer>`).
 - `@/components/layout/site-footer/footer-marquee`, `footer-columns`, `footer-wordmark`.
 
 i18n:

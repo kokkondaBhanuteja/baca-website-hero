@@ -39,7 +39,10 @@ Business Logic:
 - scrolled = forceSolid || isScrolled
 - onScroll listener (passive): setIsScrolled(window.scrollY > SCROLL_HEADER_THRESHOLD_PX)
 - useEffect cleanup: document.body.style.overflow = isMobileOpen ? 'hidden' : '' (body scroll lock)
-- Builds navItems array from NAV constant + conditional dropdown children for 'products' and 'insights'
+- Builds navItems array from NAV constant + conditional dropdown children:
+  - `products` → DB-driven (top 3 products + "View all" entry)
+  - `insights` → DB-driven (top 3 blog types)
+  - `profile` → static (5 section anchors on /profile, labels reuse each section's `profilePage.<section>.eyebrow` translation so there's zero duplicate copy to maintain)
 - header: fixed inset-x-0 top-0 z-50, transition-colors, className changes based on scrolled state (solid bg-paper/95 border-b, or transparent bg-transparent)
 - Inner container is **flex `justify-between`** below `lg` (guarantees the wordmark on the far left + hamburger on the far right on mobile) and switches to a **3-column grid `[1fr_auto_1fr]`** on `lg+` so the desktop nav sits at true page centre regardless of the wordmark's vs the right-actions' widths. Logo gets `lg:justify-self-start`, right actions get `lg:justify-self-end` (no-ops on mobile flex).
 - Wordmark: BACA in font-heading, `text-3xl` on mobile for presence, `sm:text-2xl` from sm+. Colour swaps text-paper (transparent) ↔ text-ink (solid). The previous "Bharat Cargo" sub-line was removed when `SITE.sub` was dropped.
@@ -60,7 +63,9 @@ Dependencies:
 - @/components/layout/site-header/desktop-nav, mobile-menu
 
 i18n:
-Namespaces: 'nav' (dynamic nav.items.{key}.label), 'common' (enquire, viewAllCategories), 'header' (aria.home, aria.openMenu, aria.closeMenu), 'blogsPage' (allArticles).
+Namespaces: `nav` (dynamic `nav.items.{key}.label`), `common` (enquire,
+viewAllCategories), `header` (aria.home, aria.openMenu, aria.closeMenu),
+`profilePage` (each section's `eyebrow` — drives the Profile dropdown labels).
 
 Accessibility:
 aria-label on logo + menu buttons. Keyboard nav on dropdowns (inherited from Dropdown component).

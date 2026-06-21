@@ -15,37 +15,69 @@ imports_from:
 # FooterColumns
 
 Purpose:
-Middle grid of footer: description + address block, localized nav columns, certifications strip. Opts into parent's [data-footer-reveal] animation.
+Middle body of the footer. Renders a small Fraunces "BACA" brand mark at the
+top of the brand column (`SITE.brand` + a tiny saffron square accent, the
+modern-footer "brand signature" treatment), followed by the brand description,
+address, and email/phone. Three nav columns (Products / Company / Resources)
+sit on the right at `lg:col-span-2` each (total 6 of 12).
+
+An earlier revision opened with a display-type "Sourced from Indian soil…"
+tagline above the grid and closed with a `CERT_MARKS` certifications pill
+row below it; both were removed at the user's request. `CERT_MARKS` is still
+defined in `@/constants/site` and used by the home page's
+`components/sections/certifications/` block.
 
 Used In:
 
-- SiteFooter — rendered after marquee
+- `SiteFooter` — rendered between `FooterMarquee` (above) and the legal row.
 
 Props:
 
-- No props — client component (calls useTranslations)
+- No props — server-rendered (but actually transitively a client component
+  because `SiteFooter` is `'use client'` and this is its child). Calls
+  `useTranslations`, so it must sit inside the next-intl provider.
 
 Business Logic:
 
-- Grid layout: `gap-x-8 gap-y-10 py-10 lg:grid-cols-12 lg:py-12` (tightened from the previous `py-16 gap-y-12` to halve the block height).
-- Left col (`lg:col-span-5`): description text + compact `<address>` block. Address now puts the two street lines on one row separated by `·`, then the email + phone on a single line below — replaces the previous 3-row stacked address. Inline mailto + tel links use a hover transition to `text-paper`.
-- Nav columns via `FOOTER_COLUMNS` constant: each `lg:col-span-2`, `ul` is `flex flex-col gap-3`.
-- Each col: `h3` (title) + `ul` of FooterLink children.
-- Right col (`lg:col-span-1`): certifications strip (`h3` + list of cert marks).
-- Every section has `data-footer-reveal` so the parent's GSAP stagger picks it up.
+- `grid gap-x-8 gap-y-10 lg:grid-cols-12 lg:gap-x-10`. Brand block opens with
+  a display-sized Fraunces wordmark — `text-[clamp(3.5rem,7vw,5.5rem)]
+font-light leading-none tracking-[-0.03em] text-paper`, just the brand name
+  on its own (no accent mark). Description text follows with `mt-6` for
+  breathing room under the now-tall wordmark.
+  Then the description + a real `<address>` (two address lines split by
+  `<br />` instead of the old inline `·`) + a compact email/phone row that
+  collapses to two stacked lines on mobile and inlines with a `·` separator
+  on `sm+`. Nav columns iterate `FOOTER_COLUMNS`.
+- The brand wordmark reads `SITE.brand` — single source of truth in
+  `constants/site.ts`. If the brand ever rebrands, edit that constant.
+- Every section carries `data-footer-reveal` so the parent's GSAP stagger
+  picks it up.
 
 Dependencies:
 
 - next-intl: useTranslations
-- @/constants/contact, @/constants/site — SITE.address, CONTACT.email/emailHref/phoneHref/phoneDisplay
-- @/constants/sections/footer — FOOTER_COLUMNS array
-- @/components/layout/site-footer/footer-link
+- @/constants/contact — `CONTACT.email`/`emailHref`/`phoneDisplay`/`phoneHref`
+- @/constants/site — `SITE.address`, `CERT_MARKS`
+- @/constants/sections/footer — `FOOTER_COLUMNS` array
+- @/components/layout/site-footer/footer-link — `FooterLink` primitive
 
 i18n:
-Namespace: 'footer'. Keys: 'description', 'columns.{col.key}.title', 'columns.{col.key}.links.{link.key}', 'certifiedTitle'.
+Namespace: `footer`. Keys: `description` (short one-liner about BACA),
+`columns.{col.key}.title`, `columns.{col.key}.links.{link.key}`. (The earlier
+`tagline` and `certifiedTitle` keys were removed along with the display line
+and the certifications pill row.)
 
 Accessibility:
-Semantic <address> tag. Links are semantic <a> tags (wrapped in FooterLink). h3 headers per column.
+
+- Address uses a semantic `<address>` element.
+- Nav columns are `<nav aria-label={title}>` containers with `<h3>` headings.
+- Certifications are a `<ul>` of `<li>` pills; the `·` separator in the email/
+  phone row is `aria-hidden` because it's a decorative bullet.
 
 Notes:
-Address uses <br> tags (not semantic, but legible). Phone link wraps CONTACT.phoneHref + CONTACT.phoneDisplay constants. Must be rendered inside a next-intl provider since it calls useTranslations.
+
+- The `tagline` translation key was added across all 7 locales when this
+  redesign landed. Future copy edits should keep the tagline ≤ 6 words for
+  the display sizing to hold on narrower viewports.
+- If the brand ever ships a logo mark again, replace the tagline `<p>` with a
+  brand `<svg>` and keep the section's `max-w-*` constraint.

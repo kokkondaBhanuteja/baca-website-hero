@@ -26,25 +26,28 @@ Props:
 
 Business Logic:
 
-- Local state: name, email, company, phone, message, status ('idle' | 'sending' | 'sent' | 'error'), error, fieldErrors
+- Local state: name, email, **country**, company, phone, message, status ('idle' | 'sending' | 'sent' | 'error'), error, fieldErrors. `country` is required (matches the server-side zod schema); company + phone stay optional but their labels no longer carry the "(optional)" decoration — the asterisk on required fields is what signals the difference now.
 - onSubmit: prevents default, sets status 'sending', calls enquiryApi.submit({...}) → on success: status 'sent' + show success box, on error: reads apiError.message + .fieldErrors
-- Success state: shows check icon + message in green box, form is hidden
+- Success state: shows check icon + message in green box on paper background, form is hidden
 - Error state: shows red error message box at top + field-level errors below each input
+- Form header: slim h2 title only (subtitle was moved to the footer action row); no separator under it — the field grid provides its own rhythm
 - Field + MessageField subcomponents: each manages its own input + label + error display
-- Field: input type text/email/tel, aria-invalid, aria-describedby linked to error id
-- MessageField: textarea rows=5, required, same error wiring
-- Submit button: text changes 'Submit' → 'Submitting…' when status='sending', disabled during send
+- Field: input type text/email/tel, paper bg on cream panel, aria-invalid, aria-describedby linked to error id. Accepts an optional `className` so a single field can span the grid (used for phone, which sits alone in the third row after name/email/country/company fill the first two rows).
+- MessageField: textarea capped at 200 characters via `MESSAGE_MAX_LENGTH`. Renders a live `X / 200` counter in the label row (mono, tabular-nums; flips to clay color in the last 20 chars). The wrapper is `flex flex-1 flex-col` and the textarea is `flex-1 h-full resize-none` so it grows to absorb whatever vertical space is left in the cream column — eliminates the empty gap that used to sit between the textarea and the action row when the form column was stretched to match the contact column's height.
+- Form layout: `flex h-full w-full flex-col` so the form fills the cream column it sits in (page wrapper is `flex`, items stretch via the parent grid). `mt-auto` on the action row pushes it to the bottom so the cream space never feels empty.
+- Action row: `mt-auto pt-6 flex justify-end` — just the submit button, right-aligned. The earlier ShieldCheck + "We'll respond within 12 hours" reassurance line was removed at the user's request.
+- Submit button: auto-width pill (NOT full-width — that read as oversized in design review), `rounded-full bg-ink px-5 py-2.5 text-sm`, ArrowRight icon that nudges on hover. Text changes 'Submit' → 'Submitting…' when status='sending', disabled during send; arrow hidden while sending.
 
 Dependencies:
 
 - React hooks: useId, useState
-- lucide-react: Check
+- lucide-react: Check, ArrowRight
 - next-intl: useLocale, useTranslations
 - @/lib/api-client/endpoints/enquiry-api: enquiryApi.submit
 - @/lib/api-client/axios-instance: NormalizedApiError
 
 i18n:
-Namespace: 'contactPage.form'. Keys: 'name', 'email', 'company', 'phone', 'message', 'messagePlaceholder', 'optional', 'submit', 'submitting', 'success', 'error'.
+Namespace: 'contactPage.form'. Keys: 'title', 'subtitle', 'name', 'email', 'company', 'phone', 'message', 'messagePlaceholder', 'optional', 'submit', 'submitting', 'success', 'error'.
 
 Accessibility:
 Proper label-input association via htmlFor + id. aria-invalid for field errors. aria-describedby links error messages. Required fields marked with red asterisk.

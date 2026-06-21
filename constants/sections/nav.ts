@@ -21,6 +21,7 @@ export interface NavItemConfig {
  */
 export const NAV: NavItemConfig[] = [
   { key: 'home', href: Route.Home },
+  { key: 'profile', href: Route.Profile },
   { key: 'products', href: Route.Products },
   { key: 'insights', href: Route.Blogs },
   { key: 'contact', href: Route.Contact },

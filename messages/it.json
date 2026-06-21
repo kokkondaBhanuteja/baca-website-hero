@@ -27,11 +27,95 @@
       "viewAllProducts": "Vedi tutti i prodotti"
     }
   },
+  "profilePage": {
+    "eyebrow": "Su BACA",
+    "heading": "Una casa di esportazione indiana a conduzione familiare, pensata a lungo termine.",
+    "intro": "Due decenni all'origine in Kerala, Gujarat e Andhra — acquistiamo dalle stesse famiglie di coltivatori stagione dopo stagione, selezioniamo all'origine e spediamo container completi a compratori in 37 Paesi.",
+    "whoWeAre": {
+      "eyebrow": "Chi siamo",
+      "heading": "Una casa di esportazione costruita sulle relazioni.",
+      "body": "BACA è una moderna casa di esportazione indiana specializzata in spezie, frutta secca e frutta. Lavoriamo direttamente con famiglie di coltivatori nelle regioni di coltivazione tradizionali dell'India, selezioniamo e analizziamo in laboratorio ogni lotto all'origine e spediamo container completi documentati a importatori, distributori e dettaglianti in tutto il mondo. Il team vanta oltre due decenni di esperienza in approvvigionamento, selezione e logistica; l'azienda è la formalizzazione di tale esperienza sotto un unico marchio."
+    },
+    "visionMission": {
+      "eyebrow": "Visione e missione",
+      "heading": "Verso cosa lavoriamo — e come.",
+      "vision": {
+        "title": "Visione",
+        "body": "Un mondo in cui l'agricoltura indiana sia negoziata allo stesso livello di qualsiasi origine premium: tracciabile, debitamente documentata e valorizzata per il lavoro che rappresenta al cancello della fattoria."
+      },
+      "mission": {
+        "title": "Missione",
+        "body": "Collegare i piccoli agricoltori indiani agli acquirenti esigenti all'estero attraverso un rigoroso controllo qualità, documentazione trasparente e relazioni di spedizione misurate in anni."
+      }
+    },
+    "howWeWork": {
+      "eyebrow": "Come lavoriamo",
+      "heading": "Dal suolo alla spedizione, in quattro passaggi disciplinati.",
+      "intro": "Ogni container che esce dai nostri locali ha guadagnato il suo posto seguendo la stessa sequenza.",
+      "steps": {
+        "source": {
+          "title": "Approvvigionare",
+          "body": "Acquistiamo direttamente dalle cooperative agricole nelle regioni d'origine di ciascuna coltura: cardamomo dal Kerala, peperoncino da Guntur, pepe dal Malabar, per una piena tracciabilità dal campo allo spedizioniere."
+        },
+        "grade": {
+          "title": "Selezionare",
+          "body": "Ogni lotto viene selezionato a mano, analizzato in laboratorio per umidità, residui di pesticidi e aflatossine, e documentato secondo i protocolli ISO 22000 e HACCP prima ancora di vedere un container."
+        },
+        "document": {
+          "title": "Documentare",
+          "body": "Certificati fitosanitari, codici SA, Incoterms e documenti d'origine sono emessi prima della partenza della nave, in modo che la dogana non trattenga mai una spedizione al porto di destinazione."
+        },
+        "ship": {
+          "title": "Spedire",
+          "body": "Confezionati all'origine e spediti come container completi documentati con spedizionieri sotto contratto: stesse navi, stesse rotte, stesse finestre di arrivo su cui la tua catena di approvvigionamento può pianificare."
+        }
+      }
+    },
+    "founders": {
+      "eyebrow": "Fondatori",
+      "heading": "Le persone dietro BACA.",
+      "intro": "BACA è guidata da due fratelli che hanno costruito l'azienda partendo da due decenni di esperienza sul campo nel commercio indiano delle spezie.",
+      "items": {
+        "founder1": {
+          "role": "Co-fondatore · Approvvigionamento e qualità",
+          "bio": "Due decenni di acquisto diretto dalle cooperative del Kerala e dell'Andhra. Supervisiona le relazioni con i coltivatori, la selezione all'origine e i programmi di analisi di laboratorio per ogni spedizione."
+        },
+        "founder2": {
+          "role": "Co-fondatore · Commercio e logistica",
+          "bio": "Gestisce la documentazione di esportazione, le relazioni con gli spedizionieri e l'area commerciale. In precedenza ha diretto il ramo logistico di una casa di trading di materie prime con sede a Mumbai."
+        }
+      },
+      "imageAltPrefix": "Ritratto di"
+    },
+    "whyBaca": {
+      "eyebrow": "Perché BACA",
+      "heading": "Quattro ragioni per cui gli importatori restano con noi.",
+      "intro": "I team acquisti scelgono BACA quando vogliono smettere di spegnere incendi e iniziare a pianificare.",
+      "items": {
+        "traceability": {
+          "title": "Tracciabilità totale",
+          "body": "Ogni lotto è collegato a una specifica cooperativa di coltivatori, una finestra di raccolto e un risultato di laboratorio: verificabile dal vostro magazzino fino al campo."
+        },
+        "quality": {
+          "title": "Qualità testata in laboratorio",
+          "body": "Controlli ISO 22000 + HACCP all'origine: umidità, residui di pesticidi, aflatossine e test microbiologici — niente campionamento casuale al porto."
+        },
+        "logistics": {
+          "title": "Logistica affidabile",
+          "body": "Posti nave contrattualizzati e spedizionieri esperti: il vostro container arriva nella finestra preventivata — non «in qualche momento di quel mese»."
+        },
+        "partnership": {
+          "title": "Partnership a lungo termine",
+          "body": "Contratti a prezzo fisso e prenotazioni di raccolto per i compratori abituali. Misuriamo le relazioni in stagioni agricole, non in singoli numeri d'ordine."
+        }
+      }
+    }
+  },
   "contactPage": {
     "eyebrow": "Contattaci",
-    "heading": "Che cosa desidera importare?",
-    "intro": "Ci dica che cosa acquista e dove va spedito. Rispondiamo alle richieste internazionali entro 12 ore.",
-    "officeTitle": "Ufficio",
+    "heading": "Gamma di prodotti completa",
+    "subheading": "prezzi competitivi e consegna puntuale",
+    "officeTitle": "Indirizzo aziendale",
     "channels": {
       "email": "Email",
       "phone": "Telefono",
@@ -39,17 +123,24 @@
       "whatsappAction": "Scrivici"
     },
     "form": {
+      "title": "Invia richiesta",
+      "subtitle": "Rispondiamo entro 12 ore.",
       "name": "Nome completo",
       "email": "Email",
+      "country": "Paese",
       "company": "Azienda",
       "phone": "Telefono",
       "message": "Messaggio",
-      "optional": "facoltativo",
       "messagePlaceholder": "Ci descriva brevemente la sua esigenza — prodotti, volumi, destinazione.",
       "submit": "Invia richiesta",
       "submitting": "Invio in corso…",
       "success": "Grazie — la sua richiesta è stata ricevuta. La contatteremo entro 12 ore.",
       "error": "Si è verificato un errore. Riprovi o ci scriva direttamente via email."
+    },
+    "map": {
+      "eyebrow": "Dove siamo",
+      "directions": "Indicazioni",
+      "iframeTitle": "Mappa che mostra la sede di BACA"
     }
   },
   "blogsPage": {
@@ -93,6 +184,9 @@
       "home": {
         "label": "Home"
       },
+      "profile": {
+        "label": "Profilo"
+      },
       "products": {
         "label": "Prodotti"
       },
@@ -100,7 +194,7 @@
         "label": "Blog"
       },
       "contact": {
-        "label": "Contatti"
+        "label": "Contattaci"
       }
     }
   },
@@ -223,8 +317,7 @@
     "ctaCatalogue": "Scarica il catalogo"
   },
   "footer": {
-    "description": "Coltivato nella terra indiana. Apprezzato in tutto il mondo. Una moderna casa di esportazione indiana per spezie, frutta secca e frutta.",
-    "certifiedTitle": "Certificati",
+    "description": "Una moderna casa di esportazione indiana per spezie, frutta secca e frutta.",
     "backToTop": "Torna all'inizio",
     "columns": {
       "products": {
@@ -237,6 +330,7 @@
       "company": {
         "title": "Azienda",
         "links": {
+          "profile": "Profilo",
           "about": "Chi siamo",
           "approach": "Il nostro approccio"
         }
@@ -245,9 +339,7 @@
         "title": "Risorse",
         "links": {
           "insights": "Blog",
-          "certifications": "Certificazioni",
-          "contact": "Contatti",
-          "catalogue": "Richiedi un catalogo"
+          "contact": "Contattaci"
         }
       }
     },

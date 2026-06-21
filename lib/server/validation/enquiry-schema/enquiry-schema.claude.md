@@ -37,7 +37,8 @@ Business Logic:
 - `email`: trimmed, 1–200 chars, regex format match (not RFC-strict).
 - `company`: trimmed, max 160 chars, nullish (optional).
 - `phone`: trimmed, max 40 chars, nullish (optional).
-- `message`: trimmed, 1–4000 chars.
+- `country`: trimmed, **required**, 1–80 chars. Used only at notification time (included in the email body so the BACA team knows the buyer's origin before replying) — NOT persisted to the DB since the Enquiry table was removed when the flow became email-only.
+- `message`: trimmed, 1–200 chars. The 200-char cap is enforced both client-side (textarea `maxLength` + visible counter) and server-side (this schema) so a tampered client can't bypass it.
 - `localeSent`: trimmed, 2–5 chars (locale code, not validated against the project's `LOCALES` tuple — stored as metadata).
 
 Notes:

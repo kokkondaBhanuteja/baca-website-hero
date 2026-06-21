@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
-import { Check } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 
 import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { enquiryApi } from '@/lib/api-client/endpoints/enquiry-api'
@@ -15,6 +15,7 @@ export function EnquiryForm() {
   const [email, setEmail] = useState('')
   const [company, setCompany] = useState('')
   const [phone, setPhone] = useState('')
+  const [country, setCountry] = useState('')
   const [message, setMessage] = useState('')
 
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>(
@@ -43,6 +44,7 @@ export function EnquiryForm() {
         email,
         company: company || null,
         phone: phone || null,
+        country,
         message,
         localeSent: locale,
       })
@@ -62,7 +64,7 @@ export function EnquiryForm() {
       <div
         role="status"
         aria-live="polite"
-        className="flex items-start gap-4 rounded-2xl border border-forest/30 bg-forest/5 p-8"
+        className="flex items-start gap-4 rounded-xl border border-forest/30 bg-paper p-6"
       >
         <span
           aria-hidden
@@ -70,26 +72,29 @@ export function EnquiryForm() {
         >
           <Check className="h-4 w-4" />
         </span>
-        <p className="text-[15px] leading-relaxed text-ink">{t('success')}</p>
+        <p className="text-sm leading-relaxed text-ink">{t('success')}</p>
       </div>
     )
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="rounded-2xl border border-line bg-paper p-6 sm:p-8"
-    >
+    <form onSubmit={handleSubmit} className="flex h-full w-full flex-col">
+      <div className="mb-5 flex items-baseline justify-between gap-4">
+        <h2 className="font-heading text-xl font-light tracking-[-0.01em] text-ink sm:text-[1.375rem]">
+          {t('title')}
+        </h2>
+      </div>
+
       {status === 'error' && error && (
         <p
           role="alert"
-          className="mb-5 rounded-lg border border-clay/30 bg-clay/5 px-3 py-2 text-sm text-clay"
+          className="mb-4 rounded-lg border border-clay/30 bg-clay/5 px-3 py-2 text-sm text-clay"
         >
           {error}
         </p>
       )}
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-x-4 gap-y-4 sm:grid-cols-2">
         <Field
           label={t('name')}
           value={name}
@@ -110,19 +115,29 @@ export function EnquiryForm() {
           errors={fieldErrors.email}
         />
         <Field
-          label={`${t('company')} (${t('optional')})`}
+          label={t('country')}
+          value={country}
+          onChange={setCountry}
+          required
+          maxLength={80}
+          autoComplete="country-name"
+          errors={fieldErrors.country}
+        />
+        <Field
+          label={t('company')}
           value={company}
           onChange={setCompany}
           maxLength={160}
           autoComplete="organization"
         />
         <Field
-          label={`${t('phone')} (${t('optional')})`}
+          label={t('phone')}
           type="tel"
           value={phone}
           onChange={setPhone}
           maxLength={40}
           autoComplete="tel"
+          className="sm:col-span-2"
         />
       </div>
 
@@ -134,13 +149,21 @@ export function EnquiryForm() {
         errors={fieldErrors.message}
       />
 
-      <button
-        type="submit"
-        disabled={status === 'sending'}
-        className="mt-6 inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-forest disabled:opacity-60"
-      >
-        {status === 'sending' ? t('submitting') : t('submit')}
-      </button>
+      <div className="mt-auto flex justify-end pt-6">
+        <button
+          type="submit"
+          disabled={status === 'sending'}
+          className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-forest disabled:opacity-60"
+        >
+          {status === 'sending' ? t('submitting') : t('submit')}
+          {status !== 'sending' && (
+            <ArrowRight
+              className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+              aria-hidden
+            />
+          )}
+        </button>
+      </div>
     </form>
   )
 }
@@ -154,6 +177,7 @@ function Field({
   maxLength,
   autoComplete,
   errors,
+  className,
 }: {
   label: string
   value: string
@@ -163,6 +187,7 @@ function Field({
   maxLength?: number
   autoComplete?: string
   errors?: string[]
+  className?: string
 }) {
   const reactId = useId()
   const inputId = `${reactId}-input`
@@ -170,7 +195,7 @@ function Field({
   const hasErrors = Boolean(errors?.length)
 
   return (
-    <div>
+    <div className={className}>
       <label
         htmlFor={inputId}
         className="mb-1.5 block text-sm font-medium text-ink/80"
@@ -188,7 +213,7 @@ function Field({
         onChange={(event) => onChange(event.target.value)}
         aria-invalid={hasErrors || undefined}
         aria-describedby={hasErrors ? errorId : undefined}
-        className="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink focus-visible:ring-2 focus-visible:ring-ink/30"
+        className="w-full rounded-lg border border-line/80 bg-paper px-3.5 py-2.5 text-sm text-ink outline-none transition-colors focus:border-ink focus-visible:ring-2 focus-visible:ring-ink/20"
       />
       {hasErrors && (
         <p id={errorId} className="mt-1 text-xs text-clay">
@@ -198,6 +223,8 @@ function Field({
     </div>
   )
 }
+
+const MESSAGE_MAX_LENGTH = 200
 
 function MessageField({
   label,
@@ -216,26 +243,36 @@ function MessageField({
   const inputId = `${reactId}-message`
   const errorId = `${reactId}-message-error`
   const hasErrors = Boolean(errors?.length)
+  const remaining = MESSAGE_MAX_LENGTH - value.length
+  const isNearLimit = remaining <= 20
 
   return (
-    <div className="mt-5">
-      <label
-        htmlFor={inputId}
-        className="mb-1.5 block text-sm font-medium text-ink/80"
-      >
-        {label} <span className="text-clay">*</span>
-      </label>
+    <div className="mt-4 flex flex-1 flex-col">
+      <div className="mb-1.5 flex items-baseline justify-between gap-3">
+        <label
+          htmlFor={inputId}
+          className="block text-sm font-medium text-ink/80"
+        >
+          {label} <span className="text-clay">*</span>
+        </label>
+        <span
+          aria-live="polite"
+          className={`font-mono text-[0.65rem] tabular-nums ${isNearLimit ? 'text-clay' : 'text-ink-60'}`}
+        >
+          {value.length} / {MESSAGE_MAX_LENGTH}
+        </span>
+      </div>
       <textarea
         id={inputId}
         required
-        rows={5}
-        maxLength={4000}
+        rows={3}
+        maxLength={MESSAGE_MAX_LENGTH}
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
         aria-invalid={hasErrors || undefined}
         aria-describedby={hasErrors ? errorId : undefined}
-        className="w-full rounded-lg border border-line bg-bone px-3 py-2 text-sm text-ink outline-none focus:border-ink focus-visible:ring-2 focus-visible:ring-ink/30"
+        className="h-full min-h-32 w-full flex-1 resize-none rounded-lg border border-line/80 bg-paper px-3.5 py-2.5 text-sm text-ink outline-none transition-colors focus:border-ink focus-visible:ring-2 focus-visible:ring-ink/20"
       />
       {hasErrors && (
         <p id={errorId} className="mt-1 text-xs text-clay">

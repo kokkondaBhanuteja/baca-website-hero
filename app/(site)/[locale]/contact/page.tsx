@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ArrowUpRight, Mail, MessageCircle, Phone } from 'lucide-react'
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import type { Locale } from '@/constants/i18n'
@@ -8,7 +8,9 @@ import { SITE } from '@/constants/site'
 import { PageIntro } from '@/components/shared/page-intro'
 import { SiteHeader } from '@/components/layout/site-header'
 import { SiteFooter } from '@/components/layout/site-footer'
+import { WhatsAppIcon } from '@/components/ui/whatsapp-icon'
 import { EnquiryForm } from '@/components/sections/contact/enquiry-form'
+import { LocationMap } from '@/components/sections/contact/location-map'
 
 type PageParams = { params: Promise<{ locale: string }> }
 
@@ -20,7 +22,7 @@ export async function generateMetadata({
     locale: locale as Locale,
     namespace: 'contactPage',
   })
-  return { title: `${t('heading')} — BACA`, description: t('intro') }
+  return { title: `${t('heading')} — BACA`, description: t('subheading') }
 }
 
 export default async function ContactPage({ params }: PageParams) {
@@ -45,7 +47,7 @@ export default async function ContactPage({ params }: PageParams) {
     },
     {
       key: 'whatsapp',
-      icon: MessageCircle,
+      icon: WhatsAppIcon,
       label: t('channels.whatsapp'),
       value: t('channels.whatsappAction'),
       href: CONTACT.whatsappUrl,
@@ -56,63 +58,78 @@ export default async function ContactPage({ params }: PageParams) {
     <>
       <SiteHeader forceSolid />
       <main className="min-h-screen bg-paper pt-header-base">
-        <section className="mx-auto max-w-content px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            {/* LEFT: intro + contact channels + office */}
-            <div className="lg:col-span-5">
-              <PageIntro
-                eyebrow={t('eyebrow')}
-                heading={t('heading')}
-                intro={t('intro')}
-              />
+        <LocationMap />
+        <section className="mx-auto max-w-content px-5 pb-[clamp(3rem,6vw,5rem)] sm:px-8">
+          <div className="overflow-hidden rounded-3xl border border-line bg-paper shadow-[0_1px_0_rgba(22,24,28,0.04)]">
+            <div className="grid items-start lg:grid-cols-12 lg:items-stretch">
+              <div className="flex flex-col gap-7 border-b border-line p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-e lg:p-10">
+                <PageIntro
+                  eyebrow={t('eyebrow')}
+                  heading={t('heading')}
+                  subheading={t('subheading')}
+                  headingClassName="max-w-[28ch]"
+                />
 
-              <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
-                {channels.map(({ key, icon: Icon, label, value, href }) => (
-                  <a
-                    key={key}
-                    href={href}
-                    target={key === 'whatsapp' ? '_blank' : undefined}
-                    rel={key === 'whatsapp' ? 'noopener noreferrer' : undefined}
-                    data-cursor="fill"
-                    className="group flex items-center gap-4 rounded-2xl border border-line bg-paper p-4 transition-colors hover:border-ink/30"
-                  >
-                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bone text-ink transition-colors group-hover:bg-saffron/20">
-                      <Icon className="h-5 w-5" aria-hidden />
+                <div className="flex flex-col gap-1.5">
+                  {channels.map(({ key, icon: Icon, label, value, href }) => (
+                    <a
+                      key={key}
+                      href={href}
+                      target={key === 'whatsapp' ? '_blank' : undefined}
+                      rel={
+                        key === 'whatsapp' ? 'noopener noreferrer' : undefined
+                      }
+                      data-cursor="fill"
+                      className="group flex items-center gap-3.5 rounded-xl border border-transparent px-3 py-3 transition-colors duration-baca-fast ease-baca hover:border-line hover:bg-bone/50"
+                    >
+                      <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bone text-ink transition-colors group-hover:bg-saffron/15">
+                        <Icon className="h-4 w-4" aria-hidden />
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
+                          {label}
+                        </p>
+                        <p className="truncate text-sm font-medium text-ink">
+                          {value}
+                        </p>
+                      </div>
+                      <ArrowUpRight
+                        className="h-3.5 w-3.5 shrink-0 text-ink-60 transition-transform duration-baca-fast ease-baca group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-saffron"
+                        aria-hidden
+                      />
+                    </a>
+                  ))}
+                </div>
+
+                <div className="rounded-xl border border-line/70 bg-bone/40 px-5 py-4">
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-paper text-ink">
+                      <MapPin className="h-4 w-4" aria-hidden />
                     </span>
-                    <div className="min-w-0 flex-1">
+                    <div>
                       <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
-                        {label}
+                        {t('officeTitle')}
                       </p>
-                      <p className="truncate font-medium text-ink">{value}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/80">
+                        {SITE.address[0]}
+                        <br />
+                        {SITE.address[1]}
+                      </p>
                     </div>
-                    <ArrowUpRight
-                      className="h-4 w-4 shrink-0 text-ink-60 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-saffron"
-                      aria-hidden
-                    />
-                  </a>
-                ))}
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-8 border-t border-line pt-6">
-                <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-ink-60">
-                  {t('officeTitle')}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-ink/80">
-                  {SITE.address[0]}
-                  <br />
-                  {SITE.address[1]}
-                </p>
+              <div className="flex bg-cream p-6 sm:p-8 lg:col-span-7 lg:p-10">
+                <EnquiryForm />
               </div>
-            </div>
-
-            {/* RIGHT: enquiry form */}
-            <div className="lg:col-span-7">
-              <EnquiryForm />
             </div>
           </div>
         </section>
       </main>
-      <SiteFooter />
+      {/* The page already shows the full panel + form above, so suppress the
+         global ContactStrip here to avoid a duplicate form in the pre-footer. */}
+      <SiteFooter hideContactStrip />
     </>
   )
 }

@@ -5,6 +5,7 @@
  */
 export enum Route {
   Home = '/',
+  Profile = '/profile',
   About = '/about',
   Products = '/products',
   Spices = '/products/spices',
