@@ -5,17 +5,24 @@ import { useRouter } from 'next/navigation'
 
 import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { blogArticlesApi } from '@/lib/api-client/endpoints/blog-articles-api'
+import { blogTypesApi } from '@/lib/api-client/endpoints/blog-types-api'
 import { categoriesApi } from '@/lib/api-client/endpoints/categories-api'
 import { galleryApi } from '@/lib/api-client/endpoints/gallery-api'
 import { productsApi } from '@/lib/api-client/endpoints/products-api'
 
-type EntityKind = 'category' | 'product' | 'article' | 'galleryImage'
+type EntityKind =
+  | 'category'
+  | 'product'
+  | 'article'
+  | 'galleryImage'
+  | 'blogType'
 
 const REMOVERS: Record<EntityKind, (id: string) => Promise<unknown>> = {
   category: categoriesApi.remove,
   product: productsApi.remove,
   article: blogArticlesApi.remove,
   galleryImage: galleryApi.remove,
+  blogType: blogTypesApi.remove,
 }
 
 export function DeleteEntityButton({
