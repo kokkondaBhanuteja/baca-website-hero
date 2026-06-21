@@ -6,6 +6,12 @@ export interface ProductSpec {
   value: string
 }
 
+/** One product image (Cloudinary delivery URL + publicId for transform/delete). */
+export interface ProductImage {
+  url: string
+  publicId: string
+}
+
 /** Admin view — raw all-locale objects so edit forms can populate every tab. */
 export interface ProductCategoryAdminDto {
   id: string
@@ -34,6 +40,7 @@ export interface ProductAdminDto {
   peakMonths: number[]
   imageUrl: string | null
   imagePublicId: string | null
+  images: ProductImage[]
   sortOrder: number
   isPublished: boolean
 }
@@ -60,6 +67,8 @@ export interface ProductDetailPublicDto {
   harvestMonths: number[]
   peakMonths: number[]
   imageUrl: string | null
+  /** Gallery URLs for the detail-page carousel (resolved; falls back to [imageUrl]). */
+  images: string[]
   categorySlug: string
   categoryName: string
 }

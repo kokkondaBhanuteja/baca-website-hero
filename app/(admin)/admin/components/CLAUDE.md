@@ -20,7 +20,8 @@ blog-articles-table/          Client wrapper for the /admin/blog-articles list.
 localized-text-input/         Tabbed input with one tab per locale; EN required.
 spec-list-input/              Repeatable {label,value} rows for a product's specs grid (not localized).
 month-picker/                 Labeled row of 12 toggle chips → month numbers (harvest / peak seasonality).
-image-uploader/               Cloudinary signed upload (sign → direct upload).
+image-uploader/               Cloudinary signed upload (sign → direct upload). Single image.
+multi-image-uploader/         Ordered multi-image upload (first = cover, rest = carousel); used by product-form.
 product-form/                 Product create/edit form (incl. botanical/regions/specs/months editors).
 category-form/                Product-category create/edit form.
 blog-article-form/            Blog-article create/edit form. NOTE: local state is

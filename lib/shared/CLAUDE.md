@@ -8,8 +8,8 @@ types/
   localized-text.ts   LocalizedText = { en: string } & Partial<Record<Exclude<Locale,'en'>, string>>
   admin-user-dto.ts   AdminUserDto, AdminRole
   catalogue-dto.ts    ProductCategoryAdminDto / ProductAdminDto (raw LocalizedText + structured attrs:
-                      botanicalName, originRegions[], specs[ProductSpec], harvest/peakMonths[]) + …PublicDto
-                      + ProductDetailPublicDto (resolved) + ProductSpec ({label,value}, not localized)
+                      botanicalName, originRegions[], specs[ProductSpec], harvest/peakMonths[], images[ProductImage]) + …PublicDto
+                      + ProductDetailPublicDto (resolved; images: string[] carousel) + ProductSpec + ProductImage ({url,publicId})
   blog-dto.ts         BlogArticleAdminDto / SummaryDto / DetailDto (incl. author name/role/avatar, blogType relation); ContentStatusValue
   gallery-dto.ts      GalleryImageAdminDto / GalleryImagePublicDto
   paginated-list.ts   PaginatedList<T> = { items, total, page, pageSize } + AdminListQuery shape +

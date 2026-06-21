@@ -74,8 +74,9 @@ model Product {
   specs         Json? // { label, value }[] — specifications key/value grid
   harvestMonths Json? // number[] (1–12) — seasonality calendar light highlight
   peakMonths    Json? // number[] (1–12) — seasonality calendar peak highlight
-  imageUrl      String?
+  imageUrl      String? // cover (synced from images[0]) — used on cards / grid / SEO
   imagePublicId String?
+  images        Json? // { url, publicId }[] — gallery shown as a carousel on the detail page
   categoryId    String
   category      ProductCategory @relation(fields: [categoryId], references: [id], onDelete: Restrict)
   sortOrder     Int             @default(0)

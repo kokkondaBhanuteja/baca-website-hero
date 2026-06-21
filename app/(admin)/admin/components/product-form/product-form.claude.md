@@ -9,10 +9,9 @@ imports_from:
   - '@/lib/api-client/axios-instance'
   - '@/lib/api-client/endpoints/products-api'
   - '@/lib/shared/types/catalogue-dto'
-  - '@/lib/shared/types/upload-dto'
   - '@/lib/server/validation/product-schema'
   - '@/components/ui/dropdown'
-  - '@/app/(admin)/admin/components/image-uploader'
+  - '@/app/(admin)/admin/components/multi-image-uploader'
   - '@/app/(admin)/admin/components/localized-text-input'
   - '@/app/(admin)/admin/components/spec-list-input'
   - '@/app/(admin)/admin/components/month-picker'
@@ -37,11 +36,11 @@ Props:
 
 Business Logic:
 
-- Local state: slug, categoryId, name/summary/description (LocalizedDraft), botanicalName (string), originRegions (newline-joined string), specs (ProductSpec[]), harvestMonths/peakMonths (number[]), image, sortOrder, isPublished
+- Local state: slug, categoryId, name/summary/description (LocalizedDraft), botanicalName (string), originRegions (newline-joined string), specs (ProductSpec[]), harvestMonths/peakMonths (number[]), images (ProductImage[] — first = cover; legacy single-image products seed it from imageUrl/imagePublicId), sortOrder, isPublished
 - onSubmit: builds payload — originRegions split by newline → string[]; specs filtered to non-empty rows; botanicalName trimmed (null if empty) — then calls productsApi.create/update
 - Category dropdown uses categories array (id → label mapping); default to first if available
 - Name is required; the structured attributes are optional (the public page renders each section only when present)
-- ImageUploader (folder: 'baca/products')
+- MultiImageUploader (folder: 'baca/products') — ordered gallery; the server derives the cover (imageUrl/imagePublicId) from images[0]. Payload sends `images` (no imageUrl/imagePublicId).
 - Sort order: number input
 - Published checkbox
 - Submit button disabled if categories.length === 0 (no category to select)
@@ -54,7 +53,7 @@ Layout:
     product page via `MarkdownContent`), followed by a second **"Advanced attributes (optional)"** card
     holding Botanical name, Origin regions (textarea), Specifications (`SpecListInput`), Harvest + Peak
     months (`MonthPicker`). The advanced fields are optional — paste-only products leave them blank.
-  - SIDEBAR (`lg:col-span-4`): three stacked cards — Save+Cancel + Published checkbox; Slug + Category + Sort order; Product image.
+  - SIDEBAR (`lg:col-span-4`): three stacked cards — Save+Cancel + Published checkbox; Slug + Category + Sort order; Product images (MultiImageUploader).
   - Sidebar is `lg:sticky lg:top-6` so actions stay visible while scrolling long descriptions.
 - Mobile: single-column stack.
 - No more `max-w-2xl`; the form spans the full content area.

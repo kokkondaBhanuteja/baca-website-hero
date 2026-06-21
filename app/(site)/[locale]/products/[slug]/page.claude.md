@@ -15,9 +15,9 @@ imports_from:
   - '@/i18n/navigation'
   - '@/lib/server/services/product-service'
   - '@/components/ui/cta-link'
-  - '@/components/ui/media-reveal'
   - '@/components/shared/markdown-content'
   - '@/components/shared/product-card'
+  - '@/components/shared/product-gallery'
   - '@/components/shared/seasonality-calendar'
   - '@/components/sections/cta-band'
   - '@/components/layout/site-header'
@@ -34,9 +34,10 @@ Rendering: Server (force-dynamic)
 Auth: Public
 
 Purpose:
-Single product detail page — a two-column split (product photo left, content right) modeled on the
-reference: title + botanical subtitle, origin-region pills, a specifications key/value grid, a 12-month
-seasonality calendar, quotation/sample CTAs, "Pairs naturally" related grid, and an enquiry band.
+Single product detail page, **single-column / article style**: heading on top, then an image
+**carousel** (`ProductGallery`), then CTAs, optional structured attributes (origin-region pills,
+specifications grid, 12-month seasonality calendar), a Markdown details body, "Pairs naturally"
+related grid, and an enquiry band.
 
 Data:
 
@@ -49,19 +50,19 @@ Business Logic:
 - `export const dynamic = 'force-dynamic'` — live with admin edits.
 - `generateMetadata()` builds the title from the product name + summary/description.
 - Breadcrumb: Home / Products / {name}.
-- **Adaptive layout** (`useTwoColumn = hasImage`):
-  - **With image** → two-column split (`lg:grid-cols-2`): LEFT = product image (`MediaReveal`,
-    `lg:sticky lg:top-24`); RIGHT = heading + structured sections + CTAs.
-  - **No image (paste-only / README-first product)** → single centered `max-w-[760px]` column
-    (heading + CTAs + any structured sections), matching the Markdown body width below. No empty
-    image box is rendered. `heading`, `ctaRow`, `structuredSections` are extracted JSX reused by both branches.
+- **Single centered column** (`max-w-[800px]`): breadcrumb → heading → `<ProductGallery>` carousel
+  (when `images.length > 0`) → CTAs → structured sections → Markdown body. `heading`, `ctaRow`,
+  `structuredSections` are extracted JSX. (Replaced the old image-left two-column hero — the user
+  wanted the heading on top and images in a carousel below it.)
+- `images` come resolved from the service (gallery URLs, falling back to `[imageUrl]` for legacy
+  single-image products) and order by the admin's arrangement (cover first).
 - Heading = `<h1>` name + italic `botanicalName` subtitle + `summary` lead line. The three structured
   attribute sections render only when their data is non-empty (`hasStructured`):
   - Origin regions → bordered rounded-full pills from `originRegions[]`.
   - Specifications → 2-col `<dl>` of `specs[{label,value}]`.
   - Seasonality → `seasonalityHint` + `<SeasonalityCalendar>` driven by `harvest/peakMonths`.
 - CTAs: `CtaLink` solid "Request quotation" + outline "Request sample" → `Route.Contact`.
-- **Full-width details section** below the hero: `description` rendered via `<MarkdownContent>`
+- **Details section** below the carousel/structured attrs: `description` rendered via `<MarkdownContent>`
   (react-markdown + remark-gfm) when non-empty — admins paste a Markdown body (narrative + a GFM specs
   table). `max-w-[760px]`, mirrors the blog article body. (Replaced the old plain-text paragraph split.)
 - "Pairs naturally" related grid (`ProductCard`); then `<CtaBand />` enquiry band before the footer.

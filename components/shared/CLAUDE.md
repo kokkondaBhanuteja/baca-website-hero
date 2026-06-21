@@ -9,6 +9,7 @@ page-intro/             Inner-page header — Eyebrow + oversized H1 + optional 
 media-hero/             Full-bleed editorial hero (cover image + gradient + overlaid eyebrow/title +
                         meta slot). Shared by the product- and article-detail pages.
 product-card/           Catalogue product card (image + name + summary) linking to /products/<slug>.
+product-gallery/        Client image carousel (scroll-snap + arrows + dots) below the heading on the product detail page.
                         Used by the /products grid and the detail page's "Pairs naturally" grid.
 seasonality-calendar/   12-month harvest/peak strip (locale-aware via Intl) on the product detail page.
 markdown-content/       Renders an article body written in Markdown (react-markdown + remark-gfm),

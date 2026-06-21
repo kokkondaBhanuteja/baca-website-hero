@@ -18,7 +18,9 @@ seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogu
 - **ProductCategory** — slug (unique), `name`/`description` JSONB, imageUrl/imagePublicId, sortOrder, isPublished.
 - **Product** — slug, FK categoryId (`onDelete: Restrict`), `name`/`summary`/`description` JSONB (localized),
   plus **structured (non-localized) detail attributes**: `botanicalName` (scalar), `originRegions` (string[]),
-  `specs` ({label,value}[]), `harvestMonths`/`peakMonths` (number[1–12][]); image, sort, isPublished.
+  `specs` ({label,value}[]), `harvestMonths`/`peakMonths` (number[1–12][]); `images` JSONB
+  (`{url,publicId}[]` — gallery carousel; the cover `imageUrl`/`imagePublicId` is derived from `images[0]`),
+  sort (sortOrder asc = 0 first, admin priority), isPublished.
 - **BlogType** — admin-managed blog type table (replaces `BlogCategory` enum); slug (unique), `name` JSONB
   (LocalizedText), sortOrder, isPublished. One-to-many with BlogArticle (`onDelete: Restrict`).
 - **BlogArticle** — slug, FK `blogTypeId` → `BlogType` (`onDelete: Restrict`), `title`/`excerpt`/`body` JSONB,

@@ -7,14 +7,14 @@ import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { productsApi } from '@/lib/api-client/endpoints/products-api'
 import type {
   ProductAdminDto,
+  ProductImage,
   ProductSpec,
 } from '@/lib/shared/types/catalogue-dto'
-import type { UploadedImage } from '@/lib/shared/types/upload-dto'
 import type { ProductInput } from '@/lib/server/validation/product-schema'
 
 import { Dropdown } from '@/components/ui/dropdown'
 
-import { ImageUploader } from '@/app/(admin)/admin/components/image-uploader'
+import { MultiImageUploader } from '@/app/(admin)/admin/components/multi-image-uploader'
 import {
   hasAnyLocaleValue,
   LocalizedTextInput,
@@ -28,10 +28,13 @@ export interface CategoryOption {
   label: string
 }
 
-function imageFrom(entity?: ProductAdminDto): UploadedImage | null {
-  return entity?.imageUrl && entity.imagePublicId
-    ? { imageUrl: entity.imageUrl, imagePublicId: entity.imagePublicId }
-    : null
+function imagesFrom(entity?: ProductAdminDto): ProductImage[] {
+  if (entity?.images?.length) return entity.images
+  // Legacy single-image products → seed the gallery with the existing cover.
+  if (entity?.imageUrl && entity.imagePublicId) {
+    return [{ url: entity.imageUrl, publicId: entity.imagePublicId }]
+  }
+  return []
 }
 
 export function ProductForm({
@@ -64,7 +67,7 @@ export function ProductForm({
   const [peakMonths, setPeakMonths] = useState<number[]>(
     initial?.peakMonths ?? [],
   )
-  const [image, setImage] = useState<UploadedImage | null>(imageFrom(initial))
+  const [images, setImages] = useState<ProductImage[]>(imagesFrom(initial))
   const [sortOrder, setSortOrder] = useState(initial?.sortOrder ?? 0)
   const [isPublished, setIsPublished] = useState(initial?.isPublished ?? true)
 
@@ -92,8 +95,7 @@ export function ProductForm({
       specs: specs.filter((spec) => spec.label.trim() && spec.value.trim()),
       harvestMonths,
       peakMonths,
-      imageUrl: image?.imageUrl ?? null,
-      imagePublicId: image?.imagePublicId ?? null,
+      images,
       sortOrder,
       isPublished,
     } as ProductInput
@@ -313,11 +315,12 @@ export function ProductForm({
               </div>
 
               <div className="rounded-2xl border border-line bg-paper p-5 sm:p-6">
-                <ImageUploader
-                  label="Product image"
+                <MultiImageUploader
+                  label="Product images"
+                  hint="First image is the cover (cards & grid). All images show in the carousel on the product page. Use “Set as cover” to choose which leads."
                   folder="baca/products"
-                  value={image}
-                  onChange={setImage}
+                  value={images}
+                  onChange={setImages}
                 />
               </div>
             </div>

@@ -10,9 +10,9 @@ import {
   listRelatedProducts,
 } from '@/lib/server/services/product-service'
 import { CtaLink } from '@/components/ui/cta-link'
-import { MediaReveal } from '@/components/ui/media-reveal'
 import { MarkdownContent } from '@/components/shared/markdown-content'
 import { ProductCard } from '@/components/shared/product-card'
+import { ProductGallery } from '@/components/shared/product-gallery'
 import { SeasonalityCalendar } from '@/components/shared/seasonality-calendar'
 import { CtaBand } from '@/components/sections/cta-band'
 import { SiteHeader } from '@/components/layout/site-header'
@@ -45,16 +45,11 @@ export default async function ProductDetailPage({ params }: PageParams) {
   const related = await listRelatedProducts(slug, locale as Locale)
   const hasSeasonality =
     product.peakMonths.length > 0 || product.harvestMonths.length > 0
-  const hasImage = Boolean(product.imageUrl)
   const hasStructured =
     Boolean(product.botanicalName) ||
     product.originRegions.length > 0 ||
     product.specs.length > 0 ||
     hasSeasonality
-  // The two-column treatment earns its keep only when there's an image to anchor
-  // the left rail. Paste-only products (no image) read better as a single
-  // centered column — the same width as the Markdown body that follows.
-  const useTwoColumn = hasImage
 
   const breadcrumb = (
     <nav
@@ -166,44 +161,24 @@ export default async function ProductDetailPage({ params }: PageParams) {
     <>
       <SiteHeader forceSolid />
       <main className="min-h-screen bg-paper pt-header-base">
-        {useTwoColumn ? (
-          <div className="mx-auto max-w-content px-5 py-[clamp(2rem,4vw,3.5rem)] sm:px-8">
-            {breadcrumb}
-            {/* Split: image left, content right */}
-            <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2">
-              <div className="lg:sticky lg:top-24 lg:self-start">
-                <MediaReveal className="aspect-[4/5] overflow-hidden rounded-2xl border border-line">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={product.imageUrl ?? ''}
-                    alt={product.name}
-                    className="h-full w-full object-cover"
-                  />
-                </MediaReveal>
-              </div>
+        {/* Single column: heading on top, image carousel below, then details */}
+        <div className="mx-auto max-w-[800px] px-5 pt-[clamp(2rem,4vw,3.5rem)] sm:px-8">
+          {breadcrumb}
+          <div className="mt-8">{heading}</div>
 
-              <div>
-                {heading}
-                {structuredSections}
-                {ctaRow}
-              </div>
+          {product.images.length > 0 && (
+            <div className="mt-9">
+              <ProductGallery images={product.images} alt={product.name} />
             </div>
-          </div>
-        ) : (
-          // Paste-only / no-image product → single centered column (article style)
-          <div className="mx-auto max-w-[760px] px-5 pt-[clamp(2rem,4vw,3.5rem)] sm:px-8">
-            {breadcrumb}
-            <div className="mt-8">
-              {heading}
-              {ctaRow}
-              {structuredSections}
-            </div>
-          </div>
-        )}
+          )}
+
+          {ctaRow}
+          {structuredSections}
+        </div>
 
         {/* Details — admin-pasted Markdown (narrative + specs table) */}
         {product.description && (
-          <section className="mx-auto max-w-[760px] px-5 pb-[clamp(3rem,6vw,5rem)] pt-[clamp(2rem,4vw,3rem)] sm:px-8">
+          <section className="mx-auto max-w-[800px] px-5 pb-[clamp(3rem,6vw,5rem)] pt-[clamp(2rem,4vw,3rem)] sm:px-8">
             <MarkdownContent content={product.description} />
           </section>
         )}

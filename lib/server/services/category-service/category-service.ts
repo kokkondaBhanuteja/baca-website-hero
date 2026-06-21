@@ -9,6 +9,7 @@ import { conflictError, notFoundError } from '@/lib/server/http/http-error'
 import { mapPrismaError } from '@/lib/server/http/prisma-error'
 import { localizedValue } from '@/lib/server/localization/localized-value'
 import { prisma } from '@/lib/server/prisma'
+import { PRODUCTS_TAG } from '@/lib/server/services/product-service'
 import { optimizedImageUrl } from '@/lib/shared/cloudinary-url'
 import type {
   ProductCategoryAdminDto,
@@ -231,5 +232,10 @@ export const getCategoriesForLocale = unstable_cache(
     }))
   },
   ['getCategoriesForLocale'],
-  { tags: [CATEGORIES_TAG] },
+  // Tagged with BOTH tags: this result embeds each category's published products
+  // (name / summary / cover / order), so a PRODUCT mutation — which fires
+  // revalidateTag(PRODUCTS_TAG) — must also flush it. Otherwise reordering a
+  // product by sortOrder (or editing its name/image/publish) wouldn't reflect on
+  // the /products grid or the home preview until a category was touched.
+  { tags: [CATEGORIES_TAG, PRODUCTS_TAG] },
 )

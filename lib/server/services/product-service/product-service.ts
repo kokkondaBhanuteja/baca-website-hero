@@ -13,6 +13,7 @@ import { optimizedImageUrl } from '@/lib/shared/cloudinary-url'
 import type {
   ProductAdminDto,
   ProductDetailPublicDto,
+  ProductImage,
   ProductPublicDto,
   ProductSpec,
 } from '@/lib/shared/types/catalogue-dto'
@@ -27,6 +28,16 @@ import type { ProductInput } from '@/lib/server/validation/product-schema'
 export const PRODUCTS_TAG = 'products'
 
 type ProductRow = Prisma.ProductGetPayload<{ include: { category: true } }>
+
+/** Collect every Cloudinary publicId a product references (gallery + legacy cover). */
+function productPublicIds(
+  images: ProductImage[],
+  cover: string | null,
+): string[] {
+  const ids = images.map((image) => image.publicId)
+  if (cover) ids.push(cover)
+  return ids.filter(Boolean)
+}
 
 function mapAdmin(row: ProductRow): ProductAdminDto {
   return {
@@ -44,12 +55,17 @@ function mapAdmin(row: ProductRow): ProductAdminDto {
     peakMonths: (row.peakMonths as number[] | null) ?? [],
     imageUrl: row.imageUrl,
     imagePublicId: row.imagePublicId,
+    images: (row.images as ProductImage[] | null) ?? [],
     sortOrder: row.sortOrder,
     isPublished: row.isPublished,
   }
 }
 
 function toData(input: ProductInput) {
+  // The cover (imageUrl/imagePublicId) is derived from the first gallery image
+  // so cards / grid / SEO keep working off a single scalar. Legacy callers that
+  // still send imageUrl directly (no images[]) are honoured as a fallback.
+  const cover = input.images?.[0] ?? null
   return {
     slug: input.slug,
     categoryId: input.categoryId,
@@ -73,8 +89,11 @@ function toData(input: ProductInput) {
     peakMonths: input.peakMonths?.length
       ? (input.peakMonths as Prisma.InputJsonValue)
       : Prisma.DbNull,
-    imageUrl: input.imageUrl ?? null,
-    imagePublicId: input.imagePublicId ?? null,
+    images: input.images?.length
+      ? (input.images as Prisma.InputJsonValue)
+      : Prisma.DbNull,
+    imageUrl: cover?.url ?? input.imageUrl ?? null,
+    imagePublicId: cover?.publicId ?? input.imagePublicId ?? null,
     sortOrder: input.sortOrder,
     isPublished: input.isPublished,
   }
@@ -143,14 +162,19 @@ export async function updateProduct(
   const existing = await prisma.product.findUnique({ where: { id } })
   if (!existing) throw notFoundError('Product not found')
 
-  // Capture the prior publicId BEFORE the update, but DO NOT destroy yet.
-  // Cloudinary destruction is irreversible; if prisma.update throws (P2002 slug
-  // conflict, P2025 row gone) we'd lose the asset while the DB still references
-  // its publicId. Destroy only after the update commits.
-  const previousImagePublicId =
-    existing.imagePublicId && existing.imagePublicId !== input.imagePublicId
-      ? existing.imagePublicId
-      : null
+  // Work out which Cloudinary assets are being dropped, but DO NOT destroy yet.
+  // Destruction is irreversible; if prisma.update throws (P2002 slug conflict,
+  // P2025 row gone) we'd lose assets the DB still references. Destroy only after
+  // the update commits. We compare the full set of old publicIds (gallery +
+  // legacy cover) against the new set and remove the difference.
+  const previousIds = productPublicIds(
+    (existing.images as ProductImage[] | null) ?? [],
+    existing.imagePublicId,
+  )
+  const nextIds = new Set(
+    productPublicIds(input.images ?? [], input.imagePublicId ?? null),
+  )
+  const removedIds = previousIds.filter((publicId) => !nextIds.has(publicId))
 
   try {
     const row = await prisma.product.update({
@@ -159,8 +183,8 @@ export async function updateProduct(
       include: { category: true },
     })
     revalidateTag(PRODUCTS_TAG, 'max')
-    if (previousImagePublicId) {
-      await destroyUploadedImage(previousImagePublicId)
+    for (const publicId of removedIds) {
+      await destroyUploadedImage(publicId)
     }
     return mapAdmin(row)
   } catch (error) {
@@ -181,8 +205,11 @@ export async function deleteProduct(id: string): Promise<void> {
     return mapPrismaError(error)
   }
   revalidateTag(PRODUCTS_TAG, 'max')
-  if (row.imagePublicId) {
-    await destroyUploadedImage(row.imagePublicId)
+  for (const publicId of productPublicIds(
+    (row.images as ProductImage[] | null) ?? [],
+    row.imagePublicId,
+  )) {
+    await destroyUploadedImage(publicId)
   }
 }
 
@@ -231,6 +258,14 @@ export const getPublishedProductBySlug = unstable_cache(
       include: { category: true },
     })
     if (!row || !row.isPublished || !row.category.isPublished) return null
+    // Carousel gallery: resolved gallery URLs, falling back to the cover so
+    // legacy single-image products still show one slide.
+    const gallery = (row.images as ProductImage[] | null) ?? []
+    const galleryUrls = (
+      gallery.length
+        ? gallery.map((image) => optimizedImageUrl(image.url))
+        : [optimizedImageUrl(row.imageUrl)]
+    ).filter((url): url is string => Boolean(url))
     return {
       id: row.id,
       slug: row.slug,
@@ -246,6 +281,7 @@ export const getPublishedProductBySlug = unstable_cache(
       harvestMonths: (row.harvestMonths as number[] | null) ?? [],
       peakMonths: (row.peakMonths as number[] | null) ?? [],
       imageUrl: optimizedImageUrl(row.imageUrl),
+      images: galleryUrls,
       categorySlug: row.category.slug,
       categoryName: localizedValue(row.category.name as LocalizedText, locale),
     }

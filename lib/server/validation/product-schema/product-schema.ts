@@ -38,6 +38,17 @@ export const productInputSchema = z
       .max(2048)
       .nullish(),
     imagePublicId: z.string().max(255).nullish(),
+    // Gallery images shown as a carousel. The server derives the cover
+    // (imageUrl/imagePublicId) from images[0], so the form only sends this.
+    images: z
+      .array(
+        z.object({
+          url: z.string().url('Image URL must be a valid URL').max(2048),
+          publicId: z.string().min(1).max(255),
+        }),
+      )
+      .max(12)
+      .nullish(),
     sortOrder: z.number().int().min(0).max(10000).default(0),
     isPublished: z.boolean().default(true),
   })

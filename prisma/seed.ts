@@ -41,6 +41,8 @@ async function wipeContent() {
 type ProductSeed = {
   slug: string
   image: string
+  /** Extra gallery images (beyond the cover) shown in the detail-page carousel. */
+  gallery?: string[]
   name: Prisma.InputJsonValue
   summary: Prisma.InputJsonValue
   description: Prisma.InputJsonValue
@@ -80,6 +82,7 @@ async function seedCatalogue() {
         {
           slug: 'green-cardamom',
           image: '/images/product-green-cardamom.jpg',
+          gallery: ['/images/cat-spices.jpg', '/images/hero-spice.jpg'],
           name: json({
             en: 'Green Cardamom',
             de: 'Grüner Kardamom',
@@ -112,6 +115,7 @@ async function seedCatalogue() {
         {
           slug: 'malabar-black-pepper',
           image: '/images/product-malabar-black-pepper.jpg',
+          gallery: ['/images/cat-spices.jpg', '/images/hero-spice.jpg'],
           name: json({ en: 'Malabar Black Pepper', ar: 'فلفل أسود مالابار' }),
           summary: json({ en: 'Garbled · 550–570 g/l · 5mm' }),
           description: json({
@@ -140,6 +144,7 @@ async function seedCatalogue() {
         {
           slug: 'turmeric-fingers',
           image: '/images/product-turmeric-fingers.jpg',
+          gallery: ['/images/cat-spices.jpg'],
           name: json({ en: 'Turmeric Fingers', ar: 'كركم' }),
           summary: json({ en: 'Erode & Salem · 3–5% curcumin' }),
           description: json({
@@ -168,6 +173,7 @@ async function seedCatalogue() {
         {
           slug: 'guntur-red-chilli',
           image: '/images/product-guntur-red-chilli.jpg',
+          gallery: ['/images/cat-spices.jpg', '/images/hero-spice.jpg'],
           name: json({ en: 'Guntur Red Chilli', ar: 'فلفل أحمر' }),
           summary: json({ en: 'S17 Teja · stemless · high colour' }),
           description: json({
@@ -226,6 +232,13 @@ async function seedCatalogue() {
           harvestMonths: product.harvestMonths,
           peakMonths: product.peakMonths,
           imageUrl: product.image,
+          // Gallery for the carousel: cover first, then any extra images.
+          images: [product.image, ...(product.gallery ?? [])].map(
+            (url, imageIndex) => ({
+              url,
+              publicId: `seed:${product.slug}:${imageIndex}`,
+            }),
+          ) as Prisma.InputJsonValue,
           sortOrder: index,
           isPublished: true,
         },
