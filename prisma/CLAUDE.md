@@ -6,9 +6,9 @@ PostgreSQL schema + seed. Dev DB is **Neon** (cloud) via `DATABASE_URL`. ORM = *
 ```
 schema.prisma   Models + enums (see below)
 migrations/     Generated SQL migrations
-seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogue/insights:
-                1 category (Spices) · 4 products (full structured attributes) · 5 insight articles
-                spanning all 3 blog categories. The wipe (deleteMany products→articles→categories)
+seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogue/insights.
+                NOTE: seed.ts references the old BlogCategory enum and must be updated (Task 2)
+                before it can run again. The wipe (deleteMany products→articles→categories)
                 makes it the source of truth — re-running overwrites admin-made catalogue/article rows.
 ```
 
@@ -19,9 +19,11 @@ seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogu
 - **Product** — slug, FK categoryId (`onDelete: Restrict`), `name`/`summary`/`description` JSONB (localized),
   plus **structured (non-localized) detail attributes**: `botanicalName` (scalar), `originRegions` (string[]),
   `specs` ({label,value}[]), `harvestMonths`/`peakMonths` (number[1–12][]); image, sort, isPublished.
-- **BlogArticle** — slug, `category` enum, `title`/`excerpt`/`body` JSONB, coverImage, scalar author
-  byline (`authorName`/`authorRole`) + `authorAvatarUrl`/`authorAvatarPublicId`, readMinutes,
-  `status` (DRAFT|PUBLISHED), featured, publishedAt.
+- **BlogType** — admin-managed blog type table (replaces `BlogCategory` enum); slug (unique), `name` JSONB
+  (LocalizedText), sortOrder, isPublished. One-to-many with BlogArticle (`onDelete: Restrict`).
+- **BlogArticle** — slug, FK `blogTypeId` → `BlogType` (`onDelete: Restrict`), `title`/`excerpt`/`body` JSONB,
+  coverImage, scalar author byline (`authorName`/`authorRole`) + `authorAvatarUrl`/`authorAvatarPublicId`,
+  readMinutes, `status` (DRAFT|PUBLISHED), featured, publishedAt. `BlogCategory` enum removed.
 - **GalleryImage** — `caption` JSONB?, imageUrl, imagePublicId, mediaType, sortOrder, isPublished.
 - **Enquiry** — name/email/company/phone/message, localeSent, `status` (NEW|READ|ARCHIVED), createdAt.
 
@@ -30,7 +32,7 @@ seed.ts         Admin user from env (upsert) + WIPES then recreates the catalogu
 Translatable text columns are typed `Json` and hold `{ en, de, ar, … }` (`LocalizedText` in
 `lib/shared/types/localized-text.ts`). **`en` is required** (enforced by zod on write, not the DB).
 Read via `localizedValue(field, locale)` (EN fallback). **Never store routing/sort/filter values in JSONB** —
-those are scalar columns (`slug`, `status`, `sortOrder`, `publishedAt`, `category`). Image fields store both
+those are scalar columns (`slug`, `status`, `sortOrder`, `publishedAt`, `blogTypeId`). Image fields store both
 `imageUrl` (delivery) and `imagePublicId` (for Cloudinary transform/delete).
 
 ## Workflow
