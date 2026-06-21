@@ -21,8 +21,6 @@ shared/      Cross-page reusables (page-intro = inner-page header).
   Closes on outside-click/Escape. Used by `language-switcher` and all admin form selects.
 - **`MediaReveal`** — wrap an image container for a GSAP clip-path + fade scroll reveal (flash-free: hidden
   state is inline, revealed on scroll; reduced-motion shows immediately). Use for all content images.
-- **`Cursor`** — magnetic cursor; rendered once globally in `(site)/[locale]/layout.tsx`. Targets every
-  `<button>` and `[data-cursor="fill"]` element document-wide (morphs to wrap + fill them). Don't render it per-page.
 - **`Eyebrow`** — the saffron-rule + mono label used above headings.
 - **`Reveal`** / **`RevealImage`** — IntersectionObserver / GSAP reveals for the static home sections.
 - **`ScrollFX`** — home-only `[data-reveal]`/`[data-parallax]` GSAP driver (mounted in `page.tsx`).

@@ -200,40 +200,6 @@
   filter: drop-shadow(0 0 7px rgba(224, 146, 43, 0.7));
 }
 
-/* Magnetic custom cursor (desktop, fine pointer) */
-.baca-cursor-dot,
-.baca-cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  border-radius: 9999px;
-  will-change: transform;
-}
-.baca-cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--saffron);
-}
-.baca-cursor-ring {
-  width: 34px;
-  height: 34px;
-  border: 1.5px solid var(--saffron);
-  opacity: 0.75;
-  transition:
-    background-color 0.25s ease,
-    border-color 0.25s ease,
-    opacity 0.2s ease;
-}
-.baca-cursor-ring.is-active {
-  background: rgba(224, 146, 43, 0.14);
-}
-.baca-cursor-ring.is-filled {
-  background: rgba(224, 146, 43, 0.28);
-  border-color: transparent;
-}
-
 /* Brand-matched scrollbar — saffron pill thumb on a transparent track.
    Fine pointers only (touch devices auto-hide their scrollbars). The browser
    places the bar on the correct edge from <html dir>, so RTL needs no extra rules. */
@@ -276,13 +242,6 @@
     transform: none;
   }
 }
-@media (hover: hover) and (pointer: fine) {
-  .baca-has-cursor,
-  .baca-has-cursor * {
-    cursor: none !important;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .baca-reveal,
   .baca-reveal.is-visible {

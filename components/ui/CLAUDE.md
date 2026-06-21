@@ -8,7 +8,6 @@ and dependencies; this file is just the map.
 ```
 button/                 Pill button primitive (variants via class-variance-authority). ADMIN token set.
 cta-link/               Marketing CTA pill — locale-aware Link (saffron/outline, variant×tone×size).
-cursor/                 Magnetic desktop cursor — mounted ONCE in (site)/[locale]/layout.tsx.
 dropdown/               Custom select with full keyboard nav. Replaces native <select> everywhere.
 eyebrow/                Saffron rule + uppercase mono label above section headings.
 language-switcher/      Locale picker built on Dropdown.
