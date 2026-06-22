@@ -12,9 +12,7 @@
     "intro": "Épices, fruits à coque et fruits — triés, documentés et expédiés vers des acheteurs dans 37 pays.",
     "empty": "Notre catalogue est en cours de mise à jour. Revenez bientôt.",
     "detail": {
-      "home": "Accueil",
       "products": "Produits",
-      "backToProducts": "Tous les produits",
       "originRegions": "Régions d’origine",
       "specifications": "Spécifications",
       "seasonality": "Saisonnalité",
@@ -24,7 +22,7 @@
       "requestQuote": "Demander un devis",
       "requestSample": "Demander un échantillon",
       "pairsNaturally": "S’accorde naturellement",
-      "viewAllProducts": "Voir tous les produits"
+      "categoriesHeading": "Catégories"
     }
   },
   "profilePage": {
@@ -153,7 +151,10 @@
     "allArticles": "Tous les articles",
     "related": "Poursuivre la lecture",
     "writtenBy": "Écrit par",
-    "filterBy": "Filtrer par type"
+    "filterBy": "Filtrer par type",
+    "categoriesHeading": "Catégories",
+    "publishedLabel": "Publié",
+    "readTimeLabel": "Temps de lecture"
   },
   "notFound": {
     "eyebrow": "404 · Page introuvable",

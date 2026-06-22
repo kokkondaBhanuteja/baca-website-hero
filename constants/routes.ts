@@ -8,13 +8,7 @@ export enum Route {
   Profile = '/profile',
   About = '/about',
   Products = '/products',
-  Spices = '/products/spices',
-  Nuts = '/products/nuts',
-  Fruits = '/products/fruits',
   Blogs = '/blogs',
-  MarketInsights = '/blogs/industry-insights',
-  ImpactStories = '/blogs/impact-stories',
-  CommunityEngagement = '/blogs/community-engagement',
   Gallery = '/gallery',
   Contact = '/contact',
 }

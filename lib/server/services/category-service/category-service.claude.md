@@ -79,7 +79,7 @@ Business Logic:
 - Create: validates via zod, casts LocalizedText to Prisma.InputJsonValue, handles nullable description (Prisma.DbNull), wraps in try/catch→mapPrismaError, revalidates
 - Update: checks exists, destroys old image if publicId differs, re-queries for \_count.products, revalidates
 - Delete: checks exists, throws conflictError('Reassign or remove its products…') if \_count.products > 0, destroys image, revalidates
-- getCategoriesForLocale includes nested products array; each product mapped with slug, name, summary, optimizedImageUrl
+- getCategoriesForLocale includes nested products array; each product mapped with id, slug, name, summary, optimizedImageUrl, plus two optional catalogue-card fields: `region` (first entry of `originRegions[]` if any) and `keySpecs` (first 2 rows of `specs[]` if any). These optional fields are populated only for this read path; sidebar / nav / preview consumers leave them undefined and the matching UI slots collapse.
 
 Auth: Public reads (no guard); admin writes require auth via route handler
 

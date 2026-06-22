@@ -14,6 +14,7 @@ import { optimizedImageUrl } from '@/lib/shared/cloudinary-url'
 import type {
   ProductCategoryAdminDto,
   ProductCategoryPublicDto,
+  ProductSpec,
 } from '@/lib/shared/types/catalogue-dto'
 import type { LocalizedText } from '@/lib/shared/types/localized-text'
 import {
@@ -219,16 +220,22 @@ export const getCategoriesForLocale = unstable_cache(
         locale,
       ),
       imageUrl: optimizedImageUrl(category.imageUrl),
-      products: category.products.map((product) => ({
-        id: product.id,
-        slug: product.slug,
-        name: localizedValue(product.name as LocalizedText, locale),
-        summary: localizedValue(
-          product.summary as LocalizedText | null,
-          locale,
-        ),
-        imageUrl: optimizedImageUrl(product.imageUrl),
-      })),
+      products: category.products.map((product) => {
+        const regions = (product.originRegions as string[] | null) ?? []
+        const specs = (product.specs as ProductSpec[] | null) ?? []
+        return {
+          id: product.id,
+          slug: product.slug,
+          name: localizedValue(product.name as LocalizedText, locale),
+          summary: localizedValue(
+            product.summary as LocalizedText | null,
+            locale,
+          ),
+          imageUrl: optimizedImageUrl(product.imageUrl),
+          region: regions[0],
+          keySpecs: specs.slice(0, 2),
+        }
+      }),
     }))
   },
   ['getCategoriesForLocale'],

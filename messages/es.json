@@ -12,9 +12,7 @@
     "intro": "Especias, frutos secos y frutas: clasificados, documentados y enviados a compradores de 37 países.",
     "empty": "Nuestro catálogo se está actualizando. Vuelve pronto.",
     "detail": {
-      "home": "Inicio",
       "products": "Productos",
-      "backToProducts": "Todos los productos",
       "originRegions": "Regiones de origen",
       "specifications": "Especificaciones",
       "seasonality": "Estacionalidad",
@@ -24,7 +22,7 @@
       "requestQuote": "Solicitar cotización",
       "requestSample": "Solicitar muestra",
       "pairsNaturally": "Combina naturalmente",
-      "viewAllProducts": "Ver todos los productos"
+      "categoriesHeading": "Categorías"
     }
   },
   "profilePage": {
@@ -153,7 +151,10 @@
     "allArticles": "Todos los artículos",
     "related": "Sigue leyendo",
     "writtenBy": "Escrito por",
-    "filterBy": "Filtrar por tipo"
+    "filterBy": "Filtrar por tipo",
+    "categoriesHeading": "Categorías",
+    "publishedLabel": "Publicado",
+    "readTimeLabel": "Tiempo de lectura"
   },
   "notFound": {
     "eyebrow": "404 · Página no encontrada",

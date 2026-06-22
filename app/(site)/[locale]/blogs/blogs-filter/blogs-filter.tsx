@@ -3,10 +3,12 @@
 import { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 
+import type { Locale } from '@/constants/i18n'
 import { Route } from '@/constants/routes'
 import { Link } from '@/i18n/navigation'
 import type { BlogArticleSummaryDto } from '@/lib/shared/types/blog-dto'
 import type { BlogTypePublicDto } from '@/lib/shared/types/blog-type-dto'
+import { formatPublishedDate } from '@/lib/shared/format-date'
 import { MediaReveal } from '@/components/ui/media-reveal'
 import { cn } from '@/lib/utils'
 
@@ -18,15 +20,19 @@ interface BlogsFilterLabels {
   minRead: string
   featured: string
   empty: string
+  published: string
+  readTime: string
 }
 
 export function BlogsFilter({
   articles,
   types,
+  locale,
   labels,
 }: {
   articles: BlogArticleSummaryDto[]
   types: BlogTypePublicDto[]
+  locale: Locale
   labels: BlogsFilterLabels
 }) {
   // The page defaults to the "All" tab (every article). The header's "Blogs"
@@ -89,41 +95,67 @@ export function BlogsFilter({
       {visible.length === 0 ? (
         <p className="mt-16 text-ink-60">{labels.empty}</p>
       ) : (
-        <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-3">
-          {visible.map((article) => (
-            <Link
-              key={article.slug}
-              href={`${Route.Blogs}/${article.slug}`}
-              className="group block"
-            >
-              <MediaReveal className="rounded-2xl border border-line">
-                {article.coverImageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={article.coverImageUrl}
-                    alt={article.title}
-                    className="aspect-[16/11] w-full object-cover transition-transform duration-baca-fast ease-baca group-hover:scale-[1.06]"
-                  />
-                ) : (
-                  <div className="aspect-[16/11] w-full bg-bone" />
-                )}
-              </MediaReveal>
-              <div className="mt-5 flex flex-wrap items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.16em] text-ink-60">
-                <span className="rounded-full border border-line px-3 py-1">
-                  {article.featured ? labels.featured : article.blogType.name}
-                </span>
-                <span>
-                  {article.readMinutes} {labels.minRead}
-                </span>
-              </div>
-              <h2 className="mt-4 max-w-[28ch] text-balance font-heading text-xl font-light leading-snug text-ink transition-colors group-hover:text-clay">
-                {article.title}
-              </h2>
-              <p className="mt-2 max-w-[36ch] text-[13px] leading-relaxed text-ink-60">
-                {article.excerpt}
-              </p>
-            </Link>
-          ))}
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {visible.map((article) => {
+            const published = formatPublishedDate(article.publishedAt, locale)
+            const badge = article.featured
+              ? labels.featured
+              : article.blogType.name
+            return (
+              <Link
+                key={article.slug}
+                href={`${Route.Blogs}/${article.slug}`}
+                className="group block overflow-hidden rounded-2xl border border-line bg-cream transition-colors hover:border-ink/30"
+              >
+                <MediaReveal className="relative aspect-[4/3] bg-bone">
+                  {article.coverImageUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={article.coverImageUrl}
+                      alt={article.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                  ) : (
+                    <div className="h-full w-full bg-bone" />
+                  )}
+                  <span className="absolute start-3 top-3 inline-block rounded-full bg-ink/85 px-3 py-1 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-paper backdrop-blur-sm">
+                    {badge}
+                  </span>
+                </MediaReveal>
+
+                <div className="px-5 pb-5 pt-4">
+                  <h2 className="font-heading text-xl font-medium leading-snug text-ink transition-colors group-hover:text-clay">
+                    {article.title}
+                  </h2>
+                  {article.excerpt && (
+                    <p className="mt-1 line-clamp-3 font-heading text-[14px] italic leading-snug text-clay">
+                      {article.excerpt}
+                    </p>
+                  )}
+                  <dl className="mt-5 space-y-2 border-t border-line pt-4">
+                    {published && (
+                      <div className="flex items-baseline justify-between gap-3">
+                        <dt className="text-[13px] text-ink/60">
+                          {labels.published}
+                        </dt>
+                        <dd className="text-end text-[13px] font-medium text-ink">
+                          {published}
+                        </dd>
+                      </div>
+                    )}
+                    <div className="flex items-baseline justify-between gap-3">
+                      <dt className="text-[13px] text-ink/60">
+                        {labels.readTime}
+                      </dt>
+                      <dd className="text-end text-[13px] font-medium text-ink">
+                        {article.readMinutes} {labels.minRead}
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       )}
     </div>

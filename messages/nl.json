@@ -12,9 +12,7 @@
     "intro": "Specerijen, noten en fruit — gesorteerd, gedocumenteerd en verscheept naar afnemers in 37 landen.",
     "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug.",
     "detail": {
-      "home": "Home",
       "products": "Producten",
-      "backToProducts": "Alle producten",
       "originRegions": "Herkomstregio’s",
       "specifications": "Specificaties",
       "seasonality": "Seizoensgebondenheid",
@@ -24,7 +22,7 @@
       "requestQuote": "Offerte aanvragen",
       "requestSample": "Monster aanvragen",
       "pairsNaturally": "Past van nature",
-      "viewAllProducts": "Bekijk alle producten"
+      "categoriesHeading": "Categorieën"
     }
   },
   "profilePage": {
@@ -153,7 +151,10 @@
     "allArticles": "Alle artikelen",
     "related": "Verder lezen",
     "writtenBy": "Geschreven door",
-    "filterBy": "Filteren op type"
+    "filterBy": "Filteren op type",
+    "categoriesHeading": "Categorieën",
+    "publishedLabel": "Gepubliceerd",
+    "readTimeLabel": "Leestijd"
   },
   "notFound": {
     "eyebrow": "404 · Pagina niet gevonden",

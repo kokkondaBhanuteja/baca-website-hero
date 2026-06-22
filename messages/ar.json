@@ -12,9 +12,7 @@
     "intro": "توابل ومكسرات وفواكه — مفروزة وموثّقة وتُشحن إلى المشترين في 37 دولة.",
     "empty": "يجري تحديث الكتالوج. يرجى العودة قريبًا.",
     "detail": {
-      "home": "الرئيسية",
       "products": "المنتجات",
-      "backToProducts": "كل المنتجات",
       "originRegions": "مناطق المنشأ",
       "specifications": "المواصفات",
       "seasonality": "الموسمية",
@@ -24,7 +22,7 @@
       "requestQuote": "اطلب عرض سعر",
       "requestSample": "اطلب عينة",
       "pairsNaturally": "يتناغم بشكل طبيعي",
-      "viewAllProducts": "عرض كل المنتجات"
+      "categoriesHeading": "الفئات"
     }
   },
   "profilePage": {
@@ -153,7 +151,10 @@
     "allArticles": "جميع المقالات",
     "related": "تابع القراءة",
     "writtenBy": "بقلم",
-    "filterBy": "تصفية حسب النوع"
+    "filterBy": "تصفية حسب النوع",
+    "categoriesHeading": "الفئات",
+    "publishedLabel": "نُشر",
+    "readTimeLabel": "وقت القراءة"
   },
   "notFound": {
     "eyebrow": "404 · الصفحة غير موجودة",

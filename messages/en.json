@@ -12,9 +12,7 @@
     "intro": "Spices, nuts and fruits — graded, documented, and shipped to buyers across 37 countries.",
     "empty": "Our catalogue is being updated. Please check back soon.",
     "detail": {
-      "home": "Home",
       "products": "Products",
-      "backToProducts": "All products",
       "originRegions": "Origin regions",
       "specifications": "Specifications",
       "seasonality": "Seasonality",
@@ -24,7 +22,7 @@
       "requestQuote": "Request quotation",
       "requestSample": "Request sample",
       "pairsNaturally": "Pairs naturally",
-      "viewAllProducts": "View all products"
+      "categoriesHeading": "Categories"
     }
   },
   "profilePage": {
@@ -153,7 +151,10 @@
     "allArticles": "All articles",
     "related": "Keep reading",
     "writtenBy": "Written by",
-    "filterBy": "Filter by type"
+    "filterBy": "Filter by type",
+    "categoriesHeading": "Categories",
+    "publishedLabel": "Published",
+    "readTimeLabel": "Read time"
   },
   "notFound": {
     "eyebrow": "404 · Page not found",

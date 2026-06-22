@@ -12,9 +12,7 @@
     "intro": "Gewürze, Nüsse und Früchte — sortiert, dokumentiert und an Abnehmer in 37 Ländern verschifft.",
     "empty": "Unser Katalog wird gerade aktualisiert. Bitte schauen Sie bald wieder vorbei.",
     "detail": {
-      "home": "Startseite",
       "products": "Produkte",
-      "backToProducts": "Alle Produkte",
       "originRegions": "Herkunftsregionen",
       "specifications": "Spezifikationen",
       "seasonality": "Saisonalität",
@@ -24,7 +22,7 @@
       "requestQuote": "Angebot anfordern",
       "requestSample": "Muster anfordern",
       "pairsNaturally": "Passt natürlich dazu",
-      "viewAllProducts": "Alle Produkte ansehen"
+      "categoriesHeading": "Kategorien"
     }
   },
   "profilePage": {
@@ -153,7 +151,10 @@
     "allArticles": "Alle Artikel",
     "related": "Weiterlesen",
     "writtenBy": "Geschrieben von",
-    "filterBy": "Nach Typ filtern"
+    "filterBy": "Nach Typ filtern",
+    "categoriesHeading": "Kategorien",
+    "publishedLabel": "Veröffentlicht",
+    "readTimeLabel": "Lesezeit"
   },
   "notFound": {
     "eyebrow": "404 · Seite nicht gefunden",

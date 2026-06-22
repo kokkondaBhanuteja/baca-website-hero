@@ -52,6 +52,13 @@ export interface ProductPublicDto {
   name: string
   summary: string
   imageUrl: string | null
+  /** First entry from `originRegions` (e.g. "Idukki, Kerala") — surfaced
+   *  for the catalogue card's region badge. Optional: not every consumer
+   *  populates it (sidebar mini-cards skip it). */
+  region?: string
+  /** First two `specs` rows — surfaced for the catalogue card's attribute
+   *  block (label/value rows). Optional. */
+  keySpecs?: ProductSpec[]
 }
 
 /** Public product detail — resolved strings for one locale, incl. long copy + attributes. */

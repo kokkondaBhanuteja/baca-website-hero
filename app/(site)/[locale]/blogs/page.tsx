@@ -48,12 +48,15 @@ export default async function BlogsPage({ params }: PageParams) {
           <BlogsFilter
             articles={articles}
             types={types}
+            locale={locale as Locale}
             labels={{
               all: t('allArticles'),
               filterBy: t('filterBy'),
               minRead: t('minRead'),
               featured: t('featured'),
               empty: t('empty'),
+              published: t('publishedLabel'),
+              readTime: t('readTimeLabel'),
             }}
           />
         </section>

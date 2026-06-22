@@ -12,9 +12,7 @@
     "intro": "Spezie, frutta secca e frutta — selezionati, documentati e spediti ad acquirenti in 37 Paesi.",
     "empty": "Il nostro catalogo è in fase di aggiornamento. Torna presto.",
     "detail": {
-      "home": "Home",
       "products": "Prodotti",
-      "backToProducts": "Tutti i prodotti",
       "originRegions": "Regioni d’origine",
       "specifications": "Specifiche",
       "seasonality": "Stagionalità",
@@ -24,7 +22,7 @@
       "requestQuote": "Richiedi un preventivo",
       "requestSample": "Richiedi un campione",
       "pairsNaturally": "Si abbina naturalmente",
-      "viewAllProducts": "Vedi tutti i prodotti"
+      "categoriesHeading": "Categorie"
     }
   },
   "profilePage": {
@@ -153,7 +151,10 @@
     "allArticles": "Tutti gli articoli",
     "related": "Continua a leggere",
     "writtenBy": "Scritto da",
-    "filterBy": "Filtra per tipo"
+    "filterBy": "Filtra per tipo",
+    "categoriesHeading": "Categorie",
+    "publishedLabel": "Pubblicato",
+    "readTimeLabel": "Tempo di lettura"
   },
   "notFound": {
     "eyebrow": "404 · Pagina non trovata",

@@ -46,6 +46,11 @@ Business Logic:
 - generateMetadata() reads the 'blogsPage' namespace
 - Renders PageIntro + BlogsFilter (the card grid + filter pills live in the
   client component so filtering needs no reload)
+- Passes `locale` to `BlogsFilter` so it can locale-format `publishedAt` via
+  `formatPublishedDate` for the card's Published / Read time rows
+- Labels object now also carries `published` (`t('publishedLabel')`) and
+  `readTime` (`t('readTimeLabel')`) for the card attribute rows, alongside
+  the existing `all` / `filterBy` / `minRead` / `featured` / `empty` keys
 
 Renders:
 
