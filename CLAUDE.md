@@ -123,4 +123,4 @@ Without Cloudinary creds, image upload shows a clear "not configured" error; see
 ## Design tokens (Tailwind `@theme` in app/globals.css)
 
 `--ink` (text) · `--paper`/`--cream`/`--bone` (light surfaces) · `--saffron` (accent) · `--forest` ·
-`--clay` · `--line` (borders). Fonts: Fraunces (heading), Inter (sans), JetBrains Mono (mono), Noto Sans Arabic (`[lang=ar]`).
+`--clay` · `--line` (borders). Fonts: Playfair Display (heading — high-contrast serif), Inter (body/UI sans), JetBrains Mono (mono), Noto Sans Arabic (`[lang=ar]`).

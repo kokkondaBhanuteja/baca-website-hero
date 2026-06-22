@@ -25,7 +25,7 @@ Rendering: Server (SSG)
 Auth: n/a
 
 Purpose:
-Root HTML document for the public site. Sets up localization via NextIntlClientProvider, loads 4 fonts (Inter, Fraunces, JetBrains Mono, Noto Sans Arabic), applies CSS variables, and renders the global Cursor component. generateStaticParams generates routes for all 7 locales.
+Root HTML document for the public site. Sets up localization via NextIntlClientProvider, loads 4 fonts (Inter, Playfair Display, JetBrains Mono, Noto Sans Arabic), applies CSS variables, and renders the global Cursor component. generateStaticParams generates routes for all 7 locales.
 
 Data:
 
@@ -49,4 +49,4 @@ Renders:
 - children (locale-specific routes)
 
 Notes:
-This is the second root layout (sibling to admin layout). No shared app/layout.tsx exists; route groups enable two independent document roots. Fonts are CSS variables (--font-inter, --font-fraunces, --font-jetbrains-mono, --font-arabic) to support RTL locales.
+This is the second root layout (sibling to admin layout). No shared app/layout.tsx exists; route groups enable two independent document roots. Fonts are CSS variables (--font-inter, --font-playfair, --font-jetbrains-mono, --font-arabic) to support RTL locales. `--font-heading` / `--font-display` resolve to Playfair Display (high-contrast serif, premium/editorial); `--font-sans` resolves to Inter (body/UI).

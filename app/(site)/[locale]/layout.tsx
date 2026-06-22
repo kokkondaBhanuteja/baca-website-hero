@@ -1,10 +1,10 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import {
-  Fraunces,
   Inter,
   JetBrains_Mono,
   Noto_Sans_Arabic,
+  Playfair_Display,
 } from 'next/font/google'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
@@ -20,11 +20,10 @@ const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
 })
-const fraunces = Fraunces({
-  variable: '--font-fraunces',
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
   subsets: ['latin'],
   style: ['normal', 'italic'],
-  axes: ['SOFT', 'opsz'],
 })
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
@@ -92,7 +91,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} ${notoArabic.variable} bg-background`}
+      className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} ${notoArabic.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         {/* Skip link for keyboard users — jumps past the fixed header. */}

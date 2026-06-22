@@ -166,7 +166,7 @@ Every meaningful unit of code in this project has a per-file `.claude.md` siblin
 
 - [`LayoutAppAdminAdminDashboard`](<app/(admin)/admin/(dashboard)/layout.claude.md>) — Gate-keeper for all admin dashboard routes. Server component that calls getCurrentAdmin(). If no admin, redirects to /admin/login. Renders A
 - [`LayoutAppAdminAdmin`](<app/(admin)/admin/layout.claude.md>) — Root HTML document for the admin dashboard. English only (LTR), no next-intl provider. Loads Inter font and sets robots noindex.
-- [`LayoutAppSiteLocale`](<app/(site)/[locale]/layout.claude.md>) — Root HTML document for the public site. Sets up localization via NextIntlClientProvider, loads 4 fonts (Inter, Fraunces, JetBrains Mono, Not
+- [`LayoutAppSiteLocale`](<app/(site)/[locale]/layout.claude.md>) — Root HTML document for the public site. Sets up localization via NextIntlClientProvider, loads 4 fonts (Inter, Playfair Display, JetBrains Mono, Not
 
 ### Loading boundaries (app/.../loading.tsx) (6)
 

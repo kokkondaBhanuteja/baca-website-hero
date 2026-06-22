@@ -15,7 +15,7 @@ imports_from:
 # FooterColumns
 
 Purpose:
-Middle body of the footer. Renders a small Fraunces "BACA" brand mark at the
+Middle body of the footer. Renders a display-sized "BACA" brand mark at the
 top of the brand column (`SITE.brand` + a tiny saffron square accent, the
 modern-footer "brand signature" treatment), followed by the brand description,
 address, and email/phone. Three nav columns (Products / Company / Resources)
@@ -40,7 +40,7 @@ Props:
 Business Logic:
 
 - `grid gap-x-8 gap-y-10 lg:grid-cols-12 lg:gap-x-10`. Brand block opens with
-  a display-sized Fraunces wordmark — `text-[clamp(3.5rem,7vw,5.5rem)]
+  a display-sized wordmark in the heading face — `text-[clamp(3.5rem,7vw,5.5rem)]
 font-light leading-none tracking-[-0.03em] text-paper`, just the brand name
   on its own (no accent mark). Description text follows with `mt-6` for
   breathing room under the now-tall wordmark.

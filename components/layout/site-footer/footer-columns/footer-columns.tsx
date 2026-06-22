@@ -7,8 +7,8 @@ import { FOOTER_COLUMNS } from '@/constants/sections/footer'
 import { FooterLink } from '@/components/layout/site-footer/footer-link'
 
 /**
- * Middle body of the footer. Renders the brand block (small Fraunces brand
- * mark + description + address + email/phone) on the left (col-span-5) and
+ * Middle body of the footer. Renders the brand block (display-sized wordmark
+ * + description + address + email/phone) on the left (col-span-5) and
  * three nav columns (Products / Company / Resources) on the right (col-span-7
  * split into 3 even cols on lg+).
  *
@@ -23,8 +23,8 @@ export function FooterColumns() {
       {/* Brand + nav columns */}
       <div className="grid gap-x-8 gap-y-10 lg:grid-cols-12 lg:gap-x-10">
         <div data-footer-reveal className="lg:col-span-5">
-          {/* Brand wordmark — display-sized Fraunces letters; anchors the
-             brand column visually. */}
+          {/* Brand wordmark — display-sized letters in the heading face;
+             anchors the brand column visually. */}
           <p className="font-heading text-[clamp(3.5rem,7vw,5.5rem)] font-light leading-none tracking-[-0.03em] text-paper">
             {SITE.brand}
           </p>

@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-fraunces), 'Georgia', serif;
-  --font-display: var(--font-fraunces), 'Georgia', serif;
+  --font-heading: var(--font-playfair), 'Georgia', serif;
+  --font-display: var(--font-playfair), 'Georgia', serif;
   --font-sans: var(--font-inter), 'Inter Fallback', sans-serif;
   --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono Fallback', monospace;
 
@@ -120,10 +120,23 @@
   }
   html {
     @apply font-sans;
-    font-variation-settings: 'SOFT' 30;
+  }
+  /* Playfair Display OpenType polish — discretionary ligatures and contextual
+     alternates make it read "designed", not "default Google Font". Old-style
+     figures give numbers an antique-ledger feel (3/5/7/9 descenders), which is
+     exactly the heritage cue stat blocks should carry. Applied to every
+     `.font-heading` / `.font-display` use — unsupported features on the
+     Arabic fallback (Noto Sans Arabic) are silently ignored. */
+  .font-heading,
+  .font-display {
+    font-feature-settings:
+      'dlig' 1,
+      'calt' 1;
+    font-variant-numeric: oldstyle-nums;
   }
   /* Arabic: route the whole type system through Noto Sans Arabic — the Latin
-     display (Fraunces) and mono (JetBrains Mono) faces carry no Arabic glyphs. */
+     display (Playfair Display) and mono (JetBrains Mono) faces carry no
+     Arabic glyphs. */
   [lang='ar'] {
     --font-heading: var(--font-arabic), 'Geeza Pro', serif;
     --font-display: var(--font-arabic), 'Geeza Pro', serif;
