@@ -7,9 +7,12 @@ import { ArrowRight, Check } from 'lucide-react'
 import type { NormalizedApiError } from '@/lib/api-client/axios-instance'
 import { enquiryApi } from '@/lib/api-client/endpoints/enquiry-api'
 
-export function EnquiryForm() {
+type EnquiryFormTone = 'light' | 'dark'
+
+export function EnquiryForm({ tone = 'light' }: { tone?: EnquiryFormTone }) {
   const t = useTranslations('contactPage.form')
   const locale = useLocale()
+  const isDark = tone === 'dark'
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -79,10 +82,19 @@ export function EnquiryForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex h-full w-full flex-col">
-      <div className="mb-5 flex items-baseline justify-between gap-4">
-        <h2 className="font-heading text-xl font-light tracking-[-0.01em] text-ink sm:text-[1.375rem]">
+      <div className={`mb-6 ${isDark ? 'text-center' : ''}`}>
+        <h2
+          className={`font-heading text-xl font-light tracking-[-0.01em] sm:text-[1.375rem] ${
+            isDark ? 'text-paper' : 'text-ink'
+          }`}
+        >
           {t('title')}
         </h2>
+        <p
+          className={`mt-1.5 text-sm ${isDark ? 'text-paper/70' : 'text-ink-60'}`}
+        >
+          {t('subtitle')}
+        </p>
       </div>
 
       {status === 'error' && error && (
@@ -103,6 +115,7 @@ export function EnquiryForm() {
           maxLength={120}
           autoComplete="name"
           errors={fieldErrors.name}
+          tone={tone}
         />
         <Field
           label={t('email')}
@@ -113,6 +126,7 @@ export function EnquiryForm() {
           maxLength={200}
           autoComplete="email"
           errors={fieldErrors.email}
+          tone={tone}
         />
         <Field
           label={t('country')}
@@ -122,6 +136,7 @@ export function EnquiryForm() {
           maxLength={80}
           autoComplete="country-name"
           errors={fieldErrors.country}
+          tone={tone}
         />
         <Field
           label={t('company')}
@@ -129,6 +144,7 @@ export function EnquiryForm() {
           onChange={setCompany}
           maxLength={160}
           autoComplete="organization"
+          tone={tone}
         />
         <Field
           label={t('phone')}
@@ -138,6 +154,7 @@ export function EnquiryForm() {
           maxLength={40}
           autoComplete="tel"
           className="sm:col-span-2"
+          tone={tone}
         />
       </div>
 
@@ -147,13 +164,20 @@ export function EnquiryForm() {
         onChange={setMessage}
         placeholder={t('messagePlaceholder')}
         errors={fieldErrors.message}
+        tone={tone}
       />
 
-      <div className="mt-auto flex justify-end pt-6">
+      <div
+        className={`mt-auto flex pt-6 ${isDark ? 'justify-center' : 'justify-end'}`}
+      >
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-forest disabled:opacity-60"
+          className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors disabled:opacity-60 ${
+            isDark
+              ? 'bg-saffron text-ink hover:bg-saffron/90'
+              : 'bg-ink text-paper hover:bg-forest'
+          }`}
         >
           {status === 'sending' ? t('submitting') : t('submit')}
           {status !== 'sending' && (
@@ -178,6 +202,7 @@ function Field({
   autoComplete,
   errors,
   className,
+  tone = 'light',
 }: {
   label: string
   value: string
@@ -188,20 +213,26 @@ function Field({
   autoComplete?: string
   errors?: string[]
   className?: string
+  tone?: EnquiryFormTone
 }) {
   const reactId = useId()
   const inputId = `${reactId}-input`
   const errorId = `${reactId}-error`
   const hasErrors = Boolean(errors?.length)
+  const isDark = tone === 'dark'
 
   return (
     <div className={className}>
       <label
         htmlFor={inputId}
-        className="mb-1.5 block text-sm font-medium text-ink/80"
+        className={`mb-1.5 block text-sm font-medium ${
+          isDark ? 'text-paper/85' : 'text-ink/80'
+        }`}
       >
         {label}
-        {required && <span className="text-clay"> *</span>}
+        {required && (
+          <span className={isDark ? 'text-saffron' : 'text-clay'}> *</span>
+        )}
       </label>
       <input
         id={inputId}
@@ -232,12 +263,14 @@ function MessageField({
   onChange,
   placeholder,
   errors,
+  tone = 'light',
 }: {
   label: string
   value: string
   onChange: (value: string) => void
   placeholder: string
   errors?: string[]
+  tone?: EnquiryFormTone
 }) {
   const reactId = useId()
   const inputId = `${reactId}-message`
@@ -245,19 +278,31 @@ function MessageField({
   const hasErrors = Boolean(errors?.length)
   const remaining = MESSAGE_MAX_LENGTH - value.length
   const isNearLimit = remaining <= 20
+  const isDark = tone === 'dark'
 
   return (
     <div className="mt-4 flex flex-1 flex-col">
       <div className="mb-1.5 flex items-baseline justify-between gap-3">
         <label
           htmlFor={inputId}
-          className="block text-sm font-medium text-ink/80"
+          className={`block text-sm font-medium ${
+            isDark ? 'text-paper/85' : 'text-ink/80'
+          }`}
         >
-          {label} <span className="text-clay">*</span>
+          {label}{' '}
+          <span className={isDark ? 'text-saffron' : 'text-clay'}>*</span>
         </label>
         <span
           aria-live="polite"
-          className={`font-mono text-[0.65rem] tabular-nums ${isNearLimit ? 'text-clay' : 'text-ink-60'}`}
+          className={`font-mono text-[0.65rem] tabular-nums ${
+            isNearLimit
+              ? isDark
+                ? 'text-saffron'
+                : 'text-clay'
+              : isDark
+                ? 'text-paper/60'
+                : 'text-ink-60'
+          }`}
         >
           {value.length} / {MESSAGE_MAX_LENGTH}
         </span>

@@ -33,12 +33,16 @@ Props:
 
 Business Logic:
 
-- Pure layout wrapper. Renders a bordered `bg-cream` card inside a section with
-  a top `border-t` so it visually separates from page content above and the
-  dark footer below.
-- `EnquiryForm` is the same instance used on `/contact` — single submit
-  pipeline, single validation surface, single 200-char counter. Each page
-  navigation mounts a fresh form (state is per-instance).
+- Pure layout wrapper. Renders a full-bleed **forest** (`bg-forest`, dark
+  green) contrasting band so the enquiry form stands out from the light page
+  content above. Inside: a centered, width-capped (`max-w-3xl mx-auto`) card on
+  a slightly lighter `bg-forest/40` with a hairline `border-paper/15`. The
+  `EnquiryForm` is rendered with `tone="dark"` (cream heading/labels, white
+  inputs, centered saffron submit) so it reads correctly on the dark band.
+- `EnquiryForm` is the same instance used on `/contact` (there with the default
+  `tone="light"`) — single submit pipeline, single validation surface, single
+  200-char counter. Each page navigation mounts a fresh form (state is
+  per-instance).
 
 Dependencies:
 

@@ -13,11 +13,11 @@ export function ContactStrip() {
   return (
     <section
       aria-label="Send an enquiry"
-      className="border-t border-line bg-cream"
+      className="border-t border-forest/40 bg-forest"
     >
       <div className="mx-auto max-w-content px-5 py-[clamp(3rem,6vw,5rem)] sm:px-8">
-        <div className="rounded-3xl border border-line bg-cream p-6 sm:p-8 lg:p-10">
-          <EnquiryForm />
+        <div className="mx-auto max-w-3xl rounded-3xl border border-paper/15 bg-forest/40 p-6 shadow-[0_1px_0_rgba(255,255,255,0.06)] sm:p-8 lg:p-10">
+          <EnquiryForm tone="dark" />
         </div>
       </div>
     </section>

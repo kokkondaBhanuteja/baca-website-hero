@@ -58,8 +58,7 @@ export default async function ContactPage({ params }: PageParams) {
     <>
       <SiteHeader forceSolid />
       <main className="min-h-screen bg-paper pt-header-base">
-        <LocationMap />
-        <section className="mx-auto max-w-content px-5 pb-[clamp(3rem,6vw,5rem)] sm:px-8">
+        <section className="mx-auto max-w-content px-5 pt-[clamp(3rem,6vw,5rem)] sm:px-8">
           <div className="overflow-hidden rounded-3xl border border-line bg-paper shadow-[0_1px_0_rgba(22,24,28,0.04)]">
             <div className="grid items-start lg:grid-cols-12 lg:items-stretch">
               <div className="flex flex-col gap-7 border-b border-line p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-e lg:p-10">
@@ -120,12 +119,13 @@ export default async function ContactPage({ params }: PageParams) {
                 </div>
               </div>
 
-              <div className="flex bg-cream p-6 sm:p-8 lg:col-span-7 lg:p-10">
-                <EnquiryForm />
+              <div className="flex bg-forest p-6 sm:p-8 lg:col-span-7 lg:p-10">
+                <EnquiryForm tone="dark" />
               </div>
             </div>
           </div>
         </section>
+        <LocationMap />
       </main>
       {/* The page already shows the full panel + form above, so suppress the
          global ContactStrip here to avoid a duplicate form in the pre-footer. */}

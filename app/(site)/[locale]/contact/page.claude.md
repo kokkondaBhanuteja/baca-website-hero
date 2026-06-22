@@ -31,14 +31,16 @@ Rendering: Server (SSG)
 Auth: Public
 
 Purpose:
-Dedicated contact page. Top of the page renders the `LocationMap` (Google
-Maps iframe pinned to `SITE.address`), followed by a unified two-column rounded
-panel: left column holds PageIntro + contact-channel links (Email / Phone /
-WhatsApp) + corporate address card; right column (cream background) holds the
-shared `<EnquiryForm />` (same client component used by the global
-`ContactStrip`). The page passes `hideContactStrip` to `SiteFooter` so the
-global pre-footer strip is suppressed — otherwise the same form would appear
-again just above the dark footer.
+Dedicated contact page. Top of the page renders a unified two-column rounded
+panel: left column (paper) holds PageIntro + contact-channel links (Email /
+Phone / WhatsApp) + corporate address card; right column is a **forest**
+(`bg-forest`) contrasting block holding the shared `<EnquiryForm tone="dark" />`
+(same client component used by the global `ContactStrip`, also dark-toned).
+Below the panel comes the `LocationMap` (Google Maps iframe pinned to
+`SITE.address`). The paper-left / forest-right split is intentional contrast so
+the form stands out. The page passes `hideContactStrip` to
+`SiteFooter` so the global pre-footer strip is suppressed — otherwise the same
+form would appear again just above the dark footer.
 
 Data:
 
@@ -59,12 +61,14 @@ Business Logic:
   `WhatsAppIcon` primitive from `@/components/ui/whatsapp-icon` (lucide has no
   WhatsApp icon; the primitive is the single source of truth for the brand
   glyph, also used by `whatsapp-fab`).
-- Layout: `LocationMap` first, then a single `rounded-3xl` panel with
+- Layout: a single `rounded-3xl` panel first (top padding so it clears the
+  fixed header), then `LocationMap` below it. The panel uses
   `lg:grid-cols-12`, `items-start` on mobile and `lg:items-stretch` so the
-  cream form column fills the panel height. Left (`lg:col-span-5`, paper bg,
+  form column fills the panel height. Left (`lg:col-span-5`, paper bg,
   right border on lg+) — PageIntro, hoverable channel rows, address card with
-  MapPin; Right (`lg:col-span-7`, cream bg, `flex` so the EnquiryForm can
-  `h-full w-full` and `mt-auto` its action row to the bottom) — EnquiryForm.
+  MapPin; Right (`lg:col-span-7`, **forest bg** for contrast, `flex` so the
+  EnquiryForm can `h-full w-full` and `mt-auto` its action row to the bottom) —
+  `<EnquiryForm tone="dark" />`.
 - Footer: `<SiteFooter hideContactStrip />` so the global pre-footer strip is
   skipped here only. Every other route renders `<SiteFooter />` (no prop),
   which keeps the global strip on.
@@ -73,9 +77,9 @@ Renders:
 
 - `SiteHeader forceSolid` — the page sits on `bg-paper` so the header needs
   its solid treatment from the first frame.
-- `<LocationMap />` — at the top of `<main>`.
 - Unified panel: PageIntro + channel links + address card (left) | EnquiryForm
-  (right) — below the map.
+  (right) — at the top of `<main>`.
+- `<LocationMap />` — below the panel.
 - `<SiteFooter hideContactStrip />` — dark footer only, no global strip.
 
 Notes:
