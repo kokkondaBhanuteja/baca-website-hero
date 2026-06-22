@@ -46,13 +46,13 @@ Business Logic:
 
 - `export const revalidate = 3600` — ISR fallback; admin mutations also call `revalidateTag(…, 'max')` in services so DB slices refresh on the next request
 - setRequestLocale(locale as Locale) enables static rendering per locale
-- SiteHeader rendered with forceSolid=true (always opaque)
+- SiteHeader rendered with `lightHero` — the Hero is a light pale-sage field, so the header rides transparent with DARK text over it and its background turns solid-white only on scroll.
 - ScrollFX component (scroll animations on mount)
 
 Renders:
 
-- SiteHeader (forceSolid)
-- Hero
+- SiteHeader (lightHero — transparent + dark text over hero → solid-white on scroll)
+- Hero (full-bleed pale-sage `bg-mist`, GMCT-structured giant headline in `text-pine`)
 - Manifesto
 - StatsRow
 - ProductPreview

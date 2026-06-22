@@ -28,7 +28,9 @@ export default async function Page({ params }: PageParams) {
   return (
     <>
       <ScrollFX />
-      <SiteHeader forceSolid />
+      {/* The hero is a light pale-sage field: the header rides transparent with
+          DARK text over it, then its background turns solid-white on scroll. */}
+      <SiteHeader lightHero />
       <main id="main" className="min-h-screen bg-paper">
         <Hero />
         <Manifesto />

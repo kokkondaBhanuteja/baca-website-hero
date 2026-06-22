@@ -24,14 +24,15 @@ Used In:
 
 Props:
 
-- forceSolid?: boolean — if true, render solid (dark-on-paper) immediately (for inner pages on light bg); if false, start transparent over hero (for home)
+- forceSolid?: boolean — if true, render solid (dark-on-paper) immediately (for inner pages on light bg); if false, start transparent over hero
+- lightHero?: boolean — the page's hero is a LIGHT surface (the home pale-sage field). The header then rides transparent with DARK (ink) text over the hero, and only its background turns solid-white on scroll. Decouples the foreground (text/icon) treatment from the background: `textDark = scrolled || lightHero`, while the bar's bg/border stay keyed to `scrolled` alone. (Mutually exclusive in practice with `forceSolid`; the home page uses `lightHero`.)
 
 Business Logic:
 
 - Calls await getLocale() + Promise.all([listPublishedProducts, listPublishedBlogTypes])
 - Maps products → productLinks [{label, href: Route.Products#slug}, ...]
 - Maps blogTypes.slice(0,3) → insightLinks [{label, href: Route.Blogs?type=slug}, ...] (Blogs dropdown = first 3 types, each pre-filtering the blogs page)
-- Passes forceSolid, productLinks, insightLinks to SiteHeaderClient
+- Passes forceSolid, lightHero, productLinks, insightLinks to SiteHeaderClient
 
 Dependencies:
 

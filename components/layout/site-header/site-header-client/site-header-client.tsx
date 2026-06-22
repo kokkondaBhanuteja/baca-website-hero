@@ -31,10 +31,12 @@ export type { NavLink }
  */
 export function SiteHeaderClient({
   forceSolid = false,
+  lightHero = false,
   productLinks,
   insightLinks,
 }: {
   forceSolid?: boolean
+  lightHero?: boolean
   productLinks: NavLink[]
   insightLinks: NavLink[]
 }) {
@@ -45,6 +47,10 @@ export function SiteHeaderClient({
   // Inner pages sit on a light background, so the header must show its solid
   // (dark-on-paper) treatment immediately rather than the over-hero transparent one.
   const scrolled = forceSolid || isScrolled
+  // Foreground (text/icon) treatment is decoupled from the background: a
+  // `lightHero` page wants DARK text even while the bar is transparent over its
+  // light hero. So text goes dark whenever scrolled OR the hero is light.
+  const textDark = scrolled || lightHero
 
   const tNav = useTranslations('nav')
   const tCommon = useTranslations('common')
@@ -138,26 +144,26 @@ export function SiteHeaderClient({
           >
             <span
               className={`font-heading text-3xl font-medium tracking-tight transition-colors sm:text-2xl ${
-                scrolled ? 'text-ink' : 'text-paper'
+                textDark ? 'text-ink' : 'text-paper'
               }`}
             >
               {SITE.brand}
             </span>
           </Link>
 
-          <SiteHeaderDesktopNav navItems={navItems} scrolled={scrolled} />
+          <SiteHeaderDesktopNav navItems={navItems} scrolled={textDark} />
 
           {/* Right actions */}
           <div className="flex items-center gap-3 lg:justify-self-end">
             <LanguageSwitcher
-              tone={scrolled ? 'ink' : 'paper'}
+              tone={textDark ? 'ink' : 'paper'}
               className="hidden md:inline-flex"
             />
             <Link
               href={Route.Contact}
               data-cursor="fill"
               className={`hidden rounded-full px-5 py-2.5 text-sm font-medium transition-colors sm:inline-flex ${
-                scrolled
+                textDark
                   ? 'bg-ink text-paper hover:bg-forest'
                   : 'bg-paper text-ink hover:bg-paper/90'
               }`}
@@ -172,7 +178,7 @@ export function SiteHeaderClient({
               aria-haspopup="dialog"
               aria-expanded={isMobileOpen}
               className={`inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors lg:hidden ${
-                scrolled ? 'border-line text-ink' : 'border-paper/40 text-paper'
+                textDark ? 'border-line text-ink' : 'border-paper/40 text-paper'
               }`}
             >
               <Menu className="h-5 w-5" />

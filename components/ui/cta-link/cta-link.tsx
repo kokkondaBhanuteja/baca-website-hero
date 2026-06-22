@@ -15,7 +15,8 @@ const ctaLinkVariants = cva(
   {
     variants: {
       variant: {
-        solid: 'bg-saffron text-ink',
+        // H. Costa primary button: deep-green pill (lime label set per-tone below).
+        solid: 'bg-forest text-paper',
         outline: 'border',
       },
       // `tone` is the surface the pill sits on: `light` over paper, `dark` over
@@ -34,9 +35,15 @@ const ctaLinkVariants = cva(
       {
         variant: 'solid',
         tone: 'light',
-        class: 'hover:bg-clay hover:text-paper',
+        // Deep-green pill with lime label on light surfaces (H. Costa primary).
+        class: 'text-lime hover:bg-ink',
       },
-      { variant: 'solid', tone: 'dark', class: 'hover:bg-paper' },
+      {
+        variant: 'solid',
+        tone: 'dark',
+        // On a forest/green field a green pill vanishes — use the lime pop.
+        class: 'bg-lime text-ink hover:bg-lime/90',
+      },
       {
         variant: 'outline',
         tone: 'light',

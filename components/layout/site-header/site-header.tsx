@@ -18,8 +18,16 @@ import {
  */
 export async function SiteHeader({
   forceSolid = false,
+  lightHero = false,
 }: {
   forceSolid?: boolean
+  /**
+   * The page's hero is a LIGHT surface (e.g. the home pale-sage field). The
+   * header then rides transparent with DARK (ink) text over the hero, and only
+   * its background turns solid-white on scroll. Without this, the transparent
+   * state uses light text (built for a dark hero) and would be invisible.
+   */
+  lightHero?: boolean
 }) {
   const locale = (await getLocale()) as Locale
 
@@ -41,6 +49,7 @@ export async function SiteHeader({
   return (
     <SiteHeaderClient
       forceSolid={forceSolid}
+      lightHero={lightHero}
       productLinks={productLinks}
       insightLinks={insightLinks}
     />

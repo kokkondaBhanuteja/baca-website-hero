@@ -17,9 +17,11 @@ imports_from:
 
 Purpose:
 The single marketing CTA pill for the public site — a locale-aware `Link` styled as a
-rounded-full saffron/outline pill. Public-site counterpart to the admin `Button` primitive
+rounded-full pill. Public-site counterpart to the admin `Button` primitive
 (which is `<button>`-based on the admin/shadcn token set); `CtaLink` uses marketing tokens
-(saffron / ink / paper) and renders the i18n `Link` so internal hrefs get the locale prefix.
+(forest / lime / ink / paper) and renders the i18n `Link` so internal hrefs get the locale prefix.
+Under the "H. Costa" green theme the solid pill is a deep-green field with a lime label on
+light surfaces, and flips to a solid lime pill on dark/green surfaces.
 
 Used In:
 
@@ -31,7 +33,7 @@ Used In:
 Props:
 
 - `href` — typed by the i18n `Link` (use `Route` enum values); locale prefix applied automatically
-- `variant`: `'solid'` (default, saffron fill) | `'outline'` (bordered)
+- `variant`: `'solid'` (default, deep-green `bg-forest` fill) | `'outline'` (bordered)
 - `tone`: `'light'` (default, over paper) | `'dark'` (over forest/ink) — drives hover + outline colour
 - `size`: `'md'` (default, `px-6 py-3`) | `'lg'` (`px-7 py-3.5`) | `'block'` (full-width, `text-base`)
 - `arrow`: boolean — render a trailing ArrowRight that nudges on hover (RTL-mirrored)
@@ -40,9 +42,11 @@ Props:
 
 Business Logic:
 
-- `ctaLinkVariants` (cva) composes `variant × tone × size`; solid/outline hover colours come from
-  `compoundVariants` (solid+light → `hover:bg-clay hover:text-paper`; solid+dark → `hover:bg-paper`;
-  outline+light → `hover:bg-ink hover:text-paper`; outline+dark → `hover:bg-paper/10`).
+- `ctaLinkVariants` (cva) composes `variant × tone × size`. Base solid is `bg-forest text-paper`;
+  tone-specific colours come from `compoundVariants` (solid+light → `text-lime hover:bg-ink` —
+  deep-green pill, lime label; solid+dark → `bg-lime text-ink hover:bg-lime/90` — lime pill that
+  pops on a forest/green field; outline+light → `border-ink/25 hover:bg-ink hover:text-paper`;
+  outline+dark → `border-paper/35 text-paper hover:bg-paper/10`).
 - Sets `data-cursor="fill"` by default so the global magnetic Cursor wraps/fills it; overridable.
 - The arrow uses `group-hover:translate-x-1` plus `rtl:-scale-x-100 rtl:group-hover:-translate-x-1`
   so it points and nudges correctly under Arabic RTL.
