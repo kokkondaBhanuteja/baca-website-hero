@@ -1,347 +1,261 @@
 {
-  "errors": {
-    "eyebrow": "Fout",
-    "title": "Er is iets misgegaan.",
-    "body": "Een onverwachte fout heeft het laden van deze pagina verhinderd. Probeer het opnieuw of ga terug naar de startpagina.",
-    "retry": "Opnieuw proberen",
-    "home": "Home"
-  },
-  "productsPage": {
-    "eyebrow": "Onze catalogus",
-    "heading": "Alles wat we exporteren, ingekocht aan de bron.",
-    "intro": "Specerijen, noten en fruit — gesorteerd, gedocumenteerd en verscheept naar afnemers in 37 landen.",
-    "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug.",
-    "detail": {
-      "products": "Producten",
-      "originRegions": "Herkomstregio’s",
-      "specifications": "Specificaties",
-      "seasonality": "Seizoensgebondenheid",
-      "seasonalityHint": "Oogst / piekbeschikbaarheid",
-      "harvest": "Oogst",
-      "peak": "Piek",
-      "requestQuote": "Offerte aanvragen",
-      "requestSample": "Monster aanvragen",
-      "pairsNaturally": "Past van nature",
-      "categoriesHeading": "Categorieën"
-    }
-  },
-  "profilePage": {
-    "eyebrow": "Over BACA",
-    "heading": "Een Indiaas familiaal exporthuis, gebouwd voor de lange termijn.",
-    "intro": "Twee decennia in oorsprong in Kerala, Gujarat en Andhra — seizoen na seizoen kopen bij dezelfde boerenfamilies, sorteren aan de bron en volledige containers naar kopers in 37 landen.",
-    "whoWeAre": {
-      "eyebrow": "Wie wij zijn",
-      "heading": "Een exporthuis gebouwd op relaties.",
-      "body": "BACA is een modern Indiaas exporthuis, gespecialiseerd in specerijen, noten en fruit. Wij werken direct met boerenfamilies in de traditionele teeltgebieden van India, sorteren en testen elke partij in het laboratorium bij de bron en verzenden gedocumenteerde volledige containers naar importeurs, distributeurs en detailhandelaren wereldwijd. Het team heeft meer dan twee decennia ervaring in oorsprong, sortering en logistiek; het bedrijf is de formalisering van die ervaring onder één merk."
-    },
-    "visionMission": {
-      "eyebrow": "Visie & missie",
-      "heading": "Waar we naartoe werken — en hoe.",
-      "vision": {
-        "title": "Visie",
-        "body": "Een wereld waarin de Indiase landbouw verhandeld wordt op gelijke voet met elke premium oorsprong — traceerbaar, naar behoren gedocumenteerd en geprijsd voor het werk dat zij vertegenwoordigt aan de boerderijpoort."
-      },
-      "mission": {
-        "title": "Missie",
-        "body": "Kleine boeren in India verbinden met veeleisende kopers in het buitenland via rigoureuze kwaliteitscontrole, transparante documentatie en verzendrelaties gemeten in jaren."
-      }
-    },
-    "howWeWork": {
-      "eyebrow": "Hoe wij werken",
-      "heading": "Van bodem tot verzending, in vier gedisciplineerde stappen.",
-      "intro": "Elke container die ons huis verlaat heeft zijn plek verdiend via dezelfde volgorde.",
-      "steps": {
-        "source": {
-          "title": "Inkopen",
-          "body": "Wij kopen rechtstreeks bij boerencoöperaties in de oorspronggebieden van elk gewas — kardemom uit Kerala, chili uit Guntur, peper uit Malabar — voor volledige traceerbaarheid van veld tot expediteur."
-        },
-        "grade": {
-          "title": "Sorteren",
-          "body": "Elke partij wordt met de hand gesorteerd, in het laboratorium getest op vocht, pesticideresiduen en aflatoxinen, en gedocumenteerd volgens ISO 22000- en HACCP-protocollen voordat zij ooit een container ziet."
-        },
-        "document": {
-          "title": "Documenteren",
-          "body": "Fytosanitaire certificaten, HS-codes, Incoterms en oorsprongspapieren worden afgegeven voordat het schip vaart, zodat de douane nooit een zending in de bestemmingshaven ophoudt."
-        },
-        "ship": {
-          "title": "Verzenden",
-          "body": "Verpakt aan de bron en verzonden als gedocumenteerde volledige containers met gecontracteerde expediteurs — dezelfde schepen, dezelfde routes, dezelfde aankomstvensters waarop uw toeleveringsketen kan plannen."
-        }
-      }
-    },
-    "founders": {
-      "eyebrow": "Oprichters",
-      "heading": "De mensen achter BACA.",
-      "intro": "BACA wordt geleid door twee broers/zussen die het bedrijf hebben opgebouwd vanuit twee decennia praktijkervaring in de Indiase specerijhandel.",
-      "items": {
-        "founder1": {
-          "role": "Medeoprichter · Inkoop & kwaliteit",
-          "bio": "Twee decennia directe inkoop bij coöperaties in Kerala en Andhra. Toezicht op boerenrelaties, sortering aan de bron en laboratoriumprogramma's voor elke zending."
-        },
-        "founder2": {
-          "role": "Medeoprichter · Handel & logistiek",
-          "bio": "Beheert exportdocumentatie, expediteursrelaties en de handelsdesk. Leidde voorheen de logistieke tak van een grondstoffenhandelshuis in Mumbai."
-        }
-      },
-      "imageAltPrefix": "Portret van"
-    },
-    "whyBaca": {
-      "eyebrow": "Waarom BACA",
-      "heading": "Vier redenen waarom importeurs bij ons blijven.",
-      "intro": "Inkoopteams kiezen voor BACA wanneer zij willen stoppen met brandjes blussen en willen beginnen met plannen.",
-      "items": {
-        "traceability": {
-          "title": "Volledige traceerbaarheid",
-          "body": "Elke partij is gekoppeld aan een specifieke boerencoöperatie, oogstvenster en laboratoriumresultaat — controleerbaar van uw magazijn terug tot het veld."
-        },
-        "quality": {
-          "title": "Laboratorium-geteste kwaliteit",
-          "body": "ISO 22000 + HACCP-controles aan de bron: vocht, pesticideresiduen, aflatoxinen en microbiologische tests — geen willekeurige steekproeven in de haven."
-        },
-        "logistics": {
-          "title": "Betrouwbare logistiek",
-          "body": "Gecontracteerde scheepsplekken en ervaren expediteurs: uw container arriveert in het venster dat wij hebben opgegeven — niet «ergens in die maand»."
-        },
-        "partnership": {
-          "title": "Langetermijnpartnerschap",
-          "body": "Contracten met vaste prijzen en oogstreserveringen voor terugkerende kopers. Wij meten relaties in groeiseizoenen, niet in losse bestelnummers."
-        }
-      }
-    }
-  },
-  "contactPage": {
-    "eyebrow": "Neem contact op",
-    "heading": "Uitgebreid productassortiment",
-    "subheading": "concurrerende prijzen en tijdige levering",
-    "officeTitle": "Bedrijfsadres",
-    "channels": {
-      "email": "E-mail",
-      "phone": "Telefoon",
-      "whatsapp": "WhatsApp",
-      "whatsappAction": "Stuur ons een bericht"
-    },
-    "form": {
-      "title": "Aanvraag versturen",
-      "subtitle": "We reageren binnen 12 uur.",
-      "name": "Volledige naam",
-      "email": "E-mail",
-      "country": "Land",
-      "company": "Bedrijf",
-      "phone": "Telefoon",
-      "message": "Bericht",
-      "messagePlaceholder": "Vertel ons kort uw behoefte — producten, volumes, bestemming.",
-      "submit": "Aanvraag verzenden",
-      "submitting": "Bezig met verzenden…",
-      "success": "Dank u — uw aanvraag is ontvangen. Wij nemen binnen 12 uur contact met u op.",
-      "error": "Er is iets misgegaan. Probeer het opnieuw of stuur ons rechtstreeks een e-mail."
-    },
-    "map": {
-      "eyebrow": "Vind ons",
-      "directions": "Routebeschrijving",
-      "iframeTitle": "Kaart met het hoofdkantoor van BACA"
-    }
-  },
-  "blogsPage": {
-    "eyebrow": "Blogs",
-    "heading": "Aantekeningen uit de handel in specerijen en grondstoffen.",
-    "intro": "Marktanalyses, verhalen over de herkomst en de visie achter onze inkoop en verscheping.",
-    "empty": "Nieuwe artikelen zijn onderweg. Kom binnenkort weer langs.",
-    "minRead": "min lezen",
-    "featured": "Uitgelicht",
-    "allArticles": "Alle artikelen",
-    "related": "Verder lezen",
-    "writtenBy": "Geschreven door",
-    "filterBy": "Filteren op type",
-    "categoriesHeading": "Categorieën",
-    "publishedLabel": "Gepubliceerd",
-    "readTimeLabel": "Leestijd"
-  },
-  "notFound": {
-    "eyebrow": "404 · Pagina niet gevonden",
-    "heading": "Deze zending is nooit verscheept.",
-    "body": "We kunnen niet vinden wat u zoekt. De pagina is mogelijk verplaatst of de link klopt niet. Ga terug naar home of bekijk de catalogus.",
-    "ctaHome": "Terug naar home",
-    "ctaProducts": "Bekijk producten"
-  },
-  "galleryPage": {
-    "eyebrow": "Galerij",
-    "heading": "Het werk, de mensen, de grond.",
-    "intro": "Een kijkje in onze inkoop, sortering en verscheping — vanaf de herkomst in India tot aan de rest van de wereld.",
-    "empty": "Foto's worden toegevoegd. Kom binnenkort weer langs."
-  },
-  "metadata": {
-    "title": "BACA — Indiase exporteur van specerijen, noten & fruit",
-    "description": "BACA is een modern Indiaas exporthuis — traceerbare inkoop van specerijen, noten en fruit, strenge kwaliteitscontrole en betrouwbare wereldwijde leveringen. Gecertificeerd volgens ISO 22000, HACCP & FSSAI."
-  },
-  "common": {
-    "enquire": "Aanvraag indienen",
-    "viewAllCategories": "Alle categorieën bekijken"
-  },
-  "languageSwitcher": {
-    "label": "Taal wijzigen"
-  },
-  "nav": {
-    "items": {
-      "home": {
-        "label": "Home"
-      },
-      "profile": {
-        "label": "Profiel"
-      },
-      "products": {
-        "label": "Producten"
-      },
-      "insights": {
-        "label": "Blogs"
-      },
-      "contact": {
-        "label": "Neem contact op"
-      }
-    }
-  },
-  "header": {
-    "aria": {
-      "home": "Startpagina",
-      "openMenu": "Menu openen",
-      "closeMenu": "Menu sluiten",
-      "primaryNav": "Hoofdmenu",
-      "mobileNav": "Mobiel"
-    }
-  },
-  "hero": {
-    "headline": "Quality. Trust.<br></br><em>Delivered.</em>",
-    "body": "Een nieuwe generatie Indiase export — gebouwd op traceerbare inkoop, strenge kwaliteit en partnerschappen die goederen betrouwbaar verplaatsen, container na container.",
-    "ctaProducts": "Ontdek producten",
-    "ctaContact": "Praat met ons team",
-    "countries": "37 landen bediend",
-    "certs": "ISO 22000 · HACCP · FSSAI"
-  },
-  "manifesto": {
-    "eyebrow": "Ons verhaal",
-    "headline": "Wij verbinden Indiase telers met de meest veeleisende keukens ter wereld — inkopen <em>met intentie</em>, en verschepen met precisie.",
-    "body": "Twee decennia aan de bron in Kerala, Gujarat en Andhra — inkopen bij dezelfde boerenfamilies, seizoen na seizoen, sorteren bij de bron en volle containers verschepen naar afnemers in 37 landen.",
-    "imageAlt": "Doorleefde handen snijden verse kurkuma aan de bron in India — het sorteren van ruwe specerijen zoals de boerenfamilies van BACA dat al generaties doen"
-  },
-  "stats": {
-    "items": {
-      "years": "Jaar in bedrijf",
-      "countries": "Landen bediend",
-      "containers": "Containers verscheept",
-      "tonnes": "Ton verwerkt / jaar"
-    }
-  },
-  "productPreview": {
-    "eyebrow": "Wat we exporteren",
-    "heading": "Ingekocht aan de bron, gesorteerd voor export."
-  },
   "approach": {
     "eyebrow": "How we work",
     "heading": "A process you can hold us to.",
     "intro": "We built our process around one question: what would give a buyer complete peace of mind? Here is the answer.",
     "pillars": {
-      "traceability": {
-        "title": "It starts at the farm.",
-        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest."
-      },
-      "labtesting": {
-        "title": "Tested by people who do not work for us.",
-        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing."
-      },
-      "grading": {
-        "title": "What the certificate says is what arrives.",
-        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time."
+      "accountability": {
+        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close.",
+        "title": "One person answers for every shipment."
       },
       "documentation": {
-        "title": "Paperwork ready before the vessel is booked.",
-        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port."
+        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
+        "title": "Paperwork ready before the vessel is booked."
       },
-      "accountability": {
-        "title": "One person answers for every shipment.",
-        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close."
+      "grading": {
+        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
+        "title": "What the certificate says is what arrives."
+      },
+      "labtesting": {
+        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
+        "title": "Tested by people who do not work for us."
+      },
+      "traceability": {
+        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
+        "title": "It starts at the farm."
       }
     }
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Our Principles",
+    "imageAlt": "BACA — farmers and fields",
+    "imageCaption": "Direct from India's heartland",
+    "items": {
+      "farmer": {
+        "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
+        "title": "The Farmer First."
+      },
+      "partnership": {
+        "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
+        "title": "Built for the Long Run."
+      },
+      "quality": {
+        "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
+        "title": "No Shortcuts, Ever."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA was built on a single conviction: that the quality of what reaches a buyer is inseparable from the honesty of every step before it. We hold direct relationships with farming families across Kerala, Karnataka, Tamil Nadu, and Andhra Pradesh — offering fair pricing, transparent processes, and access to global markets that were once out of reach.",
+      "eyebrow": "The BACA Story",
+      "heading": "India's finest origins,",
+      "headingAccent": "delivered with integrity.",
+      "quote": "Because when the farmer thrives, everything that reaches you is better for it."
+    },
+    "principles": {
+      "eyebrow": "Our Principles",
+      "imageAlt": "BACA — farmers and fields",
+      "imageCaption": "Direct from India's heartland",
+      "items": {
+        "farmer": {
+          "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
+          "title": "The Farmer First."
+        },
+        "partnership": {
+          "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
+          "title": "Built for the Long Run."
+        },
+        "quality": {
+          "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
+          "title": "No Shortcuts, Ever."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Our Purpose",
+      "mission": {
+        "body": "To connect India's finest growing regions with the world's most discerning buyers — through traceable sourcing, honest quality, and a price that truly reflects the work behind every shipment.",
+        "title": "Mission"
+      },
+      "vision": {
+        "body": "To be India's most trusted commodity exporter — known not for volume, but for the consistency that brings the same buyers back, season after season.",
+        "title": "Vision"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "countries import Indian spices",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "farming families across India",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "of global spice production",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Alle artikelen",
+    "categoriesHeading": "Categorieën",
+    "empty": "Nieuwe artikelen zijn onderweg. Kom binnenkort weer langs.",
+    "eyebrow": "Blogs",
+    "featured": "Uitgelicht",
+    "filterBy": "Filteren op type",
+    "heading": "Aantekeningen uit de handel in specerijen en grondstoffen.",
+    "intro": "Marktanalyses, verhalen over de herkomst en de visie achter onze inkoop en verscheping.",
+    "minRead": "min lezen",
+    "publishedLabel": "Gepubliceerd",
+    "readTimeLabel": "Leestijd",
+    "related": "Verder lezen",
+    "writtenBy": "Geschreven door"
   },
   "certifications": {
     "eyebrow": "Certifications",
     "heading": "Certified for global trade.",
     "intro": "Every shipment leaves with its credentials in order.",
     "items": {
-      "fssai": {
-        "sub": "Central License"
-      },
-      "spicesBoard": {
-        "sub": "CRES · Spices Board of India"
-      },
       "apeda": {
         "sub": "Agri Export Registration"
       },
-      "iso22000": {
-        "sub": "Food Safety Management"
+      "fssai": {
+        "sub": "Central License"
       },
       "haccp": {
         "sub": "Hazard Control Protocol"
       },
       "halal": {
         "sub": "Market Access Certification"
+      },
+      "iso22000": {
+        "sub": "Food Safety Management"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
       }
     }
   },
-  "globalPresence": {
-    "eyebrow": "Wereldwijd bereik",
-    "heading": "Van Indiase havens naar <em>vijf continenten.</em>",
-    "body": "BACA levert aan importeurs, distributeurs en voedingsfabrikanten in Noord-Amerika, Europa, het Midden-Oosten, Zuidoost-Azië en Afrika — met gedocumenteerde, stipte contracten.",
-    "items": {
-      "countries": "Landen bediend",
-      "continents": "Continenten beleverd",
-      "repeatRate": "Percentage terugkerende afnemers",
-      "responseTime": "Reactietijd op aanvragen"
-    }
+  "common": {
+    "enquire": "Aanvraag indienen",
+    "viewAllCategories": "Alle categorieën bekijken"
   },
-  "pullQuote": {
-    "quote": "Wij verhandelen geen zendingen — wij houden ons aan contracten. Dezelfde afnemers komen seizoen na seizoen terug, omdat de kwaliteit in de container telkens overeenkomt met de kwaliteit op het certificaat, elke keer weer.",
-    "name": "Arvind Menon",
-    "title": "Managing Director, BACA",
-    "imageAlt": "Portret van de Managing Director van BACA"
-  },
-  "featuredInsights": {
-    "eyebrow": "Blogs",
-    "heading": "Notities uit de specerijen- en grondstoffenhandel.",
-    "allArticles": "Alle artikelen"
-  },
-  "ctaBand": {
-    "eyebrow": "Laten we praten",
-    "heading": "Laten we <em>samen</em> een betrouwbare toeleveringsketen bouwen.",
-    "body": "Vertel ons wat u inkoopt en waarheen het wordt verscheept. Wij reageren binnen 12 uur op internationale aanvragen.",
-    "ctaEnquire": "Aanvraag indienen",
-    "ctaCatalogue": "Catalogus downloaden"
-  },
-  "footer": {
-    "description": "Een modern Indiaas exporthuis voor specerijen, noten en fruit.",
-    "backToTop": "Terug naar boven",
-    "columns": {
-      "products": {
-        "title": "Producten",
-        "links": {
-          "spices": "Specerijen",
-          "all": "Alle categorieën"
-        }
-      },
-      "company": {
-        "title": "Bedrijf",
-        "links": {
-          "profile": "Profiel",
-          "about": "Over ons",
-          "approach": "Onze aanpak"
-        }
-      },
-      "resources": {
-        "title": "Bronnen",
-        "links": {
-          "insights": "Blogs",
-          "contact": "Neem contact op"
+  "contactPage": {
+    "channels": {
+      "email": "E-mail",
+      "emailLabel": "Email us",
+      "phone": "Telefoon",
+      "phoneLabel": "Call us",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Stuur ons een bericht",
+      "whatsappValue": "Message us directly"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, Halal on request",
+          "label": "Certifications"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, annual contract options",
+          "label": "Pricing & volumes"
+        },
+        "samples": {
+          "detail": "Available for qualified importers",
+          "label": "Sample requests"
+        },
+        "specs": {
+          "detail": "Grade, origin, packaging, seasonality",
+          "label": "Product specifications"
         }
       }
     },
+    "eyebrow": "Get in Touch",
+    "form": {
+      "company": "Bedrijf",
+      "country": "Land",
+      "email": "E-mail",
+      "error": "Er is iets misgegaan. Probeer het opnieuw of stuur ons rechtstreeks een e-mail.",
+      "message": "Bericht",
+      "messagePlaceholder": "Vertel ons kort uw behoefte — producten, volumes, bestemming.",
+      "name": "Volledige naam",
+      "phone": "Telefoon",
+      "submit": "Aanvraag verzenden",
+      "submitting": "Bezig met verzenden…",
+      "subtitle": "We reageren binnen 12 uur.",
+      "success": "Dank u — uw aanvraag is ontvangen. Wij nemen binnen 12 uur contact met u op.",
+      "title": "Aanvraag versturen"
+    },
+    "heading": "Send us an enquiry.",
+    "intro": {
+      "body": "Whether you're looking to source a specific product, request a sample, or discuss a long-term supply arrangement — this is the right place to start.",
+      "heading": "Tell us what you need. We'll come back to you with a clear answer."
+    },
+    "map": {
+      "directions": "Routebeschrijving",
+      "eyebrow": "Vind ons",
+      "iframeTitle": "Kaart met het hoofdkantoor van BACA"
+    },
+    "officeTitle": "Bedrijfsadres",
+    "promise": {
+      "body": "All international enquiries receive a reply from our trade desk within 12 hours — including weekends.",
+      "title": "12-hour response guarantee."
+    },
+    "subheading": "We respond to international enquiries within 12 hours."
+  },
+  "ctaBand": {
+    "body": "Vertel ons wat u inkoopt en waarheen het wordt verscheept. Wij reageren binnen 12 uur op internationale aanvragen.",
+    "ctaCatalogue": "Catalogus downloaden",
+    "ctaEnquire": "Aanvraag indienen",
+    "eyebrow": "Laten we praten",
+    "heading": "Laten we <em>samen</em> een betrouwbare toeleveringsketen bouwen."
+  },
+  "errors": {
+    "body": "Een onverwachte fout heeft het laden van deze pagina verhinderd. Probeer het opnieuw of ga terug naar de startpagina.",
+    "eyebrow": "Fout",
+    "home": "Home",
+    "retry": "Opnieuw proberen",
+    "title": "Er is iets misgegaan."
+  },
+  "featuredInsights": {
+    "allArticles": "Alle artikelen",
+    "eyebrow": "Blogs",
+    "heading": "Notities uit de specerijen- en grondstoffenhandel."
+  },
+  "footer": {
+    "backToTop": "Terug naar boven",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "Over ons",
+          "approach": "Onze aanpak",
+          "profile": "Profiel"
+        },
+        "title": "Bedrijf"
+      },
+      "products": {
+        "links": {
+          "all": "Alle categorieën",
+          "spices": "Specerijen"
+        },
+        "title": "Producten"
+      },
+      "resources": {
+        "links": {
+          "contact": "Neem contact op",
+          "insights": "Blogs"
+        },
+        "title": "Bronnen"
+      }
+    },
+    "description": "Een modern Indiaas exporthuis voor specerijen, noten en fruit.",
     "marqueeItems": [
       "India, in elke zending",
       "Specerijen",
@@ -353,7 +267,344 @@
       "APEDA"
     ]
   },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Founder {index}"
+    },
+    "eyebrow": "From the Founders",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "My father used to say — never sell what you would not serve at your own table. That has been our rule since the very first shipment. I have walked the same fields in Kerala for over two decades, and I still visit before we commit to a grower. You cannot build real trust from a desk.",
+        "role": "Co-founder · Sourcing & Quality"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "In this trade, a delayed document is a broken promise. When a container sits at port waiting on paperwork, it is not a logistics problem — it is a trust problem. Everything we built around documentation came from watching that happen once, and deciding it would never happen to our buyers.",
+        "role": "Co-founder · Trade & Logistics"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "India grows some of the finest spices in the world. The farmers I work with have spent their whole lives perfecting what they do. Our job is simply to make sure that effort reaches the buyer intact — honestly graded, honestly packed, honestly shipped. Nothing more, nothing less.",
+        "role": "Director · Quality & Grower Relations"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "Foto's worden toegevoegd. Kom binnenkort weer langs.",
+    "eyebrow": "Galerij",
+    "heading": "Het werk, de mensen, de grond.",
+    "intro": "Een kijkje in onze inkoop, sortering en verscheping — vanaf de herkomst in India tot aan de rest van de wereld."
+  },
+  "globalPresence": {
+    "body": "BACA levert aan importeurs, distributeurs en voedingsfabrikanten in Noord-Amerika, Europa, het Midden-Oosten, Zuidoost-Azië en Afrika — met gedocumenteerde, stipte contracten.",
+    "eyebrow": "Wereldwijd bereik",
+    "heading": "Van Indiase havens naar <em>vijf continenten.</em>",
+    "items": {
+      "continents": "Continenten beleverd",
+      "countries": "Landen bediend",
+      "repeatRate": "Percentage terugkerende afnemers",
+      "responseTime": "Reactietijd op aanvragen"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Menu sluiten",
+      "home": "Startpagina",
+      "mobileNav": "Mobiel",
+      "openMenu": "Menu openen",
+      "primaryNav": "Hoofdmenu"
+    }
+  },
+  "hero": {
+    "body": "Een nieuwe generatie Indiase export — gebouwd op traceerbare inkoop, strenge kwaliteit en partnerschappen die goederen betrouwbaar verplaatsen, container na container.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 landen bediend",
+    "ctaContact": "Praat met ons team",
+    "ctaProducts": "Ontdek producten",
+    "eyebrow": "Premium specerijen & landbouwproducten · Vertrouwde Indiase oorsprong",
+    "headline": "Quality. Trust.<br></br><em>Delivered.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Go to slide {index}"
+    },
+    "slides": {
+      "cardamom": "Green Cardamom · Kerala",
+      "farm": "Direct from the farm",
+      "origin": "Sourced at origin · India",
+      "pepper": "Malabar Black Pepper",
+      "turmeric": "Turmeric Fingers · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Taal wijzigen"
+  },
+  "manifesto": {
+    "body": "Twee decennia aan de bron in Kerala, Gujarat en Andhra — inkopen bij dezelfde boerenfamilies, seizoen na seizoen, sorteren bij de bron en volle containers verschepen naar afnemers in 37 landen.",
+    "eyebrow": "Ons verhaal",
+    "headline": "Wij verbinden Indiase telers met de meest veeleisende keukens ter wereld — inkopen <em>met intentie</em>, en verschepen met precisie.",
+    "imageAlt": "Doorleefde handen snijden verse kurkuma aan de bron in India — het sorteren van ruwe specerijen zoals de boerenfamilies van BACA dat al generaties doen"
+  },
+  "metadata": {
+    "description": "BACA is een modern Indiaas exporthuis — traceerbare inkoop van specerijen, noten en fruit, strenge kwaliteitscontrole en betrouwbare wereldwijde leveringen. Gecertificeerd volgens ISO 22000, HACCP & FSSAI.",
+    "title": "BACA — Indiase exporteur van specerijen, noten & fruit"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Neem contact op"
+      },
+      "home": {
+        "label": "Home"
+      },
+      "insights": {
+        "label": "Blogs"
+      },
+      "products": {
+        "label": "Producten"
+      },
+      "profile": {
+        "label": "Profiel"
+      }
+    }
+  },
+  "notFound": {
+    "body": "We kunnen niet vinden wat u zoekt. De pagina is mogelijk verplaatst of de link klopt niet. Ga terug naar home of bekijk de catalogus.",
+    "ctaHome": "Terug naar home",
+    "ctaProducts": "Bekijk producten",
+    "eyebrow": "404 · Pagina niet gevonden",
+    "heading": "Deze zending is nooit verscheept."
+  },
+  "productPreview": {
+    "eyebrow": "Wat we exporteren",
+    "heading": "Ingekocht aan de bron, gesorteerd voor export."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Categorieën",
+      "harvest": "Oogst",
+      "originRegions": "Herkomstregio’s",
+      "pairsNaturally": "Past van nature",
+      "peak": "Piek",
+      "products": "Producten",
+      "requestQuote": "Offerte aanvragen",
+      "requestSample": "Monster aanvragen",
+      "seasonality": "Seizoensgebondenheid",
+      "seasonalityHint": "Oogst / piekbeschikbaarheid",
+      "specifications": "Specificaties"
+    },
+    "empty": "Onze catalogus wordt bijgewerkt. Kom binnenkort terug.",
+    "eyebrow": "Onze catalogus",
+    "heading": "Alles wat we exporteren, ingekocht aan de bron.",
+    "intro": "Specerijen, noten en fruit — gesorteerd, gedocumenteerd en verscheept naar afnemers in 37 landen."
+  },
+  "profilePage": {
+    "eyebrow": "Over BACA",
+    "founders": {
+      "eyebrow": "Oprichters",
+      "heading": "De mensen achter BACA.",
+      "imageAltPrefix": "Portret van",
+      "intro": "BACA wordt geleid door twee broers/zussen die het bedrijf hebben opgebouwd vanuit twee decennia praktijkervaring in de Indiase specerijhandel.",
+      "items": {
+        "founder1": {
+          "bio": "Twee decennia directe inkoop bij coöperaties in Kerala en Andhra. Toezicht op boerenrelaties, sortering aan de bron en laboratoriumprogramma's voor elke zending.",
+          "role": "Medeoprichter · Inkoop & kwaliteit"
+        },
+        "founder2": {
+          "bio": "Beheert exportdocumentatie, expediteursrelaties en de handelsdesk. Leidde voorheen de logistieke tak van een grondstoffenhandelshuis in Mumbai.",
+          "role": "Medeoprichter · Handel & logistiek"
+        }
+      }
+    },
+    "heading": "Een Indiaas familiaal exporthuis, gebouwd voor de lange termijn.",
+    "howWeWork": {
+      "eyebrow": "Hoe wij werken",
+      "heading": "Van bodem tot verzending, in vier gedisciplineerde stappen.",
+      "intro": "Elke container die ons huis verlaat heeft zijn plek verdiend via dezelfde volgorde.",
+      "steps": {
+        "document": {
+          "body": "Fytosanitaire certificaten, HS-codes, Incoterms en oorsprongspapieren worden afgegeven voordat het schip vaart, zodat de douane nooit een zending in de bestemmingshaven ophoudt.",
+          "title": "Documenteren"
+        },
+        "grade": {
+          "body": "Elke partij wordt met de hand gesorteerd, in het laboratorium getest op vocht, pesticideresiduen en aflatoxinen, en gedocumenteerd volgens ISO 22000- en HACCP-protocollen voordat zij ooit een container ziet.",
+          "title": "Sorteren"
+        },
+        "ship": {
+          "body": "Verpakt aan de bron en verzonden als gedocumenteerde volledige containers met gecontracteerde expediteurs — dezelfde schepen, dezelfde routes, dezelfde aankomstvensters waarop uw toeleveringsketen kan plannen.",
+          "title": "Verzenden"
+        },
+        "source": {
+          "body": "Wij kopen rechtstreeks bij boerencoöperaties in de oorspronggebieden van elk gewas — kardemom uit Kerala, chili uit Guntur, peper uit Malabar — voor volledige traceerbaarheid van veld tot expediteur.",
+          "title": "Inkopen"
+        }
+      }
+    },
+    "intro": "Twee decennia in oorsprong in Kerala, Gujarat en Andhra — seizoen na seizoen kopen bij dezelfde boerenfamilies, sorteren aan de bron en volledige containers naar kopers in 37 landen.",
+    "visionMission": {
+      "eyebrow": "Visie & missie",
+      "heading": "Waar we naartoe werken — en hoe.",
+      "mission": {
+        "body": "Kleine boeren in India verbinden met veeleisende kopers in het buitenland via rigoureuze kwaliteitscontrole, transparante documentatie en verzendrelaties gemeten in jaren.",
+        "title": "Missie"
+      },
+      "vision": {
+        "body": "Een wereld waarin de Indiase landbouw verhandeld wordt op gelijke voet met elke premium oorsprong — traceerbaar, naar behoren gedocumenteerd en geprijsd voor het werk dat zij vertegenwoordigt aan de boerderijpoort.",
+        "title": "Visie"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA is een modern Indiaas exporthuis, gespecialiseerd in specerijen, noten en fruit. Wij werken direct met boerenfamilies in de traditionele teeltgebieden van India, sorteren en testen elke partij in het laboratorium bij de bron en verzenden gedocumenteerde volledige containers naar importeurs, distributeurs en detailhandelaren wereldwijd. Het team heeft meer dan twee decennia ervaring in oorsprong, sortering en logistiek; het bedrijf is de formalisering van die ervaring onder één merk.",
+      "eyebrow": "Wie wij zijn",
+      "heading": "Een exporthuis gebouwd op relaties."
+    },
+    "whyBaca": {
+      "eyebrow": "Waarom BACA",
+      "heading": "Vier redenen waarom importeurs bij ons blijven.",
+      "intro": "Inkoopteams kiezen voor BACA wanneer zij willen stoppen met brandjes blussen en willen beginnen met plannen.",
+      "items": {
+        "logistics": {
+          "body": "Gecontracteerde scheepsplekken en ervaren expediteurs: uw container arriveert in het venster dat wij hebben opgegeven — niet «ergens in die maand».",
+          "title": "Betrouwbare logistiek"
+        },
+        "partnership": {
+          "body": "Contracten met vaste prijzen en oogstreserveringen voor terugkerende kopers. Wij meten relaties in groeiseizoenen, niet in losse bestelnummers.",
+          "title": "Langetermijnpartnerschap"
+        },
+        "quality": {
+          "body": "ISO 22000 + HACCP-controles aan de bron: vocht, pesticideresiduen, aflatoxinen en microbiologische tests — geen willekeurige steekproeven in de haven.",
+          "title": "Laboratorium-geteste kwaliteit"
+        },
+        "traceability": {
+          "body": "Elke partij is gekoppeld aan een specifieke boerencoöperatie, oogstvenster en laboratoriumresultaat — controleerbaar van uw magazijn terug tot het veld.",
+          "title": "Volledige traceerbaarheid"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "Portret van de Managing Director van BACA",
+    "name": "Arvind Menon",
+    "quote": "Wij verhandelen geen zendingen — wij houden ons aan contracten. Dezelfde afnemers komen seizoen na seizoen terug, omdat de kwaliteit in de container telkens overeenkomt met de kwaliteit op het certificaat, elke keer weer.",
+    "title": "Managing Director, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Containers verscheept",
+      "countries": "Landen bediend",
+      "tonnes": "Ton verwerkt / jaar",
+      "years": "Jaar in bedrijf"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Page {page}",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "body": "Sourced from India's finest growing regions — tested, certified, and shipped with full traceability.",
+    "card": {
+      "info": "Info",
+      "requestQuote": "Request quote"
+    },
+    "eyebrow": "What We Offer",
+    "heading": "Our Product Range",
+    "viewAll": "View all products →"
+  },
   "whatsapp": {
     "ariaLabel": "Chat met BACA op WhatsApp"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Certifications",
+      "heading": "Certified for global trade.",
+      "intro": "Every shipment leaves with its credentials in order.",
+      "items": {
+        "apeda": {
+          "authority": "Export Registration",
+          "name": "APEDA",
+          "sub": "Agri & Processed Food Products Export Development Authority."
+        },
+        "fssai": {
+          "authority": "Central License",
+          "name": "FSSAI",
+          "sub": "Mandatory food-safety clearance for all Indian food exports."
+        },
+        "haccp": {
+          "authority": "Hazard Control Protocol",
+          "name": "HACCP",
+          "sub": "Systematic preventive approach to biological and chemical hazards."
+        },
+        "halal": {
+          "authority": "Market Access Certification",
+          "name": "Halal",
+          "sub": "Enables trade to markets requiring halal-certified product."
+        },
+        "iso22000": {
+          "authority": "Food Safety Mgmt",
+          "name": "ISO 22000",
+          "sub": "International standard for food-safety management systems."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Government registration for certified spice exporters."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Why BACA",
+      "heading": "Four reasons importers stay with us.",
+      "intro": "Procurement teams choose BACA when they want to stop firefighting and start planning.",
+      "items": {
+        "logistics": {
+          "body": "Contracted vessel slots and seasoned forwarders mean your container arrives in the window we quoted — not 'sometime that month.'",
+          "title": "Reliable Logistics"
+        },
+        "partnership": {
+          "body": "Fixed-price contracts and crop reservations for repeat buyers. We measure relationships in growing seasons, not single purchase order numbers.",
+          "title": "Long-Term Partnership"
+        },
+        "quality": {
+          "body": "ISO 22000 + HACCP-grade controls at origin: moisture, pesticide residue, aflatoxin, and microbiological tests — not random sampling at port.",
+          "title": "Lab-Tested Quality"
+        },
+        "traceability": {
+          "body": "Every lot is tied to a specific grower cooperative, harvest window, and lab result — auditable from your warehouse all the way back to the field.",
+          "title": "Full Traceability"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "How We Work",
+      "heading": "A process you can hold us to.",
+      "items": {
+        "certificate": {
+          "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
+          "title": "What the certificate says is what arrives."
+        },
+        "contact": {
+          "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens.",
+          "title": "One person answers for every shipment."
+        },
+        "farm": {
+          "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
+          "title": "It starts at the farm."
+        },
+        "lab": {
+          "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
+          "title": "Tested by people who do not work for us."
+        },
+        "paperwork": {
+          "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
+          "title": "Paperwork ready before the vessel is booked."
+        }
+      },
+      "stepLabel": "Step"
+    }
   }
 }

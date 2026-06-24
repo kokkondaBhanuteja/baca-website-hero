@@ -1,347 +1,261 @@
 {
-  "errors": {
-    "eyebrow": "خطأ",
-    "title": "حدث خطأ ما.",
-    "body": "حدث خطأ غير متوقع منع تحميل هذه الصفحة. يمكنك المحاولة مرة أخرى أو العودة إلى الصفحة الرئيسية.",
-    "retry": "حاول مرة أخرى",
-    "home": "الصفحة الرئيسية"
-  },
-  "productsPage": {
-    "eyebrow": "كتالوجنا",
-    "heading": "كل ما نصدّره، مورَّد من المنشأ.",
-    "intro": "توابل ومكسرات وفواكه — مفروزة وموثّقة وتُشحن إلى المشترين في 37 دولة.",
-    "empty": "يجري تحديث الكتالوج. يرجى العودة قريبًا.",
-    "detail": {
-      "products": "المنتجات",
-      "originRegions": "مناطق المنشأ",
-      "specifications": "المواصفات",
-      "seasonality": "الموسمية",
-      "seasonalityHint": "الحصاد / ذروة التوفر",
-      "harvest": "الحصاد",
-      "peak": "الذروة",
-      "requestQuote": "اطلب عرض سعر",
-      "requestSample": "اطلب عينة",
-      "pairsNaturally": "يتناغم بشكل طبيعي",
-      "categoriesHeading": "الفئات"
-    }
-  },
-  "profilePage": {
-    "eyebrow": "عن BACA",
-    "heading": "دار تصدير هندية عائلية، مبنية على رؤية بعيدة المدى.",
-    "intro": "عقدان من العمل في المنشأ بكيرالا وغوجارات وأندرا — نشتري من نفس عائلات المزارعين موسماً بعد موسم، ونصنّف في المنشأ، ونشحن حاويات كاملة لمشترين في 37 دولة.",
-    "whoWeAre": {
-      "eyebrow": "من نحن",
-      "heading": "دار تصدير مبنية على العلاقات.",
-      "body": "BACA هي دار تصدير هندية حديثة متخصصة في التوابل والمكسرات والفواكه. نعمل مباشرة مع عائلات المزارعين في مناطق الزراعة التقليدية في الهند، ونصنّف ونختبر مخبرياً كل دفعة في المنشأ، ونشحن حاويات كاملة موثقة إلى المستوردين والموزعين وتجار التجزئة حول العالم. يمتلك الفريق أكثر من عقدين من الخبرة في المنشأ والتصنيف واللوجستيات؛ والشركة هي تجسيد رسمي لهذه الخبرة تحت علامة تجارية واحدة."
-    },
-    "visionMission": {
-      "eyebrow": "الرؤية والرسالة",
-      "heading": "ما نسعى إليه — وكيف.",
-      "vision": {
-        "title": "الرؤية",
-        "body": "عالم يتم فيه تداول الزراعة الهندية على قدم المساواة مع أي منشأ متميز — قابلة للتتبع، موثّقة على النحو الصحيح، ومسعّرة وفق العمل الذي تمثله عند بوابة المزرعة."
-      },
-      "mission": {
-        "title": "الرسالة",
-        "body": "ربط صغار المزارعين في الهند بالمشترين المميزين في الخارج من خلال مراقبة جودة صارمة، وتوثيق شفاف، وعلاقات شحن تُقاس بالسنوات."
-      }
-    },
-    "howWeWork": {
-      "eyebrow": "كيف نعمل",
-      "heading": "من التربة إلى الشحن، في أربع خطوات منضبطة.",
-      "intro": "كل حاوية تغادر منشأتنا قد كسبت مكانها وفق نفس التسلسل.",
-      "steps": {
-        "source": {
-          "title": "التوريد",
-          "body": "نشتري مباشرة من تعاونيات المزارعين في مناطق المنشأ لكل محصول — الهيل من كيرالا، والفلفل الحار من غونتور، والفلفل من الملبار — لضمان تتبع كامل من الحقل إلى وكيل الشحن."
-        },
-        "grade": {
-          "title": "التصنيف",
-          "body": "كل دفعة تُفرز يدوياً، وتُختبر مخبرياً للرطوبة وبقايا المبيدات والأفلاتوكسين، وتُوثّق وفق بروتوكولات ISO 22000 وHACCP قبل أن ترى الحاوية."
-        },
-        "document": {
-          "title": "التوثيق",
-          "body": "تُصدَر شهادات الصحة النباتية وأكواد HS وشروط Incoterms وأوراق المنشأ قبل إبحار السفينة، حتى لا يعطّل التخليص الجمركي أي شحنة في ميناء الوصول."
-        },
-        "ship": {
-          "title": "الشحن",
-          "body": "نعبّئ في المنشأ ونشحن كحاويات كاملة موثّقة مع وكلاء شحن متعاقدين — نفس السفن، نفس الخطوط، نفس نوافذ الوصول التي يمكن لسلسلة التوريد لديكم التخطيط حولها."
-        }
-      }
-    },
-    "founders": {
-      "eyebrow": "المؤسسون",
-      "heading": "الأشخاص وراء BACA.",
-      "intro": "تُدار BACA من قبل شقيقين قاما ببناء الشركة من عقدين من الخبرة العملية في تجارة التوابل الهندية.",
-      "items": {
-        "founder1": {
-          "role": "شريك مؤسس · التوريد والجودة",
-          "bio": "عقدان من الشراء المباشر من التعاونيات في كيرالا وأندرا. يُشرف على علاقات المزارعين والتصنيف في المنشأ وبرامج الفحص المخبري لكل شحنة."
-        },
-        "founder2": {
-          "role": "شريك مؤسس · التجارة واللوجستيات",
-          "bio": "يدير وثائق التصدير وعلاقات وكلاء الشحن والمكتب التجاري. أدار سابقاً الذراع اللوجستية لدار تداول سلع مقرها مومباي."
-        }
-      },
-      "imageAltPrefix": "صورة شخصية لـ"
-    },
-    "whyBaca": {
-      "eyebrow": "لماذا BACA",
-      "heading": "أربعة أسباب تدفع المستوردين للبقاء معنا.",
-      "intro": "تختار فرق المشتريات BACA عندما تريد التوقف عن إطفاء الحرائق والبدء في التخطيط.",
-      "items": {
-        "traceability": {
-          "title": "تتبع كامل",
-          "body": "كل دفعة مرتبطة بتعاونية مزارعين محددة ونافذة حصاد ونتيجة مخبرية — قابلة للتدقيق من مستودعكم وصولاً إلى الحقل."
-        },
-        "quality": {
-          "title": "جودة مفحوصة مخبرياً",
-          "body": "ضوابط ISO 22000 + HACCP في المنشأ: الرطوبة، بقايا المبيدات، الأفلاتوكسين والاختبارات الميكروبيولوجية — لا أخذ عينات عشوائية في الميناء."
-        },
-        "logistics": {
-          "title": "لوجستيات موثوقة",
-          "body": "حصص سفن متعاقدة ووكلاء شحن مخضرمون: تصل حاويتكم في النافذة التي حددناها — وليس «في وقت ما من ذلك الشهر»."
-        },
-        "partnership": {
-          "title": "شراكة طويلة الأمد",
-          "body": "عقود بأسعار ثابتة وحجز محاصيل للمشترين الدائمين. نقيس العلاقات بمواسم الزراعة، لا بأرقام طلبات شراء فردية."
-        }
-      }
-    }
-  },
-  "contactPage": {
-    "eyebrow": "تواصل معنا",
-    "heading": "مجموعة منتجات شاملة",
-    "subheading": "أسعار تنافسية وتسليم في الوقت المحدد",
-    "officeTitle": "عنوان الشركة",
-    "channels": {
-      "email": "البريد الإلكتروني",
-      "phone": "الهاتف",
-      "whatsapp": "واتساب",
-      "whatsappAction": "راسلنا"
-    },
-    "form": {
-      "title": "إرسال استفسار",
-      "subtitle": "نردّ خلال 12 ساعة.",
-      "name": "الاسم الكامل",
-      "email": "البريد الإلكتروني",
-      "country": "البلد",
-      "company": "الشركة",
-      "phone": "الهاتف",
-      "message": "الرسالة",
-      "messagePlaceholder": "أخبرنا باختصار بمتطلباتك — المنتجات والكميات والوجهة.",
-      "submit": "إرسال الاستفسار",
-      "submitting": "جارٍ الإرسال…",
-      "success": "شكراً لك — تم استلام استفسارك. سنتواصل معك خلال 12 ساعة.",
-      "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة عبر البريد الإلكتروني."
-    },
-    "map": {
-      "eyebrow": "موقعنا",
-      "directions": "الاتجاهات",
-      "iframeTitle": "خريطة تُظهر مكتب BACA الرئيسي"
-    }
-  },
-  "blogsPage": {
-    "eyebrow": "المدونة",
-    "heading": "ملاحظات من تجارة التوابل والسلع.",
-    "intro": "قراءات للسوق، وقصص المنشأ، والرؤية التي توجّه طريقة توريدنا وشحننا.",
-    "empty": "مقالات جديدة في الطريق. يرجى العودة قريبًا.",
-    "minRead": "دقائق قراءة",
-    "featured": "مميّز",
-    "allArticles": "جميع المقالات",
-    "related": "تابع القراءة",
-    "writtenBy": "بقلم",
-    "filterBy": "تصفية حسب النوع",
-    "categoriesHeading": "الفئات",
-    "publishedLabel": "نُشر",
-    "readTimeLabel": "وقت القراءة"
-  },
-  "notFound": {
-    "eyebrow": "404 · الصفحة غير موجودة",
-    "heading": "هذه الشحنة لم تُرسَل قط.",
-    "body": "تعذّر العثور على ما تبحث عنه. ربما نُقلت الصفحة أو أن الرابط غير صحيح. عُد إلى الرئيسية أو تصفّح الكتالوج.",
-    "ctaHome": "العودة إلى الرئيسية",
-    "ctaProducts": "تصفّح المنتجات"
-  },
-  "galleryPage": {
-    "eyebrow": "معرض الصور",
-    "heading": "العمل، والناس، والأرض.",
-    "intro": "من داخل عمليات التوريد والفرز والشحن — من المنشأ في الهند إلى العالم.",
-    "empty": "تجري إضافة الصور. يرجى العودة قريبًا."
-  },
-  "metadata": {
-    "title": "BACA — مُصدِّر هندي للتوابل والمكسرات والفواكه",
-    "description": "‏BACA دار تصدير هندية حديثة — توريد قابل للتتبع للتوابل والمكسرات والفواكه، وجودة صارمة، وشحنات عالمية موثوقة. حاصلة على شهادات ISO 22000 وHACCP وFSSAI."
-  },
-  "common": {
-    "enquire": "استفسر الآن",
-    "viewAllCategories": "عرض جميع الفئات"
-  },
-  "languageSwitcher": {
-    "label": "تغيير اللغة"
-  },
-  "nav": {
-    "items": {
-      "home": {
-        "label": "الرئيسية"
-      },
-      "profile": {
-        "label": "نبذة عنا"
-      },
-      "products": {
-        "label": "المنتجات"
-      },
-      "insights": {
-        "label": "المدونة"
-      },
-      "contact": {
-        "label": "تواصل معنا"
-      }
-    }
-  },
-  "header": {
-    "aria": {
-      "home": "الصفحة الرئيسية",
-      "openMenu": "فتح القائمة",
-      "closeMenu": "إغلاق القائمة",
-      "primaryNav": "الرئيسية",
-      "mobileNav": "الجوال"
-    }
-  },
-  "hero": {
-    "headline": "Quality. Trust.<br></br><em>Delivered.</em>",
-    "body": "جيل جديد من التصدير الهندي — مبني على توريد قابل للتتبع، وجودة صارمة، وشراكات تنقل السلع بموثوقية، حاوية تلو الأخرى.",
-    "ctaProducts": "استكشف المنتجات",
-    "ctaContact": "تحدّث إلى فريقنا",
-    "countries": "37 دولة نخدمها",
-    "certs": "ISO 22000 · HACCP · FSSAI"
-  },
-  "manifesto": {
-    "eyebrow": "قصتنا",
-    "headline": "نربط المزارعين الهنود بأكثر مطابخ العالم تطلّبًا — نورّد <em>بنيّة واضحة</em>، ونشحن بدقة متناهية.",
-    "body": "عقدان في مناطق المنشأ بولايات كيرالا وغوجارات وأندرا — نشتري من العائلات المزارعة نفسها موسمًا بعد موسم، ونفرز عند المصدر، وننقل حاويات كاملة إلى المشترين في 37 دولة.",
-    "imageAlt": "يدان عاملتان تقطّعان كركمًا طازجًا عند المصدر في الهند — فرز التوابل الخام كما اعتادت عليه عائلات BACA المزارعة عبر الأجيال"
-  },
-  "stats": {
-    "items": {
-      "years": "سنوات في العمل",
-      "countries": "دولة نخدمها",
-      "containers": "حاوية مشحونة",
-      "tonnes": "طن نتعامل معه سنويًا"
-    }
-  },
-  "productPreview": {
-    "eyebrow": "ما نصدّره",
-    "heading": "مورَّد من المنشأ، ومُصنَّف للتصدير."
-  },
   "approach": {
     "eyebrow": "How we work",
     "heading": "A process you can hold us to.",
     "intro": "We built our process around one question: what would give a buyer complete peace of mind? Here is the answer.",
     "pillars": {
-      "traceability": {
-        "title": "It starts at the farm.",
-        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest."
-      },
-      "labtesting": {
-        "title": "Tested by people who do not work for us.",
-        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing."
-      },
-      "grading": {
-        "title": "What the certificate says is what arrives.",
-        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time."
+      "accountability": {
+        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close.",
+        "title": "One person answers for every shipment."
       },
       "documentation": {
-        "title": "Paperwork ready before the vessel is booked.",
-        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port."
+        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
+        "title": "Paperwork ready before the vessel is booked."
       },
-      "accountability": {
-        "title": "One person answers for every shipment.",
-        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close."
+      "grading": {
+        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
+        "title": "What the certificate says is what arrives."
+      },
+      "labtesting": {
+        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
+        "title": "Tested by people who do not work for us."
+      },
+      "traceability": {
+        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
+        "title": "It starts at the farm."
       }
     }
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Our Principles",
+    "imageAlt": "BACA — farmers and fields",
+    "imageCaption": "Direct from India's heartland",
+    "items": {
+      "farmer": {
+        "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
+        "title": "The Farmer First."
+      },
+      "partnership": {
+        "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
+        "title": "Built for the Long Run."
+      },
+      "quality": {
+        "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
+        "title": "No Shortcuts, Ever."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA was built on a single conviction: that the quality of what reaches a buyer is inseparable from the honesty of every step before it. We hold direct relationships with farming families across Kerala, Karnataka, Tamil Nadu, and Andhra Pradesh — offering fair pricing, transparent processes, and access to global markets that were once out of reach.",
+      "eyebrow": "The BACA Story",
+      "heading": "India's finest origins,",
+      "headingAccent": "delivered with integrity.",
+      "quote": "Because when the farmer thrives, everything that reaches you is better for it."
+    },
+    "principles": {
+      "eyebrow": "Our Principles",
+      "imageAlt": "BACA — farmers and fields",
+      "imageCaption": "Direct from India's heartland",
+      "items": {
+        "farmer": {
+          "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
+          "title": "The Farmer First."
+        },
+        "partnership": {
+          "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
+          "title": "Built for the Long Run."
+        },
+        "quality": {
+          "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
+          "title": "No Shortcuts, Ever."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Our Purpose",
+      "mission": {
+        "body": "To connect India's finest growing regions with the world's most discerning buyers — through traceable sourcing, honest quality, and a price that truly reflects the work behind every shipment.",
+        "title": "Mission"
+      },
+      "vision": {
+        "body": "To be India's most trusted commodity exporter — known not for volume, but for the consistency that brings the same buyers back, season after season.",
+        "title": "Vision"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "countries import Indian spices",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "farming families across India",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "of global spice production",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "جميع المقالات",
+    "categoriesHeading": "الفئات",
+    "empty": "مقالات جديدة في الطريق. يرجى العودة قريبًا.",
+    "eyebrow": "المدونة",
+    "featured": "مميّز",
+    "filterBy": "تصفية حسب النوع",
+    "heading": "ملاحظات من تجارة التوابل والسلع.",
+    "intro": "قراءات للسوق، وقصص المنشأ، والرؤية التي توجّه طريقة توريدنا وشحننا.",
+    "minRead": "دقائق قراءة",
+    "publishedLabel": "نُشر",
+    "readTimeLabel": "وقت القراءة",
+    "related": "تابع القراءة",
+    "writtenBy": "بقلم"
   },
   "certifications": {
     "eyebrow": "Certifications",
     "heading": "Certified for global trade.",
     "intro": "Every shipment leaves with its credentials in order.",
     "items": {
-      "fssai": {
-        "sub": "Central License"
-      },
-      "spicesBoard": {
-        "sub": "CRES · Spices Board of India"
-      },
       "apeda": {
         "sub": "Agri Export Registration"
       },
-      "iso22000": {
-        "sub": "Food Safety Management"
+      "fssai": {
+        "sub": "Central License"
       },
       "haccp": {
         "sub": "Hazard Control Protocol"
       },
       "halal": {
         "sub": "Market Access Certification"
+      },
+      "iso22000": {
+        "sub": "Food Safety Management"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
       }
     }
   },
-  "globalPresence": {
-    "eyebrow": "حضور عالمي",
-    "heading": "من الموانئ الهندية إلى <em>خمس قارات.</em>",
-    "body": "تشحن BACA إلى المستوردين والموزّعين ومصنّعي الأغذية عبر أمريكا الشمالية وأوروبا والشرق الأوسط وجنوب شرق آسيا وأفريقيا — بعقود موثّقة وفي مواعيدها.",
-    "items": {
-      "countries": "دولة نخدمها",
-      "continents": "قارة نشحن إليها",
-      "repeatRate": "نسبة المشترين الدائمين",
-      "responseTime": "زمن الرد على الاستفسارات"
-    }
+  "common": {
+    "enquire": "استفسر الآن",
+    "viewAllCategories": "عرض جميع الفئات"
   },
-  "pullQuote": {
-    "quote": "نحن لا نتاجر بالشحنات — بل نبرم العقود. يعود إلينا المشترون أنفسهم موسمًا بعد موسم لأن الجودة داخل الحاوية تطابق الجودة المدوّنة في الشهادة، في كل مرة دون استثناء.",
-    "name": "Arvind Menon",
-    "title": "المدير الإداري، BACA",
-    "imageAlt": "صورة شخصية للمدير الإداري لشركة BACA"
-  },
-  "featuredInsights": {
-    "eyebrow": "المدونة",
-    "heading": "ملاحظات من تجارة التوابل والسلع.",
-    "allArticles": "جميع المقالات"
-  },
-  "ctaBand": {
-    "eyebrow": "لنتحدّث",
-    "heading": "لنبنِ سلسلة إمداد موثوقة <em>معًا.</em>",
-    "body": "أخبرنا بما تورّده وإلى أين يُشحن. نردّ على الاستفسارات الدولية خلال 12 ساعة.",
-    "ctaEnquire": "استفسر الآن",
-    "ctaCatalogue": "تنزيل الكتالوج"
-  },
-  "footer": {
-    "description": "دار تصدير هندية حديثة للتوابل والمكسرات والفواكه.",
-    "backToTop": "العودة إلى الأعلى",
-    "columns": {
-      "products": {
-        "title": "المنتجات",
-        "links": {
-          "spices": "التوابل",
-          "all": "جميع الفئات"
-        }
-      },
-      "company": {
-        "title": "الشركة",
-        "links": {
-          "profile": "نبذة عنا",
-          "about": "من نحن",
-          "approach": "منهجيتنا"
-        }
-      },
-      "resources": {
-        "title": "الموارد",
-        "links": {
-          "insights": "المدونة",
-          "contact": "تواصل معنا"
+  "contactPage": {
+    "channels": {
+      "email": "البريد الإلكتروني",
+      "emailLabel": "Email us",
+      "phone": "الهاتف",
+      "phoneLabel": "Call us",
+      "whatsapp": "واتساب",
+      "whatsappAction": "راسلنا",
+      "whatsappValue": "Message us directly"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, Halal on request",
+          "label": "Certifications"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, annual contract options",
+          "label": "Pricing & volumes"
+        },
+        "samples": {
+          "detail": "Available for qualified importers",
+          "label": "Sample requests"
+        },
+        "specs": {
+          "detail": "Grade, origin, packaging, seasonality",
+          "label": "Product specifications"
         }
       }
     },
+    "eyebrow": "Get in Touch",
+    "form": {
+      "company": "الشركة",
+      "country": "البلد",
+      "email": "البريد الإلكتروني",
+      "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة عبر البريد الإلكتروني.",
+      "message": "الرسالة",
+      "messagePlaceholder": "أخبرنا باختصار بمتطلباتك — المنتجات والكميات والوجهة.",
+      "name": "الاسم الكامل",
+      "phone": "الهاتف",
+      "submit": "إرسال الاستفسار",
+      "submitting": "جارٍ الإرسال…",
+      "subtitle": "نردّ خلال 12 ساعة.",
+      "success": "شكراً لك — تم استلام استفسارك. سنتواصل معك خلال 12 ساعة.",
+      "title": "إرسال استفسار"
+    },
+    "heading": "Send us an enquiry.",
+    "intro": {
+      "body": "Whether you're looking to source a specific product, request a sample, or discuss a long-term supply arrangement — this is the right place to start.",
+      "heading": "Tell us what you need. We'll come back to you with a clear answer."
+    },
+    "map": {
+      "directions": "الاتجاهات",
+      "eyebrow": "موقعنا",
+      "iframeTitle": "خريطة تُظهر مكتب BACA الرئيسي"
+    },
+    "officeTitle": "عنوان الشركة",
+    "promise": {
+      "body": "All international enquiries receive a reply from our trade desk within 12 hours — including weekends.",
+      "title": "12-hour response guarantee."
+    },
+    "subheading": "We respond to international enquiries within 12 hours."
+  },
+  "ctaBand": {
+    "body": "أخبرنا بما تورّده وإلى أين يُشحن. نردّ على الاستفسارات الدولية خلال 12 ساعة.",
+    "ctaCatalogue": "تنزيل الكتالوج",
+    "ctaEnquire": "استفسر الآن",
+    "eyebrow": "لنتحدّث",
+    "heading": "لنبنِ سلسلة إمداد موثوقة <em>معًا.</em>"
+  },
+  "errors": {
+    "body": "حدث خطأ غير متوقع منع تحميل هذه الصفحة. يمكنك المحاولة مرة أخرى أو العودة إلى الصفحة الرئيسية.",
+    "eyebrow": "خطأ",
+    "home": "الصفحة الرئيسية",
+    "retry": "حاول مرة أخرى",
+    "title": "حدث خطأ ما."
+  },
+  "featuredInsights": {
+    "allArticles": "جميع المقالات",
+    "eyebrow": "المدونة",
+    "heading": "ملاحظات من تجارة التوابل والسلع."
+  },
+  "footer": {
+    "backToTop": "العودة إلى الأعلى",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "من نحن",
+          "approach": "منهجيتنا",
+          "profile": "نبذة عنا"
+        },
+        "title": "الشركة"
+      },
+      "products": {
+        "links": {
+          "all": "جميع الفئات",
+          "spices": "التوابل"
+        },
+        "title": "المنتجات"
+      },
+      "resources": {
+        "links": {
+          "contact": "تواصل معنا",
+          "insights": "المدونة"
+        },
+        "title": "الموارد"
+      }
+    },
+    "description": "دار تصدير هندية حديثة للتوابل والمكسرات والفواكه.",
     "marqueeItems": [
       "الهند، في كل شحنة",
       "التوابل",
@@ -353,7 +267,344 @@
       "APEDA"
     ]
   },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Founder {index}"
+    },
+    "eyebrow": "From the Founders",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "My father used to say — never sell what you would not serve at your own table. That has been our rule since the very first shipment. I have walked the same fields in Kerala for over two decades, and I still visit before we commit to a grower. You cannot build real trust from a desk.",
+        "role": "Co-founder · Sourcing & Quality"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "In this trade, a delayed document is a broken promise. When a container sits at port waiting on paperwork, it is not a logistics problem — it is a trust problem. Everything we built around documentation came from watching that happen once, and deciding it would never happen to our buyers.",
+        "role": "Co-founder · Trade & Logistics"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "India grows some of the finest spices in the world. The farmers I work with have spent their whole lives perfecting what they do. Our job is simply to make sure that effort reaches the buyer intact — honestly graded, honestly packed, honestly shipped. Nothing more, nothing less.",
+        "role": "Director · Quality & Grower Relations"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "تجري إضافة الصور. يرجى العودة قريبًا.",
+    "eyebrow": "معرض الصور",
+    "heading": "العمل، والناس، والأرض.",
+    "intro": "من داخل عمليات التوريد والفرز والشحن — من المنشأ في الهند إلى العالم."
+  },
+  "globalPresence": {
+    "body": "تشحن BACA إلى المستوردين والموزّعين ومصنّعي الأغذية عبر أمريكا الشمالية وأوروبا والشرق الأوسط وجنوب شرق آسيا وأفريقيا — بعقود موثّقة وفي مواعيدها.",
+    "eyebrow": "حضور عالمي",
+    "heading": "من الموانئ الهندية إلى <em>خمس قارات.</em>",
+    "items": {
+      "continents": "قارة نشحن إليها",
+      "countries": "دولة نخدمها",
+      "repeatRate": "نسبة المشترين الدائمين",
+      "responseTime": "زمن الرد على الاستفسارات"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "إغلاق القائمة",
+      "home": "الصفحة الرئيسية",
+      "mobileNav": "الجوال",
+      "openMenu": "فتح القائمة",
+      "primaryNav": "الرئيسية"
+    }
+  },
+  "hero": {
+    "body": "جيل جديد من التصدير الهندي — مبني على توريد قابل للتتبع، وجودة صارمة، وشراكات تنقل السلع بموثوقية، حاوية تلو الأخرى.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 دولة نخدمها",
+    "ctaContact": "تحدّث إلى فريقنا",
+    "ctaProducts": "استكشف المنتجات",
+    "eyebrow": "توابل ومنتجات زراعية فاخرة · مصادر هندية موثوقة",
+    "headline": "Quality. Trust.<br></br><em>Delivered.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Go to slide {index}"
+    },
+    "slides": {
+      "cardamom": "Green Cardamom · Kerala",
+      "farm": "Direct from the farm",
+      "origin": "Sourced at origin · India",
+      "pepper": "Malabar Black Pepper",
+      "turmeric": "Turmeric Fingers · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "تغيير اللغة"
+  },
+  "manifesto": {
+    "body": "عقدان في مناطق المنشأ بولايات كيرالا وغوجارات وأندرا — نشتري من العائلات المزارعة نفسها موسمًا بعد موسم، ونفرز عند المصدر، وننقل حاويات كاملة إلى المشترين في 37 دولة.",
+    "eyebrow": "قصتنا",
+    "headline": "نربط المزارعين الهنود بأكثر مطابخ العالم تطلّبًا — نورّد <em>بنيّة واضحة</em>، ونشحن بدقة متناهية.",
+    "imageAlt": "يدان عاملتان تقطّعان كركمًا طازجًا عند المصدر في الهند — فرز التوابل الخام كما اعتادت عليه عائلات BACA المزارعة عبر الأجيال"
+  },
+  "metadata": {
+    "description": "‏BACA دار تصدير هندية حديثة — توريد قابل للتتبع للتوابل والمكسرات والفواكه، وجودة صارمة، وشحنات عالمية موثوقة. حاصلة على شهادات ISO 22000 وHACCP وFSSAI.",
+    "title": "BACA — مُصدِّر هندي للتوابل والمكسرات والفواكه"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "تواصل معنا"
+      },
+      "home": {
+        "label": "الرئيسية"
+      },
+      "insights": {
+        "label": "المدونة"
+      },
+      "products": {
+        "label": "المنتجات"
+      },
+      "profile": {
+        "label": "نبذة عنا"
+      }
+    }
+  },
+  "notFound": {
+    "body": "تعذّر العثور على ما تبحث عنه. ربما نُقلت الصفحة أو أن الرابط غير صحيح. عُد إلى الرئيسية أو تصفّح الكتالوج.",
+    "ctaHome": "العودة إلى الرئيسية",
+    "ctaProducts": "تصفّح المنتجات",
+    "eyebrow": "404 · الصفحة غير موجودة",
+    "heading": "هذه الشحنة لم تُرسَل قط."
+  },
+  "productPreview": {
+    "eyebrow": "ما نصدّره",
+    "heading": "مورَّد من المنشأ، ومُصنَّف للتصدير."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "الفئات",
+      "harvest": "الحصاد",
+      "originRegions": "مناطق المنشأ",
+      "pairsNaturally": "يتناغم بشكل طبيعي",
+      "peak": "الذروة",
+      "products": "المنتجات",
+      "requestQuote": "اطلب عرض سعر",
+      "requestSample": "اطلب عينة",
+      "seasonality": "الموسمية",
+      "seasonalityHint": "الحصاد / ذروة التوفر",
+      "specifications": "المواصفات"
+    },
+    "empty": "يجري تحديث الكتالوج. يرجى العودة قريبًا.",
+    "eyebrow": "كتالوجنا",
+    "heading": "كل ما نصدّره، مورَّد من المنشأ.",
+    "intro": "توابل ومكسرات وفواكه — مفروزة وموثّقة وتُشحن إلى المشترين في 37 دولة."
+  },
+  "profilePage": {
+    "eyebrow": "عن BACA",
+    "founders": {
+      "eyebrow": "المؤسسون",
+      "heading": "الأشخاص وراء BACA.",
+      "imageAltPrefix": "صورة شخصية لـ",
+      "intro": "تُدار BACA من قبل شقيقين قاما ببناء الشركة من عقدين من الخبرة العملية في تجارة التوابل الهندية.",
+      "items": {
+        "founder1": {
+          "bio": "عقدان من الشراء المباشر من التعاونيات في كيرالا وأندرا. يُشرف على علاقات المزارعين والتصنيف في المنشأ وبرامج الفحص المخبري لكل شحنة.",
+          "role": "شريك مؤسس · التوريد والجودة"
+        },
+        "founder2": {
+          "bio": "يدير وثائق التصدير وعلاقات وكلاء الشحن والمكتب التجاري. أدار سابقاً الذراع اللوجستية لدار تداول سلع مقرها مومباي.",
+          "role": "شريك مؤسس · التجارة واللوجستيات"
+        }
+      }
+    },
+    "heading": "دار تصدير هندية عائلية، مبنية على رؤية بعيدة المدى.",
+    "howWeWork": {
+      "eyebrow": "كيف نعمل",
+      "heading": "من التربة إلى الشحن، في أربع خطوات منضبطة.",
+      "intro": "كل حاوية تغادر منشأتنا قد كسبت مكانها وفق نفس التسلسل.",
+      "steps": {
+        "document": {
+          "body": "تُصدَر شهادات الصحة النباتية وأكواد HS وشروط Incoterms وأوراق المنشأ قبل إبحار السفينة، حتى لا يعطّل التخليص الجمركي أي شحنة في ميناء الوصول.",
+          "title": "التوثيق"
+        },
+        "grade": {
+          "body": "كل دفعة تُفرز يدوياً، وتُختبر مخبرياً للرطوبة وبقايا المبيدات والأفلاتوكسين، وتُوثّق وفق بروتوكولات ISO 22000 وHACCP قبل أن ترى الحاوية.",
+          "title": "التصنيف"
+        },
+        "ship": {
+          "body": "نعبّئ في المنشأ ونشحن كحاويات كاملة موثّقة مع وكلاء شحن متعاقدين — نفس السفن، نفس الخطوط، نفس نوافذ الوصول التي يمكن لسلسلة التوريد لديكم التخطيط حولها.",
+          "title": "الشحن"
+        },
+        "source": {
+          "body": "نشتري مباشرة من تعاونيات المزارعين في مناطق المنشأ لكل محصول — الهيل من كيرالا، والفلفل الحار من غونتور، والفلفل من الملبار — لضمان تتبع كامل من الحقل إلى وكيل الشحن.",
+          "title": "التوريد"
+        }
+      }
+    },
+    "intro": "عقدان من العمل في المنشأ بكيرالا وغوجارات وأندرا — نشتري من نفس عائلات المزارعين موسماً بعد موسم، ونصنّف في المنشأ، ونشحن حاويات كاملة لمشترين في 37 دولة.",
+    "visionMission": {
+      "eyebrow": "الرؤية والرسالة",
+      "heading": "ما نسعى إليه — وكيف.",
+      "mission": {
+        "body": "ربط صغار المزارعين في الهند بالمشترين المميزين في الخارج من خلال مراقبة جودة صارمة، وتوثيق شفاف، وعلاقات شحن تُقاس بالسنوات.",
+        "title": "الرسالة"
+      },
+      "vision": {
+        "body": "عالم يتم فيه تداول الزراعة الهندية على قدم المساواة مع أي منشأ متميز — قابلة للتتبع، موثّقة على النحو الصحيح، ومسعّرة وفق العمل الذي تمثله عند بوابة المزرعة.",
+        "title": "الرؤية"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA هي دار تصدير هندية حديثة متخصصة في التوابل والمكسرات والفواكه. نعمل مباشرة مع عائلات المزارعين في مناطق الزراعة التقليدية في الهند، ونصنّف ونختبر مخبرياً كل دفعة في المنشأ، ونشحن حاويات كاملة موثقة إلى المستوردين والموزعين وتجار التجزئة حول العالم. يمتلك الفريق أكثر من عقدين من الخبرة في المنشأ والتصنيف واللوجستيات؛ والشركة هي تجسيد رسمي لهذه الخبرة تحت علامة تجارية واحدة.",
+      "eyebrow": "من نحن",
+      "heading": "دار تصدير مبنية على العلاقات."
+    },
+    "whyBaca": {
+      "eyebrow": "لماذا BACA",
+      "heading": "أربعة أسباب تدفع المستوردين للبقاء معنا.",
+      "intro": "تختار فرق المشتريات BACA عندما تريد التوقف عن إطفاء الحرائق والبدء في التخطيط.",
+      "items": {
+        "logistics": {
+          "body": "حصص سفن متعاقدة ووكلاء شحن مخضرمون: تصل حاويتكم في النافذة التي حددناها — وليس «في وقت ما من ذلك الشهر».",
+          "title": "لوجستيات موثوقة"
+        },
+        "partnership": {
+          "body": "عقود بأسعار ثابتة وحجز محاصيل للمشترين الدائمين. نقيس العلاقات بمواسم الزراعة، لا بأرقام طلبات شراء فردية.",
+          "title": "شراكة طويلة الأمد"
+        },
+        "quality": {
+          "body": "ضوابط ISO 22000 + HACCP في المنشأ: الرطوبة، بقايا المبيدات، الأفلاتوكسين والاختبارات الميكروبيولوجية — لا أخذ عينات عشوائية في الميناء.",
+          "title": "جودة مفحوصة مخبرياً"
+        },
+        "traceability": {
+          "body": "كل دفعة مرتبطة بتعاونية مزارعين محددة ونافذة حصاد ونتيجة مخبرية — قابلة للتدقيق من مستودعكم وصولاً إلى الحقل.",
+          "title": "تتبع كامل"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "صورة شخصية للمدير الإداري لشركة BACA",
+    "name": "Arvind Menon",
+    "quote": "نحن لا نتاجر بالشحنات — بل نبرم العقود. يعود إلينا المشترون أنفسهم موسمًا بعد موسم لأن الجودة داخل الحاوية تطابق الجودة المدوّنة في الشهادة، في كل مرة دون استثناء.",
+    "title": "المدير الإداري، BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "حاوية مشحونة",
+      "countries": "دولة نخدمها",
+      "tonnes": "طن نتعامل معه سنويًا",
+      "years": "سنوات في العمل"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Page {page}",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "body": "Sourced from India's finest growing regions — tested, certified, and shipped with full traceability.",
+    "card": {
+      "info": "Info",
+      "requestQuote": "Request quote"
+    },
+    "eyebrow": "What We Offer",
+    "heading": "Our Product Range",
+    "viewAll": "View all products →"
+  },
   "whatsapp": {
     "ariaLabel": "تحدّث مع BACA عبر WhatsApp"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Certifications",
+      "heading": "Certified for global trade.",
+      "intro": "Every shipment leaves with its credentials in order.",
+      "items": {
+        "apeda": {
+          "authority": "Export Registration",
+          "name": "APEDA",
+          "sub": "Agri & Processed Food Products Export Development Authority."
+        },
+        "fssai": {
+          "authority": "Central License",
+          "name": "FSSAI",
+          "sub": "Mandatory food-safety clearance for all Indian food exports."
+        },
+        "haccp": {
+          "authority": "Hazard Control Protocol",
+          "name": "HACCP",
+          "sub": "Systematic preventive approach to biological and chemical hazards."
+        },
+        "halal": {
+          "authority": "Market Access Certification",
+          "name": "Halal",
+          "sub": "Enables trade to markets requiring halal-certified product."
+        },
+        "iso22000": {
+          "authority": "Food Safety Mgmt",
+          "name": "ISO 22000",
+          "sub": "International standard for food-safety management systems."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Government registration for certified spice exporters."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Why BACA",
+      "heading": "Four reasons importers stay with us.",
+      "intro": "Procurement teams choose BACA when they want to stop firefighting and start planning.",
+      "items": {
+        "logistics": {
+          "body": "Contracted vessel slots and seasoned forwarders mean your container arrives in the window we quoted — not 'sometime that month.'",
+          "title": "Reliable Logistics"
+        },
+        "partnership": {
+          "body": "Fixed-price contracts and crop reservations for repeat buyers. We measure relationships in growing seasons, not single purchase order numbers.",
+          "title": "Long-Term Partnership"
+        },
+        "quality": {
+          "body": "ISO 22000 + HACCP-grade controls at origin: moisture, pesticide residue, aflatoxin, and microbiological tests — not random sampling at port.",
+          "title": "Lab-Tested Quality"
+        },
+        "traceability": {
+          "body": "Every lot is tied to a specific grower cooperative, harvest window, and lab result — auditable from your warehouse all the way back to the field.",
+          "title": "Full Traceability"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "How We Work",
+      "heading": "A process you can hold us to.",
+      "items": {
+        "certificate": {
+          "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
+          "title": "What the certificate says is what arrives."
+        },
+        "contact": {
+          "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens.",
+          "title": "One person answers for every shipment."
+        },
+        "farm": {
+          "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
+          "title": "It starts at the farm."
+        },
+        "lab": {
+          "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
+          "title": "Tested by people who do not work for us."
+        },
+        "paperwork": {
+          "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
+          "title": "Paperwork ready before the vessel is booked."
+        }
+      },
+      "stepLabel": "Step"
+    }
   }
 }

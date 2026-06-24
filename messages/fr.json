@@ -1,347 +1,261 @@
 {
-  "errors": {
-    "eyebrow": "Erreur",
-    "title": "Une erreur est survenue.",
-    "body": "Une erreur inattendue a empêché le chargement de cette page. Vous pouvez réessayer, ou revenir à l’accueil.",
-    "retry": "Réessayer",
-    "home": "Accueil"
-  },
-  "productsPage": {
-    "eyebrow": "Notre catalogue",
-    "heading": "Tout ce que nous exportons, sourcé à l'origine.",
-    "intro": "Épices, fruits à coque et fruits — triés, documentés et expédiés vers des acheteurs dans 37 pays.",
-    "empty": "Notre catalogue est en cours de mise à jour. Revenez bientôt.",
-    "detail": {
-      "products": "Produits",
-      "originRegions": "Régions d’origine",
-      "specifications": "Spécifications",
-      "seasonality": "Saisonnalité",
-      "seasonalityHint": "Récolte / pic de disponibilité",
-      "harvest": "Récolte",
-      "peak": "Pic",
-      "requestQuote": "Demander un devis",
-      "requestSample": "Demander un échantillon",
-      "pairsNaturally": "S’accorde naturellement",
-      "categoriesHeading": "Catégories"
-    }
-  },
-  "profilePage": {
-    "eyebrow": "À propos de BACA",
-    "heading": "Une maison d'export indienne familiale, pensée pour le long terme.",
-    "intro": "Deux décennies à l'origine au Kerala, au Gujarat et en Andhra — achats auprès des mêmes familles d'agriculteurs saison après saison, tri à l'origine, et expéditions de containers complets vers des acheteurs dans 37 pays.",
-    "whoWeAre": {
-      "eyebrow": "Qui nous sommes",
-      "heading": "Une maison d'export bâtie sur des relations.",
-      "body": "BACA est une maison d'export indienne moderne spécialisée dans les épices, les fruits à coque et les fruits. Nous travaillons directement avec des familles d'agriculteurs dans les régions de culture traditionnelles de l'Inde, classons et testons en laboratoire chaque lot à l'origine, et expédions des containers complets documentés à des importateurs, distributeurs et détaillants à travers le monde. L'équipe cumule plus de deux décennies d'expérience en sourcing, classement et logistique ; l'entreprise est la formalisation de cette expérience sous une marque unique."
-    },
-    "visionMission": {
-      "eyebrow": "Vision & mission",
-      "heading": "Ce vers quoi nous travaillons — et comment.",
-      "vision": {
-        "title": "Vision",
-        "body": "Un monde où l'agriculture indienne se négocie au même niveau que toute origine premium — traçable, dûment documentée, et valorisée à hauteur du travail fourni au champ."
-      },
-      "mission": {
-        "title": "Mission",
-        "body": "Connecter les petits exploitants en Inde aux acheteurs exigeants à l'étranger par un contrôle qualité rigoureux, une documentation transparente et des relations d'expédition mesurées en années."
-      }
-    },
-    "howWeWork": {
-      "eyebrow": "Comment nous travaillons",
-      "heading": "Du sol à la livraison, en quatre étapes disciplinées.",
-      "intro": "Chaque container qui quitte nos portes a gagné sa place selon la même séquence.",
-      "steps": {
-        "source": {
-          "title": "Sourcer",
-          "body": "Nous achetons directement auprès des coopératives d'agriculteurs dans les régions d'origine de chaque culture — cardamome du Kerala, piment de Guntur, poivre du Malabar — pour une traçabilité totale du champ au transitaire."
-        },
-        "grade": {
-          "title": "Classer",
-          "body": "Chaque lot est trié à la main, analysé en laboratoire pour l'humidité, les résidus de pesticides et les aflatoxines, et documenté selon les protocoles ISO 22000 et HACCP avant même d'entrer dans un container."
-        },
-        "document": {
-          "title": "Documenter",
-          "body": "Certificats phytosanitaires, codes SH, Incoterms et papiers d'origine sont émis avant le départ du navire afin que le dédouanement ne retarde jamais une expédition au port de destination."
-        },
-        "ship": {
-          "title": "Expédier",
-          "body": "Conditionnés à l'origine et expédiés en containers complets documentés avec des transitaires sous contrat — mêmes navires, mêmes lignes, mêmes fenêtres d'arrivée sur lesquelles votre chaîne d'approvisionnement peut planifier."
-        }
-      }
-    },
-    "founders": {
-      "eyebrow": "Fondateurs",
-      "heading": "Les personnes derrière BACA.",
-      "intro": "BACA est dirigée par deux frères et sœurs qui ont bâti l'entreprise à partir de deux décennies de terrain dans le commerce indien des épices.",
-      "items": {
-        "founder1": {
-          "role": "Co-fondateur · Sourcing & qualité",
-          "bio": "Deux décennies d'achat direct auprès des coopératives du Kerala et d'Andhra. Supervise les relations avec les producteurs, le classement à l'origine et les programmes d'analyse en laboratoire pour chaque expédition."
-        },
-        "founder2": {
-          "role": "Co-fondateur · Commerce & logistique",
-          "bio": "Gère la documentation d'export, les relations avec les transitaires et le pôle commercial. Dirigeait auparavant le pôle logistique d'une maison de négoce de matières premières basée à Mumbai."
-        }
-      },
-      "imageAltPrefix": "Portrait de"
-    },
-    "whyBaca": {
-      "eyebrow": "Pourquoi BACA",
-      "heading": "Quatre raisons pour lesquelles les importateurs restent avec nous.",
-      "intro": "Les équipes achats choisissent BACA quand elles veulent arrêter de gérer les urgences et commencer à planifier.",
-      "items": {
-        "traceability": {
-          "title": "Traçabilité totale",
-          "body": "Chaque lot est rattaché à une coopérative d'agriculteurs précise, une fenêtre de récolte et un résultat de laboratoire — vérifiable de votre entrepôt jusqu'au champ."
-        },
-        "quality": {
-          "title": "Qualité testée en laboratoire",
-          "body": "Contrôles ISO 22000 + HACCP à l'origine : humidité, résidus de pesticides, aflatoxines et tests microbiologiques — pas d'échantillonnage aléatoire au port."
-        },
-        "logistics": {
-          "title": "Logistique fiable",
-          "body": "Créneaux navals sous contrat et transitaires expérimentés : votre container arrive dans la fenêtre annoncée — pas « quelque part ce mois-là »."
-        },
-        "partnership": {
-          "title": "Partenariat à long terme",
-          "body": "Contrats à prix fixe et réservations de récoltes pour les acheteurs récurrents. Nous mesurons les relations en saisons de culture, pas en numéros de bon de commande."
-        }
-      }
-    }
-  },
-  "contactPage": {
-    "eyebrow": "Contactez-nous",
-    "heading": "Gamme de produits complète",
-    "subheading": "prix compétitifs et livraison ponctuelle",
-    "officeTitle": "Adresse du siège",
-    "channels": {
-      "email": "E-mail",
-      "phone": "Téléphone",
-      "whatsapp": "WhatsApp",
-      "whatsappAction": "Écrivez-nous"
-    },
-    "form": {
-      "title": "Envoyer une demande",
-      "subtitle": "Nous répondons sous 12 heures.",
-      "name": "Nom complet",
-      "email": "E-mail",
-      "country": "Pays",
-      "company": "Société",
-      "phone": "Téléphone",
-      "message": "Message",
-      "messagePlaceholder": "Décrivez-nous brièvement votre besoin — produits, volumes, destination.",
-      "submit": "Envoyer la demande",
-      "submitting": "Envoi…",
-      "success": "Merci — votre demande a bien été reçue. Nous vous recontacterons sous 12 heures.",
-      "error": "Une erreur est survenue. Veuillez réessayer ou nous écrire directement."
-    },
-    "map": {
-      "eyebrow": "Nous trouver",
-      "directions": "Itinéraire",
-      "iframeTitle": "Carte indiquant le siège social de BACA"
-    }
-  },
-  "blogsPage": {
-    "eyebrow": "Blogs",
-    "heading": "Notes sur le négoce des épices et des matières premières.",
-    "intro": "Analyses de marché, histoires d'origine et la réflexion qui guide notre sourcing et nos expéditions.",
-    "empty": "De nouveaux articles arrivent prochainement. Revenez bientôt.",
-    "minRead": "min de lecture",
-    "featured": "À la une",
-    "allArticles": "Tous les articles",
-    "related": "Poursuivre la lecture",
-    "writtenBy": "Écrit par",
-    "filterBy": "Filtrer par type",
-    "categoriesHeading": "Catégories",
-    "publishedLabel": "Publié",
-    "readTimeLabel": "Temps de lecture"
-  },
-  "notFound": {
-    "eyebrow": "404 · Page introuvable",
-    "heading": "Ce conteneur n'a jamais été expédié.",
-    "body": "Nous ne trouvons pas la page que vous cherchez. Elle a peut-être été déplacée ou le lien est incorrect. Retournez à l'accueil ou parcourez le catalogue.",
-    "ctaHome": "Retour à l'accueil",
-    "ctaProducts": "Voir les produits"
-  },
-  "galleryPage": {
-    "eyebrow": "Galerie",
-    "heading": "Le travail, les femmes et les hommes, la terre.",
-    "intro": "Au cœur de notre sourcing, de notre calibrage et de nos expéditions — de l'origine en Inde jusqu'au monde entier.",
-    "empty": "Des photos sont en cours d'ajout. Revenez bientôt."
-  },
-  "metadata": {
-    "title": "BACA — Exportateur indien d'épices, de fruits à coque et de fruits",
-    "description": "BACA est une maison d'export indienne moderne — approvisionnement traçable en épices, fruits à coque et fruits, qualité rigoureuse et expéditions internationales fiables. Certifié ISO 22000, HACCP et FSSAI."
-  },
-  "common": {
-    "enquire": "Faire une demande",
-    "viewAllCategories": "Voir toutes les catégories"
-  },
-  "languageSwitcher": {
-    "label": "Changer de langue"
-  },
-  "nav": {
-    "items": {
-      "home": {
-        "label": "Accueil"
-      },
-      "profile": {
-        "label": "Profil"
-      },
-      "products": {
-        "label": "Produits"
-      },
-      "insights": {
-        "label": "Blogs"
-      },
-      "contact": {
-        "label": "Nous contacter"
-      }
-    }
-  },
-  "header": {
-    "aria": {
-      "home": "Page d'accueil",
-      "openMenu": "Ouvrir le menu",
-      "closeMenu": "Fermer le menu",
-      "primaryNav": "Principal",
-      "mobileNav": "Mobile"
-    }
-  },
-  "hero": {
-    "headline": "Quality. Trust.<br></br><em>Delivered.</em>",
-    "body": "Une nouvelle génération de l'export indien — bâtie sur un approvisionnement traçable, une qualité rigoureuse et des partenariats qui acheminent les marchandises de manière fiable, conteneur après conteneur.",
-    "ctaProducts": "Découvrir les produits",
-    "ctaContact": "Parler à notre équipe",
-    "countries": "37 pays desservis",
-    "certs": "ISO 22000 · HACCP · FSSAI"
-  },
-  "manifesto": {
-    "eyebrow": "Notre histoire",
-    "headline": "Nous relions les producteurs indiens aux cuisines les plus exigeantes du monde — un approvisionnement <em>intentionnel</em>, et des expéditions d'une précision absolue.",
-    "body": "Deux décennies à l'origine, au Kerala, au Gujarat et en Andhra — achetant auprès des mêmes familles agricoles saison après saison, triant à la source et acheminant des conteneurs complets vers des acheteurs dans 37 pays.",
-    "imageAlt": "Des mains burinées tranchant du curcuma frais à la source en Inde — triant l'épice brute comme le font les familles agricoles de BACA depuis des générations"
-  },
-  "stats": {
-    "items": {
-      "years": "Années d'activité",
-      "countries": "Pays desservis",
-      "containers": "Conteneurs expédiés",
-      "tonnes": "Tonnes traitées / an"
-    }
-  },
-  "productPreview": {
-    "eyebrow": "Ce que nous exportons",
-    "heading": "Sourcé à l'origine, calibré pour l'export."
-  },
   "approach": {
     "eyebrow": "How we work",
     "heading": "A process you can hold us to.",
     "intro": "We built our process around one question: what would give a buyer complete peace of mind? Here is the answer.",
     "pillars": {
-      "traceability": {
-        "title": "It starts at the farm.",
-        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest."
-      },
-      "labtesting": {
-        "title": "Tested by people who do not work for us.",
-        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing."
-      },
-      "grading": {
-        "title": "What the certificate says is what arrives.",
-        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time."
+      "accountability": {
+        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close.",
+        "title": "One person answers for every shipment."
       },
       "documentation": {
-        "title": "Paperwork ready before the vessel is booked.",
-        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port."
+        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
+        "title": "Paperwork ready before the vessel is booked."
       },
-      "accountability": {
-        "title": "One person answers for every shipment.",
-        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close."
+      "grading": {
+        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
+        "title": "What the certificate says is what arrives."
+      },
+      "labtesting": {
+        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
+        "title": "Tested by people who do not work for us."
+      },
+      "traceability": {
+        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
+        "title": "It starts at the farm."
       }
     }
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Our Principles",
+    "imageAlt": "BACA — farmers and fields",
+    "imageCaption": "Direct from India's heartland",
+    "items": {
+      "farmer": {
+        "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
+        "title": "The Farmer First."
+      },
+      "partnership": {
+        "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
+        "title": "Built for the Long Run."
+      },
+      "quality": {
+        "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
+        "title": "No Shortcuts, Ever."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA was built on a single conviction: that the quality of what reaches a buyer is inseparable from the honesty of every step before it. We hold direct relationships with farming families across Kerala, Karnataka, Tamil Nadu, and Andhra Pradesh — offering fair pricing, transparent processes, and access to global markets that were once out of reach.",
+      "eyebrow": "The BACA Story",
+      "heading": "India's finest origins,",
+      "headingAccent": "delivered with integrity.",
+      "quote": "Because when the farmer thrives, everything that reaches you is better for it."
+    },
+    "principles": {
+      "eyebrow": "Our Principles",
+      "imageAlt": "BACA — farmers and fields",
+      "imageCaption": "Direct from India's heartland",
+      "items": {
+        "farmer": {
+          "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
+          "title": "The Farmer First."
+        },
+        "partnership": {
+          "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
+          "title": "Built for the Long Run."
+        },
+        "quality": {
+          "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
+          "title": "No Shortcuts, Ever."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Our Purpose",
+      "mission": {
+        "body": "To connect India's finest growing regions with the world's most discerning buyers — through traceable sourcing, honest quality, and a price that truly reflects the work behind every shipment.",
+        "title": "Mission"
+      },
+      "vision": {
+        "body": "To be India's most trusted commodity exporter — known not for volume, but for the consistency that brings the same buyers back, season after season.",
+        "title": "Vision"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "countries import Indian spices",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "farming families across India",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "of global spice production",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Tous les articles",
+    "categoriesHeading": "Catégories",
+    "empty": "De nouveaux articles arrivent prochainement. Revenez bientôt.",
+    "eyebrow": "Blogs",
+    "featured": "À la une",
+    "filterBy": "Filtrer par type",
+    "heading": "Notes sur le négoce des épices et des matières premières.",
+    "intro": "Analyses de marché, histoires d'origine et la réflexion qui guide notre sourcing et nos expéditions.",
+    "minRead": "min de lecture",
+    "publishedLabel": "Publié",
+    "readTimeLabel": "Temps de lecture",
+    "related": "Poursuivre la lecture",
+    "writtenBy": "Écrit par"
   },
   "certifications": {
     "eyebrow": "Certifications",
     "heading": "Certified for global trade.",
     "intro": "Every shipment leaves with its credentials in order.",
     "items": {
-      "fssai": {
-        "sub": "Central License"
-      },
-      "spicesBoard": {
-        "sub": "CRES · Spices Board of India"
-      },
       "apeda": {
         "sub": "Agri Export Registration"
       },
-      "iso22000": {
-        "sub": "Food Safety Management"
+      "fssai": {
+        "sub": "Central License"
       },
       "haccp": {
         "sub": "Hazard Control Protocol"
       },
       "halal": {
         "sub": "Market Access Certification"
+      },
+      "iso22000": {
+        "sub": "Food Safety Management"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
       }
     }
   },
-  "globalPresence": {
-    "eyebrow": "Portée mondiale",
-    "heading": "Des ports indiens à <em>cinq continents.</em>",
-    "body": "BACA expédie vers des importateurs, distributeurs et industriels de l'agroalimentaire en Amérique du Nord, en Europe, au Moyen-Orient, en Asie du Sud-Est et en Afrique — sur des contrats documentés et respectés dans les délais.",
-    "items": {
-      "countries": "Pays desservis",
-      "continents": "Continents desservis",
-      "repeatRate": "Taux d'acheteurs fidèles",
-      "responseTime": "Délai de réponse aux demandes"
-    }
+  "common": {
+    "enquire": "Faire une demande",
+    "viewAllCategories": "Voir toutes les catégories"
   },
-  "pullQuote": {
-    "quote": "Nous ne négocions pas des expéditions — nous honorons des contrats. Les mêmes acheteurs reviennent saison après saison parce que la qualité dans le conteneur correspond à la qualité sur le certificat, à chaque fois.",
-    "name": "Arvind Menon",
-    "title": "Directeur général, BACA",
-    "imageAlt": "Portrait du directeur général de BACA"
-  },
-  "featuredInsights": {
-    "eyebrow": "Blogs",
-    "heading": "Notes du commerce des épices et des matières premières.",
-    "allArticles": "Tous les articles"
-  },
-  "ctaBand": {
-    "eyebrow": "Discutons",
-    "heading": "Construisons <em>ensemble</em> une chaîne d'approvisionnement fiable.",
-    "body": "Dites-nous ce que vous achetez et où cela doit être expédié. Nous répondons aux demandes internationales sous 12 heures.",
-    "ctaEnquire": "Faire une demande",
-    "ctaCatalogue": "Télécharger le catalogue"
-  },
-  "footer": {
-    "description": "Une maison d'export indienne moderne pour les épices, les fruits à coque et les fruits.",
-    "backToTop": "Retour en haut",
-    "columns": {
-      "products": {
-        "title": "Produits",
-        "links": {
-          "spices": "Épices",
-          "all": "Toutes les catégories"
-        }
-      },
-      "company": {
-        "title": "Entreprise",
-        "links": {
-          "profile": "Profil",
-          "about": "À propos",
-          "approach": "Notre approche"
-        }
-      },
-      "resources": {
-        "title": "Ressources",
-        "links": {
-          "insights": "Blogs",
-          "contact": "Nous contacter"
+  "contactPage": {
+    "channels": {
+      "email": "E-mail",
+      "emailLabel": "Email us",
+      "phone": "Téléphone",
+      "phoneLabel": "Call us",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Écrivez-nous",
+      "whatsappValue": "Message us directly"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, Halal on request",
+          "label": "Certifications"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, annual contract options",
+          "label": "Pricing & volumes"
+        },
+        "samples": {
+          "detail": "Available for qualified importers",
+          "label": "Sample requests"
+        },
+        "specs": {
+          "detail": "Grade, origin, packaging, seasonality",
+          "label": "Product specifications"
         }
       }
     },
+    "eyebrow": "Get in Touch",
+    "form": {
+      "company": "Société",
+      "country": "Pays",
+      "email": "E-mail",
+      "error": "Une erreur est survenue. Veuillez réessayer ou nous écrire directement.",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez-nous brièvement votre besoin — produits, volumes, destination.",
+      "name": "Nom complet",
+      "phone": "Téléphone",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi…",
+      "subtitle": "Nous répondons sous 12 heures.",
+      "success": "Merci — votre demande a bien été reçue. Nous vous recontacterons sous 12 heures.",
+      "title": "Envoyer une demande"
+    },
+    "heading": "Send us an enquiry.",
+    "intro": {
+      "body": "Whether you're looking to source a specific product, request a sample, or discuss a long-term supply arrangement — this is the right place to start.",
+      "heading": "Tell us what you need. We'll come back to you with a clear answer."
+    },
+    "map": {
+      "directions": "Itinéraire",
+      "eyebrow": "Nous trouver",
+      "iframeTitle": "Carte indiquant le siège social de BACA"
+    },
+    "officeTitle": "Adresse du siège",
+    "promise": {
+      "body": "All international enquiries receive a reply from our trade desk within 12 hours — including weekends.",
+      "title": "12-hour response guarantee."
+    },
+    "subheading": "We respond to international enquiries within 12 hours."
+  },
+  "ctaBand": {
+    "body": "Dites-nous ce que vous achetez et où cela doit être expédié. Nous répondons aux demandes internationales sous 12 heures.",
+    "ctaCatalogue": "Télécharger le catalogue",
+    "ctaEnquire": "Faire une demande",
+    "eyebrow": "Discutons",
+    "heading": "Construisons <em>ensemble</em> une chaîne d'approvisionnement fiable."
+  },
+  "errors": {
+    "body": "Une erreur inattendue a empêché le chargement de cette page. Vous pouvez réessayer, ou revenir à l’accueil.",
+    "eyebrow": "Erreur",
+    "home": "Accueil",
+    "retry": "Réessayer",
+    "title": "Une erreur est survenue."
+  },
+  "featuredInsights": {
+    "allArticles": "Tous les articles",
+    "eyebrow": "Blogs",
+    "heading": "Notes du commerce des épices et des matières premières."
+  },
+  "footer": {
+    "backToTop": "Retour en haut",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "À propos",
+          "approach": "Notre approche",
+          "profile": "Profil"
+        },
+        "title": "Entreprise"
+      },
+      "products": {
+        "links": {
+          "all": "Toutes les catégories",
+          "spices": "Épices"
+        },
+        "title": "Produits"
+      },
+      "resources": {
+        "links": {
+          "contact": "Nous contacter",
+          "insights": "Blogs"
+        },
+        "title": "Ressources"
+      }
+    },
+    "description": "Une maison d'export indienne moderne pour les épices, les fruits à coque et les fruits.",
     "marqueeItems": [
       "L'Inde, dans chaque expédition",
       "Épices",
@@ -353,7 +267,344 @@
       "APEDA"
     ]
   },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Founder {index}"
+    },
+    "eyebrow": "From the Founders",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "My father used to say — never sell what you would not serve at your own table. That has been our rule since the very first shipment. I have walked the same fields in Kerala for over two decades, and I still visit before we commit to a grower. You cannot build real trust from a desk.",
+        "role": "Co-founder · Sourcing & Quality"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "In this trade, a delayed document is a broken promise. When a container sits at port waiting on paperwork, it is not a logistics problem — it is a trust problem. Everything we built around documentation came from watching that happen once, and deciding it would never happen to our buyers.",
+        "role": "Co-founder · Trade & Logistics"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "India grows some of the finest spices in the world. The farmers I work with have spent their whole lives perfecting what they do. Our job is simply to make sure that effort reaches the buyer intact — honestly graded, honestly packed, honestly shipped. Nothing more, nothing less.",
+        "role": "Director · Quality & Grower Relations"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "Des photos sont en cours d'ajout. Revenez bientôt.",
+    "eyebrow": "Galerie",
+    "heading": "Le travail, les femmes et les hommes, la terre.",
+    "intro": "Au cœur de notre sourcing, de notre calibrage et de nos expéditions — de l'origine en Inde jusqu'au monde entier."
+  },
+  "globalPresence": {
+    "body": "BACA expédie vers des importateurs, distributeurs et industriels de l'agroalimentaire en Amérique du Nord, en Europe, au Moyen-Orient, en Asie du Sud-Est et en Afrique — sur des contrats documentés et respectés dans les délais.",
+    "eyebrow": "Portée mondiale",
+    "heading": "Des ports indiens à <em>cinq continents.</em>",
+    "items": {
+      "continents": "Continents desservis",
+      "countries": "Pays desservis",
+      "repeatRate": "Taux d'acheteurs fidèles",
+      "responseTime": "Délai de réponse aux demandes"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Fermer le menu",
+      "home": "Page d'accueil",
+      "mobileNav": "Mobile",
+      "openMenu": "Ouvrir le menu",
+      "primaryNav": "Principal"
+    }
+  },
+  "hero": {
+    "body": "Une nouvelle génération de l'export indien — bâtie sur un approvisionnement traçable, une qualité rigoureuse et des partenariats qui acheminent les marchandises de manière fiable, conteneur après conteneur.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 pays desservis",
+    "ctaContact": "Parler à notre équipe",
+    "ctaProducts": "Découvrir les produits",
+    "eyebrow": "Épices et produits agricoles premium · Origines indiennes de confiance",
+    "headline": "Quality. Trust.<br></br><em>Delivered.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Go to slide {index}"
+    },
+    "slides": {
+      "cardamom": "Green Cardamom · Kerala",
+      "farm": "Direct from the farm",
+      "origin": "Sourced at origin · India",
+      "pepper": "Malabar Black Pepper",
+      "turmeric": "Turmeric Fingers · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Changer de langue"
+  },
+  "manifesto": {
+    "body": "Deux décennies à l'origine, au Kerala, au Gujarat et en Andhra — achetant auprès des mêmes familles agricoles saison après saison, triant à la source et acheminant des conteneurs complets vers des acheteurs dans 37 pays.",
+    "eyebrow": "Notre histoire",
+    "headline": "Nous relions les producteurs indiens aux cuisines les plus exigeantes du monde — un approvisionnement <em>intentionnel</em>, et des expéditions d'une précision absolue.",
+    "imageAlt": "Des mains burinées tranchant du curcuma frais à la source en Inde — triant l'épice brute comme le font les familles agricoles de BACA depuis des générations"
+  },
+  "metadata": {
+    "description": "BACA est une maison d'export indienne moderne — approvisionnement traçable en épices, fruits à coque et fruits, qualité rigoureuse et expéditions internationales fiables. Certifié ISO 22000, HACCP et FSSAI.",
+    "title": "BACA — Exportateur indien d'épices, de fruits à coque et de fruits"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Nous contacter"
+      },
+      "home": {
+        "label": "Accueil"
+      },
+      "insights": {
+        "label": "Blogs"
+      },
+      "products": {
+        "label": "Produits"
+      },
+      "profile": {
+        "label": "Profil"
+      }
+    }
+  },
+  "notFound": {
+    "body": "Nous ne trouvons pas la page que vous cherchez. Elle a peut-être été déplacée ou le lien est incorrect. Retournez à l'accueil ou parcourez le catalogue.",
+    "ctaHome": "Retour à l'accueil",
+    "ctaProducts": "Voir les produits",
+    "eyebrow": "404 · Page introuvable",
+    "heading": "Ce conteneur n'a jamais été expédié."
+  },
+  "productPreview": {
+    "eyebrow": "Ce que nous exportons",
+    "heading": "Sourcé à l'origine, calibré pour l'export."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Catégories",
+      "harvest": "Récolte",
+      "originRegions": "Régions d’origine",
+      "pairsNaturally": "S’accorde naturellement",
+      "peak": "Pic",
+      "products": "Produits",
+      "requestQuote": "Demander un devis",
+      "requestSample": "Demander un échantillon",
+      "seasonality": "Saisonnalité",
+      "seasonalityHint": "Récolte / pic de disponibilité",
+      "specifications": "Spécifications"
+    },
+    "empty": "Notre catalogue est en cours de mise à jour. Revenez bientôt.",
+    "eyebrow": "Notre catalogue",
+    "heading": "Tout ce que nous exportons, sourcé à l'origine.",
+    "intro": "Épices, fruits à coque et fruits — triés, documentés et expédiés vers des acheteurs dans 37 pays."
+  },
+  "profilePage": {
+    "eyebrow": "À propos de BACA",
+    "founders": {
+      "eyebrow": "Fondateurs",
+      "heading": "Les personnes derrière BACA.",
+      "imageAltPrefix": "Portrait de",
+      "intro": "BACA est dirigée par deux frères et sœurs qui ont bâti l'entreprise à partir de deux décennies de terrain dans le commerce indien des épices.",
+      "items": {
+        "founder1": {
+          "bio": "Deux décennies d'achat direct auprès des coopératives du Kerala et d'Andhra. Supervise les relations avec les producteurs, le classement à l'origine et les programmes d'analyse en laboratoire pour chaque expédition.",
+          "role": "Co-fondateur · Sourcing & qualité"
+        },
+        "founder2": {
+          "bio": "Gère la documentation d'export, les relations avec les transitaires et le pôle commercial. Dirigeait auparavant le pôle logistique d'une maison de négoce de matières premières basée à Mumbai.",
+          "role": "Co-fondateur · Commerce & logistique"
+        }
+      }
+    },
+    "heading": "Une maison d'export indienne familiale, pensée pour le long terme.",
+    "howWeWork": {
+      "eyebrow": "Comment nous travaillons",
+      "heading": "Du sol à la livraison, en quatre étapes disciplinées.",
+      "intro": "Chaque container qui quitte nos portes a gagné sa place selon la même séquence.",
+      "steps": {
+        "document": {
+          "body": "Certificats phytosanitaires, codes SH, Incoterms et papiers d'origine sont émis avant le départ du navire afin que le dédouanement ne retarde jamais une expédition au port de destination.",
+          "title": "Documenter"
+        },
+        "grade": {
+          "body": "Chaque lot est trié à la main, analysé en laboratoire pour l'humidité, les résidus de pesticides et les aflatoxines, et documenté selon les protocoles ISO 22000 et HACCP avant même d'entrer dans un container.",
+          "title": "Classer"
+        },
+        "ship": {
+          "body": "Conditionnés à l'origine et expédiés en containers complets documentés avec des transitaires sous contrat — mêmes navires, mêmes lignes, mêmes fenêtres d'arrivée sur lesquelles votre chaîne d'approvisionnement peut planifier.",
+          "title": "Expédier"
+        },
+        "source": {
+          "body": "Nous achetons directement auprès des coopératives d'agriculteurs dans les régions d'origine de chaque culture — cardamome du Kerala, piment de Guntur, poivre du Malabar — pour une traçabilité totale du champ au transitaire.",
+          "title": "Sourcer"
+        }
+      }
+    },
+    "intro": "Deux décennies à l'origine au Kerala, au Gujarat et en Andhra — achats auprès des mêmes familles d'agriculteurs saison après saison, tri à l'origine, et expéditions de containers complets vers des acheteurs dans 37 pays.",
+    "visionMission": {
+      "eyebrow": "Vision & mission",
+      "heading": "Ce vers quoi nous travaillons — et comment.",
+      "mission": {
+        "body": "Connecter les petits exploitants en Inde aux acheteurs exigeants à l'étranger par un contrôle qualité rigoureux, une documentation transparente et des relations d'expédition mesurées en années.",
+        "title": "Mission"
+      },
+      "vision": {
+        "body": "Un monde où l'agriculture indienne se négocie au même niveau que toute origine premium — traçable, dûment documentée, et valorisée à hauteur du travail fourni au champ.",
+        "title": "Vision"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA est une maison d'export indienne moderne spécialisée dans les épices, les fruits à coque et les fruits. Nous travaillons directement avec des familles d'agriculteurs dans les régions de culture traditionnelles de l'Inde, classons et testons en laboratoire chaque lot à l'origine, et expédions des containers complets documentés à des importateurs, distributeurs et détaillants à travers le monde. L'équipe cumule plus de deux décennies d'expérience en sourcing, classement et logistique ; l'entreprise est la formalisation de cette expérience sous une marque unique.",
+      "eyebrow": "Qui nous sommes",
+      "heading": "Une maison d'export bâtie sur des relations."
+    },
+    "whyBaca": {
+      "eyebrow": "Pourquoi BACA",
+      "heading": "Quatre raisons pour lesquelles les importateurs restent avec nous.",
+      "intro": "Les équipes achats choisissent BACA quand elles veulent arrêter de gérer les urgences et commencer à planifier.",
+      "items": {
+        "logistics": {
+          "body": "Créneaux navals sous contrat et transitaires expérimentés : votre container arrive dans la fenêtre annoncée — pas « quelque part ce mois-là ».",
+          "title": "Logistique fiable"
+        },
+        "partnership": {
+          "body": "Contrats à prix fixe et réservations de récoltes pour les acheteurs récurrents. Nous mesurons les relations en saisons de culture, pas en numéros de bon de commande.",
+          "title": "Partenariat à long terme"
+        },
+        "quality": {
+          "body": "Contrôles ISO 22000 + HACCP à l'origine : humidité, résidus de pesticides, aflatoxines et tests microbiologiques — pas d'échantillonnage aléatoire au port.",
+          "title": "Qualité testée en laboratoire"
+        },
+        "traceability": {
+          "body": "Chaque lot est rattaché à une coopérative d'agriculteurs précise, une fenêtre de récolte et un résultat de laboratoire — vérifiable de votre entrepôt jusqu'au champ.",
+          "title": "Traçabilité totale"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "Portrait du directeur général de BACA",
+    "name": "Arvind Menon",
+    "quote": "Nous ne négocions pas des expéditions — nous honorons des contrats. Les mêmes acheteurs reviennent saison après saison parce que la qualité dans le conteneur correspond à la qualité sur le certificat, à chaque fois.",
+    "title": "Directeur général, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Conteneurs expédiés",
+      "countries": "Pays desservis",
+      "tonnes": "Tonnes traitées / an",
+      "years": "Années d'activité"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Page {page}",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "body": "Sourced from India's finest growing regions — tested, certified, and shipped with full traceability.",
+    "card": {
+      "info": "Info",
+      "requestQuote": "Request quote"
+    },
+    "eyebrow": "What We Offer",
+    "heading": "Our Product Range",
+    "viewAll": "View all products →"
+  },
   "whatsapp": {
     "ariaLabel": "Discuter avec BACA sur WhatsApp"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Certifications",
+      "heading": "Certified for global trade.",
+      "intro": "Every shipment leaves with its credentials in order.",
+      "items": {
+        "apeda": {
+          "authority": "Export Registration",
+          "name": "APEDA",
+          "sub": "Agri & Processed Food Products Export Development Authority."
+        },
+        "fssai": {
+          "authority": "Central License",
+          "name": "FSSAI",
+          "sub": "Mandatory food-safety clearance for all Indian food exports."
+        },
+        "haccp": {
+          "authority": "Hazard Control Protocol",
+          "name": "HACCP",
+          "sub": "Systematic preventive approach to biological and chemical hazards."
+        },
+        "halal": {
+          "authority": "Market Access Certification",
+          "name": "Halal",
+          "sub": "Enables trade to markets requiring halal-certified product."
+        },
+        "iso22000": {
+          "authority": "Food Safety Mgmt",
+          "name": "ISO 22000",
+          "sub": "International standard for food-safety management systems."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Government registration for certified spice exporters."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Why BACA",
+      "heading": "Four reasons importers stay with us.",
+      "intro": "Procurement teams choose BACA when they want to stop firefighting and start planning.",
+      "items": {
+        "logistics": {
+          "body": "Contracted vessel slots and seasoned forwarders mean your container arrives in the window we quoted — not 'sometime that month.'",
+          "title": "Reliable Logistics"
+        },
+        "partnership": {
+          "body": "Fixed-price contracts and crop reservations for repeat buyers. We measure relationships in growing seasons, not single purchase order numbers.",
+          "title": "Long-Term Partnership"
+        },
+        "quality": {
+          "body": "ISO 22000 + HACCP-grade controls at origin: moisture, pesticide residue, aflatoxin, and microbiological tests — not random sampling at port.",
+          "title": "Lab-Tested Quality"
+        },
+        "traceability": {
+          "body": "Every lot is tied to a specific grower cooperative, harvest window, and lab result — auditable from your warehouse all the way back to the field.",
+          "title": "Full Traceability"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "How We Work",
+      "heading": "A process you can hold us to.",
+      "items": {
+        "certificate": {
+          "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
+          "title": "What the certificate says is what arrives."
+        },
+        "contact": {
+          "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens.",
+          "title": "One person answers for every shipment."
+        },
+        "farm": {
+          "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
+          "title": "It starts at the farm."
+        },
+        "lab": {
+          "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
+          "title": "Tested by people who do not work for us."
+        },
+        "paperwork": {
+          "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
+          "title": "Paperwork ready before the vessel is booked."
+        }
+      },
+      "stepLabel": "Step"
+    }
   }
 }

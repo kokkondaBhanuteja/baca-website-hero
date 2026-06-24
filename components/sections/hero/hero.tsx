@@ -20,8 +20,7 @@ export async function Hero() {
               data-hero-reveal
               className="mb-8 font-mono text-[0.72rem] uppercase tracking-[0.35em] text-ink/70"
             >
-              Premium Spices &amp; Agri Produce &nbsp;·&nbsp; Trusted Indian
-              Origins
+              {t('eyebrow')}
             </p>
 
             {/* Headline */}
