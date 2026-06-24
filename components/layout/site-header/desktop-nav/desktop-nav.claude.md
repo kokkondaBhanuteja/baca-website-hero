@@ -31,8 +31,10 @@ Used In:
 Props:
 
 - `navItems: NavItem[]` — array of nav items with optional `children`.
-- `scrolled: boolean` — true when the header is in its solid state; controls
-  text-color tokens (`text-ink/*` solid, `text-paper/*` over-hero).
+- `onDark?: boolean` (default `false`) — light foreground for the forest-green
+  scrolled-over-hero bar. When true, the top-level link + chevron colors flip to
+  `text-paper/*`; when false they use the dark `text-[#2E0F13]/*`. The hover dropdown
+  panel stays a `bg-paper` card (dark text) regardless, so it reads on any bar.
 
 Business Logic:
 

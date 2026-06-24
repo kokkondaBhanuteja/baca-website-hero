@@ -19,7 +19,9 @@ scroll-fx/              Home-only [data-reveal]/[data-parallax] GSAP driver.
 skeleton/               Animated placeholder block — used by every loading.tsx.
 whatsapp-icon/          Inline SVG of the WhatsApp brand glyph (lucide-react has none).
                         Used by whatsapp-fab and the contact page channel row.
-wordmark-media/         Video-based wordmark clip (the hero BACA wordmark with India film).
+wordmark-media/         Video-based wordmark clip (single looping film through the letters).
+wordmark-mosaic/        Per-letter image fill (each BACA letter = a different texture) +
+                        optional mirror reflection. The active home hero showpiece.
 wordmark-slideshow/     Image-based wordmark montage (footer BACA + 404 "404"); GSAP timeline
                         in sibling use-wordmark-slideshow.ts hook.
 wordmark-clip.ts        Shared SVG text-anchor + x-position constants (no folder — pure types).
