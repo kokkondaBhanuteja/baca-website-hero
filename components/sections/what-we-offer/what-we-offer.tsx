@@ -1,4 +1,4 @@
-import { getLocale } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 import type { Locale } from '@/constants/i18n'
 import { Route } from '@/constants/routes'
@@ -8,6 +8,7 @@ import { WhatWeOfferClient } from './what-we-offer-client'
 
 export async function WhatWeOffer() {
   const locale = (await getLocale()) as Locale
+  const t = await getTranslations('whatWeOffer')
   const categories = await getCategoriesForLocale(locale)
   if (categories.length === 0) return null
 
@@ -24,24 +25,23 @@ export async function WhatWeOffer() {
     <section className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
         {/* Header */}
-        <div className="mb-14 flex flex-col gap-4 border-b border-[#2E0F13]/10 pb-10 sm:flex-row sm:items-end sm:justify-between">
+        <div className="mb-14 flex flex-col gap-4 border-b border-ink/10 pb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="mb-3 font-mono text-[0.62rem] uppercase tracking-[0.42em] text-[#2E0F13]/40">
-              What We Offer
+            <p className="mb-3 font-mono text-[0.62rem] uppercase tracking-[0.42em] text-ink/40">
+              {t('eyebrow')}
             </p>
-            <h2 className="font-heading text-[2.8rem] font-light leading-[1.05] text-[#1A0B07] sm:text-[3.8rem]">
-              Our Product Range
+            <h2 className="font-heading text-[2.8rem] font-light leading-[1.05] text-ink sm:text-[3.8rem]">
+              {t('heading')}
             </h2>
-            <p className="mt-3 max-w-md text-[0.9rem] leading-[1.9] text-[#1A0B07]/52">
-              Sourced from India&apos;s finest growing regions — tested,
-              certified, and shipped with full traceability.
+            <p className="mt-3 max-w-md text-[0.9rem] leading-[1.9] text-ink/55">
+              {t('body')}
             </p>
           </div>
           <Link
             href={Route.Products}
-            className="shrink-0 pb-1 font-mono text-[0.6rem] uppercase tracking-[0.22em] text-[#1A0B07]/38 transition-colors hover:text-[#1A0B07]"
+            className="shrink-0 pb-1 font-mono text-[0.6rem] uppercase tracking-[0.22em] text-ink/40 transition-colors hover:text-ink"
           >
-            View all products →
+            {t('viewAll')}
           </Link>
         </div>
 

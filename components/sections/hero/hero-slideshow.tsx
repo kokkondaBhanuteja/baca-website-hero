@@ -2,34 +2,21 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const SLIDES = [
-  {
-    src: '/images/hero-spice.jpg',
-    caption: 'Sourced at origin · India',
-  },
-  {
-    src: '/images/who-we-are.jpg',
-    caption: 'Direct from the farm',
-  },
-  {
-    src: '/images/product-green-cardamom.jpg',
-    caption: 'Green Cardamom · Kerala',
-  },
-  {
-    src: '/images/product-malabar-black-pepper.jpg',
-    caption: 'Malabar Black Pepper',
-  },
-  {
-    src: '/images/product-turmeric-fingers.jpg',
-    caption: 'Turmeric Fingers · Andhra Pradesh',
-  },
-]
+  { src: '/images/hero-spice.jpg', captionKey: 'origin' },
+  { src: '/images/who-we-are.jpg', captionKey: 'farm' },
+  { src: '/images/product-green-cardamom.jpg', captionKey: 'cardamom' },
+  { src: '/images/product-malabar-black-pepper.jpg', captionKey: 'pepper' },
+  { src: '/images/product-turmeric-fingers.jpg', captionKey: 'turmeric' },
+] as const
 
 const INTERVAL_MS = 4500
 const FADE_MS = 700
 
 export function HeroSlideshow() {
+  const t = useTranslations('heroSlideshow')
   const [current, setCurrent] = useState(0)
   const [fading, setFading] = useState(false)
 
@@ -56,25 +43,30 @@ export function HeroSlideshow() {
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* Slides */}
-      {SLIDES.map((slide, idx) => (
-        <div
-          key={slide.src}
-          className={`absolute inset-0 transition-opacity ease-in-out ${
-            idx === current ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{ transitionDuration: `${FADE_MS}ms` }}
-          aria-hidden={idx !== current}
-        >
-          <Image
-            src={slide.src}
-            alt={slide.caption}
-            fill
-            className="object-cover object-center"
-            priority={idx === 0}
-            sizes="50vw"
-          />
-        </div>
-      ))}
+      {SLIDES.map((slide, idx) => {
+        const caption = t(
+          `slides.${slide.captionKey}` as Parameters<typeof t>[0],
+        )
+        return (
+          <div
+            key={slide.src}
+            className={`absolute inset-0 transition-opacity ease-in-out ${
+              idx === current ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ transitionDuration: `${FADE_MS}ms` }}
+            aria-hidden={idx !== current}
+          >
+            <Image
+              src={slide.src}
+              alt={caption}
+              fill
+              className="object-cover object-center"
+              priority={idx === 0}
+              sizes="50vw"
+            />
+          </div>
+        )
+      })}
 
       {/* Bottom gradient + caption */}
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest/80 via-forest/30 to-transparent px-8 pb-8 pt-24">
@@ -83,7 +75,7 @@ export function HeroSlideshow() {
             fading ? 'opacity-0' : 'opacity-100'
           }`}
         >
-          {SLIDES[current].caption}
+          {t(`slides.${SLIDES[current].captionKey}` as Parameters<typeof t>[0])}
         </p>
       </div>
 
@@ -93,7 +85,7 @@ export function HeroSlideshow() {
           <button
             key={idx}
             onClick={() => goTo(idx)}
-            aria-label={`Go to slide ${idx + 1}`}
+            aria-label={t('aria.goToSlide', { index: idx + 1 })}
             className={`rounded-full transition-all duration-400 ${
               idx === current
                 ? 'h-1.5 w-7 bg-white'

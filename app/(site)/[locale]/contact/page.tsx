@@ -11,6 +11,8 @@ import { SiteFooter } from '@/components/layout/site-footer'
 
 type PageParams = { params: Promise<{ locale: string }> }
 
+const EXPECT_KEYS = ['specs', 'pricing', 'certifications', 'samples'] as const
+
 export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
@@ -22,33 +24,37 @@ export async function generateMetadata({
   return { title: `${t('heading')} — BACA`, description: t('subheading') }
 }
 
-const QUICK_CHANNELS = [
-  {
-    icon: Mail,
-    label: 'Email us',
-    value: CONTACT.email,
-    href: CONTACT.emailHref,
-    external: false,
-  },
-  {
-    icon: Phone,
-    label: 'Call us',
-    value: CONTACT.phoneDisplay,
-    href: CONTACT.phoneHref,
-    external: false,
-  },
-  {
-    icon: MessageCircle,
-    label: 'WhatsApp',
-    value: 'Message us directly',
-    href: CONTACT.whatsappUrl,
-    external: true,
-  },
-] as const
-
 export default async function ContactPage({ params }: PageParams) {
   const { locale } = await params
   setRequestLocale(locale as Locale)
+  const t = await getTranslations('contactPage')
+
+  const quickChannels = [
+    {
+      key: 'email',
+      icon: Mail,
+      label: t('channels.emailLabel'),
+      value: CONTACT.email,
+      href: CONTACT.emailHref,
+      external: false,
+    },
+    {
+      key: 'phone',
+      icon: Phone,
+      label: t('channels.phoneLabel'),
+      value: CONTACT.phoneDisplay,
+      href: CONTACT.phoneHref,
+      external: false,
+    },
+    {
+      key: 'whatsapp',
+      icon: MessageCircle,
+      label: t('channels.whatsapp'),
+      value: t('channels.whatsappValue'),
+      href: CONTACT.whatsappUrl,
+      external: true,
+    },
+  ] as const
 
   return (
     <>
@@ -58,20 +64,20 @@ export default async function ContactPage({ params }: PageParams) {
         <div className="border-b border-ink/8 bg-white py-12 sm:py-16">
           <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
             <p className="mb-4 font-mono text-[0.78rem] uppercase tracking-[0.35em] text-ink">
-              Get in Touch
+              {t('eyebrow')}
             </p>
 
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <h1 className="font-heading text-[2.8rem] font-light leading-[1.08] text-ink sm:text-[3.6rem]">
-                Send us an enquiry.
+                {t('heading')}
               </h1>
 
               {/* Quick-contact pills */}
               <div className="flex flex-wrap gap-2 sm:shrink-0">
-                {QUICK_CHANNELS.map(
-                  ({ icon: Icon, label, value, href, external }) => (
+                {quickChannels.map(
+                  ({ key, icon: Icon, label, value, href, external }) => (
                     <a
-                      key={label}
+                      key={key}
                       href={href}
                       target={external ? '_blank' : undefined}
                       rel={external ? 'noopener noreferrer' : undefined}
@@ -102,13 +108,10 @@ export default async function ContactPage({ params }: PageParams) {
               <div className="flex flex-col gap-8">
                 <div>
                   <p className="font-heading text-[1.5rem] font-light leading-[1.55] text-ink sm:text-[1.7rem]">
-                    Tell us what you need. We&apos;ll come back to you with a
-                    clear answer.
+                    {t('intro.heading')}
                   </p>
                   <p className="mt-4 text-[0.95rem] leading-[1.85] text-ink/75">
-                    Whether you&apos;re looking to source a specific product,
-                    request a sample, or discuss a long-term supply arrangement
-                    — this is the right place to start.
+                    {t('intro.body')}
                   </p>
                 </div>
 
@@ -119,44 +122,34 @@ export default async function ContactPage({ params }: PageParams) {
                   </div>
                   <div>
                     <p className="font-heading text-[1.05rem] font-light text-ink">
-                      12-hour response guarantee.
+                      {t('promise.title')}
                     </p>
                     <p className="mt-1 text-[0.85rem] leading-[1.7] text-ink/70">
-                      All international enquiries receive a reply from our trade
-                      desk within 12 hours — including weekends.
+                      {t('promise.body')}
                     </p>
                   </div>
                 </div>
 
                 {/* What to expect list */}
                 <div className="divide-y divide-ink/8 border-t border-ink/8">
-                  {[
-                    {
-                      label: 'Product specifications',
-                      detail: 'Grade, origin, packaging, seasonality',
-                    },
-                    {
-                      label: 'Pricing & volumes',
-                      detail: 'FOB / CIF, MOQ, annual contract options',
-                    },
-                    {
-                      label: 'Certifications',
-                      detail: 'ISO 22000, HACCP, FSSAI, Halal on request',
-                    },
-                    {
-                      label: 'Sample requests',
-                      detail: 'Available for qualified importers',
-                    },
-                  ].map((item) => (
+                  {EXPECT_KEYS.map((expectKey) => (
                     <div
-                      key={item.label}
+                      key={expectKey}
                       className="flex items-start justify-between gap-4 py-3.5"
                     >
                       <p className="text-[0.88rem] font-medium text-ink">
-                        {item.label}
+                        {t(
+                          `expect.items.${expectKey}.label` as Parameters<
+                            typeof t
+                          >[0],
+                        )}
                       </p>
                       <p className="text-right text-[0.82rem] leading-[1.5] text-ink/60">
-                        {item.detail}
+                        {t(
+                          `expect.items.${expectKey}.detail` as Parameters<
+                            typeof t
+                          >[0],
+                        )}
                       </p>
                     </div>
                   ))}
