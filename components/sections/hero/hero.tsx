@@ -18,7 +18,7 @@ export async function Hero() {
   return (
     <section className="relative bg-white">
       <HeroEntry>
-        <div className="grid min-h-[100svh] grid-cols-1 pt-header-base lg:grid-cols-2">
+        <div className="grid min-h-[100svh] grid-cols-1 pt-header-base lg:grid-cols-[1fr_1.35fr]">
           {/* ── Left: hero content ── */}
           <div className="flex flex-col justify-center px-5 py-16 sm:px-8 lg:px-12 xl:px-16">
             {/* Eyebrow */}
@@ -80,7 +80,7 @@ export async function Hero() {
           {/* ── Right: BACA wordmark with ocean film through the letters ── */}
           <div
             data-hero-reveal
-            className="relative hidden items-center lg:flex lg:px-10 lg:pl-3 xl:px-14 xl:pl-4"
+            className="relative hidden items-center lg:flex lg:pl-3 lg:pr-6 xl:pl-4 xl:pr-10"
           >
             <WordmarkMedia
               text={SITE.brand}
