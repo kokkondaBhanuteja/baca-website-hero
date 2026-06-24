@@ -32,7 +32,14 @@ import type { NavItem } from '@/components/layout/site-header/nav-types'
  *   - Click outside closes.
  *   - Only one submenu open at a time.
  */
-export function SiteHeaderDesktopNav({ navItems }: { navItems: NavItem[] }) {
+export function SiteHeaderDesktopNav({
+  navItems,
+  onDark = false,
+}: {
+  navItems: NavItem[]
+  /** Light foreground for the forest-green (scrolled-over-hero) bar. */
+  onDark?: boolean
+}) {
   const [openKey, setOpenKey] = useState<string | null>(null)
   const navRef = useRef<HTMLElement | null>(null)
   const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({})
@@ -40,6 +47,15 @@ export function SiteHeaderDesktopNav({ navItems }: { navItems: NavItem[] }) {
   const tHeader = useTranslations('header')
 
   const close = useCallback(() => setOpenKey(null), [])
+
+  // Foreground colors flip to light on the forest-green scrolled bar; the hover
+  // dropdown panel below stays a paper card (dark text) on any bar.
+  const linkColor = onDark
+    ? 'text-paper/80 hover:text-paper'
+    : 'text-[#2E0F13]/80 hover:text-[#2E0F13]'
+  const chevronColor = onDark
+    ? 'text-paper/70 hover:text-paper'
+    : 'text-[#2E0F13]/60 hover:text-[#2E0F13]'
 
   // Click outside closes the open submenu.
   useEffect(() => {
@@ -96,7 +112,7 @@ export function SiteHeaderDesktopNav({ navItems }: { navItems: NavItem[] }) {
             <Link
               key={item.key}
               href={item.href}
-              className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-[#2E0F13]/80 transition-colors hover:text-[#2E0F13]"
+              className={`flex items-center gap-1 rounded-full px-3 py-2 text-sm transition-colors ${linkColor}`}
             >
               {item.label}
             </Link>
@@ -114,7 +130,7 @@ export function SiteHeaderDesktopNav({ navItems }: { navItems: NavItem[] }) {
                 /blogs, /profile etc., AND so Cmd-click opens in a new tab. */}
             <Link
               href={item.href}
-              className="rounded-full py-2 ps-3 pe-1 text-sm text-[#2E0F13]/80 transition-colors hover:text-[#2E0F13]"
+              className={`rounded-full py-2 ps-3 pe-1 text-sm transition-colors ${linkColor}`}
             >
               {item.label}
             </Link>
@@ -131,7 +147,7 @@ export function SiteHeaderDesktopNav({ navItems }: { navItems: NavItem[] }) {
               aria-label={`${item.label} submenu`}
               onClick={() => setOpenKey(isOpen ? null : item.key)}
               onKeyDown={(event) => onTriggerKeyDown(event, item.key)}
-              className="inline-flex h-7 w-6 items-center justify-center rounded-full text-[#2E0F13]/60 transition-colors hover:text-[#2E0F13]"
+              className={`inline-flex h-7 w-6 items-center justify-center rounded-full transition-colors ${chevronColor}`}
             >
               <ChevronDown
                 className={`h-3.5 w-3.5 transition-transform ${

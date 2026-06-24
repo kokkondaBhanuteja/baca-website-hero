@@ -45,12 +45,15 @@ export function SiteHeaderClient({
   const mobileTriggerRef = useRef<HTMLButtonElement | null>(null)
 
   // Inner pages sit on a light background, so the header must show its solid
-  // (dark-on-paper) treatment immediately rather than the over-hero transparent one.
+  // (cream-on-paper) treatment immediately rather than the over-hero transparent one.
   const scrolled = forceSolid || isScrolled
-  // Foreground (text/icon) treatment is decoupled from the background: a
-  // `lightHero` page wants DARK text even while the bar is transparent over its
-  // light hero. So text goes dark whenever scrolled OR the hero is light.
-  const textDark = scrolled || lightHero
+  // Home (lightHero) scrolled past the hero → the bar becomes a deep forest-green
+  // block for an immersive transition. At the top it stays transparent and blends
+  // into the light hero; inner pages (forceSolid) keep the cream bar — never forest.
+  const onForest = lightHero && isScrolled
+  // Light foreground (text/icons) is used ONLY on the forest bar. Everywhere else
+  // (transparent-over-light-hero, cream inner-page bar) the foreground stays dark.
+  const onDark = onForest
 
   const tNav = useTranslations('nav')
   const tCommon = useTranslations('common')
@@ -130,9 +133,11 @@ export function SiteHeaderClient({
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-          scrolled
+          forceSolid
             ? 'bg-cream border-b border-[#2E0F13]/12'
-            : 'bg-white border-b border-transparent'
+            : onForest
+              ? 'bg-forest border-b border-forest'
+              : 'bg-transparent border-b border-transparent'
         }`}
       >
         <div
@@ -147,7 +152,9 @@ export function SiteHeaderClient({
             aria-label={tHeader('aria.home')}
           >
             <span
-              className={`font-heading font-medium tracking-tight text-[#2E0F13] transition-all duration-500 ${
+              className={`font-heading font-medium tracking-tight transition-all duration-500 ${
+                onDark ? 'text-lime' : 'text-[#2E0F13]'
+              } ${
                 scrolled ? 'text-3xl sm:text-2xl' : 'text-[2.8rem] sm:text-4xl'
               }`}
             >
@@ -155,15 +162,22 @@ export function SiteHeaderClient({
             </span>
           </Link>
 
-          <SiteHeaderDesktopNav navItems={navItems} />
+          <SiteHeaderDesktopNav navItems={navItems} onDark={onDark} />
 
           {/* Right actions */}
           <div className="flex items-center gap-3 lg:justify-self-end">
-            <LanguageSwitcher tone="ink" className="hidden md:inline-flex" />
+            <LanguageSwitcher
+              tone={onDark ? 'paper' : 'ink'}
+              className="hidden md:inline-flex"
+            />
             <Link
               href={Route.Contact}
               data-cursor="fill"
-              className="hidden rounded-full bg-forest px-5 py-2.5 text-sm font-medium text-lime transition-colors hover:bg-ink sm:inline-flex"
+              className={`hidden rounded-full px-5 py-2.5 text-sm font-medium transition-colors sm:inline-flex ${
+                onDark
+                  ? 'bg-lime text-forest hover:bg-paper'
+                  : 'bg-forest text-lime hover:bg-ink'
+              }`}
             >
               {tCommon('enquire')}
             </Link>
@@ -174,7 +188,11 @@ export function SiteHeaderClient({
               aria-label={tHeader('aria.openMenu')}
               aria-haspopup="dialog"
               aria-expanded={isMobileOpen}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#2E0F13]/40 text-[#2E0F13] transition-colors lg:hidden"
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors lg:hidden ${
+                onDark
+                  ? 'border-paper/40 text-paper'
+                  : 'border-[#2E0F13]/40 text-[#2E0F13]'
+              }`}
             >
               <Menu className="h-5 w-5" />
             </button>
