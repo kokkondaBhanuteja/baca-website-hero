@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowUp } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { SITE, CERT_MARKS } from '@/constants/site'
 import { CONTACT } from '@/constants/contact'
@@ -12,43 +13,87 @@ interface SiteFooterProps {
   hideContactStrip?: boolean
 }
 
-const COLS = [
-  {
-    title: 'Products',
-    items: [
-      { label: 'All Products', href: Route.Products, isLink: true },
-      { label: 'Spices', href: Route.Products, isLink: true },
-      { label: 'Nuts & Seeds', href: Route.Products, isLink: true },
-      { label: 'Gallery', href: Route.Gallery, isLink: true },
-    ],
-  },
-  {
-    title: 'Company',
-    items: [
-      { label: 'About BACA', href: Route.Home, isLink: true },
-      { label: 'Insights', href: Route.Blogs, isLink: true },
-      { label: 'Contact', href: Route.Contact, isLink: true },
-    ],
-  },
-  {
-    title: 'Reach Us',
-    items: [
-      { label: CONTACT.email, href: CONTACT.emailHref, isLink: true },
-      { label: CONTACT.phoneDisplay, href: CONTACT.phoneHref, isLink: true },
-      { label: 'WhatsApp', href: CONTACT.whatsappUrl, isLink: true },
-    ],
-  },
-  {
-    title: 'Certified',
-    items: [
-      ...CERT_MARKS.map((c) => ({ label: c, href: '', isLink: false })),
-      { label: 'Spices Board CRES', href: '', isLink: false },
-    ],
-  },
-] as const
+interface ColItem {
+  label: string
+  href: string
+  isLink: boolean
+}
+
+interface Col {
+  title: string
+  items: ColItem[]
+}
 
 export function SiteFooter({ hideContactStrip = false }: SiteFooterProps = {}) {
+  const t = useTranslations('footer')
   const year = new Date().getFullYear()
+
+  const cols: Col[] = [
+    {
+      title: t('columns.products.title'),
+      items: [
+        {
+          label: t('columns.products.links.all'),
+          href: Route.Products,
+          isLink: true,
+        },
+        {
+          label: t('columns.products.links.spices'),
+          href: Route.Products,
+          isLink: true,
+        },
+        {
+          label: t('columns.products.links.nutsSeeds'),
+          href: Route.Products,
+          isLink: true,
+        },
+        {
+          label: t('columns.products.links.gallery'),
+          href: Route.Gallery,
+          isLink: true,
+        },
+      ],
+    },
+    {
+      title: t('columns.company.title'),
+      items: [
+        {
+          label: t('columns.company.links.about'),
+          href: Route.Home,
+          isLink: true,
+        },
+        {
+          label: t('columns.company.links.insights'),
+          href: Route.Blogs,
+          isLink: true,
+        },
+        {
+          label: t('columns.company.links.contact'),
+          href: Route.Contact,
+          isLink: true,
+        },
+      ],
+    },
+    {
+      title: t('columns.reach.title'),
+      items: [
+        { label: CONTACT.email, href: CONTACT.emailHref, isLink: true },
+        { label: CONTACT.phoneDisplay, href: CONTACT.phoneHref, isLink: true },
+        {
+          label: t('columns.reach.links.whatsapp'),
+          href: CONTACT.whatsappUrl,
+          isLink: true,
+        },
+      ],
+    },
+    {
+      title: t('columns.certified.title'),
+      items: [
+        ...CERT_MARKS.map((c) => ({ label: c, href: '', isLink: false })),
+        { label: t('columns.certified.spicesBoard'), href: '', isLink: false },
+      ],
+    },
+  ]
 
   return (
     <>
@@ -58,7 +103,7 @@ export function SiteFooter({ hideContactStrip = false }: SiteFooterProps = {}) {
         {/* ── Nav columns ── */}
         <div className="mx-auto max-w-screen-xl px-5 py-12 sm:px-8 sm:py-16">
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-6 lg:gap-x-12">
-            {COLS.map((col) => (
+            {cols.map((col) => (
               <div key={col.title}>
                 <h3 className="mb-5 text-[0.85rem] font-medium text-paper/90">
                   {col.title}
@@ -107,7 +152,7 @@ export function SiteFooter({ hideContactStrip = false }: SiteFooterProps = {}) {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="group inline-flex items-center gap-2 self-start font-mono text-[0.58rem] uppercase tracking-[0.16em] text-paper/30 transition-colors duration-200 hover:text-paper/70 sm:self-auto"
             >
-              Back to top
+              {t('backToTop')}
               <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-paper/15 transition-colors duration-200 group-hover:border-paper/40">
                 <ArrowUp className="h-3 w-3 transition-transform duration-200 group-hover:-translate-y-0.5" />
               </span>

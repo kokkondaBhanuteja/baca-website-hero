@@ -1,0 +1,631 @@
+{
+  "approach": {
+    "eyebrow": "Cara kami bekerja",
+    "heading": "Proses yang dapat Anda andalkan dari kami.",
+    "intro": "Kami membangun proses kami berdasarkan satu pertanyaan: apa yang akan memberikan pembeli ketenangan pikiran sepenuhnya? Inilah jawabannya.",
+    "pillars": {
+      "accountability": {
+        "body": "Anda akan selalu memiliki kontak khusus yang mengenal kargo, rute, dan jadwal Anda. Bagi pembeli yang kembali setiap musim, kami menyiapkan alokasi dan menyepakati harga sebelum musim panen dibuka. Hubungan yang dibangun untuk bertahan, bukan sekadar untuk ditutup.",
+        "title": "Satu orang bertanggung jawab atas setiap pengiriman."
+      },
+      "documentation": {
+        "body": "Kami menyiapkan setiap sertifikat dan dokumen kepatuhan sebelum pengiriman bergerak. Tim impor Anda menerima kontainer yang bersih — bukan antrean koreksi yang harus dikejar di pelabuhan.",
+        "title": "Dokumen siap sebelum kapal dipesan."
+      },
+      "grading": {
+        "body": "Kami menyortir dan mengonfirmasi setiap lot sebelum pengemasan dimulai — tidak pernah setelah pemuatan. Mutu yang tertera pada faktur Anda adalah mutu yang ada di dalam karung, dan berat bersih diperiksa di pintu kontainer. Setiap saat.",
+        "title": "Apa yang tertera di sertifikat adalah apa yang tiba."
+      },
+      "labtesting": {
+        "body": "Setiap lot dikirim ke laboratorium independen dan terakreditasi — bukan fasilitas milik kami sendiri. Anda menerima laporan uji asli: kelembapan, kadar pestisida, aflatoksin — diukur secara terbuka dan dibagikan tanpa diedit.",
+        "title": "Diuji oleh pihak yang tidak bekerja untuk kami."
+      },
+      "traceability": {
+        "body": "Setiap pesanan dimulai dengan kunjungan — bukan panggilan telepon. Kami menyusuri ladang, menemui para petani, dan mencatat setiap lot di sumbernya. Ketika Anda bertanya dari mana rempah Anda berasal, kami dapat menyebutkan kebunnya, musimnya, dan panennya.",
+        "title": "Dimulai dari kebun."
+      }
+    },
+    "stepLabel": "Langkah"
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Prinsip Kami",
+    "imageAlt": "BACA — para petani dan ladang",
+    "imageCaption": "Langsung dari jantung India",
+    "items": {
+      "farmer": {
+        "body": "Kami membayar di atas harga pasar dan membuka pintu global bagi keluarga-keluarga yang menanam hasil bumi kami. Stabilitas mereka adalah fondasi konsistensi kami.",
+        "title": "Petani yang Utama."
+      },
+      "partnership": {
+        "body": "Kami membangun kemitraan, bukan transaksi — dengan para petani di belakang kami dan pembeli yang memercayai kami. Kepercayaan Anda adalah sesuatu yang kami raih pada setiap pengiriman, bukan hanya yang pertama.",
+        "title": "Dibangun untuk Jangka Panjang."
+      },
+      "quality": {
+        "body": "Setiap kelompok diuji, didokumentasikan, dan diverifikasi di kebun, pada proses pengolahan, dan sebelum pengiriman. Jika tidak memenuhi standar kami, ia tidak akan dikirim.",
+        "title": "Tanpa Jalan Pintas, Selamanya."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA dibangun atas satu keyakinan: bahwa mutu yang sampai ke tangan pembeli tidak dapat dipisahkan dari kejujuran setiap langkah sebelumnya. Kami menjalin hubungan langsung dengan keluarga-keluarga petani di Kerala, Karnataka, Tamil Nadu, dan Andhra Pradesh — menawarkan harga yang adil, proses yang transparan, dan akses ke pasar global yang sebelumnya tak terjangkau.",
+      "eyebrow": "Kisah BACA",
+      "heading": "Asal usul terbaik India,",
+      "headingAccent": "dikirim dengan integritas.",
+      "quote": "Karena ketika petani sejahtera, segala yang sampai kepada Anda menjadi lebih baik karenanya."
+    },
+    "principles": {
+      "eyebrow": "Prinsip Kami",
+      "imageAlt": "BACA — para petani dan ladang",
+      "imageCaption": "Langsung dari jantung India",
+      "items": {
+        "farmer": {
+          "body": "Kami membayar di atas harga pasar dan membuka pintu global bagi keluarga-keluarga yang menanam hasil bumi kami. Stabilitas mereka adalah fondasi konsistensi kami.",
+          "title": "Petani yang Utama."
+        },
+        "partnership": {
+          "body": "Kami membangun kemitraan, bukan transaksi — dengan para petani di belakang kami dan pembeli yang memercayai kami. Kepercayaan Anda adalah sesuatu yang kami raih pada setiap pengiriman, bukan hanya yang pertama.",
+          "title": "Dibangun untuk Jangka Panjang."
+        },
+        "quality": {
+          "body": "Setiap kelompok diuji, didokumentasikan, dan diverifikasi di kebun, pada proses pengolahan, dan sebelum pengiriman. Jika tidak memenuhi standar kami, ia tidak akan dikirim.",
+          "title": "Tanpa Jalan Pintas, Selamanya."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Tujuan Kami",
+      "mission": {
+        "body": "Menghubungkan wilayah-wilayah penghasil terbaik India dengan pembeli paling cermat di dunia — melalui pengadaan yang dapat dilacak, mutu yang jujur, dan harga yang benar-benar mencerminkan kerja di balik setiap pengiriman.",
+        "title": "Misi"
+      },
+      "vision": {
+        "body": "Menjadi eksportir komoditas paling tepercaya di India — dikenal bukan karena volume, melainkan karena konsistensi yang membuat pembeli yang sama kembali, musim demi musim.",
+        "title": "Visi"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "negara mengimpor rempah India",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "keluarga petani di seluruh India",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "dari produksi rempah global",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Semua artikel",
+    "categoriesHeading": "Kategori",
+    "empty": "Artikel baru sedang dalam perjalanan. Silakan kembali lagi.",
+    "eyebrow": "Blog",
+    "featured": "Unggulan",
+    "filterBy": "Saring berdasarkan jenis",
+    "heading": "Catatan dari perdagangan rempah dan komoditas.",
+    "intro": "Bacaan pasar, kisah asal usul, dan pemikiran di balik cara kami mengadakan serta mengirim.",
+    "minRead": "menit baca",
+    "publishedLabel": "Diterbitkan",
+    "readTimeLabel": "Waktu baca",
+    "related": "Lanjut membaca",
+    "writtenBy": "Ditulis oleh"
+  },
+  "certifications": {
+    "eyebrow": "Sertifikasi",
+    "heading": "Tersertifikasi untuk perdagangan global.",
+    "intro": "Setiap pengiriman berangkat dengan kredensial yang lengkap.",
+    "items": {
+      "apeda": {
+        "sub": "Pendaftaran Ekspor Pertanian"
+      },
+      "fssai": {
+        "sub": "Lisensi Pusat"
+      },
+      "haccp": {
+        "sub": "Protokol Pengendalian Bahaya"
+      },
+      "halal": {
+        "sub": "Sertifikasi Akses Pasar"
+      },
+      "iso22000": {
+        "sub": "Manajemen Keamanan Pangan"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
+      }
+    }
+  },
+  "common": {
+    "enquire": "Tanyakan",
+    "viewAllCategories": "Lihat semua kategori",
+    "skipToContent": "Lompat ke konten utama"
+  },
+  "contactPage": {
+    "channels": {
+      "email": "Surel",
+      "emailLabel": "Kirim surel kepada kami",
+      "phone": "Telepon",
+      "phoneLabel": "Hubungi kami",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Kirim pesan kepada kami",
+      "whatsappValue": "Kirim pesan langsung kepada kami"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, Halal atas permintaan",
+          "label": "Sertifikasi"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, opsi kontrak tahunan",
+          "label": "Harga & volume"
+        },
+        "samples": {
+          "detail": "Tersedia untuk importir yang memenuhi syarat",
+          "label": "Permintaan sampel"
+        },
+        "specs": {
+          "detail": "Mutu, asal, pengemasan, musim panen",
+          "label": "Spesifikasi produk"
+        }
+      }
+    },
+    "eyebrow": "Hubungi Kami",
+    "form": {
+      "company": "Perusahaan",
+      "country": "Negara",
+      "email": "Surel",
+      "error": "Terjadi kesalahan. Silakan coba lagi atau kirim surel langsung kepada kami.",
+      "message": "Pesan",
+      "messagePlaceholder": "Sampaikan kebutuhan Anda secara singkat — produk, volume, tujuan.",
+      "name": "Nama lengkap",
+      "phone": "Telepon",
+      "submit": "Kirim permintaan",
+      "submitting": "Mengirim…",
+      "subtitle": "Kami akan merespons dalam 12 jam.",
+      "success": "Terima kasih — permintaan Anda telah kami terima. Kami akan menghubungi Anda dalam 12 jam.",
+      "title": "Kirim permintaan"
+    },
+    "heading": "Kirimkan permintaan kepada kami.",
+    "intro": {
+      "body": "Baik Anda ingin mendapatkan produk tertentu, meminta sampel, atau membicarakan pengaturan pasokan jangka panjang — di sinilah tempat yang tepat untuk memulai.",
+      "heading": "Sampaikan kebutuhan Anda. Kami akan kembali kepada Anda dengan jawaban yang jelas."
+    },
+    "map": {
+      "directions": "Petunjuk arah",
+      "eyebrow": "Temukan kami",
+      "iframeTitle": "Peta yang menunjukkan kantor pusat BACA"
+    },
+    "officeTitle": "Alamat Korporat",
+    "promise": {
+      "body": "Semua pertanyaan internasional akan menerima balasan dari meja perdagangan kami dalam 12 jam — termasuk akhir pekan.",
+      "title": "Jaminan respons 12 jam."
+    },
+    "subheading": "Kami merespons pertanyaan internasional dalam 12 jam."
+  },
+  "ctaBand": {
+    "body": "Sampaikan apa yang Anda butuhkan dan ke mana akan dikirim. Kami merespons pertanyaan internasional dalam 12 jam.",
+    "ctaCatalogue": "Unduh katalog",
+    "ctaEnquire": "Tanyakan sekarang",
+    "eyebrow": "Mari berbicara",
+    "heading": "Mari bangun rantai pasok yang andal <em>bersama-sama.</em>"
+  },
+  "errors": {
+    "body": "Kesalahan tak terduga menghentikan pemuatan halaman ini. Anda dapat mencoba lagi, atau kembali ke beranda.",
+    "eyebrow": "Kesalahan",
+    "home": "Beranda",
+    "retry": "Coba lagi",
+    "title": "Terjadi kesalahan."
+  },
+  "featuredInsights": {
+    "allArticles": "Semua artikel",
+    "eyebrow": "Blog",
+    "heading": "Catatan dari perdagangan rempah dan komoditas."
+  },
+  "footer": {
+    "backToTop": "Kembali ke atas",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "Tentang BACA",
+          "insights": "Wawasan",
+          "contact": "Kontak"
+        },
+        "title": "Perusahaan"
+      },
+      "products": {
+        "links": {
+          "all": "Semua Produk",
+          "spices": "Rempah",
+          "nutsSeeds": "Kacang & Biji",
+          "gallery": "Galeri"
+        },
+        "title": "Produk"
+      },
+      "reach": {
+        "title": "Hubungi Kami",
+        "links": {
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Tersertifikasi",
+        "spicesBoard": "Spices Board CRES"
+      }
+    },
+    "description": "Rumah ekspor India modern untuk rempah, kacang, dan buah.",
+    "marqueeItems": [
+      "India, di setiap pengiriman",
+      "Rempah",
+      "Kacang",
+      "Buah",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Pendiri {index}"
+    },
+    "eyebrow": "Dari Para Pendiri",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "Ayah saya pernah berkata — jangan pernah menjual apa yang tidak akan Anda sajikan di meja Anda sendiri. Itu telah menjadi aturan kami sejak pengiriman pertama. Saya telah menyusuri ladang yang sama di Kerala selama lebih dari dua dekade, dan saya masih berkunjung sebelum kami bermitra dengan seorang petani. Anda tidak dapat membangun kepercayaan sejati dari balik meja.",
+        "role": "Salah satu pendiri · Pengadaan & Mutu"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "Dalam perdagangan ini, dokumen yang terlambat adalah janji yang dilanggar. Ketika sebuah kontainer terhenti di pelabuhan menunggu dokumen, itu bukan masalah logistik — itu masalah kepercayaan. Segala yang kami bangun di sekitar dokumentasi lahir dari menyaksikan hal itu terjadi sekali, dan memutuskan bahwa itu tidak akan pernah terjadi pada pembeli kami.",
+        "role": "Salah satu pendiri · Perdagangan & Logistik"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "India menanam beberapa rempah terbaik di dunia. Para petani yang bekerja dengan saya telah menghabiskan seluruh hidup mereka menyempurnakan apa yang mereka kerjakan. Tugas kami sederhana — memastikan upaya itu sampai kepada pembeli secara utuh — disortir dengan jujur, dikemas dengan jujur, dikirim dengan jujur. Tidak lebih, tidak kurang.",
+        "role": "Direktur · Mutu & Hubungan Petani"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "Foto sedang ditambahkan. Silakan kembali lagi.",
+    "eyebrow": "Galeri",
+    "heading": "Pekerjaan, orang-orang, dan tanah.",
+    "intro": "Lihat lebih dekat pengadaan, penyortiran, dan pengiriman kami — dari asalnya di India hingga ke seluruh dunia."
+  },
+  "globalPresence": {
+    "body": "BACA mengirim ke importir, distributor, dan produsen makanan di Amerika Utara, Eropa, Timur Tengah, Asia Tenggara, dan Afrika — dengan kontrak terdokumentasi dan tepat waktu.",
+    "eyebrow": "Jangkauan global",
+    "heading": "Dari pelabuhan India ke <em>lima benua.</em>",
+    "items": {
+      "continents": "Benua tujuan pengiriman",
+      "countries": "Negara yang dilayani",
+      "repeatRate": "Tingkat pembeli berulang",
+      "responseTime": "Waktu respons pertanyaan"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Tutup menu",
+      "home": "Beranda",
+      "mobileNav": "Seluler",
+      "openMenu": "Buka menu",
+      "primaryNav": "Utama",
+      "submenu": "Submenu {label}"
+    }
+  },
+  "hero": {
+    "body": "Generasi baru ekspor India — dibangun di atas pengadaan yang dapat dilacak, mutu yang ketat, dan kemitraan yang menggerakkan komoditas dengan andal, kontainer demi kontainer.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 Negara Dilayani",
+    "ctaContact": "Bicara dengan tim kami",
+    "ctaProducts": "Jelajahi produk",
+    "eyebrow": "Rempah & Hasil Pertanian Premium · Asal India Tepercaya",
+    "headline": "Kualitas. Kepercayaan.<br></br><em>Pengiriman tepat.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Buka slide {index}"
+    },
+    "slides": {
+      "cardamom": "Kapulaga Hijau · Kerala",
+      "farm": "Langsung dari kebun",
+      "origin": "Bersumber di asal · India",
+      "pepper": "Lada Hitam Malabar",
+      "turmeric": "Kunyit Utuh · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Ganti bahasa"
+  },
+  "manifesto": {
+    "body": "Dua dekade di asal di Kerala, Gujarat, dan Andhra — membeli dari keluarga petani yang sama musim demi musim, menyortir di sumber, dan mengirim kontainer penuh kepada pembeli di 37 negara.",
+    "eyebrow": "Mengapa kami ada",
+    "headline": "Kami menghubungkan petani India dengan dapur paling menuntut di dunia — bersumber <em>dengan niat</em>, dan dikirim dengan presisi.",
+    "imageAlt": "Tangan yang sudah berpengalaman mengiris kunyit segar di tempat asal di India — menyortir rempah mentah sebagaimana keluarga petani BACA telah lakukan selama generasi"
+  },
+  "metadata": {
+    "description": "BACA adalah rumah ekspor India modern — pengadaan rempah, kacang, dan buah yang dapat dilacak, mutu yang ketat, dan pengiriman global yang andal. Tersertifikasi ISO 22000, HACCP & FSSAI.",
+    "title": "BACA — Eksportir Rempah, Kacang & Buah India"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Hubungi kami"
+      },
+      "home": {
+        "label": "Beranda"
+      },
+      "insights": {
+        "label": "Blog"
+      },
+      "products": {
+        "label": "Produk"
+      },
+      "profile": {
+        "label": "Profil"
+      }
+    }
+  },
+  "notFound": {
+    "body": "Kami tidak dapat menemukan apa yang Anda cari. Halaman mungkin telah dipindahkan, atau tautannya mungkin keliru. Kembali ke beranda atau jelajahi katalog.",
+    "ctaHome": "Kembali ke beranda",
+    "ctaProducts": "Jelajahi produk",
+    "eyebrow": "404 · Halaman tidak ditemukan",
+    "heading": "Halaman ini tidak pernah dikirim."
+  },
+  "productPreview": {
+    "eyebrow": "Apa yang kami ekspor",
+    "heading": "Bersumber di asal, disortir untuk ekspor."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Kategori",
+      "harvest": "Panen",
+      "originRegions": "Wilayah asal",
+      "pairsNaturally": "Padanan alami",
+      "peak": "Puncak",
+      "products": "Produk",
+      "requestQuote": "Minta penawaran",
+      "requestSample": "Minta sampel",
+      "seasonality": "Musim",
+      "seasonalityHint": "Panen / ketersediaan puncak",
+      "specifications": "Spesifikasi"
+    },
+    "empty": "Katalog kami sedang diperbarui. Silakan kembali lagi.",
+    "eyebrow": "Katalog kami",
+    "heading": "Semua yang kami ekspor, bersumber di asal.",
+    "intro": "Rempah, kacang, dan buah — disortir, didokumentasikan, dan dikirim kepada pembeli di 37 negara."
+  },
+  "profilePage": {
+    "eyebrow": "Tentang BACA",
+    "founders": {
+      "eyebrow": "Para Pendiri",
+      "heading": "Orang-orang di balik BACA.",
+      "imageAltPrefix": "Potret",
+      "intro": "BACA dipimpin oleh dua saudara yang membangun bisnis ini setelah dua dekade di lapangan dalam perdagangan rempah India.",
+      "items": {
+        "founder1": {
+          "bio": "Dua dekade membeli langsung dari koperasi di seluruh Kerala dan Andhra. Mengawasi hubungan dengan petani, penyortiran di asal, dan program pengujian laboratorium untuk setiap pengiriman.",
+          "role": "Salah satu pendiri · Pengadaan & mutu"
+        },
+        "founder2": {
+          "bio": "Mengelola dokumentasi ekspor, hubungan forwarder, dan meja perdagangan menghadap pembeli. Sebelumnya menjalankan unit logistik sebuah rumah dagang komoditas berbasis Mumbai.",
+          "role": "Salah satu pendiri · Perdagangan & logistik"
+        }
+      }
+    },
+    "heading": "Rumah ekspor India yang dipimpin keluarga, dibangun untuk pandangan jangka panjang.",
+    "howWeWork": {
+      "eyebrow": "Cara kami bekerja",
+      "heading": "Dari tanah hingga pengiriman, dalam empat langkah yang disiplin.",
+      "intro": "Setiap kontainer yang meninggalkan pintu kami telah meraih tempatnya melalui urutan yang sama.",
+      "steps": {
+        "document": {
+          "body": "Sertifikat fitosanitasi, kode HS, Incoterms, dan dokumen asal diterbitkan sebelum kapal berlayar sehingga kepabeanan tidak pernah menahan pengiriman di pelabuhan tujuan.",
+          "title": "Dokumentasi"
+        },
+        "grade": {
+          "body": "Setiap lot disortir tangan, diuji laboratorium untuk kelembapan, residu pestisida, dan aflatoksin, serta didokumentasikan sesuai protokol ISO 22000 dan HACCP sebelum bahkan melihat kontainer.",
+          "title": "Penyortiran"
+        },
+        "ship": {
+          "body": "Dikemas di asal dan dipindahkan sebagai muatan kontainer penuh terdokumentasi dengan forwarder berkontrak — kapal yang sama, jalur yang sama, jendela kedatangan yang sama yang dapat direncanakan rantai pasok Anda.",
+          "title": "Pengiriman"
+        },
+        "source": {
+          "body": "Kami membeli langsung dari koperasi petani di wilayah asli masing-masing tanaman — kapulaga dari Kerala, cabai dari Guntur, lada dari Malabar — untuk ketertelusuran penuh dari ladang ke forwarder.",
+          "title": "Pengadaan"
+        }
+      }
+    },
+    "intro": "Dua dekade di asal di Kerala, Gujarat, dan Andhra — membeli dari keluarga petani yang sama musim demi musim, menyortir di sumber, dan mengirim kontainer penuh kepada pembeli di 37 negara.",
+    "visionMission": {
+      "eyebrow": "Visi & misi",
+      "heading": "Apa yang kami perjuangkan — dan bagaimana caranya.",
+      "mission": {
+        "body": "Menghubungkan petani kecil di India dengan pembeli cermat di luar negeri melalui pengendalian mutu yang ketat, dokumen yang transparan, dan hubungan pengiriman yang diukur dalam tahunan.",
+        "title": "Misi"
+      },
+      "vision": {
+        "body": "Sebuah dunia tempat pertanian India berdagang dengan kedudukan setara dengan asal premium lainnya — dapat dilacak, terdokumentasi dengan baik, dan dihargai sesuai kerja yang diwakilinya di gerbang kebun.",
+        "title": "Visi"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA adalah rumah ekspor India modern yang berfokus pada rempah, kacang, dan buah. Kami bekerja langsung dengan keluarga petani di wilayah penghasil tradisional India, menyortir dan menguji laboratorium setiap lot di asal, serta mengirim muatan kontainer penuh terdokumentasi kepada importir, distributor, dan pengecer di seluruh dunia. Tim ini telah bekerja di bidang asal, penyortiran, dan logistik selama lebih dari dua dekade; perusahaan ini adalah pengejawantahan pengalaman tersebut di bawah satu merek.",
+      "eyebrow": "Siapa kami",
+      "heading": "Rumah ekspor yang dibangun atas hubungan."
+    },
+    "whyBaca": {
+      "eyebrow": "Mengapa BACA",
+      "heading": "Empat alasan importir tetap bersama kami.",
+      "intro": "Tim pengadaan memilih BACA ketika mereka ingin berhenti memadamkan kebakaran dan mulai merencanakan.",
+      "items": {
+        "logistics": {
+          "body": "Slot kapal yang berkontrak dan forwarder berpengalaman berarti kontainer Anda tiba dalam jendela waktu yang kami janjikan — bukan 'suatu waktu di bulan itu.'",
+          "title": "Logistik yang andal"
+        },
+        "partnership": {
+          "body": "Kontrak harga tetap dan reservasi panen untuk pembeli berulang. Kami mengukur hubungan dalam musim tanam, bukan nomor PO tunggal.",
+          "title": "Kemitraan jangka panjang"
+        },
+        "quality": {
+          "body": "Pengendalian setara ISO 22000 + HACCP di asal: kelembapan, residu pestisida, aflatoksin, dan uji mikrobiologis, bukan pengambilan sampel acak di pelabuhan.",
+          "title": "Mutu teruji laboratorium"
+        },
+        "traceability": {
+          "body": "Setiap lot terikat pada koperasi petani tertentu, jendela panen, dan hasil laboratorium — dapat diaudit dari gudang Anda kembali ke ladang.",
+          "title": "Ketertelusuran penuh"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "Potret Direktur Pelaksana BACA",
+    "name": "Arvind Menon",
+    "quote": "Kami tidak memperdagangkan pengiriman — kami menjaga kontrak. Pembeli yang sama kembali musim demi musim karena mutu di dalam kontainer sesuai dengan mutu pada sertifikat, setiap saat.",
+    "title": "Direktur Pelaksana, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Kontainer terkirim",
+      "countries": "Negara yang dilayani",
+      "tonnes": "Ton ditangani / tahun",
+      "years": "Tahun beroperasi"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Halaman {page}",
+      "next": "Berikutnya",
+      "previous": "Sebelumnya"
+    },
+    "body": "Bersumber dari wilayah penghasil terbaik India — diuji, tersertifikasi, dan dikirim dengan ketertelusuran penuh.",
+    "card": {
+      "info": "Info",
+      "requestQuote": "Minta penawaran"
+    },
+    "eyebrow": "Yang Kami Tawarkan",
+    "heading": "Rangkaian Produk Kami",
+    "viewAll": "Lihat semua produk →"
+  },
+  "whatsapp": {
+    "ariaLabel": "Mengobrol dengan BACA melalui WhatsApp"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Sertifikasi",
+      "heading": "Tersertifikasi untuk perdagangan global.",
+      "intro": "Setiap pengiriman berangkat dengan kredensial yang lengkap.",
+      "items": {
+        "apeda": {
+          "authority": "Pendaftaran Ekspor",
+          "name": "APEDA",
+          "sub": "Otoritas Pengembangan Ekspor Produk Pangan Pertanian & Olahan."
+        },
+        "fssai": {
+          "authority": "Lisensi Pusat",
+          "name": "FSSAI",
+          "sub": "Izin keamanan pangan wajib untuk semua ekspor pangan India."
+        },
+        "haccp": {
+          "authority": "Protokol Pengendalian Bahaya",
+          "name": "HACCP",
+          "sub": "Pendekatan pencegahan sistematis terhadap bahaya biologis dan kimia."
+        },
+        "halal": {
+          "authority": "Sertifikasi Akses Pasar",
+          "name": "Halal",
+          "sub": "Memungkinkan perdagangan ke pasar yang mensyaratkan produk bersertifikat halal."
+        },
+        "iso22000": {
+          "authority": "Manajemen Keamanan Pangan",
+          "name": "ISO 22000",
+          "sub": "Standar internasional untuk sistem manajemen keamanan pangan."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Pendaftaran pemerintah untuk eksportir rempah tersertifikasi."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Mengapa BACA",
+      "heading": "Empat alasan importir tetap bersama kami.",
+      "intro": "Tim pengadaan memilih BACA ketika mereka ingin berhenti memadamkan kebakaran dan mulai merencanakan.",
+      "items": {
+        "logistics": {
+          "body": "Slot kapal yang berkontrak dan forwarder berpengalaman berarti kontainer Anda tiba dalam jendela waktu yang kami janjikan — bukan 'suatu waktu di bulan itu.'",
+          "title": "Logistik yang Andal"
+        },
+        "partnership": {
+          "body": "Kontrak harga tetap dan reservasi panen untuk pembeli berulang. Kami mengukur hubungan dalam musim tanam, bukan nomor pesanan pembelian tunggal.",
+          "title": "Kemitraan Jangka Panjang"
+        },
+        "quality": {
+          "body": "Pengendalian setara ISO 22000 + HACCP di asal: kelembapan, residu pestisida, aflatoksin, dan uji mikrobiologis — bukan pengambilan sampel acak di pelabuhan.",
+          "title": "Mutu Teruji Laboratorium"
+        },
+        "traceability": {
+          "body": "Setiap lot terikat pada koperasi petani tertentu, jendela panen, dan hasil laboratorium — dapat diaudit dari gudang Anda hingga kembali ke ladang.",
+          "title": "Ketertelusuran Penuh"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Cara Kami Bekerja",
+      "heading": "Proses yang dapat Anda andalkan dari kami.",
+      "items": {
+        "certificate": {
+          "body": "Kami menyortir dan mengonfirmasi setiap lot sebelum pengemasan dimulai — tidak pernah setelah pemuatan. Mutu yang tertera pada faktur Anda adalah mutu yang ada di dalam karung, dan berat bersih diperiksa di pintu kontainer. Setiap saat.",
+          "title": "Apa yang tertera di sertifikat adalah apa yang tiba."
+        },
+        "contact": {
+          "body": "Anda akan selalu memiliki kontak khusus yang mengenal kargo, rute, dan jadwal Anda. Bagi pembeli yang kembali setiap musim, kami menyiapkan alokasi dan menyepakati harga sebelum musim panen dibuka.",
+          "title": "Satu orang bertanggung jawab atas setiap pengiriman."
+        },
+        "farm": {
+          "body": "Setiap pesanan dimulai dengan kunjungan — bukan panggilan telepon. Kami menyusuri ladang, menemui para petani, dan mencatat setiap lot di sumbernya. Ketika Anda bertanya dari mana rempah Anda berasal, kami dapat menyebutkan kebunnya, musimnya, dan panennya.",
+          "title": "Dimulai dari kebun."
+        },
+        "lab": {
+          "body": "Setiap lot dikirim ke laboratorium independen dan terakreditasi — bukan fasilitas milik kami sendiri. Anda menerima laporan uji asli: kelembapan, kadar pestisida, aflatoksin — diukur secara terbuka dan dibagikan tanpa diedit.",
+          "title": "Diuji oleh pihak yang tidak bekerja untuk kami."
+        },
+        "paperwork": {
+          "body": "Kami menyiapkan setiap sertifikat dan dokumen kepatuhan sebelum pengiriman bergerak. Tim impor Anda menerima kontainer yang bersih — bukan antrean koreksi yang harus dikejar di pelabuhan.",
+          "title": "Dokumen siap sebelum kapal dipesan."
+        }
+      },
+      "stepLabel": "Langkah"
+    }
+  },
+  "contactStrip": {
+    "ariaSection": "Kirim permintaan",
+    "eyebrow": "Hubungi kami",
+    "headingPrefix": "Siap untuk mengadakan?",
+    "headingAccent": "Mari berbicara.",
+    "body": "Sampaikan kebutuhan Anda — produk, volume, dan tujuan. Kami akan kembali dengan penawaran dalam 12 jam, setiap saat."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — gambar {index}",
+    "previous": "Gambar sebelumnya",
+    "next": "Gambar berikutnya",
+    "goToImage": "Buka gambar {index}"
+  }
+}

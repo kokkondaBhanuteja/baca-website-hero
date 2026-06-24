@@ -144,7 +144,7 @@ export function SiteHeaderDesktopNav({
               aria-haspopup="menu"
               aria-expanded={isOpen}
               aria-controls={panelId}
-              aria-label={`${item.label} submenu`}
+              aria-label={tHeader('aria.submenu', { label: item.label })}
               onClick={() => setOpenKey(isOpen ? null : item.key)}
               onKeyDown={(event) => onTriggerKeyDown(event, item.key)}
               className={`inline-flex h-7 w-6 items-center justify-center rounded-full transition-colors ${chevronColor}`}

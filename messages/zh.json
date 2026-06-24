@@ -1,0 +1,631 @@
+{
+  "approach": {
+    "eyebrow": "我们的工作方式",
+    "heading": "一套您可督促我们兑现的流程。",
+    "intro": "我们围绕一个问题构建流程：什么才能让买家彻底安心？以下便是答案。",
+    "pillars": {
+      "accountability": {
+        "body": "您将始终拥有一位指定的联系人，他熟悉您的货物、路线与时间表。对于每季回头的买家，我们在采收开启前为其预留配额并锁定价格。我们要建立的是长久的合作关系，而非一次性的成交。",
+        "title": "每一批货均有专人负责。"
+      },
+      "documentation": {
+        "body": "在货物启运之前，我们已备齐每一份证书与合规文件。贵方进口团队收到的是一整箱完备的货物，而不是一长串需要在港口奔走更正的事项。",
+        "title": "船期未定，文件先行。"
+      },
+      "grading": {
+        "body": "我们在包装开始前完成每一批次的分拣与确认,绝不在装柜之后才做。发票上的等级即是袋中的等级，净重在集装箱口逐一复核。每一次，皆是如此。",
+        "title": "证书所书，即货物所至。"
+      },
+      "labtesting": {
+        "body": "每一批货都送往独立的、获得资质认证的第三方实验室——而非我们自有的检测设施。您将收到原始检测报告：水分、农药残留、黄曲霉毒素——公开测量，未经修饰直接呈送。",
+        "title": "由与我们毫无关联的人员检测。"
+      },
+      "traceability": {
+        "body": "每一笔订单都始于一次实地走访，而非一通电话。我们走进田间，结识种植者，并在源头记录每一批次。当您追问香料的来源时，我们能说出农场、季节与具体的那一次采收。",
+        "title": "一切始于农田。"
+      }
+    },
+    "stepLabel": "步骤"
+  },
+  "bacaPrinciples": {
+    "eyebrow": "我们的准则",
+    "imageAlt": "BACA——农户与田野",
+    "imageCaption": "直采自印度的腹地",
+    "items": {
+      "farmer": {
+        "body": "我们以高于市场的价格收购，为种植我们农产品的家庭打开通往全球的大门。他们的稳定，正是我们品质如一的根基。",
+        "title": "农户为先。"
+      },
+      "partnership": {
+        "body": "我们构建的是合作关系，而非一笔笔交易——身后有信赖我们的农户，眼前有信任我们的买家。您的信任，我们以每一次发货赢取，而非仅凭初次合作。",
+        "title": "为长远而生。"
+      },
+      "quality": {
+        "body": "每一批货都在农场、加工环节及发运之前经过检测、记录与核验。若未达我们的标准，便不会离开仓库。",
+        "title": "绝不走捷径。"
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA基于一个坚定的信念而生：抵达买家手中的品质，与此前每一步的诚信密不可分。我们与喀拉拉邦、卡纳塔克邦、泰米尔纳德邦及安得拉邦的种植家庭保持着直接的合作——提供公平的价格、透明的流程，以及曾经遥不可及的全球市场通道。",
+      "eyebrow": "BACA的故事",
+      "heading": "印度最佳产地之精华，",
+      "headingAccent": "以诚信相托交付。",
+      "quote": "因为当农户兴旺时，抵达您手中的一切，也都会因此而更美好。"
+    },
+    "principles": {
+      "eyebrow": "我们的准则",
+      "imageAlt": "BACA——农户与田野",
+      "imageCaption": "直采自印度的腹地",
+      "items": {
+        "farmer": {
+          "body": "我们以高于市场的价格收购，为种植我们农产品的家庭打开通往全球的大门。他们的稳定，正是我们品质如一的根基。",
+          "title": "农户为先。"
+        },
+        "partnership": {
+          "body": "我们构建的是合作关系，而非一笔笔交易——身后有信赖我们的农户，眼前有信任我们的买家。您的信任，我们以每一次发货赢取，而非仅凭初次合作。",
+          "title": "为长远而生。"
+        },
+        "quality": {
+          "body": "每一批货都在农场、加工环节及发运之前经过检测、记录与核验。若未达我们的标准，便不会离开仓库。",
+          "title": "绝不走捷径。"
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "我们的使命",
+      "mission": {
+        "body": "通过可追溯的采购、诚实的品质，以及真正反映每一批货背后劳动价值的价格，将印度最优良的种植产区与全球最具品味的买家连接起来。",
+        "title": "使命"
+      },
+      "vision": {
+        "body": "成为印度最受信赖的大宗商品出口商——为人所知的并非产量，而是让买家季复一季回头的那份稳定如一。",
+        "title": "愿景"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "个国家进口印度香料",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "户遍布印度的种植家庭",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "占全球香料产量之比",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "所有文章",
+    "categoriesHeading": "分类",
+    "empty": "新文章即将推出，敬请稍后再访。",
+    "eyebrow": "博客",
+    "featured": "精选",
+    "filterBy": "按类型筛选",
+    "heading": "来自香料与大宗商品贸易的随笔。",
+    "intro": "市场解读、产地故事，以及我们采购与运输背后的思考。",
+    "minRead": "分钟阅读",
+    "publishedLabel": "发布日期",
+    "readTimeLabel": "阅读时长",
+    "related": "继续阅读",
+    "writtenBy": "作者"
+  },
+  "certifications": {
+    "eyebrow": "资质认证",
+    "heading": "为全球贸易而认证。",
+    "intro": "每一次发货，所有证书与凭据皆已就绪。",
+    "items": {
+      "apeda": {
+        "sub": "农产品出口注册"
+      },
+      "fssai": {
+        "sub": "中央许可证"
+      },
+      "haccp": {
+        "sub": "危害控制规范"
+      },
+      "halal": {
+        "sub": "市场准入认证"
+      },
+      "iso22000": {
+        "sub": "食品安全管理"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
+      }
+    }
+  },
+  "common": {
+    "enquire": "立即询价",
+    "viewAllCategories": "查看所有分类",
+    "skipToContent": "跳转到主要内容"
+  },
+  "contactPage": {
+    "channels": {
+      "email": "电子邮箱",
+      "emailLabel": "发邮件给我们",
+      "phone": "电话",
+      "phoneLabel": "致电我们",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "发送信息",
+      "whatsappValue": "直接给我们留言"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000、HACCP、FSSAI，Halal可按需求提供",
+          "label": "资质认证"
+        },
+        "pricing": {
+          "detail": "FOB / CIF、MOQ，及年度合约选项",
+          "label": "价格与数量"
+        },
+        "samples": {
+          "detail": "面向合格进口商提供",
+          "label": "样品申请"
+        },
+        "specs": {
+          "detail": "等级、产地、包装、季节性",
+          "label": "产品规格"
+        }
+      }
+    },
+    "eyebrow": "联系我们",
+    "form": {
+      "company": "公司",
+      "country": "国家",
+      "email": "电子邮箱",
+      "error": "出现了问题。请重试，或直接发送邮件给我们。",
+      "message": "留言",
+      "messagePlaceholder": "请简要告知您的需求——产品、数量、目的地。",
+      "name": "姓名",
+      "phone": "电话",
+      "submit": "发送询盘",
+      "submitting": "正在发送……",
+      "subtitle": "我们将在12小时内回复。",
+      "success": "感谢您——我们已收到您的询盘，将在12小时内与您联系。",
+      "title": "发送询盘"
+    },
+    "heading": "向我们发送询盘。",
+    "intro": {
+      "body": "无论您是希望采购某项具体产品、申请样品，还是洽谈长期供货安排——这里都是开启对话的合适地点。",
+      "heading": "告诉我们您的需求，我们将带着明确的答复回到您面前。"
+    },
+    "map": {
+      "directions": "导航路线",
+      "eyebrow": "寻找我们",
+      "iframeTitle": "显示BACA公司办公室位置的地图"
+    },
+    "officeTitle": "公司地址",
+    "promise": {
+      "body": "所有国际询盘均会在12小时内由我们的贸易部回复——周末亦然。",
+      "title": "12小时响应承诺。"
+    },
+    "subheading": "国际询盘，我们在12小时内回复。"
+  },
+  "ctaBand": {
+    "body": "告诉我们您要采购什么、运往何处。国际询盘，我们在12小时内回复。",
+    "ctaCatalogue": "下载产品目录",
+    "ctaEnquire": "立即询盘",
+    "eyebrow": "与我们对话",
+    "heading": "携手共建可靠的<em>供应链。</em>"
+  },
+  "errors": {
+    "body": "意外错误中断了页面加载。您可以重试，或返回首页。",
+    "eyebrow": "错误",
+    "home": "首页",
+    "retry": "重试",
+    "title": "出错了。"
+  },
+  "featuredInsights": {
+    "allArticles": "所有文章",
+    "eyebrow": "博客",
+    "heading": "来自香料与大宗商品贸易的随笔。"
+  },
+  "footer": {
+    "backToTop": "返回顶部",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "关于BACA",
+          "insights": "洞察文章",
+          "contact": "联系方式"
+        },
+        "title": "公司"
+      },
+      "products": {
+        "links": {
+          "all": "全部产品",
+          "spices": "香料",
+          "nutsSeeds": "坚果与种子",
+          "gallery": "图集"
+        },
+        "title": "产品"
+      },
+      "reach": {
+        "title": "联系我们",
+        "links": {
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "已认证",
+        "spicesBoard": "Spices Board CRES"
+      }
+    },
+    "description": "一家现代化的印度出口企业，专注于香料、坚果与水果。",
+    "marqueeItems": [
+      "每一批货中，皆有印度",
+      "香料",
+      "坚果",
+      "水果",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "创始人 {index}"
+    },
+    "eyebrow": "来自创始人",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "我父亲常说——绝不出售你不会摆上自家餐桌的东西。从第一次发货起，这便是我们的准则。我在喀拉拉邦的同一片田地里走了二十多年，至今在确定一位种植者之前我仍会亲自前往。真正的信任，无法在办公桌后建立。",
+        "role": "联合创始人 · 采购与品质"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "在这一行，文件延误就是承诺破灭。当一只集装箱因等待文件而滞留港口时，那不是物流问题——而是信任问题。我们围绕文件所建立的一切，都源于亲眼目睹一次这样的事件，并决定：这种事永远不会发生在我们买家身上。",
+        "role": "联合创始人 · 贸易与物流"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "印度出产世界上最优质的香料之一。与我合作的农户们倾尽一生在打磨他们的手艺。我们的职责，无非是确保这份心血完整地抵达买家手中——诚实分级、诚实包装、诚实发运。仅此而已。",
+        "role": "总监 · 品质与种植者关系"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "图片正在上传中，敬请稍后再访。",
+    "eyebrow": "图集",
+    "heading": "工作、人物与土壤。",
+    "intro": "走进我们的采购、分级与运输——从印度产地一路通向世界。"
+  },
+  "globalPresence": {
+    "body": "BACA向北美、欧洲、中东、东南亚及非洲的进口商、分销商与食品制造商发货——所有合约皆有完备文件、准时交付。",
+    "eyebrow": "全球覆盖",
+    "heading": "自印度港口启航，远抵<em>五大洲。</em>",
+    "items": {
+      "continents": "已发货大洲",
+      "countries": "服务国家",
+      "repeatRate": "买家复购率",
+      "responseTime": "询盘响应时长"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "关闭菜单",
+      "home": "首页",
+      "mobileNav": "移动端",
+      "openMenu": "打开菜单",
+      "primaryNav": "主导航",
+      "submenu": "{label} 子菜单"
+    }
+  },
+  "hero": {
+    "body": "新一代印度出口企业——以可追溯的采购、严苛的品质，及稳健的合作伙伴关系为根基，柜接一柜地可靠输送大宗商品。",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "服务37个国家",
+    "ctaContact": "与我们的团队对话",
+    "ctaProducts": "探索产品",
+    "eyebrow": "优质香料与农产品 · 值得信赖的印度产地",
+    "headline": "品质。信任。<br></br><em>如约交付。</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "前往第{index}张幻灯片"
+    },
+    "slides": {
+      "cardamom": "绿豆蔻 · Kerala",
+      "farm": "直采自农场",
+      "origin": "源头采购 · 印度",
+      "pepper": "Malabar黑胡椒",
+      "turmeric": "姜黄根 · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "切换语言"
+  },
+  "manifesto": {
+    "body": "二十载扎根于Kerala、Gujarat与Andhra的产地——季复一季地从同样的种植家庭收购，在源头分级，将整柜货物运抵37个国家的买家手中。",
+    "eyebrow": "我们因何而在",
+    "headline": "我们将印度种植者与全球最为挑剔的厨房连接起来——以<em>用心</em>采购，以精准发运。",
+    "imageAlt": "印度产地里饱经风霜的双手正在切片新鲜姜黄——以BACA合作种植家庭世代相传的方式为生香料分级"
+  },
+  "metadata": {
+    "description": "BACA是一家现代化的印度出口企业——可追溯采购的香料、坚果与水果，严苛的品质把控，及可靠的全球发运。通过ISO 22000、HACCP及FSSAI认证。",
+    "title": "BACA——印度香料、坚果与水果出口商"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "联系我们"
+      },
+      "home": {
+        "label": "首页"
+      },
+      "insights": {
+        "label": "博客"
+      },
+      "products": {
+        "label": "产品"
+      },
+      "profile": {
+        "label": "公司简介"
+      }
+    }
+  },
+  "notFound": {
+    "body": "我们找不到您要寻找的页面。可能页面已迁移，或链接有误。请返回首页，或浏览产品目录。",
+    "ctaHome": "返回首页",
+    "ctaProducts": "浏览产品",
+    "eyebrow": "404 · 页面未找到",
+    "heading": "这页从未启运。"
+  },
+  "productPreview": {
+    "eyebrow": "我们的出口产品",
+    "heading": "源头采购，按出口规格分级。"
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "分类",
+      "harvest": "采收",
+      "originRegions": "原产地",
+      "pairsNaturally": "天然搭配",
+      "peak": "盛产期",
+      "products": "产品",
+      "requestQuote": "申请报价",
+      "requestSample": "申请样品",
+      "seasonality": "时令",
+      "seasonalityHint": "采收/盛产供应",
+      "specifications": "规格"
+    },
+    "empty": "产品目录正在更新中，敬请稍后再访。",
+    "eyebrow": "我们的产品目录",
+    "heading": "我们所出口的一切，皆源头采购。",
+    "intro": "香料、坚果与水果——经过分级、备齐文件，运往37个国家的买家。"
+  },
+  "profilePage": {
+    "eyebrow": "关于BACA",
+    "founders": {
+      "eyebrow": "创始人",
+      "heading": "BACA背后的人。",
+      "imageAltPrefix": "肖像",
+      "intro": "BACA由两位兄妹携手领导，他们以在印度香料贸易中二十年的实地经验为基石建立了这家企业。",
+      "items": {
+        "founder1": {
+          "bio": "二十年来直接从Kerala与Andhra的合作社采购，全面负责种植者关系、源头分级，以及每一批发货的实验室检测计划。",
+          "role": "联合创始人 · 采购与品质"
+        },
+        "founder2": {
+          "bio": "负责出口文件、货运代理关系，及面向买家的贸易部。此前曾掌管一家孟买大宗商品贸易公司的物流业务。",
+          "role": "联合创始人 · 贸易与物流"
+        }
+      }
+    },
+    "heading": "一家以家族为本的印度出口企业，为长远而生。",
+    "howWeWork": {
+      "eyebrow": "我们的工作方式",
+      "heading": "从泥土到船运，四个有条不紊的步骤。",
+      "intro": "每一只离开我们仓库的集装箱，皆是经由同一套流程赢得其席位。",
+      "steps": {
+        "document": {
+          "body": "植物检疫证书、HS编码、贸易术语及原产地文件在船舶启航前即已签发，确保清关从不在目的港耽搁任何一票货。",
+          "title": "文件"
+        },
+        "grade": {
+          "body": "每一批货均经人工分拣，检测水分、农药残留与黄曲霉毒素，并依照ISO 22000及HACCP规范完整记录，方可进入集装箱。",
+          "title": "分级"
+        },
+        "ship": {
+          "body": "在产地完成包装，以备齐文件的整柜形式由长期合作的货代承运——同样的船次、同样的航线、同样的到港窗口，您的供应链皆可据此规划。",
+          "title": "发运"
+        },
+        "source": {
+          "body": "我们直接从每种作物原产地区的种植者合作社采购——Kerala的豆蔻、Guntur的辣椒、Malabar的胡椒——实现从田间到货代的全程可追溯。",
+          "title": "采购"
+        }
+      }
+    },
+    "intro": "二十载扎根于Kerala、Gujarat与Andhra的产地——季复一季地从同样的种植家庭收购，在源头分级，将整柜货物运往37个国家的买家。",
+    "visionMission": {
+      "eyebrow": "愿景与使命",
+      "heading": "我们的奋斗目标——以及如何实现。",
+      "mission": {
+        "body": "通过严苛的品质管控、透明的文件流程，以及以年为单位衡量的运输合作关系，将印度的小农户与海外有品味的买家连接起来。",
+        "title": "使命"
+      },
+      "vision": {
+        "body": "一个印度农业能与任何优质产地平起平坐的世界——可追溯、文件齐备，并以反映其在田间地头真实劳动价值的价格交易。",
+        "title": "愿景"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA是一家现代化的印度出口企业，专注于香料、坚果与水果。我们与印度传统产区的种植家庭直接合作，在源头对每一批货进行分级与实验室检测，并以备齐文件的整柜形式将货物发往全球的进口商、分销商与零售商。团队在产地、分级及物流领域深耕逾二十载；公司即是这份经验在同一品牌下的正式化呈现。",
+      "eyebrow": "我们是谁",
+      "heading": "一家植根于关系之上的出口企业。"
+    },
+    "whyBaca": {
+      "eyebrow": "为何选择BACA",
+      "heading": "进口商与我们长期合作的四个理由。",
+      "intro": "当采购团队希望从应急救火转向从容规划时，他们便选择了BACA。",
+      "items": {
+        "logistics": {
+          "body": "锁定的船位与经验丰富的货代意味着您的集装箱会在我们承诺的窗口内抵达——而非「某个月里」。",
+          "title": "可靠的物流"
+        },
+        "partnership": {
+          "body": "为回头买家提供固定价格合约与作物预留。我们以种植季衡量合作关系，而非以单一的采购订单编号。",
+          "title": "长期的合作"
+        },
+        "quality": {
+          "body": "在源头实施符合ISO 22000+HACCP级别的管控：水分、农药残留、黄曲霉毒素及微生物检测，而非在港口随机抽样。",
+          "title": "实验室检测的品质"
+        },
+        "traceability": {
+          "body": "每一批货均可追溯至具体的种植合作社、采收窗口及实验室报告——可从您的仓库一路审计回到田间。",
+          "title": "全程可追溯"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "BACA董事总经理肖像",
+    "name": "Arvind Menon",
+    "quote": "我们不做一票一票的买卖——我们坚守合约。同样的买家会季复一季地回来，正是因为集装箱里的等级与证书上的等级始终一致，无一例外。",
+    "title": "董事总经理，BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "已发运集装箱",
+      "countries": "服务国家",
+      "tonnes": "年处理吨位",
+      "years": "经营年限"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "第{page}页",
+      "next": "下一页",
+      "previous": "上一页"
+    },
+    "body": "采自印度最优良的种植产区——经过检测、认证，以全程可追溯的方式发运。",
+    "card": {
+      "info": "详情",
+      "requestQuote": "申请报价"
+    },
+    "eyebrow": "我们的产品",
+    "heading": "我们的产品系列",
+    "viewAll": "查看全部产品 →"
+  },
+  "whatsapp": {
+    "ariaLabel": "通过WhatsApp与BACA对话"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "资质认证",
+      "heading": "为全球贸易而认证。",
+      "intro": "每一次发货，所有证书与凭据皆已就绪。",
+      "items": {
+        "apeda": {
+          "authority": "出口注册",
+          "name": "APEDA",
+          "sub": "农产品与加工食品出口发展局。"
+        },
+        "fssai": {
+          "authority": "中央许可证",
+          "name": "FSSAI",
+          "sub": "所有印度食品出口必备的食品安全许可。"
+        },
+        "haccp": {
+          "authority": "危害控制规范",
+          "name": "HACCP",
+          "sub": "针对生物与化学危害的系统化预防方法。"
+        },
+        "halal": {
+          "authority": "市场准入认证",
+          "name": "Halal",
+          "sub": "用于进入要求清真认证产品的市场。"
+        },
+        "iso22000": {
+          "authority": "食品安全管理",
+          "name": "ISO 22000",
+          "sub": "食品安全管理体系的国际标准。"
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "面向认证香料出口商的政府注册。"
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "为何选择BACA",
+      "heading": "进口商与我们长期合作的四个理由。",
+      "intro": "当采购团队希望从应急救火转向从容规划时，他们便选择了BACA。",
+      "items": {
+        "logistics": {
+          "body": "锁定的船位与经验丰富的货代意味着您的集装箱会在我们承诺的窗口内抵达——而非「某个月里」。",
+          "title": "可靠的物流"
+        },
+        "partnership": {
+          "body": "为回头买家提供固定价格合约与作物预留。我们以种植季衡量合作关系，而非以单一的采购订单编号。",
+          "title": "长期的合作"
+        },
+        "quality": {
+          "body": "在源头实施符合ISO 22000+HACCP级别的管控：水分、农药残留、黄曲霉毒素及微生物检测——而非在港口随机抽样。",
+          "title": "实验室检测的品质"
+        },
+        "traceability": {
+          "body": "每一批货均可追溯至具体的种植合作社、采收窗口及实验室报告——可从您的仓库一路审计回到田间。",
+          "title": "全程可追溯"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "我们的工作方式",
+      "heading": "一套您可督促我们兑现的流程。",
+      "items": {
+        "certificate": {
+          "body": "我们在包装开始前完成每一批次的分拣与确认,绝不在装柜之后才做。发票上的等级即是袋中的等级，净重在集装箱口逐一复核。每一次，皆是如此。",
+          "title": "证书所书，即货物所至。"
+        },
+        "contact": {
+          "body": "您将始终拥有一位指定的联系人，他熟悉您的货物、路线与时间表。对于每季回头的买家，我们在采收开启前为其预留配额并锁定价格。",
+          "title": "每一批货均有专人负责。"
+        },
+        "farm": {
+          "body": "每一笔订单都始于一次实地走访，而非一通电话。我们走进田间，结识种植者，并在源头记录每一批次。当您追问香料的来源时，我们能说出农场、季节与具体的那一次采收。",
+          "title": "一切始于农田。"
+        },
+        "lab": {
+          "body": "每一批货都送往独立的、获得资质认证的第三方实验室——而非我们自有的检测设施。您将收到原始检测报告：水分、农药残留、黄曲霉毒素——公开测量，未经修饰直接呈送。",
+          "title": "由与我们毫无关联的人员检测。"
+        },
+        "paperwork": {
+          "body": "在货物启运之前，我们已备齐每一份证书与合规文件。贵方进口团队收到的是一整箱完备的货物，而不是一长串需要在港口奔走更正的事项。",
+          "title": "船期未定，文件先行。"
+        }
+      },
+      "stepLabel": "步骤"
+    }
+  },
+  "contactStrip": {
+    "ariaSection": "发送询盘",
+    "eyebrow": "联系我们",
+    "headingPrefix": "准备好采购了吗？",
+    "headingAccent": "来谈谈吧。",
+    "body": "告诉我们您的需求——产品、数量与目的地。我们会在12小时内带着报价回到您面前，每一次皆然。"
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — 图片 {index}",
+    "previous": "上一张图片",
+    "next": "下一张图片",
+    "goToImage": "前往第{index}张图片"
+  }
+}

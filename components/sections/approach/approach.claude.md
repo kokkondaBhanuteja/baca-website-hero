@@ -44,7 +44,7 @@ Dependencies:
 - @/components/ui/eyebrow — Eyebrow component
 
 i18n:
-Namespace: 'approach'. Keys: 'eyebrow', 'heading', 'intro', 'pillars.{pillar.key}.title', 'pillars.{pillar.key}.body' (dynamic keys cast as Parameters<typeof t>[0]).
+Namespace: 'approach'. Keys: 'eyebrow', 'heading', 'intro', 'stepLabel' (the small "Step" tag rendered next to each pillar number), 'pillars.{pillar.key}.title', 'pillars.{pillar.key}.body' (dynamic keys cast as Parameters<typeof t>[0]).
 
 Accessibility:
 Semantic h2, h3 structure. The animated rule has aria-hidden. Standard text hierarchy.

@@ -1,85 +1,86 @@
 {
   "approach": {
-    "eyebrow": "How we work",
-    "heading": "A process you can hold us to.",
-    "intro": "We built our process around one question: what would give a buyer complete peace of mind? Here is the answer.",
+    "eyebrow": "Notre méthode",
+    "heading": "Un processus dont vous pouvez nous tenir responsables.",
+    "intro": "Nous avons bâti notre processus autour d'une seule question : qu'est-ce qui donnerait à un acheteur une parfaite tranquillité d'esprit ? Voici la réponse.",
     "pillars": {
       "accountability": {
-        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close.",
-        "title": "One person answers for every shipment."
+        "body": "Vous aurez toujours un interlocuteur nommé qui connaît votre cargaison, votre itinéraire et votre calendrier. Pour les acheteurs qui reviennent chaque saison, nous réservons des allocations et convenons des prix avant l'ouverture de la récolte. Une relation conçue pour durer, et non pour simplement conclure.",
+        "title": "Une seule personne répond de chaque expédition."
       },
       "documentation": {
-        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
-        "title": "Paperwork ready before the vessel is booked."
+        "body": "Nous préparons chaque certificat et document de conformité avant que l'expédition ne parte. Votre équipe d'importation reçoit un conteneur en règle — non une série de corrections à courir au port.",
+        "title": "Documents prêts avant la réservation du navire."
       },
       "grading": {
-        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
-        "title": "What the certificate says is what arrives."
+        "body": "Nous trions et confirmons chaque lot avant que l'emballage ne commence — jamais après le chargement. La qualité indiquée sur votre facture est celle qui se trouve dans le sac, et le poids net est vérifié à la porte du conteneur. À chaque fois, sans exception.",
+        "title": "Ce que dit le certificat est ce qui arrive."
       },
       "labtesting": {
-        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
-        "title": "Tested by people who do not work for us."
+        "body": "Chaque lot est envoyé à un laboratoire indépendant et accrédité — non pas à notre propre installation. Vous recevez le rapport d'analyse original : humidité, taux de pesticides, aflatoxines — mesurés en toute transparence et partagés sans retouche.",
+        "title": "Testé par des personnes qui ne travaillent pas pour nous."
       },
       "traceability": {
-        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
-        "title": "It starts at the farm."
+        "body": "Chaque commande commence par une visite — non par un appel. Nous parcourons les champs, rencontrons les producteurs et enregistrons chaque lot à sa source. Lorsque vous demandez d'où vient votre épice, nous pouvons nommer la ferme, la saison et la récolte.",
+        "title": "Tout commence à la ferme."
       }
-    }
+    },
+    "stepLabel": "Étape"
   },
   "bacaPrinciples": {
-    "eyebrow": "Our Principles",
-    "imageAlt": "BACA — farmers and fields",
-    "imageCaption": "Direct from India's heartland",
+    "eyebrow": "Nos principes",
+    "imageAlt": "BACA — producteurs et champs",
+    "imageCaption": "Directement du cœur de l'Inde",
     "items": {
       "farmer": {
-        "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
-        "title": "The Farmer First."
+        "body": "Nous payons au-dessus des prix du marché et ouvrons les portes du monde aux familles qui cultivent notre récolte. Leur stabilité est le fondement de notre constance.",
+        "title": "Le producteur d'abord."
       },
       "partnership": {
-        "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
-        "title": "Built for the Long Run."
+        "body": "Nous bâtissons des partenariats, non des transactions — avec les producteurs derrière nous et les acheteurs qui nous font confiance. Votre confiance, nous la gagnons à chaque expédition, et non pas seulement à la première.",
+        "title": "Conçu pour durer."
       },
       "quality": {
-        "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
-        "title": "No Shortcuts, Ever."
+        "body": "Chaque lot est testé, documenté et vérifié à la ferme, lors de la transformation et avant l'expédition. S'il ne répond pas à notre standard, il ne part pas.",
+        "title": "Aucun compromis, jamais."
       }
     }
   },
   "bacaStory": {
     "origin": {
-      "body": "BACA was built on a single conviction: that the quality of what reaches a buyer is inseparable from the honesty of every step before it. We hold direct relationships with farming families across Kerala, Karnataka, Tamil Nadu, and Andhra Pradesh — offering fair pricing, transparent processes, and access to global markets that were once out of reach.",
-      "eyebrow": "The BACA Story",
-      "heading": "India's finest origins,",
-      "headingAccent": "delivered with integrity.",
-      "quote": "Because when the farmer thrives, everything that reaches you is better for it."
+      "body": "BACA s'est construit sur une seule conviction : la qualité de ce qui parvient à un acheteur est indissociable de l'honnêteté de chaque étape qui la précède. Nous entretenons des relations directes avec des familles d'agriculteurs au Kerala, au Karnataka, au Tamil Nadu et en Andhra Pradesh — en offrant des prix justes, des processus transparents et un accès à des marchés mondiaux autrefois hors de portée.",
+      "eyebrow": "L'histoire BACA",
+      "heading": "Les plus belles origines de l'Inde,",
+      "headingAccent": "livrées avec intégrité.",
+      "quote": "Parce que lorsque le producteur prospère, tout ce qui vous parvient en est meilleur."
     },
     "principles": {
-      "eyebrow": "Our Principles",
-      "imageAlt": "BACA — farmers and fields",
-      "imageCaption": "Direct from India's heartland",
+      "eyebrow": "Nos principes",
+      "imageAlt": "BACA — producteurs et champs",
+      "imageCaption": "Directement du cœur de l'Inde",
       "items": {
         "farmer": {
-          "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
-          "title": "The Farmer First."
+          "body": "Nous payons au-dessus des prix du marché et ouvrons les portes du monde aux familles qui cultivent notre récolte. Leur stabilité est le fondement de notre constance.",
+          "title": "Le producteur d'abord."
         },
         "partnership": {
-          "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
-          "title": "Built for the Long Run."
+          "body": "Nous bâtissons des partenariats, non des transactions — avec les producteurs derrière nous et les acheteurs qui nous font confiance. Votre confiance, nous la gagnons à chaque expédition, et non pas seulement à la première.",
+          "title": "Conçu pour durer."
         },
         "quality": {
-          "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
-          "title": "No Shortcuts, Ever."
+          "body": "Chaque lot est testé, documenté et vérifié à la ferme, lors de la transformation et avant l'expédition. S'il ne répond pas à notre standard, il ne part pas.",
+          "title": "Aucun compromis, jamais."
         }
       }
     },
     "purpose": {
-      "eyebrow": "Our Purpose",
+      "eyebrow": "Notre raison d'être",
       "mission": {
-        "body": "To connect India's finest growing regions with the world's most discerning buyers — through traceable sourcing, honest quality, and a price that truly reflects the work behind every shipment.",
+        "body": "Relier les meilleures régions productrices de l'Inde aux acheteurs les plus exigeants du monde — par un approvisionnement traçable, une qualité honnête et un prix qui reflète véritablement le travail derrière chaque expédition.",
         "title": "Mission"
       },
       "vision": {
-        "body": "To be India's most trusted commodity exporter — known not for volume, but for the consistency that brings the same buyers back, season after season.",
+        "body": "Devenir l'exportateur de matières premières le plus digne de confiance d'Inde — reconnu non pour le volume, mais pour la constance qui fait revenir les mêmes acheteurs, saison après saison.",
         "title": "Vision"
       }
     },
@@ -87,17 +88,17 @@
       "items": {
         "exports": {
           "figure": "180+",
-          "label": "countries import Indian spices",
+          "label": "pays importent des épices indiennes",
           "source": "Spices Board of India"
         },
         "farmers": {
           "figure": "2.5M+",
-          "label": "farming families across India",
+          "label": "familles d'agriculteurs à travers l'Inde",
           "source": "Spices Board of India"
         },
         "production": {
           "figure": "75%",
-          "label": "of global spice production",
+          "label": "de la production mondiale d'épices",
           "source": "Spices Board of India"
         }
       }
@@ -107,7 +108,7 @@
     "allArticles": "Tous les articles",
     "categoriesHeading": "Catégories",
     "empty": "De nouveaux articles arrivent prochainement. Revenez bientôt.",
-    "eyebrow": "Blogs",
+    "eyebrow": "Articles",
     "featured": "À la une",
     "filterBy": "Filtrer par type",
     "heading": "Notes sur le négoce des épices et des matières premières.",
@@ -120,23 +121,23 @@
   },
   "certifications": {
     "eyebrow": "Certifications",
-    "heading": "Certified for global trade.",
-    "intro": "Every shipment leaves with its credentials in order.",
+    "heading": "Certifié pour le commerce mondial.",
+    "intro": "Chaque expédition part avec ses documents en règle.",
     "items": {
       "apeda": {
-        "sub": "Agri Export Registration"
+        "sub": "Enregistrement à l'exportation agricole"
       },
       "fssai": {
-        "sub": "Central License"
+        "sub": "Licence centrale"
       },
       "haccp": {
-        "sub": "Hazard Control Protocol"
+        "sub": "Protocole de maîtrise des dangers"
       },
       "halal": {
-        "sub": "Market Access Certification"
+        "sub": "Certification d'accès aux marchés"
       },
       "iso22000": {
-        "sub": "Food Safety Management"
+        "sub": "Gestion de la sécurité alimentaire"
       },
       "spicesBoard": {
         "sub": "CRES · Spices Board of India"
@@ -145,39 +146,40 @@
   },
   "common": {
     "enquire": "Faire une demande",
-    "viewAllCategories": "Voir toutes les catégories"
+    "viewAllCategories": "Voir toutes les catégories",
+    "skipToContent": "Aller au contenu principal"
   },
   "contactPage": {
     "channels": {
       "email": "E-mail",
-      "emailLabel": "Email us",
+      "emailLabel": "Écrivez-nous",
       "phone": "Téléphone",
-      "phoneLabel": "Call us",
+      "phoneLabel": "Appelez-nous",
       "whatsapp": "WhatsApp",
       "whatsappAction": "Écrivez-nous",
-      "whatsappValue": "Message us directly"
+      "whatsappValue": "Envoyez-nous un message directement"
     },
     "expect": {
       "items": {
         "certifications": {
-          "detail": "ISO 22000, HACCP, FSSAI, Halal on request",
+          "detail": "ISO 22000, HACCP, FSSAI, Halal sur demande",
           "label": "Certifications"
         },
         "pricing": {
-          "detail": "FOB / CIF, MOQ, annual contract options",
-          "label": "Pricing & volumes"
+          "detail": "FOB / CIF, MOQ, options de contrats annuels",
+          "label": "Tarifs et volumes"
         },
         "samples": {
-          "detail": "Available for qualified importers",
-          "label": "Sample requests"
+          "detail": "Disponibles pour les importateurs qualifiés",
+          "label": "Demandes d'échantillons"
         },
         "specs": {
-          "detail": "Grade, origin, packaging, seasonality",
-          "label": "Product specifications"
+          "detail": "Qualité, origine, conditionnement, saisonnalité",
+          "label": "Spécifications produit"
         }
       }
     },
-    "eyebrow": "Get in Touch",
+    "eyebrow": "Contactez-nous",
     "form": {
       "company": "Société",
       "country": "Pays",
@@ -193,10 +195,10 @@
       "success": "Merci — votre demande a bien été reçue. Nous vous recontacterons sous 12 heures.",
       "title": "Envoyer une demande"
     },
-    "heading": "Send us an enquiry.",
+    "heading": "Envoyez-nous une demande.",
     "intro": {
-      "body": "Whether you're looking to source a specific product, request a sample, or discuss a long-term supply arrangement — this is the right place to start.",
-      "heading": "Tell us what you need. We'll come back to you with a clear answer."
+      "body": "Que vous cherchiez à sourcer un produit spécifique, demander un échantillon ou discuter d'un accord d'approvisionnement à long terme — c'est le bon endroit pour commencer.",
+      "heading": "Dites-nous ce dont vous avez besoin. Nous reviendrons vers vous avec une réponse claire."
     },
     "map": {
       "directions": "Itinéraire",
@@ -205,10 +207,10 @@
     },
     "officeTitle": "Adresse du siège",
     "promise": {
-      "body": "All international enquiries receive a reply from our trade desk within 12 hours — including weekends.",
-      "title": "12-hour response guarantee."
+      "body": "Toutes les demandes internationales reçoivent une réponse de notre service commercial sous 12 heures — week-ends compris.",
+      "title": "Réponse garantie sous 12 heures."
     },
-    "subheading": "We respond to international enquiries within 12 hours."
+    "subheading": "Nous répondons aux demandes internationales sous 12 heures."
   },
   "ctaBand": {
     "body": "Dites-nous ce que vous achetez et où cela doit être expédié. Nous répondons aux demandes internationales sous 12 heures.",
@@ -226,7 +228,7 @@
   },
   "featuredInsights": {
     "allArticles": "Tous les articles",
-    "eyebrow": "Blogs",
+    "eyebrow": "Articles",
     "heading": "Notes du commerce des épices et des matières premières."
   },
   "footer": {
@@ -234,25 +236,30 @@
     "columns": {
       "company": {
         "links": {
-          "about": "À propos",
-          "approach": "Notre approche",
-          "profile": "Profil"
+          "about": "À propos de BACA",
+          "insights": "Articles",
+          "contact": "Contact"
         },
         "title": "Entreprise"
       },
       "products": {
         "links": {
-          "all": "Toutes les catégories",
-          "spices": "Épices"
+          "all": "Tous les produits",
+          "spices": "Épices",
+          "nutsSeeds": "Noix et graines",
+          "gallery": "Galerie"
         },
         "title": "Produits"
       },
-      "resources": {
+      "reach": {
+        "title": "Nous joindre",
         "links": {
-          "contact": "Nous contacter",
-          "insights": "Blogs"
-        },
-        "title": "Ressources"
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Certifié",
+        "spicesBoard": "Spices Board CRES"
       }
     },
     "description": "Une maison d'export indienne moderne pour les épices, les fruits à coque et les fruits.",
@@ -269,27 +276,27 @@
   },
   "foundersNote": {
     "aria": {
-      "founderIndex": "Founder {index}"
+      "founderIndex": "Fondateur {index}"
     },
-    "eyebrow": "From the Founders",
+    "eyebrow": "Mot des fondateurs",
     "items": {
       "arjun": {
         "initials": "AM",
         "name": "Arjun Menon",
-        "note": "My father used to say — never sell what you would not serve at your own table. That has been our rule since the very first shipment. I have walked the same fields in Kerala for over two decades, and I still visit before we commit to a grower. You cannot build real trust from a desk.",
-        "role": "Co-founder · Sourcing & Quality"
+        "note": "Mon père disait toujours — ne vends jamais ce que tu ne servirais pas à ta propre table. Cela a été notre règle depuis la toute première expédition. J'ai parcouru les mêmes champs au Kerala pendant plus de vingt ans, et je m'y rends encore avant de m'engager avec un producteur. On ne peut pas bâtir une vraie confiance depuis un bureau.",
+        "role": "Cofondateur · Approvisionnement et qualité"
       },
       "priya": {
         "initials": "PM",
         "name": "Priya Menon",
-        "note": "In this trade, a delayed document is a broken promise. When a container sits at port waiting on paperwork, it is not a logistics problem — it is a trust problem. Everything we built around documentation came from watching that happen once, and deciding it would never happen to our buyers.",
-        "role": "Co-founder · Trade & Logistics"
+        "note": "Dans ce métier, un document en retard est une promesse rompue. Quand un conteneur reste bloqué au port en attendant des papiers, ce n'est pas un problème de logistique — c'est un problème de confiance. Tout ce que nous avons construit autour de la documentation est né de l'avoir vu se produire une fois, et d'avoir décidé que cela n'arriverait jamais à nos acheteurs.",
+        "role": "Cofondatrice · Commerce et logistique"
       },
       "rajan": {
         "initials": "RN",
         "name": "Rajan Nair",
-        "note": "India grows some of the finest spices in the world. The farmers I work with have spent their whole lives perfecting what they do. Our job is simply to make sure that effort reaches the buyer intact — honestly graded, honestly packed, honestly shipped. Nothing more, nothing less.",
-        "role": "Director · Quality & Grower Relations"
+        "note": "L'Inde cultive certaines des plus belles épices au monde. Les agriculteurs avec qui je travaille ont passé toute leur vie à perfectionner leur métier. Notre rôle est simplement de veiller à ce que ce travail parvienne intact à l'acheteur — honnêtement classé, honnêtement emballé, honnêtement expédié. Rien de plus, rien de moins.",
+        "role": "Directeur · Qualité et relations avec les producteurs"
       }
     }
   },
@@ -314,9 +321,10 @@
     "aria": {
       "closeMenu": "Fermer le menu",
       "home": "Page d'accueil",
-      "mobileNav": "Mobile",
+      "mobileNav": "Navigation mobile",
       "openMenu": "Ouvrir le menu",
-      "primaryNav": "Principal"
+      "primaryNav": "Principal",
+      "submenu": "Sous-menu {label}"
     }
   },
   "hero": {
@@ -326,18 +334,18 @@
     "ctaContact": "Parler à notre équipe",
     "ctaProducts": "Découvrir les produits",
     "eyebrow": "Épices et produits agricoles premium · Origines indiennes de confiance",
-    "headline": "Quality. Trust.<br></br><em>Delivered.</em>"
+    "headline": "Qualité. Confiance.<br></br><em>Livrées.</em>"
   },
   "heroSlideshow": {
     "aria": {
-      "goToSlide": "Go to slide {index}"
+      "goToSlide": "Aller à la diapositive {index}"
     },
     "slides": {
-      "cardamom": "Green Cardamom · Kerala",
-      "farm": "Direct from the farm",
-      "origin": "Sourced at origin · India",
-      "pepper": "Malabar Black Pepper",
-      "turmeric": "Turmeric Fingers · Andhra Pradesh"
+      "cardamom": "Cardamome verte · Kerala",
+      "farm": "Directement de la ferme",
+      "origin": "Sourcé à l'origine · Inde",
+      "pepper": "Poivre noir de Malabar",
+      "turmeric": "Doigts de curcuma · Andhra Pradesh"
     }
   },
   "languageSwitcher": {
@@ -362,7 +370,7 @@
         "label": "Accueil"
       },
       "insights": {
-        "label": "Blogs"
+        "label": "Articles"
       },
       "products": {
         "label": "Produits"
@@ -446,7 +454,7 @@
     },
     "intro": "Deux décennies à l'origine au Kerala, au Gujarat et en Andhra — achats auprès des mêmes familles d'agriculteurs saison après saison, tri à l'origine, et expéditions de containers complets vers des acheteurs dans 37 pays.",
     "visionMission": {
-      "eyebrow": "Vision & mission",
+      "eyebrow": "Vision et mission",
       "heading": "Ce vers quoi nous travaillons — et comment.",
       "mission": {
         "body": "Connecter les petits exploitants en Inde aux acheteurs exigeants à l'étranger par un contrôle qualité rigoureux, une documentation transparente et des relations d'expédition mesurées en années.",
@@ -502,18 +510,18 @@
   },
   "whatWeOffer": {
     "aria": {
-      "goToPage": "Page {page}",
-      "next": "Next",
-      "previous": "Previous"
+      "goToPage": "Aller à la page {page}",
+      "next": "Suivant",
+      "previous": "Précédent"
     },
-    "body": "Sourced from India's finest growing regions — tested, certified, and shipped with full traceability.",
+    "body": "Sourcés dans les meilleures régions productrices de l'Inde — testés, certifiés et expédiés avec une traçabilité complète.",
     "card": {
-      "info": "Info",
-      "requestQuote": "Request quote"
+      "info": "Infos",
+      "requestQuote": "Demander un devis"
     },
-    "eyebrow": "What We Offer",
-    "heading": "Our Product Range",
-    "viewAll": "View all products →"
+    "eyebrow": "Notre offre",
+    "heading": "Notre gamme de produits",
+    "viewAll": "Voir tous les produits →"
   },
   "whatsapp": {
     "ariaLabel": "Discuter avec BACA sur WhatsApp"
@@ -521,90 +529,103 @@
   "whyBaca": {
     "certifications": {
       "eyebrow": "Certifications",
-      "heading": "Certified for global trade.",
-      "intro": "Every shipment leaves with its credentials in order.",
+      "heading": "Certifié pour le commerce mondial.",
+      "intro": "Chaque expédition part avec ses documents en règle.",
       "items": {
         "apeda": {
-          "authority": "Export Registration",
+          "authority": "Enregistrement à l'exportation",
           "name": "APEDA",
-          "sub": "Agri & Processed Food Products Export Development Authority."
+          "sub": "Autorité de développement des exportations de produits agricoles et alimentaires transformés."
         },
         "fssai": {
-          "authority": "Central License",
+          "authority": "Licence centrale",
           "name": "FSSAI",
-          "sub": "Mandatory food-safety clearance for all Indian food exports."
+          "sub": "Autorisation obligatoire de sécurité alimentaire pour toutes les exportations alimentaires indiennes."
         },
         "haccp": {
-          "authority": "Hazard Control Protocol",
+          "authority": "Protocole de maîtrise des dangers",
           "name": "HACCP",
-          "sub": "Systematic preventive approach to biological and chemical hazards."
+          "sub": "Approche préventive systématique des dangers biologiques et chimiques."
         },
         "halal": {
-          "authority": "Market Access Certification",
+          "authority": "Certification d'accès aux marchés",
           "name": "Halal",
-          "sub": "Enables trade to markets requiring halal-certified product."
+          "sub": "Permet le commerce vers les marchés exigeant des produits certifiés halal."
         },
         "iso22000": {
-          "authority": "Food Safety Mgmt",
+          "authority": "Gestion sécurité alimentaire",
           "name": "ISO 22000",
-          "sub": "International standard for food-safety management systems."
+          "sub": "Norme internationale pour les systèmes de management de la sécurité alimentaire."
         },
         "spicesBoard": {
-          "authority": "CRES · India",
+          "authority": "CRES · Inde",
           "name": "Spices Board",
-          "sub": "Government registration for certified spice exporters."
+          "sub": "Enregistrement gouvernemental pour les exportateurs d'épices certifiés."
         }
       }
     },
     "differentiators": {
-      "eyebrow": "Why BACA",
-      "heading": "Four reasons importers stay with us.",
-      "intro": "Procurement teams choose BACA when they want to stop firefighting and start planning.",
+      "eyebrow": "Pourquoi BACA",
+      "heading": "Quatre raisons qui fidélisent nos importateurs.",
+      "intro": "Les équipes achats choisissent BACA lorsqu'elles veulent cesser d'éteindre des incendies et commencer à planifier.",
       "items": {
         "logistics": {
-          "body": "Contracted vessel slots and seasoned forwarders mean your container arrives in the window we quoted — not 'sometime that month.'",
-          "title": "Reliable Logistics"
+          "body": "Des créneaux de navires contractés et des transitaires aguerris garantissent que votre conteneur arrive dans la fenêtre annoncée — et non « quelque part dans le mois ».",
+          "title": "Logistique fiable"
         },
         "partnership": {
-          "body": "Fixed-price contracts and crop reservations for repeat buyers. We measure relationships in growing seasons, not single purchase order numbers.",
-          "title": "Long-Term Partnership"
+          "body": "Contrats à prix fixe et réservations de récolte pour les acheteurs fidèles. Nous mesurons les relations en saisons de culture, et non en numéros de bons de commande.",
+          "title": "Partenariat à long terme"
         },
         "quality": {
-          "body": "ISO 22000 + HACCP-grade controls at origin: moisture, pesticide residue, aflatoxin, and microbiological tests — not random sampling at port.",
-          "title": "Lab-Tested Quality"
+          "body": "Contrôles ISO 22000 et HACCP à l'origine : humidité, résidus de pesticides, aflatoxines et analyses microbiologiques — et non un échantillonnage aléatoire au port.",
+          "title": "Qualité testée en laboratoire"
         },
         "traceability": {
-          "body": "Every lot is tied to a specific grower cooperative, harvest window, and lab result — auditable from your warehouse all the way back to the field.",
-          "title": "Full Traceability"
+          "body": "Chaque lot est rattaché à une coopérative de producteurs précise, à une fenêtre de récolte et à un résultat de laboratoire — auditable depuis votre entrepôt jusqu'au champ.",
+          "title": "Traçabilité totale"
         }
       }
     },
     "process": {
-      "eyebrow": "How We Work",
-      "heading": "A process you can hold us to.",
+      "eyebrow": "Notre méthode",
+      "heading": "Un processus dont vous pouvez nous tenir responsables.",
       "items": {
         "certificate": {
-          "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
-          "title": "What the certificate says is what arrives."
+          "body": "Nous trions et confirmons chaque lot avant que l'emballage ne commence — jamais après le chargement. La qualité indiquée sur votre facture est celle qui se trouve dans le sac, et le poids net est vérifié à la porte du conteneur. À chaque fois, sans exception.",
+          "title": "Ce que dit le certificat est ce qui arrive."
         },
         "contact": {
-          "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens.",
-          "title": "One person answers for every shipment."
+          "body": "Vous aurez toujours un interlocuteur nommé qui connaît votre cargaison, votre itinéraire et votre calendrier. Pour les acheteurs qui reviennent chaque saison, nous réservons des allocations et convenons des prix avant l'ouverture de la récolte.",
+          "title": "Une seule personne répond de chaque expédition."
         },
         "farm": {
-          "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
-          "title": "It starts at the farm."
+          "body": "Chaque commande commence par une visite — non par un appel. Nous parcourons les champs, rencontrons les producteurs et enregistrons chaque lot à sa source. Lorsque vous demandez d'où vient votre épice, nous pouvons nommer la ferme, la saison et la récolte.",
+          "title": "Tout commence à la ferme."
         },
         "lab": {
-          "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
-          "title": "Tested by people who do not work for us."
+          "body": "Chaque lot est envoyé à un laboratoire indépendant et accrédité — non pas à notre propre installation. Vous recevez le rapport d'analyse original : humidité, taux de pesticides, aflatoxines — mesurés en toute transparence et partagés sans retouche.",
+          "title": "Testé par des personnes qui ne travaillent pas pour nous."
         },
         "paperwork": {
-          "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
-          "title": "Paperwork ready before the vessel is booked."
+          "body": "Nous préparons chaque certificat et document de conformité avant que l'expédition ne parte. Votre équipe d'importation reçoit un conteneur en règle — non une série de corrections à courir au port.",
+          "title": "Documents prêts avant la réservation du navire."
         }
       },
-      "stepLabel": "Step"
+      "stepLabel": "Étape"
     }
+  },
+  "contactStrip": {
+    "ariaSection": "Envoyer une demande",
+    "eyebrow": "Contactez-nous",
+    "headingPrefix": "Prêt à sourcer ?",
+    "headingAccent": "Parlons-en.",
+    "body": "Dites-nous ce dont vous avez besoin — produit, volume et destination. Nous revenons vers vous avec un devis sous 12 heures, à chaque fois."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — image {index}",
+    "previous": "Image précédente",
+    "next": "Image suivante",
+    "goToImage": "Aller à l'image {index}"
   }
 }

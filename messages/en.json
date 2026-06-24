@@ -24,7 +24,8 @@
         "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
         "title": "It starts at the farm."
       }
-    }
+    },
+    "stepLabel": "Step"
   },
   "bacaPrinciples": {
     "eyebrow": "Our Principles",
@@ -145,7 +146,8 @@
   },
   "common": {
     "enquire": "Enquire",
-    "viewAllCategories": "View all categories"
+    "viewAllCategories": "View all categories",
+    "skipToContent": "Skip to main content"
   },
   "contactPage": {
     "channels": {
@@ -234,25 +236,30 @@
     "columns": {
       "company": {
         "links": {
-          "about": "About",
-          "approach": "Our Approach",
-          "profile": "Profile"
+          "about": "About BACA",
+          "insights": "Insights",
+          "contact": "Contact"
         },
         "title": "Company"
       },
       "products": {
         "links": {
-          "all": "All categories",
-          "spices": "Spices"
+          "all": "All Products",
+          "spices": "Spices",
+          "nutsSeeds": "Nuts & Seeds",
+          "gallery": "Gallery"
         },
         "title": "Products"
       },
-      "resources": {
+      "reach": {
+        "title": "Reach Us",
         "links": {
-          "contact": "Contact us",
-          "insights": "Blogs"
-        },
-        "title": "Resources"
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Certified",
+        "spicesBoard": "Spices Board CRES"
       }
     },
     "description": "A modern Indian export house for spices, nuts, and fruits.",
@@ -316,7 +323,8 @@
       "home": "Homepage",
       "mobileNav": "Mobile",
       "openMenu": "Open menu",
-      "primaryNav": "Primary"
+      "primaryNav": "Primary",
+      "submenu": "{label} submenu"
     }
   },
   "hero": {
@@ -606,5 +614,18 @@
       },
       "stepLabel": "Step"
     }
+  },
+  "contactStrip": {
+    "ariaSection": "Send an enquiry",
+    "eyebrow": "Get in touch",
+    "headingPrefix": "Ready to source?",
+    "headingAccent": "Let's talk.",
+    "body": "Tell us what you need — product, volume, and destination. We come back with a quote within 12 hours, every time."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — image {index}",
+    "previous": "Previous image",
+    "next": "Next image",
+    "goToImage": "Go to image {index}"
   }
 }

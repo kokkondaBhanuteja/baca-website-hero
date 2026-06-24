@@ -141,7 +141,9 @@ export function SiteHeaderMobileMenu({
                     <button
                       type="button"
                       aria-expanded={openAccordion === item.key}
-                      aria-label={`${item.label} submenu`}
+                      aria-label={tHeader('aria.submenu', {
+                        label: item.label,
+                      })}
                       onClick={() =>
                         setOpenAccordion(
                           openAccordion === item.key ? null : item.key,

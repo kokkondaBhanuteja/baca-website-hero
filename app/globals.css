@@ -144,14 +144,42 @@
       'calt' 1;
     font-variant-numeric: oldstyle-nums;
   }
-  /* Arabic: route the whole type system through Noto Sans Arabic — the Latin
-     display (Playfair Display) and mono (JetBrains Mono) faces carry no
-     Arabic glyphs. */
+  /* Non-Latin scripts: route the whole type system through the matching Noto
+     face since the Latin display / mono faces (Playfair Display, JetBrains
+     Mono / DM Mono) carry no glyphs in these scripts. */
   [lang='ar'] {
     --font-heading: var(--font-arabic), 'Geeza Pro', serif;
     --font-display: var(--font-arabic), 'Geeza Pro', serif;
     --font-sans: var(--font-arabic), 'Geeza Pro', sans-serif;
     --font-mono: var(--font-arabic), 'Geeza Pro', monospace;
+  }
+  [lang='zh'] {
+    --font-heading: var(--font-sc), 'PingFang SC', 'Hiragino Sans GB', serif;
+    --font-display: var(--font-sc), 'PingFang SC', 'Hiragino Sans GB', serif;
+    --font-sans: var(--font-sc), 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+    --font-mono: var(--font-sc), 'PingFang SC', 'Hiragino Sans GB', monospace;
+  }
+  [lang='ja'] {
+    --font-heading: var(--font-jp), 'Hiragino Sans', 'Yu Gothic', serif;
+    --font-display: var(--font-jp), 'Hiragino Sans', 'Yu Gothic', serif;
+    --font-sans: var(--font-jp), 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    --font-mono: var(--font-jp), 'Hiragino Sans', 'Yu Gothic', monospace;
+  }
+  [lang='ko'] {
+    --font-heading:
+      var(--font-kr), 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+    --font-display:
+      var(--font-kr), 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+    --font-sans:
+      var(--font-kr), 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    --font-mono:
+      var(--font-kr), 'Apple SD Gothic Neo', 'Malgun Gothic', monospace;
+  }
+  [lang='th'] {
+    --font-heading: var(--font-thai), 'Thonburi', serif;
+    --font-display: var(--font-thai), 'Thonburi', serif;
+    --font-sans: var(--font-thai), 'Thonburi', sans-serif;
+    --font-mono: var(--font-thai), 'Thonburi', monospace;
   }
   ::selection {
     background: var(--saffron);

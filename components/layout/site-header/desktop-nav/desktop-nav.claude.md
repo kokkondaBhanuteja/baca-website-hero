@@ -61,7 +61,7 @@ Dependencies:
 
 i18n:
 None for visible content (text comes via props from `SiteHeaderClient`).
-Pulls `header.aria.primaryNav` for the `<nav>` landmark label.
+Pulls `header.aria.primaryNav` for the `<nav>` landmark label and `header.aria.submenu` (with `{label}` placeholder) for the chevron disclosure aria-label.
 
 Accessibility:
 Parent labels are real `<Link>`s — Cmd-click opens in a new tab, Enter

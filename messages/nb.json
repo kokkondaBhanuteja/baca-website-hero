@@ -1,0 +1,631 @@
+{
+  "approach": {
+    "eyebrow": "Slik jobber vi",
+    "heading": "En prosess du kan holde oss ansvarlig for.",
+    "intro": "Vi bygde prosessen vår rundt ett spørsmål: hva ville gi en kjøper full sjelefred? Her er svaret.",
+    "pillars": {
+      "accountability": {
+        "body": "Du vil alltid ha en navngitt kontaktperson som kjenner lasten din, ruten din og tidsplanen din. For kjøpere som kommer tilbake hver sesong, reserverer vi allokeringer og avtaler priser før innhøstingen starter. Et forhold bygget for å vare, ikke bare for å lukke en avtale.",
+        "title": "Én person svarer for hver forsendelse."
+      },
+      "documentation": {
+        "body": "Vi forbereder hvert sertifikat og samsvarsdokument før forsendelsen settes i bevegelse. Importteamet ditt mottar en ren container — ikke en kø av rettelser å jage på havna.",
+        "title": "Papirarbeidet klart før skipet er bestilt."
+      },
+      "grading": {
+        "body": "Vi sorterer og bekrefter hvert parti før pakkingen begynner — aldri etter lasting. Graden på fakturaen er graden i sekken, og nettovekten kontrolleres ved containerdøren. Hver eneste gang.",
+        "title": "Det sertifikatet sier er det som ankommer."
+      },
+      "labtesting": {
+        "body": "Hvert parti går til et uavhengig, akkreditert laboratorium — ikke vårt eget anlegg. Du mottar den originale testrapporten: fuktighet, plantevernmiddelnivå, aflatoksiner — målt åpent og delt uten redigering.",
+        "title": "Testet av personer som ikke jobber for oss."
+      },
+      "traceability": {
+        "body": "Hver bestilling begynner med et besøk — ikke en telefonsamtale. Vi går gjennom åkrene, møter dyrkerne og registrerer hvert parti ved kilden. Når du spør hvor krydderet ditt kom fra, kan vi navngi gården, sesongen og innhøstingen.",
+        "title": "Det starter på gården."
+      }
+    },
+    "stepLabel": "Trinn"
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Våre prinsipper",
+    "imageAlt": "BACA — bønder og åkre",
+    "imageCaption": "Direkte fra Indias hjerteland",
+    "items": {
+      "farmer": {
+        "body": "Vi betaler over markedspris og åpner globale dører for familiene som dyrker våre produkter. Deres stabilitet er fundamentet for vår konsistens.",
+        "title": "Bonden først."
+      },
+      "partnership": {
+        "body": "Vi bygger partnerskap, ikke transaksjoner — med bønder bak oss og kjøpere som stoler på oss. Tilliten din er noe vi gjør oss fortjent til hver forsendelse, ikke bare den første.",
+        "title": "Bygget for det lange løp."
+      },
+      "quality": {
+        "body": "Hvert parti testes, dokumenteres og verifiseres på gården, ved bearbeiding og før utsendelse. Hvis det ikke oppfyller vår standard, drar det ikke.",
+        "title": "Ingen snarveier, noensinne."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA ble bygget på én overbevisning: at kvaliteten på det som når en kjøper er uatskillelig fra ærligheten i hvert steg før det. Vi har direkte forhold til jordbruksfamilier i Kerala, Karnataka, Tamil Nadu og Andhra Pradesh — og tilbyr rettferdige priser, transparente prosesser og tilgang til globale markeder som tidligere var utenfor rekkevidde.",
+      "eyebrow": "BACA-historien",
+      "heading": "Indias fineste opprinnelser,",
+      "headingAccent": "levert med integritet.",
+      "quote": "For når bonden trives, blir alt som når frem til deg bedre av det."
+    },
+    "principles": {
+      "eyebrow": "Våre prinsipper",
+      "imageAlt": "BACA — bønder og åkre",
+      "imageCaption": "Direkte fra Indias hjerteland",
+      "items": {
+        "farmer": {
+          "body": "Vi betaler over markedspris og åpner globale dører for familiene som dyrker våre produkter. Deres stabilitet er fundamentet for vår konsistens.",
+          "title": "Bonden først."
+        },
+        "partnership": {
+          "body": "Vi bygger partnerskap, ikke transaksjoner — med bønder bak oss og kjøpere som stoler på oss. Tilliten din er noe vi gjør oss fortjent til hver forsendelse, ikke bare den første.",
+          "title": "Bygget for det lange løp."
+        },
+        "quality": {
+          "body": "Hvert parti testes, dokumenteres og verifiseres på gården, ved bearbeiding og før utsendelse. Hvis det ikke oppfyller vår standard, drar det ikke.",
+          "title": "Ingen snarveier, noensinne."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Vårt formål",
+      "mission": {
+        "body": "Å koble Indias fineste dyrkningsregioner med verdens mest kresne kjøpere — gjennom sporbar innkjøp, ærlig kvalitet og en pris som virkelig gjenspeiler arbeidet bak hver forsendelse.",
+        "title": "Misjon"
+      },
+      "vision": {
+        "body": "Å være Indias mest betrodde råvareeksportør — kjent ikke for volum, men for konsistensen som bringer de samme kjøperne tilbake, sesong etter sesong.",
+        "title": "Visjon"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "land importerer indiske krydder",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "jordbruksfamilier over hele India",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "av global krydderproduksjon",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Alle artikler",
+    "categoriesHeading": "Kategorier",
+    "empty": "Nye artikler er på vei. Vennligst sjekk tilbake snart.",
+    "eyebrow": "Blogger",
+    "featured": "Utvalgt",
+    "filterBy": "Filtrer etter type",
+    "heading": "Notater fra krydder- og råvarehandelen.",
+    "intro": "Markedsanalyser, opprinnelseshistorier og tankene bak hvordan vi kjøper inn og sender.",
+    "minRead": "min lesing",
+    "publishedLabel": "Publisert",
+    "readTimeLabel": "Lesetid",
+    "related": "Fortsett å lese",
+    "writtenBy": "Skrevet av"
+  },
+  "certifications": {
+    "eyebrow": "Sertifiseringer",
+    "heading": "Sertifisert for global handel.",
+    "intro": "Hver forsendelse forlater oss med papirene i orden.",
+    "items": {
+      "apeda": {
+        "sub": "Eksportregistrering for landbruk"
+      },
+      "fssai": {
+        "sub": "Sentral lisens"
+      },
+      "haccp": {
+        "sub": "Protokoll for farekontroll"
+      },
+      "halal": {
+        "sub": "Sertifisering for markedstilgang"
+      },
+      "iso22000": {
+        "sub": "Styring av næringsmiddeltrygghet"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
+      }
+    }
+  },
+  "common": {
+    "enquire": "Forespør",
+    "viewAllCategories": "Se alle kategorier",
+    "skipToContent": "Hopp til hovedinnhold"
+  },
+  "contactPage": {
+    "channels": {
+      "email": "E-post",
+      "emailLabel": "Send oss en e-post",
+      "phone": "Telefon",
+      "phoneLabel": "Ring oss",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Send oss en melding",
+      "whatsappValue": "Send oss en melding direkte"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, Halal på forespørsel",
+          "label": "Sertifiseringer"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, alternativer for årskontrakter",
+          "label": "Priser og volumer"
+        },
+        "samples": {
+          "detail": "Tilgjengelig for kvalifiserte importører",
+          "label": "Prøveforespørsler"
+        },
+        "specs": {
+          "detail": "Grad, opprinnelse, emballasje, sesong",
+          "label": "Produktspesifikasjoner"
+        }
+      }
+    },
+    "eyebrow": "Ta kontakt",
+    "form": {
+      "company": "Selskap",
+      "country": "Land",
+      "email": "E-post",
+      "error": "Noe gikk galt. Vennligst prøv igjen eller send oss en e-post direkte.",
+      "message": "Melding",
+      "messagePlaceholder": "Fortell oss kort om behovet ditt — produkter, volumer, destinasjon.",
+      "name": "Fullt navn",
+      "phone": "Telefon",
+      "submit": "Send forespørsel",
+      "submitting": "Sender…",
+      "subtitle": "Vi svarer innen 12 timer.",
+      "success": "Takk — forespørselen din er mottatt. Vi tar kontakt innen 12 timer.",
+      "title": "Send en forespørsel"
+    },
+    "heading": "Send oss en forespørsel.",
+    "intro": {
+      "body": "Enten du ønsker å skaffe et bestemt produkt, be om en prøve eller diskutere en langsiktig leveranseavtale — er dette riktig sted å begynne.",
+      "heading": "Fortell oss hva du trenger. Vi kommer tilbake med et klart svar."
+    },
+    "map": {
+      "directions": "Veibeskrivelse",
+      "eyebrow": "Finn oss",
+      "iframeTitle": "Kart som viser BACAs hovedkontor"
+    },
+    "officeTitle": "Hovedkontoradresse",
+    "promise": {
+      "body": "Alle internasjonale forespørsler får svar fra vårt handelsdesk innen 12 timer — også i helger.",
+      "title": "12-timers responsgaranti."
+    },
+    "subheading": "Vi svarer på internasjonale forespørsler innen 12 timer."
+  },
+  "ctaBand": {
+    "body": "Fortell oss hva du skaffer og hvor det sendes. Vi svarer på internasjonale forespørsler innen 12 timer.",
+    "ctaCatalogue": "Last ned katalog",
+    "ctaEnquire": "Send forespørsel nå",
+    "eyebrow": "La oss snakke",
+    "heading": "La oss bygge en pålitelig forsyningskjede <em>sammen.</em>"
+  },
+  "errors": {
+    "body": "En uventet feil hindret denne siden i å lastes. Du kan prøve igjen, eller gå tilbake til forsiden.",
+    "eyebrow": "Feil",
+    "home": "Hjem",
+    "retry": "Prøv igjen",
+    "title": "Noe gikk galt."
+  },
+  "featuredInsights": {
+    "allArticles": "Alle artikler",
+    "eyebrow": "Blogger",
+    "heading": "Notater fra krydder- og råvarehandelen."
+  },
+  "footer": {
+    "backToTop": "Tilbake til toppen",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "Om BACA",
+          "insights": "Innsikt",
+          "contact": "Kontakt"
+        },
+        "title": "Selskap"
+      },
+      "products": {
+        "links": {
+          "all": "Alle produkter",
+          "spices": "Krydder",
+          "nutsSeeds": "Nøtter og frø",
+          "gallery": "Galleri"
+        },
+        "title": "Produkter"
+      },
+      "reach": {
+        "title": "Nå oss",
+        "links": {
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Sertifisert",
+        "spicesBoard": "Spices Board CRES"
+      }
+    },
+    "description": "Et moderne indisk eksporthus for krydder, nøtter og frukt.",
+    "marqueeItems": [
+      "India, i hver forsendelse",
+      "Krydder",
+      "Nøtter",
+      "Frukt",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Grunnlegger {index}"
+    },
+    "eyebrow": "Fra grunnleggerne",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "Min far pleide å si — selg aldri det du ikke selv ville servert ved ditt eget bord. Det har vært vår regel siden den aller første forsendelsen. Jeg har gått de samme åkrene i Kerala i over to tiår, og jeg besøker dem fortsatt før vi forplikter oss til en dyrker. Du kan ikke bygge ekte tillit fra et skrivebord.",
+        "role": "Medgründer · Innkjøp og kvalitet"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "I denne bransjen er et forsinket dokument et brutt løfte. Når en container står på havna og venter på papirarbeid, er det ikke et logistikkproblem — det er et tillitsproblem. Alt vi bygde rundt dokumentasjon kom fra å se det skje én gang, og bestemme oss for at det aldri skulle skje med våre kjøpere.",
+        "role": "Medgründer · Handel og logistikk"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "India dyrker noen av de fineste krydderne i verden. Bøndene jeg jobber med har brukt hele livet på å perfeksjonere det de gjør. Vår jobb er ganske enkelt å sørge for at den innsatsen når kjøperen intakt — ærlig gradert, ærlig pakket, ærlig sendt. Verken mer eller mindre.",
+        "role": "Direktør · Kvalitet og dyrkerrelasjoner"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "Bilder legges til. Vennligst sjekk tilbake snart.",
+    "eyebrow": "Galleri",
+    "heading": "Arbeidet, menneskene, jorden.",
+    "intro": "Innsyn i vår innkjøp, gradering og frakt — fra opprinnelsen i India og videre ut i verden."
+  },
+  "globalPresence": {
+    "body": "BACA leverer til importører, distributører og næringsmiddelprodusenter i Nord-Amerika, Europa, Midtøsten, Sørøst-Asia og Afrika — på dokumenterte kontrakter levert i tide.",
+    "eyebrow": "Global rekkevidde",
+    "heading": "Fra indiske havner til <em>fem kontinenter.</em>",
+    "items": {
+      "continents": "Kontinenter vi sender til",
+      "countries": "Land vi betjener",
+      "repeatRate": "Andel gjenkjøpere",
+      "responseTime": "Responstid på forespørsler"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Lukk meny",
+      "home": "Forside",
+      "mobileNav": "Mobil",
+      "openMenu": "Åpne meny",
+      "primaryNav": "Primær",
+      "submenu": "{label} undermeny"
+    }
+  },
+  "hero": {
+    "body": "En ny generasjon indisk eksport — bygget på sporbar innkjøp, streng kvalitet og partnerskap som flytter råvarer pålitelig, container etter container.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 land betjent",
+    "ctaContact": "Snakk med teamet vårt",
+    "ctaProducts": "Utforsk produkter",
+    "eyebrow": "Premium krydder og landbruksvarer · Betrodde indiske opprinnelser",
+    "headline": "Kvalitet. Tillit.<br></br><em>Levert.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Gå til lysbilde {index}"
+    },
+    "slides": {
+      "cardamom": "Grønn kardemomme · Kerala",
+      "farm": "Direkte fra gården",
+      "origin": "Innkjøpt ved kilden · India",
+      "pepper": "Malabar svart pepper",
+      "turmeric": "Gurkemeiefingre · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Endre språk"
+  },
+  "manifesto": {
+    "body": "To tiår ved kilden i Kerala, Gujarat og Andhra — kjøper fra de samme jordbruksfamiliene sesong etter sesong, graderer ved kilden og sender fulle containere til kjøpere i 37 land.",
+    "eyebrow": "Hvorfor vi er her",
+    "headline": "Vi forbinder indiske dyrkere med verdens mest krevende kjøkken — innkjøp <em>med hensikt</em>, og sending med presisjon.",
+    "imageAlt": "Værbitte hender skjærer fersk gurkemeie ved kilden i India — graderer rå krydder slik BACAs jordbruksfamilier har gjort i generasjoner"
+  },
+  "metadata": {
+    "description": "BACA er et moderne indisk eksporthus — sporbar innkjøp av krydder, nøtter og frukt, streng kvalitet og pålitelige globale forsendelser. ISO 22000-, HACCP- og FSSAI-sertifisert.",
+    "title": "BACA — Indisk eksportør av krydder, nøtter og frukt"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Kontakt oss"
+      },
+      "home": {
+        "label": "Hjem"
+      },
+      "insights": {
+        "label": "Blogger"
+      },
+      "products": {
+        "label": "Produkter"
+      },
+      "profile": {
+        "label": "Profil"
+      }
+    }
+  },
+  "notFound": {
+    "body": "Vi finner ikke det du leter etter. Siden kan ha blitt flyttet, eller lenken kan være feil. Gå tilbake til forsiden eller bla i katalogen.",
+    "ctaHome": "Tilbake til forsiden",
+    "ctaProducts": "Bla i produkter",
+    "eyebrow": "404 · Siden ble ikke funnet",
+    "heading": "Denne siden ble aldri sendt."
+  },
+  "productPreview": {
+    "eyebrow": "Det vi eksporterer",
+    "heading": "Innkjøpt ved kilden, gradert for eksport."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Kategorier",
+      "harvest": "Innhøsting",
+      "originRegions": "Opprinnelsesregioner",
+      "pairsNaturally": "Passer naturlig med",
+      "peak": "Topp",
+      "products": "Produkter",
+      "requestQuote": "Be om tilbud",
+      "requestSample": "Be om prøve",
+      "seasonality": "Sesong",
+      "seasonalityHint": "Innhøsting / topptilgjengelighet",
+      "specifications": "Spesifikasjoner"
+    },
+    "empty": "Katalogen vår oppdateres. Vennligst sjekk tilbake snart.",
+    "eyebrow": "Vår katalog",
+    "heading": "Alt vi eksporterer, innkjøpt ved kilden.",
+    "intro": "Krydder, nøtter og frukt — gradert, dokumentert og sendt til kjøpere i 37 land."
+  },
+  "profilePage": {
+    "eyebrow": "Om BACA",
+    "founders": {
+      "eyebrow": "Grunnleggere",
+      "heading": "Menneskene bak BACA.",
+      "imageAltPrefix": "Portrett av",
+      "intro": "BACA ledes av to søsken som bygde virksomheten ut fra to tiår på bakken i Indias krydderhandel.",
+      "items": {
+        "founder1": {
+          "bio": "To tiår med direkte kjøp fra kooperativer i Kerala og Andhra. Har ansvar for dyrkerrelasjoner, gradering ved opprinnelse og laboratorietestprogrammer for hver forsendelse.",
+          "role": "Medgründer · Innkjøp og kvalitet"
+        },
+        "founder2": {
+          "bio": "Håndterer eksportdokumentasjon, speditørrelasjoner og det kjøperrettede handelsdesket. Drev tidligere logistikkavdelingen i et Mumbai-basert råvarehandelshus.",
+          "role": "Medgründer · Handel og logistikk"
+        }
+      }
+    },
+    "heading": "Et familieledet indisk eksporthus, bygget for det lange perspektivet.",
+    "howWeWork": {
+      "eyebrow": "Slik jobber vi",
+      "heading": "Fra jord til frakt, i fire disiplinerte trinn.",
+      "intro": "Hver container som forlater vår dør har gjort seg fortjent til sin plass gjennom den samme sekvensen.",
+      "steps": {
+        "document": {
+          "body": "Plantehelse-sertifikater, HS-koder, Incoterms og opprinnelsesdokumenter utstedes før skipet seiler, slik at tollklarering aldri holder tilbake en forsendelse i destinasjonshavnen.",
+          "title": "Dokumenter"
+        },
+        "grade": {
+          "body": "Hvert parti håndsorteres, laboratorietestes for fuktighet, plantevernmiddelrester og aflatoksiner, og dokumenteres etter ISO 22000- og HACCP-protokoller før det noen gang ser en container.",
+          "title": "Gradere"
+        },
+        "ship": {
+          "body": "Pakket ved kilden og fraktet som dokumenterte fullcontainerlaster med kontraktsfestede speditører — samme skip, samme ruter, samme ankomstvinduer som forsyningskjeden din kan planlegge rundt.",
+          "title": "Sende"
+        },
+        "source": {
+          "body": "Vi kjøper direkte fra dyrkerkooperativer i regionene hver avling er hjemmehørende i — kardemomme fra Kerala, chili fra Guntur, pepper fra Malabar — for full sporbarhet fra åker til speditør.",
+          "title": "Skaffe"
+        }
+      }
+    },
+    "intro": "To tiår ved kilden i Kerala, Gujarat og Andhra — kjøper fra de samme dyrkerfamiliene sesong etter sesong, graderer ved kilden og sender fulle containere til kjøpere i 37 land.",
+    "visionMission": {
+      "eyebrow": "Visjon og misjon",
+      "heading": "Det vi jobber mot — og hvordan.",
+      "mission": {
+        "body": "Koble småbønder i India til kresne kjøpere i utlandet gjennom streng kvalitetskontroll, transparent papirarbeid og fraktforhold målt i år.",
+        "title": "Misjon"
+      },
+      "vision": {
+        "body": "En verden hvor indisk jordbruk handles på lik linje med enhver premium opprinnelse — sporbart, riktig dokumentert og priset for arbeidet det representerer ved gårdsporten.",
+        "title": "Visjon"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA er et moderne indisk eksporthus som spesialiserer seg på krydder, nøtter og frukt. Vi jobber direkte med jordbruksfamilier i Indias tradisjonelle dyrkningsregioner, graderer og laboratorietester hvert parti ved kilden, og sender dokumenterte fullcontainerlaster til importører, distributører og forhandlere verden over. Teamet har jobbet med opprinnelse, gradering og logistikk i over to tiår; selskapet er formaliseringen av den erfaringen under ett merke.",
+      "eyebrow": "Hvem vi er",
+      "heading": "Et eksporthus bygget på relasjoner."
+    },
+    "whyBaca": {
+      "eyebrow": "Hvorfor BACA",
+      "heading": "Fire grunner til at importører blir hos oss.",
+      "intro": "Innkjøpsteam velger BACA når de vil slutte å slokke branner og begynne å planlegge.",
+      "items": {
+        "logistics": {
+          "body": "Kontraktsfestede skipsplasser og erfarne speditører betyr at containeren din ankommer i vinduet vi oppga — ikke «en gang den måneden».",
+          "title": "Pålitelig logistikk"
+        },
+        "partnership": {
+          "body": "Fastpriskontrakter og avlingsreservasjoner for gjenkjøpere. Vi måler relasjoner i vekstsesonger, ikke enkelte ordrenumre.",
+          "title": "Langsiktig partnerskap"
+        },
+        "quality": {
+          "body": "ISO 22000- + HACCP-nivå kontroller ved kilden: fuktighet, plantevernmiddelrester, aflatoksin og mikrobiologiske tester, ikke tilfeldig prøvetaking på havna.",
+          "title": "Laboratorietestet kvalitet"
+        },
+        "traceability": {
+          "body": "Hvert parti er knyttet til et bestemt dyrkerkooperativ, innhøstingsvindu og laboratorieresultat — etterprøvbart fra lageret ditt og tilbake til åkeren.",
+          "title": "Full sporbarhet"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "Portrett av administrerende direktør i BACA",
+    "name": "Arvind Menon",
+    "quote": "Vi handler ikke med forsendelser — vi holder kontrakter. De samme kjøperne kommer tilbake sesong etter sesong fordi graden i containeren samsvarer med graden på sertifikatet, hver eneste gang.",
+    "title": "Administrerende direktør, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Containere sendt",
+      "countries": "Land betjent",
+      "tonnes": "Tonn håndtert / år",
+      "years": "År i virksomhet"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Side {page}",
+      "next": "Neste",
+      "previous": "Forrige"
+    },
+    "body": "Innkjøpt fra Indias fineste dyrkningsregioner — testet, sertifisert og sendt med full sporbarhet.",
+    "card": {
+      "info": "Info",
+      "requestQuote": "Be om tilbud"
+    },
+    "eyebrow": "Hva vi tilbyr",
+    "heading": "Vårt produktutvalg",
+    "viewAll": "Se alle produkter →"
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat med BACA på WhatsApp"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Sertifiseringer",
+      "heading": "Sertifisert for global handel.",
+      "intro": "Hver forsendelse forlater oss med papirene i orden.",
+      "items": {
+        "apeda": {
+          "authority": "Eksportregistrering",
+          "name": "APEDA",
+          "sub": "Agricultural and Processed Food Products Export Development Authority."
+        },
+        "fssai": {
+          "authority": "Sentral lisens",
+          "name": "FSSAI",
+          "sub": "Obligatorisk matsikkerhetsklarering for all indisk mateksport."
+        },
+        "haccp": {
+          "authority": "Protokoll for farekontroll",
+          "name": "HACCP",
+          "sub": "Systematisk forebyggende tilnærming til biologiske og kjemiske farer."
+        },
+        "halal": {
+          "authority": "Sertifisering for markedstilgang",
+          "name": "Halal",
+          "sub": "Gir tilgang til markeder som krever halal-sertifiserte produkter."
+        },
+        "iso22000": {
+          "authority": "Matsikkerhetsstyring",
+          "name": "ISO 22000",
+          "sub": "Internasjonal standard for styringssystemer for matsikkerhet."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Statlig registrering for sertifiserte krydderhandlere."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Hvorfor BACA",
+      "heading": "Fire grunner til at importører blir hos oss.",
+      "intro": "Innkjøpsteam velger BACA når de vil slutte å slokke branner og begynne å planlegge.",
+      "items": {
+        "logistics": {
+          "body": "Kontraktsfestede skipsplasser og erfarne speditører betyr at containeren din ankommer i vinduet vi oppga — ikke «en gang den måneden».",
+          "title": "Pålitelig logistikk"
+        },
+        "partnership": {
+          "body": "Fastpriskontrakter og avlingsreservasjoner for gjenkjøpere. Vi måler relasjoner i vekstsesonger, ikke enkelte innkjøpsordrenumre.",
+          "title": "Langsiktig partnerskap"
+        },
+        "quality": {
+          "body": "ISO 22000- + HACCP-nivå kontroller ved kilden: fuktighet, plantevernmiddelrester, aflatoksin og mikrobiologiske tester — ikke tilfeldig prøvetaking på havna.",
+          "title": "Laboratorietestet kvalitet"
+        },
+        "traceability": {
+          "body": "Hvert parti er knyttet til et bestemt dyrkerkooperativ, innhøstingsvindu og laboratorieresultat — etterprøvbart fra lageret ditt og hele veien tilbake til åkeren.",
+          "title": "Full sporbarhet"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Slik jobber vi",
+      "heading": "En prosess du kan holde oss ansvarlig for.",
+      "items": {
+        "certificate": {
+          "body": "Vi sorterer og bekrefter hvert parti før pakkingen begynner — aldri etter lasting. Graden på fakturaen er graden i sekken, og nettovekten kontrolleres ved containerdøren. Hver eneste gang.",
+          "title": "Det sertifikatet sier er det som ankommer."
+        },
+        "contact": {
+          "body": "Du vil alltid ha en navngitt kontaktperson som kjenner lasten din, ruten din og tidsplanen din. For kjøpere som kommer tilbake hver sesong, reserverer vi allokeringer og avtaler priser før innhøstingen starter.",
+          "title": "Én person svarer for hver forsendelse."
+        },
+        "farm": {
+          "body": "Hver bestilling begynner med et besøk — ikke en telefonsamtale. Vi går gjennom åkrene, møter dyrkerne og registrerer hvert parti ved kilden. Når du spør hvor krydderet ditt kom fra, kan vi navngi gården, sesongen og innhøstingen.",
+          "title": "Det starter på gården."
+        },
+        "lab": {
+          "body": "Hvert parti går til et uavhengig, akkreditert laboratorium — ikke vårt eget anlegg. Du mottar den originale testrapporten: fuktighet, plantevernmiddelnivå, aflatoksiner — målt åpent og delt uten redigering.",
+          "title": "Testet av personer som ikke jobber for oss."
+        },
+        "paperwork": {
+          "body": "Vi forbereder hvert sertifikat og samsvarsdokument før forsendelsen settes i bevegelse. Importteamet ditt mottar en ren container — ikke en kø av rettelser å jage på havna.",
+          "title": "Papirarbeidet klart før skipet er bestilt."
+        }
+      },
+      "stepLabel": "Trinn"
+    }
+  },
+  "contactStrip": {
+    "ariaSection": "Send en forespørsel",
+    "eyebrow": "Ta kontakt",
+    "headingPrefix": "Klar til å skaffe?",
+    "headingAccent": "La oss snakke.",
+    "body": "Fortell oss hva du trenger — produkt, volum og destinasjon. Vi kommer tilbake med et tilbud innen 12 timer, hver gang."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — bilde {index}",
+    "previous": "Forrige bilde",
+    "next": "Neste bilde",
+    "goToImage": "Gå til bilde {index}"
+  }
+}

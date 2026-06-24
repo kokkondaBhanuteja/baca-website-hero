@@ -5,6 +5,9 @@ file: 'components/sections/contact/contact-strip/contact-strip.tsx'
 exports:
   - 'ContactStrip'
 imports_from:
+  - 'lucide-react'
+  - 'next-intl'
+  - '@/constants/contact'
   - '@/components/sections/contact/enquiry-form'
 ---
 
@@ -46,19 +49,21 @@ Business Logic:
 
 Dependencies:
 
+- `lucide-react`: `Mail`, `Phone`, `MessageCircle`.
+- `next-intl`: `useTranslations`.
+- `@/constants/contact`: `CONTACT` (email, phone, WhatsApp display values + hrefs).
 - `@/components/sections/contact/enquiry-form` — the shared form.
+
+i18n:
+Two namespaces. `contactStrip` for content unique to the strip: `ariaSection` (section label), `eyebrow`, `headingPrefix` + `headingAccent` (split heading with `<em>` accent), `body` (lede). `contactPage.channels` for the channel row labels (`email`, `phone`, `whatsapp`, `whatsappValue`) — the same source as the `/contact` page uses, so the two surfaces stay in sync without duplicate keys. Display values for email / phone / WhatsApp URL come from `@/constants/contact` since they're not localized.
 
 Accessibility:
 
-- `<section aria-label="Send an enquiry">` so screen readers can name the
-  landmark even though no visual heading is rendered.
+- `<section aria-label={t('ariaSection')}>` so screen readers can name the
+  landmark; the label is localized via the `contactStrip.ariaSection` key.
 
 Notes:
 
-- This component used to include an info column (eyebrow + heading + channels
-  - address). That was moved out per design: the user wanted the global
-    pre-footer to be the form only, with the info column appearing only on
-    `/contact`. If you want a heading or eyebrow back in the global strip, add
-    it here — translations exist under the `contactStrip` namespace
-    (`eyebrow`, `heading`, `subheading`, `officeTitle`, `channels.*`) and can be
-    reused.
+- This component renders the full info column (eyebrow + heading + body +
+  channels) alongside the form. The earlier "minimal" variant has been
+  superseded — the strip is the global pre-footer "Get in touch" panel.

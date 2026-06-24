@@ -1,29 +1,34 @@
 'use client'
 
 import { Mail, Phone, MessageCircle } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { CONTACT } from '@/constants/contact'
 import { EnquiryForm } from '@/components/sections/contact/enquiry-form'
 
 export function ContactStrip() {
+  const t = useTranslations('contactStrip')
+  const tChannels = useTranslations('contactPage.channels')
+
   return (
-    <section aria-label="Send an enquiry" className="bg-white py-20 sm:py-28">
+    <section aria-label={t('ariaSection')} className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
           {/* ── Left: trust framing ── */}
           <div className="flex flex-col justify-between gap-12">
             <div>
               <p className="mb-4 font-mono text-[0.75rem] uppercase tracking-[0.35em] text-[#2E0F13]/60">
-                Get in touch
+                {t('eyebrow')}
               </p>
               <h2 className="font-heading mb-6 text-[2.4rem] font-light leading-[1.06] text-[#2E0F13] sm:text-[3rem]">
-                Ready to source?
+                {t('headingPrefix')}
                 <br />
-                <em className="not-italic text-[#8B3A1A]">Let&apos;s talk.</em>
+                <em className="not-italic text-[#8B3A1A]">
+                  {t('headingAccent')}
+                </em>
               </h2>
               <p className="max-w-sm text-[0.95rem] leading-[1.9] text-[#2E0F13]/60">
-                Tell us what you need — product, volume, and destination. We
-                come back with a quote within 12 hours, every time.
+                {t('body')}
               </p>
             </div>
 
@@ -38,7 +43,7 @@ export function ContactStrip() {
                 </div>
                 <div>
                   <p className="font-mono text-[0.58rem] uppercase tracking-[0.22em] text-[#2E0F13]/40">
-                    Email
+                    {tChannels('email')}
                   </p>
                   <p className="font-heading text-[1.05rem] font-light text-[#2E0F13] transition-colors group-hover:text-[#8B3A1A]">
                     {CONTACT.email}
@@ -55,7 +60,7 @@ export function ContactStrip() {
                 </div>
                 <div>
                   <p className="font-mono text-[0.58rem] uppercase tracking-[0.22em] text-[#2E0F13]/40">
-                    Phone
+                    {tChannels('phone')}
                   </p>
                   <p className="font-heading text-[1.05rem] font-light text-[#2E0F13] transition-colors group-hover:text-[#8B3A1A]">
                     {CONTACT.phoneDisplay}
@@ -74,10 +79,10 @@ export function ContactStrip() {
                 </div>
                 <div>
                   <p className="font-mono text-[0.58rem] uppercase tracking-[0.22em] text-[#2E0F13]/40">
-                    WhatsApp
+                    {tChannels('whatsapp')}
                   </p>
                   <p className="font-heading text-[1.05rem] font-light text-[#2E0F13] transition-colors group-hover:text-[#8B3A1A]">
-                    Message us directly
+                    {tChannels('whatsappValue')}
                   </p>
                 </div>
               </a>

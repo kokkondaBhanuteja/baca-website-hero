@@ -40,7 +40,7 @@ export function Approach() {
                   {pillar.n}
                 </span>
                 <span className="font-mono text-[0.55rem] uppercase tracking-[0.3em] text-[#8B3A1A]/60">
-                  Step
+                  {t('stepLabel')}
                 </span>
               </div>
 
@@ -71,7 +71,7 @@ export function Approach() {
                   {pillar.n}
                 </span>
                 <span className="font-mono text-[0.55rem] uppercase tracking-[0.3em] text-[#8B3A1A]/60">
-                  Step
+                  {t('stepLabel')}
                 </span>
               </div>
 

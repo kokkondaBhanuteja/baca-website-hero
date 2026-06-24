@@ -5,6 +5,10 @@ import {
   DM_Mono,
   Inter,
   Noto_Sans_Arabic,
+  Noto_Sans_JP,
+  Noto_Sans_KR,
+  Noto_Sans_SC,
+  Noto_Sans_Thai,
   Playfair_Display,
 } from 'next/font/google'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
@@ -25,7 +29,8 @@ const cormorant = Cormorant_Garamond({
 })
 const inter = Inter({
   variable: '--font-inter',
-  subsets: ['latin'],
+  // Latin + Cyrillic so ru / uk / bg render in the brand sans face.
+  subsets: ['latin', 'cyrillic', 'cyrillic-ext'],
 })
 const playfair = Playfair_Display({
   variable: '--font-playfair',
@@ -41,6 +46,31 @@ const dmMono = DM_Mono({
 const notoArabic = Noto_Sans_Arabic({
   variable: '--font-arabic',
   subsets: ['arabic'],
+  weight: ['400', '500', '600'],
+})
+// CJK + Thai faces. Each is only routed in via the [lang='..'] CSS overrides
+// in globals.css, so other locales never download these files.
+const notoSC = Noto_Sans_SC({
+  variable: '--font-sc',
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  preload: false,
+})
+const notoJP = Noto_Sans_JP({
+  variable: '--font-jp',
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  preload: false,
+})
+const notoKR = Noto_Sans_KR({
+  variable: '--font-kr',
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  preload: false,
+})
+const notoThai = Noto_Sans_Thai({
+  variable: '--font-thai',
+  subsets: ['thai'],
   weight: ['400', '500', '600'],
 })
 
@@ -96,12 +126,16 @@ export default async function LocaleLayout({
   setRequestLocale(locale)
 
   const { dir } = LOCALE_META[locale as Locale]
+  const tCommon = await getTranslations({
+    locale: locale as Locale,
+    namespace: 'common',
+  })
 
   return (
     <html
       lang={locale}
       dir={dir}
-      className={`${inter.variable} ${playfair.variable} ${dmMono.variable} ${notoArabic.variable} ${cormorant.variable} bg-background`}
+      className={`${inter.variable} ${playfair.variable} ${dmMono.variable} ${notoArabic.variable} ${notoSC.variable} ${notoJP.variable} ${notoKR.variable} ${notoThai.variable} ${cormorant.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         {/* Skip link for keyboard users — jumps past the fixed header. */}
@@ -109,7 +143,7 @@ export default async function LocaleLayout({
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-paper"
         >
-          Skip to main content
+          {tCommon('skipToContent')}
         </a>
         <NextIntlClientProvider>
           {children}

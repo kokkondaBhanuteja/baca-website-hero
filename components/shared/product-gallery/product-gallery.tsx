@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { cn } from '@/lib/utils'
 
@@ -17,6 +18,7 @@ export function ProductGallery({
   images: string[]
   alt: string
 }) {
+  const t = useTranslations('productGallery')
   const trackRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useState(0)
 
@@ -49,7 +51,9 @@ export function ProductGallery({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={src}
-                alt={multiple ? `${alt} — image ${index + 1}` : alt}
+                alt={
+                  multiple ? t('imageOfAlt', { alt, index: index + 1 }) : alt
+                }
                 className="aspect-[16/10] w-full object-cover"
               />
             </div>
@@ -62,7 +66,7 @@ export function ProductGallery({
               type="button"
               onClick={() => scrollToIndex(active - 1)}
               disabled={active === 0}
-              aria-label="Previous image"
+              aria-label={t('previous')}
               className="absolute start-3 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-paper/90 text-ink shadow-sm backdrop-blur transition-opacity hover:bg-paper disabled:pointer-events-none disabled:opacity-0"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -71,7 +75,7 @@ export function ProductGallery({
               type="button"
               onClick={() => scrollToIndex(active + 1)}
               disabled={active === images.length - 1}
-              aria-label="Next image"
+              aria-label={t('next')}
               className="absolute end-3 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-paper/90 text-ink shadow-sm backdrop-blur transition-opacity hover:bg-paper disabled:pointer-events-none disabled:opacity-0"
             >
               <ChevronRight className="h-5 w-5" />
@@ -87,7 +91,7 @@ export function ProductGallery({
               key={src}
               type="button"
               onClick={() => scrollToIndex(index)}
-              aria-label={`Go to image ${index + 1}`}
+              aria-label={t('goToImage', { index: index + 1 })}
               aria-current={index === active}
               className={cn(
                 'h-1.5 rounded-full transition-all',

@@ -41,6 +41,7 @@ Business Logic:
 - Vercel Analytics included only in production
 - NextIntlClientProvider wraps children (client-side i18n context)
 - HTML lang and dir set dynamically per locale
+- Renders a localized skip-link (`<a href="#main">{tCommon('skipToContent')}</a>`) as the first focusable element inside `<body>`; visible only on keyboard focus.
 
 Renders:
 

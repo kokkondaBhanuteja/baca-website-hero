@@ -1,0 +1,631 @@
+{
+  "approach": {
+    "eyebrow": "Cách chúng tôi làm việc",
+    "heading": "Một quy trình mà quý vị có thể tin cậy ở chúng tôi.",
+    "intro": "Chúng tôi xây dựng quy trình của mình dựa trên một câu hỏi: điều gì sẽ mang lại cho người mua sự an tâm trọn vẹn? Đây là câu trả lời.",
+    "pillars": {
+      "accountability": {
+        "body": "Quý vị sẽ luôn có một đầu mối liên hệ được chỉ định, người nắm rõ hàng hóa, tuyến vận chuyển và thời gian biểu của quý vị. Đối với những người mua quay lại mỗi mùa, chúng tôi dành sẵn hạn ngạch và thỏa thuận giá cả trước khi vụ thu hoạch bắt đầu. Một mối quan hệ được xây dựng để bền vững, không chỉ để chốt đơn.",
+        "title": "Một người chịu trách nhiệm cho mỗi lô hàng."
+      },
+      "documentation": {
+        "body": "Chúng tôi chuẩn bị mọi chứng chỉ và tài liệu tuân thủ trước khi lô hàng được vận chuyển. Đội ngũ nhập khẩu của quý vị nhận được một container hoàn chỉnh — không phải một loạt sai sót phải xử lý tại cảng.",
+        "title": "Giấy tờ sẵn sàng trước khi tàu được đặt chỗ."
+      },
+      "grading": {
+        "body": "Chúng tôi phân loại và xác nhận từng lô trước khi đóng gói — không bao giờ sau khi xếp hàng. Cấp độ ghi trên hóa đơn chính là cấp độ trong bao, và trọng lượng tịnh được kiểm tra ngay tại cửa container. Mọi lúc, không ngoại lệ.",
+        "title": "Những gì chứng chỉ ghi chính là những gì đến nơi."
+      },
+      "labtesting": {
+        "body": "Mỗi lô hàng đều được gửi đến một phòng thí nghiệm độc lập, được công nhận — không phải cơ sở của riêng chúng tôi. Quý vị nhận được báo cáo kiểm nghiệm gốc: độ ẩm, mức thuốc trừ sâu, aflatoxin — được đo lường công khai và chia sẻ không qua chỉnh sửa.",
+        "title": "Được kiểm nghiệm bởi những người không làm việc cho chúng tôi."
+      },
+      "traceability": {
+        "body": "Mỗi đơn hàng bắt đầu bằng một chuyến thăm — không phải một cuộc điện thoại. Chúng tôi đi bộ qua các cánh đồng, gặp gỡ người trồng, và ghi nhận từng lô tại nguồn gốc. Khi quý vị hỏi gia vị của mình đến từ đâu, chúng tôi có thể nêu tên nông trại, mùa vụ và vụ thu hoạch.",
+        "title": "Bắt đầu từ nông trại."
+      }
+    },
+    "stepLabel": "Bước"
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Nguyên tắc của chúng tôi",
+    "imageAlt": "BACA — nông dân và cánh đồng",
+    "imageCaption": "Trực tiếp từ trung tâm Ấn Độ",
+    "items": {
+      "farmer": {
+        "body": "Chúng tôi trả mức giá cao hơn thị trường và mở ra cánh cửa toàn cầu cho những gia đình trồng nên sản phẩm của chúng tôi. Sự ổn định của họ là nền tảng cho tính nhất quán của chúng tôi.",
+        "title": "Người nông dân là ưu tiên hàng đầu."
+      },
+      "partnership": {
+        "body": "Chúng tôi xây dựng quan hệ đối tác, không phải giao dịch — với những người nông dân đứng sau và những người mua tin tưởng chúng tôi. Niềm tin của quý vị là điều chúng tôi kiếm được qua mỗi lô hàng, không chỉ lần đầu tiên.",
+        "title": "Xây dựng cho chặng đường dài."
+      },
+      "quality": {
+        "body": "Mỗi mẻ đều được kiểm nghiệm, lập hồ sơ và xác minh tại nông trại, trong quá trình chế biến và trước khi xuất xưởng. Nếu không đạt tiêu chuẩn của chúng tôi, nó sẽ không được giao đi.",
+        "title": "Không bao giờ cắt giảm."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA được xây dựng trên một niềm tin duy nhất: chất lượng đến tay người mua không thể tách rời khỏi sự trung thực ở mọi bước trước đó. Chúng tôi duy trì quan hệ trực tiếp với các gia đình nông dân khắp Kerala, Karnataka, Tamil Nadu và Andhra Pradesh — mang lại giá cả công bằng, quy trình minh bạch và quyền tiếp cận các thị trường toàn cầu từng nằm ngoài tầm với.",
+      "eyebrow": "Câu chuyện BACA",
+      "heading": "Những nguồn gốc tinh túy nhất của Ấn Độ,",
+      "headingAccent": "được giao với sự chính trực.",
+      "quote": "Bởi vì khi người nông dân thịnh vượng, mọi thứ đến tay quý vị đều tốt đẹp hơn."
+    },
+    "principles": {
+      "eyebrow": "Nguyên tắc của chúng tôi",
+      "imageAlt": "BACA — nông dân và cánh đồng",
+      "imageCaption": "Trực tiếp từ trung tâm Ấn Độ",
+      "items": {
+        "farmer": {
+          "body": "Chúng tôi trả mức giá cao hơn thị trường và mở ra cánh cửa toàn cầu cho những gia đình trồng nên sản phẩm của chúng tôi. Sự ổn định của họ là nền tảng cho tính nhất quán của chúng tôi.",
+          "title": "Người nông dân là ưu tiên hàng đầu."
+        },
+        "partnership": {
+          "body": "Chúng tôi xây dựng quan hệ đối tác, không phải giao dịch — với những người nông dân đứng sau và những người mua tin tưởng chúng tôi. Niềm tin của quý vị là điều chúng tôi kiếm được qua mỗi lô hàng, không chỉ lần đầu tiên.",
+          "title": "Xây dựng cho chặng đường dài."
+        },
+        "quality": {
+          "body": "Mỗi mẻ đều được kiểm nghiệm, lập hồ sơ và xác minh tại nông trại, trong quá trình chế biến và trước khi xuất xưởng. Nếu không đạt tiêu chuẩn của chúng tôi, nó sẽ không được giao đi.",
+          "title": "Không bao giờ cắt giảm."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Mục đích của chúng tôi",
+      "mission": {
+        "body": "Kết nối những vùng trồng tinh túy nhất của Ấn Độ với những người mua khắt khe nhất trên thế giới — thông qua nguồn cung có thể truy xuất, chất lượng trung thực và mức giá phản ánh đúng công sức đằng sau mỗi lô hàng.",
+        "title": "Sứ mệnh"
+      },
+      "vision": {
+        "body": "Trở thành nhà xuất khẩu hàng hóa được tin cậy nhất của Ấn Độ — được biết đến không phải vì khối lượng, mà vì tính nhất quán đưa cùng những người mua quay lại, mùa này qua mùa khác.",
+        "title": "Tầm nhìn"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "quốc gia nhập khẩu gia vị Ấn Độ",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "gia đình nông dân khắp Ấn Độ",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "sản lượng gia vị toàn cầu",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Tất cả bài viết",
+    "categoriesHeading": "Danh mục",
+    "empty": "Các bài viết mới đang được chuẩn bị. Xin vui lòng quay lại sau.",
+    "eyebrow": "Bài viết",
+    "featured": "Nổi bật",
+    "filterBy": "Lọc theo loại",
+    "heading": "Ghi chép từ ngành gia vị và hàng hóa.",
+    "intro": "Phân tích thị trường, câu chuyện nguồn gốc và tư duy đằng sau cách chúng tôi tìm nguồn và vận chuyển.",
+    "minRead": "phút đọc",
+    "publishedLabel": "Đã đăng",
+    "readTimeLabel": "Thời gian đọc",
+    "related": "Đọc tiếp",
+    "writtenBy": "Viết bởi"
+  },
+  "certifications": {
+    "eyebrow": "Chứng nhận",
+    "heading": "Được chứng nhận cho thương mại toàn cầu.",
+    "intro": "Mỗi lô hàng đều ra đi với giấy tờ đầy đủ.",
+    "items": {
+      "apeda": {
+        "sub": "Đăng ký Xuất khẩu Nông nghiệp"
+      },
+      "fssai": {
+        "sub": "Giấy phép Trung ương"
+      },
+      "haccp": {
+        "sub": "Quy trình Kiểm soát Mối nguy"
+      },
+      "halal": {
+        "sub": "Chứng nhận Tiếp cận Thị trường"
+      },
+      "iso22000": {
+        "sub": "Quản lý An toàn Thực phẩm"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
+      }
+    }
+  },
+  "common": {
+    "enquire": "Liên hệ",
+    "viewAllCategories": "Xem tất cả danh mục",
+    "skipToContent": "Đi đến nội dung chính"
+  },
+  "contactPage": {
+    "channels": {
+      "email": "Email",
+      "emailLabel": "Gửi email cho chúng tôi",
+      "phone": "Điện thoại",
+      "phoneLabel": "Gọi cho chúng tôi",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Nhắn tin cho chúng tôi",
+      "whatsappValue": "Nhắn tin trực tiếp cho chúng tôi"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, Halal khi có yêu cầu",
+          "label": "Chứng nhận"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, các phương án hợp đồng hằng năm",
+          "label": "Giá cả & khối lượng"
+        },
+        "samples": {
+          "detail": "Có sẵn cho các nhà nhập khẩu đủ điều kiện",
+          "label": "Yêu cầu mẫu"
+        },
+        "specs": {
+          "detail": "Cấp độ, xuất xứ, đóng gói, tính thời vụ",
+          "label": "Thông số kỹ thuật sản phẩm"
+        }
+      }
+    },
+    "eyebrow": "Liên hệ",
+    "form": {
+      "company": "Công ty",
+      "country": "Quốc gia",
+      "email": "Email",
+      "error": "Đã có lỗi xảy ra. Xin vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi.",
+      "message": "Tin nhắn",
+      "messagePlaceholder": "Xin vui lòng cho chúng tôi biết yêu cầu của quý vị — sản phẩm, khối lượng, điểm đến.",
+      "name": "Họ và tên",
+      "phone": "Điện thoại",
+      "submit": "Gửi yêu cầu",
+      "submitting": "Đang gửi…",
+      "subtitle": "Chúng tôi sẽ phản hồi trong vòng 12 giờ.",
+      "success": "Cảm ơn quý vị — yêu cầu của quý vị đã được tiếp nhận. Chúng tôi sẽ liên hệ trong vòng 12 giờ.",
+      "title": "Gửi yêu cầu"
+    },
+    "heading": "Gửi cho chúng tôi một yêu cầu.",
+    "intro": {
+      "body": "Cho dù quý vị đang tìm nguồn cho một sản phẩm cụ thể, yêu cầu mẫu hay thảo luận về thỏa thuận cung cấp dài hạn — đây là nơi phù hợp để bắt đầu.",
+      "heading": "Hãy cho chúng tôi biết quý vị cần gì. Chúng tôi sẽ phản hồi với câu trả lời rõ ràng."
+    },
+    "map": {
+      "directions": "Chỉ đường",
+      "eyebrow": "Tìm chúng tôi",
+      "iframeTitle": "Bản đồ hiển thị văn phòng công ty BACA"
+    },
+    "officeTitle": "Địa chỉ Công ty",
+    "promise": {
+      "body": "Tất cả các yêu cầu quốc tế đều nhận được phản hồi từ bộ phận thương mại của chúng tôi trong vòng 12 giờ — kể cả cuối tuần.",
+      "title": "Cam kết phản hồi trong 12 giờ."
+    },
+    "subheading": "Chúng tôi phản hồi các yêu cầu quốc tế trong vòng 12 giờ."
+  },
+  "ctaBand": {
+    "body": "Hãy cho chúng tôi biết quý vị tìm nguồn gì và vận chuyển đến đâu. Chúng tôi phản hồi các yêu cầu quốc tế trong vòng 12 giờ.",
+    "ctaCatalogue": "Tải xuống danh mục",
+    "ctaEnquire": "Liên hệ ngay",
+    "eyebrow": "Hãy trao đổi",
+    "heading": "Hãy cùng nhau xây dựng một chuỗi cung ứng đáng tin cậy <em>cùng nhau.</em>"
+  },
+  "errors": {
+    "body": "Một lỗi không mong muốn đã ngăn trang này tải. Quý vị có thể thử lại, hoặc quay về trang chủ.",
+    "eyebrow": "Lỗi",
+    "home": "Trang chủ",
+    "retry": "Thử lại",
+    "title": "Đã có lỗi xảy ra."
+  },
+  "featuredInsights": {
+    "allArticles": "Tất cả bài viết",
+    "eyebrow": "Bài viết",
+    "heading": "Ghi chép từ ngành gia vị và hàng hóa."
+  },
+  "footer": {
+    "backToTop": "Lên đầu trang",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "Về BACA",
+          "insights": "Thông tin chuyên sâu",
+          "contact": "Liên hệ"
+        },
+        "title": "Công ty"
+      },
+      "products": {
+        "links": {
+          "all": "Tất cả sản phẩm",
+          "spices": "Gia vị",
+          "nutsSeeds": "Hạt & Hạt giống",
+          "gallery": "Thư viện ảnh"
+        },
+        "title": "Sản phẩm"
+      },
+      "reach": {
+        "title": "Liên hệ với chúng tôi",
+        "links": {
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Đã chứng nhận",
+        "spicesBoard": "Spices Board CRES"
+      }
+    },
+    "description": "Một nhà xuất khẩu Ấn Độ hiện đại chuyên về gia vị, hạt và trái cây.",
+    "marqueeItems": [
+      "Ấn Độ, trong từng lô hàng",
+      "Gia vị",
+      "Hạt",
+      "Trái cây",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Nhà sáng lập {index}"
+    },
+    "eyebrow": "Từ các nhà sáng lập",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "Cha tôi từng nói — đừng bao giờ bán những gì mà mình không phục vụ trên bàn ăn của chính mình. Đó là nguyên tắc của chúng tôi kể từ lô hàng đầu tiên. Tôi đã đi qua những cánh đồng ấy ở Kerala suốt hơn hai thập kỷ, và tôi vẫn ghé thăm trước khi cam kết với một người trồng. Bạn không thể xây dựng niềm tin thực sự từ một chiếc bàn làm việc.",
+        "role": "Đồng sáng lập · Nguồn cung & Chất lượng"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "Trong ngành này, một tài liệu bị trễ là một lời hứa bị phá vỡ. Khi một container nằm tại cảng chờ giấy tờ, đó không phải là vấn đề hậu cần — đó là vấn đề niềm tin. Mọi thứ chúng tôi xây dựng quanh hệ thống tài liệu đều xuất phát từ việc chứng kiến điều đó xảy ra một lần, và quyết định nó sẽ không bao giờ xảy ra với người mua của chúng tôi.",
+        "role": "Đồng sáng lập · Thương mại & Hậu cần"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "Ấn Độ trồng một số loại gia vị tinh túy nhất thế giới. Những người nông dân tôi làm việc cùng đã dành cả đời để hoàn thiện công việc của mình. Công việc của chúng tôi đơn giản là đảm bảo rằng công sức đó đến tay người mua nguyên vẹn — phân loại trung thực, đóng gói trung thực, vận chuyển trung thực. Không gì hơn, không gì kém.",
+        "role": "Giám đốc · Chất lượng & Quan hệ Người trồng"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "Ảnh đang được thêm vào. Xin vui lòng quay lại sau.",
+    "eyebrow": "Thư viện ảnh",
+    "heading": "Công việc, con người, đất đai.",
+    "intro": "Bên trong quá trình tìm nguồn, phân loại và vận chuyển của chúng tôi — từ nguồn gốc ở Ấn Độ đến khắp thế giới."
+  },
+  "globalPresence": {
+    "body": "BACA vận chuyển đến các nhà nhập khẩu, nhà phân phối và nhà sản xuất thực phẩm khắp Bắc Mỹ, châu Âu, Trung Đông, Đông Nam Á và châu Phi — theo các hợp đồng có đầy đủ giấy tờ và đúng hạn.",
+    "eyebrow": "Tầm vóc toàn cầu",
+    "heading": "Từ các cảng Ấn Độ đến <em>năm châu lục.</em>",
+    "items": {
+      "continents": "Châu lục đã vận chuyển đến",
+      "countries": "Quốc gia phục vụ",
+      "repeatRate": "Tỷ lệ người mua quay lại",
+      "responseTime": "Thời gian phản hồi yêu cầu"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Đóng menu",
+      "home": "Trang chủ",
+      "mobileNav": "Di động",
+      "openMenu": "Mở menu",
+      "primaryNav": "Chính",
+      "submenu": "menu phụ {label}"
+    }
+  },
+  "hero": {
+    "body": "Một thế hệ xuất khẩu Ấn Độ mới — được xây dựng dựa trên nguồn cung có thể truy xuất, chất lượng nghiêm ngặt và các quan hệ đối tác vận chuyển hàng hóa một cách đáng tin cậy, hết container này đến container khác.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 quốc gia được phục vụ",
+    "ctaContact": "Trao đổi với đội ngũ của chúng tôi",
+    "ctaProducts": "Khám phá sản phẩm",
+    "eyebrow": "Gia vị cao cấp & Nông sản · Nguồn gốc Ấn Độ đáng tin cậy",
+    "headline": "Chất lượng. Tin cậy.<br></br><em>Đã giao.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Đến slide {index}"
+    },
+    "slides": {
+      "cardamom": "Bạch đậu khấu xanh · Kerala",
+      "farm": "Trực tiếp từ nông trại",
+      "origin": "Nguồn gốc · Ấn Độ",
+      "pepper": "Tiêu đen Malabar",
+      "turmeric": "Nghệ tươi · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Đổi ngôn ngữ"
+  },
+  "manifesto": {
+    "body": "Hai thập kỷ tại nguồn gốc ở Kerala, Gujarat và Andhra — thu mua từ cùng những gia đình nông dân mùa này qua mùa khác, phân loại tại nguồn, và vận chuyển những container đầy đến người mua tại 37 quốc gia.",
+    "eyebrow": "Vì sao chúng tôi ở đây",
+    "headline": "Chúng tôi kết nối người trồng Ấn Độ với những căn bếp khắt khe nhất thế giới — tìm nguồn <em>có chủ đích</em>, và vận chuyển một cách chính xác.",
+    "imageAlt": "Đôi tay phong sương đang thái nghệ tươi tại nguồn ở Ấn Độ — phân loại gia vị thô theo cách mà các gia đình nông dân của BACA đã làm qua nhiều thế hệ"
+  },
+  "metadata": {
+    "description": "BACA là một nhà xuất khẩu Ấn Độ hiện đại — nguồn cung có thể truy xuất gia vị, hạt và trái cây, chất lượng nghiêm ngặt và các lô hàng toàn cầu đáng tin cậy. Đạt chứng nhận ISO 22000, HACCP & FSSAI.",
+    "title": "BACA — Nhà xuất khẩu Gia vị, Hạt & Trái cây Ấn Độ"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Liên hệ"
+      },
+      "home": {
+        "label": "Trang chủ"
+      },
+      "insights": {
+        "label": "Bài viết"
+      },
+      "products": {
+        "label": "Sản phẩm"
+      },
+      "profile": {
+        "label": "Hồ sơ"
+      }
+    }
+  },
+  "notFound": {
+    "body": "Chúng tôi không thể tìm thấy điều quý vị đang tìm kiếm. Trang có thể đã được chuyển, hoặc liên kết có thể sai. Quay về trang chủ hoặc duyệt danh mục.",
+    "ctaHome": "Quay về trang chủ",
+    "ctaProducts": "Duyệt sản phẩm",
+    "eyebrow": "404 · Không tìm thấy trang",
+    "heading": "Trang này chưa bao giờ được giao."
+  },
+  "productPreview": {
+    "eyebrow": "Những gì chúng tôi xuất khẩu",
+    "heading": "Tìm nguồn tại xuất xứ, phân loại để xuất khẩu."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Danh mục",
+      "harvest": "Vụ thu hoạch",
+      "originRegions": "Vùng xuất xứ",
+      "pairsNaturally": "Kết hợp tự nhiên",
+      "peak": "Cao điểm",
+      "products": "Sản phẩm",
+      "requestQuote": "Yêu cầu báo giá",
+      "requestSample": "Yêu cầu mẫu",
+      "seasonality": "Tính thời vụ",
+      "seasonalityHint": "Mùa thu hoạch / cao điểm có hàng",
+      "specifications": "Thông số kỹ thuật"
+    },
+    "empty": "Danh mục của chúng tôi đang được cập nhật. Xin vui lòng quay lại sau.",
+    "eyebrow": "Danh mục của chúng tôi",
+    "heading": "Mọi thứ chúng tôi xuất khẩu, tìm nguồn tại xuất xứ.",
+    "intro": "Gia vị, hạt và trái cây — được phân loại, lập hồ sơ và vận chuyển đến người mua tại 37 quốc gia."
+  },
+  "profilePage": {
+    "eyebrow": "Về BACA",
+    "founders": {
+      "eyebrow": "Nhà sáng lập",
+      "heading": "Những con người đứng sau BACA.",
+      "imageAltPrefix": "Chân dung của",
+      "intro": "BACA được dẫn dắt bởi hai anh chị em đã xây dựng doanh nghiệp từ hai thập kỷ làm việc thực tế trong ngành gia vị Ấn Độ.",
+      "items": {
+        "founder1": {
+          "bio": "Hai thập kỷ thu mua trực tiếp từ các hợp tác xã khắp Kerala và Andhra. Giám sát quan hệ với người trồng, phân loại tại nguồn và các chương trình kiểm nghiệm phòng thí nghiệm cho mỗi lô hàng.",
+          "role": "Đồng sáng lập · Nguồn cung & chất lượng"
+        },
+        "founder2": {
+          "bio": "Quản lý hồ sơ xuất khẩu, quan hệ với đơn vị giao nhận và bộ phận thương mại đối với người mua. Trước đây từng điều hành mảng hậu cần của một công ty thương mại hàng hóa có trụ sở tại Mumbai.",
+          "role": "Đồng sáng lập · Thương mại & hậu cần"
+        }
+      }
+    },
+    "heading": "Một nhà xuất khẩu Ấn Độ do gia đình điều hành, xây dựng cho tầm nhìn dài hạn.",
+    "howWeWork": {
+      "eyebrow": "Cách chúng tôi làm việc",
+      "heading": "Từ đất đến lúc vận chuyển, qua bốn bước kỷ luật.",
+      "intro": "Mỗi container rời khỏi cửa của chúng tôi đều xứng đáng với vị trí của nó thông qua cùng một trình tự.",
+      "steps": {
+        "document": {
+          "body": "Các chứng nhận kiểm dịch thực vật, mã HS, Incoterms và giấy tờ xuất xứ được phát hành trước khi tàu rời cảng nhằm đảm bảo việc thông quan không bao giờ làm chậm lô hàng tại cảng đích.",
+          "title": "Tài liệu"
+        },
+        "grade": {
+          "body": "Mỗi lô đều được phân loại thủ công, kiểm nghiệm trong phòng thí nghiệm về độ ẩm, dư lượng thuốc trừ sâu và aflatoxin, và được lập hồ sơ theo các quy chuẩn ISO 22000 và HACCP trước khi đưa vào container.",
+          "title": "Phân loại"
+        },
+        "ship": {
+          "body": "Được đóng gói tại nguồn và vận chuyển dưới dạng container đầy có đầy đủ giấy tờ với các đơn vị giao nhận đã ký hợp đồng — cùng tàu, cùng tuyến, cùng khung thời gian đến mà chuỗi cung ứng của quý vị có thể lên kế hoạch.",
+          "title": "Vận chuyển"
+        },
+        "source": {
+          "body": "Chúng tôi thu mua trực tiếp từ các hợp tác xã người trồng tại các vùng bản địa của từng loại cây trồng — bạch đậu khấu từ Kerala, ớt từ Guntur, tiêu từ Malabar — để truy xuất nguồn gốc toàn diện từ cánh đồng đến đơn vị giao nhận.",
+          "title": "Tìm nguồn"
+        }
+      }
+    },
+    "intro": "Hai thập kỷ tại nguồn gốc ở Kerala, Gujarat và Andhra — thu mua từ cùng những gia đình người trồng mùa này qua mùa khác, phân loại tại nguồn, và vận chuyển những container đầy đến người mua tại 37 quốc gia.",
+    "visionMission": {
+      "eyebrow": "Tầm nhìn & sứ mệnh",
+      "heading": "Những gì chúng tôi đang hướng tới — và cách thực hiện.",
+      "mission": {
+        "body": "Kết nối nông dân nhỏ ở Ấn Độ với những người mua khắt khe ở nước ngoài thông qua kiểm soát chất lượng nghiêm ngặt, giấy tờ minh bạch và các mối quan hệ vận chuyển đo bằng năm tháng.",
+        "title": "Sứ mệnh"
+      },
+      "vision": {
+        "body": "Một thế giới nơi nông nghiệp Ấn Độ giao dịch ngang hàng với bất kỳ xuất xứ cao cấp nào — có thể truy xuất, có giấy tờ đầy đủ và được định giá đúng với công sức bỏ ra tại cổng nông trại.",
+        "title": "Tầm nhìn"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA là một nhà xuất khẩu Ấn Độ hiện đại chuyên về gia vị, hạt và trái cây. Chúng tôi làm việc trực tiếp với các gia đình nông dân tại những vùng trồng truyền thống của Ấn Độ, phân loại và kiểm nghiệm trong phòng thí nghiệm từng lô tại nguồn, và vận chuyển những container đầy có đầy đủ giấy tờ đến các nhà nhập khẩu, nhà phân phối và nhà bán lẻ trên toàn thế giới. Đội ngũ đã làm việc trong các lĩnh vực nguồn gốc, phân loại và hậu cần hơn hai thập kỷ; công ty là sự chính thức hóa kinh nghiệm đó dưới một thương hiệu.",
+      "eyebrow": "Chúng tôi là ai",
+      "heading": "Một nhà xuất khẩu xây dựng trên các mối quan hệ."
+    },
+    "whyBaca": {
+      "eyebrow": "Vì sao chọn BACA",
+      "heading": "Bốn lý do các nhà nhập khẩu ở lại với chúng tôi.",
+      "intro": "Các đội ngũ thu mua chọn BACA khi họ muốn ngừng chữa cháy và bắt đầu lập kế hoạch.",
+      "items": {
+        "logistics": {
+          "body": "Các suất tàu đã ký hợp đồng và các đơn vị giao nhận giàu kinh nghiệm có nghĩa là container của quý vị đến đúng khung thời gian chúng tôi đã báo — không phải 'một lúc nào đó trong tháng.'",
+          "title": "Hậu cần đáng tin cậy"
+        },
+        "partnership": {
+          "body": "Hợp đồng giá cố định và đặt trước vụ mùa cho người mua thường xuyên. Chúng tôi đo lường các mối quan hệ bằng mùa vụ, không phải bằng số đơn hàng đơn lẻ.",
+          "title": "Quan hệ đối tác dài hạn"
+        },
+        "quality": {
+          "body": "Các biện pháp kiểm soát đạt chuẩn ISO 22000 + HACCP tại nguồn: kiểm nghiệm độ ẩm, dư lượng thuốc trừ sâu, aflatoxin và vi sinh — không phải lấy mẫu ngẫu nhiên tại cảng.",
+          "title": "Chất lượng đã được kiểm nghiệm"
+        },
+        "traceability": {
+          "body": "Mỗi lô đều được gắn với một hợp tác xã người trồng cụ thể, khung thời gian thu hoạch và kết quả kiểm nghiệm — có thể truy xuất từ kho hàng của quý vị quay trở lại cánh đồng.",
+          "title": "Truy xuất nguồn gốc đầy đủ"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "Chân dung Giám đốc Điều hành của BACA",
+    "name": "Arvind Menon",
+    "quote": "Chúng tôi không mua bán lô hàng — chúng tôi giữ vững các hợp đồng. Cùng những người mua quay lại mùa này qua mùa khác bởi vì cấp độ trong container khớp với cấp độ trên chứng chỉ, mọi lúc, không ngoại lệ.",
+    "title": "Giám đốc Điều hành, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Container đã vận chuyển",
+      "countries": "Quốc gia phục vụ",
+      "tonnes": "Tấn xử lý / năm",
+      "years": "Năm hoạt động"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Trang {page}",
+      "next": "Tiếp",
+      "previous": "Trước"
+    },
+    "body": "Tìm nguồn từ những vùng trồng tinh túy nhất của Ấn Độ — được kiểm nghiệm, chứng nhận và vận chuyển với khả năng truy xuất đầy đủ.",
+    "card": {
+      "info": "Thông tin",
+      "requestQuote": "Yêu cầu báo giá"
+    },
+    "eyebrow": "Những gì chúng tôi cung cấp",
+    "heading": "Danh mục sản phẩm của chúng tôi",
+    "viewAll": "Xem tất cả sản phẩm →"
+  },
+  "whatsapp": {
+    "ariaLabel": "Trò chuyện với BACA trên WhatsApp"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Chứng nhận",
+      "heading": "Được chứng nhận cho thương mại toàn cầu.",
+      "intro": "Mỗi lô hàng đều ra đi với giấy tờ đầy đủ.",
+      "items": {
+        "apeda": {
+          "authority": "Đăng ký Xuất khẩu",
+          "name": "APEDA",
+          "sub": "Cơ quan Phát triển Xuất khẩu Nông sản & Thực phẩm Chế biến."
+        },
+        "fssai": {
+          "authority": "Giấy phép Trung ương",
+          "name": "FSSAI",
+          "sub": "Giấy phép an toàn thực phẩm bắt buộc đối với mọi mặt hàng thực phẩm xuất khẩu của Ấn Độ."
+        },
+        "haccp": {
+          "authority": "Quy trình Kiểm soát Mối nguy",
+          "name": "HACCP",
+          "sub": "Phương pháp phòng ngừa có hệ thống đối với các mối nguy sinh học và hóa học."
+        },
+        "halal": {
+          "authority": "Chứng nhận Tiếp cận Thị trường",
+          "name": "Halal",
+          "sub": "Cho phép giao thương với các thị trường yêu cầu sản phẩm được chứng nhận halal."
+        },
+        "iso22000": {
+          "authority": "Quản lý An toàn TP",
+          "name": "ISO 22000",
+          "sub": "Tiêu chuẩn quốc tế cho hệ thống quản lý an toàn thực phẩm."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Đăng ký của chính phủ cho các nhà xuất khẩu gia vị được chứng nhận."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Vì sao chọn BACA",
+      "heading": "Bốn lý do các nhà nhập khẩu ở lại với chúng tôi.",
+      "intro": "Các đội ngũ thu mua chọn BACA khi họ muốn ngừng chữa cháy và bắt đầu lập kế hoạch.",
+      "items": {
+        "logistics": {
+          "body": "Các suất tàu đã ký hợp đồng và các đơn vị giao nhận giàu kinh nghiệm có nghĩa là container của quý vị đến đúng khung thời gian chúng tôi đã báo — không phải 'một lúc nào đó trong tháng.'",
+          "title": "Hậu cần Đáng tin cậy"
+        },
+        "partnership": {
+          "body": "Hợp đồng giá cố định và đặt trước vụ mùa cho người mua thường xuyên. Chúng tôi đo lường các mối quan hệ bằng mùa vụ, không phải bằng số đơn đặt hàng đơn lẻ.",
+          "title": "Quan hệ Đối tác Dài hạn"
+        },
+        "quality": {
+          "body": "Các biện pháp kiểm soát đạt chuẩn ISO 22000 + HACCP tại nguồn: kiểm nghiệm độ ẩm, dư lượng thuốc trừ sâu, aflatoxin và vi sinh — không phải lấy mẫu ngẫu nhiên tại cảng.",
+          "title": "Chất lượng Đã được Kiểm nghiệm"
+        },
+        "traceability": {
+          "body": "Mỗi lô đều được gắn với một hợp tác xã người trồng cụ thể, khung thời gian thu hoạch và kết quả kiểm nghiệm — có thể truy xuất từ kho hàng của quý vị quay trở lại cánh đồng.",
+          "title": "Truy xuất Nguồn gốc Đầy đủ"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Cách chúng tôi làm việc",
+      "heading": "Một quy trình mà quý vị có thể tin cậy ở chúng tôi.",
+      "items": {
+        "certificate": {
+          "body": "Chúng tôi phân loại và xác nhận từng lô trước khi đóng gói — không bao giờ sau khi xếp hàng. Cấp độ ghi trên hóa đơn chính là cấp độ trong bao, và trọng lượng tịnh được kiểm tra ngay tại cửa container. Mọi lúc, không ngoại lệ.",
+          "title": "Những gì chứng chỉ ghi chính là những gì đến nơi."
+        },
+        "contact": {
+          "body": "Quý vị sẽ luôn có một đầu mối liên hệ được chỉ định, người nắm rõ hàng hóa, tuyến vận chuyển và thời gian biểu của quý vị. Đối với những người mua quay lại mỗi mùa, chúng tôi dành sẵn hạn ngạch và thỏa thuận giá cả trước khi vụ thu hoạch bắt đầu.",
+          "title": "Một người chịu trách nhiệm cho mỗi lô hàng."
+        },
+        "farm": {
+          "body": "Mỗi đơn hàng bắt đầu bằng một chuyến thăm — không phải một cuộc điện thoại. Chúng tôi đi bộ qua các cánh đồng, gặp gỡ người trồng, và ghi nhận từng lô tại nguồn gốc. Khi quý vị hỏi gia vị của mình đến từ đâu, chúng tôi có thể nêu tên nông trại, mùa vụ và vụ thu hoạch.",
+          "title": "Bắt đầu từ nông trại."
+        },
+        "lab": {
+          "body": "Mỗi lô hàng đều được gửi đến một phòng thí nghiệm độc lập, được công nhận — không phải cơ sở của riêng chúng tôi. Quý vị nhận được báo cáo kiểm nghiệm gốc: độ ẩm, mức thuốc trừ sâu, aflatoxin — được đo lường công khai và chia sẻ không qua chỉnh sửa.",
+          "title": "Được kiểm nghiệm bởi những người không làm việc cho chúng tôi."
+        },
+        "paperwork": {
+          "body": "Chúng tôi chuẩn bị mọi chứng chỉ và tài liệu tuân thủ trước khi lô hàng được vận chuyển. Đội ngũ nhập khẩu của quý vị nhận được một container hoàn chỉnh — không phải một loạt sai sót phải xử lý tại cảng.",
+          "title": "Giấy tờ sẵn sàng trước khi tàu được đặt chỗ."
+        }
+      },
+      "stepLabel": "Bước"
+    }
+  },
+  "contactStrip": {
+    "ariaSection": "Gửi yêu cầu",
+    "eyebrow": "Liên hệ",
+    "headingPrefix": "Sẵn sàng tìm nguồn?",
+    "headingAccent": "Hãy trao đổi.",
+    "body": "Hãy cho chúng tôi biết quý vị cần gì — sản phẩm, khối lượng và điểm đến. Chúng tôi sẽ phản hồi với báo giá trong vòng 12 giờ, mọi lúc."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — ảnh {index}",
+    "previous": "Ảnh trước",
+    "next": "Ảnh tiếp theo",
+    "goToImage": "Đến ảnh {index}"
+  }
+}

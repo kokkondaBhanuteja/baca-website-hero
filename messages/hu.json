@@ -1,0 +1,631 @@
+{
+  "approach": {
+    "eyebrow": "Hogyan dolgozunk",
+    "heading": "Olyan folyamat, amelyért számon kérhet minket.",
+    "intro": "Folyamatunkat egyetlen kérdés köré építettük: mi adna egy vevőnek teljes nyugalmat? Íme a válasz.",
+    "pillars": {
+      "accountability": {
+        "body": "Mindig lesz egy megnevezett kapcsolattartója, aki ismeri az Ön rakományát, útvonalát és határidejét. A szezonról szezonra visszatérő vevőknek allokációkat tartunk fenn, és az árakat már a betakarítás előtt rögzítjük. Tartós kapcsolat, nem csupán egy lezárt ügylet.",
+        "title": "Minden szállítmányért egyetlen ember felel."
+      },
+      "documentation": {
+        "body": "Minden tanúsítványt és megfelelőségi dokumentumot a szállítmány indulása előtt elkészítünk. Az Ön importcsapata tiszta konténert kap — nem pedig a kikötőben kergetendő javítások sorát.",
+        "title": "A papírmunka kész, mielőtt a hajót lefoglaljuk."
+      },
+      "grading": {
+        "body": "Minden tételt a csomagolás megkezdése előtt válogatunk és ellenőrzünk — soha nem a berakodás után. A számláján szereplő minőség az, amit a zsákban talál, és a nettó súlyt a konténerajtónál ellenőrizzük. Minden egyes alkalommal.",
+        "title": "Amit a tanúsítvány mond, az érkezik meg."
+      },
+      "labtesting": {
+        "body": "Minden tétel független, akkreditált laboratóriumba kerül — nem a saját létesítményünkbe. Ön megkapja az eredeti vizsgálati jegyzőkönyvet: nedvességtartalom, peszticidszintek, aflatoxinok — nyíltan mérve és szerkesztés nélkül megosztva.",
+        "title": "Olyan emberek tesztelik, akik nem nekünk dolgoznak."
+      },
+      "traceability": {
+        "body": "Minden megrendelés egy látogatással kezdődik — nem telefonhívással. Bejárjuk a földeket, találkozunk a termelőkkel, és minden tételt a forrásnál rögzítünk. Amikor megkérdezi, honnan származik a fűszere, meg tudjuk nevezni a gazdaságot, a szezont és a betakarítást.",
+        "title": "A gazdaságnál kezdődik."
+      }
+    },
+    "stepLabel": "Lépés"
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Alapelveink",
+    "imageAlt": "BACA — gazdálkodók és földek",
+    "imageCaption": "Közvetlenül India szívéből",
+    "items": {
+      "farmer": {
+        "body": "Piaci ár feletti díjat fizetünk, és globális kapukat nyitunk meg a termékeinket megtermelő családok előtt. Az ő stabilitásuk a mi állandóságunk alapja.",
+        "title": "A gazda az első."
+      },
+      "partnership": {
+        "body": "Partnerségeket építünk, nem tranzakciókat — a mögöttünk álló gazdákkal és a bennünk bízó vevőkkel. Az Ön bizalmát minden szállítmánnyal újra kiérdemeljük, nem csak az elsővel.",
+        "title": "Hosszú távra épült."
+      },
+      "quality": {
+        "body": "Minden tételt tesztelünk, dokumentálunk és ellenőrzünk a gazdaságban, a feldolgozás során és a kiszállítás előtt. Ha nem felel meg a követelményeinknek, nem indul útnak.",
+        "title": "Semmilyen kompromisszum, soha."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "A BACA egyetlen meggyőződésre épült: a vevőhöz eljutó minőség elválaszthatatlan az azt megelőző minden lépés tisztességétől. Közvetlen kapcsolatban állunk Kerala, Karnataka, Tamil Nadu és Andhra Pradesh gazdálkodó családjaival — méltányos árazást, átlátható folyamatokat és olyan globális piacokhoz való hozzáférést kínálva, amelyek korábban elérhetetlenek voltak.",
+      "eyebrow": "A BACA története",
+      "heading": "India legjobb eredetei,",
+      "headingAccent": "becsülettel szállítva.",
+      "quote": "Mert amikor a gazda gyarapodik, minden, ami Önhöz eljut, jobb lesz tőle."
+    },
+    "principles": {
+      "eyebrow": "Alapelveink",
+      "imageAlt": "BACA — gazdálkodók és földek",
+      "imageCaption": "Közvetlenül India szívéből",
+      "items": {
+        "farmer": {
+          "body": "Piaci ár feletti díjat fizetünk, és globális kapukat nyitunk meg a termékeinket megtermelő családok előtt. Az ő stabilitásuk a mi állandóságunk alapja.",
+          "title": "A gazda az első."
+        },
+        "partnership": {
+          "body": "Partnerségeket építünk, nem tranzakciókat — a mögöttünk álló gazdákkal és a bennünk bízó vevőkkel. Az Ön bizalmát minden szállítmánnyal újra kiérdemeljük, nem csak az elsővel.",
+          "title": "Hosszú távra épült."
+        },
+        "quality": {
+          "body": "Minden tételt tesztelünk, dokumentálunk és ellenőrzünk a gazdaságban, a feldolgozás során és a kiszállítás előtt. Ha nem felel meg a követelményeinknek, nem indul útnak.",
+          "title": "Semmilyen kompromisszum, soha."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Célunk",
+      "mission": {
+        "body": "Összekötni India legkiválóbb termőterületeit a világ legigényesebb vevőivel — nyomon követhető beszerzés, becsületes minőség és olyan ár révén, amely valóban tükrözi a minden szállítmány mögött álló munkát.",
+        "title": "Küldetés"
+      },
+      "vision": {
+        "body": "India legmegbízhatóbb árukivitelőjének lenni — nem a volumenről, hanem arról az állandóságról ismerten, amely ugyanazokat a vevőket hozza vissza szezonról szezonra.",
+        "title": "Jövőkép"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "ország importál indiai fűszereket",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "gazdálkodó család szerte Indiában",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "a globális fűszertermelésből",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Összes cikk",
+    "categoriesHeading": "Kategóriák",
+    "empty": "Új cikkek készülőben. Kérjük, nézzen vissza hamarosan.",
+    "eyebrow": "Blogok",
+    "featured": "Kiemelt",
+    "filterBy": "Szűrés típus szerint",
+    "heading": "Jegyzetek a fűszer- és árukereskedelemből.",
+    "intro": "Piaci elemzések, eredettörténetek és a gondolkodás, amely beszerzésünket és szállításunkat irányítja.",
+    "minRead": "perc olvasás",
+    "publishedLabel": "Közzétéve",
+    "readTimeLabel": "Olvasási idő",
+    "related": "Olvasson tovább",
+    "writtenBy": "Írta"
+  },
+  "certifications": {
+    "eyebrow": "Tanúsítványok",
+    "heading": "A globális kereskedelemre tanúsítva.",
+    "intro": "Minden szállítmány rendben lévő igazolásokkal indul útnak.",
+    "items": {
+      "apeda": {
+        "sub": "Agrárexport-regisztráció"
+      },
+      "fssai": {
+        "sub": "Központi engedély"
+      },
+      "haccp": {
+        "sub": "Veszélykezelési protokoll"
+      },
+      "halal": {
+        "sub": "Piacra jutási tanúsítvány"
+      },
+      "iso22000": {
+        "sub": "Élelmiszerbiztonság-irányítás"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
+      }
+    }
+  },
+  "common": {
+    "enquire": "Érdeklődés",
+    "viewAllCategories": "Összes kategória megtekintése",
+    "skipToContent": "Ugrás a fő tartalomhoz"
+  },
+  "contactPage": {
+    "channels": {
+      "email": "E-mail",
+      "emailLabel": "Írjon nekünk",
+      "phone": "Telefon",
+      "phoneLabel": "Hívjon minket",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Üzenjen nekünk",
+      "whatsappValue": "Üzenjen nekünk közvetlenül"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, halal kérésre",
+          "label": "Tanúsítványok"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, éves szerződéses lehetőségek",
+          "label": "Árazás és mennyiségek"
+        },
+        "samples": {
+          "detail": "Minősített importőrök számára elérhető",
+          "label": "Mintakérések"
+        },
+        "specs": {
+          "detail": "Minőség, eredet, csomagolás, szezonalitás",
+          "label": "Termékspecifikációk"
+        }
+      }
+    },
+    "eyebrow": "Lépjen kapcsolatba",
+    "form": {
+      "company": "Vállalat",
+      "country": "Ország",
+      "email": "E-mail",
+      "error": "Valami hiba történt. Kérjük, próbálja újra, vagy írjon nekünk közvetlenül e-mailben.",
+      "message": "Üzenet",
+      "messagePlaceholder": "Röviden írja le igényét — termékek, mennyiségek, célállomás.",
+      "name": "Teljes név",
+      "phone": "Telefon",
+      "submit": "Érdeklődés elküldése",
+      "submitting": "Küldés…",
+      "subtitle": "12 órán belül válaszolunk.",
+      "success": "Köszönjük — érdeklődését megkaptuk. 12 órán belül felvesszük Önnel a kapcsolatot.",
+      "title": "Érdeklődés küldése"
+    },
+    "heading": "Küldjön nekünk érdeklődést.",
+    "intro": {
+      "body": "Akár egy adott termék beszerzését tervezi, mintát szeretne kérni, akár hosszú távú beszállítói megállapodásról szeretne tárgyalni — ez a megfelelő hely a kezdéshez.",
+      "heading": "Mondja el, mire van szüksége. Világos válasszal térünk vissza Önhöz."
+    },
+    "map": {
+      "directions": "Útvonalterv",
+      "eyebrow": "Itt talál minket",
+      "iframeTitle": "Térkép a BACA központi irodájával"
+    },
+    "officeTitle": "Központi cím",
+    "promise": {
+      "body": "Minden nemzetközi érdeklődésre kereskedelmi részlegünk 12 órán belül választ ad — a hétvégéket is beleértve.",
+      "title": "12 órás válaszgarancia."
+    },
+    "subheading": "Nemzetközi érdeklődésekre 12 órán belül válaszolunk."
+  },
+  "ctaBand": {
+    "body": "Mondja el, mit szerez be és hová szállítja. Nemzetközi érdeklődésekre 12 órán belül válaszolunk.",
+    "ctaCatalogue": "Katalógus letöltése",
+    "ctaEnquire": "Érdeklődjön most",
+    "eyebrow": "Beszéljünk",
+    "heading": "Építsünk megbízható ellátási láncot <em>együtt.</em>"
+  },
+  "errors": {
+    "body": "Váratlan hiba akadályozta meg az oldal betöltését. Megpróbálhatja újra, vagy visszatérhet a kezdőlapra.",
+    "eyebrow": "Hiba",
+    "home": "Kezdőlap",
+    "retry": "Próbálja újra",
+    "title": "Valami hiba történt."
+  },
+  "featuredInsights": {
+    "allArticles": "Összes cikk",
+    "eyebrow": "Blogok",
+    "heading": "Jegyzetek a fűszer- és árukereskedelemből."
+  },
+  "footer": {
+    "backToTop": "Vissza a tetejére",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "A BACA-ról",
+          "insights": "Elemzések",
+          "contact": "Kapcsolat"
+        },
+        "title": "Vállalat"
+      },
+      "products": {
+        "links": {
+          "all": "Összes termék",
+          "spices": "Fűszerek",
+          "nutsSeeds": "Diófélék és magvak",
+          "gallery": "Galéria"
+        },
+        "title": "Termékek"
+      },
+      "reach": {
+        "title": "Elérhetőségünk",
+        "links": {
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Tanúsítva",
+        "spicesBoard": "Spices Board CRES"
+      }
+    },
+    "description": "Modern indiai exportház fűszerek, diófélék és gyümölcsök számára.",
+    "marqueeItems": [
+      "India, minden szállítmányban",
+      "Fűszerek",
+      "Diófélék",
+      "Gyümölcsök",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Alapító {index}"
+    },
+    "eyebrow": "Az alapítóktól",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "Apám szokta mondani — soha ne adj el olyat, amit a saját asztalodra nem tennél fel. Ez a szabályunk az első szállítmány óta. Több mint két évtizede járom ugyanazokat a földeket Keralában, és ma is meglátogatom őket, mielőtt egy termelő mellett elköteleznénk magunkat. Igazi bizalmat nem lehet íróasztaltól építeni.",
+        "role": "Társalapító · Beszerzés és minőség"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "Ebben a szakmában egy késleltetett dokumentum megszegett ígéret. Amikor egy konténer a papírmunkára várva áll a kikötőben, az nem logisztikai probléma — bizalmi probléma. Minden, amit a dokumentáció köré építettünk, abból fakadt, hogy egyszer láttuk ezt megtörténni, és úgy döntöttünk, hogy a vevőinkkel ez soha nem fog megtörténni.",
+        "role": "Társalapító · Kereskedelem és logisztika"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "India a világ néhány legkiválóbb fűszerét termeszti. A gazdák, akikkel együtt dolgozom, egész életüket annak szentelték, hogy tökéletesítsék, amit csinálnak. A mi dolgunk egyszerűen az, hogy ez az erőfeszítés sértetlenül érjen el a vevőhöz — becsületesen osztályozva, becsületesen csomagolva, becsületesen szállítva. Se többet, se kevesebbet.",
+        "role": "Igazgató · Minőség és termelői kapcsolatok"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "A fényképek hozzáadása folyamatban. Kérjük, nézzen vissza hamarosan.",
+    "eyebrow": "Galéria",
+    "heading": "A munka, az emberek, a föld.",
+    "intro": "Beszerzésünk, osztályozásunk és szállításunk belülről — Indiában az eredetnél, és tovább a világba."
+  },
+  "globalPresence": {
+    "body": "A BACA importőröknek, forgalmazóknak és élelmiszergyártóknak szállít Észak-Amerikában, Európában, a Közel-Keleten, Délkelet-Ázsiában és Afrikában — dokumentált, határidőre teljesített szerződések alapján.",
+    "eyebrow": "Globális jelenlét",
+    "heading": "Indiai kikötőkből <em>öt kontinensre.</em>",
+    "items": {
+      "continents": "Kontinensek, ahová szállítunk",
+      "countries": "Kiszolgált országok",
+      "repeatRate": "Visszatérő vevők aránya",
+      "responseTime": "Érdeklődések megválaszolási ideje"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Menü bezárása",
+      "home": "Kezdőlap",
+      "mobileNav": "Mobil",
+      "openMenu": "Menü megnyitása",
+      "primaryNav": "Elsődleges",
+      "submenu": "{label} almenü"
+    }
+  },
+  "hero": {
+    "body": "Az indiai export új generációja — nyomon követhető beszerzésre, szigorú minőségre és olyan partnerségekre építve, amelyek megbízhatóan mozgatják az árukat, konténerről konténerre.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 kiszolgált ország",
+    "ctaContact": "Beszéljen csapatunkkal",
+    "ctaProducts": "Termékek felfedezése",
+    "eyebrow": "Prémium fűszerek és agrártermékek · Megbízható indiai eredet",
+    "headline": "Minőség. Bizalom.<br></br><em>Szállítva.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Ugrás a(z) {index}. diára"
+    },
+    "slides": {
+      "cardamom": "Zöld kardamom · Kerala",
+      "farm": "Közvetlenül a gazdaságból",
+      "origin": "Az eredetnél beszerezve · India",
+      "pepper": "Malabár fekete bors",
+      "turmeric": "Kurkumaujjak · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Nyelv váltása"
+  },
+  "manifesto": {
+    "body": "Két évtized az eredetnél Keralában, Gujaratban és Andhrában — ugyanazoktól a gazdálkodó családoktól vásárolva szezonról szezonra, a forrásnál osztályozva, és teljes konténereket szállítva 37 ország vevőinek.",
+    "eyebrow": "Miért vagyunk itt",
+    "headline": "Az indiai termelőket a világ legigényesebb konyháival kötjük össze — <em>szándékkal</em> beszerezve és pontossággal szállítva.",
+    "imageAlt": "Viharvert kezek friss kurkumát szelnek a forrásnál Indiában — a nyers fűszert úgy osztályozzák, ahogy a BACA gazdálkodó családjai generációk óta"
+  },
+  "metadata": {
+    "description": "A BACA modern indiai exportház — fűszerek, diófélék és gyümölcsök nyomon követhető beszerzése, szigorú minőség és megbízható globális szállítmányok. ISO 22000, HACCP és FSSAI tanúsítvánnyal.",
+    "title": "BACA — indiai fűszer-, dió- és gyümölcsexportőr"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Kapcsolat"
+      },
+      "home": {
+        "label": "Kezdőlap"
+      },
+      "insights": {
+        "label": "Blogok"
+      },
+      "products": {
+        "label": "Termékek"
+      },
+      "profile": {
+        "label": "Bemutatkozás"
+      }
+    }
+  },
+  "notFound": {
+    "body": "Nem találjuk, amit keres. Lehet, hogy az oldal átkerült, vagy a hivatkozás hibás. Térjen vissza a kezdőlapra, vagy böngéssze a katalógust.",
+    "ctaHome": "Vissza a kezdőlapra",
+    "ctaProducts": "Termékek böngészése",
+    "eyebrow": "404 · Az oldal nem található",
+    "heading": "Ez az oldal soha nem indult útnak."
+  },
+  "productPreview": {
+    "eyebrow": "Mit exportálunk",
+    "heading": "Az eredetnél beszerezve, exportra osztályozva."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Kategóriák",
+      "harvest": "Betakarítás",
+      "originRegions": "Eredetrégiók",
+      "pairsNaturally": "Természetesen illeszkedik",
+      "peak": "Csúcsidőszak",
+      "products": "Termékek",
+      "requestQuote": "Árajánlatkérés",
+      "requestSample": "Mintakérés",
+      "seasonality": "Szezonalitás",
+      "seasonalityHint": "Betakarítás / csúcsidőszaki elérhetőség",
+      "specifications": "Specifikációk"
+    },
+    "empty": "Katalógusunk frissítése folyamatban. Kérjük, nézzen vissza hamarosan.",
+    "eyebrow": "Katalógusunk",
+    "heading": "Mindent, amit exportálunk, az eredetnél szerzünk be.",
+    "intro": "Fűszerek, diófélék és gyümölcsök — osztályozva, dokumentálva, és 37 ország vevőinek szállítva."
+  },
+  "profilePage": {
+    "eyebrow": "A BACA-ról",
+    "founders": {
+      "eyebrow": "Alapítók",
+      "heading": "A BACA mögött álló emberek.",
+      "imageAltPrefix": "Portré:",
+      "intro": "A BACA-t két testvér vezeti, akik két évtizedes indiai fűszerkereskedelmi tapasztalat alapján építették fel a vállalkozást.",
+      "items": {
+        "founder1": {
+          "bio": "Két évtizede vásárol közvetlenül szövetkezetektől Kerala és Andhra területén. Felügyeli a termelői kapcsolatokat, az eredetnél történő osztályozást és a laboratóriumi vizsgálati programokat minden szállítmánynál.",
+          "role": "Társalapító · Beszerzés és minőség"
+        },
+        "founder2": {
+          "bio": "Az exportdokumentációt, a szállítmányozói kapcsolatokat és a vevői kereskedelmi részleget irányítja. Korábban egy mumbai székhelyű árukereskedő ház logisztikai részlegét vezette.",
+          "role": "Társalapító · Kereskedelem és logisztika"
+        }
+      }
+    },
+    "heading": "Hosszú távra épült, családi vezetésű indiai exportház.",
+    "howWeWork": {
+      "eyebrow": "Hogyan dolgozunk",
+      "heading": "A földtől a szállításig, négy fegyelmezett lépésben.",
+      "intro": "Minden konténer, amely elhagyja kapunkat, ugyanazon a folyamaton keresztül érdemelte ki helyét.",
+      "steps": {
+        "document": {
+          "body": "A növény-egészségügyi tanúsítványokat, HS-kódokat, Incoterms-feltételeket és származási iratokat a hajó indulása előtt kiállítjuk, így a vámkezelés soha nem tartja fel a szállítmányt a célkikötőben.",
+          "title": "Dokumentálás"
+        },
+        "grade": {
+          "body": "Minden tételt kézzel válogatunk, laboratóriumban vizsgáljuk a nedvességtartalom, peszticidmaradvány és aflatoxinok szempontjából, és az ISO 22000 és HACCP protokolloknak megfelelően dokumentáljuk, mielőtt egyáltalán konténerbe kerülne.",
+          "title": "Osztályozás"
+        },
+        "ship": {
+          "body": "Az eredetnél csomagoljuk, és dokumentált teljes konténerrakományként mozgatjuk szerződéses szállítmányozókkal — ugyanazok a hajók, ugyanazok az útvonalak, ugyanazok az érkezési időablakok, amelyekre az Ön ellátási lánca támaszkodhat.",
+          "title": "Szállítás"
+        },
+        "source": {
+          "body": "Közvetlenül termelői szövetkezetektől vásárolunk azokon a régiókban, ahol az adott növény őshonos — kardamom Keralából, chili Gunturból, bors Malabárból — a mezőtől a szállítmányozóig történő teljes nyomon követhetőség érdekében.",
+          "title": "Beszerzés"
+        }
+      }
+    },
+    "intro": "Két évtized az eredetnél Keralában, Gujaratban és Andhrában — ugyanazoktól a termelői családoktól vásárolva szezonról szezonra, a forrásnál osztályozva, és teljes konténereket szállítva 37 ország vevőinek.",
+    "visionMission": {
+      "eyebrow": "Jövőkép és küldetés",
+      "heading": "Min dolgozunk — és hogyan.",
+      "mission": {
+        "body": "India kisgazdálkodóit összekötni a külföldi igényes vevőkkel szigorú minőségellenőrzés, átlátható papírmunka és években mért szállítmányozói kapcsolatok révén.",
+        "title": "Küldetés"
+      },
+      "vision": {
+        "body": "Egy olyan világ, ahol az indiai mezőgazdaság ugyanúgy kereskedik, mint bármely prémium eredet — nyomon követhetően, megfelelően dokumentálva, és a gazdaság kapujánál a munka értékét tükröző áron.",
+        "title": "Jövőkép"
+      }
+    },
+    "whoWeAre": {
+      "body": "A BACA modern indiai exportház, amely fűszerekre, diófélékre és gyümölcsökre szakosodott. Közvetlenül együttműködünk India hagyományos termőterületeinek gazdálkodó családjaival, minden tételt az eredetnél osztályozunk és laboratóriumban vizsgálunk, és dokumentált teljes konténerrakományokat szállítunk importőröknek, forgalmazóknak és kiskereskedőknek világszerte. A csapat több mint két évtizede dolgozik az eredet, az osztályozás és a logisztika területén; a vállalat ennek a tapasztalatnak egy márka alá rendelt formalizálása.",
+      "eyebrow": "Kik vagyunk",
+      "heading": "Kapcsolatokra épült exportház."
+    },
+    "whyBaca": {
+      "eyebrow": "Miért a BACA",
+      "heading": "Négy ok, amiért az importőrök velünk maradnak.",
+      "intro": "A beszerzési csapatok akkor választják a BACA-t, amikor abba szeretnék hagyni a tűzoltást, és elkezdenének tervezni.",
+      "items": {
+        "logistics": {
+          "body": "A szerződéses hajóhelyek és a tapasztalt szállítmányozók azt jelentik, hogy az Ön konténere abban az időablakban érkezik, amelyet ajánlottunk — nem pedig „valamikor abban a hónapban”.",
+          "title": "Megbízható logisztika"
+        },
+        "partnership": {
+          "body": "Fix árú szerződések és termésfoglalások a visszatérő vevőknek. A kapcsolatokat termesztési szezonokban mérjük, nem egyetlen rendelési számban.",
+          "title": "Hosszú távú partnerség"
+        },
+        "quality": {
+          "body": "ISO 22000 + HACCP-szintű ellenőrzések az eredetnél: nedvesség, peszticidmaradvány, aflatoxin és mikrobiológiai vizsgálatok — nem véletlenszerű mintavétel a kikötőben.",
+          "title": "Laboratóriumban vizsgált minőség"
+        },
+        "traceability": {
+          "body": "Minden tétel egy adott termelői szövetkezethez, betakarítási időablakhoz és laboratóriumi eredményhez kötődik — auditálható az Ön raktárától egészen a mezőig.",
+          "title": "Teljes nyomon követhetőség"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "A BACA ügyvezető igazgatójának portréja",
+    "name": "Arvind Menon",
+    "quote": "Mi nem szállítmányokkal kereskedünk — szerződéseket tartunk be. Ugyanazok a vevők térnek vissza szezonról szezonra, mert a konténerben lévő minőség megegyezik a tanúsítványon szereplő minőséggel, minden egyes alkalommal.",
+    "title": "Ügyvezető igazgató, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Szállított konténerek",
+      "countries": "Kiszolgált országok",
+      "tonnes": "Évente kezelt tonna",
+      "years": "Üzleti tevékenység évei"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "{page}. oldal",
+      "next": "Következő",
+      "previous": "Előző"
+    },
+    "body": "India legkiválóbb termőterületeiről származik — tesztelve, tanúsítva és teljes nyomon követhetőséggel szállítva.",
+    "card": {
+      "info": "Információ",
+      "requestQuote": "Árajánlatkérés"
+    },
+    "eyebrow": "Mit kínálunk",
+    "heading": "Termékkínálatunk",
+    "viewAll": "Összes termék megtekintése →"
+  },
+  "whatsapp": {
+    "ariaLabel": "Csevegjen a BACA-val WhatsAppon"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Tanúsítványok",
+      "heading": "A globális kereskedelemre tanúsítva.",
+      "intro": "Minden szállítmány rendben lévő igazolásokkal indul útnak.",
+      "items": {
+        "apeda": {
+          "authority": "Exportregisztráció",
+          "name": "APEDA",
+          "sub": "APEDA — agrár- és feldolgozott élelmiszertermékek exportfejlesztési hatósága."
+        },
+        "fssai": {
+          "authority": "Központi engedély",
+          "name": "FSSAI",
+          "sub": "Kötelező élelmiszerbiztonsági engedély minden indiai élelmiszerexporthoz."
+        },
+        "haccp": {
+          "authority": "Veszélykezelési protokoll",
+          "name": "HACCP",
+          "sub": "Rendszerszemléletű megelőző megközelítés a biológiai és kémiai veszélyek ellen."
+        },
+        "halal": {
+          "authority": "Piacra jutási tanúsítvány",
+          "name": "Halal",
+          "sub": "Hozzáférést biztosít a halal-tanúsított terméket igénylő piacokhoz."
+        },
+        "iso22000": {
+          "authority": "Élelmiszerbiztonság-irányítás",
+          "name": "ISO 22000",
+          "sub": "Nemzetközi szabvány az élelmiszerbiztonság-irányítási rendszerekre."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Kormányzati regisztráció tanúsított fűszerexportőrök számára."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Miért a BACA",
+      "heading": "Négy ok, amiért az importőrök velünk maradnak.",
+      "intro": "A beszerzési csapatok akkor választják a BACA-t, amikor abba szeretnék hagyni a tűzoltást, és elkezdenének tervezni.",
+      "items": {
+        "logistics": {
+          "body": "A szerződéses hajóhelyek és a tapasztalt szállítmányozók azt jelentik, hogy az Ön konténere abban az időablakban érkezik, amelyet ajánlottunk — nem pedig „valamikor abban a hónapban”.",
+          "title": "Megbízható logisztika"
+        },
+        "partnership": {
+          "body": "Fix árú szerződések és termésfoglalások a visszatérő vevőknek. A kapcsolatokat termesztési szezonokban mérjük, nem egyetlen megrendelési számban.",
+          "title": "Hosszú távú partnerség"
+        },
+        "quality": {
+          "body": "ISO 22000 + HACCP-szintű ellenőrzések az eredetnél: nedvesség, peszticidmaradvány, aflatoxin és mikrobiológiai vizsgálatok — nem véletlenszerű mintavétel a kikötőben.",
+          "title": "Laboratóriumban vizsgált minőség"
+        },
+        "traceability": {
+          "body": "Minden tétel egy adott termelői szövetkezethez, betakarítási időablakhoz és laboratóriumi eredményhez kötődik — auditálható az Ön raktárától egészen a mezőig.",
+          "title": "Teljes nyomon követhetőség"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Hogyan dolgozunk",
+      "heading": "Olyan folyamat, amelyért számon kérhet minket.",
+      "items": {
+        "certificate": {
+          "body": "Minden tételt a csomagolás megkezdése előtt válogatunk és ellenőrzünk — soha nem a berakodás után. A számláján szereplő minőség az, amit a zsákban talál, és a nettó súlyt a konténerajtónál ellenőrizzük. Minden egyes alkalommal.",
+          "title": "Amit a tanúsítvány mond, az érkezik meg."
+        },
+        "contact": {
+          "body": "Mindig lesz egy megnevezett kapcsolattartója, aki ismeri az Ön rakományát, útvonalát és határidejét. A szezonról szezonra visszatérő vevőknek allokációkat tartunk fenn, és az árakat már a betakarítás előtt rögzítjük.",
+          "title": "Minden szállítmányért egyetlen ember felel."
+        },
+        "farm": {
+          "body": "Minden megrendelés egy látogatással kezdődik — nem telefonhívással. Bejárjuk a földeket, találkozunk a termelőkkel, és minden tételt a forrásnál rögzítünk. Amikor megkérdezi, honnan származik a fűszere, meg tudjuk nevezni a gazdaságot, a szezont és a betakarítást.",
+          "title": "A gazdaságnál kezdődik."
+        },
+        "lab": {
+          "body": "Minden tétel független, akkreditált laboratóriumba kerül — nem a saját létesítményünkbe. Ön megkapja az eredeti vizsgálati jegyzőkönyvet: nedvességtartalom, peszticidszintek, aflatoxinok — nyíltan mérve és szerkesztés nélkül megosztva.",
+          "title": "Olyan emberek tesztelik, akik nem nekünk dolgoznak."
+        },
+        "paperwork": {
+          "body": "Minden tanúsítványt és megfelelőségi dokumentumot a szállítmány indulása előtt elkészítünk. Az Ön importcsapata tiszta konténert kap — nem pedig a kikötőben kergetendő javítások sorát.",
+          "title": "A papírmunka kész, mielőtt a hajót lefoglaljuk."
+        }
+      },
+      "stepLabel": "Lépés"
+    }
+  },
+  "contactStrip": {
+    "ariaSection": "Érdeklődés küldése",
+    "eyebrow": "Lépjen kapcsolatba",
+    "headingPrefix": "Készen áll a beszerzésre?",
+    "headingAccent": "Beszéljünk.",
+    "body": "Mondja el, mire van szüksége — termék, mennyiség és célállomás. 12 órán belül árajánlattal térünk vissza, minden alkalommal."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — kép {index}",
+    "previous": "Előző kép",
+    "next": "Következő kép",
+    "goToImage": "Ugrás a(z) {index}. képre"
+  }
+}

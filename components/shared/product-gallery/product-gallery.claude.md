@@ -6,6 +6,7 @@ exports: ['ProductGallery']
 imports_from:
   - 'react'
   - 'lucide-react'
+  - 'next-intl'
   - '@/lib/utils'
 ---
 
@@ -30,4 +31,7 @@ Business Logic:
 
 Props: `images: string[]` (resolved URLs), `alt: string` (product name).
 
-Dependencies: lucide ChevronLeft/Right, cn.
+Dependencies: lucide ChevronLeft/Right, cn, next-intl `useTranslations`.
+
+i18n:
+Namespace: `productGallery`. Keys: `imageOfAlt` ("{alt} — image {index}", used when there are multiple images), `previous` and `next` (arrow aria-labels), `goToImage` ("Go to image {index}", dot aria-label).

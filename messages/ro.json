@@ -1,0 +1,631 @@
+{
+  "approach": {
+    "eyebrow": "Cum lucrăm",
+    "heading": "Un proces de care ne puteți ține responsabili.",
+    "intro": "Ne-am construit procesul în jurul unei singure întrebări: ce i-ar oferi unui cumpărător liniște deplină? Iată răspunsul.",
+    "pillars": {
+      "accountability": {
+        "body": "Veți avea întotdeauna o persoană de contact desemnată, care vă cunoaște marfa, ruta și calendarul. Pentru cumpărătorii care revin sezon de sezon, rezervăm alocările și convenim prețurile înainte de deschiderea recoltei. O relație construită pentru a dura, nu doar pentru a fi încheiată.",
+        "title": "O singură persoană răspunde pentru fiecare livrare."
+      },
+      "documentation": {
+        "body": "Pregătim fiecare certificat și document de conformitate înainte ca livrarea să plece. Echipa dumneavoastră de import primește un container curat — nu o listă de corecturi de urmărit în port.",
+        "title": "Documentele sunt gata înainte de rezervarea vasului."
+      },
+      "grading": {
+        "body": "Sortăm și confirmăm fiecare lot înainte de începerea ambalării — niciodată după încărcare. Calitatea de pe factură este calitatea din sac, iar greutatea netă este verificată la ușa containerului. De fiecare dată.",
+        "title": "Ceea ce spune certificatul este ceea ce ajunge la dumneavoastră."
+      },
+      "labtesting": {
+        "body": "Fiecare lot ajunge la un laborator independent, acreditat — nu la propria noastră unitate. Primiți raportul original de testare: umiditate, niveluri de pesticide, aflatoxine — măsurate deschis și împărtășite fără modificări.",
+        "title": "Testat de oameni care nu lucrează pentru noi."
+      },
+      "traceability": {
+        "body": "Fiecare comandă începe cu o vizită — nu cu un apel telefonic. Mergem pe câmpuri, întâlnim cultivatorii și înregistrăm fiecare lot la sursă. Când întrebați de unde provine condimentul dumneavoastră, vă putem indica ferma, sezonul și recolta.",
+        "title": "Începe la fermă."
+      }
+    },
+    "stepLabel": "Etapa"
+  },
+  "bacaPrinciples": {
+    "eyebrow": "Principiile noastre",
+    "imageAlt": "BACA — fermieri și câmpuri",
+    "imageCaption": "Direct din inima Indiei",
+    "items": {
+      "farmer": {
+        "body": "Plătim peste prețul pieței și deschidem uși globale pentru familiile care cultivă produsele noastre. Stabilitatea lor este temelia consecvenței noastre.",
+        "title": "Fermierul, pe primul loc."
+      },
+      "partnership": {
+        "body": "Construim parteneriate, nu tranzacții — cu fermierii în spatele nostru și cumpărători care au încredere în noi. Încrederea dumneavoastră o câștigăm la fiecare livrare, nu doar la prima.",
+        "title": "Construit pe termen lung."
+      },
+      "quality": {
+        "body": "Fiecare lot este testat, documentat și verificat la fermă, în timpul procesării și înainte de expediere. Dacă nu corespunde standardului nostru, nu pleacă.",
+        "title": "Niciodată scurtături."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA a fost construită pe o singură convingere: calitatea a ceea ce ajunge la cumpărător este inseparabilă de onestitatea fiecărei etape anterioare. Avem relații directe cu familiile de fermieri din Kerala, Karnataka, Tamil Nadu și Andhra Pradesh — oferind prețuri corecte, procese transparente și acces la piețe globale care erau cândva inaccesibile.",
+      "eyebrow": "Povestea BACA",
+      "heading": "Cele mai bune origini din India,",
+      "headingAccent": "livrate cu integritate.",
+      "quote": "Pentru că, atunci când fermierul prosperă, tot ceea ce ajunge la dumneavoastră este mai bun."
+    },
+    "principles": {
+      "eyebrow": "Principiile noastre",
+      "imageAlt": "BACA — fermieri și câmpuri",
+      "imageCaption": "Direct din inima Indiei",
+      "items": {
+        "farmer": {
+          "body": "Plătim peste prețul pieței și deschidem uși globale pentru familiile care cultivă produsele noastre. Stabilitatea lor este temelia consecvenței noastre.",
+          "title": "Fermierul, pe primul loc."
+        },
+        "partnership": {
+          "body": "Construim parteneriate, nu tranzacții — cu fermierii în spatele nostru și cumpărători care au încredere în noi. Încrederea dumneavoastră o câștigăm la fiecare livrare, nu doar la prima.",
+          "title": "Construit pe termen lung."
+        },
+        "quality": {
+          "body": "Fiecare lot este testat, documentat și verificat la fermă, în timpul procesării și înainte de expediere. Dacă nu corespunde standardului nostru, nu pleacă.",
+          "title": "Niciodată scurtături."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Scopul nostru",
+      "mission": {
+        "body": "Să conectăm cele mai bune regiuni de cultivare ale Indiei cu cei mai exigenți cumpărători din lume — prin aprovizionare trasabilă, calitate onestă și un preț care reflectă cu adevărat munca din spatele fiecărei livrări.",
+        "title": "Misiune"
+      },
+      "vision": {
+        "body": "Să fim cel mai de încredere exportator de produse din India — cunoscuți nu pentru volum, ci pentru consecvența care îi readuce pe aceiași cumpărători, sezon după sezon.",
+        "title": "Viziune"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "țări importă condimente indiene",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "familii de fermieri din India",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "din producția globală de condimente",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Toate articolele",
+    "categoriesHeading": "Categorii",
+    "empty": "Articole noi sunt pe drum. Vă rugăm să reveniți în curând.",
+    "eyebrow": "Bloguri",
+    "featured": "Recomandate",
+    "filterBy": "Filtrează după tip",
+    "heading": "Note din comerțul cu condimente și mărfuri.",
+    "intro": "Analize de piață, povești de la origine și gândirea din spatele modului în care ne aprovizionăm și expediem.",
+    "minRead": "min lectură",
+    "publishedLabel": "Publicat",
+    "readTimeLabel": "Timp de lectură",
+    "related": "Continuați să citiți",
+    "writtenBy": "Scris de"
+  },
+  "certifications": {
+    "eyebrow": "Certificări",
+    "heading": "Certificat pentru comerțul global.",
+    "intro": "Fiecare livrare pleacă cu actele în regulă.",
+    "items": {
+      "apeda": {
+        "sub": "Înregistrare pentru export agricol"
+      },
+      "fssai": {
+        "sub": "Licență centrală"
+      },
+      "haccp": {
+        "sub": "Protocol de control al riscurilor"
+      },
+      "halal": {
+        "sub": "Certificare pentru acces pe piață"
+      },
+      "iso22000": {
+        "sub": "Managementul siguranței alimentare"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
+      }
+    }
+  },
+  "common": {
+    "enquire": "Solicitați informații",
+    "viewAllCategories": "Vedeți toate categoriile",
+    "skipToContent": "Treceți la conținutul principal"
+  },
+  "contactPage": {
+    "channels": {
+      "email": "E-mail",
+      "emailLabel": "Trimiteți-ne un e-mail",
+      "phone": "Telefon",
+      "phoneLabel": "Sunați-ne",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Trimiteți-ne un mesaj",
+      "whatsappValue": "Trimiteți-ne un mesaj direct"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, Halal la cerere",
+          "label": "Certificări"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, opțiuni de contract anual",
+          "label": "Prețuri și volume"
+        },
+        "samples": {
+          "detail": "Disponibile pentru importatorii calificați",
+          "label": "Cereri de mostre"
+        },
+        "specs": {
+          "detail": "Calitate, origine, ambalare, sezonalitate",
+          "label": "Specificații produs"
+        }
+      }
+    },
+    "eyebrow": "Contactați-ne",
+    "form": {
+      "company": "Companie",
+      "country": "Țară",
+      "email": "E-mail",
+      "error": "Ceva nu a funcționat. Vă rugăm să încercați din nou sau trimiteți-ne un e-mail direct.",
+      "message": "Mesaj",
+      "messagePlaceholder": "Spuneți-ne pe scurt cerința dumneavoastră — produse, volume, destinație.",
+      "name": "Nume complet",
+      "phone": "Telefon",
+      "submit": "Trimite solicitarea",
+      "submitting": "Se trimite…",
+      "subtitle": "Vom răspunde în 12 ore.",
+      "success": "Vă mulțumim — solicitarea dumneavoastră a fost primită. Vă vom contacta în 12 ore.",
+      "title": "Trimiteți o solicitare"
+    },
+    "heading": "Trimiteți-ne o solicitare.",
+    "intro": {
+      "body": "Fie că doriți să vă aprovizionați cu un produs anume, să solicitați o mostră sau să discutați un acord de furnizare pe termen lung — aici este locul potrivit pentru a începe.",
+      "heading": "Spuneți-ne de ce aveți nevoie. Vă vom răspunde clar."
+    },
+    "map": {
+      "directions": "Indicații",
+      "eyebrow": "Găsiți-ne",
+      "iframeTitle": "Hartă care arată sediul corporativ BACA"
+    },
+    "officeTitle": "Adresa sediului",
+    "promise": {
+      "body": "Toate solicitările internaționale primesc un răspuns de la biroul nostru de comerț în 12 ore — inclusiv în weekenduri.",
+      "title": "Răspuns garantat în 12 ore."
+    },
+    "subheading": "Răspundem la solicitările internaționale în 12 ore."
+  },
+  "ctaBand": {
+    "body": "Spuneți-ne ce vă aprovizionați și unde se livrează. Răspundem la solicitările internaționale în 12 ore.",
+    "ctaCatalogue": "Descărcați catalogul",
+    "ctaEnquire": "Solicitați acum",
+    "eyebrow": "Să discutăm",
+    "heading": "Să construim un lanț de aprovizionare fiabil <em>împreună.</em>"
+  },
+  "errors": {
+    "body": "O eroare neașteptată a împiedicat încărcarea acestei pagini. Puteți încerca din nou sau să vă întoarceți la pagina principală.",
+    "eyebrow": "Eroare",
+    "home": "Acasă",
+    "retry": "Încercați din nou",
+    "title": "Ceva nu a funcționat."
+  },
+  "featuredInsights": {
+    "allArticles": "Toate articolele",
+    "eyebrow": "Bloguri",
+    "heading": "Note din comerțul cu condimente și mărfuri."
+  },
+  "footer": {
+    "backToTop": "Înapoi sus",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "Despre BACA",
+          "insights": "Analize",
+          "contact": "Contact"
+        },
+        "title": "Companie"
+      },
+      "products": {
+        "links": {
+          "all": "Toate produsele",
+          "spices": "Condimente",
+          "nutsSeeds": "Nuci și semințe",
+          "gallery": "Galerie"
+        },
+        "title": "Produse"
+      },
+      "reach": {
+        "title": "Contactați-ne",
+        "links": {
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Certificat",
+        "spicesBoard": "Spices Board CRES"
+      }
+    },
+    "description": "O casă de export indiană modernă pentru condimente, nuci și fructe.",
+    "marqueeItems": [
+      "India, în fiecare livrare",
+      "Condimente",
+      "Nuci",
+      "Fructe",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Fondator {index}"
+    },
+    "eyebrow": "De la fondatori",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "Tatăl meu obișnuia să spună — nu vinde niciodată ceea ce nu ai servi la propria masă. Aceasta a fost regula noastră de la prima livrare. Am bătut aceleași câmpuri din Kerala timp de peste două decenii și încă le vizitez înainte de a ne angaja față de un cultivator. Încrederea reală nu se construiește de la birou.",
+        "role": "Co-fondator · Aprovizionare și calitate"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "În acest comerț, un document întârziat este o promisiune încălcată. Când un container așteaptă în port din cauza actelor, nu este o problemă de logistică — este o problemă de încredere. Tot ce am construit în jurul documentației a venit din momentul în care am văzut acest lucru întâmplându-se o dată și am decis că nu se va întâmpla niciodată cumpărătorilor noștri.",
+        "role": "Co-fondator · Comerț și logistică"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "India cultivă unele dintre cele mai fine condimente din lume. Fermierii cu care lucrez și-au petrecut întreaga viață perfecționând ceea ce fac. Treaba noastră este pur și simplu să ne asigurăm că acest efort ajunge intact la cumpărător — clasificat onest, ambalat onest, expediat onest. Nimic mai mult, nimic mai puțin.",
+        "role": "Director · Calitate și relații cu cultivatorii"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "Se adaugă fotografii. Vă rugăm să reveniți în curând.",
+    "eyebrow": "Galerie",
+    "heading": "Munca, oamenii, pământul.",
+    "intro": "În interiorul aprovizionării, clasificării și expedierii — la origine în India și mai departe către lume."
+  },
+  "globalPresence": {
+    "body": "BACA livrează către importatori, distribuitori și producători de alimente din America de Nord, Europa, Orientul Mijlociu, Asia de Sud-Est și Africa — pe contracte documentate, la timp.",
+    "eyebrow": "Acoperire globală",
+    "heading": "Din porturile indiene către <em>cinci continente.</em>",
+    "items": {
+      "continents": "Continente deservite",
+      "countries": "Țări deservite",
+      "repeatRate": "Rata cumpărătorilor fideli",
+      "responseTime": "Timp de răspuns la solicitări"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Închideți meniul",
+      "home": "Pagina principală",
+      "mobileNav": "Mobil",
+      "openMenu": "Deschideți meniul",
+      "primaryNav": "Principal",
+      "submenu": "Submeniu {label}"
+    }
+  },
+  "hero": {
+    "body": "O nouă generație de export indian — construită pe aprovizionare trasabilă, calitate riguroasă și parteneriate care livrează mărfuri în mod fiabil, container după container.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 de țări deservite",
+    "ctaContact": "Discutați cu echipa noastră",
+    "ctaProducts": "Explorați produsele",
+    "eyebrow": "Condimente premium și produse agricole · Origini indiene de încredere",
+    "headline": "Calitate. Încredere.<br></br><em>Livrate.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "Mergeți la diapozitivul {index}"
+    },
+    "slides": {
+      "cardamom": "Cardamom verde · Kerala",
+      "farm": "Direct de la fermă",
+      "origin": "Aprovizionat la origine · India",
+      "pepper": "Piper negru de Malabar",
+      "turmeric": "Rădăcină de turmeric · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Schimbați limba"
+  },
+  "manifesto": {
+    "body": "Două decenii la origine în Kerala, Gujarat și Andhra — cumpărând de la aceleași familii de fermieri sezon de sezon, clasificând la sursă și livrând containere complete cumpărătorilor din 37 de țări.",
+    "eyebrow": "De ce suntem aici",
+    "headline": "Conectăm cultivatorii indieni cu cele mai exigente bucătării din lume — aprovizionându-ne <em>cu intenție</em> și livrând cu precizie.",
+    "imageAlt": "Mâini bătătorite tăind turmeric proaspăt la sursă în India — clasificând condimentul brut așa cum o fac familiile de fermieri ale BACA de generații"
+  },
+  "metadata": {
+    "description": "BACA este o casă de export indiană modernă — aprovizionare trasabilă cu condimente, nuci și fructe, calitate riguroasă și livrări globale fiabile. Certificat ISO 22000, HACCP și FSSAI.",
+    "title": "BACA — Exportator indian de condimente, nuci și fructe"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Contactați-ne"
+      },
+      "home": {
+        "label": "Acasă"
+      },
+      "insights": {
+        "label": "Bloguri"
+      },
+      "products": {
+        "label": "Produse"
+      },
+      "profile": {
+        "label": "Profil"
+      }
+    }
+  },
+  "notFound": {
+    "body": "Nu putem găsi ceea ce căutați. Pagina poate să fi fost mutată sau linkul poate fi greșit. Întoarceți-vă acasă sau răsfoiți catalogul.",
+    "ctaHome": "Reveniți acasă",
+    "ctaProducts": "Răsfoiți produsele",
+    "eyebrow": "404 · Pagina nu a fost găsită",
+    "heading": "Această pagină nu a fost niciodată livrată."
+  },
+  "productPreview": {
+    "eyebrow": "Ce exportăm",
+    "heading": "Aprovizionate la origine, clasificate pentru export."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Categorii",
+      "harvest": "Recoltă",
+      "originRegions": "Regiuni de origine",
+      "pairsNaturally": "Se asociază natural",
+      "peak": "Vârf",
+      "products": "Produse",
+      "requestQuote": "Solicitați o ofertă",
+      "requestSample": "Solicitați o mostră",
+      "seasonality": "Sezonalitate",
+      "seasonalityHint": "Recoltă / disponibilitate maximă",
+      "specifications": "Specificații"
+    },
+    "empty": "Catalogul nostru este în curs de actualizare. Vă rugăm să reveniți în curând.",
+    "eyebrow": "Catalogul nostru",
+    "heading": "Tot ce exportăm, aprovizionat la origine.",
+    "intro": "Condimente, nuci și fructe — clasificate, documentate și livrate cumpărătorilor din 37 de țări."
+  },
+  "profilePage": {
+    "eyebrow": "Despre BACA",
+    "founders": {
+      "eyebrow": "Fondatori",
+      "heading": "Oamenii din spatele BACA.",
+      "imageAltPrefix": "Portretul lui",
+      "intro": "BACA este condusă de doi frați care au construit afacerea după două decenii pe teren în comerțul indian cu condimente.",
+      "items": {
+        "founder1": {
+          "bio": "Două decenii de cumpărare directă de la cooperative din Kerala și Andhra. Supraveghează relațiile cu cultivatorii, clasificarea la origine și programele de testare în laborator pentru fiecare livrare.",
+          "role": "Co-fondator · Aprovizionare și calitate"
+        },
+        "founder2": {
+          "bio": "Gestionează documentația de export, relațiile cu expeditorii și biroul de comerț orientat spre cumpărători. Anterior, a condus divizia de logistică a unei case de tranzacționare de mărfuri din Mumbai.",
+          "role": "Co-fondator · Comerț și logistică"
+        }
+      }
+    },
+    "heading": "O casă de export indiană condusă de o familie, construită pe termen lung.",
+    "howWeWork": {
+      "eyebrow": "Cum lucrăm",
+      "heading": "De la sol la transport, în patru pași disciplinați.",
+      "intro": "Fiecare container care iese pe ușa noastră și-a câștigat locul prin aceeași secvență.",
+      "steps": {
+        "document": {
+          "body": "Certificatele fitosanitare, codurile HS, Incoterms și documentele de origine sunt emise înainte ca vasul să plece, astfel încât vămuirea să nu rețină niciodată o livrare în portul de destinație.",
+          "title": "Documentare"
+        },
+        "grade": {
+          "body": "Fiecare lot este sortat manual, testat în laborator pentru umiditate, reziduuri de pesticide și aflatoxine și documentat conform protocoalelor ISO 22000 și HACCP, înainte de a vedea vreodată un container.",
+          "title": "Clasificare"
+        },
+        "ship": {
+          "body": "Ambalate la origine și transportate ca încărcături complete de container documentate, cu expeditori contractați — aceleași vase, aceleași rute, aceleași ferestre de sosire în jurul cărora lanțul dumneavoastră de aprovizionare poate planifica.",
+          "title": "Livrare"
+        },
+        "source": {
+          "body": "Cumpărăm direct de la cooperativele de cultivatori din regiunile în care fiecare cultură este autohtonă — cardamom din Kerala, ardei iute din Guntur, piper din Malabar — pentru trasabilitate completă de la câmp la expeditor.",
+          "title": "Aprovizionare"
+        }
+      }
+    },
+    "intro": "Două decenii la origine în Kerala, Gujarat și Andhra — cumpărând de la aceleași familii de cultivatori sezon de sezon, clasificând la sursă și livrând containere complete cumpărătorilor din 37 de țări.",
+    "visionMission": {
+      "eyebrow": "Viziune și misiune",
+      "heading": "Spre ce lucrăm — și cum.",
+      "mission": {
+        "body": "Conectăm micii fermieri din India cu cumpărătorii exigenți din străinătate prin control riguros al calității, documentație transparentă și relații de livrare măsurate în ani.",
+        "title": "Misiune"
+      },
+      "vision": {
+        "body": "O lume în care agricultura indiană se tranzacționează pe picior de egalitate cu orice origine premium — trasabilă, documentată corect și prețuită pentru munca pe care o reprezintă la poarta fermei.",
+        "title": "Viziune"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA este o casă de export indiană modernă, specializată în condimente, nuci și fructe. Lucrăm direct cu familii de fermieri din regiunile tradiționale de cultivare ale Indiei, clasificăm și testăm în laborator fiecare lot la origine și expediem încărcături complete de containere documentate către importatori, distribuitori și retaileri din întreaga lume. Echipa a lucrat în aprovizionare, clasificare și logistică timp de peste două decenii; compania este formalizarea acestei experiențe sub un singur brand.",
+      "eyebrow": "Cine suntem",
+      "heading": "O casă de export construită pe relații."
+    },
+    "whyBaca": {
+      "eyebrow": "De ce BACA",
+      "heading": "Patru motive pentru care importatorii rămân cu noi.",
+      "intro": "Echipele de achiziții aleg BACA atunci când vor să nu mai stingă incendii și să înceapă să planifice.",
+      "items": {
+        "logistics": {
+          "body": "Sloturile contractate pentru vase și expeditorii cu experiență înseamnă că containerul dumneavoastră sosește în fereastra pe care am cotat-o — nu „cândva în luna respectivă”.",
+          "title": "Logistică fiabilă"
+        },
+        "partnership": {
+          "body": "Contracte cu preț fix și rezervări de recoltă pentru cumpărătorii fideli. Măsurăm relațiile în sezoane de cultivare, nu în numere de comandă individuale.",
+          "title": "Parteneriat pe termen lung"
+        },
+        "quality": {
+          "body": "Controale de calitate ISO 22000 + HACCP la origine: teste de umiditate, reziduuri de pesticide, aflatoxine și microbiologice, nu eșantionare aleatorie în port.",
+          "title": "Calitate testată în laborator"
+        },
+        "traceability": {
+          "body": "Fiecare lot este legat de o cooperativă specifică de cultivatori, o fereastră de recoltă și un rezultat de laborator — auditabil din depozitul dumneavoastră până la câmp.",
+          "title": "Trasabilitate completă"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "Portretul Directorului General al BACA",
+    "name": "Arvind Menon",
+    "quote": "Nu tranzacționăm livrări — ținem contracte. Aceiași cumpărători revin sezon de sezon, deoarece calitatea din container corespunde calității de pe certificat, de fiecare dată.",
+    "title": "Director General, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Containere expediate",
+      "countries": "Țări deservite",
+      "tonnes": "Tone gestionate / an",
+      "years": "Ani de activitate"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Pagina {page}",
+      "next": "Următor",
+      "previous": "Anterior"
+    },
+    "body": "Aprovizionate din cele mai bune regiuni de cultivare ale Indiei — testate, certificate și livrate cu trasabilitate completă.",
+    "card": {
+      "info": "Informații",
+      "requestQuote": "Solicitați ofertă"
+    },
+    "eyebrow": "Ce oferim",
+    "heading": "Gama noastră de produse",
+    "viewAll": "Vedeți toate produsele →"
+  },
+  "whatsapp": {
+    "ariaLabel": "Discutați cu BACA pe WhatsApp"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Certificări",
+      "heading": "Certificat pentru comerțul global.",
+      "intro": "Fiecare livrare pleacă cu actele în regulă.",
+      "items": {
+        "apeda": {
+          "authority": "Înregistrare pentru export",
+          "name": "APEDA",
+          "sub": "Agri & Processed Food Products Export Development Authority."
+        },
+        "fssai": {
+          "authority": "Licență centrală",
+          "name": "FSSAI",
+          "sub": "Autorizație obligatorie de siguranță alimentară pentru toate exporturile alimentare indiene."
+        },
+        "haccp": {
+          "authority": "Protocol de control al riscurilor",
+          "name": "HACCP",
+          "sub": "Abordare preventivă sistematică a riscurilor biologice și chimice."
+        },
+        "halal": {
+          "authority": "Certificare pentru acces pe piață",
+          "name": "Halal",
+          "sub": "Permite comerțul către piețele care necesită produse certificate halal."
+        },
+        "iso22000": {
+          "authority": "Mgmt siguranță alimentară",
+          "name": "ISO 22000",
+          "sub": "Standard internațional pentru sistemele de management al siguranței alimentare."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Înregistrare guvernamentală pentru exportatorii certificați de condimente."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "De ce BACA",
+      "heading": "Patru motive pentru care importatorii rămân cu noi.",
+      "intro": "Echipele de achiziții aleg BACA atunci când vor să nu mai stingă incendii și să înceapă să planifice.",
+      "items": {
+        "logistics": {
+          "body": "Sloturile contractate pentru vase și expeditorii cu experiență înseamnă că containerul dumneavoastră sosește în fereastra pe care am cotat-o — nu „cândva în luna respectivă”.",
+          "title": "Logistică fiabilă"
+        },
+        "partnership": {
+          "body": "Contracte cu preț fix și rezervări de recoltă pentru cumpărătorii fideli. Măsurăm relațiile în sezoane de cultivare, nu în numere individuale de comenzi de achiziție.",
+          "title": "Parteneriat pe termen lung"
+        },
+        "quality": {
+          "body": "Controale de calitate ISO 22000 + HACCP la origine: teste de umiditate, reziduuri de pesticide, aflatoxine și microbiologice — nu eșantionare aleatorie în port.",
+          "title": "Calitate testată în laborator"
+        },
+        "traceability": {
+          "body": "Fiecare lot este legat de o cooperativă specifică de cultivatori, o fereastră de recoltă și un rezultat de laborator — auditabil din depozitul dumneavoastră până la câmp.",
+          "title": "Trasabilitate completă"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Cum lucrăm",
+      "heading": "Un proces de care ne puteți ține responsabili.",
+      "items": {
+        "certificate": {
+          "body": "Sortăm și confirmăm fiecare lot înainte de începerea ambalării — niciodată după încărcare. Calitatea de pe factură este calitatea din sac, iar greutatea netă este verificată la ușa containerului. De fiecare dată.",
+          "title": "Ceea ce spune certificatul este ceea ce ajunge la dumneavoastră."
+        },
+        "contact": {
+          "body": "Veți avea întotdeauna o persoană de contact desemnată, care vă cunoaște marfa, ruta și calendarul. Pentru cumpărătorii care revin sezon de sezon, rezervăm alocările și convenim prețurile înainte de deschiderea recoltei.",
+          "title": "O singură persoană răspunde pentru fiecare livrare."
+        },
+        "farm": {
+          "body": "Fiecare comandă începe cu o vizită — nu cu un apel telefonic. Mergem pe câmpuri, întâlnim cultivatorii și înregistrăm fiecare lot la sursă. Când întrebați de unde provine condimentul dumneavoastră, vă putem indica ferma, sezonul și recolta.",
+          "title": "Începe la fermă."
+        },
+        "lab": {
+          "body": "Fiecare lot ajunge la un laborator independent, acreditat — nu la propria noastră unitate. Primiți raportul original de testare: umiditate, niveluri de pesticide, aflatoxine — măsurate deschis și împărtășite fără modificări.",
+          "title": "Testat de oameni care nu lucrează pentru noi."
+        },
+        "paperwork": {
+          "body": "Pregătim fiecare certificat și document de conformitate înainte ca livrarea să plece. Echipa dumneavoastră de import primește un container curat — nu o listă de corecturi de urmărit în port.",
+          "title": "Documentele sunt gata înainte de rezervarea vasului."
+        }
+      },
+      "stepLabel": "Etapa"
+    }
+  },
+  "contactStrip": {
+    "ariaSection": "Trimiteți o solicitare",
+    "eyebrow": "Contactați-ne",
+    "headingPrefix": "Sunteți gata să vă aprovizionați?",
+    "headingAccent": "Să discutăm.",
+    "body": "Spuneți-ne de ce aveți nevoie — produs, volum și destinație. Vă răspundem cu o ofertă în 12 ore, de fiecare dată."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — imaginea {index}",
+    "previous": "Imaginea anterioară",
+    "next": "Imaginea următoare",
+    "goToImage": "Mergeți la imaginea {index}"
+  }
+}

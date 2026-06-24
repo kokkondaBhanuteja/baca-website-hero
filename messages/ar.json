@@ -1,104 +1,105 @@
 {
   "approach": {
-    "eyebrow": "How we work",
-    "heading": "A process you can hold us to.",
-    "intro": "We built our process around one question: what would give a buyer complete peace of mind? Here is the answer.",
+    "eyebrow": "كيف نعمل",
+    "heading": "عمليّة يمكنك محاسبتنا عليها.",
+    "intro": "بنينا عمليّتنا حول سؤال واحد: ما الذي يمنح المشتري راحة بال كاملة؟ هذا هو الجواب.",
     "pillars": {
       "accountability": {
-        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close.",
-        "title": "One person answers for every shipment."
+        "body": "سيكون لديك دائمًا جهة اتصال محددة بالاسم تعرف شحنتك وخط سيرها وجدولك الزمني. للمشترين الذين يعودون كل موسم، نحجز الكميات ونتفق على الأسعار قبل افتتاح الحصاد. علاقة بُنيت لتدوم، لا لتُختتم فقط.",
+        "title": "شخص واحد مسؤول عن كل شحنة."
       },
       "documentation": {
-        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
-        "title": "Paperwork ready before the vessel is booked."
+        "body": "نُجهّز كل شهادة ووثيقة امتثال قبل تحرّك الشحنة. يستلم فريق الاستيراد لديك حاوية نظيفة — لا قائمة تصويبات يجب اللحاق بها في الميناء.",
+        "title": "الأوراق جاهزة قبل حجز السفينة."
       },
       "grading": {
-        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
-        "title": "What the certificate says is what arrives."
+        "body": "نُفرز كل دفعة ونؤكدها قبل بدء التعبئة — لا بعد التحميل أبدًا. الدرجة على فاتورتك هي الدرجة في الكيس، ويتم فحص الوزن الصافي عند باب الحاوية. في كل مرة، دون استثناء.",
+        "title": "ما تذكره الشهادة هو ما يصل."
       },
       "labtesting": {
-        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
-        "title": "Tested by people who do not work for us."
+        "body": "تذهب كل دفعة إلى مختبر مستقل ومعتمَد — وليس منشأتنا الخاصة. تستلم تقرير الفحص الأصلي: الرطوبة، ومستويات المبيدات، والأفلاتوكسينات — مقاسة بشفافية ومُشاركة دون تعديل.",
+        "title": "يفحصها أشخاص لا يعملون لدينا."
       },
       "traceability": {
-        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
-        "title": "It starts at the farm."
+        "body": "كل طلب يبدأ بزيارة — لا بمكالمة هاتفية. نمشي في الحقول، نلتقي بالمزارعين، ونسجّل كل دفعة عند مصدرها. حين تسأل من أين أتى بهارك، يمكننا تسمية المزرعة والموسم والحصاد.",
+        "title": "تبدأ من المزرعة."
       }
-    }
+    },
+    "stepLabel": "الخطوة"
   },
   "bacaPrinciples": {
-    "eyebrow": "Our Principles",
-    "imageAlt": "BACA — farmers and fields",
-    "imageCaption": "Direct from India's heartland",
+    "eyebrow": "مبادئنا",
+    "imageAlt": "BACA — مزارعون وحقول",
+    "imageCaption": "مباشرة من قلب الهند",
     "items": {
       "farmer": {
-        "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
-        "title": "The Farmer First."
+        "body": "ندفع أعلى من سعر السوق ونفتح أبواب العالم للعائلات التي تزرع منتجاتنا. استقرارهم هو أساس اتساقنا.",
+        "title": "المزارع أوّلًا."
       },
       "partnership": {
-        "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
-        "title": "Built for the Long Run."
+        "body": "نبني شراكات، لا صفقات — مع مزارعين خلفنا ومشترين يثقون بنا. ثقتك شيء نكسبه مع كل شحنة، وليس فقط الأولى.",
+        "title": "مبنيّ على المدى الطويل."
       },
       "quality": {
-        "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
-        "title": "No Shortcuts, Ever."
+        "body": "كل دفعة تُختبر وتُوثَّق وتُتحقَّق منها في المزرعة، وأثناء المعالجة، وقبل الإرسال. إن لم تستوفِ معاييرنا، فلن تُشحن.",
+        "title": "لا اختصارات أبدًا."
       }
     }
   },
   "bacaStory": {
     "origin": {
-      "body": "BACA was built on a single conviction: that the quality of what reaches a buyer is inseparable from the honesty of every step before it. We hold direct relationships with farming families across Kerala, Karnataka, Tamil Nadu, and Andhra Pradesh — offering fair pricing, transparent processes, and access to global markets that were once out of reach.",
-      "eyebrow": "The BACA Story",
-      "heading": "India's finest origins,",
-      "headingAccent": "delivered with integrity.",
-      "quote": "Because when the farmer thrives, everything that reaches you is better for it."
+      "body": "تأسّست BACA على قناعة واحدة: أن جودة ما يصل إلى المشتري لا تنفصل عن نزاهة كل خطوة قبله. لدينا علاقات مباشرة مع عائلات مزارعين في كيرالا وكارناتاكا وتاميل نادو وأندرا براديش — نقدّم تسعيرًا عادلًا، وعمليات شفّافة، ووصولًا إلى أسواق عالمية كانت بعيدة المنال.",
+      "eyebrow": "قصة BACA",
+      "heading": "أجود أصول الهند،",
+      "headingAccent": "تُسلَّم بنزاهة.",
+      "quote": "لأن ازدهار المزارع يجعل كل ما يصلك أفضل."
     },
     "principles": {
-      "eyebrow": "Our Principles",
-      "imageAlt": "BACA — farmers and fields",
-      "imageCaption": "Direct from India's heartland",
+      "eyebrow": "مبادئنا",
+      "imageAlt": "BACA — مزارعون وحقول",
+      "imageCaption": "مباشرة من قلب الهند",
       "items": {
         "farmer": {
-          "body": "We pay above-market rates and open global doors for the families who grow our produce. Their stability is the foundation of our consistency.",
-          "title": "The Farmer First."
+          "body": "ندفع أعلى من سعر السوق ونفتح أبواب العالم للعائلات التي تزرع منتجاتنا. استقرارهم هو أساس اتساقنا.",
+          "title": "المزارع أوّلًا."
         },
         "partnership": {
-          "body": "We build partnerships, not transactions — with farmers behind us and buyers who trust us. Your trust is something we earn every shipment, not just the first.",
-          "title": "Built for the Long Run."
+          "body": "نبني شراكات، لا صفقات — مع مزارعين خلفنا ومشترين يثقون بنا. ثقتك شيء نكسبه مع كل شحنة، وليس فقط الأولى.",
+          "title": "مبنيّ على المدى الطويل."
         },
         "quality": {
-          "body": "Every batch is tested, documented, and verified at the farm, at processing, and before dispatch. If it does not meet our standard, it does not leave.",
-          "title": "No Shortcuts, Ever."
+          "body": "كل دفعة تُختبر وتُوثَّق وتُتحقَّق منها في المزرعة، وأثناء المعالجة، وقبل الإرسال. إن لم تستوفِ معاييرنا، فلن تُشحن.",
+          "title": "لا اختصارات أبدًا."
         }
       }
     },
     "purpose": {
-      "eyebrow": "Our Purpose",
+      "eyebrow": "غايتنا",
       "mission": {
-        "body": "To connect India's finest growing regions with the world's most discerning buyers — through traceable sourcing, honest quality, and a price that truly reflects the work behind every shipment.",
-        "title": "Mission"
+        "body": "أن نربط أجود مناطق الزراعة في الهند بأكثر مشتري العالم تطلّبًا — عبر مصادر قابلة للتتبّع، وجودة صادقة، وسعر يعكس حقًّا الجهد وراء كل شحنة.",
+        "title": "المهمّة"
       },
       "vision": {
-        "body": "To be India's most trusted commodity exporter — known not for volume, but for the consistency that brings the same buyers back, season after season.",
-        "title": "Vision"
+        "body": "أن نكون أكثر مصدّري السلع في الهند موثوقية — لا نُعرف بحجم الكميات، بل بالاتساق الذي يُعيد المشترين أنفسهم موسمًا تلو الآخر.",
+        "title": "الرؤية"
       }
     },
     "stats": {
       "items": {
         "exports": {
           "figure": "180+",
-          "label": "countries import Indian spices",
-          "source": "Spices Board of India"
+          "label": "دولة تستورد التوابل الهندية",
+          "source": "مجلس التوابل الهندي"
         },
         "farmers": {
           "figure": "2.5M+",
-          "label": "farming families across India",
-          "source": "Spices Board of India"
+          "label": "عائلة مزارعة عبر الهند",
+          "source": "مجلس التوابل الهندي"
         },
         "production": {
           "figure": "75%",
-          "label": "of global spice production",
-          "source": "Spices Board of India"
+          "label": "من إنتاج التوابل عالميًا",
+          "source": "مجلس التوابل الهندي"
         }
       }
     }
@@ -119,65 +120,66 @@
     "writtenBy": "بقلم"
   },
   "certifications": {
-    "eyebrow": "Certifications",
-    "heading": "Certified for global trade.",
-    "intro": "Every shipment leaves with its credentials in order.",
+    "eyebrow": "الشهادات",
+    "heading": "موثّقون للتجارة العالمية.",
+    "intro": "تغادر كل شحنة وأوراق اعتمادها مرتّبة.",
     "items": {
       "apeda": {
-        "sub": "Agri Export Registration"
+        "sub": "تسجيل التصدير الزراعي"
       },
       "fssai": {
-        "sub": "Central License"
+        "sub": "الترخيص المركزي"
       },
       "haccp": {
-        "sub": "Hazard Control Protocol"
+        "sub": "بروتوكول التحكّم في المخاطر"
       },
       "halal": {
-        "sub": "Market Access Certification"
+        "sub": "شهادة دخول الأسواق"
       },
       "iso22000": {
-        "sub": "Food Safety Management"
+        "sub": "إدارة سلامة الغذاء"
       },
       "spicesBoard": {
-        "sub": "CRES · Spices Board of India"
+        "sub": "CRES · مجلس التوابل الهندي"
       }
     }
   },
   "common": {
     "enquire": "استفسر الآن",
-    "viewAllCategories": "عرض جميع الفئات"
+    "viewAllCategories": "عرض جميع الفئات",
+    "skipToContent": "تخطّى إلى المحتوى الرئيسي"
   },
   "contactPage": {
     "channels": {
       "email": "البريد الإلكتروني",
-      "emailLabel": "Email us",
+      "emailLabel": "راسلنا عبر البريد",
       "phone": "الهاتف",
-      "phoneLabel": "Call us",
+      "phoneLabel": "اتصل بنا",
       "whatsapp": "واتساب",
       "whatsappAction": "راسلنا",
-      "whatsappValue": "Message us directly"
+      "whatsappValue": "راسلنا مباشرة"
     },
     "expect": {
       "items": {
         "certifications": {
-          "detail": "ISO 22000, HACCP, FSSAI, Halal on request",
-          "label": "Certifications"
+          "detail": "ISO 22000، HACCP، FSSAI، حلال عند الطلب",
+          "label": "الشهادات"
         },
         "pricing": {
-          "detail": "FOB / CIF, MOQ, annual contract options",
-          "label": "Pricing & volumes"
+          "detail": "FOB / CIF، الحد الأدنى للطلب، خيارات العقد السنوي",
+          "label": "الأسعار والكميات"
         },
         "samples": {
-          "detail": "Available for qualified importers",
-          "label": "Sample requests"
+          "detail": "متاحة للمستوردين المؤهّلين",
+          "label": "طلب العيّنات"
         },
         "specs": {
-          "detail": "Grade, origin, packaging, seasonality",
-          "label": "Product specifications"
+          "detail": "الدرجة، المنشأ، التغليف، الموسمية",
+          "label": "مواصفات المنتج"
         }
       }
     },
-    "eyebrow": "Get in Touch",
+    "eyebrow": "تواصل معنا",
     "form": {
       "company": "الشركة",
       "country": "البلد",
@@ -193,10 +195,10 @@
       "success": "شكراً لك — تم استلام استفسارك. سنتواصل معك خلال 12 ساعة.",
       "title": "إرسال استفسار"
     },
-    "heading": "Send us an enquiry.",
+    "heading": "أرسل لنا استفسارًا.",
     "intro": {
-      "body": "Whether you're looking to source a specific product, request a sample, or discuss a long-term supply arrangement — this is the right place to start.",
-      "heading": "Tell us what you need. We'll come back to you with a clear answer."
+      "body": "سواء أردت توريد منتج بعينه، أو طلب عيّنة، أو مناقشة ترتيب توريد طويل الأمد — هذا هو المكان المناسب للبدء.",
+      "heading": "أخبرنا بما تحتاج. سنعود إليك بإجابة واضحة."
     },
     "map": {
       "directions": "الاتجاهات",
@@ -205,10 +207,10 @@
     },
     "officeTitle": "عنوان الشركة",
     "promise": {
-      "body": "All international enquiries receive a reply from our trade desk within 12 hours — including weekends.",
-      "title": "12-hour response guarantee."
+      "body": "كل استفسار دولي يتلقى ردًّا من فريق التجارة لدينا خلال 12 ساعة — بما فيها عطلة نهاية الأسبوع.",
+      "title": "ضمان الردّ خلال 12 ساعة."
     },
-    "subheading": "We respond to international enquiries within 12 hours."
+    "subheading": "نردّ على الاستفسارات الدولية خلال 12 ساعة."
   },
   "ctaBand": {
     "body": "أخبرنا بما تورّده وإلى أين يُشحن. نردّ على الاستفسارات الدولية خلال 12 ساعة.",
@@ -234,25 +236,30 @@
     "columns": {
       "company": {
         "links": {
-          "about": "من نحن",
-          "approach": "منهجيتنا",
-          "profile": "نبذة عنا"
+          "about": "عن BACA",
+          "insights": "المدونة",
+          "contact": "التواصل"
         },
         "title": "الشركة"
       },
       "products": {
         "links": {
-          "all": "جميع الفئات",
-          "spices": "التوابل"
+          "all": "جميع المنتجات",
+          "spices": "التوابل",
+          "nutsSeeds": "المكسّرات والبذور",
+          "gallery": "المعرض"
         },
         "title": "المنتجات"
       },
-      "resources": {
+      "reach": {
+        "title": "تواصل معنا",
         "links": {
-          "contact": "تواصل معنا",
-          "insights": "المدونة"
-        },
-        "title": "الموارد"
+          "whatsapp": "واتساب"
+        }
+      },
+      "certified": {
+        "title": "موثّقون",
+        "spicesBoard": "مجلس التوابل CRES"
       }
     },
     "description": "دار تصدير هندية حديثة للتوابل والمكسرات والفواكه.",
@@ -269,27 +276,27 @@
   },
   "foundersNote": {
     "aria": {
-      "founderIndex": "Founder {index}"
+      "founderIndex": "المؤسّس {index}"
     },
-    "eyebrow": "From the Founders",
+    "eyebrow": "من المؤسّسين",
     "items": {
       "arjun": {
         "initials": "AM",
         "name": "Arjun Menon",
-        "note": "My father used to say — never sell what you would not serve at your own table. That has been our rule since the very first shipment. I have walked the same fields in Kerala for over two decades, and I still visit before we commit to a grower. You cannot build real trust from a desk.",
-        "role": "Co-founder · Sourcing & Quality"
+        "note": "كان والدي يقول — لا تبع أبدًا ما لن تقدّمه على مائدتك. هذه قاعدتنا منذ أول شحنة. مشيت في حقول كيرالا نفسها لأكثر من عقدين، وما زلت أزور قبل أن نلتزم مع أي مزارع. لا يمكنك بناء ثقة حقيقية من خلف مكتب.",
+        "role": "شريك مؤسس · المصادر والجودة"
       },
       "priya": {
         "initials": "PM",
         "name": "Priya Menon",
-        "note": "In this trade, a delayed document is a broken promise. When a container sits at port waiting on paperwork, it is not a logistics problem — it is a trust problem. Everything we built around documentation came from watching that happen once, and deciding it would never happen to our buyers.",
-        "role": "Co-founder · Trade & Logistics"
+        "note": "في هذه التجارة، وثيقة متأخرة تعني وعدًا مكسورًا. حين تنتظر حاوية في الميناء بسبب الأوراق، فإنها ليست مشكلة لوجستية — بل مشكلة ثقة. كل ما بنيناه حول التوثيق نشأ من رؤية ذلك يحدث مرة واحدة، وقرار ألا يحدث لمشترينا أبدًا.",
+        "role": "شريكة مؤسسة · التجارة واللوجستيات"
       },
       "rajan": {
         "initials": "RN",
         "name": "Rajan Nair",
-        "note": "India grows some of the finest spices in the world. The farmers I work with have spent their whole lives perfecting what they do. Our job is simply to make sure that effort reaches the buyer intact — honestly graded, honestly packed, honestly shipped. Nothing more, nothing less.",
-        "role": "Director · Quality & Grower Relations"
+        "note": "تزرع الهند بعضًا من أجود التوابل في العالم. أمضى المزارعون الذين أعمل معهم حياتهم بأكملها في إتقان ما يفعلون. مهمّتنا ببساطة هي ضمان أن يصل هذا الجهد إلى المشتري سليمًا — مصنّفًا بصدق، ومعبّأً بصدق، ومشحونًا بصدق. لا أكثر ولا أقل.",
+        "role": "مدير · الجودة وعلاقات المزارعين"
       }
     }
   },
@@ -316,7 +323,8 @@
       "home": "الصفحة الرئيسية",
       "mobileNav": "الجوال",
       "openMenu": "فتح القائمة",
-      "primaryNav": "الرئيسية"
+      "primaryNav": "الرئيسية",
+      "submenu": "قائمة {label} الفرعية"
     }
   },
   "hero": {
@@ -326,18 +334,18 @@
     "ctaContact": "تحدّث إلى فريقنا",
     "ctaProducts": "استكشف المنتجات",
     "eyebrow": "توابل ومنتجات زراعية فاخرة · مصادر هندية موثوقة",
-    "headline": "Quality. Trust.<br></br><em>Delivered.</em>"
+    "headline": "الجودة. الثقة.<br></br><em>تُسلَّم.</em>"
   },
   "heroSlideshow": {
     "aria": {
-      "goToSlide": "Go to slide {index}"
+      "goToSlide": "اذهب إلى الشريحة {index}"
     },
     "slides": {
-      "cardamom": "Green Cardamom · Kerala",
-      "farm": "Direct from the farm",
-      "origin": "Sourced at origin · India",
-      "pepper": "Malabar Black Pepper",
-      "turmeric": "Turmeric Fingers · Andhra Pradesh"
+      "cardamom": "الهيل الأخضر · كيرالا",
+      "farm": "مباشرة من المزرعة",
+      "origin": "مصدرها من المنشأ · الهند",
+      "pepper": "فلفل ملبار الأسود",
+      "turmeric": "أصابع الكركم · أندرا براديش"
     }
   },
   "languageSwitcher": {
@@ -502,109 +510,122 @@
   },
   "whatWeOffer": {
     "aria": {
-      "goToPage": "Page {page}",
-      "next": "Next",
-      "previous": "Previous"
+      "goToPage": "الصفحة {page}",
+      "next": "التالي",
+      "previous": "السابق"
     },
-    "body": "Sourced from India's finest growing regions — tested, certified, and shipped with full traceability.",
+    "body": "مصدرها من أجود مناطق الزراعة في الهند — مختبرة ومعتمَدة ومشحونة بتتبّع كامل.",
     "card": {
-      "info": "Info",
-      "requestQuote": "Request quote"
+      "info": "المعلومات",
+      "requestQuote": "اطلب عرض سعر"
     },
-    "eyebrow": "What We Offer",
-    "heading": "Our Product Range",
-    "viewAll": "View all products →"
+    "eyebrow": "ما نقدّمه",
+    "heading": "مجموعة منتجاتنا",
+    "viewAll": "عرض جميع المنتجات ←"
   },
   "whatsapp": {
     "ariaLabel": "تحدّث مع BACA عبر WhatsApp"
   },
   "whyBaca": {
     "certifications": {
-      "eyebrow": "Certifications",
-      "heading": "Certified for global trade.",
-      "intro": "Every shipment leaves with its credentials in order.",
+      "eyebrow": "الشهادات",
+      "heading": "موثّقون للتجارة العالمية.",
+      "intro": "تغادر كل شحنة وأوراق اعتمادها مرتّبة.",
       "items": {
         "apeda": {
-          "authority": "Export Registration",
+          "authority": "تسجيل التصدير",
           "name": "APEDA",
-          "sub": "Agri & Processed Food Products Export Development Authority."
+          "sub": "هيئة تطوير صادرات المنتجات الزراعية والغذائية المصنّعة."
         },
         "fssai": {
-          "authority": "Central License",
+          "authority": "الترخيص المركزي",
           "name": "FSSAI",
-          "sub": "Mandatory food-safety clearance for all Indian food exports."
+          "sub": "إذن سلامة الغذاء الإلزامي لكل صادرات الغذاء الهندية."
         },
         "haccp": {
-          "authority": "Hazard Control Protocol",
+          "authority": "بروتوكول التحكّم في المخاطر",
           "name": "HACCP",
-          "sub": "Systematic preventive approach to biological and chemical hazards."
+          "sub": "نهج وقائي منهجي للمخاطر البيولوجية والكيميائية."
         },
         "halal": {
-          "authority": "Market Access Certification",
+          "authority": "شهادة دخول الأسواق",
           "name": "Halal",
-          "sub": "Enables trade to markets requiring halal-certified product."
+          "sub": "تتيح التجارة مع الأسواق التي تشترط المنتج المعتمَد حلالًا."
         },
         "iso22000": {
-          "authority": "Food Safety Mgmt",
+          "authority": "إدارة سلامة الغذاء",
           "name": "ISO 22000",
-          "sub": "International standard for food-safety management systems."
+          "sub": "المعيار الدولي لأنظمة إدارة سلامة الغذاء."
         },
         "spicesBoard": {
-          "authority": "CRES · India",
-          "name": "Spices Board",
-          "sub": "Government registration for certified spice exporters."
+          "authority": "CRES · الهند",
+          "name": "مجلس التوابل",
+          "sub": "تسجيل حكومي لمصدّري التوابل المعتمدين."
         }
       }
     },
     "differentiators": {
-      "eyebrow": "Why BACA",
-      "heading": "Four reasons importers stay with us.",
-      "intro": "Procurement teams choose BACA when they want to stop firefighting and start planning.",
+      "eyebrow": "لماذا BACA",
+      "heading": "أربعة أسباب تجعل المستوردين يبقَون معنا.",
+      "intro": "تختار فرق الشراء BACA حين تريد التوقّف عن إطفاء الحرائق والبدء بالتخطيط.",
       "items": {
         "logistics": {
-          "body": "Contracted vessel slots and seasoned forwarders mean your container arrives in the window we quoted — not 'sometime that month.'",
-          "title": "Reliable Logistics"
+          "body": "حجوزات سفن متعاقد عليها وشحنون متمرّسون يعني أن حاويتك تصل في النافذة التي قدّمنا فيها العرض — لا في 'وقت ما من ذلك الشهر'.",
+          "title": "لوجستيات موثوقة"
         },
         "partnership": {
-          "body": "Fixed-price contracts and crop reservations for repeat buyers. We measure relationships in growing seasons, not single purchase order numbers.",
-          "title": "Long-Term Partnership"
+          "body": "عقود بسعر ثابت وحجوزات محاصيل للمشترين المتكرّرين. نقيس العلاقات بمواسم الزراعة، لا بأرقام طلبات شراء فردية.",
+          "title": "شراكة طويلة الأمد"
         },
         "quality": {
-          "body": "ISO 22000 + HACCP-grade controls at origin: moisture, pesticide residue, aflatoxin, and microbiological tests — not random sampling at port.",
-          "title": "Lab-Tested Quality"
+          "body": "ضوابط بمستوى ISO 22000 + HACCP عند المنشأ: الرطوبة، بقايا المبيدات، الأفلاتوكسين، والفحوصات الميكروبيولوجية — لا عيّنات عشوائية في الميناء.",
+          "title": "جودة مختبرَة"
         },
         "traceability": {
-          "body": "Every lot is tied to a specific grower cooperative, harvest window, and lab result — auditable from your warehouse all the way back to the field.",
-          "title": "Full Traceability"
+          "body": "كل دفعة مرتبطة بتعاونية مزارعين محددة، ونافذة حصاد، ونتيجة مختبر — قابلة للتدقيق من مستودعك حتى الحقل.",
+          "title": "تتبّع كامل"
         }
       }
     },
     "process": {
-      "eyebrow": "How We Work",
-      "heading": "A process you can hold us to.",
+      "eyebrow": "كيف نعمل",
+      "heading": "عمليّة يمكنك محاسبتنا عليها.",
       "items": {
         "certificate": {
-          "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time.",
-          "title": "What the certificate says is what arrives."
+          "body": "نُفرز كل دفعة ونؤكدها قبل بدء التعبئة — لا بعد التحميل أبدًا. الدرجة على فاتورتك هي الدرجة في الكيس، ويتم فحص الوزن الصافي عند باب الحاوية. في كل مرة.",
+          "title": "ما تذكره الشهادة هو ما يصل."
         },
         "contact": {
-          "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens.",
-          "title": "One person answers for every shipment."
+          "body": "سيكون لديك دائمًا جهة اتصال محددة بالاسم تعرف شحنتك وخط سيرها وجدولك الزمني. للمشترين الذين يعودون كل موسم، نحجز الكميات ونتفق على الأسعار قبل افتتاح الحصاد.",
+          "title": "شخص واحد مسؤول عن كل شحنة."
         },
         "farm": {
-          "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest.",
-          "title": "It starts at the farm."
+          "body": "كل طلب يبدأ بزيارة — لا بمكالمة هاتفية. نمشي في الحقول، نلتقي بالمزارعين، ونسجّل كل دفعة عند مصدرها. حين تسأل من أين أتى بهارك، يمكننا تسمية المزرعة والموسم والحصاد.",
+          "title": "تبدأ من المزرعة."
         },
         "lab": {
-          "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing.",
-          "title": "Tested by people who do not work for us."
+          "body": "تذهب كل دفعة إلى مختبر مستقل ومعتمَد — وليس منشأتنا الخاصة. تستلم تقرير الفحص الأصلي: الرطوبة، ومستويات المبيدات، والأفلاتوكسينات — مقاسة بشفافية ومُشاركة دون تعديل.",
+          "title": "يفحصها أشخاص لا يعملون لدينا."
         },
         "paperwork": {
-          "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port.",
-          "title": "Paperwork ready before the vessel is booked."
+          "body": "نُجهّز كل شهادة ووثيقة امتثال قبل تحرّك الشحنة. يستلم فريق الاستيراد لديك حاوية نظيفة — لا قائمة تصويبات يجب اللحاق بها في الميناء.",
+          "title": "الأوراق جاهزة قبل حجز السفينة."
         }
       },
-      "stepLabel": "Step"
+      "stepLabel": "الخطوة"
     }
+  },
+  "contactStrip": {
+    "ariaSection": "أرسل استفسارًا",
+    "eyebrow": "تواصل معنا",
+    "headingPrefix": "جاهز للتوريد؟",
+    "headingAccent": "لنتحدّث.",
+    "body": "أخبرنا بما تحتاج — المنتج والكمية والوجهة. نعود إليك بعرض سعر خلال 12 ساعة، في كل مرة."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — صورة {index}",
+    "previous": "الصورة السابقة",
+    "next": "الصورة التالية",
+    "goToImage": "اذهب إلى الصورة {index}"
   }
 }

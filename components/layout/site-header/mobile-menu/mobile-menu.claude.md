@@ -58,7 +58,7 @@ Dependencies:
 - @/components/ui/language-switcher
 
 i18n:
-Namespaces: 'common' (enquire), 'header' (aria.closeMenu).
+Namespaces: 'common' (enquire), 'header' (aria.closeMenu, aria.mobileNav, aria.submenu — the last interpolates the parent item label).
 
 Accessibility:
 aria-label on close button. Semantic <nav><ul><li> structure. Links are proper semantic elements.

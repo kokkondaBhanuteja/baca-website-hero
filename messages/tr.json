@@ -1,0 +1,631 @@
+{
+  "approach": {
+    "eyebrow": "Nasıl çalışıyoruz",
+    "heading": "Sizi söz veren bir süreç.",
+    "intro": "Sürecimizi tek bir soru etrafında kurduk: bir alıcıya tam gönül rahatlığı ne verirdi? İşte cevabı.",
+    "pillars": {
+      "accountability": {
+        "body": "Yükünüzü, güzergâhınızı ve takviminizi bilen, ismi belirli bir muhatabınız her zaman olacaktır. Her sezon geri dönen alıcılar için tahsisat ayırıyor ve fiyatları hasat açılmadan önce mutabık kalıyoruz. Sadece kapatılmak için değil, sürmek için kurulmuş bir ilişki.",
+        "title": "Her sevkiyatın hesabını tek bir kişi verir."
+      },
+      "documentation": {
+        "body": "Sevkiyat hareket etmeden önce her sertifikayı ve uyum belgesini hazırlıyoruz. İthalat ekibiniz temiz bir konteyner teslim alır — limanda peşinde koşulacak bir düzeltme kuyruğu değil.",
+        "title": "Gemi rezerve edilmeden önce evraklar hazır."
+      },
+      "grading": {
+        "body": "Her lotu paketleme başlamadan önce ayırıp doğruluyoruz — yüklemeden sonra asla. Faturanızdaki kalite, çuvaldaki kalitedir ve net ağırlık konteyner kapısında kontrol edilir. Her seferinde.",
+        "title": "Sertifikada ne yazıyorsa o ulaşır."
+      },
+      "labtesting": {
+        "body": "Her lot bağımsız ve akredite bir laboratuvara gider — kendi tesisimize değil. Orijinal test raporunu siz alırsınız: nem, pestisit seviyeleri, aflatoksin değerleri — açıkça ölçülüp düzenlenmeden paylaşılır.",
+        "title": "Bizim için çalışmayan kişilerce test edilir."
+      },
+      "traceability": {
+        "body": "Her sipariş bir ziyaretle başlar — telefon görüşmesiyle değil. Tarlaları geziyor, üreticilerle tanışıyor ve her lotu kaynağında kayıt altına alıyoruz. Baharatınızın nereden geldiğini sorduğunuzda, çiftliğin, sezonun ve hasadın adını söyleyebiliriz.",
+        "title": "Çiftlikte başlar."
+      }
+    },
+    "stepLabel": "Adım"
+  },
+  "bacaPrinciples": {
+    "eyebrow": "İlkelerimiz",
+    "imageAlt": "BACA — çiftçiler ve tarlalar",
+    "imageCaption": "Doğrudan Hindistan'ın kalbinden",
+    "items": {
+      "farmer": {
+        "body": "Ürünümüzü yetiştiren ailelere piyasa üstü ücret ödüyor ve onlara küresel kapılar açıyoruz. Onların istikrarı, bizim tutarlılığımızın temelidir.",
+        "title": "Önce Çiftçi."
+      },
+      "partnership": {
+        "body": "İşlem değil, ortaklık kuruyoruz — arkamızdaki çiftçiler ve bize güvenen alıcılarla. Güveniniz yalnızca ilk sevkiyatta değil, her sevkiyatta kazandığımız bir şeydir.",
+        "title": "Uzun Vade İçin Kuruldu."
+      },
+      "quality": {
+        "body": "Her parti çiftlikte, işlemede ve sevkiyattan önce test edilir, belgelenir ve doğrulanır. Standardımızı karşılamıyorsa, çıkmaz.",
+        "title": "Hiçbir Zaman Kestirme Yok."
+      }
+    }
+  },
+  "bacaStory": {
+    "origin": {
+      "body": "BACA tek bir inanç üzerine kuruldu: bir alıcıya ulaşan ürünün kalitesi, ondan önceki her adımın dürüstlüğünden ayrılamaz. Kerala, Karnataka, Tamil Nadu ve Andhra Pradesh genelindeki çiftçi aileleriyle doğrudan ilişki kuruyor — adil fiyat, şeffaf süreçler ve bir zamanlar erişilemez olan küresel pazarlara erişim sunuyoruz.",
+      "eyebrow": "BACA'nın Hikâyesi",
+      "heading": "Hindistan'ın en seçkin kaynakları,",
+      "headingAccent": "dürüstlükle teslim edilir.",
+      "quote": "Çünkü çiftçi refaha kavuşunca, size ulaşan her şey bundan iyileşir."
+    },
+    "principles": {
+      "eyebrow": "İlkelerimiz",
+      "imageAlt": "BACA — çiftçiler ve tarlalar",
+      "imageCaption": "Doğrudan Hindistan'ın kalbinden",
+      "items": {
+        "farmer": {
+          "body": "Ürünümüzü yetiştiren ailelere piyasa üstü ücret ödüyor ve onlara küresel kapılar açıyoruz. Onların istikrarı, bizim tutarlılığımızın temelidir.",
+          "title": "Önce Çiftçi."
+        },
+        "partnership": {
+          "body": "İşlem değil, ortaklık kuruyoruz — arkamızdaki çiftçiler ve bize güvenen alıcılarla. Güveniniz yalnızca ilk sevkiyatta değil, her sevkiyatta kazandığımız bir şeydir.",
+          "title": "Uzun Vade İçin Kuruldu."
+        },
+        "quality": {
+          "body": "Her parti çiftlikte, işlemede ve sevkiyattan önce test edilir, belgelenir ve doğrulanır. Standardımızı karşılamıyorsa, çıkmaz.",
+          "title": "Hiçbir Zaman Kestirme Yok."
+        }
+      }
+    },
+    "purpose": {
+      "eyebrow": "Amacımız",
+      "mission": {
+        "body": "Hindistan'ın en seçkin üretim bölgelerini dünyanın en seçici alıcılarıyla buluşturmak — izlenebilir tedarik, dürüst kalite ve her sevkiyatın arkasındaki emeği gerçekten yansıtan bir fiyatla.",
+        "title": "Misyon"
+      },
+      "vision": {
+        "body": "Hindistan'ın en güvenilen emtia ihracatçısı olmak — hacmiyle değil, aynı alıcıları sezon ardı sezon geri getiren tutarlılığıyla tanınmak.",
+        "title": "Vizyon"
+      }
+    },
+    "stats": {
+      "items": {
+        "exports": {
+          "figure": "180+",
+          "label": "ülke Hindistan baharatlarını ithal ediyor",
+          "source": "Spices Board of India"
+        },
+        "farmers": {
+          "figure": "2.5M+",
+          "label": "Hindistan genelinde çiftçi ailesi",
+          "source": "Spices Board of India"
+        },
+        "production": {
+          "figure": "75%",
+          "label": "küresel baharat üretiminin",
+          "source": "Spices Board of India"
+        }
+      }
+    }
+  },
+  "blogsPage": {
+    "allArticles": "Tüm makaleler",
+    "categoriesHeading": "Kategoriler",
+    "empty": "Yeni makaleler yolda. Lütfen yakında tekrar uğrayın.",
+    "eyebrow": "Bloglar",
+    "featured": "Öne çıkan",
+    "filterBy": "Türe göre filtrele",
+    "heading": "Baharat ve emtia ticaretinden notlar.",
+    "intro": "Piyasa okumaları, menşe hikâyeleri ve tedarik ile sevkiyat anlayışımızın arkasındaki düşünce.",
+    "minRead": "dk okuma",
+    "publishedLabel": "Yayımlandı",
+    "readTimeLabel": "Okuma süresi",
+    "related": "Okumaya devam edin",
+    "writtenBy": "Yazan"
+  },
+  "certifications": {
+    "eyebrow": "Sertifikalar",
+    "heading": "Küresel ticaret için sertifikalı.",
+    "intro": "Her sevkiyat belgeleri eksiksiz biçimde yola çıkar.",
+    "items": {
+      "apeda": {
+        "sub": "Tarımsal İhracat Tescili"
+      },
+      "fssai": {
+        "sub": "Merkezi Lisans"
+      },
+      "haccp": {
+        "sub": "Tehlike Kontrol Protokolü"
+      },
+      "halal": {
+        "sub": "Pazara Erişim Sertifikası"
+      },
+      "iso22000": {
+        "sub": "Gıda Güvenliği Yönetimi"
+      },
+      "spicesBoard": {
+        "sub": "CRES · Spices Board of India"
+      }
+    }
+  },
+  "common": {
+    "enquire": "Bilgi alın",
+    "viewAllCategories": "Tüm kategorileri görüntüle",
+    "skipToContent": "Ana içeriğe geç"
+  },
+  "contactPage": {
+    "channels": {
+      "email": "E-posta",
+      "emailLabel": "Bize e-posta gönderin",
+      "phone": "Telefon",
+      "phoneLabel": "Bizi arayın",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Bize mesaj gönderin",
+      "whatsappValue": "Doğrudan mesaj gönderin"
+    },
+    "expect": {
+      "items": {
+        "certifications": {
+          "detail": "ISO 22000, HACCP, FSSAI, talep üzerine Helal",
+          "label": "Sertifikalar"
+        },
+        "pricing": {
+          "detail": "FOB / CIF, MOQ, yıllık sözleşme seçenekleri",
+          "label": "Fiyatlandırma ve hacimler"
+        },
+        "samples": {
+          "detail": "Yetkin ithalatçılar için mevcuttur",
+          "label": "Numune talepleri"
+        },
+        "specs": {
+          "detail": "Kalite, menşe, ambalaj, mevsimsellik",
+          "label": "Ürün spesifikasyonları"
+        }
+      }
+    },
+    "eyebrow": "Bize Ulaşın",
+    "form": {
+      "company": "Şirket",
+      "country": "Ülke",
+      "email": "E-posta",
+      "error": "Bir sorun oluştu. Lütfen tekrar deneyin veya doğrudan bize e-posta gönderin.",
+      "message": "Mesaj",
+      "messagePlaceholder": "İhtiyacınızı kısaca belirtin — ürünler, hacimler, varış noktası.",
+      "name": "Ad soyad",
+      "phone": "Telefon",
+      "submit": "Talep gönder",
+      "submitting": "Gönderiliyor…",
+      "subtitle": "12 saat içinde yanıtlayacağız.",
+      "success": "Teşekkür ederiz — talebiniz alınmıştır. 12 saat içinde sizinle iletişime geçeceğiz.",
+      "title": "Bir talep gönderin"
+    },
+    "heading": "Bize bir talep gönderin.",
+    "intro": {
+      "body": "Belirli bir ürün tedarik etmek, numune talep etmek veya uzun vadeli bir tedarik anlaşması görüşmek istiyorsanız — başlamak için doğru yer burası.",
+      "heading": "Neye ihtiyacınız olduğunu bize söyleyin. Size net bir cevapla döneceğiz."
+    },
+    "map": {
+      "directions": "Yol tarifi",
+      "eyebrow": "Bizi bulun",
+      "iframeTitle": "BACA kurumsal ofisini gösteren harita"
+    },
+    "officeTitle": "Kurumsal Adres",
+    "promise": {
+      "body": "Tüm uluslararası talepler, hafta sonları dahil, ticaret masamızdan 12 saat içinde yanıt alır.",
+      "title": "12 saatlik yanıt garantisi."
+    },
+    "subheading": "Uluslararası taleplere 12 saat içinde yanıt veriyoruz."
+  },
+  "ctaBand": {
+    "body": "Neyi tedarik ettiğinizi ve nereye sevk ettiğinizi bize söyleyin. Uluslararası taleplere 12 saat içinde yanıt veriyoruz.",
+    "ctaCatalogue": "Kataloğu indir",
+    "ctaEnquire": "Şimdi sorun",
+    "eyebrow": "Konuşalım",
+    "heading": "<em>Birlikte</em> güvenilir bir tedarik zinciri kuralım."
+  },
+  "errors": {
+    "body": "Beklenmedik bir hata bu sayfanın yüklenmesini engelledi. Tekrar deneyebilir veya ana sayfaya dönebilirsiniz.",
+    "eyebrow": "Hata",
+    "home": "Ana sayfa",
+    "retry": "Tekrar deneyin",
+    "title": "Bir sorun oluştu."
+  },
+  "featuredInsights": {
+    "allArticles": "Tüm makaleler",
+    "eyebrow": "Bloglar",
+    "heading": "Baharat ve emtia ticaretinden notlar."
+  },
+  "footer": {
+    "backToTop": "Başa dön",
+    "columns": {
+      "company": {
+        "links": {
+          "about": "BACA Hakkında",
+          "insights": "İçgörüler",
+          "contact": "İletişim"
+        },
+        "title": "Şirket"
+      },
+      "products": {
+        "links": {
+          "all": "Tüm Ürünler",
+          "spices": "Baharatlar",
+          "nutsSeeds": "Kuruyemiş ve Tohumlar",
+          "gallery": "Galeri"
+        },
+        "title": "Ürünler"
+      },
+      "reach": {
+        "title": "Bize Ulaşın",
+        "links": {
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "certified": {
+        "title": "Sertifikalı",
+        "spicesBoard": "Spices Board CRES"
+      }
+    },
+    "description": "Baharat, kuruyemiş ve meyveler için modern bir Hindistan ihracat evi.",
+    "marqueeItems": [
+      "Her sevkiyatta Hindistan",
+      "Baharatlar",
+      "Kuruyemişler",
+      "Meyveler",
+      "ISO 22000",
+      "HACCP",
+      "FSSAI",
+      "APEDA"
+    ]
+  },
+  "foundersNote": {
+    "aria": {
+      "founderIndex": "Kurucu {index}"
+    },
+    "eyebrow": "Kuruculardan",
+    "items": {
+      "arjun": {
+        "initials": "AM",
+        "name": "Arjun Menon",
+        "note": "Babam derdi ki — kendi sofranda servis etmeyeceğini asla satma. İlk sevkiyattan beri kuralımız bu olmuştur. Kerala'da aynı tarlaları yirmi yılı aşkın süredir adımlıyorum ve bir yetiştiriciyle anlaşmadan önce hâlâ bizzat ziyaret ederim. Gerçek güveni masa başında kuramazsınız.",
+        "role": "Kurucu Ortak · Tedarik ve Kalite"
+      },
+      "priya": {
+        "initials": "PM",
+        "name": "Priya Menon",
+        "note": "Bu ticarette, geciken bir belge bozulan bir sözdür. Bir konteyner evrak bekleyerek limanda bekliyorsa, bu bir lojistik sorunu değil — bir güven sorunudur. Belgelendirme etrafında inşa ettiğimiz her şey, bunu bir kez yaşamaktan ve alıcılarımıza asla yaşatmamaya karar vermekten doğdu.",
+        "role": "Kurucu Ortak · Ticaret ve Lojistik"
+      },
+      "rajan": {
+        "initials": "RN",
+        "name": "Rajan Nair",
+        "note": "Hindistan dünyanın en seçkin baharatlarından bazılarını yetiştirir. Birlikte çalıştığım çiftçiler tüm hayatlarını yaptıkları işi mükemmelleştirmeye adamışlardır. Bizim görevimiz yalnızca o emeğin alıcıya eksiksiz ulaşmasını sağlamak — dürüst kalitelendirilmiş, dürüst paketlenmiş, dürüst sevk edilmiş olarak. Ne fazlası, ne eksiği.",
+        "role": "Direktör · Kalite ve Üretici İlişkileri"
+      }
+    }
+  },
+  "galleryPage": {
+    "empty": "Fotoğraflar ekleniyor. Lütfen yakında tekrar uğrayın.",
+    "eyebrow": "Galeri",
+    "heading": "İş, insanlar, toprak.",
+    "intro": "Tedarik, kalitelendirme ve sevkiyatımızın içinden — Hindistan'da menşede ve oradan dünyaya."
+  },
+  "globalPresence": {
+    "body": "BACA, Kuzey Amerika, Avrupa, Orta Doğu, Güneydoğu Asya ve Afrika'daki ithalatçılara, distribütörlere ve gıda üreticilerine — belgelenmiş, zamanında sözleşmelerle — sevkiyat yapar.",
+    "eyebrow": "Küresel erişim",
+    "heading": "Hindistan limanlarından <em>beş kıtaya.</em>",
+    "items": {
+      "continents": "Sevkiyat yapılan kıta",
+      "countries": "Hizmet verilen ülke",
+      "repeatRate": "Tekrar alıcı oranı",
+      "responseTime": "Talep yanıt süresi"
+    }
+  },
+  "header": {
+    "aria": {
+      "closeMenu": "Menüyü kapat",
+      "home": "Ana sayfa",
+      "mobileNav": "Mobil",
+      "openMenu": "Menüyü aç",
+      "primaryNav": "Birincil",
+      "submenu": "{label} alt menü"
+    }
+  },
+  "hero": {
+    "body": "Yeni nesil bir Hindistan ihracatı — izlenebilir tedarik, titiz kalite ve emtiaları konteyner ardı konteyner güvenilir biçimde hareket ettiren ortaklıklar üzerine kurulmuş.",
+    "certs": "ISO 22000 · HACCP · FSSAI",
+    "countries": "37 Ülkeye Hizmet",
+    "ctaContact": "Ekibimizle konuşun",
+    "ctaProducts": "Ürünleri keşfedin",
+    "eyebrow": "Premium Baharat ve Tarım Ürünleri · Güvenilir Hindistan Menşeleri",
+    "headline": "Kalite. Güven.<br></br><em>Teslim edildi.</em>"
+  },
+  "heroSlideshow": {
+    "aria": {
+      "goToSlide": "{index} numaralı slayta git"
+    },
+    "slides": {
+      "cardamom": "Yeşil Kakule · Kerala",
+      "farm": "Doğrudan çiftlikten",
+      "origin": "Menşede tedarik · Hindistan",
+      "pepper": "Malabar Karabiber",
+      "turmeric": "Zerdeçal Parmakları · Andhra Pradesh"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Dili değiştir"
+  },
+  "manifesto": {
+    "body": "Kerala, Gujarat ve Andhra'da menşede yirmi yıl — aynı çiftçi ailelerden sezon ardı sezon satın alma, kaynakta kalitelendirme ve 37 ülkedeki alıcılara tam konteynerler taşıma.",
+    "eyebrow": "Neden buradayız",
+    "headline": "Hindistanlı yetiştiricileri dünyanın en talepkâr mutfaklarıyla buluşturuyoruz — <em>amaçlı</em> tedarik ediyor, hassasiyetle sevk ediyoruz.",
+    "imageAlt": "Hindistan'da menşede taze zerdeçalı dilimleyen yıpranmış eller — BACA'nın çiftçi ailelerinin nesillerdir yaptığı şekilde ham baharatı kalitelendiriyor"
+  },
+  "metadata": {
+    "description": "BACA modern bir Hindistan ihracat evidir — baharat, kuruyemiş ve meyvelerin izlenebilir tedariki, titiz kalite ve güvenilir küresel sevkiyatlar. ISO 22000, HACCP ve FSSAI sertifikalı.",
+    "title": "BACA — Hindistan Baharat, Kuruyemiş ve Meyve İhracatçısı"
+  },
+  "nav": {
+    "items": {
+      "contact": {
+        "label": "Bize ulaşın"
+      },
+      "home": {
+        "label": "Ana sayfa"
+      },
+      "insights": {
+        "label": "Bloglar"
+      },
+      "products": {
+        "label": "Ürünler"
+      },
+      "profile": {
+        "label": "Profil"
+      }
+    }
+  },
+  "notFound": {
+    "body": "Aradığınız şeyi bulamıyoruz. Sayfa taşınmış veya bağlantı yanlış olabilir. Ana sayfaya dönün veya kataloğa göz atın.",
+    "ctaHome": "Ana sayfaya dön",
+    "ctaProducts": "Ürünlere göz at",
+    "eyebrow": "404 · Sayfa bulunamadı",
+    "heading": "Bu sayfa hiç sevk edilmedi."
+  },
+  "productPreview": {
+    "eyebrow": "Neyi ihraç ediyoruz",
+    "heading": "Menşede tedarik, ihracat için kalitelendirilmiş."
+  },
+  "productsPage": {
+    "detail": {
+      "categoriesHeading": "Kategoriler",
+      "harvest": "Hasat",
+      "originRegions": "Menşe bölgeleri",
+      "pairsNaturally": "Doğal uyum sağlar",
+      "peak": "Zirve",
+      "products": "Ürünler",
+      "requestQuote": "Teklif talep edin",
+      "requestSample": "Numune talep edin",
+      "seasonality": "Mevsimsellik",
+      "seasonalityHint": "Hasat / zirve mevcudiyet",
+      "specifications": "Spesifikasyonlar"
+    },
+    "empty": "Kataloğumuz güncelleniyor. Lütfen yakında tekrar uğrayın.",
+    "eyebrow": "Kataloğumuz",
+    "heading": "İhraç ettiğimiz her şey, menşede tedarik edildi.",
+    "intro": "Baharatlar, kuruyemişler ve meyveler — kalitelendirilmiş, belgelenmiş ve 37 ülkedeki alıcılara sevk edilmiş."
+  },
+  "profilePage": {
+    "eyebrow": "BACA Hakkında",
+    "founders": {
+      "eyebrow": "Kurucular",
+      "heading": "BACA'nın arkasındaki insanlar.",
+      "imageAltPrefix": "Portresi:",
+      "intro": "BACA, Hindistan'ın baharat ticaretinde sahada geçirdikleri yirmi yılla işi kuran iki kardeş tarafından yönetilmektedir.",
+      "items": {
+        "founder1": {
+          "bio": "Kerala ve Andhra genelindeki kooperatiflerden doğrudan yirmi yıllık satın alma deneyimi. Üretici ilişkilerini, menşe kalitelendirmesini ve her sevkiyat için laboratuvar testi programlarını denetler.",
+          "role": "Kurucu Ortak · Tedarik ve kalite"
+        },
+        "founder2": {
+          "bio": "İhracat belgelerini, nakliyeci ilişkilerini ve alıcıya yönelik ticaret masasını yönetir. Daha önce Mumbai merkezli bir emtia ticaret kuruluşunun lojistik kolunu yönetmiştir.",
+          "role": "Kurucu Ortak · Ticaret ve lojistik"
+        }
+      }
+    },
+    "heading": "Uzun vadeli bakışla kurulmuş, aile yönetimindeki bir Hindistan ihracat evi.",
+    "howWeWork": {
+      "eyebrow": "Nasıl çalışıyoruz",
+      "heading": "Topraktan sevkiyata, dört disiplinli adımda.",
+      "intro": "Kapımızdan çıkan her konteyner yerini aynı sıralamayla hak etmiştir.",
+      "steps": {
+        "document": {
+          "body": "Bitki sağlık sertifikaları, HS kodları, Incoterms ve menşe evrakları, varış limanında gümrük işlemleri sevkiyatı tutmasın diye gemi yola çıkmadan önce düzenlenir.",
+          "title": "Belgele"
+        },
+        "grade": {
+          "body": "Her lot bir konteyner görmeden önce elle ayıklanır, nem, pestisit kalıntısı ve aflatoksin için laboratuvarda test edilir ve ISO 22000 ile HACCP protokollerine göre belgelenir.",
+          "title": "Kalitelendir"
+        },
+        "ship": {
+          "body": "Menşede paketlenir ve sözleşmeli nakliyecilerle belgelenmiş tam konteyner yükleri olarak taşınır — aynı gemiler, aynı hatlar, tedarik zincirinizin planlayabileceği aynı varış pencereleri.",
+          "title": "Sevk et"
+        },
+        "source": {
+          "body": "Her ürünün anavatanı olan bölgelerdeki yetiştirici kooperatiflerden doğrudan satın alıyoruz — Kerala'dan kakule, Guntur'dan acı biber, Malabar'dan karabiber — tarladan nakliyeciye tam izlenebilirlik için.",
+          "title": "Tedarik et"
+        }
+      }
+    },
+    "intro": "Kerala, Gujarat ve Andhra'da menşede yirmi yıl — aynı yetiştirici ailelerden sezon ardı sezon satın alma, kaynakta kalitelendirme ve 37 ülkedeki alıcılara tam konteynerler taşıma.",
+    "visionMission": {
+      "eyebrow": "Vizyon ve misyon",
+      "heading": "Neye doğru çalışıyoruz — ve nasıl.",
+      "mission": {
+        "body": "Hindistan'daki küçük çiftçileri yurt dışındaki seçici alıcılarla titiz kalite kontrolü, şeffaf evraklar ve yıllarla ölçülen sevkiyat ilişkileri aracılığıyla buluşturmak.",
+        "title": "Misyon"
+      },
+      "vision": {
+        "body": "Hindistan tarımının herhangi bir premium menşeyle aynı seviyede ticaret yaptığı bir dünya — izlenebilir, gerektiği gibi belgelenmiş ve tarla kapısındaki emeğe yakışır biçimde fiyatlandırılmış.",
+        "title": "Vizyon"
+      }
+    },
+    "whoWeAre": {
+      "body": "BACA, baharat, kuruyemiş ve meyvelerde uzmanlaşmış modern bir Hindistan ihracat evidir. Hindistan'ın geleneksel üretim bölgelerindeki çiftçi aileleriyle doğrudan çalışıyor, her lotu menşede kalitelendirip laboratuvarda test ediyor ve dünyadaki ithalatçılara, distribütörlere ve perakendecilere belgelenmiş tam konteyner yükleri sevk ediyoruz. Ekip, menşe, kalitelendirme ve lojistik alanlarında yirmi yılı aşkın süredir çalışmaktadır; şirket bu deneyimin tek bir marka altında resmileşmesidir.",
+      "eyebrow": "Biz kimiz",
+      "heading": "İlişkiler üzerine kurulmuş bir ihracat evi."
+    },
+    "whyBaca": {
+      "eyebrow": "Neden BACA",
+      "heading": "İthalatçıların bizimle kalmasının dört nedeni.",
+      "intro": "Satın alma ekipleri yangın söndürmeyi bırakıp plan yapmaya başlamak istediklerinde BACA'yı seçer.",
+      "items": {
+        "logistics": {
+          "body": "Sözleşmeli gemi slotları ve deneyimli nakliyeciler, konteynerinizin verdiğimiz pencerede ulaşacağı anlamına gelir — 'o ay içinde bir ara' değil.",
+          "title": "Güvenilir lojistik"
+        },
+        "partnership": {
+          "body": "Tekrarlayan alıcılar için sabit fiyatlı sözleşmeler ve mahsul rezervasyonları. İlişkileri tekil sipariş numaralarıyla değil, üretim sezonlarıyla ölçeriz.",
+          "title": "Uzun vadeli ortaklık"
+        },
+        "quality": {
+          "body": "Menşede ISO 22000 + HACCP düzeyinde kontroller: nem, pestisit kalıntısı, aflatoksin ve mikrobiyolojik testler, limanda rastgele numune değil.",
+          "title": "Laboratuvar testli kalite"
+        },
+        "traceability": {
+          "body": "Her lot belirli bir yetiştirici kooperatifine, hasat penceresine ve laboratuvar sonucuna bağlıdır — deponuzdan tarlaya kadar denetlenebilir.",
+          "title": "Tam izlenebilirlik"
+        }
+      }
+    }
+  },
+  "pullQuote": {
+    "imageAlt": "BACA Genel Müdürü'nün portresi",
+    "name": "Arvind Menon",
+    "quote": "Sevkiyat ticareti yapmıyoruz — sözleşme tutuyoruz. Aynı alıcılar sezon ardı sezon geri dönüyor çünkü konteynerdeki kalite sertifikadaki kaliteyle her seferinde eşleşiyor.",
+    "title": "Genel Müdür, BACA"
+  },
+  "stats": {
+    "items": {
+      "containers": "Sevk edilen konteyner",
+      "countries": "Hizmet verilen ülke",
+      "tonnes": "Yılda işlenen ton",
+      "years": "Sektördeki yıl"
+    }
+  },
+  "whatWeOffer": {
+    "aria": {
+      "goToPage": "Sayfa {page}",
+      "next": "İleri",
+      "previous": "Geri"
+    },
+    "body": "Hindistan'ın en seçkin üretim bölgelerinden tedarik edilir — test edilir, sertifikalandırılır ve tam izlenebilirlikle sevk edilir.",
+    "card": {
+      "info": "Bilgi",
+      "requestQuote": "Teklif talep et"
+    },
+    "eyebrow": "Sunduklarımız",
+    "heading": "Ürün Yelpazemiz",
+    "viewAll": "Tüm ürünleri görüntüle →"
+  },
+  "whatsapp": {
+    "ariaLabel": "WhatsApp'tan BACA ile sohbet edin"
+  },
+  "whyBaca": {
+    "certifications": {
+      "eyebrow": "Sertifikalar",
+      "heading": "Küresel ticaret için sertifikalı.",
+      "intro": "Her sevkiyat belgeleri eksiksiz biçimde yola çıkar.",
+      "items": {
+        "apeda": {
+          "authority": "İhracat Tescili",
+          "name": "APEDA",
+          "sub": "Tarım ve İşlenmiş Gıda Ürünleri İhracat Geliştirme Kurumu."
+        },
+        "fssai": {
+          "authority": "Merkezi Lisans",
+          "name": "FSSAI",
+          "sub": "Tüm Hindistan gıda ihracatı için zorunlu gıda güvenliği onayı."
+        },
+        "haccp": {
+          "authority": "Tehlike Kontrol Protokolü",
+          "name": "HACCP",
+          "sub": "Biyolojik ve kimyasal tehlikelere yönelik sistematik önleyici yaklaşım."
+        },
+        "halal": {
+          "authority": "Pazara Erişim Sertifikası",
+          "name": "Halal",
+          "sub": "Helal sertifikalı ürün gerektiren pazarlara ticareti mümkün kılar."
+        },
+        "iso22000": {
+          "authority": "Gıda Güvenliği Yönetimi",
+          "name": "ISO 22000",
+          "sub": "Gıda güvenliği yönetim sistemleri için uluslararası standart."
+        },
+        "spicesBoard": {
+          "authority": "CRES · India",
+          "name": "Spices Board",
+          "sub": "Sertifikalı baharat ihracatçıları için resmi tescil."
+        }
+      }
+    },
+    "differentiators": {
+      "eyebrow": "Neden BACA",
+      "heading": "İthalatçıların bizimle kalmasının dört nedeni.",
+      "intro": "Satın alma ekipleri yangın söndürmeyi bırakıp plan yapmaya başlamak istediklerinde BACA'yı seçer.",
+      "items": {
+        "logistics": {
+          "body": "Sözleşmeli gemi slotları ve deneyimli nakliyeciler, konteynerinizin verdiğimiz pencerede ulaşacağı anlamına gelir — 'o ay içinde bir ara' değil.",
+          "title": "Güvenilir Lojistik"
+        },
+        "partnership": {
+          "body": "Tekrarlayan alıcılar için sabit fiyatlı sözleşmeler ve mahsul rezervasyonları. İlişkileri tekil satınalma siparişi numaralarıyla değil, üretim sezonlarıyla ölçeriz.",
+          "title": "Uzun Vadeli Ortaklık"
+        },
+        "quality": {
+          "body": "Menşede ISO 22000 + HACCP düzeyinde kontroller: nem, pestisit kalıntısı, aflatoksin ve mikrobiyolojik testler — limanda rastgele numune değil.",
+          "title": "Laboratuvar Testli Kalite"
+        },
+        "traceability": {
+          "body": "Her lot belirli bir yetiştirici kooperatifine, hasat penceresine ve laboratuvar sonucuna bağlıdır — deponuzdan tarlaya kadar denetlenebilir.",
+          "title": "Tam İzlenebilirlik"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Nasıl Çalışıyoruz",
+      "heading": "Sizi söz veren bir süreç.",
+      "items": {
+        "certificate": {
+          "body": "Her lotu paketleme başlamadan önce ayırıp doğruluyoruz — yüklemeden sonra asla. Faturanızdaki kalite, çuvaldaki kalitedir ve net ağırlık konteyner kapısında kontrol edilir. Her seferinde.",
+          "title": "Sertifikada ne yazıyorsa o ulaşır."
+        },
+        "contact": {
+          "body": "Yükünüzü, güzergâhınızı ve takviminizi bilen, ismi belirli bir muhatabınız her zaman olacaktır. Her sezon geri dönen alıcılar için tahsisat ayırıyor ve fiyatları hasat açılmadan önce mutabık kalıyoruz.",
+          "title": "Her sevkiyatın hesabını tek bir kişi verir."
+        },
+        "farm": {
+          "body": "Her sipariş bir ziyaretle başlar — telefon görüşmesiyle değil. Tarlaları geziyor, üreticilerle tanışıyor ve her lotu kaynağında kayıt altına alıyoruz. Baharatınızın nereden geldiğini sorduğunuzda, çiftliğin, sezonun ve hasadın adını söyleyebiliriz.",
+          "title": "Çiftlikte başlar."
+        },
+        "lab": {
+          "body": "Her lot bağımsız ve akredite bir laboratuvara gider — kendi tesisimize değil. Orijinal test raporunu siz alırsınız: nem, pestisit seviyeleri, aflatoksin değerleri — açıkça ölçülüp düzenlenmeden paylaşılır.",
+          "title": "Bizim için çalışmayan kişilerce test edilir."
+        },
+        "paperwork": {
+          "body": "Sevkiyat hareket etmeden önce her sertifikayı ve uyum belgesini hazırlıyoruz. İthalat ekibiniz temiz bir konteyner teslim alır — limanda peşinde koşulacak bir düzeltme kuyruğu değil.",
+          "title": "Gemi rezerve edilmeden önce evraklar hazır."
+        }
+      },
+      "stepLabel": "Adım"
+    }
+  },
+  "contactStrip": {
+    "ariaSection": "Bir talep gönderin",
+    "eyebrow": "İletişime geçin",
+    "headingPrefix": "Tedarik etmeye hazır mısınız?",
+    "headingAccent": "Konuşalım.",
+    "body": "Neye ihtiyacınız olduğunu bize söyleyin — ürün, hacim ve varış noktası. Her seferinde 12 saat içinde bir teklifle döneriz."
+  },
+  "productGallery": {
+    "imageOfAlt": "{alt} — görsel {index}",
+    "previous": "Önceki görsel",
+    "next": "Sonraki görsel",
+    "goToImage": "{index} numaralı görsele git"
+  }
+}
