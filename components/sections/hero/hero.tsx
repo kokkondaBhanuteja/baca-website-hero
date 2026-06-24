@@ -8,9 +8,7 @@ import { WordmarkMedia } from '@/components/ui/wordmark-media'
 import { HeroEntry } from '@/components/sections/hero-entry'
 
 // Looping ocean film revealed through the giant BACA letterforms.
-const HERO_VIDEO_SOURCES = [
-  { src: '/videos/hero-ocean.mp4', type: 'video/mp4' },
-]
+const HERO_VIDEO_SOURCES = [{ src: '/videos/footer-v1.mp4', type: 'video/mp4' }]
 
 export async function Hero() {
   const t = await getTranslations('hero')
