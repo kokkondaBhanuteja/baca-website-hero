@@ -2,9 +2,15 @@ import type { ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
 
 import { Route } from '@/constants/routes'
+import { SITE } from '@/constants/site'
 import { CtaLink } from '@/components/ui/cta-link'
+import { WordmarkMedia } from '@/components/ui/wordmark-media'
 import { HeroEntry } from '@/components/sections/hero-entry'
-import { HeroSlideshow } from './hero-slideshow'
+
+// Looping ocean film revealed through the giant BACA letterforms.
+const HERO_VIDEO_SOURCES = [
+  { src: '/videos/hero-ocean.mp4', type: 'video/mp4' },
+]
 
 export async function Hero() {
   const t = await getTranslations('hero')
@@ -71,14 +77,18 @@ export async function Hero() {
             </div>
           </div>
 
-          {/* ── Right: image slideshow ── */}
+          {/* ── Right: BACA wordmark with ocean film through the letters ── */}
           <div
             data-hero-reveal
-            className="relative hidden lg:block lg:p-10 lg:pl-3 xl:p-14 xl:pl-4"
+            className="relative hidden items-center lg:flex lg:px-10 lg:pl-3 xl:px-14 xl:pl-4"
           >
-            <div className="relative h-full overflow-hidden rounded-3xl shadow-[0_24px_80px_rgba(30,58,23,0.18)]">
-              <HeroSlideshow />
-            </div>
+            <WordmarkMedia
+              text={SITE.brand}
+              videoSources={HERO_VIDEO_SOURCES}
+              posterSrc="/images/footer/ocean-1.jpg"
+              align="center"
+              className="w-full"
+            />
           </div>
         </div>
       </HeroEntry>

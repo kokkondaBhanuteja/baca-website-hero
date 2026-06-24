@@ -8,7 +8,9 @@ imports_from:
   - 'react'
   - 'next-intl/server'
   - '@/constants/routes'
+  - '@/constants/site'
   - '@/components/ui/cta-link'
+  - '@/components/ui/wordmark-media'
   - '@/components/sections/hero-entry'
 i18n_namespace: 'hero'
 ---
@@ -16,11 +18,10 @@ i18n_namespace: 'hero'
 # Hero
 
 Purpose:
-Home hero — GMCT-structured: a single oversized `headline` filling a full-bleed
-pale-sage (`bg-mist`, `#d4e9cf`) field, with the headline in deep pine green
-(`text-pine`, `#24582a`) and the emphasized word (`<em>`) in the chartreuse
-accent (`text-saffron`), + short body copy + dual CTA + a bottom labels/stats
-strip (countries / certs).
+Home hero — a two-column split on `lg+`: editorial copy on the left (eyebrow,
+oversized headline, saffron divider, body, dual CTA) and, on the right, the giant
+`BACA` wordmark whose letterforms reveal a looping ocean film (`WordmarkMedia`,
+"media inside text"). Below `lg` the right column is hidden and only the copy shows.
 
 Used In:
 
@@ -32,38 +33,47 @@ Props:
 
 Business Logic:
 
-- Full-bleed `bg-mist` (pale sage), `min-h-[100svh]`, content vertically centered (`justify-center`)
-- Headline rendered via `t.rich('headline', { em })` where `em` maps to a
-  `text-saffron` span (inline, not the shared `richTags`); `font-heading`,
-  `text-pine` (`#24582a`, deep pine on the light sage). The headline BREAKS OUT
-  of the content column to fill the FULL viewport width on ONE line: the
-  `<section>` is the `@container` (`container-type: inline-size`) and the h1 is
-  `whitespace-nowrap` + `text-[9.6cqw]` (container-width units = full screen) +
-  `tracking-[-0.04em]` + `px-4 sm:px-6`, so the ~25-char tagline scales with the
-  whole screen, flush edge-to-edge, capped only by `overflow-hidden`. The body /
-  CTAs / stats strip stay inside the centered `max-w-content` column.
-  (Tagline: "Quality. Trust. Delivered".)
-- Wraps content in `HeroEntry` for the one-time GSAP mount timeline on `[data-hero-reveal]` elements
-- CTAs use the shared `CtaLink` pill at the default `tone="light"`: `Route.Products` (solid → deep-green pill, lime label, `arrow`) and `Route.Contact` (`variant="outline"`)
-- Bottom strip shows `countries` and `certs` translation keys separated by `/`, in muted `text-ink/55`
-- The earlier `WordmarkMedia` India-film video showpiece was removed for the GMCT
-  typographic structure (the component still exists for reuse elsewhere)
+- `<section className="bg-white">`; inner `grid min-h-[100svh] grid-cols-1 lg:grid-cols-2`,
+  offset below the header with `pt-header-base`.
+- Left column (`justify-center`): eyebrow (mono, tracked), headline via
+  `t.rich('headline', { em, br })` where `em` → a muted `text-ink/50` span and `br` → `<br/>`;
+  a `bg-saffron` divider; body copy; and two `CtaLink`s (`tone="light"`, `size="lg"`):
+  `Route.Products` (solid) and `Route.Contact` (outline).
+- Right column (`hidden lg:flex items-center`): `WordmarkMedia` renders `SITE.brand`
+  ("BACA") at full container width, `align="center"`. The letterforms clip a looping
+  `<video>` — `HERO_VIDEO_SOURCES = [{ src: '/videos/hero-ocean.mp4', type: 'video/mp4' }]` —
+  with `posterSrc="/images/footer/ocean-1.jpg"` shown before/without playback and under
+  prefers-reduced-motion. There is no opaque card frame: only the ocean shows through the
+  letters, the page background shows elsewhere.
+- Whole thing wrapped in `HeroEntry` for the one-time GSAP mount timeline on `[data-hero-reveal]`
+  elements (each copy block + the wordmark column carry that attribute).
+
+Assets:
+
+- Ocean video: `/public/videos/hero-ocean.mp4` (must be added — warm/full-frame footage
+  reads best through the letters; see `docs/superpowers/specs/wordmark-video-prompt.json`
+  for the spec, adapted to ocean). Poster: `/public/images/footer/ocean-1.jpg`.
+- To swap the film, edit `HERO_VIDEO_SOURCES` / `posterSrc` in `hero.tsx`.
 
 Dependencies:
 
 - react: `ReactNode` (type for the inline `em` rich-text renderer)
 - next-intl: `getTranslations('hero')` (+ `t.rich`)
+- `@/constants/routes`: `Route` (CTA targets)
+- `@/constants/site`: `SITE` (`SITE.brand` → the wordmark text)
 - `@/components/ui/cta-link`: CtaLink (the shared marketing CTA pill)
+- `@/components/ui/wordmark-media`: WordmarkMedia (video-in-text BACA wordmark)
 - `@/components/sections/hero-entry`: HeroEntry
 
 i18n:
-Namespace: `hero`. Keys: `headline` (rich, with `<em>`), `body`, `ctaProducts`, `ctaContact`, `countries`, `certs`.
+Namespace: `hero`. Keys used: `headline` (rich, with `<em>` / `<br>`), `body`, `ctaProducts`,
+`ctaContact`. (`countries` / `certs` exist in the catalog but are not currently rendered here.)
 
 Accessibility:
-Semantic `<section>` with a single `<h1>` headline. CTAs are links with visible labels. Decorative `/` separator is `aria-hidden`.
+Semantic `<section>` with a single `<h1>` headline. CTAs are links with visible labels.
+`WordmarkMedia` exposes a visually-hidden real-text "BACA" label and marks the SVG `aria-hidden`.
 
 Notes:
-The oversized headline is the visual centerpiece; copy + CTAs and the labels/stats
-strip sit below in a 12-column grid on large screens, all over the green field.
-The home page renders `<SiteHeader />` (no `forceSolid`) so the nav rides
-transparent over this hero and goes solid on scroll.
+The previous full-bleed centered wordmark hero and the right-column `HeroSlideshow`
+image carousel were both replaced by this split layout. `HeroSlideshow` still lives in
+this folder (`./hero-slideshow`) but is no longer imported by `hero.tsx`.

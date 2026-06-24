@@ -45,9 +45,10 @@ export function WordmarkMedia({
   const clipId = `wordmark-clip-${rawId.replace(/[^a-zA-Z0-9-]/g, '')}`
   const videoRef = useRef<HTMLVideoElement | null>(null)
 
-  // Playback is driven imperatively (no autoplay attribute) so the poster shows
-  // first and we don't fight the browser's autoplay heuristics. The <video> has
-  // `muted` + `playsInline` + `loop` in the markup so iOS Safari allows it.
+  // Native muted `autoPlay` (+ `playsInline` + `loop`) starts the loop on its own
+  // across browsers — playback must NOT depend on JS hydration alone. This effect
+  // is only a refinement: pause when scrolled off-screen, and honor reduced-motion
+  // (where we pause so the poster shows instead of motion).
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
@@ -109,10 +110,11 @@ export function WordmarkMedia({
             ref={videoRef}
             className="h-full w-full object-cover"
             poster={posterSrc}
+            autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
           >
             {videoSources.map((source) => (
               <source key={source.src} src={source.src} type={source.type} />
