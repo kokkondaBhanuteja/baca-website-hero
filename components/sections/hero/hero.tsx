@@ -4,60 +4,82 @@ import { getTranslations } from 'next-intl/server'
 import { Route } from '@/constants/routes'
 import { CtaLink } from '@/components/ui/cta-link'
 import { HeroEntry } from '@/components/sections/hero-entry'
+import { HeroSlideshow } from './hero-slideshow'
 
 export async function Hero() {
   const t = await getTranslations('hero')
 
   return (
-    <section className="@container relative flex min-h-[100svh] w-full flex-col justify-center overflow-hidden bg-mist py-28">
+    <section className="relative bg-white">
       <HeroEntry>
-        {/* GMCT-style showpiece: one oversized headline that breaks out of the
-            content column to fill the FULL viewport width. Sized in `cqw`
-            (container-width units, the section is the @container) so the single
-            line scales with the whole screen — `9.6cqw` ≈ the width of this
-            25-char tagline at the tightened tracking, flush edge-to-edge without
-            overflowing (whitespace-nowrap + the section's overflow-hidden). */}
-        <h1
-          data-hero-reveal
-          className="whitespace-nowrap px-2 font-heading text-[10cqw] font-light leading-[1.0] tracking-[-0.05em] text-pine sm:px-3"
-        >
-          {t.rich('headline', {
-            em: (chunks: ReactNode) => (
-              <span className="text-saffron">{chunks}</span>
-            ),
-          })}
-        </h1>
+        <div className="grid min-h-[100svh] grid-cols-1 pt-header-base lg:grid-cols-2">
+          {/* ── Left: hero content ── */}
+          <div className="flex flex-col justify-center px-5 py-16 sm:px-8 lg:px-12 xl:px-16">
+            {/* Eyebrow */}
+            <p
+              data-hero-reveal
+              className="mb-8 font-mono text-[0.72rem] uppercase tracking-[0.35em] text-ink/70"
+            >
+              Premium Spices &amp; Agri Produce &nbsp;·&nbsp; Trusted Indian
+              Origins
+            </p>
 
-        {/* Supporting content stays in the centered max-w-content column */}
-        <div className="mx-auto mt-10 grid w-full max-w-content grid-cols-1 items-end gap-10 px-5 sm:px-8 lg:grid-cols-12">
-          <div data-hero-reveal className="max-w-md lg:col-span-7">
-            <p className="text-pretty text-[15px] leading-relaxed text-ink/75">
+            {/* Headline */}
+            <h1
+              data-hero-reveal
+              className="font-heading text-[3rem] font-light leading-[1.06] tracking-[0.01em] text-ink sm:text-[3.8rem] lg:text-[4.2rem] xl:text-[5rem]"
+            >
+              {t.rich('headline', {
+                em: (chunks: ReactNode) => (
+                  <em className="not-italic text-ink/50">{chunks}</em>
+                ),
+                br: () => <br />,
+              })}
+            </h1>
+
+            {/* Divider */}
+            <div data-hero-reveal className="my-8 h-px w-16 bg-saffron" />
+
+            {/* Body */}
+            <p
+              data-hero-reveal
+              className="mb-10 max-w-lg text-[1rem] leading-[1.9] text-ink/80 sm:text-[1.05rem]"
+            >
               {t('body')}
             </p>
+
+            {/* CTAs */}
+            <div data-hero-reveal className="flex flex-wrap gap-3">
+              <CtaLink
+                href={Route.Products}
+                variant="solid"
+                tone="light"
+                size="lg"
+                arrow
+              >
+                {t('ctaProducts')}
+              </CtaLink>
+              <CtaLink
+                href={Route.Contact}
+                variant="outline"
+                tone="light"
+                size="lg"
+                arrow
+              >
+                {t('ctaContact')}
+              </CtaLink>
+            </div>
           </div>
+
+          {/* ── Right: image slideshow ── */}
           <div
             data-hero-reveal
-            className="flex flex-wrap items-center gap-3 lg:col-span-5 lg:justify-self-end"
+            className="relative hidden lg:block lg:p-10 lg:pl-3 xl:p-14 xl:pl-4"
           >
-            <CtaLink href={Route.Products} arrow>
-              {t('ctaProducts')}
-            </CtaLink>
-            <CtaLink href={Route.Contact} variant="outline">
-              {t('ctaContact')}
-            </CtaLink>
+            <div className="relative h-full overflow-hidden rounded-3xl shadow-[0_24px_80px_rgba(30,58,23,0.18)]">
+              <HeroSlideshow />
+            </div>
           </div>
-        </div>
-
-        {/* GMCT-style bottom labels/stats strip */}
-        <div
-          data-hero-reveal
-          className="mx-auto mt-12 flex w-full max-w-content flex-wrap items-center gap-x-6 gap-y-2 border-t border-ink/15 px-5 pt-5 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ink/55 sm:px-8"
-        >
-          <span>{t('countries')}</span>
-          <span className="text-ink/30" aria-hidden>
-            /
-          </span>
-          <span>{t('certs')}</span>
         </div>
       </HeroEntry>
     </section>

@@ -19,7 +19,7 @@ export async function FeaturedInsights() {
   if (articles.length === 0) return null
 
   return (
-    <section className="bg-paper">
+    <section className="bg-white">
       <div className="mx-auto max-w-content px-5 py-[clamp(4rem,8vw,8rem)] sm:px-8">
         <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>

@@ -1,108 +1,91 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslations } from 'next-intl'
 
 import { PILLARS } from '@/constants/sections/approach'
-import { Eyebrow } from '@/components/ui/eyebrow'
-
-gsap.registerPlugin(ScrollTrigger)
 
 export function Approach() {
-  const ref = useRef<HTMLElement | null>(null)
   const t = useTranslations('approach')
 
-  useEffect(() => {
-    const root = ref.current
-    if (!root) return
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    const ctx = gsap.context(() => {
-      if (reduce) {
-        gsap.set('.approach-card', { opacity: 1, y: 0 })
-        gsap.set('.approach-rule', { scaleX: 1 })
-        return
-      }
-      gsap.set('.approach-card', { opacity: 0, y: 40 })
-      gsap.set('.approach-rule', { scaleX: 0 })
-      ScrollTrigger.create({
-        trigger: root,
-        start: 'top 72%',
-        once: true,
-        onEnter: () => {
-          gsap.to('.approach-card', {
-            opacity: 1,
-            y: 0,
-            duration: 0.9,
-            ease: 'power3.out',
-            stagger: 0.12,
-          })
-          gsap.to('.approach-rule', {
-            scaleX: 1,
-            duration: 0.8,
-            ease: 'power2.out',
-            stagger: 0.12,
-          })
-        },
-      })
-    }, root)
-
-    return () => ctx.revert()
-  }, [])
+  const top = PILLARS.slice(0, 3)
+  const bottom = PILLARS.slice(3)
 
   return (
     <section
       id="approach"
-      ref={ref}
-      className="scroll-mt-header-offset bg-paper"
+      className="scroll-mt-header-offset bg-white py-14 sm:py-20"
     >
-      <div className="mx-auto max-w-content px-5 py-[clamp(4rem,8vw,8rem)] sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-4">
-            <Eyebrow className="mb-4 text-ink-60">{t('eyebrow')}</Eyebrow>
-            <h2
-              data-reveal
-              className="text-balance font-heading text-[clamp(2rem,4vw,3.25rem)] font-light leading-[1.05] tracking-[-0.02em] text-ink"
-            >
-              {t('heading')}
-            </h2>
-            <p className="mt-6 max-w-[36ch] text-[15px] leading-relaxed text-ink-60">
-              {t('intro')}
-            </p>
-          </div>
+      <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
+        {/* Section header */}
+        <div className="mb-12">
+          <p className="mb-3 font-mono text-[0.75rem] uppercase tracking-[0.35em] text-[#2E0F13]/75">
+            {t('eyebrow')}
+          </p>
+          <h2 className="font-heading max-w-3xl text-[2.4rem] font-light leading-[1.08] text-[#2E0F13] sm:text-[3rem]">
+            {t('heading')}
+          </h2>
+        </div>
 
-          <div className="lg:col-span-8">
-            <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
-              {PILLARS.map((pillar) => (
-                <div
-                  key={pillar.key}
-                  className="approach-card group relative border-t border-line pt-7"
-                >
-                  <span
-                    className="approach-rule absolute -top-px start-0 h-[2px] w-full origin-left bg-saffron rtl:origin-right"
-                    aria-hidden
-                  />
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-heading text-[2rem] font-light italic leading-none text-saffron">
-                      {pillar.n}
-                    </span>
-                    <h3 className="font-heading text-2xl font-light text-ink transition-colors group-hover:text-clay">
-                      {t(
-                        `pillars.${pillar.key}.title` as Parameters<
-                          typeof t
-                        >[0],
-                      )}
-                    </h3>
-                  </div>
-                  <p className="mt-4 text-[15px] leading-relaxed text-ink-60">
-                    {t(`pillars.${pillar.key}.body` as Parameters<typeof t>[0])}
-                  </p>
-                </div>
-              ))}
+        {/* ── Row 1: 3 items ── */}
+        <div className="grid grid-cols-1 border-t border-[#2E0F13]/12 sm:grid-cols-3">
+          {top.map((pillar, idx) => (
+            <div
+              key={pillar.key}
+              className={`group relative flex flex-col py-8 sm:py-10 ${idx > 0 ? 'sm:border-l sm:border-[#2E0F13]/12 sm:pl-8' : ''}`}
+            >
+              <div className="mb-5 h-[2px] w-full bg-[#2E0F13]/10 transition-colors duration-300 group-hover:bg-[#8B3A1A]" />
+
+              <div className="mb-5 flex items-baseline gap-2">
+                <span className="font-heading text-[3rem] font-light leading-none text-[#8B3A1A]">
+                  {pillar.n}
+                </span>
+                <span className="font-mono text-[0.55rem] uppercase tracking-[0.3em] text-[#8B3A1A]/60">
+                  Step
+                </span>
+              </div>
+
+              <h3 className="font-heading mb-4 text-[1.5rem] font-light leading-[1.2] text-[#2E0F13] transition-colors duration-300 group-hover:text-[#8B3A1A] sm:text-[1.65rem]">
+                {t(`pillars.${pillar.key}.title` as Parameters<typeof t>[0])}
+              </h3>
+
+              <div className="mb-4 h-px w-8 bg-[#2E0F13]/20 transition-colors duration-300 group-hover:bg-[#8B3A1A]/50" />
+
+              <p className="text-[0.9rem] leading-[1.85] text-[#2E0F13]/60">
+                {t(`pillars.${pillar.key}.body` as Parameters<typeof t>[0])}
+              </p>
             </div>
-          </div>
+          ))}
+        </div>
+
+        {/* ── Row 2: 2 items centered (leave 1/6 gap each side) ── */}
+        <div className="grid grid-cols-1 border-t border-[#2E0F13]/12 sm:grid-cols-6">
+          {bottom.map((pillar, idx) => (
+            <div
+              key={pillar.key}
+              className={`group relative flex flex-col py-8 sm:col-span-2 sm:py-10 ${idx === 0 ? 'sm:col-start-2' : 'sm:border-l sm:border-[#2E0F13]/12 sm:pl-8'}`}
+            >
+              <div className="mb-5 h-[2px] w-full bg-[#2E0F13]/10 transition-colors duration-300 group-hover:bg-[#8B3A1A]" />
+
+              <div className="mb-5 flex items-baseline gap-2">
+                <span className="font-heading text-[3rem] font-light leading-none text-[#8B3A1A]">
+                  {pillar.n}
+                </span>
+                <span className="font-mono text-[0.55rem] uppercase tracking-[0.3em] text-[#8B3A1A]/60">
+                  Step
+                </span>
+              </div>
+
+              <h3 className="font-heading mb-4 text-[1.5rem] font-light leading-[1.2] text-[#2E0F13] transition-colors duration-300 group-hover:text-[#8B3A1A] sm:text-[1.65rem]">
+                {t(`pillars.${pillar.key}.title` as Parameters<typeof t>[0])}
+              </h3>
+
+              <div className="mb-4 h-px w-8 bg-[#2E0F13]/20 transition-colors duration-300 group-hover:bg-[#8B3A1A]/50" />
+
+              <p className="text-[0.9rem] leading-[1.85] text-[#2E0F13]/60">
+                {t(`pillars.${pillar.key}.body` as Parameters<typeof t>[0])}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

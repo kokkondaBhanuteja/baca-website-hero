@@ -5,10 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-playfair), 'Georgia', serif;
-  --font-display: var(--font-playfair), 'Georgia', serif;
+  --font-heading: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   --font-sans: var(--font-inter), 'Inter Fallback', sans-serif;
-  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono Fallback', monospace;
+  --font-mono: var(--font-dm-mono), 'DM Mono Fallback', monospace;
 
   /* BACA brand tokens */
   --color-ink: var(--ink);
@@ -61,7 +61,7 @@
      Used by header itself (h-header-base), page mains (pt-header-base), and
      anchored sections (scroll-mt-header-offset) so the section's heading lands
      below the fixed 72px header rather than under it. */
-  --spacing-header-base: 72px;
+  --spacing-header-base: 88px;
   --spacing-header-offset: 88px;
   --container-content: 1340px;
 
@@ -82,7 +82,7 @@
   --ink: #1e3a17; /* deep forest — primary text */
   --ink-60: #586b4e; /* muted green-gray — secondary text */
   --paper: #fafbf4; /* whitest surface — cards, inputs */
-  --cream: #eef1e4; /* airy page-background tint */
+  --cream: #d4e9cf; /* airy page-background tint */
   --bone: #e1e8d2; /* subtle sage fill (icon circles, chips) */
   --forest: #2e5d2c; /* deep green — dark bands, CTAs, hero, success */
   --saffron: #5f8f1a; /* accent (grounded chartreuse) — rules, rings, hovers */

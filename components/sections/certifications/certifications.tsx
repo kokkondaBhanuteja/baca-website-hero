@@ -1,60 +1,51 @@
 import { getTranslations } from 'next-intl/server'
 
-import { REVEAL_STAGGER_MS } from '@/constants/animations'
 import { CERTS } from '@/constants/sections/certifications'
 import { Anchor } from '@/constants/routes'
-import { Eyebrow } from '@/components/ui/eyebrow'
-import { Reveal } from '@/components/ui/reveal'
 
 export async function Certifications() {
   const t = await getTranslations('certifications')
 
   return (
-    <section id={Anchor.Compliance.slice(1)} className="bg-cream">
-      <div className="mx-auto max-w-content px-5 py-[clamp(3.5rem,7vw,6rem)] sm:px-8">
-        <Reveal className="flex flex-wrap items-end justify-between gap-6">
+    <section
+      id={Anchor.Compliance.slice(1)}
+      className="bg-cream py-16 sm:py-20"
+    >
+      <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
+        {/* Header */}
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Eyebrow data-reveal className="mb-4 text-ink-60">
+            <p className="mb-2 font-mono text-[0.75rem] uppercase tracking-[0.35em] text-[#2E0F13]/60">
               {t('eyebrow')}
-            </Eyebrow>
-            <h2
-              data-reveal
-              className="max-w-[18ch] text-balance font-heading text-[clamp(1.9rem,4vw,3.25rem)] font-light leading-[1.05] tracking-[-0.02em] text-ink"
-            >
+            </p>
+            <h2 className="font-heading text-[2rem] font-light leading-[1.06] text-[#2E0F13] sm:text-[2.4rem]">
               {t('heading')}
             </h2>
           </div>
-          <p className="max-w-[40ch] text-[15px] leading-relaxed text-ink-60">
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-[#2E0F13]/40">
             {t('intro')}
           </p>
-        </Reveal>
+        </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-9 sm:grid-cols-3 lg:grid-cols-4">
-          {CERTS.map((cert, index) => {
-            const Icon = cert.icon
-            return (
-              <Reveal
-                key={cert.key}
-                delay={index * REVEAL_STAGGER_MS.CERTIFICATION}
-              >
-                <div className="flex items-center gap-3 border-t border-line pt-5">
-                  <Icon
-                    className="h-8 w-8 shrink-0 text-saffron"
-                    strokeWidth={1.4}
-                    aria-hidden
-                  />
-                  <div>
-                    <p className="font-heading text-lg font-light leading-tight text-ink">
-                      {cert.name}
-                    </p>
-                    <p className="mt-0.5 font-mono text-[0.6rem] uppercase tracking-[0.14em] text-ink-60">
-                      {t(`items.${cert.key}.sub` as Parameters<typeof t>[0])}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            )
-          })}
+        {/* Certs — horizontal divider rows */}
+        <div className="grid grid-cols-2 divide-x divide-y divide-[#2E0F13]/10 border border-[#2E0F13]/10 sm:grid-cols-3 lg:grid-cols-6 lg:divide-y-0">
+          {CERTS.map((cert) => (
+            <div
+              key={cert.key}
+              className="group flex flex-col gap-2 px-6 py-8 transition-colors duration-300 hover:bg-white"
+            >
+              <p className="font-mono text-[0.55rem] uppercase tracking-[0.25em] text-[#8B3A1A]/70">
+                {cert.authority}
+              </p>
+              <h3 className="font-heading text-[1.6rem] font-light leading-none text-[#2E0F13] sm:text-[1.8rem]">
+                {cert.name}
+              </h3>
+              <div className="h-px w-6 bg-[#2E0F13]/15 transition-colors duration-300 group-hover:bg-[#8B3A1A]/40" />
+              <p className="font-mono text-[0.58rem] uppercase tracking-[0.15em] text-[#2E0F13]/45">
+                {t(`items.${cert.key}.sub` as Parameters<typeof t>[0])}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

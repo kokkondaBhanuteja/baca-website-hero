@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const j=require\\('./messages/en.json'\\); console.log\\(JSON.stringify\\(j.hero, null, 2\\)\\)\")",
+      "PowerShell(cd \"C:\\\\Users\\\\Dell\\\\Desktop\\\\baca-website-hero\"; $env:PATH = \"C:\\\\Users\\\\Dell\\\\AppData\\\\Roaming\\\\npm;$env:PATH\"; npx next dev -p 4010 2>&1 | Select-Object -First 10)"
+    ]
+  }
+}

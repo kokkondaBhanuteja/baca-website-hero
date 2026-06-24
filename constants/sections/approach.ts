@@ -5,10 +5,10 @@ export interface PillarConfig {
   n: string
 }
 
-//pillars of approach
 export const PILLARS: PillarConfig[] = [
-  { key: 'sourcing', n: '01' },
-  { key: 'quality', n: '02' },
-  { key: 'logistics', n: '03' },
-  { key: 'partnership', n: '04' },
+  { key: 'traceability', n: '01' },
+  { key: 'labtesting', n: '02' },
+  { key: 'grading', n: '03' },
+  { key: 'documentation', n: '04' },
+  { key: 'accountability', n: '05' },
 ]

@@ -209,7 +209,7 @@
     }
   },
   "hero": {
-    "headline": "Quality. Trust. <em>Delivered</em>",
+    "headline": "Quality. Trust.<br></br><em>Delivered.</em>",
     "body": "Een nieuwe generatie Indiase export — gebouwd op traceerbare inkoop, strenge kwaliteit en partnerschappen die goederen betrouwbaar verplaatsen, container na container.",
     "ctaProducts": "Ontdek producten",
     "ctaContact": "Praat met ons team",
@@ -235,56 +235,54 @@
     "heading": "Ingekocht aan de bron, gesorteerd voor export."
   },
   "approach": {
-    "eyebrow": "Onze aanpak",
-    "heading": "De BACA-standaard, in vier stappen.",
-    "intro": "Hoe elke container zijn plaats verdient — van het veld van de teler tot het laadperron van de expediteur.",
+    "eyebrow": "How we work",
+    "heading": "A process you can hold us to.",
+    "intro": "We built our process around one question: what would give a buyer complete peace of mind? Here is the answer.",
     "pillars": {
-      "sourcing": {
-        "title": "Inkoop",
-        "body": "We kopen rechtstreeks bij telers in de herkomstregio's — kardemom uit Kerala, chili uit Guntur, peper uit Malabar — voor volledige traceerbaarheid van boer tot expediteur."
+      "traceability": {
+        "title": "It starts at the farm.",
+        "body": "Every order begins with a visit — not a phone call. We walk the fields, meet the growers, and record each lot at its source. When you ask where your spice came from, we can name the farm, the season, and the harvest."
       },
-      "quality": {
-        "title": "Kwaliteit",
-        "body": "Elke partij wordt gesorteerd, in het lab getest op vocht, pesticideresiduen en aflatoxines, en gedocumenteerd volgens de ISO 22000- en HACCP-protocollen."
+      "labtesting": {
+        "title": "Tested by people who do not work for us.",
+        "body": "Every lot goes to an independent, accredited laboratory — not our own facility. You receive the original test report: moisture, pesticide levels, aflatoxins — measured openly and shared without editing."
       },
-      "logistics": {
-        "title": "Logistiek",
-        "body": "Verpakt aan de bron en verscheept in gedocumenteerde volle containers, met Incoterms, HS-codes en certificaten die worden afgegeven voordat de schepen vertrekken."
+      "grading": {
+        "title": "What the certificate says is what arrives.",
+        "body": "We sort and confirm every lot before packing begins — never after loading. The grade on your invoice is the grade in the bag, and the net weight is checked at the container door. Every single time."
       },
-      "partnership": {
-        "title": "Partnerschap",
-        "body": "We werken met vaste contracten en reserveren oogsten voor terugkerende afnemers — een relatie die wordt gemeten in jaren, niet in losse zendingen."
+      "documentation": {
+        "title": "Paperwork ready before the vessel is booked.",
+        "body": "We prepare every certificate and compliance document before the shipment moves. Your import team receives a clean container — not a queue of corrections to chase down at the port."
+      },
+      "accountability": {
+        "title": "One person answers for every shipment.",
+        "body": "You will always have a named contact who knows your cargo, your route, and your timeline. For buyers who return each season, we reserve allocations and agree prices before the harvest opens. A relationship built to last, not just to close."
       }
     }
   },
   "certifications": {
-    "eyebrow": "Certificeringen",
-    "heading": "Gecertificeerd voor wereldwijde handel.",
-    "intro": "Elke container vertrekt met de papieren voor voedselveiligheid en export volledig op orde — geregistreerd, geauditeerd en gedocumenteerd volgens de standaard die elke markt vereist.",
+    "eyebrow": "Certifications",
+    "heading": "Certified for global trade.",
+    "intro": "Every shipment leaves with its credentials in order.",
     "items": {
       "fssai": {
-        "sub": "Centrale licentie"
+        "sub": "Central License"
       },
       "spicesBoard": {
-        "sub": "RCMC · India"
+        "sub": "CRES · Spices Board of India"
       },
       "apeda": {
-        "sub": "Exportregistratie"
+        "sub": "Agri Export Registration"
       },
       "iso22000": {
-        "sub": "Voedselveiligheidsbeheer"
+        "sub": "Food Safety Management"
       },
       "haccp": {
-        "sub": "Risicobeheersing"
-      },
-      "indiaOrganic": {
-        "sub": "NPOP-gecertificeerd"
+        "sub": "Hazard Control Protocol"
       },
       "halal": {
-        "sub": "Markttoegang"
-      },
-      "kosher": {
-        "sub": "Markttoegang"
+        "sub": "Market Access Certification"
       }
     }
   },

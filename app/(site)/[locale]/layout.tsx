@@ -1,8 +1,9 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import {
+  Cormorant_Garamond,
+  DM_Mono,
   Inter,
-  JetBrains_Mono,
   Noto_Sans_Arabic,
   Playfair_Display,
 } from 'next/font/google'
@@ -16,6 +17,12 @@ import { WhatsAppFab } from '@/components/sections/whatsapp-fab'
 
 import '../../globals.css'
 
+const cormorant = Cormorant_Garamond({
+  variable: '--font-cormorant',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+})
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
@@ -25,10 +32,11 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   style: ['normal', 'italic'],
 })
-const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
+const dmMono = DM_Mono({
+  variable: '--font-dm-mono',
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
 })
 const notoArabic = Noto_Sans_Arabic({
   variable: '--font-arabic',
@@ -93,7 +101,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} ${notoArabic.variable} bg-background`}
+      className={`${inter.variable} ${playfair.variable} ${dmMono.variable} ${notoArabic.variable} ${cormorant.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         {/* Skip link for keyboard users — jumps past the fixed header. */}

@@ -32,13 +32,7 @@ import type { NavItem } from '@/components/layout/site-header/nav-types'
  *   - Click outside closes.
  *   - Only one submenu open at a time.
  */
-export function SiteHeaderDesktopNav({
-  navItems,
-  scrolled,
-}: {
-  navItems: NavItem[]
-  scrolled: boolean
-}) {
+export function SiteHeaderDesktopNav({ navItems }: { navItems: NavItem[] }) {
   const [openKey, setOpenKey] = useState<string | null>(null)
   const navRef = useRef<HTMLElement | null>(null)
   const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({})
@@ -102,11 +96,7 @@ export function SiteHeaderDesktopNav({
             <Link
               key={item.key}
               href={item.href}
-              className={`flex items-center gap-1 rounded-full px-3 py-2 text-sm transition-colors ${
-                scrolled
-                  ? 'text-ink/80 hover:text-ink'
-                  : 'text-paper/85 hover:text-paper'
-              }`}
+              className="flex items-center gap-1 rounded-full px-3 py-2 text-sm text-[#2E0F13]/80 transition-colors hover:text-[#2E0F13]"
             >
               {item.label}
             </Link>
@@ -124,11 +114,7 @@ export function SiteHeaderDesktopNav({
                 /blogs, /profile etc., AND so Cmd-click opens in a new tab. */}
             <Link
               href={item.href}
-              className={`rounded-full py-2 ps-3 pe-1 text-sm transition-colors ${
-                scrolled
-                  ? 'text-ink/80 hover:text-ink'
-                  : 'text-paper/85 hover:text-paper'
-              }`}
+              className="rounded-full py-2 ps-3 pe-1 text-sm text-[#2E0F13]/80 transition-colors hover:text-[#2E0F13]"
             >
               {item.label}
             </Link>
@@ -145,11 +131,7 @@ export function SiteHeaderDesktopNav({
               aria-label={`${item.label} submenu`}
               onClick={() => setOpenKey(isOpen ? null : item.key)}
               onKeyDown={(event) => onTriggerKeyDown(event, item.key)}
-              className={`inline-flex h-7 w-6 items-center justify-center rounded-full transition-colors ${
-                scrolled
-                  ? 'text-ink/60 hover:text-ink'
-                  : 'text-paper/70 hover:text-paper'
-              }`}
+              className="inline-flex h-7 w-6 items-center justify-center rounded-full text-[#2E0F13]/60 transition-colors hover:text-[#2E0F13]"
             >
               <ChevronDown
                 className={`h-3.5 w-3.5 transition-transform ${

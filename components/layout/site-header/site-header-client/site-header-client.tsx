@@ -131,11 +131,15 @@ export function SiteHeaderClient({
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
           scrolled
-            ? 'border-b border-line bg-paper/95'
-            : 'border-b border-transparent bg-transparent'
+            ? 'bg-cream border-b border-[#2E0F13]/12'
+            : 'bg-white border-b border-transparent'
         }`}
       >
-        <div className="mx-auto flex h-header-base max-w-content items-center justify-between gap-6 px-5 sm:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
+        <div
+          className={`mx-auto flex max-w-content items-center justify-between gap-6 px-5 transition-all duration-500 sm:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr] ${
+            scrolled ? 'h-[74px]' : 'h-header-base'
+          }`}
+        >
           {/* Wordmark */}
           <Link
             href={Route.Home}
@@ -143,30 +147,23 @@ export function SiteHeaderClient({
             aria-label={tHeader('aria.home')}
           >
             <span
-              className={`font-heading text-3xl font-medium tracking-tight transition-colors sm:text-2xl ${
-                textDark ? 'text-ink' : 'text-paper'
+              className={`font-heading font-medium tracking-tight text-[#2E0F13] transition-all duration-500 ${
+                scrolled ? 'text-3xl sm:text-2xl' : 'text-[2.8rem] sm:text-4xl'
               }`}
             >
               {SITE.brand}
             </span>
           </Link>
 
-          <SiteHeaderDesktopNav navItems={navItems} scrolled={textDark} />
+          <SiteHeaderDesktopNav navItems={navItems} />
 
           {/* Right actions */}
           <div className="flex items-center gap-3 lg:justify-self-end">
-            <LanguageSwitcher
-              tone={textDark ? 'ink' : 'paper'}
-              className="hidden md:inline-flex"
-            />
+            <LanguageSwitcher tone="ink" className="hidden md:inline-flex" />
             <Link
               href={Route.Contact}
               data-cursor="fill"
-              className={`hidden rounded-full px-5 py-2.5 text-sm font-medium transition-colors sm:inline-flex ${
-                textDark
-                  ? 'bg-ink text-paper hover:bg-forest'
-                  : 'bg-paper text-ink hover:bg-paper/90'
-              }`}
+              className="hidden rounded-full bg-forest px-5 py-2.5 text-sm font-medium text-lime transition-colors hover:bg-ink sm:inline-flex"
             >
               {tCommon('enquire')}
             </Link>
@@ -177,9 +174,7 @@ export function SiteHeaderClient({
               aria-label={tHeader('aria.openMenu')}
               aria-haspopup="dialog"
               aria-expanded={isMobileOpen}
-              className={`inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors lg:hidden ${
-                textDark ? 'border-line text-ink' : 'border-paper/40 text-paper'
-              }`}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#2E0F13]/40 text-[#2E0F13] transition-colors lg:hidden"
             >
               <Menu className="h-5 w-5" />
             </button>

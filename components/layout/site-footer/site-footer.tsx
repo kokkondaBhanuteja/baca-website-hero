@@ -1,96 +1,129 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowUp } from 'lucide-react'
-import { useTranslations } from 'next-intl'
 
-import { SITE } from '@/constants/site'
-
+import { SITE, CERT_MARKS } from '@/constants/site'
+import { CONTACT } from '@/constants/contact'
+import { Route } from '@/constants/routes'
+import { Link } from '@/i18n/navigation'
 import { ContactStrip } from '@/components/sections/contact/contact-strip'
-import { FooterColumns } from '@/components/layout/site-footer/footer-columns'
-import { FooterMarquee } from '@/components/layout/site-footer/footer-marquee'
-
-gsap.registerPlugin(ScrollTrigger)
 
 interface SiteFooterProps {
-  /**
-   * Set `true` to suppress the global `ContactStrip` above the `<footer>`.
-   * Used by `/contact`, which renders its own full panel (info + form) and
-   * would otherwise show a duplicate form here.
-   */
   hideContactStrip?: boolean
 }
 
+const COLS = [
+  {
+    title: 'Products',
+    items: [
+      { label: 'All Products', href: Route.Products, isLink: true },
+      { label: 'Spices', href: Route.Products, isLink: true },
+      { label: 'Nuts & Seeds', href: Route.Products, isLink: true },
+      { label: 'Gallery', href: Route.Gallery, isLink: true },
+    ],
+  },
+  {
+    title: 'Company',
+    items: [
+      { label: 'About BACA', href: Route.Home, isLink: true },
+      { label: 'Insights', href: Route.Blogs, isLink: true },
+      { label: 'Contact', href: Route.Contact, isLink: true },
+    ],
+  },
+  {
+    title: 'Reach Us',
+    items: [
+      { label: CONTACT.email, href: CONTACT.emailHref, isLink: true },
+      { label: CONTACT.phoneDisplay, href: CONTACT.phoneHref, isLink: true },
+      { label: 'WhatsApp', href: CONTACT.whatsappUrl, isLink: true },
+    ],
+  },
+  {
+    title: 'Certified',
+    items: [
+      ...CERT_MARKS.map((c) => ({ label: c, href: '', isLink: false })),
+      { label: 'Spices Board CRES', href: '', isLink: false },
+    ],
+  },
+] as const
+
 export function SiteFooter({ hideContactStrip = false }: SiteFooterProps = {}) {
-  const t = useTranslations('footer')
-  const marqueeItems = t.raw('marqueeItems') as string[]
   const year = new Date().getFullYear()
-  const footerRef = useRef<HTMLElement | null>(null)
-
-  // Self-contained scroll motion (works on every page; the home ScrollFX driver
-  // doesn't run elsewhere): footer blocks clip-mask reveal in a stagger. The
-  // wordmark itself is intentionally NOT animated — it shows immediately
-  // (ocean stills cross-fade inside it via WordmarkSlideshow).
-  useEffect(() => {
-    const root = footerRef.current
-    if (!root) return
-
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduce) return
-
-    const reveals = gsap.utils.toArray<HTMLElement>(
-      root.querySelectorAll('[data-footer-reveal]'),
-    )
-    const context = gsap.context(() => {
-      reveals.forEach((element) => {
-        gsap.from(element, {
-          yPercent: 16,
-          autoAlpha: 0,
-          clipPath: 'inset(0% 0% 100% 0%)',
-          duration: 1,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: element, start: 'top 90%' },
-        })
-      })
-    }, root)
-
-    return () => context.revert()
-  }, [])
 
   return (
     <>
       {!hideContactStrip && <ContactStrip />}
-      <footer
-        ref={footerRef}
-        className="relative overflow-hidden bg-ink text-paper"
-      >
-        <FooterMarquee items={marqueeItems} />
 
-        <div className="mx-auto max-w-content px-5 sm:px-8">
-          <FooterColumns />
+      <footer className="overflow-hidden bg-ink">
+        {/* ── Nav columns ── */}
+        <div className="mx-auto max-w-screen-xl px-5 py-12 sm:px-8 sm:py-16">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-6 lg:gap-x-12">
+            {COLS.map((col) => (
+              <div key={col.title}>
+                <h3 className="mb-5 text-[0.85rem] font-medium text-paper/90">
+                  {col.title}
+                </h3>
+                <ul className="flex flex-col gap-3">
+                  {col.items.map((item) => (
+                    <li key={item.label}>
+                      {item.isLink ? (
+                        <Link
+                          href={item.href}
+                          className="text-[0.85rem] text-paper/55 transition-colors duration-200 hover:text-paper"
+                        >
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <span className="text-[0.85rem] text-paper/40">
+                          {item.label}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
 
-          {/* Legal + back to top — single tight row */}
-          <div className="flex flex-col gap-3 border-t border-paper/12 py-6 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-paper/45 sm:flex-row sm:items-center sm:justify-between">
-            <p className="flex flex-wrap gap-x-4 gap-y-1">
+        {/* ── Divider + legal bar ── */}
+        <div className="border-t border-paper/10">
+          <div className="mx-auto flex max-w-screen-xl flex-col gap-3 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+            <p className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[0.58rem] uppercase tracking-[0.16em] text-paper/30">
               <span>
                 © {year} {SITE.brand}
               </span>
+              <span className="text-paper/15" aria-hidden>
+                ·
+              </span>
               <span>{SITE.gst}</span>
+              <span className="text-paper/15" aria-hidden>
+                ·
+              </span>
               <span>{SITE.iec}</span>
             </p>
             <button
               type="button"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="group inline-flex items-center gap-2 self-start rounded-full text-paper/60 transition-colors hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-saffron sm:self-auto"
+              className="group inline-flex items-center gap-2 self-start font-mono text-[0.58rem] uppercase tracking-[0.16em] text-paper/30 transition-colors duration-200 hover:text-paper/70 sm:self-auto"
             >
-              {t('backToTop')}
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-paper/25 transition-colors group-hover:border-saffron">
-                <ArrowUp className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5" />
+              Back to top
+              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-paper/15 transition-colors duration-200 group-hover:border-paper/40">
+                <ArrowUp className="h-3 w-3 transition-transform duration-200 group-hover:-translate-y-0.5" />
               </span>
             </button>
           </div>
+        </div>
+
+        {/* ── BACA wordmark ── */}
+        <div className="overflow-hidden pb-10">
+          <p
+            className="select-none whitespace-nowrap text-center font-heading font-bold leading-none tracking-[-0.02em] text-paper"
+            style={{ fontSize: 'clamp(4rem, 22vw, 24rem)' }}
+            aria-hidden
+          >
+            {SITE.brand}
+          </p>
         </div>
       </footer>
     </>
