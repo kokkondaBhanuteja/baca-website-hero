@@ -24,7 +24,7 @@ export function FoundersNote() {
     t(`items.${activeKey}.${key}` as Parameters<typeof t>[0])
 
   return (
-    <div className="bg-white py-14 sm:py-20">
+    <div className="bg-[#d9d9d8] py-14 sm:py-20">
       <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
         <p className="mb-12 font-mono text-[0.78rem] uppercase tracking-[0.35em] text-ink">
           {t('eyebrow')}
