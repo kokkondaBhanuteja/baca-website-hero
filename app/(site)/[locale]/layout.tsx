@@ -110,7 +110,7 @@ export const viewport: Viewport = {
   colorScheme: 'light',
   // Mobile browser-chrome colour. Must be a literal (applied before CSS loads,
   // so it can't reference the --paper var); keep it in sync with --paper.
-  themeColor: '#fafbf4',
+  themeColor: '#7c94b8',
 }
 
 export default async function LocaleLayout({
