@@ -74,51 +74,50 @@
 :root {
   color-scheme: light;
 
-  /* BACA palette — "H. Costa" theme: deep forest green + vibrant lime on an
-     airy green-tinted off-white. Token names are kept stable so the whole site
-     reskins from these values alone; note `--saffron` is now the (green) accent
-     for light surfaces, while the new `--lime` is reserved for bright pops on
-     dark/green surfaces (it is illegible on white). */
-  --ink: #1e3a17; /* deep forest — primary text */
-  --ink-60: #586b4e; /* muted green-gray — secondary text */
-  --paper: #fafbf4; /* whitest surface — cards, inputs */
-  --cream: #d4e9cf; /* airy page-background tint */
-  --bone: #e1e8d2; /* subtle sage fill (icon circles, chips) */
-  --forest: #2e5d2c; /* deep green — dark bands, CTAs, hero, success */
-  --saffron: #5f8f1a; /* accent (grounded chartreuse) — rules, rings, hovers */
-  --lime: #cbe84f; /* vibrant lime pop — for use ON dark/green surfaces only */
-  --mist: #d4e9cf; /* pale sage — the home hero surface (dark text on top) */
-  --pine: #24582a; /* deep pine green — the home hero headline font */
+  /* BACA palette — deep blue + ocean city surfaces on concerto fills.
+     Token names are kept stable so the whole site reskins from these values
+     alone; `--saffron` is the mid-blue accent, `--lime` is the ocean city pop
+     for use ON dark/blue surfaces only. */
+  --ink: #1a2f54; /* deep navy — primary text */
+  --ink-60: #4a5a78; /* muted blue-gray — secondary text */
+  --paper: #7c94b8; /* ocean city — cards, inputs */
+  --cream: #7c94b8; /* ocean city — page-background */
+  --bone: #d9d9d8; /* concerto fill (icon circles, chips) */
+  --forest: #2a4d88; /* deep blue — dark bands, CTAs, hero, success */
+  --saffron: #5872a0; /* accent (mid blue) — rules, rings, hovers */
+  --lime: #7c94b8; /* ocean city pop — for use ON dark/blue surfaces only */
+  --mist: #7c94b8; /* ocean city — the home hero surface (dark text on top) */
+  --pine: #223f72; /* deep pine blue — the home hero headline font */
   --clay: #b5532b; /* warm terracotta — errors / required markers */
-  --line: #d9e1ca; /* hairline borders (sage) */
+  --line: #c5c5c4; /* hairline borders */
 
-  --background: #fafbf4;
-  --foreground: #1e3a17;
-  --card: #eef1e4;
-  --card-foreground: #1e3a17;
-  --popover: #fafbf4;
-  --popover-foreground: #1e3a17;
-  --primary: #2e5d2c;
-  --primary-foreground: #fafbf4;
-  --secondary: #e1e8d2;
-  --secondary-foreground: #1e3a17;
-  --muted: #e1e8d2;
-  --muted-foreground: #586b4e;
-  --accent: #5f8f1a;
-  --accent-foreground: #fafbf4;
+  --background: #7c94b8;
+  --foreground: #1a2f54;
+  --card: #d9d9d8;
+  --card-foreground: #1a2f54;
+  --popover: #7c94b8;
+  --popover-foreground: #1a2f54;
+  --primary: #2a4d88;
+  --primary-foreground: #7c94b8;
+  --secondary: #d9d9d8;
+  --secondary-foreground: #1a2f54;
+  --muted: #d9d9d8;
+  --muted-foreground: #4a5a78;
+  --accent: #5872a0;
+  --accent-foreground: #7c94b8;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #d9e1ca;
-  --input: #d9e1ca;
-  --ring: #5f8f1a;
+  --border: #c5c5c4;
+  --input: #c5c5c4;
+  --ring: #5872a0;
   --radius: 0.625rem;
-  --sidebar: #eef1e4;
-  --sidebar-foreground: #1e3a17;
-  --sidebar-primary: #2e5d2c;
-  --sidebar-primary-foreground: #fafbf4;
-  --sidebar-accent: #e1e8d2;
-  --sidebar-accent-foreground: #1e3a17;
-  --sidebar-border: #d9e1ca;
-  --sidebar-ring: #5f8f1a;
+  --sidebar: #d9d9d8;
+  --sidebar-foreground: #1a2f54;
+  --sidebar-primary: #2a4d88;
+  --sidebar-primary-foreground: #7c94b8;
+  --sidebar-accent: #d9d9d8;
+  --sidebar-accent-foreground: #1a2f54;
+  --sidebar-border: #c5c5c4;
+  --sidebar-ring: #5872a0;
 }
 
 @layer base {
@@ -231,7 +230,7 @@
 .baca-thread path.draw {
   stroke: var(--saffron);
   fill: none;
-  filter: drop-shadow(0 0 5px rgba(95, 143, 26, 0.5));
+  filter: drop-shadow(0 0 5px rgba(88, 114, 160, 0.5));
 }
 .baca-thread circle.node {
   r: 5px;
@@ -248,7 +247,7 @@
 }
 .baca-thread circle.head {
   fill: var(--saffron);
-  filter: drop-shadow(0 0 7px rgba(95, 143, 26, 0.7));
+  filter: drop-shadow(0 0 7px rgba(88, 114, 160, 0.7));
 }
 
 /* Global pointer cursor for interactive elements — links, buttons, and
