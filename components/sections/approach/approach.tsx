@@ -13,7 +13,7 @@ export function Approach() {
   return (
     <section
       id="approach"
-      className="scroll-mt-header-offset bg-white py-14 sm:py-20"
+      className="scroll-mt-header-offset bg-[#d9d9d8] py-14 sm:py-20"
     >
       <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
         {/* Section header */}
