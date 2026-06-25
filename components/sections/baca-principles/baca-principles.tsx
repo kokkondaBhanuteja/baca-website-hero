@@ -7,7 +7,7 @@ export async function BacaPrinciples() {
   const t = await getTranslations('bacaPrinciples')
 
   return (
-    <section className="bg-white py-14 sm:py-20">
+    <section className="bg-[#d9d9d8] py-14 sm:py-20">
       <div className="mx-auto max-w-screen-xl px-5 sm:px-8">
         {/* Eyebrow */}
         <p className="mb-10 font-mono text-[0.75rem] uppercase tracking-[0.35em] text-ink/75">
